@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "pod-dashboard",
+  "version": "0.0.0",
+  "dependencies": {
+    "steel-bootstrap": "metal/steel-bootstrap#master",
+    "steel-topbar": "metal/steel-topbar#master"
+  }
+}
