@@ -6782,6 +6782,28 @@ body {
   overflow-x: hidden; }
 
 /* ==========================================================================
+	 Topbar
+	 ========================================================================== */
+.topbar {
+  background: transparent;
+  position: relative;
+  z-index: 1; }
+
+.topbar-link {
+  color: rgba(255, 255, 255, 0.5); }
+
+.topbar-link:hover,
+.topbar-link:focus {
+  color: rgba(255, 255, 255, 0.8); }
+
+.topbar-link-selected {
+  color: white; }
+
+.topbar-link-selected:hover,
+.topbar-link-selected:hover {
+  color: white; }
+
+/* ==========================================================================
 	 Headline
 	 ========================================================================== */
 .hero-container {
@@ -6795,7 +6817,7 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding: 150px 0; }
+  padding: 150px 0 234px; }
 
 .hero-title {
   color: white;
