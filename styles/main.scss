@@ -6,8 +6,8 @@ body {
 }
 
 /* ==========================================================================
-   Headline
-   ========================================================================== */
+	 Headline
+	 ========================================================================== */
 
 .hero-container {
 	background: $accent;
@@ -38,12 +38,8 @@ body {
 	font-size: 24px;
 	font-weight: 300;
 	line-height: 36px;
-	margin: 0 0 40px;
+	margin: 0;
 }
-
-/* ==========================================================================
-   Clouds
-   ========================================================================== */
 
 .hero-clouds {
 	position: absolute;
@@ -58,8 +54,8 @@ body {
 }
 
 /* ==========================================================================
-   Features
-   ========================================================================== */
+	 Features
+	 ========================================================================== */
 
 .feature-container {
 	background: $primary;
@@ -77,9 +73,9 @@ body {
 		padding: 48px 0;
 	}
 
-  .feature {
-    margin: 48px auto 0;
-  }
+	.feature {
+		margin: 48px auto 0;
+	}
 }
 
 .feature-icon {
@@ -107,8 +103,73 @@ body {
 }
 
 /* ==========================================================================
-   Animations
+	 Request Invite
+	 ========================================================================== */
+
+.invitation-container {
+	margin: 108px auto 116px;
+}
+
+.invitation-title {
+	color: $primary;
+	font-family: $font-family-secondary;
+	font-size: 48px;
+	font-weight: 500;
+	margin: 0 0 20px;
+	text-align: center;
+}
+
+.invitation-description {
+	margin: 0 auto 48px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.invitation-form {
+	margin: 0 auto;
+	width: 400px;
+}
+
+.invitation-input {
+	background: white;
+	margin: 0 auto 10px;
+}
+
+.invitation-btn {
+	width: 400px;
+	margin: 0 auto;
+}
+
+/* ==========================================================================
+   Footer
    ========================================================================== */
+
+.footer {
+	background: $primary;
+}
+
+.footer-paragraph {
+  color: white;
+  font-size: 18px;
+  margin: 54px 0;
+  text-align: center;
+}
+
+.footer-link {
+	@include anim(color);
+	color: $accent;
+	text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+	color: rgba($accent, .7);
+}
+
+/* ==========================================================================
+	 Animations
+	 ========================================================================== */
 
 @-webkit-keyframes cloudLoop {
 	0% {
