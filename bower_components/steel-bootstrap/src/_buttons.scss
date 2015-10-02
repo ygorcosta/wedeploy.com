@@ -1,0 +1,193 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+.btn {
+	@include button-size(0, 43px, 16px, 58px, 4px);
+
+	&,
+	&:active,
+	&.active {
+		&:focus,
+		&.focus {
+			outline: none;
+		}
+	}
+
+	&:active,
+	&.active {
+		box-shadow: none;
+	}
+}
+
+.btn-default {
+	@include anim(all);
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background-color: $btn-default-focus-bg;
+		border-color: $btn-default-focus-border;
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: $btn-default-focus-bg;
+			border-color: $btn-default-focus-border;
+		}
+	}
+}
+
+.btn-primary {
+	@include anim(all);
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background-color: rgba($primary, .7);
+		border-color: $primary;
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($primary, .7);
+			border-color: $primary;
+		}
+	}
+}
+
+.btn-success {
+	@include anim(all);
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background-color: rgba($brand-success, .8);
+		border-color: rgba($brand-success, .99);
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($brand-success, .8);
+			border-color: rgba($brand-success, .99);
+		}
+	}
+}
+
+.btn-danger {
+	@include anim(all);
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background-color: rgba($brand-danger, .8);
+		border-color: rgba($brand-danger, .99);
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($brand-danger, .8);
+			border-color: rgba($brand-danger, .99);
+		}
+	}
+}
+
+.btn-accent {
+	@include anim(all);
+	background: $btn-accent-bg;
+	border-color: $btn-accent-border;
+	color: $btn-accent-color;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background-color: rgba($accent, .8);
+		border-color: rgba($accent, .8);
+		color: $btn-accent-color;
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($accent, .8);
+			border-color: rgba($accent, .8);
+			color: $btn-accent-color;
+		}
+	}
+}
+
+.btn-inverse {
+	@include anim(all);
+	color: $btn-inverse-color;
+	background: $btn-inverse-bg;
+	border-color: $btn-inverse-border;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background-color: rgba($white, .15);
+		border-color: rgba($white, .6);
+		color: $btn-inverse-color;
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($white, .15);
+			border-color: rgba($white, .6);
+			color: $btn-inverse-color;
+		}
+	}
+}
+
+// Icons
+
+.btn span[class^="icon-16-"],
+.btn span[class*="icon-16-"] {
+	margin-right: 10px;
+	position: relative;
+	top: 2px;
+}
+
+// Sizes
+
+.btn-lg {
+	@include button-size(0, 76px, 16px, 58px, 4px);
+	font-weight: 600;
+}
+
+.btn-sm {
+	@include button-size(0, 20px, 14px, 50px, 4px);
+	font-weight: 600;
+}
+
+// Transparent
+
+.btn-transparent {
+	background: transparent;
+	border: 0;
+	padding: 0;
+
+	&,
+	&:active,
+	&.active {
+		&:focus,
+		&.focus {
+			outline: none;
+		}
+	}
+}

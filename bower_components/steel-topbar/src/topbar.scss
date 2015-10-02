@@ -1,0 +1,125 @@
+@import "steel-bootstrap/src/variables";
+@import "steel-bootstrap/src/mixins";
+
+/* Topbar
+	 ========================================================================== */
+
+.topbar {
+	background: $primary;
+	height: 84px;
+	padding: 0 40px;
+}
+
+.topbar-logo {
+	float: left;
+	margin: 2px 0;
+}
+
+.topbar-logo-link {
+	@include anim(color);
+	color: rgba($white, .8);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	font-family: $font-family-secondary;
+	font-weight: 500;
+	margin: 30px 0;
+	text-transform: uppercase;
+}
+
+.topbar-logo-link:hover {
+	color: white;
+}
+
+.topbar-logo-text {
+	font-size: 13px;
+	margin-left: 20px;
+}
+
+.topbar-list {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	float: right;
+	font-size: 0;
+	list-style: none;
+	margin: 24px 0;
+	padding: 0;
+}
+
+.topbar-item {
+	display: inline-block;
+	margin: 0 20px;
+}
+
+.topbar-item:last-child {
+	margin-right: 0;
+}
+
+.topbar-link {
+	@include anim(color);
+	color: rgba($white, .3);
+	font-family: $font-family-secondary;
+	font-size: 12px;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.topbar-link:focus {
+	color: rgba($white, .3);
+}
+
+.topbar-link:hover {
+	color: rgba($white, .6);
+}
+
+.topbar-link-selected,
+.topbar-link-selected:hover {
+	color: $accent;
+}
+
+.topbar-avatar {
+	margin-left: 10px;
+	position: relative;
+	top: 3px;
+}
+
+.topbar-avatar .avatar-container {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.topbar-avatar .avatar-initials {
+	background: $accent;
+}
+
+.topbar-caret {
+	margin-left: 10px;
+	position: relative;
+	top: -12px;
+}
+
+@media (max-width: 480px) {
+	.topbar {
+		padding: 0 20px;
+	}
+
+	.topbar-item {
+		margin: 0 10px;
+	}
+
+	.topbar-avatar {
+		width: 56px;
+	}
+
+	.topbar-caret {
+		margin-left: 5px;
+	}
+}

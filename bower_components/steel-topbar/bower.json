@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "steel-topbar",
+  "version": "0.0.0",
+  "dependencies": {
+    "steel-avatar": "metal/steel-avatar#master",
+    "steel-bootstrap": "metal/steel-bootstrap#master"
+  }
+}

@@ -1,0 +1,89 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+@import "variables";
+
+.dropdown-menu {
+	background: $white;
+	border-radius: $border-radius-base;
+	box-shadow: 0 1px 8px rgba($black, 0.08);
+	margin: -10px 0 0 10px;
+	min-width: initial;
+	position: absolute;
+}
+
+.dropdown-menu > li {
+	margin: 0;
+
+	&:first-child {
+		margin-top: 25px;
+	}
+
+	&:last-child {
+		margin-bottom: 25px;
+	}
+}
+
+.dropdown-menu > li > a,
+.dropdown-menu > li > button {
+	@include anim(color);
+	color: $dropdown-link-color;
+	display: block;
+	font-size: 14px;
+	padding: 10px 40px;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color: $dropdown-link-hover-bg;
+		color: $dropdown-link-hover-color;
+	}
+}
+
+// Dropdown select -------------------------------------------------------------
+
+.dropdown-select {
+	color: rgba($primary, .6);
+	font-weight: 400;
+}
+
+.dropdown-select.btn-default:hover,
+.dropdown-select.btn-default:active,
+.dropdown-select.btn-default:focus,
+.dropdown-select.btn-default:active:focus {
+	background: white;
+}
+
+.dropdown-select:active,
+.dropdown-select:focus,
+.dropdown-select:active:focus {
+	border-color: $accent;
+}
+
+.dropdown-select.form-control {
+	background: white;
+	padding: 0 20px;
+	line-height: 51px;
+	text-align: left;
+}
+
+.dropdown-select .icon-12-arrow-down-short {
+	margin-left: 10px;
+}
+
+.dropdown-select.form-control .icon-12-arrow-down-short {
+	float: right;
+	line-height: 51px;
+}
+
+.dropdown-select-group-left {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	margin-right: -2px;
+}
+
+.dropdown-select-group-right {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-left: -2px;
+}
+
