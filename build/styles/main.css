@@ -6779,44 +6779,95 @@ button.close {
     margin-left: 5px; } }
 
 body {
-  background-image: -webkit-linear-gradient(270deg, #647efb 0%, #647efb 50%, transparent 100%);
-  background-image: linear-gradient(180deg, #647efb 0%, #647efb 50%, transparent 100%);
-  display: flex;
-  min-height: 100vh;
   overflow-x: hidden; }
 
-.headline {
+/* ==========================================================================
+   Headline
+   ========================================================================== */
+.hero-container {
+  background: #647efb;
+  overflow: hidden;
+  position: relative; }
+
+.hero {
   width: 760px;
   text-align: center;
-  margin: 250px auto 0; }
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 150px 0; }
 
-.title {
+.hero-title {
   color: white;
   font-family: "brandon-grotesque", sans-serif;
   font-size: 60px;
-  font-weight: 700; }
+  font-weight: 700;
+  margin: 0 0 40px; }
 
-.description {
+.hero-description {
   color: white;
   display: block;
   font-size: 24px;
   font-weight: 300;
-  line-height: 36px; }
+  line-height: 36px;
+  margin: 0 0 40px; }
 
+/* ==========================================================================
+   Clouds
+   ========================================================================== */
 .hero-clouds {
   position: absolute;
-  z-index: 30;
+  z-index: 0;
   top: 0;
   left: 0;
-  width: 250.625em;
-  height: 43.75em;
+  width: 4010px;
+  height: 700px;
   -webkit-animation: cloudLoop 80s linear infinite;
   animation: cloudLoop 80s linear infinite;
-  visibility: inherit;
-  opacity: 1;
-  background-size: cover;
-  background: url("http://www.invisionapp.com/subsystems/do_ui_kit/assets/img/clouds.png") 0px 100% repeat-x; }
+  background: url("../../images/clouds.png") 0px 100% repeat-x; }
 
+/* ==========================================================================
+   Features
+   ========================================================================== */
+.feature-container {
+  background: #0e141a;
+  width: 100%; }
+
+.feature {
+  margin: 108px auto 116px;
+  text-align: center;
+  width: 224px; }
+
+@media (max-width: 767px) {
+  .feature-container {
+    padding: 48px 0; }
+  .feature {
+    margin: 48px auto 0; } }
+
+.feature-icon {
+  display: block;
+  margin: 0 auto 39px;
+  color: #647efb;
+  font-size: 64px; }
+
+.feature-title {
+  color: white;
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 23px;
+  text-transform: uppercase; }
+
+.feature-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 27px; }
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
 @-webkit-keyframes cloudLoop {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
