@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "dependencies": {
     "steel-bootstrap": "metal/steel-bootstrap#master",
-    "steel-topbar": "metal/steel-topbar#master"
+    "steel-topbar": "metal/steel-topbar#master",
+    "codemirror": "~5.5.0"
   }
 }
