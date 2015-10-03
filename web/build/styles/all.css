@@ -6795,39 +6795,34 @@ button.close {
   .topbar-caret {
     margin-left: 5px; } }
 
-body {
-  overflow-x: hidden; }
-
-/* ==========================================================================
-	 Topbar
+/* Topbar Inverse
 	 ========================================================================== */
-.topbar {
-  position: relative;
-  z-index: 1; }
+.topbar.topbar-inverse {
+  background: #647efb; }
 
-.topbar-list {
+.topbar-inverse .topbar-list {
   margin: 33px 0; }
 
-.topbar-link {
+.topbar-inverse .topbar-link {
   color: rgba(255, 255, 255, 0.5); }
 
-.topbar-link:hover,
-.topbar-link:focus {
+.topbar-inverse .topbar-link:hover,
+.topbar-inverse .topbar-link:focus {
   color: rgba(255, 255, 255, 0.8); }
 
-.topbar-link-selected {
+.topbar-inverse .topbar-link-selected {
   color: white; }
 
-.topbar-link-selected:hover,
-.topbar-link-selected:focus {
+.topbar-inverse .topbar-link-selected:hover,
+.topbar-inverse .topbar-link-selected:focus {
   color: white; }
 
 @media (max-width: 480px) {
-  .topbar {
+  .topbar-inverse .topbar {
     padding: 0 10px; }
-  .topbar-logo-text {
+  .topbar-inverse .topbar-logo-text {
     margin-left: 10px; }
-  .topbar-logo-complementary {
+  .topbar-inverse .topbar-logo-complementary {
     display: none; } }
 
 /* ==========================================================================

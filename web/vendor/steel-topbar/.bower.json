@@ -6,11 +6,11 @@
     "steel-bootstrap": "metal/steel-bootstrap#master"
   },
   "homepage": "https://github.com/metal/steel-topbar",
-  "_release": "4ff964e9a9",
+  "_release": "5be9befbe5",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "4ff964e9a9766250b92dbc3196956789e17eb3bc"
+    "commit": "5be9befbe50fa1aa50555e147417dc16cdc10b00"
   },
   "_source": "git://github.com/metal/steel-topbar.git",
   "_target": "master",

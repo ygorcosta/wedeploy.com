@@ -23,7 +23,8 @@
   margin: 30px 0;
   text-transform: uppercase; }
 
-.topbar-logo-link:hover {
+.topbar-logo-link:hover,
+.topbar-logo-link:focus {
   color: white; }
 
 .topbar-logo-text {
@@ -66,11 +67,13 @@
 .topbar-link:focus {
   color: rgba(255, 255, 255, 0.3); }
 
-.topbar-link:hover {
+.topbar-link:hover,
+.topbar-link:focus {
   color: rgba(255, 255, 255, 0.6); }
 
 .topbar-link-selected,
-.topbar-link-selected:hover {
+.topbar-link-selected:hover,
+.topbar-link-selected:focus {
   color: #647efb; }
 
 .topbar-avatar {
@@ -99,3 +102,33 @@
     width: 56px; }
   .topbar-caret {
     margin-left: 5px; } }
+
+/* Topbar Inverse
+	 ========================================================================== */
+.topbar.topbar-inverse {
+  background: #647efb; }
+
+.topbar-inverse .topbar-list {
+  margin: 33px 0; }
+
+.topbar-inverse .topbar-link {
+  color: rgba(255, 255, 255, 0.5); }
+
+.topbar-inverse .topbar-link:hover,
+.topbar-inverse .topbar-link:focus {
+  color: rgba(255, 255, 255, 0.8); }
+
+.topbar-inverse .topbar-link-selected {
+  color: white; }
+
+.topbar-inverse .topbar-link-selected:hover,
+.topbar-inverse .topbar-link-selected:focus {
+  color: white; }
+
+@media (max-width: 480px) {
+  .topbar-inverse .topbar {
+    padding: 0 10px; }
+  .topbar-inverse .topbar-logo-text {
+    margin-left: 10px; }
+  .topbar-inverse .topbar-logo-complementary {
+    display: none; } }

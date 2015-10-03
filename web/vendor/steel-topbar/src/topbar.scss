@@ -126,3 +126,46 @@
 		margin-left: 5px;
 	}
 }
+
+/* Topbar Inverse
+	 ========================================================================== */
+
+.topbar.topbar-inverse {
+	background: $accent;
+}
+
+.topbar-inverse .topbar-list {
+	margin: 33px 0;
+}
+
+.topbar-inverse .topbar-link {
+	color: rgba(white, .5);
+}
+
+.topbar-inverse .topbar-link:hover,
+.topbar-inverse .topbar-link:focus {
+	color: rgba(white, .8);
+}
+
+.topbar-inverse .topbar-link-selected {
+	color: white;
+}
+
+.topbar-inverse .topbar-link-selected:hover,
+.topbar-inverse .topbar-link-selected:focus {
+	color: white;
+}
+
+@media (max-width: 480px) {
+	.topbar-inverse .topbar {
+	    padding: 0 10px;
+	}
+
+	.topbar-inverse .topbar-logo-text {
+		margin-left: 10px;
+	}
+
+	.topbar-inverse .topbar-logo-complementary {
+		display: none;
+	}
+}

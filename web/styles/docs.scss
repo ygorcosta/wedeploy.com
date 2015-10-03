@@ -1,11 +1,7 @@
 @import "web/vendor/steel-bootstrap/src/bootstrap.scss";
 
-/* ==========================================================================
-	 Topbar
-	 ========================================================================== */
-
-.topbar {
-	background: $accent;
+body {
+	overflow-x: hidden;
 }
 
 /* Navigation
