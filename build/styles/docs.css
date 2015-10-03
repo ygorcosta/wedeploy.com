@@ -6688,9 +6688,9 @@ button.close {
   margin: 100px 0; }
 
 .docs-nav-group {
-  color: rgba(14, 20, 26, 0.4);
+  color: rgba(14, 20, 26, 0.8);
   font-family: "brandon-grotesque", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   margin-bottom: 36px; }
 
 .docs-nav-list {
@@ -6705,9 +6705,8 @@ button.close {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
-  color: rgba(14, 20, 26, 0.4);
-  font-size: 14px;
-  font-weight: 600; }
+  color: rgba(14, 20, 26, 0.6);
+  font-size: 14px; }
 
 .docs-nav-link:hover,
 .docs-nav-link:focus {
@@ -6739,12 +6738,12 @@ button.close {
 .docs-content h6 {
   color: rgba(14, 20, 26, 0.8);
   font-family: "brandon-grotesque", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   margin: 64px 0 30px; }
 
 .docs-content h1 {
-  font-size: 30px;
-  margin: 0 0 52px; }
+  font-size: 36px;
+  margin: 0 0 32px; }
 
 .docs-content h2 {
   font-size: 24px; }
@@ -6764,7 +6763,7 @@ button.close {
 .docs-content p,
 .docs-content li,
 .docs-content pre {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px; }
 
 .docs-content .CodeMirror,
@@ -6776,7 +6775,7 @@ button.close {
 
 .docs-content .CodeMirror pre {
   line-height: 24px;
-  font-size: 16px; }
+  font-size: 15px; }
 
 .docs-content pre code {
   background-color: #fdfcff;
@@ -6788,4 +6787,5 @@ button.close {
   padding: 2px; }
 
 .docs-content .CodeMirror {
-  height: auto; }
+  height: auto;
+  margin-bottom: 15px; }

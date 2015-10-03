@@ -16,9 +16,9 @@
 }
 
 .docs-nav-group {
-	color: rgba($primary, 0.4);
+	color: rgba($primary, .8);
 	font-family: $font-family-secondary;
-	font-size: 15px;
+	font-size: 18px;
 	margin-bottom: 36px;
 }
 
@@ -34,9 +34,8 @@
 
 .docs-nav-link {
 	@include anim(color);
-	color: rgba($primary, 0.4);
+	color: rgba($primary, 0.6);
 	font-size: 14px;
-	font-weight: 600;
 }
 
 .docs-nav-link:hover,
@@ -49,7 +48,7 @@
 	 ========================================================================== */
 
 .docs-content {
-	color: rgba($primary, 0.6);
+	color: rgba($primary, .6);
 }
 
 .docs-content a {
@@ -60,7 +59,7 @@
 
 .docs-content a:hover,
 .docs-content a:focus {
-	color: rgba($accent, 0.6);
+	color: rgba($accent, .6);
 	text-decoration: none;
 }
 
@@ -70,15 +69,15 @@
 .docs-content h4,
 .docs-content h5,
 .docs-content h6 {
-	color: rgba($primary, 0.8);
+	color: rgba($primary, .8);
 	font-family: $font-family-secondary;
-	font-weight: 300;
+	font-weight: 500;
 	margin: 64px 0 30px;
 }
 
 .docs-content h1 {
-	font-size: 30px;
-	margin: 0 0 52px;
+	font-size: 36px;
+	margin: 0 0 32px;
 }
 
 .docs-content h2 {
@@ -104,7 +103,7 @@
 .docs-content p,
 .docs-content li,
 .docs-content pre {
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 24px;
 }
 
@@ -119,7 +118,7 @@
 
 .docs-content .CodeMirror pre {
   line-height: 24px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .docs-content pre code {
@@ -135,4 +134,5 @@
 
 .docs-content .CodeMirror {
 	height: auto;
+	margin-bottom: 15px;
 }
