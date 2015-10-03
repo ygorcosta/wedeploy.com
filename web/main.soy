@@ -1,0 +1,32 @@
+{namespace main}
+
+/**
+ * @param content
+ */
+{template .layout}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Launchpad Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="/images/favicon.ico">
+
+	<!-- Fonts -->
+	<script src="https://use.typekit.net/kkw4zdf.js"></script>
+	{literal}<script>try{Typekit.load({ async: true });}catch(e){}</script>{/literal}
+	<link rel="stylesheet" href="/vendor/steel-bootstrap/build/fonts/icon-12.css">
+	<link rel="stylesheet" href="/vendor/steel-bootstrap/build/fonts/icon-16.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:700,400,300">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="/build/styles/all.css">
+</head>
+<body class="fade-out">
+
+	{$content}
+
+	<script src="/scripts/fade.js"></script>
+</body>
+</html>
+{/template}

@@ -1,0 +1,32 @@
+{
+  "name": "metal-anim",
+  "description": "Metal's animation utility",
+  "main": "src/Anim.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "metal",
+    "metal"
+  ],
+  "ignore": [
+    "*",
+    "!src/**/*",
+    "!test/**/*"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "metal": "metal/metal.js#master",
+    "metal-jquery-adapter": "metal/metal-jquery-adapter#master"
+  },
+  "homepage": "https://github.com/metal/metal-anim",
+  "_release": "b43b85eacf",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "b43b85eacf3c79367fef9f791d559720ef794a81"
+  },
+  "_source": "git://github.com/metal/metal-anim.git",
+  "_target": "master",
+  "_originalSource": "metal/metal-anim"
+}
