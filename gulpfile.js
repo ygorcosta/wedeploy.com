@@ -2,11 +2,11 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 
 gulp.task('build', function() {
-	return gulp.src('styles/*.scss')
+	return gulp.src('web/styles/*.scss')
 		.pipe(sass({includePaths: ['bower_components']}))
-		.pipe(gulp.dest('build/styles'));
+		.pipe(gulp.dest('web/build/styles'));
 });
 
 gulp.task('watch', function() {
-	gulp.watch('styles/*.scss', ['build']);
+	gulp.watch('web/styles/*.scss', ['build']);
 });
