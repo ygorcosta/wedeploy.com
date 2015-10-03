@@ -5,11 +5,11 @@
     "bootstrap-sass": "~3.3.4"
   },
   "homepage": "https://github.com/metal/steel-bootstrap",
-  "_release": "afc92306a9",
+  "_release": "46e181aee1",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "afc92306a9ac9d9f2b9aa0b4ad4718d544d2080e"
+    "commit": "46e181aee10df517858867c3b892f30487adeff3"
   },
   "_source": "git://github.com/metal/steel-bootstrap.git",
   "_target": "master",
