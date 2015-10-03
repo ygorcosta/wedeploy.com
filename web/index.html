@@ -79,9 +79,9 @@
 				<h3 class="invitation-title">Join Our Closed Beta</h3>
 				<p class="invitation-description">The Launchpad Project is currently available to a restricted group of developers.<br>Want to be a part of it?</p>
 
-				<form class="invitation-form">
-					<input class="invitation-input form-control" type="email" placeholder="Enter your email...">
-					<div class="invitation-btn btn btn-accent">Request Invite</div>
+				<form action="/api/request-invite" class="invitation-form" method="post">
+					<input class="invitation-input form-control" name="email" type="email" placeholder="Enter your email...">
+					<button class="invitation-btn btn btn-accent">Request Invite</button>
 				</form>
 			</div>
 		</div>
