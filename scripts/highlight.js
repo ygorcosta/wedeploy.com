@@ -7,7 +7,7 @@ for (var i = 0; i < code.length; i++) {
 		matchBrackets: true,
 		indentUnit: 2,
 		indentWithTabs: false,
-		theme: 'dracula',
+		theme: 'mdn-like',
 		viewportMargin: Infinity,
 		readOnly: true
 	});
