@@ -1142,6 +1142,20 @@ body {
   text-size-adjust: 100%;
   letter-spacing: -0.02rem; }
 
+body.fade-out {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  display: block;
+  opacity: 0;
+  overflow: hidden; }
+
+body.fade-in {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1; }
+
 .http-get-bg,
 .btn-group .btn-group-selected.http-get-bg,
 .btn-group .btn-group-selected.http-get-bg:hover,
