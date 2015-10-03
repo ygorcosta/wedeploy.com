@@ -6701,7 +6701,8 @@ button.close {
   margin: 30px 0;
   text-transform: uppercase; }
 
-.topbar-logo-link:hover {
+.topbar-logo-link:hover,
+.topbar-logo-link:focus {
   color: white; }
 
 .topbar-logo-text {
@@ -6744,11 +6745,13 @@ button.close {
 .topbar-link:focus {
   color: rgba(255, 255, 255, 0.3); }
 
-.topbar-link:hover {
+.topbar-link:hover,
+.topbar-link:focus {
   color: rgba(255, 255, 255, 0.6); }
 
 .topbar-link-selected,
-.topbar-link-selected:hover {
+.topbar-link-selected:hover,
+.topbar-link-selected:focus {
   color: #647efb; }
 
 .topbar-avatar {
@@ -6777,6 +6780,38 @@ button.close {
     width: 56px; }
   .topbar-caret {
     margin-left: 5px; } }
+
+/* ==========================================================================
+	 Topbar
+	 ========================================================================== */
+.topbar {
+  position: relative;
+  z-index: 1; }
+
+.topbar-list {
+  margin: 33px 0; }
+
+.topbar-link {
+  color: rgba(255, 255, 255, 0.5); }
+
+.topbar-link:hover,
+.topbar-link:focus {
+  color: rgba(255, 255, 255, 0.8); }
+
+.topbar-link-selected {
+  color: white; }
+
+.topbar-link-selected:hover,
+.topbar-link-selected:focus {
+  color: white; }
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0 10px; }
+  .topbar-logo-text {
+    margin-left: 10px; }
+  .topbar-logo-complementary {
+    display: none; } }
 
 /* ==========================================================================
 	 Footer

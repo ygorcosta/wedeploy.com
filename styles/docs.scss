@@ -1,12 +1,19 @@
 @import "bower_components/steel-bootstrap/src/bootstrap.scss";
-@import "bower_components/steel-topbar/src/topbar.scss";
 
-.docs {
-	margin: 100px 0;
+/* ==========================================================================
+	 Topbar
+	 ========================================================================== */
+
+.topbar {
+	background: $accent;
 }
 
 /* Navigation
 	 ========================================================================== */
+
+.docs {
+	margin: 100px 0;
+}
 
 .docs-nav-group {
 	color: rgba($primary, 0.4);

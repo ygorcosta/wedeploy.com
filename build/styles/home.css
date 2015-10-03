@@ -6676,108 +6676,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-/* Topbar
-	 ========================================================================== */
-.topbar {
-  background: #0e141a;
-  height: 84px;
-  padding: 0 40px; }
-
-.topbar-logo {
-  float: left;
-  margin: 2px 0; }
-
-.topbar-logo-link {
-  -webkit-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
-  color: rgba(255, 255, 255, 0.8);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: "brandon-grotesque", sans-serif;
-  font-weight: 500;
-  margin: 30px 0;
-  text-transform: uppercase; }
-
-.topbar-logo-link:hover {
-  color: white; }
-
-.topbar-logo-text {
-  font-size: 13px;
-  margin-left: 20px; }
-
-.topbar-list {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  float: right;
-  font-size: 0;
-  list-style: none;
-  margin: 24px 0;
-  padding: 0; }
-
-.topbar-item {
-  display: inline-block;
-  margin: 0 20px; }
-
-.topbar-item:last-child {
-  margin-right: 0; }
-
-.topbar-link {
-  -webkit-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
-  color: rgba(255, 255, 255, 0.3);
-  font-family: "brandon-grotesque", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  text-decoration: none;
-  text-transform: uppercase; }
-
-.topbar-link:focus {
-  color: rgba(255, 255, 255, 0.3); }
-
-.topbar-link:hover {
-  color: rgba(255, 255, 255, 0.6); }
-
-.topbar-link-selected,
-.topbar-link-selected:hover {
-  color: #647efb; }
-
-.topbar-avatar {
-  margin-left: 10px;
-  position: relative;
-  top: 3px; }
-
-.topbar-avatar .avatar-container {
-  cursor: pointer;
-  display: inline-block; }
-
-.topbar-avatar .avatar-initials {
-  background: #647efb; }
-
-.topbar-caret {
-  margin-left: 10px;
-  position: relative;
-  top: -12px; }
-
-@media (max-width: 480px) {
-  .topbar {
-    padding: 0 20px; }
-  .topbar-item {
-    margin: 0 10px; }
-  .topbar-avatar {
-    width: 56px; }
-  .topbar-caret {
-    margin-left: 5px; } }
-
 body {
   overflow-x: hidden; }
 
@@ -6785,23 +6683,7 @@ body {
 	 Topbar
 	 ========================================================================== */
 .topbar {
-  background: transparent;
-  position: relative;
-  z-index: 1; }
-
-.topbar-link {
-  color: rgba(255, 255, 255, 0.5); }
-
-.topbar-link:hover,
-.topbar-link:focus {
-  color: rgba(255, 255, 255, 0.8); }
-
-.topbar-link-selected {
-  color: white; }
-
-.topbar-link-selected:hover,
-.topbar-link-selected:hover {
-  color: white; }
+  background: transparent; }
 
 /* ==========================================================================
 	 Headline
@@ -6891,7 +6773,7 @@ body {
   margin: 108px auto 116px; }
 
 .invitation-title {
-  color: #0e141a;
+  color: rgba(14, 20, 26, 0.8);
   font-family: "brandon-grotesque", sans-serif;
   font-size: 48px;
   font-weight: 500;
@@ -6899,6 +6781,7 @@ body {
   text-align: center; }
 
 .invitation-description {
+  color: rgba(14, 20, 26, 0.6);
   margin: 0 auto 48px;
   text-align: center;
   font-size: 18px;

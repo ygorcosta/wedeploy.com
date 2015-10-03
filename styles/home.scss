@@ -1,5 +1,4 @@
 @import "bower_components/steel-bootstrap/src/bootstrap.scss";
-@import "bower_components/steel-topbar/src/topbar.scss";
 
 body {
 	overflow-x: hidden;
@@ -11,26 +10,6 @@ body {
 
 .topbar {
 	background: transparent;
-	position: relative;
-	z-index: 1;
-}
-
-.topbar-link {
-	color: rgba(white, .5);
-}
-
-.topbar-link:hover,
-.topbar-link:focus {
-	color: rgba(white, .8);
-}
-
-.topbar-link-selected {
-	color: white;
-}
-
-.topbar-link-selected:hover,
-.topbar-link-selected:hover {
-	color: white;
 }
 
 /* ==========================================================================
@@ -139,7 +118,7 @@ body {
 }
 
 .invitation-title {
-	color: $primary;
+	color: rgba($primary, .8);
 	font-family: $font-family-secondary;
 	font-size: 48px;
 	font-weight: 500;
@@ -148,6 +127,7 @@ body {
 }
 
 .invitation-description {
+	color: rgba($primary, .6);
 	margin: 0 auto 48px;
 	text-align: center;
 	font-size: 18px;

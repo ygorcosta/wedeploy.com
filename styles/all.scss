@@ -2,6 +2,51 @@
 @import "bower_components/steel-topbar/src/topbar.scss";
 
 /* ==========================================================================
+	 Topbar
+	 ========================================================================== */
+
+.topbar {
+	position: relative;
+	z-index: 1;
+}
+
+.topbar-list {
+	margin: 33px 0;
+}
+
+.topbar-link {
+	color: rgba(white, .5);
+}
+
+.topbar-link:hover,
+.topbar-link:focus {
+	color: rgba(white, .8);
+}
+
+.topbar-link-selected {
+	color: white;
+}
+
+.topbar-link-selected:hover,
+.topbar-link-selected:focus {
+	color: white;
+}
+
+@media (max-width: 480px) {
+	.topbar {
+	    padding: 0 10px;
+	}
+
+	.topbar-logo-text {
+		margin-left: 10px;
+	}
+
+	.topbar-logo-complementary {
+		display: none;
+	}
+}
+
+/* ==========================================================================
 	 Footer
 	 ========================================================================== */
 

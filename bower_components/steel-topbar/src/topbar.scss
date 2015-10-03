@@ -28,7 +28,8 @@
 	text-transform: uppercase;
 }
 
-.topbar-logo-link:hover {
+.topbar-logo-link:hover,
+.topbar-logo-link:focus {
 	color: white;
 }
 
@@ -76,12 +77,14 @@
 	color: rgba($white, .3);
 }
 
-.topbar-link:hover {
+.topbar-link:hover,
+.topbar-link:focus {
 	color: rgba($white, .6);
 }
 
 .topbar-link-selected,
-.topbar-link-selected:hover {
+.topbar-link-selected:hover,
+.topbar-link-selected:focus {
 	color: $accent;
 }
 
