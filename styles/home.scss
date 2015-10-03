@@ -1,9 +1,5 @@
 @import "bower_components/steel-bootstrap/src/bootstrap.scss";
 
-body {
-	overflow-x: hidden;
-}
-
 /* ==========================================================================
 	 Topbar
 	 ========================================================================== */
@@ -23,9 +19,7 @@ body {
 }
 
 .hero {
-	width: 760px;
 	text-align: center;
-	margin: 0 auto;
 	position: relative;
 	z-index: 1;
 	padding: 150px 0 234px;
@@ -36,7 +30,9 @@ body {
 	font-family: $font-family-secondary;
 	font-size: 60px;
 	font-weight: 700;
-	margin: 0 0 40px;
+	margin: 0 auto 40px;
+	max-width: 480px;
+	padding: 0 10px;
 }
 
 .hero-description {
@@ -45,7 +41,9 @@ body {
 	font-size: 24px;
 	font-weight: 300;
 	line-height: 36px;
-	margin: 0;
+	margin: 0 auto;
+	max-width: 760px;
+	padding: 0 10px;
 }
 
 .hero-clouds {
@@ -58,6 +56,12 @@ body {
 	-webkit-animation: cloudLoop 80s linear infinite;
 	animation: cloudLoop 80s linear infinite;
 	background: url("../../images/clouds.png") 0px 100% repeat-x;
+}
+
+@media (max-width: 480px) {
+	.hero-clouds {
+		display: none;
+	}
 }
 
 /* ==========================================================================
@@ -136,16 +140,16 @@ body {
 
 .invitation-form {
 	margin: 0 auto;
-	width: 400px;
+	max-width: 400px;
 }
 
 .invitation-input {
 	background: white;
-	margin: 0 auto 10px;
+	margin: 0 auto 15px;
 }
 
 .invitation-btn {
-	width: 400px;
+	width: 100%;
 	margin: 0 auto;
 }
 

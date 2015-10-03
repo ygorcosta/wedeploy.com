@@ -1,6 +1,10 @@
 @import "bower_components/steel-bootstrap/src/bootstrap.scss";
 @import "bower_components/steel-topbar/src/topbar.scss";
 
+body {
+	overflow-x: hidden;
+}
+
 /* ==========================================================================
 	 Topbar
 	 ========================================================================== */
