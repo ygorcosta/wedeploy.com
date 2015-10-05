@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		alert.elementClasses = 'alert-success';
 		alert.visible = true;
 	}
-	else if (url === '?invited=success') {
+	else if (url === '?invited=error') {
 		alert.body = 'Something wrong happened! Please come back later.';
 		alert.elementClasses = 'alert-danger';
 		alert.visible = true;
