@@ -1,0 +1,28 @@
+@import "bower_components/steel-bootstrap/src/bootstrap.scss";
+@import "bower_components/steel-topbar/src/topbar.scss";
+
+/* ==========================================================================
+	 Footer
+	 ========================================================================== */
+
+.footer {
+	background: $primary;
+}
+
+.footer-paragraph {
+	color: white;
+	font-size: 18px;
+	margin: 54px 0;
+	text-align: center;
+}
+
+.footer-link {
+	@include anim(color);
+	color: $accent;
+	text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+	color: rgba($accent, .7);
+}
