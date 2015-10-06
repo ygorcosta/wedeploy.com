@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 	var alert = new steel.Alert({
-		visible: false
+		visible: false,
+		animClasses: {
+			hide: 'hidden'
+		}
 	}).render();
 
 	var url = window.location.search;
