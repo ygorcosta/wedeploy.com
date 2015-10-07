@@ -109,6 +109,9 @@ body {
 
 .docs-content pre {
 	border: 0;
+	overflow: auto;
+	word-break: normal;
+	word-wrap: normal;
 }
 
 .docs-content code {
@@ -121,6 +124,7 @@ body {
 	background: #f5f5f5;
 	color: rgba($primary, .6);
 	padding: 0.5em;
+	white-space: inherit;
 }
 
 .docs-content {
