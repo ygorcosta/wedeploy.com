@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var connect = require('gulp-connect');
 var layout = require('gulp-layout');
 var markdown = require('gulp-markdown');
 var sass = require('gulp-sass');
@@ -79,6 +80,13 @@ gulp.task('build', [
 	'styles', 'vendor-styles', 'vendor-fonts',
 	'scripts', 'vendor-scripts', 'images', 'home', 'learn'
 ]);
+
+gulp.task('server', ['build'], function() {
+	connect.server({
+		root: 'build',
+		port: 8888
+	});
+});
 
 gulp.task('watch', function() {
 	gulp.watch('scss/*.scss', ['scss']);
