@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Launchpad Project (Beta)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="/images/favicon.ico">
+
+	<!-- Fonts -->
+	<script src="https://use.typekit.net/kkw4zdf.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<link rel="stylesheet" href="/vendor/fonts/icon-12.css">
+	<link rel="stylesheet" href="/vendor/fonts/icon-16.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:700,400,300">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="/styles/all.css">
+	
+	<link rel="stylesheet" href="/styles/learn.css">
+	<link rel="stylesheet" href="/vendor/styles/github.css">
+
+</head>
+<body class="fade-out">
+
+	
+	<nav class="topbar topbar-inverse">
+		<div class="topbar-logo">
+			<a class="topbar-logo-link" href="/">
+				<span class="icon-16-launchpad-logo"></span>
+				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project <span class="topbar-logo-label">Beta</span></span></span>
+			</a>
+		</div>
+		<ul class="topbar-list">
+			<li class="topbar-item">
+				<a class="topbar-link" href="/">Product</a>
+			</li>
+			<li class="topbar-item">
+				<a class="topbar-link topbar-link-selected" href="/learn">Learn</a>
+			</li>
+			<li class="topbar-item">
+				<a class="topbar-link" href="/dashboard/login/signin">Login</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main class="docs">
+		<div class="container">
+			<div class="row">
+				<nav class="docs-nav col-xs-12 col-sm-3">
+					<p class="docs-nav-group">What is?</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn" class="docs-nav-link">Frequently Asked Questions</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">How to use?</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html" class="docs-nav-link">Authentication</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/realtime-database.html" class="docs-nav-link">Realtime Database</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/custom-apis.html" class="docs-nav-link">Custom APIs</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">How it works?</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html" class="docs-nav-link">Data Operations</a>
+						</li>
+					</ul>
+				</nav>
+
+				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
+					<h1 id="authentication">Authentication</h1>
+<p>With Launchpad, you can authenticate users from our Java, Swift, and JavaScript SDKs in just a few lines of code. We have built-in functionality for authenticating users using their email and password. Apps that use Launchpad built-in auth services can handle user login entirely with client-side code, saving you time and the headache of operating your own back-end.</p>
+<p>The following sections explain authentication in greater detail:</p>
+<ul>
+<li><a href="#authentication-configuration">Authentication Configuration</a></li>
+<li><a href="#authentication-provider">Authentication Provider</a></li>
+<li><a href="#logging-users-in">Logging Users In</a></li>
+<li><a href="#logging-users-out">Logging Users Out</a></li>
+</ul>
+<h3 id="authentication-configuration">Authentication Configuration</h3>
+<p>Launchpad provides an authentication service out-of-the-box for any newly created app. To facilitate your authentication needs, Launchpad provides some extended configuration options, such as login and redirect URL properties. To set extended configuration options for your app, you just need to create an <code>auth.json</code> file in your application&#39;s root folder.</p>
+<p>For example, the following code shows an <code>auth.json</code> file with its default values:</p>
+<pre><code class="lang-js">{
+    &quot;auth.hashAlgorithm&quot;: null, // &quot;bcrypt&quot;, &quot;pbkdf2&quot;
+    &quot;auth.loginPageUrl&quot;: null,
+    &quot;auth.loginRedirectUrl&quot;: null,
+    &quot;auth.loginUrl&quot;: &quot;/login&quot;,
+    &quot;auth.logoutRedirectUrl&quot;: null,
+    &quot;auth.logoutUrl&quot;: &quot;/logout&quot;,
+    &quot;auth.passwordParam&quot;: &quot;password&quot;,
+    &quot;auth.permissionsParam&quot;: &quot;permissions&quot;,
+    &quot;auth.realm&quot;: &quot;rest&quot;,
+    &quot;auth.realmRestUrl&quot;: &quot;/users/data&quot;,
+    &quot;auth.roles&quot;: {},
+    &quot;auth.rolesParam&quot;: &quot;roles&quot;,
+    &quot;auth.tokenParam&quot;: &quot;token&quot;,
+    &quot;auth.userParam&quot;: &quot;email&quot;
+}
+</code></pre>
+<p>The developer preview version of Launchpad allows you to configure your application&#39;s authentication in your local development environment.</p>
+<h3 id="authentication-provider">Authentication Provider</h3>
+<p>The user&#39;s identity allows an app to provide a customized experience and grant them permissions to access their APIs. The process of proving a user&#39;s identity is called authentication. The default authentication provider of a Launchpad application is known as the user service. The user service provides a RESTful API to save, update, and delete users. The app uses the user service stored data to fulfill the default authentication provider.</p>
+<p>In the <a href="#authentication_configuration">Authentication Configuration</a> section, important configuration properties were introduced, including <code>auth.userParam</code>, <code>auth.passwordParam</code>, and <code>auth.realmRestUrl</code>. Launchpad uses this information to interact with the user service API. As an example, let&#39;s use the app you have created called <code>App</code>. Every app has it&#39;s own URL, in this case <a href="http://liferay.io/app">http://liferay.io/app</a>. The user service will be available under <a href="http://liferay.io/app/users">http://liferay.io/app/users</a>.</p>
+<p>Saving a new user is as simple as performing a POST request with the proper user and password parameter names, e.g.</p>
+<pre><code class="lang-bash">curl -X &quot;POST&quot; &quot;http://liferay.io/app/users/data&quot; \
+    --data-urlencode &quot;email=user@liferay.io&quot; \
+    --data-urlencode &quot;password=pass&quot; \
+    --data-urlencode &quot;foo=bar&quot;
+</code></pre>
+<p>The request will respond with the user document created:</p>
+<pre><code class="lang-js">{&quot;password&quot;:&quot;pass&quot;,&quot;id&quot;:&quot;115992383516607958&quot;,&quot;email&quot;:&quot;user@liferay.io&quot;,&quot;foo&quot;:&quot;bar&quot;}
+</code></pre>
+<p>To retrieve the users, an authenticated GET request can be performed, e.g.</p>
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/users/data&quot; \
+    -H &quot;Authorization: Basic dXNlckBsaWZlcmF5LmlvOnBhc3M=&quot; \
+</code></pre>
+<p>The request will respond with the list of users:</p>
+<pre><code class="lang-js">[{&quot;password&quot;:&quot;pass&quot;,&quot;id&quot;:&quot;115992383516607958&quot;,&quot;email&quot;:&quot;user@liferay.io&quot;,&quot;foo&quot;:&quot;bar&quot;}]
+</code></pre>
+<p>To delete an user, an authenticated DELETE request can be performed, e.g.</p>
+<pre><code class="lang-bash">curl -X &quot;DELETE&quot; &quot;http://liferay.io/app/users/data/115992383516607958&quot; \
+    -H &quot;Authorization: Basic dXNlckBsaWZlcmF5LmlvOnBhc3M=&quot; \
+</code></pre>
+<h3 id="logging-users-in">Logging Users In</h3>
+<p>Now you know how to save, retrieve, and delete users in your application. The user data stored will be used by the auth provider to lookup user emails and passwords to authenticate. </p>
+<p>Launchpad supports the following authentication types:</p>
+<h4 id="-basic-"><code>Basic</code></h4>
+<p>Curl</p>
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/private&quot; \
+    -H &quot;Authorization: Basic dXNlckBsaWZlcmF5LmlvOnBhc3M=&quot; \
+</code></pre>
+<p>JavaScript</p>
+<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/private&#39;)
+   .auth(&#39;user@liferay.io&#39;, &#39;pass&#39;)
+   .get();
+</code></pre>
+<p>Java</p>
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/private&quot;)
+   .auth(&quot;user@liferay.io&quot;, &quot;pass&quot;)
+   .get();
+</code></pre>
+<h4 id="-token-"><code>Token</code></h4>
+<p>Curl</p>
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/private&quot; \
+    -H &quot;Authorization: Bearer [token]&quot; \
+</code></pre>
+<p>JavaScript</p>
+<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/private&#39;)
+   .auth(&#39;[token]&#39;)
+   .get();
+</code></pre>
+<p>Java</p>
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/private&quot;)
+   .auth(&quot;[token]&quot;)
+   .get();
+</code></pre>
+<h4 id="-cookie-"><code>Cookie</code></h4>
+<p>Curl</p>
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/private&quot; \
+    -H &quot;Cookie: token=[token]&quot; \
+</code></pre>
+<h4 id="-form-"><code>Form</code></h4>
+<p>Launchpad&#39;s Form login is very handy when building web applications. Launchpad uses the configuration <code>auth.loginUrl</code> to handle the login request and the <code>auth.loginRedirectUrl</code> to automatically redirect when a login is successful. The Form login is demonstrated in the following code:</p>
+<p>Curl</p>
+<pre><code class="lang-bash">curl -X &quot;POST&quot; &quot;http://liferay.io/app/login&quot; \
+    --data-urlencode &quot;email=user@liferay.io&quot; \
+    --data-urlencode &quot;password=pass&quot; \
+</code></pre>
+<p>Currently, Launchpad provides the authentication token using the response header <code>Set-Cookie: token=[token]</code>. This allows cookie enabled clients to keep the login session using cookies.</p>
+<h3 id="logging-users-out">Logging Users Out</h3>
+<p>Performing a GET request on the URL configured on <code>auth.logoutUrl</code> logs the user out. The <code>auth.loginPageUrl</code> will automatically redirect to the login page after logout. The following example shows how to perform a GET request on the logout URL:</p>
+<p>Curl</p>
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/logout&quot;
+</code></pre>
+<p>JavaScript</p>
+<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/logout&#39;).get();
+</code></pre>
+<p>Java</p>
+<pre><code class="lang-js">Launchpad.url(&quot;http://liferay.io/app/logout&quot;).get();
+</code></pre>
+
+				</article>
+			</div>
+		</div>
+	</main>
+
+
+	<script src="/scripts/all.js"></script>
+	
+	<script src="/scripts/learn.js"></script>
+	<script src="/vendor/scripts/highlight.pack.min.js"></script>
+
+
+	<!-- Intercom -->
+	<script>
+	window.intercomSettings = { app_id: 'ytqx30hx' };
+	(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ytqx30hx';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+	</script>
+
+	<!-- Analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-37033501-2', 'auto');
+	ga('send', 'pageview');
+	</script>
+
+	<!-- Inspectlet -->
+	<script id="inspectletjs">
+	window.__insp = window.__insp || [];
+	__insp.push(['wid', 1029478452]);
+	(function() {
+		function ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+		document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+	})();
+	</script>
+</body>
+</html>

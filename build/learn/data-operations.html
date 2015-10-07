@@ -16,9 +16,8 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/all.css">
 	
-	<link rel="stylesheet" href="/vendor/styles/codemirror.css">
-	<link rel="stylesheet" href="/vendor/styles/mdn-like.css">
-	<link rel="stylesheet" href="/styles/docs.css">
+	<link rel="stylesheet" href="/styles/learn.css">
+	<link rel="stylesheet" href="/vendor/styles/github.css">
 
 </head>
 <body class="fade-out">
@@ -51,66 +50,45 @@
 					<p class="docs-nav-group">What is?</p>
 					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
-						</li>
-					</ul>
-
-					<p class="docs-nav-group">How it works?</p>
-					<ul class="docs-nav-list">
-						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+							<a href="/learn" class="docs-nav-link">Frequently Asked Questions</a>
 						</li>
 					</ul>
 
 					<p class="docs-nav-group">How to use?</p>
 					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+							<a href="/learn/authentication.html" class="docs-nav-link">Authentication</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+							<a href="/learn/realtime-database.html" class="docs-nav-link">Realtime Database</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+							<a href="/learn/custom-apis.html" class="docs-nav-link">Custom APIs</a>
 						</li>
+					</ul>
+
+					<p class="docs-nav-group">How it works?</p>
+					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+							<a href="/learn/data-operations.html" class="docs-nav-link">Data Operations</a>
 						</li>
 					</ul>
 				</nav>
 
 				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
-					<h2 id="contents">Contents</h2>
-<ol>
-<li><a href="#basic_concepts"> Basic Concepts </a></li>
-<li><a href="#write_operations"> Write Operations </a></li>
-<li><a href="#read_operations"> Read Operations </a></li>
-<li><a href="#query"> Query </a></li>
-<li><a href="#basic_filters"> Basic Filters </a></li>
-<li><a href="#text_filters"> Text Filters </a></li>
-<li><a href="#geo_location_filters"> Geo Location Filters </a></li>
-<li><a href="#data_aggregation"> Data Aggregation </a></li>
-<li><a href="#sort_limit_and_offset"> Sort, Limit, and Offset </a></li>
-</ol>
-<p><a name="basic_concepts" /></p>
+					<h1 id="data-operations">Data Operations</h1>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#basic-concepts">Basic Concepts</a></li>
+<li><a href="#write-operations">Write Operations</a></li>
+<li><a href="#read-operations">Read Operations</a></li>
+<li><a href="#query">Query</a></li>
+<li><a href="#basic-filters">Basic Filters</a></li>
+<li><a href="#text-filters">Text Filters</a></li>
+<li><a href="#geo-location-filters">Geo Location Filters</a></li>
+<li><a href="#data-aggregation">Data Aggregation</a></li>
+<li><a href="#sort-limit-and-offset">Sort, Limit, and Offset</a></li>
+</ul>
 <h2 id="basic-concepts">Basic Concepts</h2>
 <p>We offer a built-in JSON-like datastore for all application services, with a RESTful interface that can be easily plugged to you api as follows:</p>
 <pre><code class="lang-json">[
@@ -283,15 +261,12 @@ Launchpad.url(&quot;http://liferay.io/app/service&quot;)
   ]
 }
 </code></pre>
-<p><a name="write_operations" /></p>
 <h2 id="write-operations">Write Operations</h2>
 <p>All data write operations are mapped to a HTTP method:</p>
 <ul>
 <li>DELETE: removes a field, document, collection data and mapping</li>
 </ul>
-<p><a name="read_operations" /></p>
 <h2 id="read-operations">Read Operations</h2>
-<p><a name="query" /></p>
 <h2 id="query">Query</h2>
 <p>Query is the basic entity for data search and has the following components:</p>
 <ul>
@@ -303,7 +278,6 @@ Launchpad.url(&quot;http://liferay.io/app/service&quot;)
 <li>limit</li>
 <li>offset</li>
 </ul>
-<p><a name="basic_filters" /></p>
 <h2 id="basic-filters">Basic Filters</h2>
 <p>Filter is a list of inner filters:</p>
 <pre><code class="lang-json">[
@@ -313,8 +287,7 @@ Launchpad.url(&quot;http://liferay.io/app/service&quot;)
 </code></pre>
 <p>In this example, all filters are composed with the <code>AND</code> operator:</p>
 <pre><code>filter = filter1 AND filter2 AND...
-</code></pre><p>If a list contains just one predicate, the list may be omitted, and only the
-predicate can be sent instead.</p>
+</code></pre><p>If a list contains just one predicate, the list may be omitted, and only the<br>predicate can be sent instead.</p>
 <h4 id="conjunction">Conjunction</h4>
 <p>The <code>and</code> key is used for Conjunction operations, shown in the following example:</p>
 <p>JSON</p>
@@ -482,8 +455,7 @@ Filter.missing(&quot;age&quot;)
 Filter.range(&quot;age&quot;, 20, 30)
 </code></pre>
 <h4 id="short-form-of-filter-predicate-special-case-">Short form of filter predicate (special case)</h4>
-<p>When using the common <code>=</code> operator, filter predicate can be written in
-short form using the following syntax:</p>
+<p>When using the common <code>=</code> operator, filter predicate can be written in<br>short form using the following syntax:</p>
 <p>JSON</p>
 <pre><code class="lang-json">{
    &quot;fieldName&quot; : &quot;value&quot;
@@ -502,11 +474,10 @@ short form using the following syntax:</p>
 	</main>
 
 
-	<script src="/scripts/fade.js"></script>
+	<script src="/scripts/all.js"></script>
 	
-	<script src="/vendor/scripts/codemirror.js"></script>
-	<script src="/vendor/scripts/javascript.js"></script>
-	<script src="/scripts/highlight.js"></script>
+	<script src="/scripts/learn.js"></script>
+	<script src="/vendor/scripts/highlight.pack.min.js"></script>
 
 
 	<!-- Intercom -->

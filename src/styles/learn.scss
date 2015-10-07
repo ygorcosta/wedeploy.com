@@ -103,32 +103,14 @@ body {
 	line-height: 24px;
 }
 
-.docs-content .CodeMirror,
-.docs-content .CodeMirror-scroll {
-	border-radius: 4px;
-}
-
-.docs-content .CodeMirror-gutters {
-	border-color: #f8f8f8;
-}
-
-.docs-content .CodeMirror pre {
-  line-height: 24px;
-  font-size: 15px;
-}
-
-.docs-content pre code {
-	background-color: #fdfcff;
-	color: rgba($primary, 0.7);
-}
-
 .docs-content code {
 	background: rgba($accent, 0.1);
 	color: $accent;
 	padding: 2px;
 }
 
-.docs-content .CodeMirror {
-	height: auto;
-	margin-bottom: 15px;
+.docs-content pre code {
+	background: #f5f5f5;
+	color: #333;
+	padding: 0.5em;
 }
