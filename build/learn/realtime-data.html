@@ -84,6 +84,9 @@
 						<li class="docs-nav-item">
 							<a href="/learn/realtime-data.html#search-data" class="docs-nav-link">Search Data</a>
 						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/realtime-data.html#watch-data-changes" class="docs-nav-link">Watch Data Changes</a>
+						</li>
 					</ul>
 
 					<p class="docs-nav-group">
@@ -348,7 +351,7 @@ Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;).delete();
   {&quot;id&quot;:&quot;star_wars_iii&quot;,&quot;title&quot;:&quot;Star Wars: Episode III - Revenge of the Sith&quot;,&quot;year&quot;:2005,&quot;rating&quot;:7.7}
 ]
 </code></pre>
-<p>We support all basic SQL-like operators (<code>=</code>, <code>!=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>~</code>), as well as <code>any</code> and <code>none</code> to filter elements in a list. We also give support for search operators, which we will see in more details in the section <a href="#realtime_database_search_data_in_realtime"> Search Data in Realtime </a>. For a full list of supported filters and query parameters, see <a href="http://liferay.io/learn/data-operations.html">Data Operations</a>.</p>
+<p>We support all basic SQL-like operators (<code>=</code>, <code>!=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>~</code>), as well as <code>any</code> and <code>none</code> to filter elements in a list. We also give support for search operators, which we will see in more details in the section <a href="#search-data">Search Data</a>. For a full list of supported filters and query parameters, see <a href="http://liferay.io/learn/data-operations.html">Data Operations</a>.</p>
 <h2 id="search-data">Search Data</h2>
 <p>Well, we did some great stuff with basic http methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with filter, sort, and pagination. What if we need to do more powerful queries with our documents? Well, in Launchpad you can do a text search, handle user misspellings, show the number of documents by category with your data, and much more.</p>
 <p>First take a look at the text search. Its a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let&#39;s search for a Star Wars movie by the episode title, like <code>&quot;Revenge of the Sith&quot;</code>. We are not interested if the letter is in upper or lower case, since we are using English connectors like <code>&quot;of&quot;</code> and <code>&quot;the&quot;</code>. We want something flexible enough it will also work for texts like &quot;The revenge of the Sith&quot;, or &quot;Sith&#39;s revenge&quot;. Our <code>match</code> operator is just what we need to run the search.</p>
@@ -668,7 +671,7 @@ Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
 ]
 </code></pre>
 <p>Now we can plug a map to our app and let users see and filter places with just a few lines of code.</p>
-<h4 id="realtime">Realtime</h4>
+<h2 id="watch-data-changes">Watch Data Changes</h2>
 <p>Well, we presented a lot of features for data filtering and search. You may be wondering where the realtime aspect is in all of this. Well, it&#39;s throughout the features we just presented to you. To access our data in realtime, all we need to do is change the Launchpad API method we use to the <code>watch</code> method:</p>
 <p>JavaScript</p>
 <pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/places&#39;)
@@ -686,7 +689,7 @@ Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
    .on(&#39;changes&#39;, this::doSomethingWithReceivedData)
    .on(&#39;fail&#39;, this::handleFailure);
 </code></pre>
-<p>Now every time the storage detects changes that affects the query you&#39;re watching, you will receive a <code>changes</code> notification with the response body you&#39;d receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you&#39;ll receive the error object in a <code>fail</code> notification on the client! For more information about the <code>RealTime</code> object we return on <code>watch</code> calls, read the section <a href="#custom_apis_create_realtime_service"> Create Realtime Service </a>.</p>
+<p>Now every time the storage detects changes that affects the query you&#39;re watching, you will receive a <code>changes</code> notification with the response body you&#39;d receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you&#39;ll receive the error object in a <code>fail</code> notification on the client! For more information about the <code>RealTime</code> object we return on <code>watch</code> calls, read the section <a href="http://liferay.io/learn/custom-apis.html#create-realtime-service">Create Realtime Service</a>.</p>
 
 				</article>
 			</div>

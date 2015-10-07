@@ -84,6 +84,9 @@
 						<li class="docs-nav-item">
 							<a href="/learn/realtime-data.html#search-data" class="docs-nav-link">Search Data</a>
 						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/realtime-data.html#watch-data-changes" class="docs-nav-link">Watch Data Changes</a>
+						</li>
 					</ul>
 
 					<p class="docs-nav-group">
@@ -139,7 +142,7 @@
 					<h1 id="custom-apis">Custom APIs</h1>
 <p>In Launchpad you can create apps, and each app is composed by one or more services. A service exposes a REST interface that can be described by the service&#39;s API. We provide easy and powerful ways for you to describe and configure your APIs, so you can do more with less code.</p>
 <h2 id="understand-api-json">Understand api.json</h2>
-<p>The main configuration of any app is the <code>api.json</code> file, that can also be generated quickly from the <a href="http://liferay.io/dashboard">Launchpad Dashboard</a>. This file consists of a list of configurations, such as:</p>
+<p>The main configuration of any app is the <code>api.json</code> file, that can also be generated quickly from the <a href="http://liferay.io/dashboard/login/signin">Launchpad Dashboard</a>. This file consists of a list of configurations, such as:</p>
 <pre><code class="lang-json">[{
   &quot;path&quot;: null,
   &quot;method&quot;: [&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;PATCH&quot;, &quot;DELETE&quot;],
@@ -196,7 +199,7 @@
 <p>This will match paths like <code>/api</code>, <code>/api/foo</code>, and so on.</p>
 <p>Notice the path from two different apis may overlap, or even be identical. In this case, your service will match the first api, in the order they&#39;re described in your <code>api.json</code>, and if this one doesn&#39;t handle the request or explicitly calls <code>next</code> inside the handler, then it will match and execute the second one.</p>
 <h5 id="data-paths">Data Paths</h5>
-<p>You can also mount a path as a RESTful database. In order to properly represent a data path we need to know which collection the path references. That&#39;s why the magic <code>@</code> exists, what else goes after this symbol is the collection name. Remember that, to enable data in your path just use the <code>magic</code> token <code>@</code>.</p>
+<p>You can also mount a path as a RESTful database. In order to properly represent a data path we need to know which collection the path references. That&#39;s why the magic <code>@</code> exists, what else goes after this symbol is the collection name. Remember that, to enable data in your path just use the magic token <code>@</code>.</p>
 <pre><code class="lang-js">[
   {
     &quot;path&quot;: &quot;@/collectionName/*&quot;
