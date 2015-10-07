@@ -47,26 +47,90 @@
 		<div class="container">
 			<div class="row">
 				<nav class="docs-nav col-xs-12 col-sm-3">
-					<p class="docs-nav-group">What is?</p>
+					<p class="docs-nav-group">
+						<a href="/learn">Introduction</a>
+					</p>
 					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="/learn" class="docs-nav-link">Frequently Asked Questions</a>
+							<a href="/learn/#what-is-the-launchpad-project-" class="docs-nav-link">What is the Launchpad Project?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#why-should-i-use-launchpad-" class="docs-nav-link">Why should I use Launchpad?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#how-does-launchpad-interact-with-your-existing-liferay-portal-solution-" class="docs-nav-link">How does Launchpad interact with your existing Liferay Portal solution?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#can-i-rely-on-launchpad-for-apps-in-production-" class="docs-nav-link">Can I rely on Launchpad for apps in production?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#can-launchpad-be-installed-on-my-own-servers-" class="docs-nav-link">Can Launchpad be installed on my own servers?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#will-my-laptop-become-a-dumb-terminal-" class="docs-nav-link">Will my laptop become a "dumb terminal"?</a>
 						</li>
 					</ul>
 
-					<p class="docs-nav-group">How to use?</p>
+					<p class="docs-nav-group">
+						<a href="/learn/realtime-data.html">Realtime Data</a>
+					</p>
 					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="/learn/realtime-data.html" class="docs-nav-link">Realtime Data</a>
+							<a href="/learn/realtime-data.html#write-data" class="docs-nav-link">Write Data</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/authentication.html" class="docs-nav-link">Authentication</a>
+							<a href="/learn/realtime-data.html#read-data" class="docs-nav-link">Read Data</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/custom-apis.html" class="docs-nav-link">Custom APIs</a>
+							<a href="/learn/realtime-data.html#search-data" class="docs-nav-link">Search Data</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/authentication.html">Authentication</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#authentication-configuration" class="docs-nav-link">Authentication Configuration</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/data-operations.html" class="docs-nav-link">Data Operations</a>
+							<a href="/learn/authentication.html#authentication-provider" class="docs-nav-link">Authentication Provider</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#logging-users-in" class="docs-nav-link">Logging Users In</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#logging-users-out" class="docs-nav-link">Logging Users Out</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/custom-apis.html">Custom APIs</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/custom-apis.html#understand-apijson" class="docs-nav-link">Understand api.json</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/data-operations.html">Data Operations</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#basic-concepts" class="docs-nav-link">Basic Concepts</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#write-operations" class="docs-nav-link">Write Operations</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#read-operations" class="docs-nav-link">Read Operations</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#query" class="docs-nav-link">Query</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#basic-filters" class="docs-nav-link">Basic Filters</a>
 						</li>
 					</ul>
 				</nav>
@@ -75,12 +139,6 @@
 					<h1 id="realtime-data">Realtime Data</h1>
 <p>Launchpad provides a JSON document store with search and realtime capabilities.</p>
 <p>Read and write operations are translated into a RESTful API. The Launchpad client also helps you to easily create complex queries in Java, JavaScript, or Swift, and search your data in realtime, yes, you can listen for query in realtime with no need of extra server-side code.</p>
-<p>The following sections explain how to use your datastore in more detail:</p>
-<ul>
-<li><a href="#write-data">Write Data</a></li>
-<li><a href="#read-data">Read Data</a></li>
-<li><a href="#search-data-in-realtime">Search Data in Realtime</a></li>
-</ul>
 <h2 id="write-data">Write Data</h2>
 <p>Writing new data is as simple as posting in a URL. The following example post data for a movie:</p>
 <pre><code class="lang-bash">curl -X &quot;POST&quot; &quot;http://liferay.io/app/service/movies&quot; \
@@ -101,7 +159,7 @@
     &quot;rating&quot;: 8.7
 }
 </code></pre>
-<p>The URL we just created stored a new document in our <code>app</code>&#39;s <code>service</code>, inside the <em>collection</em> <code>movies</code>. More information on how to setup this datastore URL can be seen in the section <a href="#custom_apis"> Custom APIs </a>. For now, we only need to know that within the path where the data is mounted, the URL will be interpreted as a key that points to a stored resource like the one below:</p>
+<p>The URL we just created stored a new document in our <code>app</code>&#39;s <code>service</code>, inside the <em>collection</em> <code>movies</code>. More information on how to setup this datastore URL can be seen in the section <a href="http://liferay.io/learn/custom-apis.html">Custom APIs</a>. For now, we only need to know that within the path where the data is mounted, the URL will be interpreted as a key that points to a stored resource like the one below:</p>
 <pre><code class="lang-json">/collection_name/document_id/document_property/document_inner_property
 </code></pre>
 <p>For example, to reference the newly created <em>Star Wars</em> rating, we can use the relative path:</p>
@@ -172,7 +230,7 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;).delete();
 Launchpad.url(&quot;http://liferay.io/app/service/movies/star_wars_v&quot;).delete();
 Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;).delete();
 </code></pre>
-<p>For a detailed description of write operations, such as how to push and delete elements in a list, batch creation of documents in a collection, and more, see the section <a href="https://github.com/liferay-apps/landing/wiki/Data-Operations">Data Operations</a>.</p>
+<p>For a detailed description of write operations, such as how to push and delete elements in a list, batch creation of documents in a collection, and more, see the section <a href="http://liferay.io/learn/data-operations.html">Data Operations</a>.</p>
 <h2 id="read-data">Read Data</h2>
 <p>Reading data from our storage is also as simple as getting a URL resource:</p>
 <pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies/star_wars_v&quot;
@@ -290,8 +348,8 @@ Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;).delete();
   {&quot;id&quot;:&quot;star_wars_iii&quot;,&quot;title&quot;:&quot;Star Wars: Episode III - Revenge of the Sith&quot;,&quot;year&quot;:2005,&quot;rating&quot;:7.7}
 ]
 </code></pre>
-<p>We support all basic SQL-like operators (<code>=</code>, <code>!=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>~</code>), as well as <code>any</code> and <code>none</code> to filter elements in a list. We also give support for search operators, which we will see in more details in the section <a href="#realtime_database_search_data_in_realtime"> Search Data in Realtime </a>. For a full list of supported filters and query parameters, see <a href="https://github.com/liferay-apps/landing/wiki/Data-Operations">Data Operations</a>.</p>
-<h2 id="search-data-in-realtime">Search Data in Realtime</h2>
+<p>We support all basic SQL-like operators (<code>=</code>, <code>!=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>~</code>), as well as <code>any</code> and <code>none</code> to filter elements in a list. We also give support for search operators, which we will see in more details in the section <a href="#realtime_database_search_data_in_realtime"> Search Data in Realtime </a>. For a full list of supported filters and query parameters, see <a href="http://liferay.io/learn/data-operations.html">Data Operations</a>.</p>
+<h2 id="search-data">Search Data</h2>
 <p>Well, we did some great stuff with basic http methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with filter, sort, and pagination. What if we need to do more powerful queries with our documents? Well, in Launchpad you can do a text search, handle user misspellings, show the number of documents by category with your data, and much more.</p>
 <p>First take a look at the text search. Its a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let&#39;s search for a Star Wars movie by the episode title, like <code>&quot;Revenge of the Sith&quot;</code>. We are not interested if the letter is in upper or lower case, since we are using English connectors like <code>&quot;of&quot;</code> and <code>&quot;the&quot;</code>. We want something flexible enough it will also work for texts like &quot;The revenge of the Sith&quot;, or &quot;Sith&#39;s revenge&quot;. Our <code>match</code> operator is just what we need to run the search.</p>
 <p>cURL</p>
@@ -356,7 +414,7 @@ Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
 <p>Any search in the previous example results in the following match:</p>
 <pre><code class="lang-json">[{&quot;id&quot;:&quot;star_wars_vii&quot;,&quot;title&quot;:&quot;Star Wars: Episode VII - The Force Awakens&quot;,&quot;year&quot;:2015}]
 </code></pre>
-<p>What we did with <code>*</code> can also be done with the <code>prefix</code> operator <code>Filter.prefix(&#39;title&#39;, &#39;awake&#39;)</code>. The fuzziness we added to <code>wakens</code> using <code>~</code>, can also be done explicitly with the <code>fuzzy</code> operator <code>Filter.fuzzy(&#39;title&#39;, &#39;wakens&#39;)</code>. For more text search operators, see <a href="https://github.com/liferay-apps/landing/wiki/Data-Operations">Data Operations</a>.</p>
+<p>What we did with <code>*</code> can also be done with the <code>prefix</code> operator <code>Filter.prefix(&#39;title&#39;, &#39;awake&#39;)</code>. The fuzziness we added to <code>wakens</code> using <code>~</code>, can also be done explicitly with the <code>fuzzy</code> operator <code>Filter.fuzzy(&#39;title&#39;, &#39;wakens&#39;)</code>. For more text search operators, see <a href="http://liferay.io/learn/data-operations.html">Data Operations</a>.</p>
 <p>So far we are still just filtering data with filters. We can do so much more than that! If we use query search instead of filter to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:</p>
 <p>cURL</p>
 <pre><code class="lang-bash">curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
@@ -513,7 +571,7 @@ Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
     }
 }
 </code></pre>
-<p>To see all aggregation operations we offer, check out <a href="https://github.com/liferay-apps/landing/wiki/Data-Operations">Data Operations</a>.</p>
+<p>To see all aggregation operations we offer, check out <a href="http://liferay.io/learn/data-operations.html">Data Operations</a>.</p>
 <p>The last search feature we will cover here needs a little setup before we put our documents in the datastore, but it&#39;s not as complicated as it sounds. First, let&#39;s cover some basics on the datatypes we support. As we said before, we offer a JSON storage, thus we support all JSON types, with the restriction that arrays must be of elements of the same type. Once we put a new document in a collection, we can automatically derive the datatype of the fields added, and bind the fields to that datatype. So, if we try to run the following code:</p>
 <pre><code class="lang-bash">curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/places/my_place/foo&quot; \
      --data &quot;bar&quot;

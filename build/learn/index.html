@@ -47,42 +47,97 @@
 		<div class="container">
 			<div class="row">
 				<nav class="docs-nav col-xs-12 col-sm-3">
-					<p class="docs-nav-group">What is?</p>
+					<p class="docs-nav-group">
+						<a href="/learn">Introduction</a>
+					</p>
 					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="/learn" class="docs-nav-link">Frequently Asked Questions</a>
+							<a href="/learn/#what-is-the-launchpad-project-" class="docs-nav-link">What is the Launchpad Project?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#why-should-i-use-launchpad-" class="docs-nav-link">Why should I use Launchpad?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#how-does-launchpad-interact-with-your-existing-liferay-portal-solution-" class="docs-nav-link">How does Launchpad interact with your existing Liferay Portal solution?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#can-i-rely-on-launchpad-for-apps-in-production-" class="docs-nav-link">Can I rely on Launchpad for apps in production?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#can-launchpad-be-installed-on-my-own-servers-" class="docs-nav-link">Can Launchpad be installed on my own servers?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#will-my-laptop-become-a-dumb-terminal-" class="docs-nav-link">Will my laptop become a "dumb terminal"?</a>
 						</li>
 					</ul>
 
-					<p class="docs-nav-group">How to use?</p>
+					<p class="docs-nav-group">
+						<a href="/learn/realtime-data.html">Realtime Data</a>
+					</p>
 					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="/learn/realtime-data.html" class="docs-nav-link">Realtime Data</a>
+							<a href="/learn/realtime-data.html#write-data" class="docs-nav-link">Write Data</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/authentication.html" class="docs-nav-link">Authentication</a>
+							<a href="/learn/realtime-data.html#read-data" class="docs-nav-link">Read Data</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/custom-apis.html" class="docs-nav-link">Custom APIs</a>
+							<a href="/learn/realtime-data.html#search-data" class="docs-nav-link">Search Data</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/authentication.html">Authentication</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#authentication-configuration" class="docs-nav-link">Authentication Configuration</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/data-operations.html" class="docs-nav-link">Data Operations</a>
+							<a href="/learn/authentication.html#authentication-provider" class="docs-nav-link">Authentication Provider</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#logging-users-in" class="docs-nav-link">Logging Users In</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#logging-users-out" class="docs-nav-link">Logging Users Out</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/custom-apis.html">Custom APIs</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/custom-apis.html#understand-apijson" class="docs-nav-link">Understand api.json</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/data-operations.html">Data Operations</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#basic-concepts" class="docs-nav-link">Basic Concepts</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#write-operations" class="docs-nav-link">Write Operations</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#read-operations" class="docs-nav-link">Read Operations</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#query" class="docs-nav-link">Query</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#basic-filters" class="docs-nav-link">Basic Filters</a>
 						</li>
 					</ul>
 				</nav>
 
 				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
-					<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+					<h1 id="introduction">Introduction</h1>
 <p>With every new product comes a lot of new questions.</p>
-<p>The following sections will explain each of those doubts in more detail:</p>
-<ul>
-<li><a href="#what-is-the-launchpad-project-">What is the Launchpad Project?</a></li>
-<li><a href="#why-should-i-use-launchpad-">Why should I use Launchpad?</a></li>
-<li><a href="#is-this-going-to-replace-liferay-portal-">Is this going to replace Liferay Portal?</a></li>
-<li><a href="#how-is-this-going-to-be-integrated-with-liferay-portal-">How is this going to be integrated with Liferay Portal?</a></li>
-<li><a href="#can-i-rely-on-launchpad-for-apps-in-production-">Can I rely on Launchpad for apps in production?</a></li>
-<li><a href="#can-launchpad-be-installed-on-my-own-servers-">Can Launchpad be installed on my own servers?</a></li>
-</ul>
 <h2 id="what-is-the-launchpad-project-">What is the Launchpad Project?</h2>
 <p>The new Launchpad Project aims to be your project&#39;s back-end, period. Ambitious, I know, but Launchpad is a very versatile tool that does just that. Launchpad allows you to create REST APIs instantly, add a powerful cloud database, use a fast static hosting, and leverage real-time capabilities in your app. Regardless of what platform you work with, you&#39;ll be able to use native SDKs for mobile, desktop, and IoT devices.</p>
 <h2 id="why-should-i-use-launchpad-">Why should I use Launchpad?</h2>
@@ -95,7 +150,7 @@
 <h2 id="can-launchpad-be-installed-on-my-own-servers-">Can Launchpad be installed on my own servers?</h2>
 <p>Launchpad&#39;s initial goal is to provide Backend as a Service deployed in the cloud. Most of the complexities of scaling and fault tolerance of your application is automatically managed by Launchpad.</p>
 <h2 id="will-my-laptop-become-a-dumb-terminal-">Will my laptop become a &quot;dumb terminal&quot;?</h2>
-<p>Unlike other PaaS or SaaS offerings, Launchpad will allow you to compile, deploy, and test your solutions locally in the Launchpad Developer SDK. Once you are ready, you will use the SDK to deploy to our infrastructure. This provides you with flexible development options.  You can even develop your solution while on a plane without wifi!</p>
+<p>Unlike other PaaS or SaaS offerings, Launchpad will allow you to compile, deploy, and test your solutions locally in the Launchpad Developer SDK. Once you are ready, you will use the SDK to deploy to our infrastructure. This provides you with flexible development options.  You can even develop your solution while on a plane without Wi-Fi.</p>
 
 				</article>
 			</div>

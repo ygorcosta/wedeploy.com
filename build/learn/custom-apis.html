@@ -47,26 +47,90 @@
 		<div class="container">
 			<div class="row">
 				<nav class="docs-nav col-xs-12 col-sm-3">
-					<p class="docs-nav-group">What is?</p>
+					<p class="docs-nav-group">
+						<a href="/learn">Introduction</a>
+					</p>
 					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="/learn" class="docs-nav-link">Frequently Asked Questions</a>
+							<a href="/learn/#what-is-the-launchpad-project-" class="docs-nav-link">What is the Launchpad Project?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#why-should-i-use-launchpad-" class="docs-nav-link">Why should I use Launchpad?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#how-does-launchpad-interact-with-your-existing-liferay-portal-solution-" class="docs-nav-link">How does Launchpad interact with your existing Liferay Portal solution?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#can-i-rely-on-launchpad-for-apps-in-production-" class="docs-nav-link">Can I rely on Launchpad for apps in production?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#can-launchpad-be-installed-on-my-own-servers-" class="docs-nav-link">Can Launchpad be installed on my own servers?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#will-my-laptop-become-a-dumb-terminal-" class="docs-nav-link">Will my laptop become a "dumb terminal"?</a>
 						</li>
 					</ul>
 
-					<p class="docs-nav-group">How to use?</p>
+					<p class="docs-nav-group">
+						<a href="/learn/realtime-data.html">Realtime Data</a>
+					</p>
 					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="/learn/realtime-data.html" class="docs-nav-link">Realtime Data</a>
+							<a href="/learn/realtime-data.html#write-data" class="docs-nav-link">Write Data</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/authentication.html" class="docs-nav-link">Authentication</a>
+							<a href="/learn/realtime-data.html#read-data" class="docs-nav-link">Read Data</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/custom-apis.html" class="docs-nav-link">Custom APIs</a>
+							<a href="/learn/realtime-data.html#search-data" class="docs-nav-link">Search Data</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/authentication.html">Authentication</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#authentication-configuration" class="docs-nav-link">Authentication Configuration</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/data-operations.html" class="docs-nav-link">Data Operations</a>
+							<a href="/learn/authentication.html#authentication-provider" class="docs-nav-link">Authentication Provider</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#logging-users-in" class="docs-nav-link">Logging Users In</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#logging-users-out" class="docs-nav-link">Logging Users Out</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/custom-apis.html">Custom APIs</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/custom-apis.html#understand-apijson" class="docs-nav-link">Understand api.json</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/data-operations.html">Data Operations</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#basic-concepts" class="docs-nav-link">Basic Concepts</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#write-operations" class="docs-nav-link">Write Operations</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#read-operations" class="docs-nav-link">Read Operations</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#query" class="docs-nav-link">Query</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#basic-filters" class="docs-nav-link">Basic Filters</a>
 						</li>
 					</ul>
 				</nav>
@@ -74,10 +138,6 @@
 				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
 					<h1 id="custom-apis">Custom APIs</h1>
 <p>In Launchpad you can create apps, and each app is composed by one or more services. A service exposes a REST interface that can be described by the service&#39;s API. We provide easy and powerful ways for you to describe and configure your APIs, so you can do more with less code.</p>
-<p>The following sections explain how to customize your service&#39;s API:</p>
-<ul>
-<li><a href="#understand-apijson">Understand api.json</a></li>
-</ul>
 <h2 id="understand-api-json">Understand api.json</h2>
 <p>The main configuration of any app is the <code>api.json</code> file, that can also be generated quickly from the <a href="http://liferay.io/dashboard">Launchpad Dashboard</a>. This file consists of a list of configurations, such as:</p>
 <pre><code class="lang-json">[{
@@ -148,7 +208,7 @@
   }
 ]
 </code></pre>
-<p>To access a collection resource, you can specify the resource id on the URL, e.g. <code>/collectionName/:id</code>. For more information, see <a href="https://github.com/liferay-apps/landing/wiki/data-operations">Data Operations</a>.</p>
+<p>To access a collection resource, you can specify the resource id on the URL, e.g. <code>/collectionName/:id</code>. For more information, see <a href="http://liferay.io/learn/data-operations.html">Data Operations</a>.</p>
 <h4 id="method-configuration">Method Configuration</h4>
 <p>The <code>method</code> works as a filter for requests that will be routed to this api definition based on the HTTP method. By default, all HTTP requests are mapped to an api, but you can change it to any subset you need. Launchpad currently support the following HTTP methods:</p>
 <ul>
@@ -228,7 +288,7 @@
 }
 </code></pre>
 <h4 id="auth-configuration">Auth Configuration</h4>
-<p>The <code>auth</code> is an object that describes all criteria an authenticated user needs to meet in order to have access this path. If the authorization of the request fails, the service may redirect the request to a registered login page (see <a href="https://github.com/liferay-apps/landing/wiki/authentication#authentication_configuration">Authentication Configuration</a> to know how to setup a login page for your app), or respond with <code>404 Not Found</code> to avoid giving the unauthorized user any information about your service.</p>
+<p>The <code>auth</code> is an object that describes all criteria an authenticated user needs to meet in order to have access this path. If the authorization of the request fails, the service may redirect the request to a registered login page (see <a href="http://liferay.io/learn/authentication.html#authentication-configuration">Authentication Configuration</a> to know how to setup a login page for your app), or respond with <code>404 Not Found</code> to avoid giving the unauthorized user any information about your service.</p>
 <p>This auth object has the following fields:</p>
 <pre><code class="lang-json">{
   &quot;auth&quot;: {
@@ -238,7 +298,7 @@
   }
 }
 </code></pre>
-<p>The <code>permissions</code> field list all permissions a user must have to be authorized. This permissions can be resolved from the user permissions, or from any role he may have that has this permission (see <a href="https://github.com/liferay-apps/landing/wiki/authentication#authentication_configuration">Authentication Configuration</a> to know how to define the roles&#39; permissions for your app).</p>
+<p>The <code>permissions</code> field list all permissions a user must have to be authorized. This permissions can be resolved from the user permissions, or from any role he may have that has this permission (see <a href="http://liferay.io/learn/authentication.html#authentication-configuration">Authentication Configuration</a> to know how to define the roles&#39; permissions for your app).</p>
 <p>The <code>roles</code> field list all roles a user must have to be authorized. Note that even if the user has all permissions that defined a role in your app, he will not be granted access to this api if he doesn&#39;t have the role itself. For example, if you configured your app so the role <code>admin</code> has permissions <code>[&quot;read&quot;, &quot;write&quot;]</code>, a user will not access you api without the role <code>admin</code> even if he has both permissions separately.</p>
 <p>The <code>validator</code> field enables you to describe any javascript expression to authorize the request. You can access any request data available in the scripting environment (see more about this bellow with api parameters).</p>
 <h4 id="parameters-configuration">Parameters Configuration</h4>

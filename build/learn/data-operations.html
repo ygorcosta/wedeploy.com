@@ -47,44 +47,97 @@
 		<div class="container">
 			<div class="row">
 				<nav class="docs-nav col-xs-12 col-sm-3">
-					<p class="docs-nav-group">What is?</p>
+					<p class="docs-nav-group">
+						<a href="/learn">Introduction</a>
+					</p>
 					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="/learn" class="docs-nav-link">Frequently Asked Questions</a>
+							<a href="/learn/#what-is-the-launchpad-project-" class="docs-nav-link">What is the Launchpad Project?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#why-should-i-use-launchpad-" class="docs-nav-link">Why should I use Launchpad?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#how-does-launchpad-interact-with-your-existing-liferay-portal-solution-" class="docs-nav-link">How does Launchpad interact with your existing Liferay Portal solution?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#can-i-rely-on-launchpad-for-apps-in-production-" class="docs-nav-link">Can I rely on Launchpad for apps in production?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#can-launchpad-be-installed-on-my-own-servers-" class="docs-nav-link">Can Launchpad be installed on my own servers?</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/#will-my-laptop-become-a-dumb-terminal-" class="docs-nav-link">Will my laptop become a "dumb terminal"?</a>
 						</li>
 					</ul>
 
-					<p class="docs-nav-group">How to use?</p>
+					<p class="docs-nav-group">
+						<a href="/learn/realtime-data.html">Realtime Data</a>
+					</p>
 					<ul class="docs-nav-list">
 						<li class="docs-nav-item">
-							<a href="/learn/realtime-data.html" class="docs-nav-link">Realtime Data</a>
+							<a href="/learn/realtime-data.html#write-data" class="docs-nav-link">Write Data</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/authentication.html" class="docs-nav-link">Authentication</a>
+							<a href="/learn/realtime-data.html#read-data" class="docs-nav-link">Read Data</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/custom-apis.html" class="docs-nav-link">Custom APIs</a>
+							<a href="/learn/realtime-data.html#search-data" class="docs-nav-link">Search Data</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/authentication.html">Authentication</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#authentication-configuration" class="docs-nav-link">Authentication Configuration</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/data-operations.html" class="docs-nav-link">Data Operations</a>
+							<a href="/learn/authentication.html#authentication-provider" class="docs-nav-link">Authentication Provider</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#logging-users-in" class="docs-nav-link">Logging Users In</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/authentication.html#logging-users-out" class="docs-nav-link">Logging Users Out</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/custom-apis.html">Custom APIs</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/custom-apis.html#understand-apijson" class="docs-nav-link">Understand api.json</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">
+						<a href="/learn/data-operations.html">Data Operations</a>
+					</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#basic-concepts" class="docs-nav-link">Basic Concepts</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#write-operations" class="docs-nav-link">Write Operations</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#read-operations" class="docs-nav-link">Read Operations</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#query" class="docs-nav-link">Query</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="/learn/data-operations.html#basic-filters" class="docs-nav-link">Basic Filters</a>
 						</li>
 					</ul>
 				</nav>
 
 				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
 					<h1 id="data-operations">Data Operations</h1>
-<p>Launchpad has a powerful <a href="https://github.com/launchpad-project/landing/wiki/realtime-data">Realtime Database</a> under the hood of every app service you create. The following sections explain how to use this potential to the fullest:</p>
-<ul>
-<li><a href="#basic-concepts">Basic Concepts</a></li>
-<li><a href="#write-operations">Write Operations</a></li>
-<li><a href="#read-operations">Read Operations</a></li>
-<li><a href="#query">Query</a></li>
-<li><a href="#basic-filters">Basic Filters</a></li>
-<li><a href="#text-filters">Text Filters</a></li>
-<li><a href="#geo-location-filters">Geo Location Filters</a></li>
-<li><a href="#data-aggregation">Data Aggregation</a></li>
-<li><a href="#sort-limit-and-offset">Sort, Limit, and Offset</a></li>
-</ul>
+<p>Launchpad has a powerful <a href="http://liferay.io/learn/realtime-data.html">Realtime Data</a> under the hood of every app service you create.</p>
 <h2 id="basic-concepts">Basic Concepts</h2>
 <p>We offer a built-in JSON-like datastore for all application services, with a RESTful interface that can be easily plugged to you api as follows:</p>
 <pre><code class="lang-json">[
@@ -113,7 +166,7 @@
 ]
 </code></pre>
 <p>In this case, requests to both <code>curl &#39;http://liferay.io/app/service/movies&#39;</code> and <code>curl &#39;http://liferay.io/app/service/my/alias/movies&#39;</code> will access the same movies collection.</p>
-<p>Now we can see how easy and powerful it is to integrate the data with all functionalities we offer in <a href="https://github.com/liferay-apps/landing/wiki/custom-apis">Custom APIs</a>. For example, to create a collection of users where anyone can read all users, but one can only write its own data, we can use the following code:</p>
+<p>Now we can see how easy and powerful it is to integrate the data with all functionalities we offer in <a href="http://liferay.io/learn/custom-apis.html">Custom APIs</a>. For example, to create a collection of users where anyone can read all users, but one can only write its own data, we can use the following code:</p>
 <pre><code class="lang-json">[
   {
     &quot;path&quot;: &quot;/data/@/users/:id/*&quot;,
@@ -146,7 +199,7 @@
 <p>And use our service root for that. If we get this root data path we will receive all collections and mappings we have configured in our datastore, which initially is an empty list:</p>
 <pre><code class="lang-json">[]
 </code></pre>
-<p>This data will be filled dynamically while new documents are added to our datastore. For example, to load information from the movies and places collections we used in our <a href="https://github.com/launchpad-project/landing/wiki/realtime-data">Realtime Data</a> page:</p>
+<p>This data will be filled dynamically while new documents are added to our datastore. For example, to load information from the movies and places collections we used in our <a href="http://liferay.io/learn/realtime-data.html">Realtime Data</a> page:</p>
 <p>Curl</p>
 <pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service&quot;
 </code></pre>

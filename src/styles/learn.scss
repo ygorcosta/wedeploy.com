@@ -11,11 +11,18 @@ body {
 	margin: 100px 0;
 }
 
-.docs-nav-group {
+.docs-nav-group a {
+	@include anim(color);
 	color: rgba($primary, .8);
 	font-family: $font-family-secondary;
 	font-size: 18px;
 	margin-bottom: 36px;
+}
+
+.docs-nav-group a:hover,
+.docs-nav-group a:focus {
+	color: $accent;
+	text-decoration: none;
 }
 
 .docs-nav-list {
