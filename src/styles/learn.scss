@@ -68,7 +68,6 @@ body {
 	color: rgba($primary, .8);
 	font-family: $font-family-secondary;
 	font-weight: 500;
-	margin: 64px 0 30px;
 }
 
 .docs-content h1 {
@@ -78,22 +77,27 @@ body {
 
 .docs-content h2 {
 	font-size: 24px;
+	margin: 64px 0 30px;
 }
 
 .docs-content h3 {
 	font-size: 22px;
+	margin: 22px 0;
 }
 
 .docs-content h4 {
 	font-size: 20px;
+	margin: 20px 0;
 }
 
 .docs-content h5 {
 	font-size: 18px;
+	margin: 18px 0;
 }
 
 .docs-content h6 {
 	font-size: 16px;
+	margin: 16px 0;
 }
 
 .docs-content p,
@@ -115,7 +119,7 @@ body {
 
 .docs-content pre code {
 	background: #f5f5f5;
-	color: #333;
+	color: rgba($primary, .6);
 	padding: 0.5em;
 }
 
