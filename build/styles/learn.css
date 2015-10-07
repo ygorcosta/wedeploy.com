@@ -6734,7 +6734,7 @@ body {
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
   color: #647efb;
-  font-weight: 600; }
+  font-weight: 400; }
 
 .docs-content a:hover,
 .docs-content a:focus {
@@ -6777,6 +6777,9 @@ body {
   font-size: 15px;
   line-height: 24px; }
 
+.docs-content pre {
+  border: 0; }
+
 .docs-content code {
   background: rgba(100, 126, 251, 0.1);
   color: #647efb;
@@ -6786,3 +6789,27 @@ body {
   background: #f5f5f5;
   color: #333;
   padding: 0.5em; }
+
+.docs-content .hljs-string,
+.docs-content .apache .hljs-sqbracket,
+.docs-content .coffeescript .hljs-subst,
+.docs-content .coffeescript .hljs-regexp,
+.docs-content .cpp .hljs-preprocessor,
+.docs-content .c .hljs-preprocessor,
+.docs-content .javascript .hljs-regexp,
+.docs-content .json .hljs-attribute,
+.docs-content .makefile .hljs-variable,
+.docs-content .markdown .hljs-value,
+.docs-content .markdown .hljs-link_label,
+.docs-content .markdown .hljs-strong,
+.docs-content .markdown .hljs-emphasis,
+.docs-content .markdown .hljs-blockquote,
+.docs-content .nginx .hljs-regexp,
+.docs-content .nginx .hljs-number,
+.docs-content .objectivec .hljs-preprocessor .hljs-title,
+.docs-content .perl .hljs-regexp,
+.docs-content .php .hljs-regexp,
+.docs-content .xml .hljs-value,
+.docs-content .less .hljs-built_in,
+.docs-content .scss .hljs-built_in {
+  color: #647efb; }

@@ -50,7 +50,7 @@ body {
 .docs-content a {
 	@include anim(color);
 	color: $accent;
-	font-weight: 600;
+	font-weight: 400;
 }
 
 .docs-content a:hover,
@@ -103,6 +103,10 @@ body {
 	line-height: 24px;
 }
 
+.docs-content pre {
+	border: 0;
+}
+
 .docs-content code {
 	background: rgba($accent, 0.1);
 	color: $accent;
@@ -113,4 +117,31 @@ body {
 	background: #f5f5f5;
 	color: #333;
 	padding: 0.5em;
+}
+
+.docs-content {
+	.hljs-string,
+	.apache .hljs-sqbracket,
+	.coffeescript .hljs-subst,
+	.coffeescript .hljs-regexp,
+	.cpp .hljs-preprocessor,
+	.c .hljs-preprocessor,
+	.javascript .hljs-regexp,
+	.json .hljs-attribute,
+	.makefile .hljs-variable,
+	.markdown .hljs-value,
+	.markdown .hljs-link_label,
+	.markdown .hljs-strong,
+	.markdown .hljs-emphasis,
+	.markdown .hljs-blockquote,
+	.nginx .hljs-regexp,
+	.nginx .hljs-number,
+	.objectivec .hljs-preprocessor .hljs-title,
+	.perl .hljs-regexp,
+	.php .hljs-regexp,
+	.xml .hljs-value,
+	.less .hljs-built_in,
+	.scss .hljs-built_in {
+	  color: $accent;
+	}
 }

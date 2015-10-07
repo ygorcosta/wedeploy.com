@@ -14,7 +14,7 @@ gulp.task('styles', function() {
 
 gulp.task('vendor-styles', function() {
 	return gulp.src([
-			'bower_components/highlightjs/styles/github.css'
+			'bower_components/highlightjs/styles/github-gist.css'
 		])
 		.pipe(gulp.dest('build/vendor/styles'));
 });
