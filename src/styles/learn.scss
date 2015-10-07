@@ -1,8 +1,5 @@
-@import "bower_components/steel-bootstrap/src/bootstrap.scss";
-
-body {
-	overflow-x: hidden;
-}
+@import "bower_components/steel-bootstrap/src/variables";
+@import "bower_components/steel-bootstrap/src/mixins";
 
 /* Navigation
 	 ========================================================================== */
