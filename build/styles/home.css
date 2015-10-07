@@ -83,7 +83,8 @@
   height: 700px;
   -webkit-animation: cloudLoop 80s linear infinite;
   animation: cloudLoop 80s linear infinite;
-  background: url("../../images/clouds.png") 0px 100% repeat-x; }
+  background: url("../images/clouds.png") 0px 100% repeat-x;
+  background-size: 100%; }
 
 @media (max-width: 480px) {
   .hero-clouds {
