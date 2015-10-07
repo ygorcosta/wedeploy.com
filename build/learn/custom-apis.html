@@ -157,8 +157,9 @@
 <p>It&#39;s important to notice that the order in which these apis are described in your <code>api.json</code> is the same order your service will try to match and process your request. So, for example, if you define one api to describe your authorization logic for a path, and another to define a function to handle the request, you need to put them in the proper order inside the file.</p>
 <h4 id="path-configuration">Path Configuration</h4>
 <p>The <code>path</code> configuration is used by your service router to define which requests will be affected by this api definition. The base url for a service named <code>myService</code> in an app called <code>myApp</code> is:</p>
-<pre><code>http://liferay.io/myApp/myService
-</code></pre><p>The path you map on the configuration only need to specify the url section that comes after this base url from the example above, e.g.:</p>
+<pre><code class="lang-json">http://liferay.io/myApp/myService
+</code></pre>
+<p>The path you map on the configuration only need to specify the url section that comes after this base url from the example above, e.g.:</p>
 <pre><code class="lang-js">[
   {
     &quot;path&quot;: &quot;/route1&quot;
@@ -168,8 +169,9 @@
   }
 ]
 </code></pre>
-<pre><code>http://liferay.io/myApp/myService/route1
-</code></pre><p>You can also create URLs with patterns to match the request url:</p>
+<pre><code class="lang-json">http://liferay.io/myApp/myService/route1
+</code></pre>
+<p>You can also create URLs with patterns to match the request url:</p>
 <pre><code class="lang-js">[
   {
     &quot;path&quot;: &quot;/sum/:first/:second&quot;
@@ -311,12 +313,12 @@
 </ul>
 <p>So, the following request:</p>
 <pre><code class="lang-bash">curl -X &quot;POST&quot; &quot;http://liferay.io/app/service/hello?foo=bar&quot; \
-  --data-urlencode &quot;key=1&quot;
+     --data-urlencode &quot;key=1&quot;
 </code></pre>
 <p>Have the parameters <code>foo</code> and <code>key</code> with values <code>&quot;bar&quot;</code> and <code>1</code>, respectivelly. Also does the requests:</p>
 <pre><code class="lang-bash">curl -X &quot;POST&quot; &quot;http://liferay.io/app/service/hello?foo=bar&quot; \
-  --header &quot;Content-Type: application/json&quot; \
-  --data &quot;{\&quot;key\&quot;:1}&quot;
+     --header &quot;Content-Type: application/json&quot; \
+     --data &quot;{\&quot;key\&quot;:1}&quot;
 </code></pre>
 <pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/hello?foo=bar&amp;key=1&quot;
 </code></pre>
