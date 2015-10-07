@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var soynode = require('gulp-soynode');
+var markdown = require('gulp-markdown');
+var layout = require('gulp-layout');
 
 // CSS -------------------------------------------------------------------------
 
@@ -53,19 +55,30 @@ gulp.task('images', function() {
 
 // HTML ------------------------------------------------------------------------
 
-gulp.task('soy', function() {
-	return gulp.src('src/soy/**/*.soy')
-		.pipe(soynode({
-			renderSoyWeb: true
+gulp.task('index', function() {
+	return gulp.src(['src/index.html'])
+		.pipe(layout({
+			layout: 'src/layouts/index.html',
+			engine: 'nunjucks'
 		}))
 		.pipe(gulp.dest('build'));
+});
+
+gulp.task('learn', function() {
+	return gulp.src('bower_components/learn/*.md')
+		.pipe(markdown())
+		.pipe(layout({
+			layout: 'src/layouts/learn.html',
+			engine: 'nunjucks'
+		}))
+		.pipe(gulp.dest('build/learn'));
 });
 
 // Runner ----------------------------------------------------------------------
 
 gulp.task('build', [
 	'styles', 'vendor-styles', 'vendor-fonts',
-	'scripts', 'vendor-scripts', 'images', 'soy'
+	'scripts', 'vendor-scripts', 'images', 'index', 'learn'
 ]);
 
 gulp.task('watch', function() {

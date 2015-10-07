@@ -1,0 +1,15 @@
+{% extends "src/layouts/base.html" %}
+
+{% block markup %}
+	{{contents}}
+{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="/styles/home.css">
+{% endblock %}
+
+{% block scripts %}
+	<script src="/vendor/scripts/soyutils.min.js"></script>
+	<script src="/vendor/scripts/alert-min.js"></script>
+	<script src="/scripts/invitation.js"></script>
+{% endblock %}

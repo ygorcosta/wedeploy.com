@@ -16,13 +16,14 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/all.css">
 	
-	<link rel="stylesheet" href="/styles/home.css">
+	<link rel="stylesheet" href="/vendor/styles/codemirror.css">
+	<link rel="stylesheet" href="/vendor/styles/mdn-like.css">
+	<link rel="stylesheet" href="/styles/docs.css">
 
 </head>
 <body class="fade-out">
 
 	
-	<div class="hero-container">
 	<nav class="topbar topbar-inverse">
 		<div class="topbar-logo">
 			<a class="topbar-logo-link" href="/">
@@ -32,10 +33,10 @@
 		</div>
 		<ul class="topbar-list">
 			<li class="topbar-item">
-				<a class="topbar-link topbar-link-selected" href="/">Product</a>
+				<a class="topbar-link" href="/">Product</a>
 			</li>
 			<li class="topbar-item">
-				<a class="topbar-link" href="/learn">Learn</a>
+				<a class="topbar-link topbar-link-selected" href="/learn">Learn</a>
 			</li>
 			<li class="topbar-item">
 				<a class="topbar-link" href="/dashboard/login/signin">Login</a>
@@ -43,65 +44,73 @@
 		</ul>
 	</nav>
 
-	<div class="hero">
-		<h1 class="hero-title">Build Better Apps For Any Platform</h1>
-		<h2 class="hero-description">Launchpad is a Backend as a Service that makes it easy to create scalable apps in a matter of hours, not months.</h2>
-	</div>
-	<div class="hero-clouds"></div>
-</div>
+	<main class="docs">
+		<div class="container">
+			<div class="row">
+				<nav class="docs-nav col-xs-12 col-sm-3">
+					<p class="docs-nav-group">What is?</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+					</ul>
 
-<div class="feature-container">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-4 col-xs-12">
-				<section class="feature">
-					<span class="feature-icon icon-16-bullhorn"></span>
-					<h3 class="feature-title">Realtime</h3>
-					<p class="feature-description">Keep all of your client applications in sync</p>
-				</section>
-			</div>
-			<div class="col-sm-4 col-xs-12">
-				<section class="feature">
-					<span class="feature-icon icon-16-data"></span>
-					<h3 class="feature-title">Database</h3>
-					<p class="feature-description">Store data securely with a NoSQL cloud database</p>
-				</section>
-			</div>
-			<div class="col-sm-4 col-xs-12">
-				<section class="feature">
-					<span class="feature-icon icon-16-magnifier"></span>
-					<h3 class="feature-title">Search</h3>
-					<p class="feature-description">Filter, order, sort and make complex queries instantly</p>
-				</section>
+					<p class="docs-nav-group">How it works?</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+					</ul>
+
+					<p class="docs-nav-group">How to use?</p>
+					<ul class="docs-nav-list">
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+						<li class="docs-nav-item">
+							<a href="#" class="docs-nav-link">Lorem ipsum dolor sit</a>
+						</li>
+					</ul>
+				</nav>
+
+				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
+					<p>Coming soon.</p>
+
+				</article>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div id="invitation" class="invitation-container">
-	<div class="container">
-		<h3 class="invitation-title">Join Our Closed Beta</h3>
-		<p class="invitation-description">The Launchpad Project is currently available to a restricted group of developers.<br>Want to be a part of it?</p>
-
-		<form action="/api/request-invite" class="invitation-form" method="post">
-			<input class="invitation-input form-control" name="email" type="email" placeholder="Enter your email..." required>
-			<button class="invitation-btn btn btn-accent">Request Invite</button>
-		</form>
-	</div>
-</div>
-
-<div class="footer">
-	<div class="container">
-		<p class="footer-paragraph">Brought to you by <a class="footer-link" href="http://www.liferay.com/">Liferay, Inc.</a></p>
-	</div>
-</div>
+	</main>
 
 
 	<script src="/scripts/fade.js"></script>
 	
-	<script src="/vendor/scripts/soyutils.min.js"></script>
-	<script src="/vendor/scripts/alert-min.js"></script>
-	<script src="/scripts/invitation.js"></script>
+	<script src="/vendor/scripts/codemirror.js"></script>
+	<script src="/vendor/scripts/javascript.js"></script>
+	<script src="/scripts/highlight.js"></script>
 
 
 	<!-- Intercom -->
