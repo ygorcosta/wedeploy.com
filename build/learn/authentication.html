@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Launchpad Project (Beta)</title>
+	<title>Launchpad Project (Developer Preview)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="shortcut icon" href="/images/favicon.ico">
 
@@ -16,8 +16,8 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/all.css">
 	
+	<link rel="stylesheet" href="/vendor/styles/github-gist.css">
 	<link rel="stylesheet" href="/styles/learn.css">
-	<link rel="stylesheet" href="/vendor/styles/github.css">
 
 </head>
 <body class="fade-out">
@@ -27,7 +27,7 @@
 		<div class="topbar-logo">
 			<a class="topbar-logo-link" href="/">
 				<span class="icon-16-launchpad-logo"></span>
-				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project <span class="topbar-logo-label">Beta</span></span></span>
+				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project <span class="topbar-logo-label">Dev Preview</span></span></span>
 			</a>
 		</div>
 		<ul class="topbar-list">
@@ -60,7 +60,7 @@
 							<a href="/learn/authentication.html" class="docs-nav-link">Authentication</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/realtime-database.html" class="docs-nav-link">Realtime Database</a>
+							<a href="/learn/realtime-data.html" class="docs-nav-link">Realtime Data</a>
 						</li>
 						<li class="docs-nav-item">
 							<a href="/learn/custom-apis.html" class="docs-nav-link">Custom APIs</a>
@@ -85,7 +85,7 @@
 <li><a href="#logging-users-in">Logging Users In</a></li>
 <li><a href="#logging-users-out">Logging Users Out</a></li>
 </ul>
-<h3 id="authentication-configuration">Authentication Configuration</h3>
+<h2 id="authentication-configuration">Authentication Configuration</h2>
 <p>Launchpad provides an authentication service out-of-the-box for any newly created app. To facilitate your authentication needs, Launchpad provides some extended configuration options, such as login and redirect URL properties. To set extended configuration options for your app, you just need to create an <code>auth.json</code> file in your application&#39;s root folder.</p>
 <p>For example, the following code shows an <code>auth.json</code> file with its default values:</p>
 <pre><code class="lang-js">{
@@ -106,36 +106,46 @@
 }
 </code></pre>
 <p>The developer preview version of Launchpad allows you to configure your application&#39;s authentication in your local development environment.</p>
-<h3 id="authentication-provider">Authentication Provider</h3>
+<h2 id="authentication-provider">Authentication Provider</h2>
 <p>The user&#39;s identity allows an app to provide a customized experience and grant them permissions to access their APIs. The process of proving a user&#39;s identity is called authentication. The default authentication provider of a Launchpad application is known as the user service. The user service provides a RESTful API to save, update, and delete users. The app uses the user service stored data to fulfill the default authentication provider.</p>
 <p>In the <a href="#authentication_configuration">Authentication Configuration</a> section, important configuration properties were introduced, including <code>auth.userParam</code>, <code>auth.passwordParam</code>, and <code>auth.realmRestUrl</code>. Launchpad uses this information to interact with the user service API. As an example, let&#39;s use the app you have created called <code>App</code>. Every app has it&#39;s own URL, in this case <a href="http://liferay.io/app">http://liferay.io/app</a>. The user service will be available under <a href="http://liferay.io/app/users">http://liferay.io/app/users</a>.</p>
 <p>Saving a new user is as simple as performing a POST request with the proper user and password parameter names, e.g.</p>
 <pre><code class="lang-bash">curl -X &quot;POST&quot; &quot;http://liferay.io/app/users/data&quot; \
-    --data-urlencode &quot;email=user@liferay.io&quot; \
-    --data-urlencode &quot;password=pass&quot; \
-    --data-urlencode &quot;foo=bar&quot;
+     --data-urlencode &quot;email=user@liferay.io&quot; \
+     --data-urlencode &quot;password=pass&quot; \
+     --data-urlencode &quot;foo=bar&quot;
 </code></pre>
 <p>The request will respond with the user document created:</p>
-<pre><code class="lang-js">{&quot;password&quot;:&quot;pass&quot;,&quot;id&quot;:&quot;115992383516607958&quot;,&quot;email&quot;:&quot;user@liferay.io&quot;,&quot;foo&quot;:&quot;bar&quot;}
+<pre><code class="lang-js">{
+    &quot;password&quot;:&quot;pass&quot;,
+    &quot;id&quot;:&quot;115992383516607958&quot;,
+    &quot;email&quot;:&quot;user@liferay.io&quot;,
+    &quot;foo&quot;:&quot;bar&quot;
+}
 </code></pre>
 <p>To retrieve the users, an authenticated GET request can be performed, e.g.</p>
 <pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/users/data&quot; \
-    -H &quot;Authorization: Basic dXNlckBsaWZlcmF5LmlvOnBhc3M=&quot; \
+     -H &quot;Authorization: Basic dXNlckBsaWZlcmF5LmlvOnBhc3M=&quot;
 </code></pre>
 <p>The request will respond with the list of users:</p>
-<pre><code class="lang-js">[{&quot;password&quot;:&quot;pass&quot;,&quot;id&quot;:&quot;115992383516607958&quot;,&quot;email&quot;:&quot;user@liferay.io&quot;,&quot;foo&quot;:&quot;bar&quot;}]
+<pre><code class="lang-js">[{
+    &quot;password&quot;:&quot;pass&quot;,
+    &quot;id&quot;:&quot;115992383516607958&quot;,
+    &quot;email&quot;:&quot;user@liferay.io&quot;,
+    &quot;foo&quot;:&quot;bar&quot;
+}]
 </code></pre>
 <p>To delete an user, an authenticated DELETE request can be performed, e.g.</p>
 <pre><code class="lang-bash">curl -X &quot;DELETE&quot; &quot;http://liferay.io/app/users/data/115992383516607958&quot; \
-    -H &quot;Authorization: Basic dXNlckBsaWZlcmF5LmlvOnBhc3M=&quot; \
+     -H &quot;Authorization: Basic dXNlckBsaWZlcmF5LmlvOnBhc3M=&quot;
 </code></pre>
-<h3 id="logging-users-in">Logging Users In</h3>
+<h2 id="logging-users-in">Logging Users In</h2>
 <p>Now you know how to save, retrieve, and delete users in your application. The user data stored will be used by the auth provider to lookup user emails and passwords to authenticate. </p>
 <p>Launchpad supports the following authentication types:</p>
-<h4 id="-basic-"><code>Basic</code></h4>
-<p>Curl</p>
+<h3 id="basic">Basic</h3>
+<p>cURL</p>
 <pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/private&quot; \
-    -H &quot;Authorization: Basic dXNlckBsaWZlcmF5LmlvOnBhc3M=&quot; \
+     -H &quot;Authorization: Basic dXNlckBsaWZlcmF5LmlvOnBhc3M=&quot;
 </code></pre>
 <p>JavaScript</p>
 <pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/private&#39;)
@@ -147,10 +157,10 @@
    .auth(&quot;user@liferay.io&quot;, &quot;pass&quot;)
    .get();
 </code></pre>
-<h4 id="-token-"><code>Token</code></h4>
-<p>Curl</p>
+<h3 id="token">Token</h3>
+<p>cURL</p>
 <pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/private&quot; \
-    -H &quot;Authorization: Bearer [token]&quot; \
+     -H &quot;Authorization: Bearer [token]&quot;
 </code></pre>
 <p>JavaScript</p>
 <pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/private&#39;)
@@ -162,22 +172,22 @@
    .auth(&quot;[token]&quot;)
    .get();
 </code></pre>
-<h4 id="-cookie-"><code>Cookie</code></h4>
-<p>Curl</p>
+<h3 id="cookie">Cookie</h3>
+<p>cURL</p>
 <pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/private&quot; \
-    -H &quot;Cookie: token=[token]&quot; \
+     -H &quot;Cookie: token=[token]&quot;
 </code></pre>
-<h4 id="-form-"><code>Form</code></h4>
+<h3 id="form">Form</h3>
 <p>Launchpad&#39;s Form login is very handy when building web applications. Launchpad uses the configuration <code>auth.loginUrl</code> to handle the login request and the <code>auth.loginRedirectUrl</code> to automatically redirect when a login is successful. The Form login is demonstrated in the following code:</p>
-<p>Curl</p>
+<p>cURL</p>
 <pre><code class="lang-bash">curl -X &quot;POST&quot; &quot;http://liferay.io/app/login&quot; \
-    --data-urlencode &quot;email=user@liferay.io&quot; \
-    --data-urlencode &quot;password=pass&quot; \
+     --data-urlencode &quot;email=user@liferay.io&quot; \
+     --data-urlencode &quot;password=pass&quot;
 </code></pre>
 <p>Currently, Launchpad provides the authentication token using the response header <code>Set-Cookie: token=[token]</code>. This allows cookie enabled clients to keep the login session using cookies.</p>
-<h3 id="logging-users-out">Logging Users Out</h3>
+<h2 id="logging-users-out">Logging Users Out</h2>
 <p>Performing a GET request on the URL configured on <code>auth.logoutUrl</code> logs the user out. The <code>auth.loginPageUrl</code> will automatically redirect to the login page after logout. The following example shows how to perform a GET request on the logout URL:</p>
-<p>Curl</p>
+<p>cURL</p>
 <pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/logout&quot;
 </code></pre>
 <p>JavaScript</p>
@@ -195,8 +205,8 @@
 
 	<script src="/scripts/all.js"></script>
 	
-	<script src="/scripts/learn.js"></script>
 	<script src="/vendor/scripts/highlight.pack.min.js"></script>
+	<script src="/scripts/learn.js"></script>
 
 
 	<!-- Intercom -->

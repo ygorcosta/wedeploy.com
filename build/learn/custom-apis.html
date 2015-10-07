@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Launchpad Project (Beta)</title>
+	<title>Launchpad Project (Developer Preview)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="shortcut icon" href="/images/favicon.ico">
 
@@ -16,8 +16,8 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/all.css">
 	
+	<link rel="stylesheet" href="/vendor/styles/github-gist.css">
 	<link rel="stylesheet" href="/styles/learn.css">
-	<link rel="stylesheet" href="/vendor/styles/github.css">
 
 </head>
 <body class="fade-out">
@@ -27,7 +27,7 @@
 		<div class="topbar-logo">
 			<a class="topbar-logo-link" href="/">
 				<span class="icon-16-launchpad-logo"></span>
-				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project <span class="topbar-logo-label">Beta</span></span></span>
+				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project <span class="topbar-logo-label">Dev Preview</span></span></span>
 			</a>
 		</div>
 		<ul class="topbar-list">
@@ -60,7 +60,7 @@
 							<a href="/learn/authentication.html" class="docs-nav-link">Authentication</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/realtime-database.html" class="docs-nav-link">Realtime Database</a>
+							<a href="/learn/realtime-data.html" class="docs-nav-link">Realtime Data</a>
 						</li>
 						<li class="docs-nav-item">
 							<a href="/learn/custom-apis.html" class="docs-nav-link">Custom APIs</a>
@@ -77,9 +77,14 @@
 
 				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
 					<h1 id="custom-apis">Custom APIs</h1>
-<h3 id="1-understand-api-json">1. Understand api.json</h3>
-<p>Launchpad enables you to create apps, and each app is composed by one or more services. A service is exposed with a REST interface that you can configure in the <code>api.json</code> file. A service api consists of a list of apis, each following the format:</p>
-<pre><code class="lang-json">{
+<p>In Launchpad you can create apps, and each app is composed by one or more services. A service exposes a REST interface that can be described by the service&#39;s API. We provide easy and powerful ways for you to describe and configure your APIs, so you can do more with less code.</p>
+<p>The following sections explain how to customize your service&#39;s API:</p>
+<ul>
+<li><a href="#understand-apijson">Understand api.json</a></li>
+</ul>
+<h2 id="understand-api-json">Understand api.json</h2>
+<p>The main configuration of any app is the <code>api.json</code> file, that can also be generated quickly from the <a href="http://liferay.io/dashboard">Launchpad Dashboard</a>. This file consists of a list of configurations, such as:</p>
+<pre><code class="lang-json">[{
   &quot;path&quot;: null,
   &quot;method&quot;: [&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;PATCH&quot;, &quot;DELETE&quot;],
   &quot;handler&quot;: null,
@@ -90,82 +95,135 @@
   &quot;body&quot;: null,
   &quot;visibility&quot;: true,
   &quot;blocking&quot;: true
+}]
+</code></pre>
+<p>Let&#39;s understand each of the previous configuration available. The service will use this list of api definitions to create a router for your service, and then each request that matches your service path will be handled by this router.</p>
+<p>It&#39;s important to notice that the order in which these apis are described in your <code>api.json</code> is the same order your service will try to match and process your request. So, for example, if you define one api to describe your authorization logic for a path, and another to define a function to handle the request, you need to put them in the proper order inside the file.</p>
+<h4 id="path-configuration">Path Configuration</h4>
+<p>The <code>path</code> configuration is used by your service router to define which requests will be affected by this api definition. The base url for a service named <code>myService</code> in an app called <code>myApp</code> is:</p>
+<pre><code>http://liferay.io/myApp/myService
+</code></pre><p>The path you map on the configuration only need to specify the url section that comes after this base url from the example above, e.g.:</p>
+<pre><code class="lang-js">[
+  {
+    &quot;path&quot;: &quot;/route1&quot;
+  },
+  {
+    &quot;path&quot;: &quot;/route2&quot;
+  }
+]
+</code></pre>
+<pre><code>http://liferay.io/myApp/myService/route1
+</code></pre><p>You can also create URLs with patterns to match the request url:</p>
+<pre><code class="lang-js">[
+  {
+    &quot;path&quot;: &quot;/sum/:first/:second&quot;
+  }
+]
+</code></pre>
+<p>It also supports regular expressions:</p>
+<pre><code class="lang-js">[
+  {
+    &quot;path&quot;: &quot;/sum/:first(\\d+)/:second(\\d+)&quot;
+  }
+]
+</code></pre>
+<p>This patterns enables you to create a regular expression pattern to filter the urls, and also name the extracted url segment for future reference. The example above will match any request with two numbers after <code>sum</code>, like <code>/sum/123/456</code>, but not requests like <code>/sum/text</code> or <code>/sum/123/word</code>.</p>
+<p>You can also match only the prefix of the request, using the wildcard:</p>
+<pre><code class="lang-js">[
+  {
+    &quot;path&quot;: &quot;/api/*&quot;
+  }
+]
+</code></pre>
+<p>This will match paths like <code>/api</code>, <code>/api/foo</code>, and so on.</p>
+<p>Notice the path from two different apis may overlap, or even be identical. In this case, your service will match the first api, in the order they&#39;re described in your <code>api.json</code>, and if this one doesn&#39;t handle the request or explicitly calls <code>next</code> inside the handler, then it will match and execute the second one.</p>
+<h5 id="data-paths">Data Paths</h5>
+<p>You can also mount a path as a RESTful database. In order to properly represent a data path we need to know which collection the path references. That&#39;s why the magic <code>@</code> exists, what else goes after this symbol is the collection name. Remember that, to enable data in your path just use the <code>magic</code> token <code>@</code>.</p>
+<pre><code class="lang-js">[
+  {
+    &quot;path&quot;: &quot;@/collectionName/*&quot;
+  }
+]
+</code></pre>
+<p>This first example creates a path <code>/collectionName</code> that represents the collection called <code>collectionName</code>. If you need to specify a base path for the data path it&#39;s possible:</p>
+<pre><code class="lang-js">[
+  {
+    &quot;path&quot;: &quot;/basePath/@/collectionName/*&quot;
+  }
+]
+</code></pre>
+<p>To access a collection resource, you can specify the resource id on the URL, e.g. <code>/collectionName/:id</code>. For more information, see <a href="https://github.com/liferay-apps/landing/wiki/data-operations">Data Operations</a>.</p>
+<h4 id="method-configuration">Method Configuration</h4>
+<p>The <code>method</code> works as a filter for requests that will be routed to this api definition based on the HTTP method. By default, all HTTP requests are mapped to an api, but you can change it to any subset you need. Launchpad currently support the following HTTP methods:</p>
+<ul>
+<li><code>GET</code></li>
+<li><code>DELETE</code></li>
+<li><code>PATCH</code></li>
+<li><code>POST</code></li>
+<li><code>PUT</code></li>
+</ul>
+<h4 id="handler-configuration">Handler Configuration</h4>
+<p>The <code>handler</code> is a very important part of understanding how to extend Launchpad.</p>
+<p>Handlers when configured can point to a function to receive the request and process it. Currently, it supports Java or JavaScript, and they can be synchronous or asynchronous.</p>
+<pre><code class="lang-js">function handler(response) {
+   // This is an asynchronous handler in JavaScript.
+   response.end(&#39;Hello!&#39;);
 }
 </code></pre>
-<p>These are the default values for an api. The service will use this list of api definitions to create a router for your service, and then each request that matches your service path will be handled by this router. Thus, it&#39;s important to notice that the order in which these apis are described in your <code>api.json</code> is the same order your service will try to match and process your request. So, for example, if you define one api to describe your authorization logic for a path, and another to define a function to handle the request, you need to put them in the proper order inside the file.</p>
-<h4 id="path">Path</h4>
-<p>The <code>path</code> is used by your service router to define which requests will be affected by this api definition. The base url for an service named <code>myService</code> in an app called <code>myApp</code> is:</p>
-<pre><code>liferay.io/myApp/myService
-</code></pre><p>Your path then only need to specify the url section that comes after this base url in a incoming request. You can specify fixed paths like:</p>
-<pre><code>/my/api/route
-</code></pre><p>Or patterns to match the request url:</p>
-<pre><code>/sum/:first(\\d+)/:second(\\d+)
-</code></pre><p>This patterns enables you to create a RegEx pattern to filter the urls, and also name the extracted url segment for future reference. The example above will match any request with two numbers after <code>sum</code>, like <code>/sum/123/456</code>, but not requests like <code>/sum/text</code> or <code>/sum/123/word</code>. You can also match only the prefix of the request, using the wildcard:</p>
-<pre><code>/api/prefix/*
-</code></pre><p>This will match paths like <code>/api/prefix</code>, <code>/api/prefix/path</code>, and so on...</p>
-<p>Notice the path from two different apis may overlap, or even be identical. In this case, your service will match the first api, in the order they&#39;re described in your <code>api.json</code>, and if this one doesn&#39;t handle the request or explicitly calls <code>next</code> inside the handler, then it will match and execute the second one.</p>
-<p>You can also mount data in your path using the token <code>@</code>:</p>
-<pre><code>/my/base/path/@/users/*
-</code></pre><p>This example will mount the collection <code>users</code> after the path <code>/my/base/path</code>, so requests like:</p>
-<pre><code>/my/base/path/users/1/name
-</code></pre><p>Will access the name of the user with ID <code>1</code>. For more information on mounting data paths, see <a href="https://github.com/liferay-apps/landing/wiki/Data-Operations">Data Operations</a>.</p>
-<p>Once you&#39;ve mapped all your paths, you can access it by merging the path with your service base url:</p>
-<pre><code class="lang-bash">curl &quot;http://liferay.io/myApp/myService/my/mapped/path&quot;
+<pre><code class="lang-js">function handler() {
+   // This is a synchronous handler in JavaScript.
+   return &#39;Hello!&#39;;
+}
 </code></pre>
-<h4 id="method">Method</h4>
-<p>The <code>method</code> works as a filter for requests that will be routed to this api definition. By default, all HTTP requests are mapped to an api, but you can change it to any subset you need.</p>
-<h4 id="handler">Handler</h4>
-<p>The <code>handler</code> is where you can point to a function to receive the request and process it. It can be in <a href="#custom_apis_create_java_service"> Java </a> or href=&quot;#custom_apis_create_javascript_service&quot;&gt; Javascript </a>.</p>
-<p>Javascript</p>
+<p>Let&#39;s say we want to map a path <code>/hello</code> that prints &quot;Hello!&quot;. First, you need to map the qualified name of the handler on <code>api.json</code> file, e.g.:</p>
+<h5 id="javascript">JavaScript</h5>
 <pre><code class="lang-json">{
   &quot;path&quot;: &quot;/hello&quot;,
   &quot;method&quot;: &quot;GET&quot;,
-  &quot;handler&quot;: &quot;api.js#handler&quot;
+  &quot;handler&quot;: &quot;com.liferay.SayHello#print&quot;
 }
 </code></pre>
-<p>Java</p>
+<p>Inside your service folder structure, placing a file in the right place with the following content will properly handle the request:</p>
+<pre><code>└── js
+    └── com
+        └── liferay
+            └── SayHello.js
+</code></pre><pre><code class="lang-js">function print(response) {
+   // process request
+   response.end(&#39;Hello!&#39;);
+}
+</code></pre>
+<h5 id="java">Java</h5>
+<p>It&#39;s also similar in Java:</p>
 <pre><code class="lang-java">{
-  &quot;path&quot;: &quot;hello&quot;,
+  &quot;path&quot;: &quot;/hello&quot;,
   &quot;method&quot;: &quot;GET&quot;,
-  &quot;handler&quot;: &quot;foo.Bar#handler&quot;
+  &quot;handler&quot;: &quot;com.liferay.SayHello#print&quot;
 }
 </code></pre>
-<p>The router will not continue to match the request with your service&#39;s apis after it encounters a handler or a data path, so its up to you finishing the response in your code:</p>
-<pre><code class="lang-js">function handler(request, response) {
+<pre><code>└── java
+    └── com
+        └── liferay
+            └── SayHello.java
+</code></pre><pre><code class="lang-java">public void print(Response response) {
    // process request
-   response.end(&#39;Hello Launchpad World!&#39;);
+   response.end(&quot;Hello!&quot;);
 }
 </code></pre>
-<p>Java</p>
-<pre><code class="lang-java">public void handler(Request request, Response response) {
-   // process request
-   response.end(&quot;Hello Launchpad World!&quot;);
+<p>Imagine the handlers as route interceptors. When you have a path with a handler it stops there. You can also force it to continue the route matching by calling <code>request.next()</code>.</p>
+<h5 id="javascript">JavaScript</h5>
+<pre><code class="lang-js">function handler(request) {
+  // I don&#39;t do anything else than calling the next matching route.
+  request.next();
 }
 </code></pre>
-<p>Or just return the string to be used as body in a <code>200 OK</code> response:</p>
-<p>Javascript</p>
-<pre><code class="lang-js">function handler() {
-   return &#39;Hello Launchpad World!&#39;;
-}
-</code></pre>
-<p>Java</p>
-<pre><code class="lang-java">public String handler() {
-   return &quot;Hello Launchpad World!&quot;;
-}
-</code></pre>
-<p>Nonetheless, if you want to process the request and delegate it to the next routes, you can call explicitly <code>request.next()</code> inside your code and make the router continue the iteration over your <code>api.json</code>.</p>
-<pre><code class="lang-js">function handler(Request request) {
-   // process request
-   request.next();
-}
-</code></pre>
-<p>Java</p>
+<h5 id="java">Java</h5>
 <pre><code class="lang-java">public void handler(Request request) {
-   // process request
-   request.next();
+  // I don&#39;t do anything else than calling the next matching route.
+  request.next();
 }
 </code></pre>
-<h4 id="title-and-description">Title and Description</h4>
+<h4 id="title-and-description-configuration">Title and Description Configuration</h4>
 <p>The <code>title</code> and <code>description</code> are optional information that can be used as documentation for your api. In you <code>api.json</code>, just fill with string values:</p>
 <pre><code class="lang-json">{
    &quot;path&quot;: &quot;@/users&quot;,
@@ -173,8 +231,8 @@
    &quot;description&quot;: &quot;Service&#39;s user collection, that can be used to save and access user information.&quot;
 }
 </code></pre>
-<h4 id="auth">Auth</h4>
-<p>The <code>auth</code> is an object that describes all criteria an authenticated user needs to meet in order to have access this path. If the authorization of the request fails, the service may redirect the request to a registered login page (see <a href="#authentication_configuration"> Authentication Configuration </a> to know how to setup a login page for your app), or respond with <code>404 Not Found</code> to avoid giving the unauthorized user any information about your service.</p>
+<h4 id="auth-configuration">Auth Configuration</h4>
+<p>The <code>auth</code> is an object that describes all criteria an authenticated user needs to meet in order to have access this path. If the authorization of the request fails, the service may redirect the request to a registered login page (see <a href="https://github.com/liferay-apps/landing/wiki/authentication#authentication_configuration">Authentication Configuration</a> to know how to setup a login page for your app), or respond with <code>404 Not Found</code> to avoid giving the unauthorized user any information about your service.</p>
 <p>This auth object has the following fields:</p>
 <pre><code class="lang-json">{
   &quot;auth&quot;: {
@@ -184,10 +242,10 @@
   }
 }
 </code></pre>
-<p>The <code>permissions</code> field list all permissions a user must have to be authorized. This permissions can be resolved from the user permissions, or from any role he may have that has this permission (see <a href="#authentication_configuration"> Authentication Configuration </a> to know how to define the roles&#39; permissions for your app).</p>
+<p>The <code>permissions</code> field list all permissions a user must have to be authorized. This permissions can be resolved from the user permissions, or from any role he may have that has this permission (see <a href="https://github.com/liferay-apps/landing/wiki/authentication#authentication_configuration">Authentication Configuration</a> to know how to define the roles&#39; permissions for your app).</p>
 <p>The <code>roles</code> field list all roles a user must have to be authorized. Note that even if the user has all permissions that defined a role in your app, he will not be granted access to this api if he doesn&#39;t have the role itself. For example, if you configured your app so the role <code>admin</code> has permissions <code>[&quot;read&quot;, &quot;write&quot;]</code>, a user will not access you api without the role <code>admin</code> even if he has both permissions separately.</p>
 <p>The <code>validator</code> field enables you to describe any javascript expression to authorize the request. You can access any request data available in the scripting environment (see more about this bellow with api parameters).</p>
-<h4 id="parameters">Parameters</h4>
+<h4 id="parameters-configuration">Parameters Configuration</h4>
 <p>The <code>parameters</code> can be used to describe any parameter a request may receive. We will load these parameters from:</p>
 <ul>
 <li>url query</li>
@@ -230,7 +288,7 @@
 <li><code>$body</code>: the parsed request body.</li>
 <li><code>$data</code>: the data view for this request, if a data path is mounted in the api path and the request path represents a key to access any data resource (collection, document or inner field from a document). It will be <code>null</code> otherwise.</li>
 </ul>
-<h4 id="body">Body</h4>
+<h4 id="body-configuration">Body Configuration</h4>
 <p>The <code>body</code> is a descriptor similar to a parameter descriptor, with the exception of the <code>value</code> field, and it can be used to describe and validate the request body. This can be usefull when the body will not be a form url encoded, multipart form or a JSON object, making it impossible to validate it with the <code>parameters</code> field. One example is to validate body data in a api like:</p>
 <pre><code class="lang-json">{
   &quot;body&quot;: {
@@ -241,9 +299,9 @@
   }
 }
 </code></pre>
-<h4 id="visibility">Visibility</h4>
+<h4 id="visibility-configuration">Visibility Configuration</h4>
 <p>You can specify the visibility of your service at the api level. If you want to map a path that only internal services inside your app will be able to reach, you can set this flag to <code>false</code> in your api definition. By default its set to <code>true</code>.</p>
-<h4 id="blocking">Blocking</h4>
+<h4 id="blocking-configuration">Blocking Configuration</h4>
 <p>You can specify the kind of process your handler will execute in your api definition. If you will execute a code too complex, or perform any blocking IO request or function, its better to set the <code>blocking</code> flag to <code>true</code>, so the server will allocate a special part of the resources to process this request and leave your HTTP server available to receive new requests.</p>
 <p>If your handler is a light code and you want to execute it really fast, you can set this flag to <code>false</code> and let the server execute it as fast as it can without allocating any special resource for that. But here you must thread lightly, because you&#39;ll be consuming resources from your HTTP server and possibly affecting new requests to your app. Only change this flag to <code>false</code> if you really know how its going to affect to your server. The default value for this flag is <code>true</code>.</p>
 
@@ -255,8 +313,8 @@
 
 	<script src="/scripts/all.js"></script>
 	
-	<script src="/scripts/learn.js"></script>
 	<script src="/vendor/scripts/highlight.pack.min.js"></script>
+	<script src="/scripts/learn.js"></script>
 
 
 	<!-- Intercom -->

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Launchpad Project (Beta)</title>
+	<title>Launchpad Project (Developer Preview)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="shortcut icon" href="/images/favicon.ico">
 
@@ -16,8 +16,8 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/all.css">
 	
+	<link rel="stylesheet" href="/vendor/styles/github-gist.css">
 	<link rel="stylesheet" href="/styles/learn.css">
-	<link rel="stylesheet" href="/vendor/styles/github.css">
 
 </head>
 <body class="fade-out">
@@ -27,7 +27,7 @@
 		<div class="topbar-logo">
 			<a class="topbar-logo-link" href="/">
 				<span class="icon-16-launchpad-logo"></span>
-				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project <span class="topbar-logo-label">Beta</span></span></span>
+				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project <span class="topbar-logo-label">Dev Preview</span></span></span>
 			</a>
 		</div>
 		<ul class="topbar-list">
@@ -60,7 +60,7 @@
 							<a href="/learn/authentication.html" class="docs-nav-link">Authentication</a>
 						</li>
 						<li class="docs-nav-item">
-							<a href="/learn/realtime-database.html" class="docs-nav-link">Realtime Database</a>
+							<a href="/learn/realtime-data.html" class="docs-nav-link">Realtime Data</a>
 						</li>
 						<li class="docs-nav-item">
 							<a href="/learn/custom-apis.html" class="docs-nav-link">Custom APIs</a>
@@ -77,7 +77,7 @@
 
 				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
 					<h1 id="data-operations">Data Operations</h1>
-<h2 id="contents">Contents</h2>
+<p>Launchpad has a powerful <a href="https://github.com/launchpad-project/landing/wiki/realtime-data">Realtime Database</a> under the hood of every app service you create. The following sections explain how to use this potential to the fullest:</p>
 <ul>
 <li><a href="#basic-concepts">Basic Concepts</a></li>
 <li><a href="#write-operations">Write Operations</a></li>
@@ -93,7 +93,7 @@
 <p>We offer a built-in JSON-like datastore for all application services, with a RESTful interface that can be easily plugged to you api as follows:</p>
 <pre><code class="lang-json">[
   {
-    &quot;path&quot;:&quot;@/*&quot;
+    &quot;path&quot;: &quot;@/*&quot;
   }
 ]
 </code></pre>
@@ -101,34 +101,34 @@
 <p>This integration with the <code>api.json</code> configuration gives you power to filter which data functionalities you want to enable to your service. For example, if you want to enable only access to a collection named movies, and only to push and read data, you can map a path as follows:</p>
 <pre><code class="lang-json">[
   {
-    &quot;path&quot;:&quot;/my/data/path/@/movies/*&quot;,
-    &quot;method&quot;:[&quot;GET&quot;,&quot;POST&quot;]
+    &quot;path&quot;: &quot;/my/data/path/@/movies/*&quot;,
+    &quot;method&quot;: [&quot;GET&quot;,&quot;POST&quot;]
   }
 ]
 </code></pre>
 <p>Note that you data doesn&#39;t need to be rooted, you can mount your data path anywhere you want, just like we did in the example above. But even if you mount the same data path more than once, it refers to the same resource:</p>
 <pre><code class="lang-json">[
   {
-    &quot;path&quot;:&quot;@/*&quot;
+    &quot;path&quot;: &quot;@/*&quot;
   },
   {
-    &quot;path&quot;:&quot;/my/alias/@/movies/*&quot;
+    &quot;path&quot;: &quot;/my/alias/@/movies/*&quot;
   }
 ]
 </code></pre>
-<p>In this case, requests to both <code>curl &#39;https://liferay.io/app/service/movies&#39;</code> and <code>curl &#39;https://liferay.io/app/service/my/alias/movies&#39;</code> will access the same movies collection.</p>
-<p>Now we can see how easy and powerful it is to integrate the data with all functionalities we offer in <a href="https://github.com/liferay-apps/landing/wiki/How-To-Use#custom_apis">Custom API&#39;s</a>. For example, to create a collection of users where anyone can read all users, but one can only write its own data, we can use the following code:</p>
+<p>In this case, requests to both <code>curl &#39;http://liferay.io/app/service/movies&#39;</code> and <code>curl &#39;http://liferay.io/app/service/my/alias/movies&#39;</code> will access the same movies collection.</p>
+<p>Now we can see how easy and powerful it is to integrate the data with all functionalities we offer in <a href="https://github.com/liferay-apps/landing/wiki/custom-apis">Custom APIs</a>. For example, to create a collection of users where anyone can read all users, but one can only write its own data, we can use the following code:</p>
 <pre><code class="lang-json">[
   {
-    &quot;path&quot;:&quot;/data/@/users/:id/*&quot;,
-    &quot;method&quot;:[&quot;PUT&quot;,&quot;PATCH&quot;,&quot;DELETE&quot;],
-    &quot;auth&quot;:{
-      &quot;validator&quot;:&quot;$auth.id === $params.id&quot;
+    &quot;path&quot;: &quot;/data/@/users/:id/*&quot;,
+    &quot;method&quot;: [&quot;PUT&quot;,&quot;PATCH&quot;,&quot;DELETE&quot;],
+    &quot;auth&quot;: {
+      &quot;validator&quot;: &quot;$auth.id === $params.id&quot;
     }
   },
   {
-    &quot;path&quot;:&quot;/data/@/users/*&quot;,
-    &quot;method&quot;:&quot;GET&quot;
+    &quot;path&quot;: &quot;/data/@/users/*&quot;,
+    &quot;method&quot;: &quot;GET&quot;
   }
 ]
 </code></pre>
@@ -136,21 +136,21 @@
 <p>While mapping our data paths, there is one special path that can be used for datastore configuration: the root data path. We can mount it in a special place, if we want, to manage our collections and field mappings like this:</p>
 <pre><code class="lang-json">[
   {
-    &quot;path&quot;:&quot;/admin/data/@/&quot;
+    &quot;path&quot;: &quot;/admin/data/@/&quot;
   }
 ]
 </code></pre>
 <p>Or, if we want to keep things simple, we can just use the first mapping we created:</p>
 <pre><code class="lang-json">[
   {
-    &quot;path&quot;:&quot;@/*&quot;
+    &quot;path&quot;: &quot;@/*&quot;
   }
 ]
 </code></pre>
 <p>And use our service root for that. If we get this root data path we will receive all collections and mappings we have configured in our datastore, which initially is an empty list:</p>
 <pre><code class="lang-json">[]
 </code></pre>
-<p>This data will be filled dynamically while new documents are added to our datastore. For example, to load information from the movies and places collections we used in our <a href="https://github.com/liferay-apps/landing/wiki/How-To-Use#realtime_data">Realtime Data</a> page:</p>
+<p>This data will be filled dynamically while new documents are added to our datastore. For example, to load information from the movies and places collections we used in our <a href="https://github.com/launchpad-project/landing/wiki/realtime-data">Realtime Data</a> page:</p>
 <p>Curl</p>
 <pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service&quot;
 </code></pre>
@@ -181,8 +181,8 @@
 <p>This datatype mapping for collection fields can be created dynamically, when the type of a field is extracted from the first JSON document we put in a new collection, or manually using POST and PATCH methods. With this endpoint we can add new collections via POST:</p>
 <p>Curl</p>
 <pre><code class="lang-bash">curl -X &quot;POST&quot; &quot;http://liferay.io/app/service&quot; \
-    --header &quot;Content-Type: application/json&quot; \
-    --data &quot;{\&quot;books\&quot;:{\&quot;title\&quot;:\&quot;string\&quot;,\&quot;published\&quot;:\&quot;date\&quot;}}&quot;
+     --header &quot;Content-Type: application/json&quot; \
+     --data &quot;{\&quot;books\&quot;:{\&quot;title\&quot;:\&quot;string\&quot;,\&quot;published\&quot;:\&quot;date\&quot;}}&quot;
 </code></pre>
 <p>Javascript</p>
 <pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service&#39;)
@@ -201,8 +201,8 @@ Launchpad.url(&quot;http://liferay.io/app/service&quot;)
 <p>Or update existing ones by adding new field mappings:</p>
 <p>Curl</p>
 <pre><code class="lang-bash">curl -X &quot;PATCH&quot; &quot;http://liferay.io/app/service&quot; \
-    --header &quot;Content-Type: application/json&quot; \
-    --data &quot;{\&quot;books\&quot;:{\&quot;author\&quot;:\&quot;string\&quot;}}&quot;
+     --header &quot;Content-Type: application/json&quot; \
+     --data &quot;{\&quot;books\&quot;:{\&quot;author\&quot;:\&quot;string\&quot;}}&quot;
 </code></pre>
 <p>Javascript</p>
 <pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service&#39;)
@@ -236,8 +236,8 @@ Launchpad.url(&quot;http://liferay.io/app/service&quot;)
 <pre><code class="lang-json">{
   &quot;movies&quot;:{
     &quot;screenings&quot;: {
-      &quot;name&quot;:&quot;string&quot;,
-      &quot;location&quot;:&quot;geo_point&quot;,
+      &quot;name&quot;: &quot;string&quot;,
+      &quot;location&quot;: &quot;geo_point&quot;,
       &quot;time&quot;: &quot;date&quot;
     }
   }
@@ -476,8 +476,8 @@ Filter.range(&quot;age&quot;, 20, 30)
 
 	<script src="/scripts/all.js"></script>
 	
-	<script src="/scripts/learn.js"></script>
 	<script src="/vendor/scripts/highlight.pack.min.js"></script>
+	<script src="/scripts/learn.js"></script>
 
 
 	<!-- Intercom -->
