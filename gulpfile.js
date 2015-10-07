@@ -14,8 +14,7 @@ gulp.task('styles', function() {
 
 gulp.task('vendor-styles', function() {
 	return gulp.src([
-			'bower_components/codemirror/lib/codemirror.css',
-			'bower_components/codemirror/theme/mdn-like.css'
+			'bower_components/highlightjs/styles/github.css'
 		])
 		.pipe(gulp.dest('build/vendor/styles'));
 });
@@ -40,8 +39,7 @@ gulp.task('vendor-scripts', function() {
 	return gulp.src([
 			'bower_components/soyutils/soyutils.min.js',
 			'bower_components/steel-alert/build/globals/alert-min.js',
-			'bower_components/codemirror/lib/codemirror.js',
-			'bower_components/codemirror/mode/javascript/javascript.js'
+			'bower_components/highlightjs/highlight.pack.min.js'
 		])
 		.pipe(gulp.dest('build/vendor/scripts'));
 });
@@ -55,10 +53,10 @@ gulp.task('images', function() {
 
 // HTML ------------------------------------------------------------------------
 
-gulp.task('index', function() {
+gulp.task('home', function() {
 	return gulp.src(['src/index.html'])
 		.pipe(layout({
-			layout: 'src/layouts/index.html',
+			layout: 'src/layouts/home.html',
 			engine: 'nunjucks'
 		}))
 		.pipe(gulp.dest('build'));
@@ -66,7 +64,9 @@ gulp.task('index', function() {
 
 gulp.task('learn', function() {
 	return gulp.src('bower_components/learn/*.md')
-		.pipe(markdown())
+		.pipe(markdown({
+			breaks: true
+		}))
 		.pipe(layout({
 			layout: 'src/layouts/learn.html',
 			engine: 'nunjucks'
@@ -78,7 +78,7 @@ gulp.task('learn', function() {
 
 gulp.task('build', [
 	'styles', 'vendor-styles', 'vendor-fonts',
-	'scripts', 'vendor-scripts', 'images', 'index', 'learn'
+	'scripts', 'vendor-scripts', 'images', 'home', 'learn'
 ]);
 
 gulp.task('watch', function() {

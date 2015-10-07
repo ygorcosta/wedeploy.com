@@ -3,10 +3,10 @@
   "name": "pod-landing",
   "version": "0.0.0",
   "dependencies": {
-    "steel-bootstrap": "metal/steel-bootstrap#master",
-    "steel-topbar": "metal/steel-topbar#master",
-    "steel-alert": "metal/steel-alert#master",
+    "highlightjs": "~8.8.0",
     "learn": "https://github.com/launchpad-project/landing.wiki.git",
-    "codemirror": "~5.5.0"
+    "steel-alert": "metal/steel-alert#master",
+    "steel-bootstrap": "metal/steel-bootstrap#master",
+    "steel-topbar": "metal/steel-topbar#master"
   }
 }
