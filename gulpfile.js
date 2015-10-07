@@ -1,8 +1,7 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var soynode = require('gulp-soynode');
-var markdown = require('gulp-markdown');
 var layout = require('gulp-layout');
+var markdown = require('gulp-markdown');
+var sass = require('gulp-sass');
 
 // CSS -------------------------------------------------------------------------
 
