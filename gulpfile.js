@@ -53,8 +53,8 @@ gulp.task('images', function() {
 
 // HTML ------------------------------------------------------------------------
 
-gulp.task('home', function() {
-	return gulp.src(['src/index.html'])
+gulp.task('pages-home', function() {
+	return gulp.src('src/pages/index.html')
 		.pipe(layout({
 			layout: 'src/layouts/home.html',
 			engine: 'nunjucks'
@@ -62,23 +62,35 @@ gulp.task('home', function() {
 		.pipe(gulp.dest('build'));
 });
 
-gulp.task('learn', function() {
-	return gulp.src('bower_components/learn/*.md')
+gulp.task('pages-faq', function() {
+	return gulp.src('src/pages/faq/index.md')
 		.pipe(markdown({
 			breaks: true
 		}))
 		.pipe(layout({
-			layout: 'src/layouts/learn.html',
+			layout: 'src/layouts/faq.html',
 			engine: 'nunjucks'
 		}))
-		.pipe(gulp.dest('build/learn'));
+		.pipe(gulp.dest('build/faq'));
+});
+
+gulp.task('pages-docs', function() {
+	return gulp.src('bower_components/docs/*.md')
+		.pipe(markdown({
+			breaks: true
+		}))
+		.pipe(layout({
+			layout: 'src/layouts/docs.html',
+			engine: 'nunjucks'
+		}))
+		.pipe(gulp.dest('build/docs'));
 });
 
 // Runner ----------------------------------------------------------------------
 
 gulp.task('build', [
-	'styles', 'vendor-styles', 'vendor-fonts',
-	'scripts', 'vendor-scripts', 'images', 'home', 'learn'
+	'styles', 'vendor-styles', 'vendor-fonts', 'scripts', 'vendor-scripts',
+	'images', 'pages-home', 'pages-faq', 'pages-docs'
 ]);
 
 gulp.task('server', ['build'], function() {
