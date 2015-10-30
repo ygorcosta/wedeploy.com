@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "dependencies": {
     "highlightjs": "~8.8.0",
-    "learn": "https://github.com/launchpad-project/landing.wiki.git",
+    "docs": "https://github.com/launchpad-project/docs.wiki.git",
     "steel-alert": "metal/steel-alert#master",
     "steel-bootstrap": "metal/steel-bootstrap#master",
     "steel-topbar": "metal/steel-topbar#master"
