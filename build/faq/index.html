@@ -22,13 +22,13 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/all.css">
 	
-	<link rel="stylesheet" href="/styles/home.css">
+	<link rel="stylesheet" href="/vendor/styles/github-gist.css">
+	<link rel="stylesheet" href="/styles/learn.css">
 
 </head>
 <body class="fade-out">
 
 	
-	<div class="hero-container">
 	<nav class="topbar topbar-inverse">
 		<div class="topbar-logo">
 			<a class="topbar-logo-link" href="/">
@@ -38,7 +38,7 @@
 		</div>
 		<ul class="topbar-list">
 			<li class="topbar-item">
-				<a class="topbar-link" href="/faq">FAQ</a>
+				<a class="topbar-link topbar-link-selected" href="/faq">FAQ</a>
 			</li>
 			<li class="topbar-item">
 				<a class="topbar-link" href="/docs">Docs</a>
@@ -49,66 +49,34 @@
 		</ul>
 	</nav>
 
-	<div class="hero">
-		<h1 class="hero-title">Build Better Apps For Any Platform</h1>
-		<h2 class="hero-description">Launchpad is a Backend as a Service that makes it easy to create scalable apps in a matter of hours, not months.</h2>
-	</div>
-	<div class="hero-clouds"></div>
-</div>
+	<main class="docs">
+		<div class="container">
+			<div class="row">
+				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-3">
+					<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<p>With every new product comes a lot of new questions.</p>
+<h2 id="what-is-the-launchpad-project-">What is the Launchpad Project?</h2>
+<p>The new Launchpad Project aims to be your project&#39;s back-end, period. Ambitious, I know, but Launchpad is a very versatile tool that does just that. Launchpad allows you to create REST APIs instantly, add a powerful cloud database, use a fast static hosting, and leverage real-time capabilities in your app. Regardless of what platform you work with, you&#39;ll be able to use native SDKs for mobile, desktop, and IoT devices.</p>
+<h2 id="why-should-i-use-launchpad-">Why should I use Launchpad?</h2>
+<p>When building a high scalable application there are many things you need to consider: performance bottlenecks, database resiliency and scalability, authentication, authorization, and static hosting to name a few. Launchpad is a new dynamic Liferay initiative, allowing you to handle all of your back-end challenges in one place. Focus on creating amazing user experiences, and Launchpad will take care of the rest.</p>
+<h2 id="how-does-launchpad-interact-with-your-existing-liferay-portal-solution-">How does Launchpad interact with your existing Liferay Portal solution?</h2>
+<p>Launchpad can be described as Liferay&#39;s API Gateway that can also be used standalone. Launchpad provides an infrastructure to deploy micro-services in a managed cloud infrastructure. Launchpad will have prebuilt adapters for Liferay services like document repository, content management, audience targeting, etc. You may create additional microservices that integrate with other enterprise applications like SAP, Salesforce, etc.</p>
+<p>Using Launchpad, you may augment your existing Liferay solution with real-time notifications and a cloud based microservices platform.</p>
+<h2 id="can-i-rely-on-launchpad-for-apps-in-production-">Can I rely on Launchpad for apps in production?</h2>
+<p>The closed developer preview version of Launchpad is intended to collect developers feedback. We don&#39;t recommend you use it for production at this point.</p>
+<h2 id="can-launchpad-be-installed-on-my-own-servers-">Can Launchpad be installed on my own servers?</h2>
+<p>Launchpad&#39;s initial goal is to provide Backend as a Service deployed in the cloud. Most of the complexities of scaling and fault tolerance of your application is automatically managed by Launchpad.</p>
 
-<div class="feature-container">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-4 col-xs-12">
-				<section class="feature">
-					<span class="feature-icon icon-16-bullhorn"></span>
-					<h3 class="feature-title">Realtime</h3>
-					<p class="feature-description">Keep all of your client applications in sync</p>
-				</section>
-			</div>
-			<div class="col-sm-4 col-xs-12">
-				<section class="feature">
-					<span class="feature-icon icon-16-data"></span>
-					<h3 class="feature-title">Database</h3>
-					<p class="feature-description">Store data securely with a NoSQL cloud database</p>
-				</section>
-			</div>
-			<div class="col-sm-4 col-xs-12">
-				<section class="feature">
-					<span class="feature-icon icon-16-magnifier"></span>
-					<h3 class="feature-title">Search</h3>
-					<p class="feature-description">Filter, order, sort and make complex queries instantly</p>
-				</section>
+				</article>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div id="invitation" class="invitation-container">
-	<div class="container">
-		<h3 class="invitation-title">Join Our Developer Preview</h3>
-		<p class="invitation-description">The Launchpad Project is currently available to a restricted group of developers.<br>Want to be a part of it?</p>
-
-		<form action="/api/request-invite" class="invitation-form" method="post">
-			<input class="invitation-input form-control" name="email" type="email" placeholder="Enter your email..." required>
-			<button class="invitation-btn btn btn-accent">Request Invite</button>
-			<p class="help-block">By entering your email you agree to receive information about Launchpad.</p>
-		</form>
-	</div>
-</div>
-
-<div class="footer">
-	<div class="container">
-		<p class="footer-paragraph">Brought to you by <a class="footer-link" href="http://www.liferay.com/">Liferay, Inc.</a></p>
-	</div>
-</div>
+	</main>
 
 
 	<script src="/scripts/all.js"></script>
 	
-	<script src="/vendor/scripts/soyutils.min.js"></script>
-	<script src="/vendor/scripts/alert-min.js"></script>
-	<script src="/scripts/home.js"></script>
+	<script src="/vendor/scripts/highlight.pack.min.js"></script>
+	<script src="/scripts/learn.js"></script>
 
 
 	<!-- Intercom -->
