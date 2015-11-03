@@ -170,6 +170,18 @@
 	}
 }
 
+/* Topics
+   ========================================================================== */
+
+.topic .topic-title {
+	@include anim(opacity);
+	opacity: 1;
+}
+
+.topic:hover .topic-title,
+.topic:focus .topic-title {
+	opacity: .5;
+}
 .docs .input-inner-addon {
 	margin-bottom: 40px;
 }
