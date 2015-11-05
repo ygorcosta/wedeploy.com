@@ -1,0 +1,14 @@
+<h1>Search results for <span id="search-term"></span></h1>
+
+<script>
+var query = window.location.search;
+var queryIndex = query.indexOf('q=');
+
+if (queryIndex === -1) {
+	window.location.href = '/docs';
+}
+else {
+	queryString = query.substr(queryIndex + 2);
+	document.querySelector('#search-term').textContent = queryString;
+}
+</script>

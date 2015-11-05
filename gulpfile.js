@@ -62,6 +62,15 @@ gulp.task('pages-home', function() {
 		.pipe(gulp.dest('build'));
 });
 
+gulp.task('pages-search', function() {
+	return gulp.src('src/pages/search/index.html')
+		.pipe(layout({
+			layout: 'src/layouts/search.html',
+			engine: 'nunjucks'
+		}))
+		.pipe(gulp.dest('build/search'));
+});
+
 gulp.task('pages-faq', function() {
 	return gulp.src('src/pages/faq/index.md')
 		.pipe(markdown({
@@ -90,7 +99,7 @@ gulp.task('pages-docs', function() {
 
 gulp.task('build', [
 	'styles', 'vendor-styles', 'vendor-fonts', 'scripts', 'vendor-scripts',
-	'images', 'pages-home', 'pages-faq', 'pages-docs'
+	'images', 'pages-home', 'pages-search', 'pages-faq', 'pages-docs'
 ]);
 
 gulp.task('server', ['build'], function() {
