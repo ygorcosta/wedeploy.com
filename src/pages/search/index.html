@@ -1,14 +1,12 @@
-<h1>Search results for <span id="search-term"></span></h1>
+<div class="search">
+	<h1 class="search-title">Search in docs</h1>
 
-<script>
-var query = window.location.search;
-var queryIndex = query.indexOf('q=');
+	<div class="form-group">
+		<div class="input-inner-addon input-inner-addon-right">
+			<input id="search-input" class="form-control" type="text" placeholder="What are you looking for?">
+			<span class="input-inner-icon-helper icon-16-magnifier"></span>
+		</div>
+	</div>
 
-if (queryIndex === -1) {
-	window.location.href = '/docs';
-}
-else {
-	queryString = query.substr(queryIndex + 2);
-	document.querySelector('#search-term').textContent = queryString;
-}
-</script>
+	<p>We've found <strong id="search-total">0</strong> result(s) for "<strong id="search-term"></strong>"</p>
+</div>

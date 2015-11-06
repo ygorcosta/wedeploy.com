@@ -1,0 +1,17 @@
+@import "bower_components/steel-bootstrap/src/variables";
+@import "bower_components/steel-bootstrap/src/mixins";
+
+/* Navigation
+   ========================================================================== */
+
+.search {
+	margin: 50px 0 0;
+}
+
+.search-title {
+	color: rgba($primary, .8);
+	font-family: $font-family-secondary;
+	font-weight: 500;
+    font-size: 36px;
+    margin: 0 0 32px;
+}

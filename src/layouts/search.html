@@ -10,10 +10,10 @@
 		</div>
 		<ul class="topbar-list">
 			<li class="topbar-item">
-				<a class="topbar-link topbar-link-selected" href="/faq">FAQ</a>
+				<a class="topbar-link" href="/faq">FAQ</a>
 			</li>
 			<li class="topbar-item">
-				<a class="topbar-link" href="/docs">Docs</a>
+				<a class="topbar-link topbar-link-selected" href="/docs">Docs</a>
 			</li>
 			<li class="topbar-item">
 				<a class="topbar-link" href="/dashboard/login/signin">Login</a>
@@ -30,4 +30,13 @@
 			</div>
 		</div>
 	</main>
+{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="/styles/search.css">
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.rawgit.com/liferay-apps/api.js/master/build/globals/api.js"></script>
+	<script src="/scripts/search.js"></script>
 {% endblock %}
