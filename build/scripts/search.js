@@ -1,12 +1,6 @@
-var searchInput = document.querySelector('#search-input');
-
-var template = document.querySelector('#result-template')
-// var templateLink = template.querySelector('#result-link');
-// var templateText = template.querySelector('#result-text');
-// var templateTerm = template.querySelector('#result-term');
-// var templateTotal = template.querySelector('#result-total');
-
 var resultContainer = document.querySelector('#result-container');
+var searchInput = document.querySelector('#search-input');
+var template = document.querySelector('#result-template');
 
 searchInput.addEventListener('input', function(e) {
 	if (e.currentTarget.value === '') {
@@ -50,5 +44,9 @@ function onLoad() {
 		search(queryString);
 	}
 }
+
+Handlebars.registerHelper('trimString', function(passedString) {
+    return passedString.substring(0, 300) + '...';
+});
 
 onLoad();

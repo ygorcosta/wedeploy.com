@@ -68,7 +68,7 @@
 	<p class="result-summary">We've found <strong>{{ total }}</strong> result(s) for <em>{{ term }}</em></p>
 	{{#each documents}}
 		<a class="result-link" href="/docs{{ path }}">{{ title }}</a>
-		<p class="result-text">{{{ content }}}</p>
+		<p class="result-text">{{{ trimString content }}}</p>
 	{{/each}}
 	</script>
 </div>
