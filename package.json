@@ -6,6 +6,8 @@
     "gulp-layout": "0.0.3",
     "gulp-markdown": "^1.1.0",
     "gulp-sass": "^2.0.1",
-    "nunjucks": "^2.1.0"
+    "nunjucks": "^2.1.0",
+    "remove-markdown": "zacharyfmarion/remove-markdown#master",
+    "request": "^2.65.0"
   }
 }
