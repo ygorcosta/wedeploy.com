@@ -68,7 +68,7 @@ gulp.task('pages-search', function() {
 			layout: 'src/layouts/search.html',
 			engine: 'nunjucks'
 		}))
-		.pipe(gulp.dest('build/search'));
+		.pipe(gulp.dest('build/docs/search'));
 });
 
 gulp.task('pages-faq', function() {
