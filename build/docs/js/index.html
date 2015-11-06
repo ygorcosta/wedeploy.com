@@ -52,18 +52,6 @@
 	<main class="docs">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-3 col-sm-offset-9 col-md-2 col-md-offset-10">
-					<form action="/docs/search" method="GET">
-						<div class="form-group">
-							<div class="input-inner-addon input-inner-addon-right">
-								<input name="q" class="form-control" type="text" placeholder="Search...">
-								<span class="input-inner-icon-helper icon-16-magnifier"></span>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-			<div class="row">
 				<nav class="docs-nav col-xs-12 col-sm-3">
 					<p class="docs-nav-group">
 						<a href="/docs">Quickstart</a>
@@ -130,7 +118,54 @@
 				</nav>
 
 				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
-					<p>Nothing to see here. Click on the sidebar.</p>
+					<h1 id="quickstart">Quickstart</h1>
+<p>Let&#39;s start from zero and build a RESTful API that stores and sync data.</p>
+<h2 id="1-request-invitation">1. Request invitation</h2>
+<p>The first thing you need to do to get started with Launchpad is to <a href="http://liferay.io/#invitation">request an invitation</a>.</p>
+<p>At this moment, Launchpad is only available to a restricted group of developers, but don&#39;t worry we&#39;re sending invites on a daily basis.</p>
+<h2 id="2-create-an-api">2. Create an API</h2>
+<ol>
+<li><p>Once you have an account, go to <a href="http://liferay.io/dashboard/apps">Dashboard</a> and click <em>Create App</em> and enter a name and URL for your app. </p>
+</li>
+<li><p>Select <em>Add Service</em>, and enter a name and URL to create your service. The service acts as a  container, which exposes your RESTful APIs.</p>
+</li>
+<li><p>Switch to the <em>API Builder</em>, and make sure the <em>Data</em> switcher is turned on.</p>
+</li>
+<li><p>Also check that <em>GET</em> and <em>POST</em> are selected in the <em>Method</em> section. These methods allow you to read and write on this URL.</p>
+</li>
+<li><p>In the <em>Endpoint</em> field, type <code>/items/*</code>. The <code>*</code> symbol indicates that any kind of data can be sent.</p>
+</li>
+</ol>
+<h2 id="3-connect-to-your-api">3. Connect to your API</h2>
+<p>In order to send and receive requests to and from Launchpad, you need to include the <a href="https://github.com/launchpad-project/api.js">API Client for JavaScript</a>. This library provides a secure and reliable communication channel with Launchpad. Or if you prefer, you can use the CDN below:</p>
+<pre><code class="lang-html">&lt;script src=&quot;https://cdn.rawgit.com/launchpad-project/api.js/master/build/globals/api-min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2 id="4-read-write-data">4. Read &amp; Write Data</h2>
+<p>Now, you can send any valid JSON object to Launchpad using <code>post()</code>. The following example post some information for a popular Science Fiction film:</p>
+<pre><code class="lang-js">Launchpad
+  .url(&#39;http://liferay.io/&lt;YOUR-APP&gt;/&lt;YOUR-SERVICE&gt;/items&#39;)
+  .post({
+    &quot;title&quot;: &quot;Star Wars IV&quot;,
+    &quot;year&quot;: 1977
+  })
+  .then(function() {
+    console.log(&#39;Data saved&#39;);
+  });
+</code></pre>
+<p>Now that you have posted data to your database, you can read it using <code>get()</code> with no arguments:</p>
+<pre><code class="lang-js">Launchpad
+  .url(&#39;http://liferay.io/&lt;YOUR-APP&gt;/&lt;YOUR-SERVICE&gt;/items&#39;)
+  .get()
+  .then(function(response) {
+    console.log(response.body());
+  });
+</code></pre>
+<p>Calling <code>body()</code> on the returned callback will give you access to a JSON object.</p>
+<h2 id="5-what-s-next-">5. What&#39;s Next?</h2>
+<ul>
+<li>Read the <a href="http://liferay.io/docs/building-apis.html">&quot;Building APIs&quot;</a> guide</li>
+<li>Read the <a href="http://liferay.io/docs/understand-data.html">&quot;Understanding Data&quot;</a> guide</li>
+</ul>
 
 				</article>
 			</div>
