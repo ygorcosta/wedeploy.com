@@ -15,3 +15,28 @@
     font-size: 36px;
     margin: 0 0 32px;
 }
+
+.result-summary {
+	margin-bottom: 30px;
+}
+
+.result-link {
+	@include anim(color);
+	color: $accent;
+	display: block;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.result-link:hover,
+.result-link:focus {
+	color: rgba($accent, .6);
+}
+
+.result-text em {
+	background: $accent;
+	color: white;
+	font-style: normal;
+	padding: 0 2px;
+}
+
