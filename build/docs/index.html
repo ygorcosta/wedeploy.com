@@ -145,7 +145,7 @@
 </li>
 <li><p>Also check that <em>GET</em> and <em>POST</em> are selected in the <em>Method</em> section. These methods allow you to read and write on this URL.</p>
 </li>
-<li><p>In the <em>Endpoint</em> field, type <code>/items/*</code>. The <code>*</code> symbol indicates that any kind of data can be sent.</p>
+<li><p>In the <em>Endpoint</em> field, type <code>/items/*</code>. The <code>*</code> symbol indicates that any request starting with <code>items</code> will match this endpoint.</p>
 </li>
 </ol>
 <h2 id="3-connect-to-your-api">3. Connect to your API</h2>
@@ -172,11 +172,12 @@
     console.log(response.body());
   });
 </code></pre>
-<p>Calling <code>body()</code> on the returned callback will give you access to a JSON object.</p>
+<p>Calling <code>body()</code> on the returned response will give you access to a JSON object.</p>
+<p>You can also try this out on the <em>API explorer</em> tab of your service.</p>
 <h2 id="5-what-s-next-">5. What&#39;s Next?</h2>
 <ul>
-<li>Read the <a href="http://liferay.io/docs/building-apis.html">&quot;Building APIs&quot;</a> guide</li>
-<li>Read the <a href="http://liferay.io/docs/understand-data.html">&quot;Understanding Data&quot;</a> guide</li>
+<li>Learn how to <a href="http://liferay.io/docs/building-apis.html">&quot;Building APIs&quot;</a></li>
+<li>Read the <a href="http://liferay.io/docs/understanding-data.html">&quot;Understanding Data&quot;</a> guide</li>
 </ul>
 
 				</article>

@@ -144,16 +144,20 @@
 <h2 id="2-endpoint">2. Endpoint</h2>
 <p>An <em>Endpoint</em> is the path used to access your API. There are many different combinations that you can use, which makes it really flexible and powerful.</p>
 <p>1) By using the wildcard symbol <code>*</code>, you can match any request:</p>
-<pre><code>/*
-</code></pre><p>The example above will match paths like <code>/abc</code>, <code>/abc/def</code>, and so on.</p>
+<pre><code class="lang-text">/*
+</code></pre>
+<p>The example above will match paths like <code>/abc</code>, <code>/abc/def</code>, and so on.</p>
 <p>2) An endpoint can also be mounted as a RESTful database. To enable data in your path, make sure the <em>Data</em> switcher is turned on. In order to properly represent a data path, we need to know which collection the path references.</p>
-<pre><code>/collectionName/*
-</code></pre><p>To access a collection resource, you can specify the resource ID on the URL: <code>/collectionName/:id</code>.</p>
+<pre><code class="lang-text">/collectionName/*
+</code></pre>
+<p>To access a resource from a collection, you can specify the resource ID on the request URL: <code>/collectionName/id</code>.</p>
 <p>3) You can create URLs with parameters to match the request URL:</p>
-<pre><code>/sum/:first/:second
-</code></pre><p>4) The endpoint configuration also supports regular expressions:</p>
-<pre><code>/sum/:first(\\d+)/:second(\\d+)
-</code></pre><p>The example above will match any request with two numbers after <code>sum</code>. For instance it will match <code>/sum/123/456</code>, but not requests like <code>/sum/text</code> or <code>/sum/123/word</code>. The regular expression patterns allow you to filter the URLs, and name the extracted URL segment for future reference. </p>
+<pre><code class="lang-text">/sum/:first/:second
+</code></pre>
+<p>4) The endpoint configuration also supports regular expressions:</p>
+<pre><code class="lang-text">/sum/:first(\d+)/:second(\d+)
+</code></pre>
+<p>The example above will match any request with two numbers after <code>sum</code>. For instance it will match <code>/sum/123/456</code>, but not requests like <code>/sum/text</code> or <code>/sum/123/word</code>. The regular expression patterns allow you to filter the URLs, and name the extracted URL segment for future reference. </p>
 <blockquote>
 <p>Notice the endpoint from two different APIs may overlap, or even be identical. In this case, your service will match the first API, in the order they were created, and if this one doesn&#39;t handle the request, or explicitly calls <code>next</code> inside the handler, then it will match and execute the second one.</p>
 </blockquote>
@@ -167,7 +171,7 @@
 </ul>
 <p>The supported <em>Type</em> values are the JSON types: string, number, boolean, array and object.</p>
 <p>The <em>Required</em> flag indicates the parameter must be present in the request.</p>
-<p>The <em>Value</em> field defines a value that will be injected in the received request (note that this is not a <em>default</em> value. This value will always be injected, and will be accumulated to existing values in the request). If a request fails to comply to any of these specifications, a <code>400 Bad Request</code> will be returned with all errors for all parameters.</p>
+<p>The <em>Value</em> field defines a value that will be injected in the received request (note that this is not a <em>default</em> value. This value will always be injected, and will be accumulated to existing values in the request). If a request fails to comply to any of these specifications, a <code>400 Bad Request</code> will be returned with errors for all parameters.</p>
 <p>The <em>Validator</em> is a JavaScript expression that will be executed if a value is passed for this parameter. You can read more about it in the <a href="#7-validator">Validator section</a>.</p>
 <h2 id="4-body">4. Body</h2>
 <p>The body is a descriptor, similar to a parameter descriptor, with the exception of the <em>Value</em> field, which can be used to describe and validate the request body. It can be useful when the body is not a form URL encoded, multipart form, or a JSON object, making it impossible to validate it with the <code>parameters</code> field. One example is to validate body data in a API, using the following validator:</p>
@@ -200,7 +204,7 @@
 <li><code>$session</code>: all stored session data. If the request had no session cookie, it will be an empty map for the new session created for this request.</li>
 <li><code>$params</code>: the request params as they were loaded from url query and request body. All query and form parameters will be strings here.</li>
 <li><code>$values</code>: the parsed request params, as they are used for parameter validation. All query and form parameters will be parsed to JSON values.</li>
-<li><code>$body</code>: the parsed request body.</li>
+<li><code>$body</code>: the parsed request body, according to the request <code>Content-Type</code>.</li>
 <li><code>$data</code>: the data view for this request, if a data path is mounted in the API path, and the request path represents a key to access any data resource (collection, document or inner field from a document). It will be <code>null</code> otherwise.</li>
 </ul>
 <p>Some common validators are:</p>
@@ -209,6 +213,9 @@
 </code></pre>
 <p>2) Mixed with dynamic values</p>
 <pre><code class="lang-js">$auth.id === $params.id
+</code></pre>
+<p>3) Validate new data value agains old one</p>
+<pre><code class="lang-js">$body.timestamp &gt; $data.timestamp
 </code></pre>
 <blockquote>
 <p>Note that the validator must return <code>true</code> for the request to be accepted.</p>
