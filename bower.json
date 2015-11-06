@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "dependencies": {
     "highlightjs": "~8.8.0",
-    "docs": "https://github.com/launchpad-project/docs.wiki.git",
+    "docs": "launchpad-project/docs#master",
     "steel-alert": "metal/steel-alert#master",
     "steel-bootstrap": "metal/steel-bootstrap#master",
     "steel-topbar": "metal/steel-topbar#master"
