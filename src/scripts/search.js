@@ -2,19 +2,25 @@ var resultContainer = document.querySelector('#result-container');
 var searchInput = document.querySelector('#search-input');
 var template = document.querySelector('#result-template');
 
+var request;
+
 searchInput.addEventListener('input', function(e) {
+	if (request) {
+		request.cancel();
+	}
+
 	if (e.currentTarget.value === '') {
 		resultContainer.innerHTML = '';
 	}
 	else {
-		search(e.currentTarget.value);
+		request = search(e.currentTarget.value);
 	}
 });
 
 function search(term) {
 	searchInput.value = term;
 
-	Launchpad.url('http://liferay.io/docs/pages')
+	return Launchpad.url('http://liferay.io/docs/pages')
 		.search('*', 'prefix', term)
 		.limit(3)
 		.highlight('content')
