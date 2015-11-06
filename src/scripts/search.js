@@ -1,14 +1,24 @@
-var searchTerm  = document.querySelector('#search-term');
-var searchTotal = document.querySelector('#search-total');
 var searchInput = document.querySelector('#search-input');
 
+var template = document.querySelector('#result-template')
+// var templateLink = template.querySelector('#result-link');
+// var templateText = template.querySelector('#result-text');
+// var templateTerm = template.querySelector('#result-term');
+// var templateTotal = template.querySelector('#result-total');
+
+var resultContainer = document.querySelector('#result-container');
+
 searchInput.addEventListener('input', function(e) {
-	search(e.currentTarget.value);
+	if (e.currentTarget.value === '') {
+		resultContainer.innerHTML = '';
+	}
+	else {
+		search(e.currentTarget.value);
+	}
 });
 
 function search(term) {
 	searchInput.value = term;
-	searchTerm.textContent = term;
 
 	Launchpad.url('http://liferay.io/docs/pages')
 		.search('*', 'prefix', term)
@@ -16,7 +26,14 @@ function search(term) {
 		.highlight('content')
 		.get()
 		.then(function(result) {
-			searchTotal.textContent = result.body().total;
+			var data = result.body();
+
+			data.term = term;
+
+			var compiled = Handlebars.compile(template.innerHTML);
+			var rendered = compiled(data);
+
+			resultContainer.innerHTML = rendered;
 		});
 }
 

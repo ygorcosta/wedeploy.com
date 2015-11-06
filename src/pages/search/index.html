@@ -8,5 +8,13 @@
 		</div>
 	</div>
 
-	<p>We've found <strong id="search-total">0</strong> result(s) for "<strong id="search-term"></strong>"</p>
+	<div id="result-container"></div>
+
+	<script id="result-template" type="text/x-handlebars-template">
+	<p class="result-summary">We've found <strong>{{ total }}</strong> result(s) for <em>{{ term }}</em></p>
+	{{#each documents}}
+		<a class="result-link" href="/docs{{ path }}">{{ title }}</a>
+		<p class="result-text">{{{ content }}}</p>
+	{{/each}}
+	</script>
 </div>
