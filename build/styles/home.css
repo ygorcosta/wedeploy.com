@@ -91,43 +91,31 @@
     display: none; } }
 
 /* ==========================================================================
-	 Features
+	 Topics
 	 ========================================================================== */
-.feature-container {
+.topic-container {
   background: #0e141a;
+  margin: 0;
   width: 100%; }
 
-.feature {
+.topic {
   margin: 108px auto 116px;
-  text-align: center;
   width: 224px; }
 
 @media (max-width: 767px) {
-  .feature-container {
+  .topic-container {
     padding: 48px 0; }
-  .feature {
+  .topic {
     margin: 48px auto 0; } }
 
-.feature-icon {
-  display: block;
-  margin: 0 auto 39px;
-  color: #647efb;
-  font-size: 64px; }
+.topic-icon {
+  margin: 0 auto 39px; }
 
-.feature-title {
-  color: white;
-  font-family: "brandon-grotesque", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 23px;
-  text-transform: uppercase; }
+.topic-title {
+  color: white; }
 
-.feature-description {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  margin: 0 0 27px; }
+.topic-description {
+  color: rgba(255, 255, 255, 0.7); }
 
 /* ==========================================================================
 	 Request Invite
