@@ -85,7 +85,7 @@ gulp.task('pages-faq', function() {
 });
 
 gulp.task('pages-docs', function() {
-	return gulp.src('bower_components/docs/*.md')
+	return gulp.src('bower_components/docs/**')
 		.pipe(markdown({
 			breaks: true
 		}))
@@ -93,7 +93,7 @@ gulp.task('pages-docs', function() {
 			return {
 				engine: 'nunjucks',
 				layout: 'src/layouts/docs.html',
-				basepath: path.basename(file.path, '.html')
+				basepath: file.path.substring(file.path.indexOf('/docs/') + 6, file.path.length - 5)
 			}
 		}))
 		.pipe(gulp.dest('build/docs'));
