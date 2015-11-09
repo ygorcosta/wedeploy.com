@@ -72,6 +72,17 @@ gulp.task('pages-search', function() {
 		.pipe(gulp.dest('build/docs/search'));
 });
 
+gulp.task('pages-docs', function() {
+	return gulp.src('src/pages/docs/index.html')
+		.pipe(layout({
+			layout: 'src/layouts/docs.html',
+			engine: 'nunjucks'
+		}))
+		.pipe(gulp.dest('build/docs'));
+});
+
+// Markdown --------------------------------------------------------------------
+
 gulp.task('pages-faq', function() {
 	return gulp.src('src/pages/faq/index.md')
 		.pipe(markdown({
@@ -84,16 +95,19 @@ gulp.task('pages-faq', function() {
 		.pipe(gulp.dest('build/faq'));
 });
 
-gulp.task('pages-docs', function() {
+gulp.task('pages-guide', function() {
 	return gulp.src('bower_components/docs/**')
 		.pipe(markdown({
 			breaks: true
 		}))
 		.pipe(layout(function(file) {
+			var docsIndex = file.path.indexOf('/docs/') + 6;
+
 			return {
 				engine: 'nunjucks',
-				layout: 'src/layouts/docs.html',
-				basepath: file.path.substring(file.path.indexOf('/docs/') + 6, file.path.length - 5)
+				layout: 'src/layouts/guide.html',
+				lang: file.path.substring(docsIndex, file.path.lastIndexOf('/')),
+				basepath: file.path.substring(docsIndex, file.path.length - 5)
 			}
 		}))
 		.pipe(gulp.dest('build/docs'));
@@ -103,7 +117,7 @@ gulp.task('pages-docs', function() {
 
 gulp.task('build', [
 	'styles', 'vendor-styles', 'vendor-fonts', 'scripts', 'vendor-scripts',
-	'images', 'pages-home', 'pages-search', 'pages-faq', 'pages-docs'
+	'images', 'pages-home', 'pages-search', 'pages-docs', 'pages-faq', 'pages-guide'
 ]);
 
 gulp.task('server', ['build'], function() {
