@@ -47,6 +47,18 @@
 /* Content
 	 ========================================================================== */
 
+.docs-edit {
+	float: right;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+.docs-edit-icon {
+	position: relative;
+	top: 3px;
+	margin-left: 3px;
+}
+
 .docs-content {
 	color: rgba($primary, .6);
 }

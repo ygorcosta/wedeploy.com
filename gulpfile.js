@@ -3,6 +3,7 @@ var connect = require('gulp-connect');
 var layout = require('gulp-layout');
 var markdown = require('gulp-markdown');
 var sass = require('gulp-sass');
+var path = require('path');
 
 // CSS -------------------------------------------------------------------------
 
@@ -88,9 +89,12 @@ gulp.task('pages-docs', function() {
 		.pipe(markdown({
 			breaks: true
 		}))
-		.pipe(layout({
-			layout: 'src/layouts/docs.html',
-			engine: 'nunjucks'
+		.pipe(layout(function(file) {
+			return {
+				engine: 'nunjucks',
+				layout: 'src/layouts/docs.html',
+				basepath: path.basename(file.path, '.html')
+			}
 		}))
 		.pipe(gulp.dest('build/docs'));
 });
