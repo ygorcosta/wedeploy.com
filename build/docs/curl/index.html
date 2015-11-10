@@ -22,7 +22,7 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/all.css">
 	
-	<link rel="stylesheet" href="/styles/topics.css">
+	<link rel="stylesheet" href="/vendor/styles/github-gist.css">
 	<link rel="stylesheet" href="/styles/learn.css">
 
 </head>
@@ -53,7 +53,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-3 col-sm-offset-9 col-md-2 col-md-offset-10">
-					<form action="/docs/search" method="GET">
+					<form action="/docs/curl/search" method="GET">
 						<div class="form-group">
 							<div class="input-inner-addon input-inner-addon-right">
 								<input name="q" class="form-control" type="text" placeholder="Search...">
@@ -130,7 +130,7 @@
 				</nav>
 
 				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
-					<a href="https://github.com/launchpad-project/docs/curl/edit/master/curl/index.md" class="docs-edit" target="_blank">
+					<a href="https://github.com/launchpad-project/docs/edit/master/curl/index.md" class="docs-edit" target="_blank">
 						Edit <span class="docs-edit-icon icon-16-pen"></span>
 					</a>
 					<h1 id="quickstart">Quickstart</h1>
@@ -152,34 +152,20 @@
 </li>
 </ol>
 <h2 id="3-connect-to-your-api">3. Connect to your API</h2>
-<p>In order to send and receive requests to and from Launchpad, you need to include the <a href="https://github.com/launchpad-project/api.js">API Client for JavaScript</a>. This library provides a secure and reliable communication channel with Launchpad. Or if you prefer, you can use the CDN below:</p>
-<pre><code class="lang-html">&lt;script src=&quot;https://cdn.rawgit.com/launchpad-project/api.js/master/build/globals/api-min.js&quot;&gt;&lt;/script&gt;
-</code></pre>
+<p>The cURL workflow is different from Java and JavaScript workflows because it doesn&#39;t need an API Client. In this case, connecting to your API is as simple as requesting an URL.</p>
 <h2 id="4-read-write-data">4. Read &amp; Write Data</h2>
-<p>Now, you can send any valid JSON object to Launchpad using <code>post()</code>. The following example post some information for a popular Science Fiction film:</p>
-<pre><code class="lang-js">Launchpad
-  .url(&#39;http://liferay.io/&lt;YOUR-APP&gt;/&lt;YOUR-SERVICE&gt;/items&#39;)
-  .post({
-    &quot;title&quot;: &quot;Star Wars IV&quot;,
-    &quot;year&quot;: 1977
-  })
-  .then(function() {
-    console.log(&#39;Data saved&#39;);
-  });
+<p>Now, you can send any valid JSON object to Launchpad using <code>POST</code>. The following example post some information for a popular Science Fiction film:</p>
+<pre><code class="lang-bash">curl -X &quot;POST&quot; &quot;http://liferay.io/&lt;YOUR-APP&gt;/&lt;YOUR-SERVICE&gt;/items&quot; \
+     --data-urlencode &quot;title=Star+Wars+IV&quot; \
+     --data-urlencode &quot;year=1977&quot;
 </code></pre>
-<p>Now that you have posted data to your database, you can read it using <code>get()</code> with no arguments:</p>
-<pre><code class="lang-js">Launchpad
-  .url(&#39;http://liferay.io/&lt;YOUR-APP&gt;/&lt;YOUR-SERVICE&gt;/items&#39;)
-  .get()
-  .then(function(response) {
-    console.log(response.body());
-  });
+<p>Now that you have posted data to your database, you can read it using <code>GET</code> with no arguments:</p>
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/&lt;YOUR-APP&gt;/&lt;YOUR-SERVICE&gt;/items&quot;
 </code></pre>
-<p>Calling <code>body()</code> on the returned response will give you access to a JSON object.</p>
 <p>You can also try this out on the <em>API explorer</em> tab of your service.</p>
 <h2 id="5-what-s-next-">5. What&#39;s Next?</h2>
 <ul>
-<li>Learn how to <a href="http://liferay.io/docs/curl/building-apis.html">&quot;Building APIs&quot;</a></li>
+<li>Read the <a href="http://liferay.io/docs/curl/building-apis.html">&quot;Building APIs&quot;</a> guide</li>
 <li>Read the <a href="http://liferay.io/docs/curl/understanding-data.html">&quot;Understanding Data&quot;</a> guide</li>
 </ul>
 
@@ -191,6 +177,9 @@
 
 	<script src="/scripts/all.js"></script>
 	
+	<script src="/vendor/scripts/highlight.pack.min.js"></script>
+	<script src="/scripts/learn.js"></script>
+
 
 	<!-- Intercom -->
 	<script>

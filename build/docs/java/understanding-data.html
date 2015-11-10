@@ -22,7 +22,7 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/all.css">
 	
-	<link rel="stylesheet" href="/styles/topics.css">
+	<link rel="stylesheet" href="/vendor/styles/github-gist.css">
 	<link rel="stylesheet" href="/styles/learn.css">
 
 </head>
@@ -53,7 +53,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-3 col-sm-offset-9 col-md-2 col-md-offset-10">
-					<form action="/docs/search" method="GET">
+					<form action="/docs/java/search" method="GET">
 						<div class="form-group">
 							<div class="input-inner-addon input-inner-addon-right">
 								<input name="q" class="form-control" type="text" placeholder="Search...">
@@ -130,7 +130,7 @@
 				</nav>
 
 				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-1">
-					<a href="https://github.com/launchpad-project/docs/java/edit/master/java/understanding-data.md" class="docs-edit" target="_blank">
+					<a href="https://github.com/launchpad-project/docs/edit/master/java/understanding-data.md" class="docs-edit" target="_blank">
 						Edit <span class="docs-edit-icon icon-16-pen"></span>
 					</a>
 					<h1 id="understanding-data">Understanding Data</h1>
@@ -138,16 +138,9 @@
 <p>Read and write operations are translated into a RESTful API. The Launchpad client also helps you to easily create complex queries in Java, JavaScript, or Swift, and search your data in realtime. Yes, you can listen for query in realtime, with no need of extra server-side code.</p>
 <h2 id="1-write">1. Write</h2>
 <p>Writing new data is as simple as sending a JSON.</p>
-<pre><code class="lang-js">Launchpad
-  .url(&#39;http://liferay.io/app/service/movies&#39;)
-  .post({
-    &quot;title&quot;: &quot;Star Wars IV&quot;,
-    &quot;year&quot;: 1977,
-    &quot;rating&quot;: 8.7
-  })
-  .then(function() {
-    console.log(&#39;Data saved&#39;);
-  });
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .header(&quot;Content-Type&quot;, &quot;application/json&quot;)
+   .post(&quot;{\&quot;title\&quot;:\&quot;Star Wars IV\&quot;,\&quot;year\&quot;:1977,\&quot;rating\&quot;:8.7}&quot;);
 </code></pre>
 <p>This operation will return the newly created document, with the following generated ID:</p>
 <pre><code class="lang-json">{
@@ -164,11 +157,11 @@
 <pre><code class="lang-text">/movies/115992383516607958/rating
 </code></pre>
 <p>From this point, update and delete operations can be performed at any level of the resource. For example, we can update the existing document by adding a new field:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-   .path(&#39;115992383516607958&#39;)
-   .form(&#39;stars&#39;, &#39;Mark Hamill&#39;)
-   .form(&#39;stars&#39;, &#39;Harrison Ford&#39;)
-   .form(&#39;stars&#39;, &#39;Carrie Fisher&#39;)
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .path(&quot;115992383516607958&quot;)
+   .form(&quot;stars&quot;, &quot;Mark Hamill&quot;)
+   .form(&quot;stars&quot;, &quot;Harrison Ford&quot;)
+   .form(&quot;stars&quot;, &quot;Carrie Fisher&quot;)
    .patch();
 </code></pre>
 <p>Note in the example above the data was sent as request form attributes. The response is the modified document:</p>
@@ -181,27 +174,20 @@
 }
 </code></pre>
 <p>To create a document with a custom ID, or override an existing one, we can use the PUT method at the document level. The following example creates a new entry with the custom ID <code>star_wars_v</code>:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-  .path(&#39;star_wars_v&#39;)
-  .put({
-    &quot;title&quot;:&quot;Star Wars: Episode V - The Empire Strikes Back&quot;,
-    &quot;year&quot;:1980,
-    &quot;rating&quot;:8.8
-  })
-  .then(function() {
-    console.log(&#39;Data saved&#39;);
-  });
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .path(&quot;star_wars_v&quot;)
+   .header(&quot;Content-Type&quot;, &quot;application/json&quot;)
+   .put(&quot;{\&quot;title\&quot;:\&quot;Star Wars: Episode V - The Empire Strikes Back\&quot;,\&quot;year\&quot;:1980,\&quot;rating\&quot;:8.8}&quot;);
 </code></pre>
 <p>To override an existing entry you would just specify the existing ID.</p>
 <p>To delete a field, document, or the entire collection, we just use the DELETE method:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/movies/star_wars_v/title&#39;).delete();
-Launchpad.url(&#39;http://liferay.io/app/service/movies/star_wars_v&#39;).delete();
-Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;).delete();
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies/star_wars_v/title&quot;).delete();
+Launchpad.url(&quot;http://liferay.io/app/service/movies/star_wars_v&quot;).delete();
+Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;).delete();
 </code></pre>
 <h2 id="2-read">2. Read</h2>
 <p>Reading data from our storage takes only 3 lines of code.</p>
-<pre><code class="lang-js">Launchpad
-  .url(&#39;http://liferay.io/app/service/movies/star_wars_v&#39;)
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies/star_wars_v&quot;)
   .get();
 </code></pre>
 <p>The response body is the stored JSON document:</p>
@@ -213,8 +199,7 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;).delete();
 }
 </code></pre>
 <p>We can also get any field value using the full path:</p>
-<pre><code class="lang-js">Launchpad
-  .url(&#39;http://liferay.io/app/service/movies/star_wars_v/title&#39;)
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies/star_wars_v/title&quot;)
   .get();
 </code></pre>
 <p>The full path returns the raw content in the response body:</p>
@@ -232,8 +217,8 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;).delete();
 ]
 </code></pre>
 <p>The result is ordered by the document <code>id</code>, as we can see in the list above. We can select the order we want the results to be in, by passing a sort parameter, using the following code:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-   .sort(&#39;rating&#39;, &#39;desc&#39;)
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .sort(&quot;rating&quot;, &quot;desc&quot;)
    .get();
 </code></pre>
 <p>As expected, the result would be the following list:</p>
@@ -249,9 +234,9 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;).delete();
 </code></pre>
 <p>Notice that Episode VII has no rating, as it was not released yet, thus it&#39;s sorted as the last document.</p>
 <p>In addition to sorting the results, we can also apply filters using the following code:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-   .filter(&#39;year&#39;, &#39;&lt;&#39;, 2000)
-   .filter(&#39;rating&#39;, &#39;&gt;&#39;, 8.5)
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .filter(&quot;year&quot;, &quot;&lt;&quot;, 2000)
+   .filter(&quot;rating&quot;, &quot;&gt;&quot;, 8.5)
    .get();
 </code></pre>
 <p>The result of the filters just used is the following entries:</p>
@@ -261,9 +246,9 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;).delete();
 ]
 </code></pre>
 <p>We can also paginate the result using the <code>limit</code> and <code>offset</code> properties. Combining all the tools we&#39;ve learned so far, we can run a detailed query on our data:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-   .filter(&#39;year&#39;, &#39;&gt;&#39;, 2000)
-   .sort(&#39;rating&#39;)
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .filter(&quot;year&quot;, &quot;&gt;&quot;, 2000)
+   .sort(&quot;rating&quot;)
    .limit(2)
    .offset(1)
    .get();
@@ -278,32 +263,32 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;).delete();
 <h2 id="3-search">3. Search</h2>
 <p>Well, we did some great stuff with basic HTTP methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with filter, sort, and pagination. What if we need to do more powerful queries with our documents? Well, in Launchpad you can do a text search, handle user misspellings, show the number of documents by category with your data, and much more.</p>
 <p>First take a look at the text search. Its a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let&#39;s search for a Star Wars movie by the episode title, like <code>&quot;Revenge of the Sith&quot;</code>. We are not interested if the letter is in upper or lower case, since we are using English connectors like <code>&quot;of&quot;</code> and <code>&quot;the&quot;</code>. We want something flexible enough it will also work for texts like &quot;The revenge of the Sith&quot;, or &quot;Sith&#39;s revenge&quot;. Our <code>match</code> operator is just what we need to run the search.</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-  .get(Filter.match(&#39;title&#39;, &quot;Sith&#39;s revenge&quot;));
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .get(Filter.match(&quot;title&quot;, &quot;Sith&#39;s revenge&quot;));
 </code></pre>
 <p>The result of the <code>match</code> operator query is the following entry:</p>
 <pre><code class="lang-json">[{&quot;id&quot;:&quot;star_wars_iii&quot;,&quot;title&quot;:&quot;Star Wars: Episode III - Revenge of the Sith&quot;,&quot;year&quot;:2005,&quot;rating&quot;:7.7}]
 </code></pre>
 <p>We can also use simple text operators in our match:</p>
-<pre><code class="lang-js">// we can run this
-Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-  .get(Filter.match(&#39;title&#39;, &#39;(jedi | force) -return&#39;));
+<pre><code class="lang-java">// we can run this
+Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .get(Filter.match(&quot;title&quot;, &quot;(jedi | force) -return&quot;));
 
 // or this
-Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-  .get(Filter.match(&#39;title&#39;, &#39;awake*&#39;));
+Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .get(Filter.match(&quot;title&quot;, &quot;awake*&quot;));
 
 // or even this
-Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-  .get(Filter.match(&#39;title&#39;, &#39;wakens~&#39;));
+Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .get(Filter.match(&quot;title&quot;, &quot;wakens~&quot;));
 </code></pre>
 <p>Any search in the previous example results in the following match:</p>
 <pre><code class="lang-json">[{&quot;id&quot;:&quot;star_wars_vii&quot;,&quot;title&quot;:&quot;Star Wars: Episode VII - The Force Awakens&quot;,&quot;year&quot;:2015}]
 </code></pre>
 <p>What we did with <code>*</code> can also be done with the <code>prefix</code> operator <code>Filter.prefix(&#39;title&#39;, &#39;awake&#39;)</code>. The fuzziness we added to <code>wakens</code> using <code>~</code>, can also be done explicitly with the <code>fuzzy</code> operator <code>Filter.fuzzy(&#39;title&#39;, &#39;wakens&#39;)</code>.</p>
 <p>So far we are still just filtering data with filters. We can do so much more than that! If we use query search instead of filter to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-  .search(Filter.similar(&#39;title&#39;, &#39;The attack an awaken Jedi uses to strike a Sith is pure force!&#39;))
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+  .search(Filter.similar(&quot;title&quot;, &quot;The attack an awaken Jedi uses to strike a Sith is pure force!&quot;))
   .get();
 </code></pre>
 <p>We receive not only the documents that match the filter, but also search metadata:</p>
@@ -343,10 +328,10 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
 </code></pre>
 <p>Notice that the score of the <code>star_wars_vii</code> document is bigger than the other matches, indicating its title is more similar to the given filter than the others. The documents in the result are now ordered by the <em>relevance</em> of the document, expressed as a number in the <code>scores</code> metadata, rather than the document&#39;s ID. Now we can show not only filtered results, but also order our results by relevance!</p>
 <p>Want more? Well, let&#39;s make things even easier for the user! Adding one entry to the search query, we can automatically highlight the words that matched our query, showing not only how relevant the document is to the search, but also where it matches our criteria. We can do this with small changes in our previous search, using the following code:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-  .search(Filter.similar(&#39;title&#39;, &#39;The attack an awakened Jedi uses to strike a Sith is pure force!&#39;))
-  .highlight(&#39;title&#39;)
-  .get();
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .search(Filter.similar(&quot;title&quot;, &quot;The attack an awakened Jedi uses to strike a Sith is pure force!&quot;))
+   .highlight(&quot;title&quot;)
+   .get();
 </code></pre>
 <p>As you can see in the code below, our keywords are highlighted in the results:</p>
 <pre><code class="lang-json">{
@@ -384,9 +369,9 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
 }
 </code></pre>
 <p>The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? Well, we can do that with aggregations, using the following code:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
-   .filter(Filter.lt(&#39;year&#39;, 1990))
-   .aggregate(&#39;Old Movies&#39;, &#39;rating&#39;, &#39;avg&#39;)
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/movies&quot;)
+   .filter(Filter.lt(&quot;year&quot;, 1990))
+   .aggregate(&quot;Old Movies&quot;, &quot;rating&quot;, &quot;avg&quot;)
    .count()
    .get();
 </code></pre>
@@ -419,14 +404,14 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
 }
 </code></pre>
 <p>The last search feature we will cover here needs a little setup before we put our documents in the datastore, but it&#39;s not as complicated as it sounds. First, let&#39;s cover some basics on the datatypes we support. As we said before, we offer a JSON storage, thus we support all JSON types, with the restriction that arrays must be of elements of the same type. Once we put a new document in a collection, we can automatically derive the datatype of the fields added, and bind the fields to that datatype. So, if we try to run the following request:</p>
-<pre><code class="lang-js">Launchpad
-  .url(&#39;http://liferay.io/app/service/places/my_place/foo&#39;)
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/places/my_place/foo&quot;)
   .put(&quot;bar&quot;);
 </code></pre>
 <p>And then run the following request afterwards:</p>
-<pre><code class="lang-js">Launchpad
-  .url(&#39;http://liferay.io/app/service/places/my_place/foo&#39;)
-  .put({ someObject: true });
+<pre><code class="lang-java">Launchpad
+  .url(&quot;http://liferay.io/app/service/places/my_place/foo&quot;)
+  .header(&quot;Content-Type&quot;, &quot;application/json&quot;)
+  .put(&quot;{someObject:true}&quot;);
 </code></pre>
 <p>We will receive an error:</p>
 <pre><code class="lang-json">{
@@ -442,12 +427,8 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
 </code></pre>
 <p>The error was triggered because we could not convert the given data to the datatype bounded to that field. Of course, we can do simple conversions, for instance between numbers and strings, but whenever we fail, we will inform you something is wrong.</p>
 <p>To access those datatypes, request the root of your service with a &quot;GET&quot;, and you&#39;ll receive something like the following result:</p>
-<pre><code class="lang-js">Launchpad
-  .url(&#39;http://liferay.io/app/service&#39;)
-  .get()
-  .then(function(response) {
-    console.log( response.body() );
-  });
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service&quot;)
+  .get();
 </code></pre>
 <pre><code class="lang-json">[
   {
@@ -468,19 +449,15 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
 <p>Notice to be able to read and write your <code>service</code>&#39;s root path you need to map it with an <em>API endpoint</em> with data flag active.</p>
 </blockquote>
 <p>If we want to inform the server of the datatype of a collection field before it receives its first document, we can POST/PATCH the data root with the mapping information:</p>
-<pre><code class="lang-js">Launchpad
-  .url(&#39;http://liferay.io/app/service&#39;)
-  .post({
-     &quot;places&quot;: {
-       &quot;location&quot;: &quot;geo_point&quot;
-     }
-  });
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service&quot;)
+   .header(&quot;Content-Type&quot;, &quot;application/json&quot;)
+   .post(&quot;{\&quot;places\&quot;:{\&quot;location\&quot;:\&quot;geo_point\&quot;}}&quot;);
 </code></pre>
 <p>We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: <code>date</code>, <code>geo_point</code>, and <code>geo_shape</code>. We will focus on <code>geo_point</code> for this next feature.</p>
 <p>So, we mapped a field called <code>location</code>, in the collection <code>places</code>, as representing a geolocation point. This means we can operate, filter, and aggregate the places we put in that collection, using geo filters over this field! Let&#39;s try something simple: find cinemas close to <a href="https://www.google.com.br/maps/place/Waterloo+Station/@51.5031653,-0.1123051,17z/data=!3m1!4b1!4m2!3m1!1s0x487604b9c09f521d:0x1d0598197b5003ba?hl=en">London&#39;s Waterloo Station</a>. To run the search criteria, we&#39;ll use the following code:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/places&#39;)
-   .filter(Filter.any(&#39;category&#39;, &#39;cinema&#39;))
-   .filter(Filter.distance(&#39;location&#39;, &#39;51.5031653,-0.1123051&#39;, &#39;1mi&#39;))
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/places&quot;)
+   .filter(Filter.any(&quot;category&quot;, &quot;cinema&quot;))
+   .filter(Filter.distance(&quot;location&quot;, &quot;51.5031653,-0.1123051&quot;, &quot;1mi&quot;))
    .get();
 </code></pre>
 <p>Our result is the following matches:</p>
@@ -517,12 +494,12 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
 <p>Now we can plug a map to our app, and let users see and filter places, with just a few lines of code.</p>
 <h2 id="4-watch">4. Watch</h2>
 <p>Well, we presented a lot of features for data filtering and search. You may be wondering where the realtime aspect is in all of this. Well, it&#39;s throughout the features we just presented to you. To access our data in realtime, all we need to do is change the Launchpad API method we use to the <code>watch</code> method:</p>
-<pre><code class="lang-js">Launchpad.url(&#39;http://liferay.io/app/service/places&#39;)
-   .filter(Filter.any(&#39;category&#39;, &#39;cinema&#39;))
-   .filter(Filter.distance(&#39;location&#39;, &#39;51.5031653,-0.1123051&#39;, &#39;1mi&#39;))
+<pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/app/service/places&quot;)
+   .filter(Filter.any(&quot;category&quot;, &quot;cinema&quot;))
+   .filter(Filter.distance(&quot;location&quot;, &quot;51.5031653,-0.1123051&quot;, &quot;1mi&quot;))
    .watch()
-   .on(&#39;changes&#39;, doSomethingWithReceivedData)
-   .on(&#39;fail&#39;, handleFailure);
+   .on(&quot;changes&quot;, this::doSomethingWithReceivedData)
+   .on(&quot;fail&quot;, this::handleFailure);
 </code></pre>
 <p>Now every time the storage detects changes that affects the query you&#39;re watching, you will receive a <code>changes</code> notification with the response body you&#39;d receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you&#39;ll receive the error object in a <code>fail</code> notification on the client.</p>
 <h2 id="5-what-s-next-">5. What&#39;s next?</h2>
@@ -536,6 +513,9 @@ Launchpad.url(&#39;http://liferay.io/app/service/movies&#39;)
 
 	<script src="/scripts/all.js"></script>
 	
+	<script src="/vendor/scripts/highlight.pack.min.js"></script>
+	<script src="/scripts/learn.js"></script>
+
 
 	<!-- Intercom -->
 	<script>
