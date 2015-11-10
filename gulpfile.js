@@ -69,7 +69,9 @@ gulp.task('pages-search', function() {
 			layout: 'src/layouts/search.html',
 			engine: 'nunjucks'
 		}))
-		.pipe(gulp.dest('build/docs/search'));
+		.pipe(gulp.dest('build/docs/js/search'))
+		.pipe(gulp.dest('build/docs/java/search'))
+		.pipe(gulp.dest('build/docs/curl/search'));
 });
 
 gulp.task('pages-docs', function() {

@@ -2,6 +2,7 @@ var resultContainer = document.querySelector('#result-container');
 var searchInput = document.querySelector('#search-input');
 var template = document.querySelector('#result-template');
 
+var lang;
 var request;
 
 searchInput.addEventListener('input', function(e) {
@@ -20,7 +21,8 @@ searchInput.addEventListener('input', function(e) {
 function search(term) {
 	searchInput.value = term;
 
-	return Launchpad.url('http://liferay.io/docs/pages')
+	return Launchpad.url('http://liferay.io/docs/search')
+		.path(lang)
 		.search('*', 'prefix', term)
 		.limit(3)
 		.highlight('content')
@@ -38,6 +40,9 @@ function search(term) {
 }
 
 function onLoad() {
+	var path = window.location.pathname;
+	lang = path.substring(6, path.length - 8);
+
 	var query = window.location.search;
 	var queryIndex = query.indexOf('q=');
 
