@@ -41,7 +41,7 @@ function search(term) {
 
 function onLoad() {
 	var path = window.location.pathname;
-	lang = path.substring(6, path.length - 8);
+	lang = path.substring(6, path.length - 7);
 
 	var query = window.location.search;
 	var queryIndex = query.indexOf('q=');
