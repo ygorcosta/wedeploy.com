@@ -158,9 +158,9 @@
 </code></pre>
 <p>From this point, update and delete operations can be performed at any level of the resource. For example, we can update the existing document by adding a new field:</p>
 <pre><code class="lang-bash">curl -X &quot;PATCH&quot; &quot;http://liferay.io/app/service/movies/115992383516607958&quot; \
-     --data-urlencode &quot;stars=Mark+Hamill&quot; \
-     --data-urlencode &quot;stars=Harrison+Ford&quot; \
-     --data-urlencode &quot;stars=Carrie+Fisher&quot;
+     --data-urlencode &quot;stars=Mark Hamill&quot; \
+     --data-urlencode &quot;stars=Harrison Ford&quot; \
+     --data-urlencode &quot;stars=Carrie Fisher&quot;
 </code></pre>
 <p>Note in the example above the data was sent as request form attributes. The response is the modified document:</p>
 <pre><code class="lang-json">{
@@ -212,7 +212,7 @@ curl -X &quot;DELETE&quot; &quot;http://liferay.io/app/service/movies&quot;
 ]
 </code></pre>
 <p>The result is ordered by the document <code>id</code>, as we can see in the list above. We can select the order we want the results to be in, by passing a sort parameter, using the following code:</p>
-<pre><code class="lang-bash">curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies&quot; \
      --header &quot;Content-Type: application/json&quot; \
      --data &quot;{\&quot;sort\&quot;:{\&quot;rating\&quot;:\&quot;desc\&quot;}}&quot;
 </code></pre>
@@ -229,7 +229,7 @@ curl -X &quot;DELETE&quot; &quot;http://liferay.io/app/service/movies&quot;
 </code></pre>
 <p>Notice that Episode VII has no rating, as it was not released yet, thus it&#39;s sorted as the last document.</p>
 <p>In addition to sorting the results, we can also apply filters using the following code:</p>
-<pre><code class="lang-bash">curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies&quot; \
      --header &quot;Content-Type: application/json&quot; \
      --data &quot;{\&quot;filter\&quot;:[ \
                {\&quot;year\&quot;:{\&quot;operator\&quot;:\&quot;&lt;\&quot;,\&quot;value\&quot;:2000}}, \
@@ -243,7 +243,7 @@ curl -X &quot;DELETE&quot; &quot;http://liferay.io/app/service/movies&quot;
 ]
 </code></pre>
 <p>We can also paginate the result using the <code>limit</code> and <code>offset</code> properties. Combining all the tools we&#39;ve learned so far, we can run a detailed query on our data:</p>
-<pre><code class="lang-bash">curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies&quot; \
      --header &quot;Content-Type: application/json&quot; \
      --data &quot;{\&quot;filter\&quot;:{\&quot;year\&quot;:{\&quot;operator\&quot;:\&quot;&gt;\&quot;,\&quot;value\&quot;:2000}}, \
               \&quot;sort\&quot;:{\&quot;rating\&quot;:\&quot;asc\&quot;}, \
@@ -260,7 +260,7 @@ curl -X &quot;DELETE&quot; &quot;http://liferay.io/app/service/movies&quot;
 <h2 id="3-search">3. Search</h2>
 <p>Well, we did some great stuff with basic HTTP methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with filter, sort, and pagination. What if we need to do more powerful queries with our documents? Well, in Launchpad you can do a text search, handle user misspellings, show the number of documents by category with your data, and much more.</p>
 <p>First take a look at the text search. Its a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let&#39;s search for a Star Wars movie by the episode title, like <code>&quot;Revenge of the Sith&quot;</code>. We are not interested if the letter is in upper or lower case, since we are using English connectors like <code>&quot;of&quot;</code> and <code>&quot;the&quot;</code>. We want something flexible enough it will also work for texts like &quot;The revenge of the Sith&quot;, or &quot;Sith&#39;s revenge&quot;. Our <code>match</code> operator is just what we need to run the search.</p>
-<pre><code class="lang-bash">curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies&quot; \
      --header &quot;Content-Type: application/json&quot; \
      --data &quot;{\&quot;filter\&quot;:{\&quot;title\&quot;:{\&quot;operator\&quot;:\&quot;match\&quot;,\&quot;value\&quot;:\&quot;Sith&#39;s Revenge\&quot;}}}&quot;
 </code></pre>
@@ -269,28 +269,40 @@ curl -X &quot;DELETE&quot; &quot;http://liferay.io/app/service/movies&quot;
 </code></pre>
 <p>We can also use simple text operators in our match:</p>
 <pre><code class="lang-bash"># we can run this
-curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
+curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies&quot; \
      --header &quot;Content-Type: application/json&quot; \
-     --data &quot;{\&quot;filter\&quot;:{\&quot;title\&quot;:{\&quot;operator\&quot;:\&quot;match\&quot;,\&quot;value\&quot;:\&quot;(jedi | force) -return\&quot;}}}&quot;
+     --data &quot;{\&quot;filter\&quot;:{ \
+                \&quot;title\&quot;:{ \
+                   \&quot;operator\&quot;:\&quot;match\&quot;, \
+                   \&quot;value\&quot;:\&quot;(jedi | force) -return\&quot;}}}&quot;
 
 # or this
-curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
+curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies&quot; \
      --header &quot;Content-Type: application/json&quot; \
-     --data &quot;{\&quot;filter\&quot;:{\&quot;title\&quot;:{\&quot;operator\&quot;:\&quot;match\&quot;,\&quot;value\&quot;:\&quot;awake*\&quot;}}}&quot;
+     --data &quot;{\&quot;filter\&quot;:{ \
+                \&quot;title\&quot;:{ \
+                   \&quot;operator\&quot;:\&quot;match\&quot;, \
+                   \&quot;value\&quot;:\&quot;awake*\&quot;}}}&quot;
 
 # or even this
-curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
+curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies&quot; \
      --header &quot;Content-Type: application/json&quot; \
-     --data &quot;{\&quot;filter\&quot;:{\&quot;title\&quot;:{\&quot;operator\&quot;:\&quot;match\&quot;,\&quot;value\&quot;:\&quot;wakens~\&quot;}}&quot;
+     --data &quot;{\&quot;filter\&quot;:{ \
+                \&quot;title\&quot;:{ \
+                   \&quot;operator\&quot;:\&quot;match\&quot;, \
+                   \&quot;value\&quot;:\&quot;wakens~\&quot;}}}&quot;
 </code></pre>
 <p>Any search in the previous example results in the following match:</p>
 <pre><code class="lang-json">[{&quot;id&quot;:&quot;star_wars_vii&quot;,&quot;title&quot;:&quot;Star Wars: Episode VII - The Force Awakens&quot;,&quot;year&quot;:2015}]
 </code></pre>
 <p>What we did with <code>*</code> can also be done with the <code>prefix</code> operator <code>Filter.prefix(&#39;title&#39;, &#39;awake&#39;)</code>. The fuzziness we added to <code>wakens</code> using <code>~</code>, can also be done explicitly with the <code>fuzzy</code> operator <code>Filter.fuzzy(&#39;title&#39;, &#39;wakens&#39;)</code>.</p>
 <p>So far we are still just filtering data with filters. We can do so much more than that! If we use query search instead of filter to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:</p>
-<pre><code class="lang-bash">curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies&quot; \
      --header &quot;Content-Type: application/json&quot; \
-     --data &quot;{\&quot;filter\&quot;:{\&quot;title\&quot;:{\&quot;operator\&quot;:\&quot;similar\&quot;,\&quot;value\&quot;:\&quot;The attack an awaken Jedi uses to strike a Sith is pure force!\&quot;}}}&quot;
+     --data &quot;{\&quot;filter\&quot;:{ \
+                \&quot;title\&quot;:{ \
+                   \&quot;operator\&quot;:\&quot;similar\&quot;, \
+                   \&quot;value\&quot;:\&quot;The attack an awakened Jedi uses to strike a Sith is pure force!\&quot;}}}&quot;
 </code></pre>
 <p>We receive not only the documents that match the filter, but also search metadata:</p>
 <pre><code class="lang-json">{
@@ -329,7 +341,7 @@ curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
 </code></pre>
 <p>Notice that the score of the <code>star_wars_vii</code> document is bigger than the other matches, indicating its title is more similar to the given filter than the others. The documents in the result are now ordered by the <em>relevance</em> of the document, expressed as a number in the <code>scores</code> metadata, rather than the document&#39;s ID. Now we can show not only filtered results, but also order our results by relevance!</p>
 <p>Want more? Well, let&#39;s make things even easier for the user! Adding one entry to the search query, we can automatically highlight the words that matched our query, showing not only how relevant the document is to the search, but also where it matches our criteria. We can do this with small changes in our previous search, using the following code:</p>
-<pre><code class="lang-bash">curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies&quot; \
      --header &quot;Content-Type: application/json&quot; \
      --data &quot;{\&quot;filter\&quot;:{ \
                 \&quot;title\&quot;:{ \
@@ -373,7 +385,7 @@ curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
 }
 </code></pre>
 <p>The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? Well, we can do that with aggregations, using the following code:</p>
-<pre><code class="lang-bash">curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/movies&quot; \
      --header &quot;Content-Type: application/json&quot; \
      --data &quot;{\&quot;filter\&quot;:{\&quot;year\&quot;:{\&quot;operator\&quot;:\&quot;&lt;\&quot;,\&quot;value\&quot;:1990}}, \
               \&quot;aggregate\&quot;:{\&quot;rating\&quot;:{\&quot;name\&quot;:\&quot;Old Movies\&quot;,\&quot;operator\&quot;:\&quot;avg\&quot;}}, \
@@ -457,7 +469,7 @@ curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/movies&quot; \
 </code></pre>
 <p>We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: <code>date</code>, <code>geo_point</code>, and <code>geo_shape</code>. We will focus on <code>geo_point</code> for this next feature.</p>
 <p>So, we mapped a field called <code>location</code>, in the collection <code>places</code>, as representing a geolocation point. This means we can operate, filter, and aggregate the places we put in that collection, using geo filters over this field! Let&#39;s try something simple: find cinemas close to <a href="https://www.google.com.br/maps/place/Waterloo+Station/@51.5031653,-0.1123051,17z/data=!3m1!4b1!4m2!3m1!1s0x487604b9c09f521d:0x1d0598197b5003ba?hl=en">London&#39;s Waterloo Station</a>. To run the search criteria, we&#39;ll use the following code:</p>
-<pre><code class="lang-bash">curl -X &quot;PUT&quot; &quot;http://liferay.io/app/service/places&quot; \
+<pre><code class="lang-bash">curl -X &quot;GET&quot; &quot;http://liferay.io/app/service/places&quot; \
     --header &quot;Content-Type: application/json&quot; \
     --data &quot;{\&quot;filter\&quot;:[ \
                {\&quot;category\&quot;:{\&quot;operator\&quot;:\&quot;any\&quot;,\&quot;value\&quot;:\&quot;cinema\&quot;}}, \

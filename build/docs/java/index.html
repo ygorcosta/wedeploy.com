@@ -152,7 +152,29 @@
 </li>
 </ol>
 <h2 id="3-connect-to-your-api">3. Connect to your API</h2>
-<p>In order to send and receive requests to and from Launchpad, you need to include the <a href="https://github.com/launchpad-project/api.java">API Client for Java</a>. This library provides a secure and reliable communication channel with Launchpad.</p>
+<p>In order to send and receive requests to and from Launchpad, you need to include the <a href="https://github.com/launchpad-project/api.java">API Client for Java</a>. This library provides a secure and reliable communication channel with Launchpad. It is possible to download the client jar file directly from our <a href="https://bintray.com/liferay/launchpad/api-client/view">Bintray&#39;s JCenter</a> repository, or to add it as a dependency to your <em>gradle</em> project like this:</p>
+<pre><code>repositories {
+    jcenter()
+}
+dependencies {
+    compile &#39;com.liferay.launchpad:api-client:0.40.2&#39;
+}
+</code></pre><p>Or using <em>maven</em>:</p>
+<pre><code class="lang-xml">&lt;repositories&gt;
+  &lt;repository&gt;
+    &lt;id&gt;jcenter&lt;/id&gt;
+    &lt;url&gt;http://jcenter.bintray.com&lt;/url&gt;
+  &lt;/repository&gt;
+&lt;/repositories&gt;
+
+&lt;dependencies&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;com.liferay.launchpad&lt;/groupId&gt;
+    &lt;artifactId&gt;api-client&lt;/artifactId&gt;
+    &lt;version&gt;0.40.2&lt;/version&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
 <h2 id="4-read-write-data">4. Read &amp; Write Data</h2>
 <p>Now, you can send any valid JSON object to Launchpad using <code>post()</code>. The following example post some information for a popular Science Fiction film:</p>
 <pre><code class="lang-java">Launchpad.url(&quot;http://liferay.io/&lt;YOUR-APP&gt;/&lt;YOUR-SERVICE&gt;/items&quot;)
