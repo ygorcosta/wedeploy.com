@@ -37,17 +37,17 @@
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'js' %}hidden{% endif %}">
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="/docs/{{lang}}/">
+							<a class="sidebar-link {%if basepath == 'js/index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
 								<span>Quickstart</span>
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="/docs/{{lang}}/building-apis.html">
+							<a class="sidebar-link {%if basepath == 'js/building-apis' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/building-apis.html">
 								<span>Building APIs</span>
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="/docs/{{lang}}/understanding-data.html">
+							<a class="sidebar-link {%if basepath == 'js/understanding-data' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/understanding-data.html">
 								<span>Understanding Data</span>
 							</a>
 						</li>
@@ -60,17 +60,17 @@
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'java' %}hidden{% endif %}">
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="/docs/{{lang}}/">
+							<a class="sidebar-link {%if basepath == 'java/index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
 								<span>Quickstart</span>
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="/docs/{{lang}}/building-apis.html">
+							<a class="sidebar-link {%if basepath == 'java/building-apis' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/building-apis.html">
 								<span>Building APIs</span>
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="/docs/{{lang}}/understanding-data.html">
+							<a class="sidebar-link {%if basepath == 'java/understanding-data' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/understanding-data.html">
 								<span>Understanding Data</span>
 							</a>
 						</li>
@@ -83,17 +83,17 @@
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'curl' %}hidden{% endif %}">
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="/docs/{{lang}}/">
+							<a class="sidebar-link {%if basepath == 'curl/index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
 								<span>Quickstart</span>
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="/docs/{{lang}}/building-apis.html">
+							<a class="sidebar-link {%if basepath == 'curl/building-apis' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/building-apis.html">
 								<span>Building APIs</span>
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="/docs/{{lang}}/understanding-data.html">
+							<a class="sidebar-link {%if basepath == 'curl/understanding-data' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/understanding-data.html">
 								<span>Understanding Data</span>
 							</a>
 						</li>
