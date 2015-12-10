@@ -1,11 +1,32 @@
 @import "bower_components/steel-bootstrap/src/variables";
 @import "bower_components/steel-bootstrap/src/mixins";
 
+/* Topbar
+   ========================================================================== */
+
+.topbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+/* Sidebar
+   ========================================================================== */
+
+.sidebar {
+	left: 0;
+	position: fixed;
+	top: 84px;
+	z-index: 1000;
+}
+
 /* Navigation
-	 ========================================================================== */
+   ========================================================================== */
 
 .docs {
-	margin: 50px 0;
+	margin: 134px 0 50px;
+	padding-left: 132px;
 }
 
 .docs-nav-group a {
