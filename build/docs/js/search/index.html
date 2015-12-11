@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="/styles/all.css">
 	
 	<link rel="stylesheet" href="/styles/search.css">
+	<link rel="stylesheet" href="/styles/docs.css">
 
 </head>
 <body class="fade-out">
@@ -49,38 +50,67 @@
 	</nav>
 
 	<main class="docs">
-		<div class="container">
-			<div class="row">
-				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-3">
-					<div class="search">
-	<h1 class="search-title">Search in docs</h1>
+		<nav class="sidebar">
+	<ul class="sidebar-list sidebar-list-1">
+		<li class="sidebar-item">
+			<a class="sidebar-link" href="/docs/">
+				<span class="sidebar-icon icon-16-house"></span>
+				<span>Docs Home</span>
+			</a>
+		</li>
+		<li class="sidebar-item">
+			<a class="sidebar-link" href="/docs/js/">
+				<span class="sidebar-icon icon-16-globe"></span>
+				<span>JavaScript</span>
+			</a>
+		</li>
+		<li class="sidebar-item">
+			<a class="sidebar-link" href="/docs/java/">
+				<span class="sidebar-icon icon-16-cup"></span>
+				<span>Java</span>
+			</a>
+		</li>
+		<li class="sidebar-item">
+			<a class="sidebar-link" href="/docs/curl/">
+				<span class="sidebar-icon icon-16-command-line"></span>
+				<span>cURL</span>
+			</a>
+		</li>
+	</ul>
+</nav>
 
-	<div class="form-group">
-		<div class="input-inner-addon input-inner-addon-right">
-			<input id="search-input" class="form-control" type="text" placeholder="What are you looking for?">
-			<span class="input-inner-icon-helper icon-16-magnifier"></span>
-		</div>
-	</div>
+<div class="container">
+	<div class="row">
+		<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-3">
+			<div class="search">
+				<h1 class="search-title">Search in docs</h1>
 
-	<div id="result-container"></div>
+				<div class="form-group">
+					<div class="input-inner-addon input-inner-addon-right">
+						<input id="search-input" class="form-control" type="text" placeholder="What are you looking for?">
+						<span class="input-inner-icon-helper icon-16-magnifier"></span>
+					</div>
+				</div>
 
-	<script id="result-template" type="text/x-handlebars-template">
-	<p class="result-summary">We've found <strong>{{ total }}</strong> result(s) for <em>{{ term }}</em></p>
-	{{#each documents}}
-		<a class="result-link" href="..{{ path }}">{{ title }}</a>
-		<p class="result-text">{{{ trimString content }}}</p>
-	{{/each}}
-	</script>
-</div>
-				</article>
+				<div id="result-container"></div>
+
+				<script id="result-template" type="text/x-handlebars-template">
+				<p class="result-summary">We've found <strong>{{ total }}</strong> result(s) for <em>{{ term }}</em></p>
+				{{#each documents}}
+					<a class="result-link" href="..{{ path }}">{{ title }}</a>
+					<p class="result-text">{{{ trimString content }}}</p>
+				{{/each}}
+				</script>
 			</div>
-		</div>
+		</article>
+	</div>
+</div>
 	</main>
 
 
 	<script src="/scripts/all.js"></script>
 	
-	<script src="https://cdn.rawgit.com/liferay-apps/api.js/master/build/globals/api.js"></script>
+	<script src="https://cdn.rawgit.com/launchpad-project/api.js/master/build/globals/api.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
 	<script src="/scripts/search.js"></script>
 

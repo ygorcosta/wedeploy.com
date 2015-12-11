@@ -1,20 +1,55 @@
-<div class="search">
-	<h1 class="search-title">Search in docs</h1>
+<nav class="sidebar">
+	<ul class="sidebar-list sidebar-list-1">
+		<li class="sidebar-item">
+			<a class="sidebar-link" href="/docs/">
+				<span class="sidebar-icon icon-16-house"></span>
+				<span>Docs Home</span>
+			</a>
+		</li>
+		<li class="sidebar-item">
+			<a class="sidebar-link" href="/docs/js/">
+				<span class="sidebar-icon icon-16-globe"></span>
+				<span>JavaScript</span>
+			</a>
+		</li>
+		<li class="sidebar-item">
+			<a class="sidebar-link" href="/docs/java/">
+				<span class="sidebar-icon icon-16-cup"></span>
+				<span>Java</span>
+			</a>
+		</li>
+		<li class="sidebar-item">
+			<a class="sidebar-link" href="/docs/curl/">
+				<span class="sidebar-icon icon-16-command-line"></span>
+				<span>cURL</span>
+			</a>
+		</li>
+	</ul>
+</nav>
 
-	<div class="form-group">
-		<div class="input-inner-addon input-inner-addon-right">
-			<input id="search-input" class="form-control" type="text" placeholder="What are you looking for?">
-			<span class="input-inner-icon-helper icon-16-magnifier"></span>
-		</div>
+<div class="container">
+	<div class="row">
+		<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-3">
+			<div class="search">
+				<h1 class="search-title">Search in docs</h1>
+
+				<div class="form-group">
+					<div class="input-inner-addon input-inner-addon-right">
+						<input id="search-input" class="form-control" type="text" placeholder="What are you looking for?">
+						<span class="input-inner-icon-helper icon-16-magnifier"></span>
+					</div>
+				</div>
+
+				<div id="result-container"></div>
+
+				<script id="result-template" type="text/x-handlebars-template">
+				<p class="result-summary">We've found <strong>{{ total }}</strong> result(s) for <em>{{ term }}</em></p>
+				{{#each documents}}
+					<a class="result-link" href="..{{ path }}">{{ title }}</a>
+					<p class="result-text">{{{ trimString content }}}</p>
+				{{/each}}
+				</script>
+			</div>
+		</article>
 	</div>
-
-	<div id="result-container"></div>
-
-	<script id="result-template" type="text/x-handlebars-template">
-	<p class="result-summary">We've found <strong>{{ total }}</strong> result(s) for <em>{{ term }}</em></p>
-	{{#each documents}}
-		<a class="result-link" href="..{{ path }}">{{ title }}</a>
-		<p class="result-text">{{{ trimString content }}}</p>
-	{{/each}}
-	</script>
 </div>

@@ -22,22 +22,17 @@
 	</nav>
 
 	<main class="docs">
-		<div class="container">
-			<div class="row">
-				<article class="docs-content col-xs-12 col-sm-6 col-sm-offset-3">
-					{{contents}}
-				</article>
-			</div>
-		</div>
+		{{contents}}
 	</main>
 {% endblock %}
 
 {% block styles %}
 	<link rel="stylesheet" href="/styles/search.css">
+	<link rel="stylesheet" href="/styles/docs.css">
 {% endblock %}
 
 {% block scripts %}
-	<script src="https://cdn.rawgit.com/liferay-apps/api.js/master/build/globals/api.js"></script>
+	<script src="https://cdn.rawgit.com/launchpad-project/api.js/master/build/globals/api.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
 	<script src="/scripts/search.js"></script>
 {% endblock %}
