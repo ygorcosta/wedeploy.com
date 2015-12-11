@@ -21,6 +21,24 @@
 		</ul>
 	</nav>
 
+	{% macro submenu(lang) %}
+	<li class="sidebar-item">
+		<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+			<span>Quickstart</span>
+		</a>
+	</li>
+	<li class="sidebar-item">
+		<a class="sidebar-link {%if basepath == (lang + '/building-apis') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/building-apis.html">
+			<span>Building APIs</span>
+		</a>
+	</li>
+	<li class="sidebar-item">
+		<a class="sidebar-link {%if basepath == (lang + '/understanding-data') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/understanding-data.html">
+			<span>Understanding Data</span>
+		</a>
+	</li>
+	{% endmacro %}
+
 	<main class="docs">
 		<nav class="sidebar">
 			<ul class="sidebar-list sidebar-list-1">
@@ -36,21 +54,7 @@
 						<span>JavaScript</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'js' %}hidden{% endif %}">
-						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == 'js/index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
-								<span>Quickstart</span>
-							</a>
-						</li>
-						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == 'js/building-apis' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/building-apis.html">
-								<span>Building APIs</span>
-							</a>
-						</li>
-						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == 'js/understanding-data' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/understanding-data.html">
-								<span>Understanding Data</span>
-							</a>
-						</li>
+						{{submenu(lang)}}
 					</ul>
 				</li>
 				<li class="sidebar-item">
@@ -59,21 +63,7 @@
 						<span>Java</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'java' %}hidden{% endif %}">
-						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == 'java/index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
-								<span>Quickstart</span>
-							</a>
-						</li>
-						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == 'java/building-apis' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/building-apis.html">
-								<span>Building APIs</span>
-							</a>
-						</li>
-						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == 'java/understanding-data' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/understanding-data.html">
-								<span>Understanding Data</span>
-							</a>
-						</li>
+						{{submenu(lang)}}
 					</ul>
 				</li>
 				<li class="sidebar-item">
@@ -82,21 +72,7 @@
 						<span>cURL</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'curl' %}hidden{% endif %}">
-						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == 'curl/index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
-								<span>Quickstart</span>
-							</a>
-						</li>
-						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == 'curl/building-apis' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/building-apis.html">
-								<span>Building APIs</span>
-							</a>
-						</li>
-						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == 'curl/understanding-data' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/understanding-data.html">
-								<span>Understanding Data</span>
-							</a>
-						</li>
+						{{submenu(lang)}}
 					</ul>
 				</li>
 			</ul>
