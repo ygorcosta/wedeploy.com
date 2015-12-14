@@ -38,9 +38,11 @@ gulp.task('scripts', function() {
 
 gulp.task('vendor-scripts', function() {
 	return gulp.src([
+			'bower_components/api.js/build/globals/api-min.js',
+			'bower_components/handlebars/handlebars.min.js',
+			'bower_components/highlightjs/highlight.pack.min.js',
 			'bower_components/soyutils/soyutils.min.js',
-			'bower_components/steel-alert/build/globals/alert-min.js',
-			'bower_components/highlightjs/highlight.pack.min.js'
+			'bower_components/steel-alert/build/globals/alert-min.js'
 		])
 		.pipe(gulp.dest('build/vendor/scripts'));
 });

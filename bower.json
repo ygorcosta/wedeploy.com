@@ -3,7 +3,9 @@
   "name": "pod-landing",
   "version": "0.0.0",
   "dependencies": {
+    "handlebars": "~4.0.4",
     "highlightjs": "~8.8.0",
+    "api.js": "launchpad-project/api.js#master",
     "docs": "launchpad-project/docs#master",
     "steel-alert": "metal/steel-alert#master",
     "steel-bootstrap": "metal/steel-bootstrap#master",
