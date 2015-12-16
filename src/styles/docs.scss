@@ -15,8 +15,6 @@
    ========================================================================== */
 
 .sidebar {
-	left: 0;
-	position: fixed;
 	top: 84px;
 	z-index: 1000;
 }
@@ -228,4 +226,22 @@
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+/* Medium screens
+   ========================================================================== */
+
+@media (max-width: 600px) {
+	.topbar {
+		position: static;
+	}
+
+	.docs {
+		padding-left: 0;
+		margin-top: 100px;
+	}
+
+	.docs-nav-list {
+		margin-top: 0;
+	}
 }

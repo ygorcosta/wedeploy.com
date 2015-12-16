@@ -9,7 +9,7 @@
     "docs": "launchpad-project/docs#master",
     "steel-alert": "metal/steel-alert#master",
     "steel-bootstrap": "metal/steel-bootstrap#master",
-    "steel-sidebar": "metal/steel-sidebar#master",
     "steel-topbar": "metal/steel-topbar#master"
+    "metal-toggler": "metal/metal-toggler#master"
   }
 }

@@ -1,3 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-	hljs.initHighlightingOnLoad();
+	if (window.hljs) {
+		window.hljs.initHighlightingOnLoad();
+	}
+});
+
+window.toggler = new metal.Toggler({
+	content: '.sidebar-list-1',
+	header: '.sidebar-header'
 });
