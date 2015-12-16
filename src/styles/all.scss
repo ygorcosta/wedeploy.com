@@ -1,5 +1,8 @@
 @import "bower_components/steel-bootstrap/src/bootstrap";
-@import "bower_components/steel-topbar/src/topbar";
+
+.topbar {
+	padding: 0 20px;
+}
 
 /* ==========================================================================
 	 Footer
