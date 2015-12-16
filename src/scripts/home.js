@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-	var alert = new steel.Alert({
+	var alert = new metal.Alert({
 		visible: false,
 		animClasses: {
 			hide: 'hidden'
