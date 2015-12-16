@@ -5,7 +5,7 @@
    ========================================================================== */
 
 .search {
-	margin: 50px 0 0;
+	margin: 0;
 }
 
 .search-title {
@@ -43,8 +43,8 @@
 /* Medium screens
    ========================================================================== */
 
-@media (max-width: 600px) {
+@media (min-width: $screen-sm-min) {
 	.search {
-		margin-top: 0;
+		margin: 50px 0 0;
 	}
 }
