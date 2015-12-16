@@ -31,3 +31,9 @@
   color: white;
   font-style: normal;
   padding: 0 2px; }
+
+/* Medium screens
+   ========================================================================== */
+@media (max-width: 600px) {
+  .search {
+    margin-top: 0; } }
