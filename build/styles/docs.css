@@ -1,7 +1,7 @@
 /* Topbar
    ========================================================================== */
 .topbar {
-  position: fixed;
+  position: static;
   top: 0;
   width: 100%;
   z-index: 1000; }
@@ -15,8 +15,7 @@
 /* Navigation
    ========================================================================== */
 .docs {
-  margin: 134px 0 50px;
-  padding-left: 132px; }
+  margin-top: 100px; }
 
 .docs-nav-group a {
   -webkit-transition: color 0.3s ease-in-out;
@@ -34,7 +33,7 @@
 
 .docs-nav-list {
   padding-left: 0;
-  margin-top: 75px;
+  margin-top: 0;
   margin-bottom: 46px; }
 
 .docs-nav-item {
@@ -56,9 +55,7 @@
 /* Content
 	 ========================================================================== */
 .docs-edit {
-  float: right;
-  margin-top: 10px;
-  text-transform: uppercase; }
+  display: none; }
 
 .docs-edit-icon {
   position: relative;
@@ -197,11 +194,15 @@
 
 /* Medium screens
    ========================================================================== */
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   .topbar {
-    position: static; }
+    position: fixed; }
   .docs {
-    padding-left: 0;
-    margin-top: 100px; }
+    margin: 134px 0 50px;
+    overflow-x: hidden; }
   .docs-nav-list {
-    margin-top: 0; } }
+    margin-top: 75px; }
+  .docs-edit {
+    float: right;
+    margin-top: 10px;
+    text-transform: uppercase; } }

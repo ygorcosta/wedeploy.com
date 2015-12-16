@@ -146,52 +146,53 @@
 			</ul>
 		</nav>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-3 col-sm-offset-9 col-md-2 col-md-offset-10">
-					<form action="/docs/js/search/" method="GET">
-						<div class="form-group">
-							<div class="input-inner-addon input-inner-addon-right">
-								<input name="q" class="form-control" type="text" placeholder="Search...">
-								<span class="input-inner-icon-helper icon-16-magnifier"></span>
+		<div class="col-sm-10 col-sm-offset-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-3 col-sm-offset-7 col-md-2 col-md-offset-8">
+						<form action="/docs/js/search/" method="GET">
+							<div class="form-group">
+								<div class="input-inner-addon input-inner-addon-right">
+									<input name="q" class="form-control" type="text" placeholder="Search...">
+									<span class="input-inner-icon-helper icon-16-magnifier"></span>
+								</div>
 							</div>
-						</div>
-					</form>
+						</form>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<nav class="docs-nav col-xs-12 col-sm-2 col-sm-offset-2">
-					<ul class="docs-nav-list">
-					
-						<li class="docs-nav-item">
-							<a href="#1-method" class="docs-nav-link">1. Method</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#2-endpoint" class="docs-nav-link">2. Endpoint</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#3-parameters" class="docs-nav-link">3. Parameters</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#4-body" class="docs-nav-link">4. Body</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#5-handler" class="docs-nav-link">5. Handler</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#6-authentication" class="docs-nav-link">6. Authentication</a>
-						</li>
-						<li class="docs-nav-item">
-							<a href="#7-validator" class="docs-nav-link">7. Validator</a>
-						</li>
-					
-					</ul>
-				</nav>
-				<article class="docs-content col-xs-12 col-sm-6">
-					<a href="https://github.com/launchpad-project/docs/edit/master/js/building-apis.md" class="docs-edit" target="_blank">
-						Edit <span class="docs-edit-icon icon-16-pen"></span>
-					</a>
-					<h1 id="building-apis">Building APIs</h1>
+				<div class="row">
+					<nav class="docs-nav col-xs-12 col-sm-2 col-sm-offset-2 col-md-2 col-md-offset-1">
+						<ul class="docs-nav-list">
+						
+							<li class="docs-nav-item">
+								<a href="#1-method" class="docs-nav-link">1. Method</a>
+							</li>
+							<li class="docs-nav-item">
+								<a href="#2-endpoint" class="docs-nav-link">2. Endpoint</a>
+							</li>
+							<li class="docs-nav-item">
+								<a href="#3-parameters" class="docs-nav-link">3. Parameters</a>
+							</li>
+							<li class="docs-nav-item">
+								<a href="#4-body" class="docs-nav-link">4. Body</a>
+							</li>
+							<li class="docs-nav-item">
+								<a href="#5-handler" class="docs-nav-link">5. Handler</a>
+							</li>
+							<li class="docs-nav-item">
+								<a href="#6-authentication" class="docs-nav-link">6. Authentication</a>
+							</li>
+							<li class="docs-nav-item">
+								<a href="#7-validator" class="docs-nav-link">7. Validator</a>
+							</li>
+						
+						</ul>
+					</nav>
+					<article class="docs-content col-xs-12 col-sm-6 col-md-7">
+						<a href="https://github.com/launchpad-project/docs/edit/master/js/building-apis.md" class="docs-edit" target="_blank">
+							Edit <span class="docs-edit-icon icon-16-pen"></span>
+						</a>
+						<h1 id="building-apis">Building APIs</h1>
 <p>In Launchpad you can create apps, each composed of one or more services. A service exposes a REST interface that can be accessed via HTTP. We provide easy and powerful ways for you to describe and configure your APIs, so you can do more with less code.</p>
 <h2 id="1-method">1. Method</h2>
 <p>A <em>Method</em> works as a filter for requests that will be routed to this API definition. By default, all HTTP requests are mapped to an API, but you can change it to any subset you need. Launchpad currently supports the following HTTP methods:</p>
@@ -286,7 +287,8 @@
 <li>Read the <a href="http://liferay.io/docs/js/understanding-data.html">&quot;Understanding Data&quot;</a> guide</li>
 </ul>
 
-				</article>
+					</article>
+				</div>
 			</div>
 		</div>
 	</main>

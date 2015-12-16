@@ -1,7 +1,7 @@
 /* Navigation
    ========================================================================== */
 .search {
-  margin: 50px 0 0; }
+  margin: 0; }
 
 .search-title {
   color: rgba(14, 20, 26, 0.8);
@@ -34,6 +34,6 @@
 
 /* Medium screens
    ========================================================================== */
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   .search {
-    margin-top: 0; } }
+    margin: 50px 0 0; } }
