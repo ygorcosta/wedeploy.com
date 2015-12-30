@@ -21,13 +21,15 @@
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/all.css">
+	<link rel="stylesheet" href="/vendor/styles/senna.css">
 </head>
 <body data-senna data-senna-surface>
-	{% block styles %}{% endblock %}
+	<div class="senna-loading-bar"></div>
 
+	{% block styles %}{% endblock %}
 	{% block markup %}{% endblock %}
 
-	<script src="https://cdn.rawgit.com/liferay/senna.js/master/build/globals/senna.js"></script>
+	<script src="/vendor/scripts/senna-min.js"></script>
 	{% block scripts %}{% endblock %}
 
 	<!-- Intercom -->

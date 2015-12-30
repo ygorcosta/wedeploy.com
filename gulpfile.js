@@ -15,6 +15,7 @@ gulp.task('styles', function() {
 
 gulp.task('vendor-styles', function() {
 	return gulp.src([
+			'bower_components/senna.js/build/senna.css',
 			'bower_components/highlightjs/styles/github-gist.css'
 		])
 		.pipe(gulp.dest('build/vendor/styles'));
@@ -41,6 +42,7 @@ gulp.task('vendor-scripts', function() {
 			'bower_components/api.js/build/globals/api-min.js',
 			'bower_components/handlebars/handlebars.min.js',
 			'bower_components/highlightjs/highlight.pack.min.js',
+			'bower_components/senna.js/build/globals/senna-min.js',
 			'bower_components/soyutils/soyutils.min.js',
 			'bower_components/metal-alert/build/globals/alert-min.js',
 			'bower_components/metal-toggler/build/globals/toggler-min.js'

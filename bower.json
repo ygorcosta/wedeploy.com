@@ -7,8 +7,9 @@
     "highlightjs": "~8.8.0",
     "api.js": "launchpad-project/api.js#master",
     "docs": "launchpad-project/docs#master",
-    "steel-bootstrap": "metal/steel-bootstrap#master",
     "metal-alert": "metal/metal-alert#master",
-    "metal-toggler": "metal/metal-toggler#master"
+    "metal-toggler": "metal/metal-toggler#master",
+    "senna.js": "liferay/senna.js#master",
+    "steel-bootstrap": "metal/steel-bootstrap#master"
   }
 }
