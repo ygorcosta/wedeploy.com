@@ -221,7 +221,7 @@
 
 .docs-video {
     height: 0;
-    margin-bottom: 18px;
+    margin-bottom: 30px;
     overflow: hidden;
     padding-bottom: 56.25%;
     padding-top: 30px;
@@ -246,7 +246,7 @@
 	}
 
 	.docs {
-		margin: 134px 0 50px;
+		margin: 134px 0 0;
 	}
 
 	.docs-nav-list {
@@ -257,5 +257,53 @@
 		float: right;
 		margin-top: 10px;
 		text-transform: uppercase;
+	}
+}
+
+/* ==========================================================================
+   Newsletter
+   ========================================================================== */
+
+.newsletter {
+	background: $accent;
+	margin-left: -30px;
+	margin-right: -30px;
+}
+
+.newsletter .docs-home-subtitle,
+.newsletter .docs-home-description {
+	color: white;
+}
+
+.newsletter-form {
+	margin-bottom: 96px;
+}
+
+.newsletter .form-group {
+	margin-bottom: 12px;
+}
+
+.newsletter-avatar {
+	background: $accent;
+	border: 1px solid white;
+	margin: 72px auto 0;
+}
+
+.newsletter-avatar .icon-16-mail {
+	color: white;
+	font-style: 20px;
+}
+
+.newsletter .btn-sm {
+	width: 100%;
+}
+
+@media (min-width: $screen-sm-min) {
+	.newsletter .btn-sm {
+		width: auto;
+	}
+
+	.newsletter .form-group {
+		margin-bottom: 0;
 	}
 }
