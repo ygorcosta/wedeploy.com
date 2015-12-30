@@ -7097,6 +7097,10 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.senna-loading-bar {
+  background: white;
+  z-index: 99999; }
+
 .topbar {
   padding: 0 20px; }
 
