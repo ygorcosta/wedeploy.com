@@ -49,13 +49,13 @@
 						</div>
 					</div>
 
-					<div id="result-container"></div>
+					<div id="search-result-container"></div>
 
-					<script id="result-template" type="text/x-handlebars-template">
-					<p class="result-summary">We've found <strong>{{ total }}</strong> result(s) for <em>{{ term }}</em></p>
+					<script id="search-result-template" type="text/x-handlebars-template">
+					<p class="search-result-summary">We've found <strong>{{ total }}</strong> result(s) for <em>{{ term }}</em></p>
 					{{#each documents}}
-						<a class="result-link" href="..{{ path }}">{{ title }}</a>
-						<p class="result-text">{{{ trimString content }}}</p>
+						<a class="search-result-link" href="..{{ path }}">{{ title }}</a>
+						<p class="search-result-text">{{{ trimString content }}}</p>
 					{{/each}}
 					</script>
 				</div>

@@ -34,3 +34,8 @@
 .footer-link:focus {
 	color: rgba($accent, .7);
 }
+
+@import "topics";
+@import "home";
+@import "search";
+@import "docs";

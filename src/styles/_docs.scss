@@ -1,10 +1,7 @@
-@import "bower_components/steel-bootstrap/src/variables";
-@import "bower_components/steel-bootstrap/src/mixins";
-
 /* Topbar
    ========================================================================== */
 
-.topbar {
+.topbar.topbar-inverse.topbar-docs {
 	position: static;
 	top: 0;
 	width: 100%;
@@ -241,7 +238,7 @@
    ========================================================================== */
 
 @media (min-width: $screen-sm-min) {
-	.topbar {
+	.topbar.topbar-inverse.topbar-docs {
 		position: fixed;
 	}
 

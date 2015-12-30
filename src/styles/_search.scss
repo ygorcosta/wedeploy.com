@@ -1,6 +1,3 @@
-@import "bower_components/steel-bootstrap/src/variables";
-@import "bower_components/steel-bootstrap/src/mixins";
-
 /* Navigation
    ========================================================================== */
 
@@ -16,11 +13,11 @@
     margin: 0 0 32px;
 }
 
-.result-summary {
+.search-result-summary {
 	margin-bottom: 30px;
 }
 
-.result-link {
+.search-result-link {
 	@include anim(color);
 	color: $accent;
 	display: block;
@@ -28,12 +25,12 @@
 	margin-top: 20px;
 }
 
-.result-link:hover,
-.result-link:focus {
+.search-result-link:hover,
+.search-result-link:focus {
 	color: rgba($accent, .6);
 }
 
-.result-text em {
+.search-result-text em {
 	background: $accent;
 	color: white;
 	font-style: normal;

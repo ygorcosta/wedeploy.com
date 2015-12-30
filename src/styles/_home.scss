@@ -1,11 +1,8 @@
-@import "bower_components/steel-bootstrap/src/variables";
-@import "bower_components/steel-bootstrap/src/mixins";
-
 /* ==========================================================================
 	 Topbar
 	 ========================================================================== */
 
-.topbar.topbar-inverse {
+.topbar.topbar-inverse.topbar-home {
 	background: transparent;
 	position: relative;
 	z-index: 1;
@@ -72,36 +69,36 @@
 	 Topics
 	 ========================================================================== */
 
-.topic-container {
+.home-topics.topic-container {
 	background: $primary;
 	margin: 0;
 	width: 100%;
 }
 
-.topic {
+.home-topics .topic {
 	margin: 108px auto 116px;
 	width: 224px;
 }
 
 @media (max-width: 767px) {
-	.topic-container {
+	.home-topics.topic-container {
 		padding: 48px 0;
 	}
 
-	.topic {
+	.home-topics .topic {
 		margin: 48px auto 0;
 	}
 }
 
-.topic-icon {
+.home-topics .topic-icon {
 	margin: 0 auto 39px;
 }
 
-.topic-title {
+.home-topics .topic-title {
 	color: white;
 }
 
-.topic-description {
+.home-topics .topic-description {
 	color: rgba(white, .7);
 }
 
