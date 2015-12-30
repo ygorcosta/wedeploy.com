@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-	if (window.hljs) {
-		window.hljs.initHighlightingOnLoad();
-	}
-
 	var alert = new metal.Alert({
 		visible: false,
 		animClasses: {
@@ -31,9 +27,4 @@ document.addEventListener('DOMContentLoaded', function() {
 				alert.visible = true;
 			});
 	});
-});
-
-window.toggler = new metal.Toggler({
-	content: '.sidebar-list-1',
-	header: '.sidebar-header'
 });
