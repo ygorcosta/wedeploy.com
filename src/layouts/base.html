@@ -21,13 +21,13 @@
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/all.css">
-	{% block styles %}{% endblock %}
 </head>
-<body class="fade-out">
+<body data-senna data-senna-surface>
+	{% block styles %}{% endblock %}
 
 	{% block markup %}{% endblock %}
 
-	<script src="/scripts/all.js"></script>
+	<script src="https://cdn.rawgit.com/liferay/senna.js/master/build/globals/senna.js"></script>
 	{% block scripts %}{% endblock %}
 
 	<!-- Intercom -->
