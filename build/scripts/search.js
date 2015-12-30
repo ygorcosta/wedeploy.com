@@ -1,6 +1,6 @@
-var resultContainer = document.querySelector('#result-container');
+var resultContainer = document.querySelector('#search-result-container');
 var searchInput = document.querySelector('#search-input');
-var template = document.querySelector('#result-template');
+var template = document.querySelector('#search-result-template');
 
 var lang;
 var request;
