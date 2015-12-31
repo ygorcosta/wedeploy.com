@@ -5,17 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
 			hide: 'hidden'
 		}
 	}).render();
+	
+	function showInvitationAlert() {
+		var url = window.location.search;
 
-	var url = window.location.search;
+		if (url === '?invited=success') {
+			alert.body = 'Great! Soon you\'ll receive an email to get early access.';
+			alert.elementClasses = 'alert-success';
+			alert.visible = true;
+		}
+		else if (url === '?invited=error') {
+			alert.body = 'Something wrong happened! Please come back later.';
+			alert.elementClasses = 'alert-danger';
+			alert.visible = true;
+		}
+	}
 
-	if (url === '?invited=success') {
-		alert.body = 'Great! Soon you\'ll receive an email to get early access.';
-		alert.elementClasses = 'alert-success';
-		alert.visible = true;
-	}
-	else if (url === '?invited=error') {
-		alert.body = 'Something wrong happened! Please come back later.';
-		alert.elementClasses = 'alert-danger';
-		alert.visible = true;
-	}
+	showInvitationAlert();
+	senna.dataAttributeHandler.getApp().on('endNavigate', showInvitationAlert);
 });
