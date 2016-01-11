@@ -18,8 +18,8 @@
 
 @media (min-width: $screen-sm-min) {
 	.sidebar-offset {
-		margin-left: 277px;
-		margin-right: 12px;
+		margin-left: 265px;
+		width: calc(100% - 265px);
 	}
 }
 
