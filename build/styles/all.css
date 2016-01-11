@@ -7334,6 +7334,9 @@ button.close {
   margin-left: -32px;
   margin-right: -32px; }
 
+.docs-home-topics .topic-icon {
+  color: white; }
+
 .docs-home-topics .topic {
   background: white;
   border-radius: 8px;
@@ -7348,8 +7351,15 @@ button.close {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+  color: #647efb;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
   opacity: 1;
-  margin: 0; }
+  text-transform: none; }
+
+.avatar-icon-16.avatar-large span, .avatar-photo.avatar-large img.avatar-icon-16 span {
+  font-size: 48px; }
 
 /* ==========================================================================
 	 Topbar
@@ -7547,8 +7557,8 @@ button.close {
 
 @media (min-width: 600px) {
   .sidebar-offset {
-    margin-left: 277px;
-    margin-right: 12px; } }
+    margin-left: 265px;
+    width: calc(100% - 265px); } }
 
 /* Navigation
    ========================================================================== */
