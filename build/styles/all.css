@@ -7330,9 +7330,7 @@ button.close {
 /* Docs - Topics
    ========================================================================== */
 .docs-home-topics {
-  background: rgba(100, 126, 251, 0.1);
-  margin-left: -32px;
-  margin-right: -32px; }
+  background: rgba(100, 126, 251, 0.1); }
 
 .docs-home-topics .topic-icon {
   color: white; }
@@ -7555,11 +7553,6 @@ button.close {
   top: 84px;
   z-index: 1000; }
 
-@media (min-width: 600px) {
-  .sidebar-offset {
-    margin-left: 265px;
-    width: calc(100% - 265px); } }
-
 /* Navigation
    ========================================================================== */
 .docs {
@@ -7752,22 +7745,33 @@ button.close {
 @media (min-width: 600px) {
   .topbar.topbar-inverse.topbar-docs {
     position: fixed; }
+  .sidebar-offset {
+    margin-left: 265px;
+    width: calc(100% - 265px); }
   .docs {
-    margin: 134px 0 0; }
+    margin: 134px 0 0; } }
+
+@media (min-width: 960px) {
   .docs-nav-list {
     margin-top: 75px; }
   .docs-edit {
     float: right;
     margin-top: 10px;
-    text-transform: uppercase; } }
+    text-transform: uppercase; }
+  .newsletter .btn-sm, .newsletter .btn-group-sm > .btn {
+    width: auto; }
+  .newsletter .form-group {
+    margin-bottom: 0; } }
+
+@media (min-width: 1280px) {
+  .container-hybrid {
+    width: 1015px; } }
 
 /* ==========================================================================
    Newsletter
    ========================================================================== */
 .newsletter {
-  background: #647efb;
-  margin-left: -32px;
-  margin-right: -32px; }
+  background: #647efb; }
 
 .newsletter .docs-home-subtitle,
 .newsletter .docs-home-description {
@@ -7790,9 +7794,3 @@ button.close {
 
 .newsletter .btn-sm, .newsletter .btn-group-sm > .btn {
   width: 100%; }
-
-@media (min-width: 960px) {
-  .newsletter .btn-sm, .newsletter .btn-group-sm > .btn {
-    width: auto; }
-  .newsletter .form-group {
-    margin-bottom: 0; } }
