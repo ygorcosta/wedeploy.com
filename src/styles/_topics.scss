@@ -43,8 +43,17 @@
 }
 
 .docs-home-topics .topic-icon {
-	color: white;
+	border-radius: 50%;
 	margin-bottom: 30px;
+	height: 132px;
+	width: 132px;
+}
+
+.docs-home-topics .topic-icon span {
+	color: white;
+	font-size: 64px;
+	position: relative;
+	top: 32px;
 }
 
 .docs-home-topics .topic {
@@ -76,6 +85,6 @@
 
 @media (min-width: $screen-md-min) {
 	.docs-home-topics {
-		padding: 96px 0;
+		padding: 90px 0;
 	}
 }

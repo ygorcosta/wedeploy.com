@@ -7327,8 +7327,16 @@ button.close {
   padding: 72px 0 48px; }
 
 .docs-home-topics .topic-icon {
+  border-radius: 50%;
+  margin-bottom: 30px;
+  height: 132px;
+  width: 132px; }
+
+.docs-home-topics .topic-icon span {
   color: white;
-  margin-bottom: 30px; }
+  font-size: 64px;
+  position: relative;
+  top: 32px; }
 
 .docs-home-topics .topic {
   background: white;
@@ -7357,7 +7365,7 @@ button.close {
 
 @media (min-width: 960px) {
   .docs-home-topics {
-    padding: 96px 0; } }
+    padding: 90px 0; } }
 
 /* ==========================================================================
 	 Topbar
@@ -7710,6 +7718,7 @@ button.close {
   color: rgba(14, 20, 26, 0.8);
   font-size: 36px;
   font-weight: 300;
+  letter-spacing: -1px;
   line-height: 48px;
   margin: 0 0 56px;
   text-align: center; }
@@ -7840,16 +7849,16 @@ button.close {
     margin-top: 10px;
     text-transform: uppercase; }
   .docs-home-top {
-    margin: 130px 0 96px; }
+    margin: 124px 0 96px; }
   .docs-home-top-title {
-    margin: 0 0 44px;
-    font-size: 52px; }
+    margin: 0 0 41px;
+    font-size: 49px; }
   .docs-home-top-description {
     font-size: 24px; }
   .docs-home-middle {
     margin-bottom: 68px; }
   .docs-home-middle-subtitle {
-    margin-bottom: 34px; }
+    margin-bottom: 24px; }
   .docs-home-what-subtitle,
   .docs-home-newsletter-subtitle {
     margin-bottom: 30px; }
