@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	}).render();
 
-	var form = document.querySelector('.newsletter-form');
+	var form = document.querySelector('.docs-home-newsletter-form');
 
 	form.addEventListener('submit', function(e) {
 		e.preventDefault();
