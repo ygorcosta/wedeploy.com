@@ -19,11 +19,6 @@
 /* Navigation
    ========================================================================== */
 
-.docs {
-	margin-top: 100px;
-	overflow-x: hidden;
-}
-
 .docs-nav-group a {
 	@include anim(color);
 	color: rgba($primary, .8);
@@ -186,27 +181,84 @@
 	}
 }
 
-/* Home
+/* Home - Top
    ========================================================================== */
 
-.docs-content .docs-home-title {
+.docs {
+	margin-top: 60px;
+	overflow-x: hidden;
+}
+
+.docs-home-top {
+	margin: 80px 0 72px;
+}
+
+.docs-home-top-title {
+	color: rgba($primary, .8);
+	font-size: 36px;
 	font-weight: 300;
+	line-height: 48px;
+	margin: 0 0 56px;
 	text-align: center;
 }
 
-.docs-content .docs-home-title span {
+.docs-home-top-title span {
 	font-weight: 700;
 }
 
-.docs-content .docs-home-subtitle {
+.docs-home-top-description {
+	color: rgba($primary, .8);
+	font-family: $font-family-secondary;
+	font-size: 20px;
+	line-height: 36px;
+	margin: 0;
 	text-align: center;
-	padding-top: 0;
-	margin-top: 30px;
 }
 
-.docs-content .docs-home-description {
+/* Home - Middle
+   ========================================================================== */
+
+.docs-home-middle {
+	margin: 0 0 56px;
+}
+
+.docs-home-middle-subtitle,
+.docs-home-what-subtitle,
+.docs-home-newsletter-subtitle {
+	color: rgba($primary, .8);
+	font-family: $font-family-secondary;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 36px;
+	margin: 0 0 40px;
 	text-align: center;
-	margin-bottom: 32px;
+}
+
+.docs-home-middle-description,
+.docs-home-what-description,
+.docs-home-newsletter-description {
+	color: rgba($primary, .6);
+	font-family: $font-family-secondary;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0;
+	text-align: center;
+}
+
+.docs-home-what-subtitle,
+.docs-home-newsletter-subtitle {
+	margin-bottom: 30px;
+}
+
+/* Home - What
+   ========================================================================== */
+
+.docs-home-what {
+	margin: 78px 0 56px;
+}
+
+.docs-content .docs-home-description:first-child {
+	margin-bottom: 130px;
 }
 
 .docs .input-inner-addon {
@@ -218,7 +270,7 @@
 
 .docs-video {
 	height: 0;
-	margin-bottom: 30px;
+	margin: 0 -20px 72px -20px;
 	overflow: hidden;
 	padding-bottom: 56.25%;
 	padding-top: 30px;
@@ -226,11 +278,57 @@
 }
 
 .docs-video iframe {
-	border: 4px solid $accent;
+	border: 0;
 	height: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
+	width: 100%;
+}
+
+/* ==========================================================================
+   Newsletter
+   ========================================================================== */
+
+.docs-home-newsletter {
+	background: $accent;
+}
+
+.docs-home-newsletter-subtitle,
+.docs-home-newsletter-description {
+	color: white;
+}
+
+.docs-home-newsletter-subtitle {
+	font-size: 25px;
+}
+
+.docs-home-newsletter-form {
+	margin: 56px 0 72px;
+}
+
+.docs-home-newsletter .form-group {
+	margin-bottom: 12px;
+}
+
+.docs-home-newsletter-avatar {
+	background: $accent;
+	border-radius: 50%;
+	border: 1px solid white;
+	display: block;
+	height: 84px;
+	margin: 72px auto 42px;
+	text-align: center;
+	width: 84px;
+}
+
+.docs-home-newsletter-avatar .icon-16-mail {
+	color: white;
+	font-size: 32px;
+	line-height: 84px;
+}
+
+.docs-home-newsletter .btn-sm {
 	width: 100%;
 }
 
@@ -248,7 +346,7 @@
 	}
 
 	.docs {
-		margin: 134px 0 0;
+		margin: 84px 0 0;
 	}
 }
 
@@ -263,12 +361,53 @@
 		text-transform: uppercase;
 	}
 
-	.newsletter .btn-sm {
+	.docs-home-top {
+		margin: 130px 0 96px;
+	}
+
+	.docs-home-top-title {
+		margin: 0 0 44px;
+		font-size: 52px;
+	}
+
+	.docs-home-top-description {
+		font-size: 24px;
+	}
+
+	.docs-home-middle {
+		margin-bottom: 68px;
+	}
+
+	.docs-home-middle-subtitle {
+		margin-bottom: 34px;
+	}
+
+	.docs-home-what-subtitle,
+	.docs-home-newsletter-subtitle {
+		margin-bottom: 30px;
+	}
+
+	.docs-home-middle-subtitle,
+	.docs-home-what-subtitle,
+	.docs-home-newsletter-subtitle {
+		font-size: 32px;
+	}
+
+	.docs-home-what {
+		margin-bottom: 80px;
+	}
+
+	.docs-home-newsletter .btn-sm {
 		width: auto;
 	}
 
-	.newsletter .form-group {
+	.docs-home-newsletter .form-group {
 		margin-bottom: 0;
+	}
+
+	.docs-video {
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
@@ -276,40 +415,4 @@
 	.container-hybrid {
 		width: $screen-lg-min - 265px;
 	}
-}
-
-/* ==========================================================================
-   Newsletter
-   ========================================================================== */
-
-.newsletter {
-	background: $accent;
-}
-
-.newsletter .docs-home-subtitle,
-.newsletter .docs-home-description {
-	color: white;
-}
-
-.newsletter-form {
-	margin-bottom: 96px;
-}
-
-.newsletter .form-group {
-	margin-bottom: 12px;
-}
-
-.newsletter-avatar {
-	background: $accent;
-	border: 1px solid white;
-	margin: 72px auto 0;
-}
-
-.newsletter-avatar .icon-16-mail {
-	color: white;
-	font-style: 20px;
-}
-
-.newsletter .btn-sm {
-	width: 100%;
 }
