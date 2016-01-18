@@ -2,7 +2,7 @@
    ========================================================================== */
 
 .search {
-	margin: 50px 0 0;
+	margin: 80px 0 0;
 }
 
 .search-title {
@@ -35,4 +35,10 @@
 	color: white;
 	font-style: normal;
 	padding: 0 2px;
+}
+
+@media (min-width: $screen-md-min) {
+	.search {
+		margin: 50px 0 0;
+	}
 }
