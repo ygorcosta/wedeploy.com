@@ -7297,6 +7297,56 @@ button.close {
 .footer-link:focus {
   color: rgba(100, 126, 251, 0.7); }
 
+/* Autocomplete
+   ========================================================================== */
+.autocomplete {
+  box-shadow: none;
+  border-left: 1px solid #647efb;
+  border-right: 1px solid #647efb;
+  border-bottom: 1px solid #647efb;
+  margin-top: -5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+
+.autocomplete .list {
+  padding: 0; }
+
+.autocomplete .list .listitem {
+  padding: 0; }
+
+.autocomplete .list .list-main-content {
+  margin: 0;
+  width: 100%; }
+
+.autocomplete .list .list-text-primary {
+  margin: 0; }
+
+.autocomplete-link {
+  cursor: pointer;
+  display: block;
+  padding: 20px; }
+
+.autocomplete-link:hover,
+.autocomplete-link:focus {
+  background: rgba(100, 126, 251, 0.1); }
+
+.autocomplete-title {
+  color: #0e141a;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif; }
+
+.autocomplete-text {
+  color: #0e141a;
+  font-size: 14px;
+  margin: 0; }
+
+.autocomplete-text em {
+  background: rgba(100, 126, 251, 0.2);
+  color: #647efb;
+  font-style: normal;
+  padding: 0 2px; }
+
 /* Home - Topics
    ========================================================================== */
 .topic-container {
