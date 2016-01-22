@@ -1,26 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-	var alert = new metal.Alert({
-		visible: false,
-		animClasses: {
-			hide: 'hidden'
-		}
-	}).render();
-	
-	function showInvitationAlert() {
-		var url = window.location.search;
+if (homeAlert) {
+	homeAlert.dispose();
+	homeAlert = null;
+}
 
-		if (url === '?invited=success') {
-			alert.body = 'Great! Soon you\'ll receive an email to get early access.';
-			alert.elementClasses = 'alert-success';
-			alert.visible = true;
-		}
-		else if (url === '?invited=error') {
-			alert.body = 'Something wrong happened! Please come back later.';
-			alert.elementClasses = 'alert-danger';
-			alert.visible = true;
-		}
+var homeAlert = new metal.Alert({
+	visible: false,
+	animClasses: {
+		hide: 'hidden'
 	}
+}).render();
 
-	showInvitationAlert();
-	senna.dataAttributeHandler.getApp().on('endNavigate', showInvitationAlert);
-});
+var url = window.location.search;
+
+if (url === '?invited=success') {
+	homeAlert.body = 'Great! Soon you\'ll receive an email to get early access.';
+	homeAlert.elementClasses = 'alert-success';
+	homeAlert.visible = true;
+}
+else if (url === '?invited=error') {
+	homeAlert.body = 'Something wrong happened! Please come back later.';
+	homeAlert.elementClasses = 'alert-danger';
+	homeAlert.visible = true;
+}
