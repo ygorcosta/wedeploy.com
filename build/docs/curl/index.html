@@ -12,14 +12,18 @@
 	<meta property="og:image" content="http://liferay.io/images/preview.jpg">
 	<link rel="shortcut icon" href="/images/favicon.ico">
 
-	<!-- Fonts -->
 	<link rel="stylesheet" href="/vendor/fonts/icon-12.css">
 	<link rel="stylesheet" href="/vendor/fonts/icon-16.css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:700,400,300|Open+Sans:700,400,300">
 
-	<!-- Styles -->
 	<link rel="stylesheet" href="/vendor/styles/senna.css">
 	<link rel="stylesheet" href="/styles/all.css">
+
+	<script src="/vendor/scripts/senna-min.js"></script>
+	<script src="/vendor/scripts/soyutils.min.js"></script>
+	<script src="/vendor/scripts/api-min.js"></script>
+	<script src="/vendor/scripts/toggler-min.js"></script>
+	<script src="/scripts/menu.js"></script>
 </head>
 <body data-senna data-senna-surface>
 	<div class="senna-loading-bar"></div>
@@ -61,6 +65,16 @@
 				</span>
 			</a>
 			<ul class="sidebar-list sidebar-list-1 toggler-collapsed">
+				<li class="sidebar-item">
+					<form class="sidebar-search" action="/docs/curl/search/" method="GET" enctype="multipart/form-data">
+						<div class="form-group">
+							<div class="input-inner-addon input-inner-addon-right">
+								<input name="q" class="form-control" type="text" placeholder="Search Docs" autocomplete="off" data-lang="curl" required>
+								<span class="input-inner-icon-helper icon-16-magnifier"></span>
+							</div>
+						</div>
+					</form>
+				</li>
 				<li class="sidebar-item">
 					<a class="sidebar-link" href="/docs/">
 						<span class="sidebar-icon icon-16-house"></span>
@@ -147,19 +161,7 @@
 
 		<div class="sidebar-offset">
 			<div class="container-hybrid">
-				<div class="row">
-					<div class="col-xs-16 col-md-4 col-md-offset-12">
-						<form class="docs-search-form">
-							<div class="form-group">
-								<div class="input-inner-addon input-inner-addon-right">
-									<input name="q" class="form-control" type="text" placeholder="Search..." autocomplete="off" data-lang="curl">
-									<span class="input-inner-icon-helper icon-16-magnifier"></span>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="row">
+				<div class="docs-guide row">
 					<nav class="docs-nav col-xs-16 col-md-3">
 						<ul class="docs-nav-list">
 						
@@ -224,15 +226,9 @@
 		</div>
 	</main>
 
-
-	<script src="/vendor/scripts/senna-min.js"></script>
 	
 	<script src="/vendor/scripts/highlight.pack.min.js"></script>
-	<script src="/vendor/scripts/api-min.js"></script>
-	<script src="/vendor/scripts/soyutils.min.js"></script>
 	<script src="/vendor/scripts/autocomplete-min.js"></script>
-	<script src="/vendor/scripts/toggler-min.js"></script>
-	<script src="/scripts/menu.js"></script>
 	<script src="/scripts/guide.js"></script>
 
 

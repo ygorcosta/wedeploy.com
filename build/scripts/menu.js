@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-	window.toggler = new metal.Toggler({
-		content: '.sidebar-list-1',
-		header: '.sidebar-header'
-	});
+window.toggler = new metal.Toggler({
+	content: '.sidebar-list-1',
+	header: '.sidebar-header'
 });
