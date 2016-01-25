@@ -7620,6 +7620,17 @@ button.close {
 .search {
   margin: 80px 0 0; }
 
+.search .form-control {
+  font-size: 16px; }
+
+.search .form-control .input-inner-icon-helper {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out; }
+
+.search .form-control:focus + .input-inner-icon-helper {
+  color: #647efb; }
+
 .search-result-summary {
   color: rgba(14, 20, 26, 0.8);
   font-family: "Lato", sans-serif;

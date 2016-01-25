@@ -5,6 +5,18 @@
 	margin: 80px 0 0;
 }
 
+.search .form-control {
+	font-size: 16px;
+}
+
+.search .form-control .input-inner-icon-helper {
+	@include anim(color);
+}
+
+.search .form-control:focus + .input-inner-icon-helper {
+	color: $accent;
+}
+
 .search-result-summary {
 	color: rgba($primary, .8);
 	font-family: $font-family-secondary;
