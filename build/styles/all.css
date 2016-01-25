@@ -7423,6 +7423,9 @@ button.close {
   top: 32px; }
 
 .docs-home-topics .topic {
+  -webkit-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   background: white;
   border-radius: 8px;
   padding: 48px 0;
@@ -7430,12 +7433,12 @@ button.close {
 
 .docs-home-topics .topic:hover .topic-title,
 .docs-home-topics .topic:focus .topic-title {
-  opacity: .5; }
+  color: white; }
 
 .docs-home-topics .topic-title {
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
   color: #647efb;
   font-family: "Lato", sans-serif;
   font-size: 24px;
@@ -7450,6 +7453,27 @@ button.close {
 @media (min-width: 960px) {
   .docs-home-topics {
     padding: 90px 0; } }
+
+.topic-js .topic-icon {
+  background: #ffb700; }
+
+.topic-js:hover,
+.topic-js:focus {
+  background: #ffb700; }
+
+.topic-java .topic-icon {
+  background: #ff536b; }
+
+.topic-java:hover,
+.topic-java:focus {
+  background: #ff536b; }
+
+.topic-curl .topic-icon {
+  background: #00a4ff; }
+
+.topic-curl:hover,
+.topic-curl:focus {
+  background: #00a4ff; }
 
 /* ==========================================================================
 	 Topbar

@@ -57,6 +57,7 @@
 }
 
 .docs-home-topics .topic {
+	@include anim(background);
 	background: white;
 	border-radius: 8px;
 	padding: 48px 0;
@@ -65,11 +66,11 @@
 
 .docs-home-topics .topic:hover .topic-title,
 .docs-home-topics .topic:focus .topic-title {
-	opacity: .5;
+	color: white;
 }
 
 .docs-home-topics .topic-title {
-	@include anim(opacity);
+	@include anim(color);
 	color: $accent;
 	font-family: $font-family-secondary;
 	font-size: 24px;
@@ -87,4 +88,31 @@
 	.docs-home-topics {
 		padding: 90px 0;
 	}
+}
+
+.topic-js .topic-icon {
+	background: #ffb700;
+}
+
+.topic-js:hover,
+.topic-js:focus {
+	background: #ffb700;
+}
+
+.topic-java .topic-icon {
+	background: #ff536b;
+}
+
+.topic-java:hover,
+.topic-java:focus {
+	background: #ff536b;
+}
+
+.topic-curl .topic-icon {
+	background: #00a4ff;
+}
+
+.topic-curl:hover,
+.topic-curl:focus {
+	background: #00a4ff;
 }
