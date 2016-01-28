@@ -21,10 +21,8 @@ searchInput.addEventListener('input', function(e) {
 function search(term) {
 	searchInput.value = term;
 
-	return Launchpad.url('http://liferay.io/docs/search')
-		.path(lang)
+	return Launchpad.url('http://liferay.io/docs/search/all')
 		.search('*', 'prefix', term)
-		.limit(3)
 		.highlight('content')
 		.get()
 		.then(function(result) {
