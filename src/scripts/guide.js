@@ -5,6 +5,10 @@ if (autocomplete) {
 	autocomplete = null;
 }
 
+/* ==========================================================================
+   Main Search
+   ========================================================================== */
+
 var input = document.querySelector('.sidebar-search .form-control');
 
 var autocomplete = new metal.Autocomplete({
