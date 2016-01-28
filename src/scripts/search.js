@@ -2,7 +2,6 @@ var resultContainer = document.querySelector('#search-result-container');
 var searchInput = document.querySelector('#search-input');
 var template = document.querySelector('#search-result-template');
 
-var lang;
 var request;
 
 searchInput.addEventListener('input', function(e) {
@@ -38,9 +37,6 @@ function search(term) {
 }
 
 function onLoad() {
-	var path = window.location.pathname;
-	lang = path.substring(6, path.length - 7);
-
 	var query = window.location.search;
 	var queryIndex = query.indexOf('q=');
 
