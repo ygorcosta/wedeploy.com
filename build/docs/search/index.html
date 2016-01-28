@@ -72,7 +72,7 @@
 			</form>
 		</li>
 		<li class="sidebar-item">
-			<a class="sidebar-link sidebar-link-selected" href="/docs/">
+			<a class="sidebar-link" href="/docs/">
 				<span class="sidebar-icon icon-16-house"></span>
 				<span>Docs Home</span>
 			</a>
@@ -98,103 +98,43 @@
 	</ul>
 </nav>
 
-<div class="sidebar-offset">
-	<div class="container-hybrid">
+<div class="col-md-13 col-md-offset-3">
+	<div class="container">
 		<div class="row">
-			<div class="col-xs-16">
-				<section class="docs-home-top">
-					<h1 class="docs-home-top-title"><span>Launchpad Project</span> Docs Center</h1>
-					<p class="docs-home-top-description">Start learning how to leverage the power of Launchpad in your project.</p>
-				</section>
-			</div>
-		</div>
-	</div>
-	<div class="docs-home-topics">
-		<div class="container-hybrid">
-			<div class="row">
-				<div class="col-xs-16">
-					<section class="docs-home-middle">
-						<h2 class="docs-home-middle-subtitle">Choose a Platform Guide</h2>
-						<p class="docs-home-middle-description">Each guide provide step by step coverage for every core feature.</p>
-					</section>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-md-offset-2 col-xs-16">
-					<a class="topic topic-js" href="/docs/js/">
-						<div class="topic-icon">
-							<span class="icon-16-globe"></span>
+			<article class="col-xs-16 col-sm-9 col-sm-offset-7 col-md-9 col-md-offset-3">
+				<div class="search">
+					<div class="form-group">
+						<div class="input-inner-addon input-inner-addon-right">
+							<input id="search-input" class="form-control" type="text" placeholder="What are you looking for?">
+							<span class="input-inner-icon-helper icon-16-magnifier"></span>
 						</div>
-						<h3 class="topic-title">JavaScript</h3>
-					</a>
-				</div>
-				<div class="col-md-6 col-md-offset-0 col-xs-16">
-					<a class="topic topic-java" href="/docs/java/">
-						<div class="topic-icon">
-							<span class="icon-16-cup"></span>
-						</div>
-						<h3 class="topic-title" style="margin-left: -8px">Java</h3>
-					</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-md-offset-2 col-xs-16">
-					<a class="topic topic-curl" href="/docs/curl/">
-						<div class="topic-icon">
-							<span class="icon-16-command-line"></span>
-						</div>
-						<h3 class="topic-title">cURL</h3>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-hybrid">
-		<div class="row">
-			<div class="col-xs-16">
-				<section class="docs-home-what">
-					<h2 class="docs-home-what-subtitle">What is Launchpad Project?</h2>
-					<p class="docs-home-what-description">This video will help understand how this tool can better serve you.</p>
-				</section>
-			</div>
-			<div class="col-md-12 col-md-offset-2 col-xs-16">
-					<div class="docs-video">
-						<iframe src="//www.youtube.com/embed/AgeGhH8laNc"></iframe>
 					</div>
-				</section>
-			</div>
-		</div>
-	</div>
-	<div class="docs-home-newsletter">
-		<div class="container-hybrid">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-2 col-xs-16">
-					<span class="docs-home-newsletter-avatar">
-						<span class="icon-16-mail"></span>
-					</span>
-					<h2 class="docs-home-newsletter-subtitle">Subscribe to Launchpad Project News</h1>
-					<p class="docs-home-newsletter-description">Stay up to date with new features that will help you develop better apps.</p>
-					<form autocomplete="off" class="row docs-home-newsletter-form">
-						<div class="col-md-9 col-md-offset-2 col-xs-16">
-							<div class="form-group">
-								<input class="form-control input-inverse-accent" name="email" type="email" placeholder="Your email address">
-							</div>
+
+					<div id="search-result-container"></div>
+
+					<script id="search-result-template" type="text/x-handlebars-template">
+					<p class="search-result-summary">Showing {{ total }} results for <strong>"{{ term }}"</strong>.</p>
+					{{#each documents}}
+					<div class="search-result">
+						<div class="search-result-icon" style="background:{{ iconBackground }}">
+							<span class="{{ icon }}"></span>
 						</div>
-						<div class="col-md-5 col-xs-16">
-							<input class="btn btn-inverse-accent btn-sm" type="submit" value="Subscribe">
-						</div>
-					</form>
+						<a class="search-result-link" href="..{{ path }}">{{ title }}</a>
+						<p class="search-result-text">{{{ trimString content }}}</p>
+					</div>
+					{{/each}}
+					</script>
 				</div>
-			</div>
+			</article>
 		</div>
 	</div>
 </div>
 	</main>
 
 	
-	<script src="/vendor/scripts/alert-min.js"></script>
+	<script src="/vendor/scripts/handlebars.min.js"></script>
 	<script src="/vendor/scripts/autocomplete-min.js"></script>
-	<script src="/scripts/docs.js"></script>
+	<script src="/scripts/search.js"></script>
 
 
 	<!-- Intercom -->

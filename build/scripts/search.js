@@ -1,8 +1,11 @@
+/* ==========================================================================
+   Main Search
+   ========================================================================== */
+
 var resultContainer = document.querySelector('#search-result-container');
 var searchInput = document.querySelector('#search-input');
 var template = document.querySelector('#search-result-template');
 
-var lang;
 var request;
 
 searchInput.addEventListener('input', function(e) {
@@ -38,9 +41,6 @@ function search(term) {
 }
 
 function onLoad() {
-	var path = window.location.pathname;
-	lang = path.substring(6, path.length - 7);
-
 	var query = window.location.search;
 	var queryIndex = query.indexOf('q=');
 
@@ -59,3 +59,37 @@ Handlebars.registerHelper('trimString', function(passedString) {
 });
 
 onLoad();
+
+/* ==========================================================================
+   Sidebar Search
+   ========================================================================== */
+
+if (autocomplete) {
+	autocomplete.dispose();
+	autocomplete = null;
+}
+
+var input = document.querySelector('.sidebar-search .form-control');
+
+var autocomplete = new metal.Autocomplete({
+	inputElement: input,
+	data: function(query) {
+		var docs = Launchpad.url('http://liferay.io/docs/search/all');
+
+		if (query) {
+			docs.search('*', 'prefix', query).limit(3).highlight('content');
+		}
+
+		return docs.get().then(function(response) {
+			return response.body().documents;
+		});
+	},
+	format: function(item) {
+		return {
+			textPrimary: metal.SoyRenderer.sanitizeHtml('<a class="autocomplete-link" href=".' + item.path + '">' +
+				'<p class="autocomplete-title">' + item.title + '</p>' +
+				'<p class="autocomplete-text">' + item.content.substr(0, 100) + '...</p></a>')
+		};
+	},
+	select: function() {}
+}).render();
