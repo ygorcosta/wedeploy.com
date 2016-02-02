@@ -1,20 +1,20 @@
 window.hljs.initHighlightingOnLoad();
 
-if (autocomplete) {
-	autocomplete.dispose();
-	autocomplete = null;
+if (sideGuideAutocomplete) {
+	sideGuideAutocomplete.dispose();
+	sideGuideAutocomplete = null;
 }
 
 /* ==========================================================================
    Main Search
    ========================================================================== */
 
-var input = document.querySelector('.sidebar-search .form-control');
+var sideGuideInput = document.querySelector('.sidebar-search .form-control');
 
-var autocomplete = new metal.Autocomplete({
-	inputElement: input,
+var sideGuideAutocomplete = new metal.Autocomplete({
+	inputElement: sideGuideInput,
 	data: function(query) {
-		var docs = Launchpad.url('http://liferay.io/docs/search').path(input.dataset.lang);
+		var docs = Launchpad.url('http://liferay.io/docs/search').path(sideGuideInput.dataset.lang);
 
 		if (query) {
 			docs.search('*', 'prefix', query).limit(3).highlight('content');

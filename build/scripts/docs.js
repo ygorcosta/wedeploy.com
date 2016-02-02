@@ -40,15 +40,15 @@ form.addEventListener('submit', function(e) {
    Sidebar Search
    ========================================================================== */
 
-if (sidebarAutocomplete) {
-	sidebarAutocomplete.dispose();
-	sidebarAutocomplete = null;
+if (sideDocsAutocomplete) {
+	sideDocsAutocomplete.dispose();
+	sideDocsAutocomplete = null;
 }
 
-var sidebarInput = document.querySelector('.sidebar-search .form-control');
+var sideDocsInput = document.querySelector('.sidebar-search .form-control');
 
-var sidebarAutocomplete = new metal.Autocomplete({
-	inputElement: sidebarInput,
+var sideDocsAutocomplete = new metal.Autocomplete({
+	inputElement: sideDocsInput,
 	data: function(query) {
 		var docs = Launchpad.url('http://liferay.io/docs/search/all');
 

@@ -64,15 +64,15 @@ onLoad();
    Sidebar Search
    ========================================================================== */
 
-if (autocomplete) {
-	autocomplete.dispose();
-	autocomplete = null;
+if (sideSearchAutocomplete) {
+	sideSearchAutocomplete.dispose();
+	sideSearchAutocomplete = null;
 }
 
-var input = document.querySelector('.sidebar-search .form-control');
+var sideSearchInput = document.querySelector('.sidebar-search .form-control');
 
-var autocomplete = new metal.Autocomplete({
-	inputElement: input,
+var sideSearchAutocomplete = new metal.Autocomplete({
+	inputElement: sideSearchInput,
 	data: function(query) {
 		var docs = Launchpad.url('http://liferay.io/docs/search/all');
 
