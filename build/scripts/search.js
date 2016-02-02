@@ -86,7 +86,7 @@ var autocomplete = new metal.Autocomplete({
 	},
 	format: function(item) {
 		return {
-			textPrimary: metal.SoyRenderer.sanitizeHtml('<a class="autocomplete-link" href=".' + item.path + '">' +
+			textPrimary: metal.SoyRenderer.sanitizeHtml('<a class="autocomplete-link" href="..' + item.path + '">' +
 				'<p class="autocomplete-title">' + item.title + '</p>' +
 				'<p class="autocomplete-text">' + item.content.substr(0, 100) + '...</p></a>')
 		};
