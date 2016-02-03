@@ -246,7 +246,7 @@
 
 .docs-home-middle-subtitle,
 .docs-home-what-subtitle,
-.docs-home-newsletter-subtitle {
+.newsletter-subtitle {
 	color: rgba($primary, .8);
 	font-family: $font-family-secondary;
 	font-size: 24px;
@@ -258,7 +258,7 @@
 
 .docs-home-middle-description,
 .docs-home-what-description,
-.docs-home-newsletter-description {
+.newsletter-description {
 	color: rgba($primary, .6);
 	font-family: $font-family-secondary;
 	font-size: 16px;
@@ -268,7 +268,7 @@
 }
 
 .docs-home-what-subtitle,
-.docs-home-newsletter-subtitle {
+.newsletter-subtitle {
 	margin-bottom: 30px;
 }
 
@@ -308,28 +308,28 @@
    Newsletter
    ========================================================================== */
 
-.docs-home-newsletter {
+.newsletter {
 	background: $accent;
 }
 
-.docs-home-newsletter-subtitle,
-.docs-home-newsletter-description {
+.newsletter-subtitle,
+.newsletter-description {
 	color: white;
 }
 
-.docs-home-newsletter-subtitle {
+.newsletter-subtitle {
 	font-size: 25px;
 }
 
-.docs-home-newsletter-form {
+.newsletter-form {
 	margin: 56px 0 72px;
 }
 
-.docs-home-newsletter .form-group {
+.newsletter .form-group {
 	margin-bottom: 12px;
 }
 
-.docs-home-newsletter-avatar {
+.newsletter-avatar {
 	background: $accent;
 	border-radius: 50%;
 	border: 1px solid white;
@@ -340,13 +340,13 @@
 	width: 84px;
 }
 
-.docs-home-newsletter-avatar .icon-16-mail {
+.newsletter-avatar .icon-16-mail {
 	color: white;
 	font-size: 32px;
 	line-height: 84px;
 }
 
-.docs-home-newsletter .btn-sm {
+.newsletter .btn-sm {
 	width: 100%;
 }
 
@@ -402,13 +402,13 @@
 	}
 
 	.docs-home-what-subtitle,
-	.docs-home-newsletter-subtitle {
+	.newsletter-subtitle {
 		margin-bottom: 30px;
 	}
 
 	.docs-home-middle-subtitle,
 	.docs-home-what-subtitle,
-	.docs-home-newsletter-subtitle {
+	.newsletter-subtitle {
 		font-size: 32px;
 	}
 
@@ -416,11 +416,11 @@
 		margin-bottom: 80px;
 	}
 
-	.docs-home-newsletter .btn-sm {
+	.newsletter .btn-sm {
 		width: auto;
 	}
 
-	.docs-home-newsletter .form-group {
+	.newsletter .form-group {
 		margin-bottom: 0;
 	}
 

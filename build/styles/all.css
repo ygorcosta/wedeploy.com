@@ -7637,7 +7637,7 @@ button.close {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0); } }
 
-/* Navigation
+/* Search input
    ========================================================================== */
 .search {
   margin: 80px 0 0; }
@@ -7653,15 +7653,17 @@ button.close {
 .search .form-control:focus + .input-inner-icon-helper {
   color: #647efb; }
 
+/* Search results
+   ========================================================================== */
+#search-result-container {
+  margin: 65px 0 0; }
+
 .search-result-summary {
   color: rgba(14, 20, 26, 0.8);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 24px;
-  margin: 65px 0 50px; }
-
-.search-result {
-  margin-bottom: 30px; }
+  margin: 0 0 50px; }
 
 .search-result-icon {
   border-radius: 50%;
@@ -7701,11 +7703,13 @@ button.close {
   margin: 65px 0 32px; }
 
 .search-feedback-btn {
-  margin-bottom: 50px; }
+  margin-bottom: 65px; }
 
 @media (min-width: 960px) {
   .search {
-    margin: 50px 0 0; } }
+    margin: 50px 0 0; }
+  #search-result-container {
+    margin-bottom: 65px; } }
 
 /* Topbar
    ========================================================================== */
@@ -7919,7 +7923,7 @@ button.close {
 
 .docs-home-middle-subtitle,
 .docs-home-what-subtitle,
-.docs-home-newsletter-subtitle {
+.newsletter-subtitle {
   color: rgba(14, 20, 26, 0.8);
   font-family: "Lato", sans-serif;
   font-size: 24px;
@@ -7930,7 +7934,7 @@ button.close {
 
 .docs-home-middle-description,
 .docs-home-what-description,
-.docs-home-newsletter-description {
+.newsletter-description {
   color: rgba(14, 20, 26, 0.6);
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -7939,7 +7943,7 @@ button.close {
   text-align: center; }
 
 .docs-home-what-subtitle,
-.docs-home-newsletter-subtitle {
+.newsletter-subtitle {
   margin-bottom: 30px; }
 
 /* Home - What
@@ -7971,23 +7975,23 @@ button.close {
 /* ==========================================================================
    Newsletter
    ========================================================================== */
-.docs-home-newsletter {
+.newsletter {
   background: #647efb; }
 
-.docs-home-newsletter-subtitle,
-.docs-home-newsletter-description {
+.newsletter-subtitle,
+.newsletter-description {
   color: white; }
 
-.docs-home-newsletter-subtitle {
+.newsletter-subtitle {
   font-size: 25px; }
 
-.docs-home-newsletter-form {
+.newsletter-form {
   margin: 56px 0 72px; }
 
-.docs-home-newsletter .form-group {
+.newsletter .form-group {
   margin-bottom: 12px; }
 
-.docs-home-newsletter-avatar {
+.newsletter-avatar {
   background: #647efb;
   border-radius: 50%;
   border: 1px solid white;
@@ -7997,12 +8001,12 @@ button.close {
   text-align: center;
   width: 84px; }
 
-.docs-home-newsletter-avatar .icon-16-mail {
+.newsletter-avatar .icon-16-mail {
   color: white;
   font-size: 32px;
   line-height: 84px; }
 
-.docs-home-newsletter .btn-sm, .docs-home-newsletter .btn-group-sm > .btn {
+.newsletter .btn-sm, .newsletter .btn-group-sm > .btn {
   width: 100%; }
 
 /* Medium screens
@@ -8036,17 +8040,17 @@ button.close {
   .docs-home-middle-subtitle {
     margin-bottom: 24px; }
   .docs-home-what-subtitle,
-  .docs-home-newsletter-subtitle {
+  .newsletter-subtitle {
     margin-bottom: 30px; }
   .docs-home-middle-subtitle,
   .docs-home-what-subtitle,
-  .docs-home-newsletter-subtitle {
+  .newsletter-subtitle {
     font-size: 32px; }
   .docs-home-what {
     margin-bottom: 80px; }
-  .docs-home-newsletter .btn-sm, .docs-home-newsletter .btn-group-sm > .btn {
+  .newsletter .btn-sm, .newsletter .btn-group-sm > .btn {
     width: auto; }
-  .docs-home-newsletter .form-group {
+  .newsletter .form-group {
     margin-bottom: 0; }
   .docs-video {
     margin-left: 0;
