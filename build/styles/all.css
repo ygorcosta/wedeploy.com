@@ -7422,23 +7422,12 @@ button.close {
   top: 32px; }
 
 .docs-home-topics .topic {
-  -webkit-transition: background 0.3s ease-in-out;
-  -o-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
   background: white;
   border-radius: 8px;
   padding: 48px 0;
   margin-top: 0; }
 
-.docs-home-topics .topic:hover .topic-title,
-.docs-home-topics .topic:focus .topic-title {
-  color: white; }
-
 .docs-home-topics .topic-title {
-  -webkit-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
-  color: #647efb;
   font-family: "Lato", sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -7453,26 +7442,60 @@ button.close {
   .docs-home-topics {
     padding: 90px 0; } }
 
-.topic-js .topic-icon {
+.topic-js .topic-icon,
+.topic-js.radial-out:before {
   background: #ffb700; }
 
-.topic-js:hover,
-.topic-js:focus {
-  background: #ffb700; }
-
-.topic-java .topic-icon {
+.topic-java .topic-icon,
+.topic-java.radial-out:before {
   background: #ff536b; }
 
-.topic-java:hover,
-.topic-java:focus {
-  background: #ff536b; }
-
-.topic-curl .topic-icon {
+.topic-curl .topic-icon,
+.topic-curl.radial-out:before {
   background: #00a4ff; }
 
-.topic-curl:hover,
-.topic-curl:focus {
-  background: #00a4ff; }
+/* Docs - Topics Animation
+   ========================================================================== */
+.radial-out {
+  backface-visibility: hidden;
+  overflow: hidden;
+  position: relative;
+  transform: translateZ(0); }
+
+.radial-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100%;
+  transform: scale(0);
+  transition: transform 0.4s ease-out; }
+
+.radial-out:hover:before,
+.radial-out:focus:before {
+  transform: scale(2); }
+
+.radial-out .topic-icon {
+  transform: scale(1);
+  transition: transform 0.4s ease-out; }
+
+.radial-out:hover .topic-icon,
+.radial-out:focus .topic-icon {
+  transform: scale(1.5); }
+
+.radial-out .topic-title {
+  color: #647efb;
+  top: 0;
+  position: relative;
+  transition: all 0.4s ease-out; }
+
+.radial-out:hover .topic-title,
+.radial-out:focus .topic-title {
+  top: -10px;
+  color: white; }
 
 /* ==========================================================================
 	 Topbar
