@@ -101,7 +101,7 @@
 .docs-content h6 {
 	color: rgba($primary, .8);
 	font-family: $font-family-secondary;
-	font-weight: 500;
+	font-weight: 700;
 }
 
 .docs-content h1 {
@@ -111,7 +111,7 @@
 
 .docs-content h2 {
 	font-size: 24px;
-	margin: -30px 0 30px;
+	margin: -30px 0 40px;
 	padding-top: 94px;
 }
 
@@ -135,6 +135,40 @@
 	margin: 16px 0;
 }
 
+.docs-content ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 10px;
+}
+
+.docs-content ul li {
+	padding-left: 1em;
+	text-indent: -.7em;
+}
+
+.docs-content ul li:before {
+	color: rgba($primary, .4);
+	content: "• ";
+	margin-right: 10px;
+}
+
+.docs-content ul li p {
+	display: inline-block;
+}
+
+.docs-content ol {
+	color: rgba($primary, .4);
+	font-size: 16px;
+}
+
+.docs-content ol li {
+	padding-left: 24px;
+}
+
+.docs-content ol li p {
+	color: rgba($primary, .6);
+}
+
 .docs-content p,
 .docs-content li,
 .docs-content pre {
@@ -151,12 +185,14 @@
 
 .docs-content code {
 	background: rgba($accent, 0.1);
+	border: 1px solid $accent;
 	color: $accent;
 	padding: 2px;
 }
 
 .docs-content pre code {
 	background: #f5f5f5;
+	border: 0;
 	color: rgba($primary, .6);
 	padding: 0.5em;
 	white-space: inherit;
