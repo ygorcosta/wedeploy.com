@@ -8127,16 +8127,18 @@ button.close {
   width: 96px; }
 
 .docs-content .guide-github-text {
+  align-items: center;
   background: rgba(14, 20, 26, 0.05);
   border-radius: 0 4px 4px 0;
   color: rgba(14, 20, 26, 0.6);
+  display: flex;
   font-size: 16px;
   height: 96px;
   margin-left: 96px;
-  padding-left: 20px; }
+  padding: 0 20px; }
 
 .docs-content .guide-github-text p {
-  line-height: 96px; }
+  margin: 0; }
 
 .docs-content .guide-github-link {
   font-weight: 600; }
