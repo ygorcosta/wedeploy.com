@@ -66,7 +66,7 @@ function sendFeedback(liked) {
 		.url('http://liferay.io/docs/feedback/records')
 		.post({
 			liked: liked,
-			timestamp: new Date(),
-			url: window.location.href
+			url: window.location.href,
+			timestamp: new Date().toISOString()
 		});
 }
