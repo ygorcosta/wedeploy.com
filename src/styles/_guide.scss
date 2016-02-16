@@ -1,8 +1,29 @@
-.docs-content .docs-github {
+/* Feedback
+   ========================================================================== */
+
+.docs-content .guide-feedback {
+	background: rgba($accent, .1);
+	border-radius: 4px;
+	padding: 45px 0 35px;
+	margin: 45px 0 25px;
+	text-align: center;
 	width: 100%;
 }
 
-.docs-content .docs-github-img {
+.docs-content .guide-feedback-btn {
+	margin: 45px 12px 0 12px;
+	width: 134px;
+}
+
+/* Edit on GitHub
+   ========================================================================== */
+
+.docs-content .guide-github {
+	margin: 0 0 45px;
+	width: 100%;
+}
+
+.docs-content .guide-github-img {
 	background: rgba($primary, .1);
 	border-radius: 4px 0 0 4px;
 	float: left;
@@ -12,7 +33,7 @@
 	width: 96px;
 }
 
-.docs-content .docs-github-text {
+.docs-content .guide-github-text {
 	background: rgba($primary, .05);
 	border-radius: 0 4px 4px 0;
 	color: rgba($primary, .6);
@@ -22,10 +43,11 @@
 	padding-left: 20px;
 }
 
-.docs-content .docs-github-text p {
+.docs-content .guide-github-text p {
 	line-height: 96px;
 }
 
-.docs-content .docs-github-link {
+.docs-content .guide-github-link {
 	font-weight: 600;
 }
+

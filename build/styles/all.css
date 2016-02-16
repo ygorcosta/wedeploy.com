@@ -8097,10 +8097,27 @@ button.close {
   .container-hybrid {
     width: 1015px; } }
 
-.docs-content .docs-github {
+/* Feedback
+   ========================================================================== */
+.docs-content .guide-feedback {
+  background: rgba(100, 126, 251, 0.1);
+  border-radius: 4px;
+  padding: 45px 0 35px;
+  margin: 45px 0 25px;
+  text-align: center;
   width: 100%; }
 
-.docs-content .docs-github-img {
+.docs-content .guide-feedback-btn {
+  margin: 45px 12px 0 12px;
+  width: 134px; }
+
+/* Edit on GitHub
+   ========================================================================== */
+.docs-content .guide-github {
+  margin: 0 0 45px;
+  width: 100%; }
+
+.docs-content .guide-github-img {
   background: rgba(14, 20, 26, 0.1);
   border-radius: 4px 0 0 4px;
   float: left;
@@ -8109,7 +8126,7 @@ button.close {
   text-align: center;
   width: 96px; }
 
-.docs-content .docs-github-text {
+.docs-content .guide-github-text {
   background: rgba(14, 20, 26, 0.05);
   border-radius: 0 4px 4px 0;
   color: rgba(14, 20, 26, 0.6);
@@ -8118,8 +8135,8 @@ button.close {
   margin-left: 96px;
   padding-left: 20px; }
 
-.docs-content .docs-github-text p {
+.docs-content .guide-github-text p {
   line-height: 96px; }
 
-.docs-content .docs-github-link {
+.docs-content .guide-github-link {
   font-weight: 600; }
