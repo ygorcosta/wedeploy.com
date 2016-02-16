@@ -19,7 +19,7 @@ var newsletterForm = document.querySelector('.newsletter-form');
 newsletterForm.addEventListener('submit', function(e) {
 	e.preventDefault();
 
-	Launchpad.url('http://liferay.io/newsletter/subscribers')
+	Launchpad.url('http://liferay.io/docs/newsletter/subscribers')
 		.post({
 			email: e.target.email.value,
 			timestamp: new Date().toISOString()
