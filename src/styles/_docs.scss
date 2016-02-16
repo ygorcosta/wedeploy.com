@@ -67,16 +67,6 @@
 	margin-top: 80px;
 }
 
-.docs-edit {
-	display: none;
-}
-
-.docs-edit-icon {
-	position: relative;
-	top: 3px;
-	margin-left: 3px;
-}
-
 .docs-content {
 	color: rgba($primary, .6);
 }
@@ -413,12 +403,6 @@
 @media (min-width: $screen-md-min) {
 	.docs-nav-list {
 		margin-top: 75px;
-	}
-
-	.docs-edit {
-		float: right;
-		margin-top: 10px;
-		text-transform: uppercase;
 	}
 
 	.docs-home-top {

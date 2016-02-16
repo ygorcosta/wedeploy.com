@@ -1,0 +1,31 @@
+.docs-content .docs-github {
+	width: 100%;
+}
+
+.docs-content .docs-github-img {
+	background: rgba($primary, .1);
+	border-radius: 4px 0 0 4px;
+	float: left;
+	height: 96px;
+	line-height: 96px;
+	text-align: center;
+	width: 96px;
+}
+
+.docs-content .docs-github-text {
+	background: rgba($primary, .05);
+	border-radius: 0 4px 4px 0;
+	color: rgba($primary, .6);
+	font-size: 16px;
+	height: 96px;
+	margin-left: 96px;
+	padding-left: 20px;
+}
+
+.docs-content .docs-github-text p {
+	line-height: 96px;
+}
+
+.docs-content .docs-github-link {
+	font-weight: 600;
+}
