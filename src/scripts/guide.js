@@ -33,3 +33,32 @@ var sideGuideAutocomplete = new metal.Autocomplete({
 	},
 	select: function() {}
 }).render();
+
+/* ==========================================================================
+   Feedback
+   ========================================================================== */
+
+var noBtn  = document.querySelector('.guide-feedback-btn-no');
+var yesBtn = document.querySelector('.guide-feedback-btn-yes');
+
+noBtn.addEventListener('click', function() {
+	noBtn.setAttribute('disabled', true);
+	yesBtn.removeAttribute('disabled');
+	sendFeedback(false);
+});
+
+yesBtn.addEventListener('click', function() {
+	yesBtn.setAttribute('disabled', true);
+	noBtn.removeAttribute('disabled');
+	sendFeedback(true);
+});
+
+function sendFeedback(liked) {
+	Launchpad
+		.url('http://liferay.io/docs/feedback/records')
+		.post({
+			liked: liked,
+			timestamp: new Date(),
+			url: window.location.href
+		});
+}
