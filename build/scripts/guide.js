@@ -1,13 +1,21 @@
-window.hljs.initHighlightingOnLoad();
+function onLoad() {
+	var snippets = document.querySelectorAll('pre code');
+
+	for (var i = 0; i < snippets.length; i++) {
+		hljs.highlightBlock(snippets[i]);
+	}
+}
+
+onLoad();
+
+/* ==========================================================================
+   Sidebar Search
+   ========================================================================== */
 
 if (sideGuideAutocomplete) {
 	sideGuideAutocomplete.dispose();
 	sideGuideAutocomplete = null;
 }
-
-/* ==========================================================================
-   Main Search
-   ========================================================================== */
 
 var sideGuideInput = document.querySelector('.sidebar-search .form-control');
 
