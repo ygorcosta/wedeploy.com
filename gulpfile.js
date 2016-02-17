@@ -16,7 +16,7 @@ gulp.task('styles', function() {
 gulp.task('vendor-styles', function() {
 	return gulp.src([
 			'bower_components/senna.js/build/senna.css',
-			'bower_components/highlightjs/styles/github-gist.css'
+			'bower_components/highlightjs/styles/tomorrow-night-eighties.css'
 		])
 		.pipe(gulp.dest('build/vendor/styles'));
 });

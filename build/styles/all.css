@@ -7884,36 +7884,30 @@ button.close {
   color: #647efb;
   padding: 2px; }
 
+.docs-content pre {
+  background: rgba(14, 20, 26, 0.9); }
+
 .docs-content pre code {
-  background: #f5f5f5;
+  background: transparent;
   border: 0;
-  color: rgba(14, 20, 26, 0.6);
+  color: rgba(255, 255, 255, 0.9);
   padding: 0.5em;
   white-space: inherit; }
 
-.docs-content .hljs-string,
-.docs-content .apache .hljs-sqbracket,
-.docs-content .coffeescript .hljs-subst,
-.docs-content .coffeescript .hljs-regexp,
-.docs-content .cpp .hljs-preprocessor,
-.docs-content .c .hljs-preprocessor,
-.docs-content .javascript .hljs-regexp,
-.docs-content .json .hljs-attribute,
-.docs-content .makefile .hljs-variable,
-.docs-content .markdown .hljs-value,
-.docs-content .markdown .hljs-link_label,
-.docs-content .markdown .hljs-strong,
-.docs-content .markdown .hljs-emphasis,
-.docs-content .markdown .hljs-blockquote,
-.docs-content .nginx .hljs-regexp,
-.docs-content .nginx .hljs-number,
-.docs-content .objectivec .hljs-preprocessor .hljs-title,
-.docs-content .perl .hljs-regexp,
-.docs-content .php .hljs-regexp,
-.docs-content .xml .hljs-value,
-.docs-content .less .hljs-built_in,
-.docs-content .scss .hljs-built_in {
-  color: #647efb; }
+.docs-content .hljs-string, .docs-content .hljs-value, .docs-content .hljs-inheritance, .docs-content .hljs-header, .docs-content .hljs-name, .docs-content .ruby .hljs-symbol, .docs-content .xml .hljs-cdata {
+  color: #ffb700; }
+
+.docs-content .hljs-number, .docs-content .hljs-preprocessor, .docs-content .hljs-pragma, .docs-content .hljs-built_in, .docs-content .hljs-literal, .docs-content .hljs-constant {
+  color: #72ca57; }
+
+.docs-content .hljs-keyword, .docs-content .javascript .hljs-function, .docs-content .hljs-params {
+  color: #039cf1; }
+
+.docs-content .hljs-variable, .docs-content .hljs-attribute, .docs-content .hljs-tag, .docs-content .hljs-regexp, .docs-content .ruby .hljs-constant, .docs-content .xml .hljs-tag .hljs-title, .docs-content .xml .hljs-pi, .docs-content .xml .hljs-doctype, .docs-content .html .hljs-doctype, .docs-content .css .hljs-id, .docs-content .css .hljs-class, .docs-content .css .hljs-pseudo {
+  color: #ff536b; }
+
+.docs-content .hljs-function, .docs-content .python .hljs-decorator, .docs-content .python .hljs-title, .docs-content .ruby .hljs-function .hljs-title, .docs-content .ruby .hljs-title .hljs-keyword, .docs-content .perl .hljs-sub, .docs-content .javascript .hljs-title, .docs-content .coffeescript .hljs-title {
+  color: rgba(255, 255, 255, 0.9); }
 
 /* Home - Top
    ========================================================================== */
