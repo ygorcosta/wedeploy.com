@@ -1,7 +1,8 @@
 {% extends "src/layouts/base.html" %}
 
 {% block markup %}
-	<nav class="topbar topbar-inverse topbar-docs">
+	{% macro menu(isMain) %}
+	<nav class="topbar topbar-inverse topbar-docs guide-lang-{{lang}} {%if isMain %}topbar-docs-main{% endif %}">
 		<div class="topbar-logo">
 			<a class="topbar-logo-link" href="/">
 				<span class="icon-16-launchpad-logo"></span>
@@ -20,6 +21,7 @@
 			</li>
 		</ul>
 	</nav>
+	{% endmacro %}
 
 	{% macro submenu(lang) %}
 	<li class="sidebar-item">
@@ -39,7 +41,9 @@
 	</li>
 	{% endmacro %}
 
-	<main class="docs">
+	{{menu(true)}}
+
+	<main class="docs guide-lang-{{lang}}">
 		<nav class="sidebar">
 			<a class="sidebar-header toggler-header-collapsed">
 				<span class="sidebar-icon icon-16-menu"></span>
@@ -97,6 +101,12 @@
 		</nav>
 
 		<div class="sidebar-offset">
+			{{menu()}}
+			<header class="guide-header">
+				<div class="container-hybrid">
+					<h1 class="guide-header-title">{%if lang == 'js' %}JavaScript{% endif %}{%if lang == 'java' %}Java{% endif %}{%if lang == 'curl' %}cURL{% endif %} <span>Guide</span></h1>
+				</div>
+			</header>
 			<div class="container-hybrid">
 				<div class="docs-guide row">
 					<article class="docs-content col-xs-16 col-md-13">

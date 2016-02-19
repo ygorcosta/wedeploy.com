@@ -1,3 +1,24 @@
+/* Header
+   ========================================================================== */
+
+.guide-header {
+	background: $accent;
+	text-align: center;
+	padding: 180px 0 40px;
+}
+
+.guide-header-title {
+	color: white;
+	font-family: $font-family-secondary;
+	font-size: 52px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.guide-header-title span {
+	font-weight: 300;
+}
+
 /* Feedback
    ========================================================================== */
 
@@ -53,3 +74,11 @@
 	font-weight: 600;
 }
 
+/* Medium screens
+   ========================================================================== */
+
+@media (min-width: $screen-md-min) {
+	.guide-header {
+		padding-top: 40px;
+	}
+}
