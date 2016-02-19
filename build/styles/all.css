@@ -8437,3 +8437,45 @@ button.close {
   background: transparent;
   border: 0;
   color: rgba(255, 255, 255, 0.9); }
+
+/* ==========================================================================
+   Autocomplete
+   ========================================================================== */
+.guide-lang-js.autocomplete,
+.guide-lang-js .autocomplete-top,
+.guide-lang-js .autocomplete-bottom {
+  border-color: #ffb700; }
+
+.guide-lang-java.autocomplete,
+.guide-lang-java .autocomplete-top,
+.guide-lang-java .autocomplete-bottom {
+  border-color: #ff536b; }
+
+.guide-lang-curl.autocomplete,
+.guide-lang-curl .autocomplete-top,
+.guide-lang-curl .autocomplete-bottom {
+  border-color: #00a4ff; }
+
+.guide-lang-js .autocomplete-link:hover,
+.guide-lang-js .autocomplete-link:focus {
+  background: rgba(255, 183, 0, 0.1); }
+
+.guide-lang-java .autocomplete-link:hover,
+.guide-lang-java .autocomplete-link:focus {
+  background: rgba(255, 83, 107, 0.1); }
+
+.guide-lang-curl .autocomplete-link:hover,
+.guide-lang-curl .autocomplete-link:focus {
+  background: rgba(0, 164, 255, 0.1); }
+
+.guide-lang-js .autocomplete-text em {
+  background: rgba(255, 183, 0, 0.2);
+  color: #ffb700; }
+
+.guide-lang-java .autocomplete-text em {
+  background: rgba(255, 83, 107, 0.2);
+  color: #ff536b; }
+
+.guide-lang-curl .autocomplete-text em {
+  background: rgba(0, 164, 255, 0.2);
+  color: #00a4ff; }
