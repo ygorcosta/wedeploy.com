@@ -10,7 +10,6 @@
     "metal-alert": "metal/metal-alert#master",
     "metal-autocomplete": "metal/metal-autocomplete#master",
     "metal-toggler": "metal/metal-toggler#master",
-    "senna.js": "liferay/senna.js#master",
-    "steel-bootstrap": "metal/steel-bootstrap#master"
+    "senna.js": "liferay/senna.js#master"
   }
 }

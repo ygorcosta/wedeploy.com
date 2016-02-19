@@ -9,7 +9,7 @@ var path = require('path');
 
 gulp.task('styles', function() {
 	return gulp.src('src/styles/*.scss')
-		.pipe(sass({includePaths: ['bower_components']}))
+		.pipe(sass({includePaths: ['node_modules']}))
 		.pipe(gulp.dest('build/styles'));
 });
 

@@ -8,6 +8,7 @@
     "gulp-sass": "^2.0.1",
     "nunjucks": "^2.1.0",
     "remove-markdown": "zacharyfmarion/remove-markdown#master",
-    "request": "^2.65.0"
+    "request": "^2.65.0",
+    "steel-bootstrap": "metal/steel-bootstrap#master"
   }
 }
