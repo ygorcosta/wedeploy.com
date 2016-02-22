@@ -89,6 +89,35 @@
 	color: #00a4ff;
 }
 
+// Second level ----------------------------------------------------------------
+
+.guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+.guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+.guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+.guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+.guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+	background: rgba(#ffb700, .1);
+	color: #ffb700;
+}
+
+.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+	background: rgba(#ff536b, .1);
+	color: #ff536b;
+}
+
+.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+	background: rgba(#00a4ff, .1);
+	color: #00a4ff;
+}
+
 @media (max-width: $screen-md-min) {
 	.guide-lang-js.sidebar.sidebar-inverse,
 	.guide-lang-js .sidebar.sidebar-inverse {
@@ -107,31 +136,80 @@
 
 	// Header --------------------------------------------------------------------
 
-	// .sidebar-inverse .sidebar-header {
-	// 	background: rgba(white, .3);
-	// 	color: white;
-	// }
+	.sidebar-inverse .sidebar-header {
+		background: rgba(white, .3);
+		color: white;
+	}
 
-	// .sidebar-inverse .sidebar-header:hover,
-	// .sidebar-inverse .sidebar-header:focus,
-	// .sidebar-inverse .sidebar-header .sidebar-icon {
-	// 	color: white;
-	// }
+	.sidebar-inverse .sidebar-header:hover,
+	.sidebar-inverse .sidebar-header:focus,
+	.sidebar-inverse .sidebar-header .sidebar-icon {
+		color: white;
+	}
 
-	// Second level --------------------------------------------------------------
+	// Search --------------------------------------------------------------------
 
-	// .sidebar-inverse .sidebar-list-2 .sidebar-link {
-	// 	color: rgba(white, .9);
-	// }
+	.sidebar-inverse .sidebar-search .form-control {
+		background: white;
+	}
 
-	// .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
-	// .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
-	// .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
-	// .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
-	// .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
-	// 	background: rgba(white, .1);
-	// 	color: white;
-	// }
+	.sidebar-inverse .sidebar-search .form-control:focus {
+		border-color: white;
+	}
+
+	// First level ---------------------------------------------------------------
+
+	.guide-lang-js   .sidebar-inverse .sidebar-list-1 .sidebar-link:hover,
+	.guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link:hover,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link:hover,
+	.guide-lang-js   .sidebar-inverse .sidebar-list-1 .sidebar-link:focus,
+	.guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link:focus,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link:focus,
+	.guide-lang-js   .sidebar-inverse .sidebar-list-1 .sidebar-link-selected,
+	.guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link-selected,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link-selected,
+	.guide-lang-js   .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:hover,
+	.guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:hover,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:hover,
+	.guide-lang-js   .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:focus,
+	.guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:focus,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:focus {
+		background: rgba(white, .1);
+		color: white;
+	}
+
+	.guide-lang-js   .sidebar-inverse .sidebar-list-1 .sidebar-link:hover .sidebar-icon,
+	.guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link:hover .sidebar-icon,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link:hover .sidebar-icon,
+	.guide-lang-js   .sidebar-inverse .sidebar-list-1 .sidebar-link:focus .sidebar-icon,
+	.guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link:focus .sidebar-icon,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link:focus .sidebar-icon,
+	.guide-lang-js   .sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon,
+	.guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon {
+		color: white;
+	}
+
+	// Second level ------------------------------------------------------------
+
+	.guide-lang-js   .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+	.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+	.guide-lang-js   .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+	.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+	.guide-lang-js   .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+	.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+	.guide-lang-js   .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+	.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+	.guide-lang-js   .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus,
+	.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus,
+	.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+		background: rgba(white, .1);
+		color: white;
+	}
 }
 
 /* Feedback

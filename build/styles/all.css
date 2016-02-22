@@ -6139,10 +6139,8 @@ button.close {
 .topbar-logo-link:focus {
   color: white; }
 
-.topbar-logo-link .icon-16-launchpad-logo {
-  font-size: 20px;
-  position: relative;
-  top: -1px; }
+.topbar-logo-link .icon-12-rocket {
+  font-size: 24px; }
 
 .topbar-logo-text {
   display: none;
@@ -6153,7 +6151,7 @@ button.close {
   top: 1px; }
 
 .topbar-logo-label {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 2px;
   color: rgba(255, 255, 255, 0.9);
   font-size: 12px;
@@ -6226,6 +6224,39 @@ button.close {
 @media (min-width: 600px) {
   .topbar-logo-text {
     display: block; } }
+
+/* Topbar Light
+	 ========================================================================== */
+.topbar.topbar-light {
+  background: white; }
+
+.topbar-light .topbar-logo-link {
+  color: rgba(100, 126, 251, 0.8); }
+
+.topbar-light .topbar-logo-link:hover,
+.topbar-light .topbar-logo-link:focus {
+  color: #647efb; }
+
+.topbar-light .topbar-logo-label {
+  background: rgba(100, 126, 251, 0.3);
+  color: #647efb; }
+
+.topbar-light .topbar-list {
+  margin: 33px 0; }
+
+.topbar-light .topbar-link {
+  color: rgba(100, 126, 251, 0.6); }
+
+.topbar-light .topbar-link:hover,
+.topbar-light .topbar-link:focus {
+  color: rgba(100, 126, 251, 0.8); }
+
+.topbar-light .topbar-link-selected {
+  color: #647efb; }
+
+.topbar-light .topbar-link-selected:hover,
+.topbar-light .topbar-link-selected:focus {
+  color: #647efb; }
 
 /* Topbar Inverse
 	 ========================================================================== */
@@ -7775,10 +7806,10 @@ button.close {
   width: 100%;
   z-index: 1000; }
 
-.topbar-docs {
+.topbar-docs-aux {
   display: none; }
 
-.topbar-docs.topbar-docs-main {
+.topbar-docs-main {
   display: block; }
 
 /* Sidebar
@@ -8090,9 +8121,9 @@ button.close {
 /* Medium screens
    ========================================================================== */
 @media (min-width: 960px) {
-  .topbar-docs {
+  .topbar-docs-aux {
     display: block; }
-  .topbar-docs.topbar-docs-main {
+  .topbar-docs-main {
     display: none; }
   .sidebar-offset {
     margin-left: 265px;
@@ -8275,6 +8306,30 @@ button.close {
 .guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon {
   color: #00a4ff; }
 
+.guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+.guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+.guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+.guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+.guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+  background: rgba(255, 183, 0, 0.1);
+  color: #ffb700; }
+
+.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+.guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+  background: rgba(255, 83, 107, 0.1);
+  color: #ff536b; }
+
+.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+.guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+  background: rgba(0, 164, 255, 0.1);
+  color: #00a4ff; }
+
 @media (max-width: 960px) {
   .guide-lang-js.sidebar.sidebar-inverse,
   .guide-lang-js .sidebar.sidebar-inverse {
@@ -8284,7 +8339,62 @@ button.close {
     background: #ff536b; }
   .guide-lang-curl.sidebar.sidebar-inverse,
   .guide-lang-curl .sidebar.sidebar-inverse {
-    background: #00a4ff; } }
+    background: #00a4ff; }
+  .sidebar-inverse .sidebar-header {
+    background: rgba(255, 255, 255, 0.3);
+    color: white; }
+  .sidebar-inverse .sidebar-header:hover,
+  .sidebar-inverse .sidebar-header:focus,
+  .sidebar-inverse .sidebar-header .sidebar-icon {
+    color: white; }
+  .sidebar-inverse .sidebar-search .form-control {
+    background: white; }
+  .sidebar-inverse .sidebar-search .form-control:focus {
+    border-color: white; }
+  .guide-lang-js .sidebar-inverse .sidebar-list-1 .sidebar-link:hover,
+  .guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link:hover,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link:hover,
+  .guide-lang-js .sidebar-inverse .sidebar-list-1 .sidebar-link:focus,
+  .guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link:focus,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link:focus,
+  .guide-lang-js .sidebar-inverse .sidebar-list-1 .sidebar-link-selected,
+  .guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link-selected,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link-selected,
+  .guide-lang-js .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:hover,
+  .guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:hover,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:hover,
+  .guide-lang-js .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:focus,
+  .guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:focus,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:focus {
+    background: rgba(255, 255, 255, 0.1);
+    color: white; }
+  .guide-lang-js .sidebar-inverse .sidebar-list-1 .sidebar-link:hover .sidebar-icon,
+  .guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link:hover .sidebar-icon,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link:hover .sidebar-icon,
+  .guide-lang-js .sidebar-inverse .sidebar-list-1 .sidebar-link:focus .sidebar-icon,
+  .guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link:focus .sidebar-icon,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link:focus .sidebar-icon,
+  .guide-lang-js .sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon,
+  .guide-lang-java .sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon {
+    color: white; }
+  .guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+  .guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+  .guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+  .guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+  .guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+  .guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+  .guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+  .guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+  .guide-lang-js .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus,
+  .guide-lang-java .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus,
+  .guide-lang-curl .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+    background: rgba(255, 255, 255, 0.1);
+    color: white; } }
 
 /* Feedback
    ========================================================================== */
