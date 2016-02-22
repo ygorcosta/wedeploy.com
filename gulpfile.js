@@ -25,7 +25,7 @@ gulp.task('vendor-styles', function() {
 
 gulp.task('vendor-fonts', function() {
 	return gulp.src([
-			'bower_components/steel-bootstrap/build/fonts/**'
+			'node_modules/steel-bootstrap/build/fonts/**'
 		])
 		.pipe(gulp.dest('build/vendor/fonts'));
 });
