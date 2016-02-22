@@ -69,5 +69,27 @@ function sendFeedback(liked) {
 			liked: liked,
 			url: window.location.href,
 			timestamp: new Date().toISOString()
+		})
+		.then(function() {
+			feedbackAlert.body = 'Thanks for your feedback!';
+			feedbackAlert.elementClasses = 'alert-success';
+			feedbackAlert.visible = true;
+		})
+		.catch(function() {
+			feedbackAlert.body = 'Something wrong happened! Please try again later.';
+			feedbackAlert.elementClasses = 'alert-danger';
+			feedbackAlert.visible = true;
 		});
 }
+
+if (feedbackAlert) {
+	feedbackAlert.dispose();
+	feedbackAlert = null;
+}
+
+var feedbackAlert = new metal.Alert({
+	visible: false,
+	animClasses: {
+		hide: 'hidden'
+	}
+}).render();
