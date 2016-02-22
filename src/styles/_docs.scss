@@ -8,10 +8,11 @@
 	z-index: 1000;
 }
 
-.topbar-docs {
+.topbar-docs-aux {
 	display: none;
 }
-.topbar-docs.topbar-docs-main {
+
+.topbar-docs-main {
 	display: block;
 }
 
@@ -390,11 +391,11 @@
    ========================================================================== */
 
 @media (min-width: $screen-md-min) {
-	.topbar-docs {
+	.topbar-docs-aux {
 		display: block;
 	}
 
-	.topbar-docs.topbar-docs-main {
+	.topbar-docs-main {
 		display: none;
 	}
 

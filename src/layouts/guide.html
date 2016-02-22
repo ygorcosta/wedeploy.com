@@ -2,7 +2,7 @@
 
 {% block markup %}
 	{% macro menu(isMain) %}
-	<nav class="topbar topbar-inverse topbar-docs guide-lang-{{lang}} {%if isMain %}topbar-docs-main{% endif %}">
+	<nav class="topbar topbar-inverse topbar-docs guide-lang-{{lang}} {%if isMain %}topbar-docs-main{% else %}topbar-docs-aux{% endif %}">
 		<div class="topbar-logo">
 			<a class="topbar-logo-link" href="/">
 				<span class="icon-16-launchpad-logo"></span>
