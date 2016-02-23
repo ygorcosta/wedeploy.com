@@ -109,7 +109,7 @@
 			</header>
 			<div class="container-hybrid">
 				<div class="docs-guide row">
-					<article class="docs-content col-xs-16 col-md-13">
+					<div class="docs-content col-xs-16 col-md-13">
 						{{contents}}
 						<hr>
 						<div class="guide-feedback">
@@ -125,59 +125,104 @@
 								<p>Contribute to this Doc on Github! <a href="https://github.com/launchpad-project/docs/edit/master/{{basepath}}.md" class="docs-github-link" target="_blank">Edit this section</a>.</p>
 							</div>
 						</div>
-					</article>
+					</div>
 					<nav class="docs-nav col-xs-16 col-md-3">
-						<ul class="docs-nav-list">
+						<aside class="reading-progress"><ul>
 						{%if basepath.indexOf('index') != -1 %}
-							<li class="docs-nav-item">
-								<a href="#1-request-invitation" class="docs-nav-link">1. Request invitation</a>
+							<li>
+								<a href="#1-request-invitation-section">
+									<em>1. Request invitation</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#2-create-an-api" class="docs-nav-link">2. Create an API</a>
+							<li>
+								<a href="#2-create-an-api-section">
+									<em>2. Create an API</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#3-connect-to-your-api" class="docs-nav-link">3. Connect to your API</a>
+							<li>
+								<a href="#3-connect-to-your-api-section">
+									<em>3. Connect to your API</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#4-read-write-data" class="docs-nav-link">4. Read & Write Data</a>
+							<li>
+								<a href="#4-read-write-data-section">
+									<em>4. Read & Write Data</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
 						{%elif basepath.indexOf('building-apis') != -1 %}
-							<li class="docs-nav-item">
-								<a href="#1-method" class="docs-nav-link">1. Method</a>
+							<li>
+								<a href="#1-method-section">
+									<em>1. Method</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#2-endpoint" class="docs-nav-link">2. Endpoint</a>
+							<li>
+								<a href="#2-endpoint-section">
+									<em>2. Endpoint</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#3-parameters" class="docs-nav-link">3. Parameters</a>
+							<li>
+								<a href="#3-parameters-section">
+									<em>3. Parameters</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#4-body" class="docs-nav-link">4. Body</a>
+							<li>
+								<a href="#4-body-section">
+									<em>4. Body</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#5-handler" class="docs-nav-link">5. Handler</a>
+							<li>
+								<a href="#5-handler-section">
+									<em>5. Handler</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#6-authentication" class="docs-nav-link">6. Authentication</a>
+							<li>
+								<a href="#6-authentication-section">
+									<em>6. Authentication</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#7-validator" class="docs-nav-link">7. Validator</a>
+							<li>
+								<a href="#7-validator-section">
+									<em>7. Validator</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
 						{%elif basepath.indexOf('understanding-data') != -1 %}
-							<li class="docs-nav-item">
-								<a href="#1-write" class="docs-nav-link">1. Write</a>
+							<li>
+								<a href="#1-write-section">
+									<em>1. Write</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#2-read" class="docs-nav-link">2. Read</a>
+							<li>
+								<a href="#2-read-section">
+									<em>2. Read</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#3-search" class="docs-nav-link">3. Search</a>
+							<li>
+								<a href="#3-search-section">
+									<em>3. Search</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
-							<li class="docs-nav-item">
-								<a href="#4-watch" class="docs-nav-link">4. Watch</a>
+							<li>
+								<a href="#4-watch-section">
+									<em>4. Watch</em>
+									<svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" stroke-dashoffset="95.82278481012658" transform="rotate(-90 18 18)"></circle></svg>
+								</a>
 							</li>
 						{% endif %}
-						</ul>
+						</ul></aside>
 						<p class="search-feedback">Do you have any questions?</p>
 						<a class="search-feedback-btn btn btn-default" href="mailto:eduardo.lundgren@liferay.com">Contact Us!</a>
 					</nav>

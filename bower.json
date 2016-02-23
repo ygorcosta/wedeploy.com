@@ -9,7 +9,9 @@
     "docs": "launchpad-project/docs#master",
     "metal-alert": "metal/metal-alert#master",
     "metal-autocomplete": "metal/metal-autocomplete#master",
+    "metal-reading-progress": "metal/metal-reading-progress#master",
     "metal-toggler": "metal/metal-toggler#master",
-    "senna.js": "liferay/senna.js#master"
+    "senna.js": "liferay/senna.js#master",
+    "soyutils": "matiwinnetou/soyutils#master"
   }
 }

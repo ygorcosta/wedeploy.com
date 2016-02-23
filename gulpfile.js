@@ -47,7 +47,8 @@ gulp.task('vendor-scripts', function() {
 			'bower_components/soyutils/soyutils.min.js',
 			'bower_components/metal-alert/build/globals/alert-min.js',
 			'bower_components/metal-autocomplete/build/globals/autocomplete-min.js',
-			'bower_components/metal-toggler/build/globals/toggler-min.js'
+			'bower_components/metal-toggler/build/globals/toggler-min.js',
+			'bower_components/metal-reading-progress/build/globals/readingProgress-min.js'
 		])
 		.pipe(gulp.dest('build/vendor/scripts'));
 });

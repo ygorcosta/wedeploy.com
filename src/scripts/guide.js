@@ -93,3 +93,28 @@ var feedbackAlert = new metal.Alert({
 		hide: 'hidden'
 	}
 }).render();
+
+/* ==========================================================================
+   Reading Progress
+   ========================================================================== */
+
+if (progress) {
+	progress.dispose();
+	progress = null;
+}
+
+var progress = new metal.ReadingProgress({
+	activeClass: 'reading',
+	completedClass: 'read',
+	element: '.reading-progress',
+	offset: 20
+});
+
+function updateProgress() {
+	var circle = document.querySelectorAll('.reading-progress svg circle').item(progress.activeIndex);
+	circle.setAttribute('stroke-dashoffset', 100 - progress.progress);
+}
+
+progress.on('progressChanged', updateProgress);
+
+updateProgress();
