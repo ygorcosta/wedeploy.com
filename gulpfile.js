@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var connect = require('gulp-connect');
 var layout = require('gulp-layout');
 var markdown = require('gulp-markdown');
+var replace = require('gulp-replace');
 var sass = require('gulp-sass');
 var path = require('path');
 
@@ -91,9 +92,9 @@ gulp.task('pages-docs', function() {
 
 gulp.task('pages-faq', function() {
 	return gulp.src('src/pages/faq/index.md')
-		.pipe(markdown({
-			breaks: true
-		}))
+		.pipe(markdown())
+		.pipe(replace('<!-- ', ''))
+		.pipe(replace(' -->', ''))
 		.pipe(layout({
 			layout: 'src/layouts/faq.html',
 			engine: 'nunjucks'
@@ -103,9 +104,9 @@ gulp.task('pages-faq', function() {
 
 gulp.task('pages-guide', function() {
 	return gulp.src('bower_components/docs/**')
-		.pipe(markdown({
-			breaks: true
-		}))
+		.pipe(markdown())
+		.pipe(replace('<!-- ', ''))
+		.pipe(replace(' -->', ''))
 		.pipe(layout(function(file) {
 			var docsIndex = file.path.indexOf('/docs/') + 6;
 
