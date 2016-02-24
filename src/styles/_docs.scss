@@ -26,6 +26,11 @@
 /* Navigation
    ========================================================================== */
 
+.docs-nav-container {
+	position: relative;
+	display: none;
+}
+
 .docs-nav-group a {
 	@include anim(color);
 	color: rgba($primary, .8);
@@ -72,6 +77,7 @@
 
 .docs-guide {
 	margin-top: 80px;
+	position: relative;
 }
 
 .docs-content {
@@ -402,6 +408,10 @@
 	.sidebar-offset {
 		margin-left: 265px;
 		width: calc(100% - 265px);
+	}
+
+	.docs-nav-container {
+		display: block;
 	}
 
 	.docs-nav-list {

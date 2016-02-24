@@ -112,9 +112,20 @@ var progress = new metal.ReadingProgress({
 
 function updateProgress() {
 	var circle = document.querySelectorAll('.reading-progress svg circle').item(progress.activeIndex);
-	circle.setAttribute('stroke-dashoffset', 100 - progress.progress);
+	if (circle) circle.setAttribute('stroke-dashoffset', 100 - progress.progress);
 }
 
 progress.on('progressChanged', updateProgress);
 
 updateProgress();
+
+if (affix) {
+	affix.dispose();
+	affix = null;
+}
+
+var affix = new metal.Affix({
+	element: '.docs-nav',
+	offsetTop: 250,
+	offsetBottom: 500
+});
