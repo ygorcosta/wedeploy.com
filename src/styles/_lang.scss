@@ -456,3 +456,31 @@
 	background: rgba(#00a4ff, .2);
 	color: #00a4ff;
 }
+
+/* ==========================================================================
+   Reading progress
+   ========================================================================== */
+
+.guide-lang-js .reading-progress .reading .reading-title {
+	color: #ffb700;
+}
+
+.guide-lang-js .reading-progress svg {
+	stroke: #ffb700;
+}
+
+.guide-lang-java .reading-progress .reading .reading-title {
+	color: #ff536b;
+}
+
+.guide-lang-java .reading-progress svg {
+	stroke: #ff536b;
+}
+
+.guide-lang-curl .reading-progress .reading .reading-title {
+	color: #00a4ff;
+}
+
+.guide-lang-curl .reading-progress svg {
+	stroke: #00a4ff;
+}
