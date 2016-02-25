@@ -93,3 +93,39 @@ var feedbackAlert = new metal.Alert({
 		hide: 'hidden'
 	}
 }).render();
+
+/* ==========================================================================
+   Reading Progress
+   ========================================================================== */
+
+if (progress) {
+	progress.dispose();
+	progress = null;
+}
+
+var articles = document.querySelectorAll('article');
+var articlesIDs = [];
+
+for (var i = 0; i < articles.length; i++) {
+	articlesIDs.push('#' + articles[i].id);
+}
+
+var progress = new metal.ReadingProgress({
+	items: articlesIDs,
+	titleSelector: 'h2',
+	trackerConfig: {
+		activeClass: 'reading',
+		completedClass: 'read'
+	}
+}).render('#reading-container');
+
+if (affix) {
+	affix.dispose();
+	affix = null;
+}
+
+var affix = new metal.Affix({
+	element: '.docs-nav',
+	offsetTop: 250,
+	offsetBottom: 470
+});
