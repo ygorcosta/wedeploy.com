@@ -103,21 +103,21 @@ if (progress) {
 	progress = null;
 }
 
-var progress = new metal.ReadingProgress({
-	activeClass: 'reading',
-	completedClass: 'read',
-	element: '.reading-progress',
-	offset: 20
-});
+var articles = document.querySelectorAll('article');
+var articlesIDs = [];
 
-function updateProgress() {
-	var circle = document.querySelectorAll('.reading-progress svg circle').item(progress.activeIndex);
-	if (circle) circle.setAttribute('stroke-dashoffset', 100 - progress.progress);
+for (var i = 0; i < articles.length; i++) {
+	articlesIDs.push('#' + articles[i].id);
 }
 
-progress.on('progressChanged', updateProgress);
-
-updateProgress();
+var progress = new metal.ReadingProgress({
+	items: articlesIDs,
+	titleSelector: 'h2',
+	trackerConfig: {
+		activeClass: 'reading',
+		completedClass: 'read'
+	}
+}).render('#reading-container');
 
 if (affix) {
 	affix.dispose();
@@ -127,5 +127,5 @@ if (affix) {
 var affix = new metal.Affix({
 	element: '.docs-nav',
 	offsetTop: 250,
-	offsetBottom: 500
+	offsetBottom: 470
 });
