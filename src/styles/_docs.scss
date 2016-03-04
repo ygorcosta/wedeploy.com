@@ -16,13 +16,6 @@
 	display: block;
 }
 
-/* Sidebar
-   ========================================================================== */
-
-.sidebar {
-	z-index: 1000;
-}
-
 /* Navigation
    ========================================================================== */
 
@@ -237,10 +230,6 @@
 /* Home - Top
    ========================================================================== */
 
-// .docs {
-// 	overflow-x: hidden;
-// }
-
 .docs-home-top {
 	margin-bottom: 72px;
 }
@@ -251,7 +240,7 @@
 	font-weight: 300;
 	letter-spacing: -1px;
 	line-height: 48px;
-	margin: 180px 0 56px;
+	margin: 80px 0 56px;
 	text-align: center;
 }
 
@@ -405,11 +394,6 @@
 		display: none;
 	}
 
-	.sidebar-offset {
-		margin-left: 265px;
-		width: calc(100% - 265px);
-	}
-
 	.docs-nav-container {
 		display: block;
 	}
@@ -470,14 +454,5 @@
 
 	.docs-guide {
 		margin-top: 50px;
-	}
-}
-
-/* Large screens
-   ========================================================================== */
-
-@media (min-width: $screen-lg-min) {
-	.container-hybrid {
-		width: $screen-lg-min - 265px;
 	}
 }
