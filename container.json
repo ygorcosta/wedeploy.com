@@ -1,5 +1,4 @@
 {
-  "basePath": "/",
   "webPath": "build",
   "socketio": false
 }
