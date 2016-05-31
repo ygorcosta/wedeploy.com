@@ -3,6 +3,7 @@ var connect = require('gulp-connect');
 var layout = require('gulp-layout');
 var markdown = require('gulp-markdown');
 var replace = require('gulp-replace');
+var ghpages = require('gulp-gh-pages');
 var sass = require('gulp-sass');
 var path = require('path');
 
@@ -123,6 +124,13 @@ gulp.task('pages-guide', function() {
 			}
 		}))
 		.pipe(gulp.dest('dist/docs'));
+});
+
+// Deploy ----------------------------------------------------------------------
+
+gulp.task('deploy', ['build'], function() {
+	return gulp.src('dist/**/*')
+		.pipe(ghpages());
 });
 
 // Runner ----------------------------------------------------------------------
