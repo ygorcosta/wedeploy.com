@@ -9,7 +9,7 @@ var path = require('path');
 // CSS -------------------------------------------------------------------------
 
 gulp.task('styles', function() {
-	return gulp.src('src/styles/*.scss')
+	return gulp.src('src/styles/**/*.scss')
 		.pipe(sass({includePaths: ['node_modules']}))
 		.pipe(gulp.dest('build/styles'));
 });

@@ -35,13 +35,13 @@
 	color: rgba($accent, .7);
 }
 
-@import "autocomplete";
-@import "topics";
-@import "home";
-@import "search";
-@import "docs";
-@import "guide";
-@import "lang";
+@import "misc/autocomplete";
+@import "misc/topics";
+@import "misc/home";
+@import "misc/search";
+@import "misc/docs";
+@import "misc/guide";
+@import "misc/lang";
 
 .affix {
 	top: 20px;
