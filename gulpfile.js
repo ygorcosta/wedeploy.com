@@ -128,7 +128,12 @@ gulp.task('pages-guide', function() {
 
 // Deploy ----------------------------------------------------------------------
 
-gulp.task('deploy', ['build'], function() {
+gulp.task('cname', function() {
+	return gulp.src('src/CNAME')
+		.pipe(gulp.dest('dist'));
+});
+
+gulp.task('deploy', ['cname', 'build'], function() {
 	return gulp.src('dist/**/*')
 		.pipe(ghpages());
 });
