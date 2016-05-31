@@ -24,17 +24,20 @@ gulp.task('vendor-styles', function() {
 
 // Fonts -----------------------------------------------------------------------
 
+gulp.task('fonts', function () {
+    return gulp.src(['src/fonts/**/*'])
+        .pipe(gulp.dest('build/fonts'));
+});
+
 gulp.task('vendor-fonts', function() {
-	return gulp.src([
-			'node_modules/westyle/build/fonts/**'
-		])
+	return gulp.src(['node_modules/westyle/build/fonts/**'])
 		.pipe(gulp.dest('build/vendor/fonts'));
 });
 
 // JS --------------------------------------------------------------------------
 
 gulp.task('scripts', function() {
-	return gulp.src('src/scripts/*.js')
+	return gulp.src('src/scripts/**/*.js')
 		.pipe(gulp.dest('build/scripts'));
 });
 
@@ -57,7 +60,7 @@ gulp.task('vendor-scripts', function() {
 // Images ----------------------------------------------------------------------
 
 gulp.task('images', function() {
-	return gulp.src('src/images/*')
+	return gulp.src('src/images/**/*')
 		.pipe(gulp.dest('build/images'));
 });
 
@@ -125,7 +128,7 @@ gulp.task('pages-guide', function() {
 // Runner ----------------------------------------------------------------------
 
 gulp.task('build', [
-	'styles', 'vendor-styles', 'vendor-fonts', 'scripts', 'vendor-scripts',
+	'styles', 'vendor-styles', 'fonts', 'vendor-fonts', 'scripts', 'vendor-scripts',
 	'images', 'pages-home', 'pages-search', 'pages-docs', 'pages-faq', 'pages-guide'
 ]);
 

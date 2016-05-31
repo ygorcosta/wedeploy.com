@@ -1,9 +1,14 @@
 {% extends "src/layouts/base.html" %}
 
+{% block styles %}
+	<link rel="stylesheet" href="/styles/home.css">
+{% endblock %}
+
 {% block markup %}
 	{{contents}}
 {% endblock %}
 
 {% block scripts %}
-	\<script src="/scripts/home.js"></script>
+	<script src="/scripts/home/jquery-1.12.3.min.js"></script>
+	<script src="/scripts/home/main.js"></script>
 {% endblock %}

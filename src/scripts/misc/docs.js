@@ -1,7 +1,6 @@
 /* ==========================================================================
    Sidebar Search
    ========================================================================== */
-
 if (sideDocsAutocomplete) {
 	sideDocsAutocomplete.dispose();
 	sideDocsAutocomplete = null;

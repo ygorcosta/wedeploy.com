@@ -1,5 +1,9 @@
 {% extends "src/layouts/base.html" %}
 
+{% block styles %}
+	<link rel="stylesheet" href="/styles/misc.css">
+{% endblock %}
+
 {% block markup %}
 	<nav class="topbar topbar-light topbar-docs topbar-docs-main">
 		<div class="topbar-logo">
@@ -27,6 +31,7 @@
 {% endblock %}
 
 {% block scripts %}
-	<script src="/scripts/docs.js"></script>
-	<script src="/scripts/newsletter.js"></script>
+	<script src="/scripts/misc/docs.js"></script>
+	<script src="/scripts/misc/newsletter.js"></script>
+	<script src="/scripts/misc/menu.js"></script>
 {% endblock %}
