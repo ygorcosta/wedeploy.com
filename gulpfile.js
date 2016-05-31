@@ -26,7 +26,7 @@ gulp.task('vendor-styles', function() {
 
 gulp.task('vendor-fonts', function() {
 	return gulp.src([
-			'node_modules/steel-bootstrap/build/fonts/**'
+			'node_modules/westyle/build/fonts/**'
 		])
 		.pipe(gulp.dest('build/vendor/fonts'));
 });

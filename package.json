@@ -10,6 +10,6 @@
     "nunjucks": "^2.1.0",
     "remove-markdown": "zacharyfmarion/remove-markdown#master",
     "request": "^2.65.0",
-    "steel-bootstrap": "metal/steel-bootstrap#master"
+    "westyle": "launchpad-project/westyle#master"
   }
 }
