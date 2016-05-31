@@ -397,7 +397,7 @@
 
 #subscribe form .form-validation {
 	margin: 0;
-	padding: 0;
+	padding: 0 4px;
 
 	height: ($baseline * 3);
 	color: #ff4040;
@@ -407,7 +407,10 @@
 	font-family: 'Open Sans', sans-serif;
 
 	text-align: left;
-	width:100%;
+	width: calc(100% - 8px);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 #subscribe form .form-validation.active {
@@ -438,7 +441,7 @@
 
 #subscribe form small {
 	margin: ($baseline * 1) 0 0;
-	padding: 0;
+	padding: 0 4px;
 	display: block;
 
 	height: ($baseline * 3);
@@ -448,5 +451,5 @@
 	font-family: 'Open Sans', sans-serif;
 
 	text-align: left;
-	width:100%;
+	width: calc(100% - 8px);
 }

@@ -337,11 +337,11 @@
 	margin-left: ($unit * 5);
 	margin-top: ($baseline * 2);
 
-	background: $theme;
+	background: rgba($primary, .2);
 	flex: 0 1 auto;
 }
 #browser .browser__project-item .project-item__icon.default {
-	background: $theme;
+	background: rgba($primary, .2);
 }
 
 #browser .browser__project-item .project-item__icon span {

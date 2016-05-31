@@ -6,10 +6,66 @@
 
 #view-4 .giant {
 	position: absolute;
-	left: 0;
+	left: 50%;
+
 	top: 0;
 	z-index: 1;
-	width: 100%;
+	text-align: center;
+
+	@media (min-width: 320px) {
+		-webkit-transform: translateX(-50%);
+    	transform: translateX(-50%);
+	}
+
+	@media (min-width: 480px) {
+		-webkit-transform: translateX(-50%);
+    	transform: translateX(-50%);
+	}
+
+	@media (min-width: 600px) {
+		-webkit-transform: translateX(-50%);
+    	transform: translateX(-50%);
+	}
+
+	@media (min-width: 720px) {
+		-webkit-transform: translateX(-50%);
+    	transform: translateX(-50%);
+	}
+
+	@media (min-width: 840px) {
+		-webkit-transform: translateX(-49%);
+    	transform: translateX(-49%);
+	}
+
+	@media (min-width: 960px) {
+		-webkit-transform: translateX(-42.5%);
+    	transform: translateX(-42.5%);
+	}
+
+	@media (min-width: 1024px) {
+		-webkit-transform: translateX(-50%);
+    	transform: translateX(-50%);
+	}
+
+	@media (min-width: 1280px) {
+		-webkit-transform: translateX(-50%);
+    	transform: translateX(-50%);
+	}
+
+	@media (min-width: 1440px) {
+		-webkit-transform: translateX(-52%);
+    	transform: translateX(-52%);
+	}
+
+	@media (min-width: 1600px) {
+		-webkit-transform: translateX(-52%);
+    	transform: translateX(-52%);
+	}
+
+	@media (min-width: 1920px) {
+		-webkit-transform: translateX(-55%);
+    	transform: translateX(-55%);
+	}
 }
 
 #view-4 .giant span {
@@ -48,7 +104,6 @@
 		font-size: 258px;
 		line-height: 258px;
 		top: -236px;
-		left: 40px;
 		text-align: left;
 	}
 
@@ -61,38 +116,38 @@
 	@media (min-width: 960px) {
 		font-size: 360px;
 		line-height: 360px;
-		top: -245px;
+		top: -247px;
 	}
 
 	@media (min-width: 1024px) {
 		font-size: 386px;
 		line-height: 386px;
-		top: -259px;
+		top: -260px;
 	}
 
 	@media (min-width: 1280px) {
 		font-size: 404px;
 		line-height: 404px;
-		top: -255px;
+		top: -268px;;
 	}
 
 	@media (min-width: 1440px) {
 		font-size: 517px;
 		line-height: 517px;
 		left: 20px;
-		top: -294px;
+		top: -312px;
 	}
 
 	@media (min-width: 1600px) {
 		font-size: 577px;
 		line-height: 577px;
-		top: -341px;
+		top: -363px;
 	}
 
 	@media (min-width: 1920px) {
 		font-size: 648px;
 		line-height: 648px;
-		top: -377px;
+		top: -414px;
 	}
 }
 
