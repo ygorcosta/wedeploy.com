@@ -282,7 +282,7 @@
 
 #modal__form-container .form form .form-validation {
 	margin: 0;
-	padding: 0;
+	padding: 0 4px;
 
 	height: ($baseline * 3);
 	color: #ff4040;
@@ -291,8 +291,12 @@
 	line-height: 36px;
 	font-family: 'Open Sans', sans-serif;
 	text-align: left;
-	width: 100%;
-	min-width: 100%;
+	width: calc(100% - 8px);
+	min-width: calc(100% - 8px);
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 #modal__form-container .form form .form-validation.active {
