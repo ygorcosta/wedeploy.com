@@ -1,6 +1,6 @@
 # Landing
 
-[![Build Status](http://img.shields.io/travis/wedeploy/landing/master.svg?style=flat)](https://travis-ci.org/wedeploy/landing)
+[![Build Status](http://img.shields.io/travis/wedeploy/landing/master.svg?style=flat)](https://travis-ci.com/wedeploy/landing)
 
 > Contains the [wedeploy.com](http://wedeploy.com) static pages like homepage, docs, etc.
 
