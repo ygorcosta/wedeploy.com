@@ -2,10 +2,18 @@ var gulp = require('gulp');
 var connect = require('gulp-connect');
 var layout = require('gulp-layout');
 var markdown = require('gulp-markdown');
+var metal = require('gulp-metal');
 var replace = require('gulp-replace');
 var ghpages = require('gulp-gh-pages');
 var sass = require('gulp-sass');
 var path = require('path');
+
+metal.registerTasks({
+	taskPrefix: 'metal:',
+	bundleFileName: 'main.js',
+	buildSrc: 'src/assets/scripts/misc/main.js',
+	buildDest: 'dist/scripts'
+});
 
 // CSS -------------------------------------------------------------------------
 
@@ -49,16 +57,8 @@ gulp.task('scripts', function() {
 
 gulp.task('vendor-scripts', function() {
 	return gulp.src([
-			'bower_components/api.js/build/globals/api-min.js',
 			'bower_components/handlebars/handlebars.min.js',
-			'bower_components/highlightjs/highlight.pack.min.js',
-			'bower_components/senna.js/build/globals/senna-min.js',
-			'bower_components/soyutils/soyutils.min.js',
-			'bower_components/metal-affix/build/globals/affix-min.js',
-			'bower_components/metal-alert/build/globals/alert-min.js',
-			'bower_components/metal-autocomplete/build/globals/autocomplete-min.js',
-			'bower_components/metal-toggler/build/globals/toggler-min.js',
-			'bower_components/metal-reading-progress/build/globals/readingProgress-min.js'
+			'bower_components/highlightjs/highlight.pack.min.js'
 		])
 		.pipe(gulp.dest('dist/scripts/vendor'));
 });
@@ -146,7 +146,7 @@ gulp.task('deploy', ['cname', 'build'], function() {
 // Runner ----------------------------------------------------------------------
 
 gulp.task('build', [
-	'styles', 'vendor-styles', 'fonts', 'vendor-fonts', 'scripts', 'vendor-scripts',
+	'styles', 'vendor-styles', 'fonts', 'scripts', 'vendor-scripts', 'metal:build:js',
 	'images', 'pages-home', 'pages-search', 'pages-docs', 'pages-faq', 'pages-guide'
 ]);
 
