@@ -263,7 +263,7 @@
 
 .docs-home-top-form .form-control:focus {
 	background: white;
-	border-color: $accent;
+	border: 1px solid $accent;
 }
 
 .docs-home-top-form .form-control:focus + .input-inner-icon-helper {
