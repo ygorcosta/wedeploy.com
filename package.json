@@ -10,8 +10,7 @@
     "metal-alert": "1.0.0-rc.6",
     "metal-autocomplete": "^1.0.0-rc.3",
     "metal-reading-progress": "^1.0.0-rc.1",
-    "metal-toggler": "^v1.0.0-rc.1",
-    "senna": "~1.2.0"
+    "metal-toggler": "^v1.0.0-rc.1"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

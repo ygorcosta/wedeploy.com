@@ -25,8 +25,8 @@ gulp.task('styles', function() {
 
 gulp.task('vendor-styles', ['vendor-styles-v2', 'vendor-styles-v3'], function() {
 	return gulp.src([
-			'node_modules/senna.js/build/senna.css',
-			'node_modules/highlightjs/styles/tomorrow-night-eighties.css'
+			'bower_components/senna.js/build/senna.css',
+			'bower_components/highlightjs/styles/tomorrow-night-eighties.css'
 		])
 		.pipe(gulp.dest('dist/styles/vendor'));
 });
@@ -57,6 +57,7 @@ gulp.task('scripts', function() {
 
 gulp.task('vendor-scripts', function() {
 	return gulp.src([
+			'bower_components/senna/build/globals/senna-min.js',
 			'bower_components/handlebars/handlebars.min.js',
 			'bower_components/highlightjs/highlight.pack.min.js'
 		])
