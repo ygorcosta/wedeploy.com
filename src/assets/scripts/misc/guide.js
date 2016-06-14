@@ -35,17 +35,28 @@ var sideGuideAutocomplete = new metal.Autocomplete({
 	},
 	format: function(item) {
 		return {
-			textPrimary: metal.SoyRenderer.sanitizeHtml('<a class="autocomplete-link" href=".' + item.path + '">' +
+			textPrimary: '<a class="autocomplete-link" href=".' + item.path + '">' +
 				'<p class="autocomplete-title">' + item.title + '</p>' +
-				'<p class="autocomplete-text">' + item.content.substr(0, 100) + '...</p></a>')
+				'<p class="autocomplete-text">' + item.content.substr(0, 100) + '...</p></a>'
 		};
 	},
 	select: function() {}
-}).render();
+});
 
 /* ==========================================================================
    Feedback
    ========================================================================== */
+
+if (feedbackAlert) {
+	feedbackAlert.dispose();
+	feedbackAlert = null;
+}
+
+var feedbackAlert = new metal.Alert({
+	spinner: true,
+	spinnerDone: true,
+	visible: false
+});
 
 var noBtn  = document.querySelector('.guide-feedback-btn-no');
 var yesBtn = document.querySelector('.guide-feedback-btn-yes');
@@ -82,18 +93,6 @@ function sendFeedback(liked) {
 		});
 }
 
-if (feedbackAlert) {
-	feedbackAlert.dispose();
-	feedbackAlert = null;
-}
-
-var feedbackAlert = new metal.Alert({
-	visible: false,
-	animClasses: {
-		hide: 'hidden'
-	}
-}).render();
-
 /* ==========================================================================
    Reading Progress
    ========================================================================== */
@@ -117,7 +116,7 @@ var progress = new metal.ReadingProgress({
 		activeClass: 'reading',
 		completedClass: 'read'
 	}
-}).render('#reading-container');
+}, '#reading-container');
 
 if (affix) {
 	affix.dispose();

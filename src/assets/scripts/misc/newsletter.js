@@ -8,11 +8,10 @@ if (newsletterAlert) {
 }
 
 var newsletterAlert = new metal.Alert({
-	visible: false,
-	animClasses: {
-		hide: 'hidden'
-	}
-}).render();
+	spinner: true,
+	spinnerDone: true,
+	visible: false
+});
 
 var newsletterForm = document.querySelector('.newsletter-form');
 
