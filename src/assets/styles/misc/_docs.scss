@@ -261,6 +261,11 @@
 	@include anim(color);
 }
 
+.docs-home-top-form .form-control:focus {
+	background: white;
+	border-color: $accent;
+}
+
 .docs-home-top-form .form-control:focus + .input-inner-icon-helper {
 	color: $accent;
 }

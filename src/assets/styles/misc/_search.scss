@@ -1,3 +1,7 @@
+.sidebar-search .form-control:focus {
+	border-color: $accent;
+}
+
 /* Search input
    ========================================================================== */
 
@@ -73,8 +77,18 @@
 	margin: 65px 0 32px;
 }
 
-.search-feedback-btn {
+.search-feedback-btn.btn-default {
+	background: white;
+	border-color: $accent;
+	color: $accent;
 	margin-bottom: 65px;
+}
+
+.search-feedback-btn.btn-default:hover,
+.search-feedback-btn.btn-default:focus,
+.search-feedback-btn.btn-default.focus {
+    background-color: rgba($accent, .1);
+    border-color: $accent;
 }
 
 @media (min-width: $screen-md-min) {

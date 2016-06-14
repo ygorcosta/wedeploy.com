@@ -38,7 +38,7 @@
    ========================================================================== */
 
 .docs-home-topics {
-	background: rgba($accent, .1);
+	background: rgba($primary, .05);
 	padding: 72px 0 48px;
 }
 
@@ -82,14 +82,26 @@
 	}
 }
 
+.topic-js .topic-title {
+	color: #ffb700;
+}
+
 .topic-js .topic-icon,
 .topic-js.radial-out:before {
 	background: #ffb700;
 }
 
+.topic-java .topic-title {
+	color: #ff536b;
+}
+
 .topic-java .topic-icon,
 .topic-java.radial-out:before {
 	background: #ff536b;
+}
+
+.topic-curl .topic-title {
+	color: #00a4ff;
 }
 
 .topic-curl .topic-icon,
@@ -136,7 +148,6 @@
 }
 
 .radial-out .topic-title {
-	color: $accent;
 	top: 0;
 	position: relative;
 	transition: all 0.4s ease-out;
