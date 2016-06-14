@@ -11,16 +11,26 @@ var path = require('path');
 
 gulp.task('styles', function() {
 	return gulp.src('src/assets/styles/**/*.scss')
-		.pipe(sass({includePaths: ['node_modules']}))
+		.pipe(sass({includePaths: ['bower_components']}))
 		.pipe(gulp.dest('dist/styles'));
 });
 
-gulp.task('vendor-styles', function() {
+gulp.task('vendor-styles', ['vendor-styles-v2', 'vendor-styles-v3'], function() {
 	return gulp.src([
-			'bower_components/senna.js/build/senna.css',
-			'bower_components/highlightjs/styles/tomorrow-night-eighties.css'
+			'node_modules/senna.js/build/senna.css',
+			'node_modules/highlightjs/styles/tomorrow-night-eighties.css'
 		])
 		.pipe(gulp.dest('dist/styles/vendor'));
+});
+
+gulp.task('vendor-styles-v2', function() {
+	return gulp.src(['bower_components/westyle-v2/build/**'])
+		.pipe(gulp.dest('dist/styles/vendor/westyle-v2'));
+});
+
+gulp.task('vendor-styles-v3', function() {
+	return gulp.src(['bower_components/westyle-v3/build/**'])
+		.pipe(gulp.dest('dist/styles/vendor/westyle-v3'));
 });
 
 // Fonts -----------------------------------------------------------------------
@@ -28,11 +38,6 @@ gulp.task('vendor-styles', function() {
 gulp.task('fonts', function () {
     return gulp.src(['src/assets/fonts/**/*'])
         .pipe(gulp.dest('dist/fonts'));
-});
-
-gulp.task('vendor-fonts', function() {
-	return gulp.src(['node_modules/westyle/build/fonts/**'])
-		.pipe(gulp.dest('dist/fonts/vendor'));
 });
 
 // JS --------------------------------------------------------------------------

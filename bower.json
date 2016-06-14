@@ -14,5 +14,7 @@
     "metal-toggler": "metal/metal-toggler#master",
     "senna.js": "liferay/senna.js#master",
     "soyutils": "matiwinnetou/soyutils#master"
+    "westyle-v2": "wedeploy/westyle#v2.0.x",
+    "westyle-v3": "wedeploy/westyle#master"
   }
 }

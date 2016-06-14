@@ -13,7 +13,6 @@
     "gulp-sass": "^2.0.1",
     "nunjucks": "^2.1.0",
     "remove-markdown": "zacharyfmarion/remove-markdown#master",
-    "request": "^2.65.0",
-    "westyle": "launchpad-project/westyle#master"
+    "request": "^2.65.0"
   }
 }
