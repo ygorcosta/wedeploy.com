@@ -20,8 +20,8 @@ ul {
 }
 
 a:focus,
-button:focus { 
-    outline: none; 
+button:focus {
+    outline: none;
 }
 
 #senna-body-default {
@@ -78,7 +78,7 @@ input:-webkit-autofill {
    color: rgba($primary, 0.4);
 }
 
-.form-control:-ms-input-placeholder {  
+.form-control:-ms-input-placeholder {
    color: rgba($primary, 0.4);
 }
 

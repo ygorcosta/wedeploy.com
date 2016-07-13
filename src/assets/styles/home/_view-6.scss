@@ -1,7 +1,7 @@
 #view-6 {
 	background-color: rgba($primary, .02);
 	position: relative;
-	
+
 	@media (min-width: 320px) {
 		height: ($baseline * 47);
 	}
@@ -54,7 +54,7 @@
 	@media (min-width: 480px) {
 		top: ($baseline * 13);
 	}
-	
+
 	@media (min-width: 600px) {
 		top: ($baseline * 15);
 	}
@@ -197,7 +197,7 @@
 
 #view-6 .info .info__question h5 .phone {
 	color: rgba($primary, .9) !important;
-	
+
 	@media (min-width: 320px) {
 		display: block;
 	}

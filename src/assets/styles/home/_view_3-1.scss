@@ -5,7 +5,7 @@
 }
 
 #view-3__1 {
-	
+
 	width: 100%;
 	background: rgba($primary, .02);
 	position: relative;
@@ -60,7 +60,7 @@
 	@media (min-width: 840px) {
 		width: 85.714285714%;
 	}
-	
+
 	@media (min-width: 960px) {
 		left: 50%;
 		margin-left: -31.875%;
@@ -165,7 +165,7 @@
 }
 
 #view-3__1 .bg-text .bg-text__gradient {
-	
+
 	background-image: -webkit-gradient(linear, left top, right top, from(#fafafb), to(rgba(255, 255, 255, 0)));
 	background-image: -webkit-linear-gradient(left, #fafafb, rgba(255, 255, 255, 0));
 	background-image: -moz-linear-gradient(left, #fafafb, rgba(255, 255, 255, 0));
@@ -231,7 +231,7 @@
 	@media (min-width: 960px) {
 		width: 960px;
 	}
-	
+
 	@media (min-width: 1024px) {
 		width: 1248px;
 		background-position: center -248px;

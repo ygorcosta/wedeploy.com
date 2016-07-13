@@ -5,7 +5,7 @@
 }
 
 #view-3__2 {
-	
+
 	width: 100%;
 	background: #262b30;//rgba($primary, 0.9);
 	position: relative;
@@ -67,7 +67,7 @@
 		right: 50%;
 		margin-right: -44%;
 	}
-	
+
 	@media (min-width: 960px) {
 		right: 50%;
 		margin-right: -35%;
@@ -183,7 +183,7 @@
 }
 
 #view-3__2 .bg-text .bg-text__gradient {
-	
+
 	background-image: -webkit-gradient(linear, right top, left top, from(#262b30), to(rgba(38, 43, 48, 0)));
 	background-image: -webkit-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
 	background-image: -moz-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
@@ -252,7 +252,7 @@
 		width: 960px;
 		background-position: -486px 424px;
 	}
-	
+
 	@media (min-width: 1024px) {
 		width: 1042px;
 		background-position: -828px -164px;
@@ -264,7 +264,7 @@
 	}
 
 	@media (min-width: 1440px) {
-		width: 1280px;	
+		width: 1280px;
 		background-position: -477px -164px;
 	}
 

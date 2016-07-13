@@ -5,7 +5,7 @@
 	}
 	@media (min-width: 600px) {
 		height: ($baseline * 29);
-	}         
+	}
 }
 
 #footer .container-wedeploy {
@@ -21,7 +21,7 @@
 		align-items: center;
 		align-content: center;
 	}
-} 
+}
 
 #footer .col-lg-offset-1 {
 	@media (min-width: 1280px) {
@@ -176,7 +176,7 @@
 #footer .footer__copy span {
 	margin:0;
 	padding: 0;
-	
+
 	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
 	color: rgba($white, .5);
@@ -214,7 +214,7 @@
 	display: flex;
 	font-size: 15px;
 	font-family: 'galano-medium', sans-serif;
-	font-weight: 400;	
+	font-weight: 400;
 	padding: 0 20px;
 
 	@media (min-width: 320px) {
