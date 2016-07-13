@@ -24,6 +24,10 @@ button:focus {
     outline: none; 
 }
 
+#senna-body-default {
+	height: 100%;
+}
+
 .container-wedeploy {
 	@include container-fixed;
 

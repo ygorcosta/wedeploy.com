@@ -48,11 +48,13 @@
 	})();
 	</script>
 </head>
-<body data-senna data-senna-surface>
-	<div class="senna-loading-bar"></div>
+<body id="senna-body" data-senna data-senna-surface>
+	<div id="senna-body-default">
+		<div class="senna-loading-bar"></div>
 
-	{% block styles %}{% endblock %}
-	{% block markup %}{% endblock %}
-	{% block scripts %}{% endblock %}
+		{% block styles %}{% endblock %}
+		{% block markup %}{% endblock %}
+		{% block scripts %}{% endblock %}
+	</div>
 </body>
 </html>
