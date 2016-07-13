@@ -78,9 +78,7 @@
 }
 
 #footer .info-container {
-
 	@media (min-width: 320px) {
-		//display: block;
 		text-align: center;
 		margin-top: ($baseline * 6);
 	}
@@ -139,7 +137,6 @@
 #footer .footer__logo span {
 	margin:0;
 	padding: 0;
-
 	font-size: 24px;
 	font-family: 'galano-bold', sans-serif;
 	color: $white;
@@ -176,7 +173,6 @@
 #footer .footer__copy span {
 	margin:0;
 	padding: 0;
-
 	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
 	color: rgba($white, .5);

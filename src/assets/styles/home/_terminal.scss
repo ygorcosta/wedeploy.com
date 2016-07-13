@@ -79,7 +79,6 @@
 	padding: 0;
 	opacity: 0;
 	height: calc(100% - 72px); //($baseline * 62);
-
 	top: 24px;
 	position: absolute;
 	background: $white;
@@ -217,7 +216,6 @@
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	color: rgba($primary, 0.9);
-
 	height: ($baseline * 4);
 	line-height: ($baseline * 4);
 }
@@ -287,6 +285,7 @@
 #browser__content #content__scroll {
 	width: 100%;
 	height: 100%;
+
 	@media (min-width: 1280px) {
 		padding: 0 5.5%;
 	}
@@ -337,10 +336,10 @@
 	border-radius: 8px;
 	margin-left: ($unit * 5);
 	margin-top: ($baseline * 2);
-
 	background: rgba($primary, .2);
 	flex: 0 1 auto;
 }
+
 #browser .browser__project-item .project-item__icon.default {
 	background: rgba($primary, .2);
 }
@@ -362,37 +361,38 @@
 		width: 130px;
 	}
 }
+
 .project-item__content p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 	padding: 0;
 	margin: 0;
 }
+
 .project-item__content p.small {
 	height: ($baseline * 2);
 	color: rgba($primary, .6);
 	font-size: 11px;
 	line-height: 12.5px;
-
 	position: relative;
 	top: 1.5px;
 }
+
 .project-item__content p.large {
 	height: ($baseline * 2);
 	color: rgba($primary, .9);
 	font-size: 14px;
 	line-height: 12.5px;
-
 	position: relative;
 	top: 4px;
 	letter-spacing: 0.0002em;
 }
+
 .project-item__content p.medium {
 	height: ($baseline * 2);
 	color: rgba($primary, .4);
 	font-size: 12px;
 	line-height: 12.5px;
-
 	position: relative;
 	top: -1px;
 	letter-spacing: 0.0002em;
@@ -525,7 +525,6 @@ p.project-item__status span.text {
 	line-height: 24px;
 	font-weight: 400;
 	color: rgba($theme, 1);
-
 	position: relative;
 	top: -1px;
 }
@@ -546,7 +545,6 @@ p.project-item__status span.text {
 	color: $white;
 	margin: 0 0 26px;
 	line-height: 22px;
-
 	position: relative;
 	top: 0px;
 	letter-spacing: -0.02em;

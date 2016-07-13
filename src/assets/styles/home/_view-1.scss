@@ -1,5 +1,6 @@
 #view-1 {
 	position:relative;
+
 	@media (min-width: 1280px) and (min-height: 768px) {
 		height: calc(100% - 204px);
 		min-height: 552px;
@@ -58,6 +59,7 @@
 	@media (min-width: 1280px) {
 		margin-left: 0%;
 	}
+
 	@media (min-width: 1440px) {
 		margin-left: 6.25%;
 	}
@@ -67,6 +69,7 @@
 	@media (min-width: 1280px) {
 		width: 37.5%;
 	}
+
 	@media (min-width: 1440px) {
 		width: 25%;
 	}
@@ -101,6 +104,7 @@
 		align-items: flex-start;
 		margin: 0;
 	}
+
 	/*@media (min-width: 1280px) {
 		position: absolute;
 		bottom: ($baseline * 18);
@@ -109,13 +113,12 @@
 		width: 83%;
 		left: 8.5%;
 	}*/
+
 	@media (min-width: 1280px) {
 		position: absolute;
 		top: 50%;
 		margin-top: -263px;
-
 		text-align: left;
-
 		width: 100%;
 		left: 0;
 		justify-content: flex-start;
@@ -134,10 +137,8 @@
 	margin: 0;
 	padding: 0;
 	opacity: 0;
-
 	font-family: 'galano-semibold', sans-serif;
 	color: rgba($primary, 0.9);
-
 	position: relative;
 	top: -8px;
 	letter-spacing: -0.0025em;
@@ -145,7 +146,6 @@
 	@media (min-width: 320px) {
 		font-size: 50px;
 		line-height: ($baseline * 5);
-
 		margin: ($baseline * 4) 0 0;
 		width: 320px;
 		padding: 0 20px;
@@ -154,7 +154,6 @@
 	@media (min-width: 480px) {
 		font-size: 60px;
 		line-height: ($baseline * 6);
-
 		margin: ($baseline * 6) 0 0;
 		width: 405px;
 		padding: 0 20px;
@@ -203,11 +202,9 @@
 #subscribe p {
 	opacity: 0;
 	padding: 0;
-
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	color: rgba($primary, 0.6);
-
 	position: relative;
 	top: -2px;
 	//letter-spacing: 0.007em;
@@ -223,7 +220,6 @@
 	@media (min-width: 480px) {
 		font-size: 20px;
 		line-height: 36px;
-
 		margin: ($baseline * 1) 0;
 		width: 100%;
 		padding: 0 20px;
@@ -398,14 +394,12 @@
 #subscribe form .form-validation {
 	margin: 0;
 	padding: 0 4px;
-
 	height: ($baseline * 3);
 	color: #ff4040;
 	visibility: hidden;
 	font-size: 14px;
 	line-height: 36px;
 	font-family: 'Open Sans', sans-serif;
-
 	text-align: left;
 	width: calc(100% - 8px);
 	white-space: nowrap;
@@ -433,7 +427,6 @@
 	font-size: 17px;
 	line-height: 72px;
 	font-weight: 400;
-
 	position:relative;
 	top: -2px;
 	letter-spacing: 0.0002em;
@@ -443,13 +436,11 @@
 	margin: ($baseline * 1) 0 0;
 	padding: 0 4px;
 	display: block;
-
 	height: ($baseline * 3);
 	color: rgba($primary, .4);
 	font-size: 12px;
 	line-height: 24px;
 	font-family: 'Open Sans', sans-serif;
-
 	text-align: left;
 	width: calc(100% - 8px);
 }

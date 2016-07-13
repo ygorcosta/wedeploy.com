@@ -24,14 +24,12 @@
 #view-6 .giant span {
 	margin: 0;
 	padding: 0;
-
 	text-shadow: 0 40px 50px rgba(14, 20, 26, 0.05);
 	color: $auxiliary;
 	font-family: 'galano-bold', sans-serif;
 	font-size: 498px;
 	line-height: 360px;
 	text-align: center;
-
 	width: 1700px;
 	height: 360px;
 	position: absolute;
@@ -166,27 +164,27 @@
 }
 
 #view-6 .info .info__question h5 {
-    font-family: 'Open Sans', sans-serif;
-    color: rgba($primary, .9);
-    position: relative;
-    top: -4px;
-    letter-spacing: -0.02em;
+	font-family: 'Open Sans', sans-serif;
+	color: rgba($primary, .9);
+	position: relative;
+	top: -4px;
+	letter-spacing: -0.02em;
 
-    @media (min-width: 320px) {
+	@media (min-width: 320px) {
 		font-size: 17px;
-    	line-height: ($baseline * 2);
+		line-height: ($baseline * 2);
 	}
 
-    @media (min-width: 480px) {
+	@media (min-width: 480px) {
 		font-size: 22.7px;
-    	line-height: 36px;
+		line-height: 36px;
 	}
 
-    @media (min-width: 720px) {
+	@media (min-width: 720px) {
 		width: 100%;
 	}
 
-    @media (min-width: 840px) {
+	@media (min-width: 840px) {
 		width: 75%;
 	}
 

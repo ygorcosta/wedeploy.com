@@ -1,11 +1,10 @@
 #view-3__2 .container-wedeploy {
 	position: relative;
-    height: 100%;
-    padding: 0;
+	height: 100%;
+	padding: 0;
 }
 
 #view-3__2 {
-
 	width: 100%;
 	background: #262b30;//rgba($primary, 0.9);
 	position: relative;
@@ -40,7 +39,6 @@
 		right: 20px;
 		margin-right: 0;
 		top: 84px;
-
 		width: 87%;
 		text-align: center;
 	}
@@ -78,7 +76,6 @@
 		right: 40px;
 		margin-right: 0;
 		top: 135px;
-
 		width: 360px;
 		text-align: left;
 	}
@@ -183,13 +180,11 @@
 }
 
 #view-3__2 .bg-text .bg-text__gradient {
-
 	background-image: -webkit-gradient(linear, right top, left top, from(#262b30), to(rgba(38, 43, 48, 0)));
 	background-image: -webkit-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
 	background-image: -moz-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
 	background-image: -o-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
 	background-image: linear-gradient(to left, #262b30, rgba(38, 43, 48, 0) 98%);
-
 	height: 100%;
 	float: right;
 
