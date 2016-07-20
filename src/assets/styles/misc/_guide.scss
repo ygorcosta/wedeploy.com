@@ -74,11 +74,71 @@
 	font-weight: 600;
 }
 
+.guide-lang .docs-content pre code {
+	background: transparent;
+	border: 0;
+	color: rgba(white, .9);
+}
+
 /* Medium screens
    ========================================================================== */
 
 @media (min-width: $screen-md-min) {
 	.guide-header {
 		padding-top: 40px;
+	}
+}
+
+@media (max-width: $screen-md-min) {
+
+	// Header --------------------------------------------------------------------
+
+	.sidebar-inverse .sidebar-header {
+		background: rgba(white, .3);
+		color: white;
+	}
+
+	.sidebar-inverse .sidebar-header:hover,
+	.sidebar-inverse .sidebar-header:focus,
+	.sidebar-inverse .sidebar-header .sidebar-icon {
+		color: white;
+	}
+
+	// Search --------------------------------------------------------------------
+
+	.sidebar-inverse .sidebar-search .form-control {
+		background: white;
+	}
+
+	.sidebar-inverse .sidebar-search .form-control:focus {
+		border-color: white;
+	}
+
+	// First level ---------------------------------------------------------------
+
+	.guide-lang .sidebar-inverse .sidebar-list-1 .sidebar-link:hover,
+	.guide-lang .sidebar-inverse .sidebar-list-1 .sidebar-link:focus,
+	.guide-lang .sidebar-inverse .sidebar-list-1 .sidebar-link-selected,
+	.guide-lang .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:hover,
+	.guide-lang .sidebar-inverse .sidebar-list-1 .sidebar-link-selected:focus {
+		background: rgba(white, .1);
+		color: white;
+	}
+
+	.guide-lang .sidebar-inverse .sidebar-list-1 .sidebar-link:hover .sidebar-icon,
+	.guide-lang .sidebar-inverse .sidebar-list-1 .sidebar-link:focus .sidebar-icon,
+	.guide-lang .sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon {
+		color: white;
+	}
+
+	// Second level ------------------------------------------------------------
+
+	.guide-lang .sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+	.guide-lang .sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+	.guide-lang .sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+	.guide-lang .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+	.guide-lang .sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+		background: rgba(white, .1);
+		color: white;
 	}
 }
