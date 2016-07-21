@@ -32,17 +32,7 @@
 	{% macro submenu(lang) %}
 	<li class="sidebar-item">
 		<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
-			<span>Quickstart</span>
-		</a>
-	</li>
-	<li class="sidebar-item">
-		<a class="sidebar-link {%if basepath == (lang + '/building-apis') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/building-apis.html">
-			<span>Building APIs</span>
-		</a>
-	</li>
-	<li class="sidebar-item">
-		<a class="sidebar-link {%if basepath == (lang + '/understanding-data') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/understanding-data.html">
-			<span>Understanding Data</span>
+			<span>Lorem ipsum dolor</span>
 		</a>
 	</li>
 	{% endmacro %}
@@ -77,6 +67,15 @@
 					</a>
 				</li>
 				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/local/">
+						<span class="sidebar-icon icon-16-cloud"></span>
+						<span>Local Cloud</span>
+					</a>
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'local' %}hidden{% endif %}">
+						{{submenu(lang)}}
+					</ul>
+				</li>
+				<li class="sidebar-item">
 					<a class="sidebar-link" href="/docs/js/">
 						<span class="sidebar-icon icon-16-globe"></span>
 						<span>JavaScript</span>
@@ -86,11 +85,29 @@
 					</ul>
 				</li>
 				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/swift/">
+						<span class="sidebar-icon icon-16-swift"></span>
+						<span>Swift</span>
+					</a>
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'swift' %}hidden{% endif %}">
+						{{submenu(lang)}}
+					</ul>
+				</li>
+				<li class="sidebar-item">
 					<a class="sidebar-link" href="/docs/java/">
 						<span class="sidebar-icon icon-16-cup"></span>
 						<span>Java</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'java' %}hidden{% endif %}">
+						{{submenu(lang)}}
+					</ul>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/go/">
+						<span class="sidebar-icon icon-16-dribbble"></span>
+						<span>Go</span>
+					</a>
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'go' %}hidden{% endif %}">
 						{{submenu(lang)}}
 					</ul>
 				</li>
@@ -110,7 +127,7 @@
 			{{menu()}}
 			<header class="guide-header">
 				<div class="container-hybrid">
-					<h1 class="guide-header-title">{%if lang == 'js' %}JavaScript{% endif %}{%if lang == 'java' %}Java{% endif %}{%if lang == 'curl' %}cURL{% endif %} <span>Guide</span></h1>
+					<h1 class="guide-header-title">{%if lang == 'local' %}Local Cloud{% endif %}{%if lang == 'js' %}JavaScript{% endif %}{%if lang == 'swift' %}Swift{% endif %}{%if lang == 'java' %}Java{% endif %}{%if lang == 'go' %}Go{% endif %}{%if lang == 'curl' %}cURL{% endif %} <span>Guide</span></h1>
 				</div>
 			</header>
 			<div class="container-hybrid">
