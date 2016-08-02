@@ -32,7 +32,13 @@
 	{% macro submenu(lang) %}
 	<li class="sidebar-item">
 		<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+			<span>Praesent semper augue</span>
+		</a>
+		<a class="sidebar-link {%if basepath == (lang + '/lorem') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/lorem.html">
 			<span>Lorem ipsum dolor</span>
+		</a>
+		<a class="sidebar-link {%if basepath == (lang + '/maecenas') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/maecenas.html">
+			<span>Maecenas rutrum odio</span>
 		</a>
 	</li>
 	{% endmacro %}
