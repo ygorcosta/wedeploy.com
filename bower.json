@@ -6,7 +6,7 @@
     "senna": "~1.2.0",
     "handlebars": "~4.0.4",
     "highlightjs": "~8.8.0",
-    "docs": "launchpad-project/docs#master",
+    "docs": "wedeploy/docs#master",
     "westyle-v2": "wedeploy/westyle#v2.0.x",
     "westyle-v3": "wedeploy/westyle#master"
   }
