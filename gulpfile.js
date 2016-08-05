@@ -132,6 +132,13 @@ gulp.task('pages-guide', function() {
 		.pipe(gulp.dest('dist/docs'));
 });
 
+// Registry ----------------------------------------------------------------------
+
+gulp.task('registry', function() {
+	return gulp.src('src/assets/registry.json')
+		.pipe(gulp.dest('dist'));
+});
+
 // Deploy ----------------------------------------------------------------------
 
 gulp.task('cname', function() {
@@ -148,7 +155,8 @@ gulp.task('deploy', ['cname', 'build'], function() {
 
 gulp.task('build', [
 	'styles', 'vendor-styles', 'fonts', 'scripts', 'vendor-scripts', 'metal:build:js',
-	'images', 'pages-home', 'pages-search', 'pages-docs', 'pages-faq', 'pages-guide'
+	'images', 'pages-home', 'pages-search', 'pages-docs', 'pages-faq', 'pages-guide',
+	'registry'
 ]);
 
 gulp.task('server', ['build'], function() {
