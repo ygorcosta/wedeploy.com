@@ -73,56 +73,65 @@
 					</a>
 				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/local/">
-						<span class="sidebar-icon icon-16-cloud"></span>
-						<span>Local Cloud</span>
+					<a class="sidebar-link" href="/docs/intro/">
+						<span class="sidebar-icon icon-16-arrow-right-rod"></span>
+						<span>Intro</span>
 					</a>
-					<ul class="sidebar-list sidebar-list-2 {%if lang != 'local' %}hidden{% endif %}">
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'intro' %}hidden{% endif %}">
 						{{submenu(lang)}}
 					</ul>
 				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/js/">
-						<span class="sidebar-icon icon-16-globe"></span>
-						<span>JavaScript</span>
+					<a class="sidebar-link" href="/docs/auth/">
+						<span class="sidebar-icon icon-16-persons"></span>
+						<span>Auth</span>
 					</a>
-					<ul class="sidebar-list sidebar-list-2 {%if lang != 'js' %}hidden{% endif %}">
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'auth' %}hidden{% endif %}">
 						{{submenu(lang)}}
 					</ul>
 				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/swift/">
-						<span class="sidebar-icon icon-16-swift"></span>
-						<span>Swift</span>
+					<a class="sidebar-link" href="/docs/data/">
+						<span class="sidebar-icon icon-16-database"></span>
+						<span>Data</span>
 					</a>
-					<ul class="sidebar-list sidebar-list-2 {%if lang != 'swift' %}hidden{% endif %}">
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'data' %}hidden{% endif %}">
 						{{submenu(lang)}}
 					</ul>
 				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/java/">
+					<a class="sidebar-link" href="/docs/email/">
+						<span class="sidebar-icon icon-16-mail-full"></span>
+						<span>Email</span>
+					</a>
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'email' %}hidden{% endif %}">
+						{{submenu(lang)}}
+					</ul>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/hosting/">
+						<span class="sidebar-icon icon-16-folder"></span>
+						<span>Hosting</span>
+					</a>
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'hosting' %}hidden{% endif %}">
+						{{submenu(lang)}}
+					</ul>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/nodejs/">
+						<span class="sidebar-icon icon-16-nodejs"></span>
+						<span>Node.js</span>
+					</a>
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'nodejs' %}hidden{% endif %}">
+						{{submenu(lang)}}
+					</ul>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/maven/">
 						<span class="sidebar-icon icon-16-cup"></span>
-						<span>Java</span>
+						<span>Maven</span>
 					</a>
-					<ul class="sidebar-list sidebar-list-2 {%if lang != 'java' %}hidden{% endif %}">
-						{{submenu(lang)}}
-					</ul>
-				</li>
-				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/go/">
-						<span class="sidebar-icon icon-16-dribbble"></span>
-						<span>Go</span>
-					</a>
-					<ul class="sidebar-list sidebar-list-2 {%if lang != 'go' %}hidden{% endif %}">
-						{{submenu(lang)}}
-					</ul>
-				</li>
-				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/curl/">
-						<span class="sidebar-icon icon-16-command-line"></span>
-						<span>cURL</span>
-					</a>
-					<ul class="sidebar-list sidebar-list-2 {%if lang != 'curl' %}hidden{% endif %}">
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'maven' %}hidden{% endif %}">
 						{{submenu(lang)}}
 					</ul>
 				</li>
@@ -133,7 +142,7 @@
 			{{menu()}}
 			<header class="guide-header">
 				<div class="container-hybrid">
-					<h1 class="guide-header-title">{%if lang == 'local' %}Local Cloud{% endif %}{%if lang == 'js' %}JavaScript{% endif %}{%if lang == 'swift' %}Swift{% endif %}{%if lang == 'java' %}Java{% endif %}{%if lang == 'go' %}Go{% endif %}{%if lang == 'curl' %}cURL{% endif %} <span>Guide</span></h1>
+					<h1 class="guide-header-title">{%if lang == 'intro' %}Intro{% endif %}{%if lang == 'auth' %}Auth{% endif %}{%if lang == 'data' %}Data{% endif %}{%if lang == 'email' %}Email{% endif %}{%if lang == 'hosting' %}Hosting{% endif %}{%if lang == 'nodejs' %}Node.js{% endif %}{%if lang == 'maven' %}Maven{% endif %} <span>Guide</span></h1>
 				</div>
 			</header>
 			<div class="container-hybrid">

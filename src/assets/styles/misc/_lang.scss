@@ -1,9 +1,10 @@
-$curl: #77d55a;
-$go: #bb8d66;
-$java: #ff536b;
-$js: #ffb700;
-$local: #00a4ff;
-$swift: #ff6e00;
+$intro: #ff6e00;
+$auth: #9552ef;
+$data: #77d55a;
+$email: #ffb700;
+$hosting: #00a4ff;
+$nodejs: #89c940;
+$maven: #ff536b;
 
 @mixin lang($color) {
 
@@ -166,16 +167,18 @@ $swift: #ff6e00;
 	}
 }
 
-.topic-curl  { @include topic($curl);  }
-.topic-go    { @include topic($go); }
-.topic-java  { @include topic($java);  }
-.topic-js    { @include topic($js);    }
-.topic-local { @include topic($local); }
-.topic-swift { @include topic($swift); }
+.topic-intro   { @include topic($intro); }
+.topic-auth    { @include topic($auth); }
+.topic-data    { @include topic($data); }
+.topic-email   { @include topic($email); }
+.topic-hosting { @include topic($hosting); }
+.topic-nodejs  { @include topic($nodejs); }
+.topic-maven   { @include topic($maven); }
 
-.guide-lang-curl  { @include lang($curl);  }
-.guide-lang-go    { @include lang($go); }
-.guide-lang-java  { @include lang($java);  }
-.guide-lang-js    { @include lang($js);    }
-.guide-lang-local { @include lang($local); }
-.guide-lang-swift { @include lang($swift); }
+.guide-lang-intro   { @include lang($intro); }
+.guide-lang-auth    { @include lang($auth); }
+.guide-lang-data    { @include lang($data); }
+.guide-lang-email   { @include lang($email); }
+.guide-lang-hosting { @include lang($hosting); }
+.guide-lang-nodejs  { @include lang($nodejs); }
+.guide-lang-maven   { @include lang($maven); }
