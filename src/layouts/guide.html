@@ -118,20 +118,11 @@
 					</ul>
 				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/nodejs/">
-						<span class="sidebar-icon icon-16-nodejs"></span>
-						<span>Node.js</span>
+					<a class="sidebar-link" href="/docs/other/">
+						<span class="sidebar-icon icon-16-module"></span>
+						<span>Other</span>
 					</a>
-					<ul class="sidebar-list sidebar-list-2 {%if lang != 'nodejs' %}hidden{% endif %}">
-						{{submenu(lang)}}
-					</ul>
-				</li>
-				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/maven/">
-						<span class="sidebar-icon icon-16-cup"></span>
-						<span>Maven</span>
-					</a>
-					<ul class="sidebar-list sidebar-list-2 {%if lang != 'maven' %}hidden{% endif %}">
+					<ul class="sidebar-list sidebar-list-2 {%if lang != 'other' %}hidden{% endif %}">
 						{{submenu(lang)}}
 					</ul>
 				</li>
@@ -142,7 +133,7 @@
 			{{menu()}}
 			<header class="guide-header">
 				<div class="container-hybrid">
-					<h1 class="guide-header-title">{%if lang == 'intro' %}Intro{% endif %}{%if lang == 'auth' %}Auth{% endif %}{%if lang == 'data' %}Data{% endif %}{%if lang == 'email' %}Email{% endif %}{%if lang == 'hosting' %}Hosting{% endif %}{%if lang == 'nodejs' %}Node.js{% endif %}{%if lang == 'maven' %}Maven{% endif %} <span>Guide</span></h1>
+					<h1 class="guide-header-title">{%if lang == 'intro' %}Intro{% endif %}{%if lang == 'auth' %}Auth{% endif %}{%if lang == 'data' %}Data{% endif %}{%if lang == 'email' %}Email{% endif %}{%if lang == 'hosting' %}Hosting{% endif %}{%if lang == 'other' %}Other{% endif %} <span>Guide</span></h1>
 				</div>
 			</header>
 			<div class="container-hybrid">

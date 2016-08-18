@@ -3,8 +3,7 @@ $auth: #9552ef;
 $data: #77d55a;
 $email: #ffb700;
 $hosting: #00a4ff;
-$nodejs: #89c940;
-$maven: #ff536b;
+$other: #ff536b;
 
 @mixin lang($color) {
 
@@ -176,13 +175,11 @@ $maven: #ff536b;
 .topic-data    { @include topic($data); }
 .topic-email   { @include topic($email); }
 .topic-hosting { @include topic($hosting); }
-.topic-nodejs  { @include topic($nodejs); }
-.topic-maven   { @include topic($maven); }
+.topic-other   { @include topic($other); }
 
 .guide-lang-intro   { @include lang($intro); }
 .guide-lang-auth    { @include lang($auth); }
 .guide-lang-data    { @include lang($data); }
 .guide-lang-email   { @include lang($email); }
 .guide-lang-hosting { @include lang($hosting); }
-.guide-lang-nodejs  { @include lang($nodejs); }
-.guide-lang-maven   { @include lang($maven); }
+.guide-lang-other   { @include lang($other); }
