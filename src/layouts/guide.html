@@ -32,19 +32,13 @@
 	{% macro submenu(lang) %}
 	<li class="sidebar-item">
 		<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
-			<span>Getting Started</span>
+			<span>Praesent semper augue</span>
 		</a>
-		<a class="sidebar-link {%if basepath == (lang + '/user-authentication') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/user-authentication.html">
-			<span>User Authentication</span>
+		<a class="sidebar-link {%if basepath == (lang + '/lorem') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/lorem.html">
+			<span>Lorem ipsum dolor</span>
 		</a>
-		<a class="sidebar-link {%if basepath == (lang + '/realtime-database') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/realtime-database.html">
-			<span>Realtime Database</span>
-		</a>
-		<a class="sidebar-link {%if basepath == (lang + '/email-sending') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/email-sending.html">
-			<span>Email Sending</span>
-		</a>
-		<a class="sidebar-link {%if basepath == (lang + '/static-hosting') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/static-hosting.html">
-			<span>Static Hosting</span>
+		<a class="sidebar-link {%if basepath == (lang + '/maecenas') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/maecenas.html">
+			<span>Maecenas rutrum odio</span>
 		</a>
 	</li>
 	{% endmacro %}
