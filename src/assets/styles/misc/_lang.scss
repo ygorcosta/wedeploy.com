@@ -35,30 +35,34 @@ $maven: #ff536b;
 
 	// Sidebar / First level -----------------------------------------------------
 
-	.sidebar-inverse .sidebar-list-1 .sidebar-link:hover,
-	.sidebar-inverse .sidebar-list-1 .sidebar-link:focus,
-	.sidebar-inverse .sidebar-list-1 .sidebar-link-selected,
-	.sidebar-inverse .sidebar-list-1 .sidebar-link-selected:hover,
-	.sidebar-inverse .sidebar-list-1 .sidebar-link-selected:focus {
-		background: rgba($color, .1);
-		color: $color;
-	}
+	@media (min-width: $screen-md-min) {
+		.sidebar-inverse .sidebar-list-1 .sidebar-link:hover,
+		.sidebar-inverse .sidebar-list-1 .sidebar-link:focus,
+		.sidebar-inverse .sidebar-list-1 .sidebar-link-selected,
+		.sidebar-inverse .sidebar-list-1 .sidebar-link-selected:hover,
+		.sidebar-inverse .sidebar-list-1 .sidebar-link-selected:focus {
+			background: rgba($color, .1);
+			color: $color;
+		}
 
-	.sidebar-inverse .sidebar-list-1 .sidebar-link:hover .sidebar-icon,
-	.sidebar-inverse .sidebar-list-1 .sidebar-link:focus .sidebar-icon,
-	.sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon {
-		color: $color;
+		.sidebar-inverse .sidebar-list-1 .sidebar-link:hover .sidebar-icon,
+		.sidebar-inverse .sidebar-list-1 .sidebar-link:focus .sidebar-icon,
+		.sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon {
+			color: $color;
+		}
 	}
 
 	// Sidebar / Second level ----------------------------------------------------
 
-	.sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
-	.sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
-	.sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
-	.sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
-	.sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
-		background: rgba($color, .1);
-		color: $color;
+	@media (min-width: $screen-md-min) {
+		.sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+		.sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+		.sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+		.sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+		.sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+			background: rgba($color, .1);
+			color: $color;
+		}
 	}
 
 	// Feedback ------------------------------------------------------------------
