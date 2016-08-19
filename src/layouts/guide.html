@@ -27,20 +27,6 @@
 	</nav>
 	{% endmacro %}
 
-	{% macro submenu(lang) %}
-	<li class="sidebar-item">
-		<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
-			<span>Praesent semper augue</span>
-		</a>
-		<a class="sidebar-link {%if basepath == (lang + '/lorem') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/lorem.html">
-			<span>Lorem ipsum dolor</span>
-		</a>
-		<a class="sidebar-link {%if basepath == (lang + '/maecenas') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/maecenas.html">
-			<span>Maecenas rutrum odio</span>
-		</a>
-	</li>
-	{% endmacro %}
-
 	{{menu(true)}}
 
 	<main class="docs guide-lang guide-lang-{{lang}}">
@@ -80,20 +66,14 @@
 							<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
 								<span>What, Why and How</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/concepts') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/concepts.html">
-								<span>Concepts</span>
-							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/features') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/features.html">
-								<span>Features</span>
-							</a>
 							<a class="sidebar-link {%if basepath == (lang + '/quick-start') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/quick-start.html">
-								<span>Quick Start</span>
+								<span>Using the Dashboard</span>
 							</a>
 							<a class="sidebar-link {%if basepath == (lang + '/using-the-cli') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/using-the-cli.html">
 								<span>Using the CLI</span>
 							</a>
 							<a class="sidebar-link {%if basepath == (lang + '/wedeploy-api') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/wedeploy-api.html">
-								<span>WeDeploy API</span>
+								<span>Using the API Client</span>
 							</a>
 						</li>
 					</ul>
@@ -104,7 +84,11 @@
 						<span>Auth</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'auth' %}hidden{% endif %}">
-						{{submenu(lang)}}
+						<li class="sidebar-item">
+							<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+								<span>Introduction</span>
+							</a>
+						</li>
 					</ul>
 				</li>
 				<li class="sidebar-item">
@@ -113,7 +97,11 @@
 						<span>Data</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'data' %}hidden{% endif %}">
-						{{submenu(lang)}}
+						<li class="sidebar-item">
+							<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+								<span>Introduction</span>
+							</a>
+						</li>
 					</ul>
 				</li>
 				<li class="sidebar-item">
@@ -135,7 +123,11 @@
 						<span>Hosting</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'hosting' %}hidden{% endif %}">
-						{{submenu(lang)}}
+						<li class="sidebar-item">
+							<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+								<span>Introduction</span>
+							</a>
+						</li>
 					</ul>
 				</li>
 				<li class="sidebar-item">
@@ -144,7 +136,9 @@
 						<span>Other</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'other' %}hidden{% endif %}">
-						{{submenu(lang)}}
+						<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+								<span>Introduction</span>
+							</a>
 					</ul>
 				</li>
 			</ul>
