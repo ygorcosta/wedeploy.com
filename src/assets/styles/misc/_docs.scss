@@ -138,21 +138,14 @@
 	font-weight: 400;
 }
 
-.docs-content ul {
-	list-style: none;
-	padding: 0;
+.docs-content ul,
+.docs-content ol {
+	padding: 0 0 0 20px;
 	margin: 0 0 10px;
 }
 
 .docs-content ul li {
 	padding-left: 1em;
-	text-indent: -.7em;
-}
-
-.docs-content ul li:before {
-	color: rgba($primary, .4);
-	content: "• ";
-	margin-right: 10px;
 }
 
 .docs-content ul li p {
@@ -166,9 +159,10 @@
 
 .docs-content ol li,
 .docs-content ul li {
-	padding-left: 24px;
+	padding-left: 6px;
 }
 
+.docs-content ol li,
 .docs-content ol li p {
 	color: rgba($primary, .6);
 }
