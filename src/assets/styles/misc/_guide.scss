@@ -9,14 +9,15 @@
 
 .guide-header-title {
 	color: white;
-	font-family: $font-family-secondary;
+	font-family: $font-family-secondary-bold;
 	font-size: 52px;
-	font-weight: 700;
+	font-weight: 400;
 	margin: 0;
 }
 
 .guide-header-title span {
-	font-weight: 300;
+	font-family: $font-family-secondary-semibold;
+	font-weight: 400;
 }
 
 /* Download Button

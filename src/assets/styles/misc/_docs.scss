@@ -96,11 +96,12 @@
 .docs-content h5,
 .docs-content h6 {
 	color: rgba($primary, .8);
-	font-family: $font-family-secondary;
-	font-weight: 700;
+	font-family: $font-family-secondary-semibold;
+	font-weight: 400;
 }
 
 .docs-content h1 {
+	font-family: $font-family-secondary-bold;
 	font-size: 36px;
 	margin: 0 0 32px;
 }
@@ -127,10 +128,10 @@
 }
 
 .docs-content h6 {
+	font-family: $font-family-secondary;
 	border-bottom: 2px solid rgba($primary, .1);
 	color: rgba($primary, .4);
 	font-size: 18px;
-	font-style: italic;
 	line-height: 24px;
 	margin: 0;
 	padding-bottom: 36px;
