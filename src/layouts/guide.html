@@ -125,7 +125,11 @@
 						<span>Email</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'email' %}hidden{% endif %}">
-						{{submenu(lang)}}
+						<li class="sidebar-item">
+							<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+								<span>Introduction</span>
+							</a>
+						</li>
 					</ul>
 				</li>
 				<li class="sidebar-item">
