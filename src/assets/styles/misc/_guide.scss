@@ -30,7 +30,8 @@
 	.btn.btn-accent {
 		color: $white;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $white;
 		}
 	}
