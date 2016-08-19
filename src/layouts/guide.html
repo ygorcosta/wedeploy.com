@@ -140,8 +140,14 @@
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'other' %}hidden{% endif %}">
 						<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
-								<span>Getting Started</span>
-							</a>
+							<span>Getting Started with Liferay</span>
+						</a>
+						<a class="sidebar-link {%if basepath == (lang + '/nodejs') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/nodejs">
+							<span>Getting Started with Node.js</span>
+						</a>
+						<a class="sidebar-link {%if basepath == (lang + '/maven') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/maven">
+							<span>Getting Started with Maven</span>
+						</a>
 					</ul>
 				</li>
 			</ul>
