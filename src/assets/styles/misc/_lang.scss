@@ -79,22 +79,35 @@ $other: #ff536b;
 	.btn-accent:hover,
 	.btn-accent:focus,
 	.btn-accent.focus {
-	    background-color: rgba($color, .8);
-	    border-color: rgba($color, .8);
+			background-color: rgba($color, .8);
+			border-color: rgba($color, .8);
 	}
 
 	// Button default ------------------------------------------------------------
 
 	.btn-default {
-    color: $color;
-    border-color: $color;
+		color: $color;
+		border-color: $color;
 	}
 
 	.btn-default:hover,
 	.btn-default:focus,
 	.btn-default.focus {
-    background-color: rgba($color, .1);
-    border-color: $color;
+		background-color: rgba($color, .1);
+		border-color: $color;
+	}
+
+	// Button active -------------------------------------------------------------
+
+	.btn-active {
+		background: rgba($color, .3);
+
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($color, .3);
+			border-color: $color;
+		}
 	}
 
 	// Button inverse ------------------------------------------------------------
