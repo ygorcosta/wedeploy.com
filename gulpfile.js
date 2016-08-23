@@ -168,4 +168,5 @@ gulp.task('server', ['build'], function() {
 
 gulp.task('watch', ['server'], function() {
 	gulp.watch('src/assets/styles/**/*.scss', ['styles']);
+	gulp.watch('src/assets/scripts/**/*.js', ['scripts']);
 });
