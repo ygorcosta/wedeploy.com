@@ -121,12 +121,29 @@ gulp.task('pages-guide', function() {
 		.pipe(replace(' -->', ''))
 		.pipe(layout(function(file) {
 			var docsIndex = file.path.indexOf('/docs/') + 6;
+			var docsPath = file.path.substring(docsIndex, file.path.length);
+			var docsTokens = docsPath.split('/');
+
+			var section, basename;
+			var lang = docsTokens[0];
+			var fullpath = docsPath.replace('.html', '');
+
+			// Contains language specific content
+			if (docsTokens.length === 2) {
+				section = null;
+				basename = docsTokens[1].replace('.html', '');
+			} else {
+				section = docsTokens[1];
+				basename = docsTokens[2].replace('.html', '');
+			}
 
 			return {
 				engine: 'nunjucks',
 				layout: 'src/layouts/guide.html',
-				lang: file.path.substring(docsIndex, file.path.lastIndexOf('/')),
-				basepath: file.path.substring(docsIndex, file.path.length - 5)
+				lang: lang,
+				section: section,
+				basename: basename,
+				fullpath: fullpath
 			}
 		}))
 		.pipe(gulp.dest('dist/docs'));

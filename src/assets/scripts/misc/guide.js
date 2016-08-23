@@ -9,8 +9,8 @@ function onLoad() {
 onLoad();
 
 /* ==========================================================================
-   Sidebar Search
-   ========================================================================== */
+	 Sidebar Search
+	 ========================================================================== */
 
 if (sideGuideAutocomplete) {
 	sideGuideAutocomplete.dispose();
@@ -44,8 +44,8 @@ var sideGuideAutocomplete = new metal.Autocomplete({
 });
 
 /* ==========================================================================
-   Feedback
-   ========================================================================== */
+	 Feedback
+	 ========================================================================== */
 
 if (feedbackAlert) {
 	feedbackAlert.dispose();
@@ -94,8 +94,8 @@ function sendFeedback(liked) {
 }
 
 /* ==========================================================================
-   Reading Progress
-   ========================================================================== */
+	 Reading Progress
+	 ========================================================================== */
 
 if (progress) {
 	progress.dispose();
@@ -128,3 +128,30 @@ var affix = new metal.Affix({
 	offsetTop: 250,
 	offsetBottom: 470
 });
+
+/* ==========================================================================
+	 Menu links
+	 ========================================================================== */
+
+function saveLangChoice() {
+	['js', 'java', 'rest'].forEach(function(lang) {
+		if (window.location.href.indexOf(lang) !== -1) {
+			localStorage.setItem('docsLang', lang);
+		}
+	});
+}
+
+function updateLangURLs() {
+	var docsLang = localStorage.getItem('docsLang');
+
+	if (docsLang) {
+		var sideLinks = document.querySelectorAll('.sidebar-link');
+
+		sideLinks.forEach(function(sideLink) {
+			sideLink.href = sideLink.href.replace(/(js)|(java)|(rest)/g, docsLang);
+		});
+	}
+}
+
+saveLangChoice();
+updateLangURLs();

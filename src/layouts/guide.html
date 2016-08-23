@@ -63,47 +63,47 @@
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'intro' %}hidden{% endif %}">
 						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+							<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
 								<span>What, Why and How</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/feature-overview') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/feature-overview.html">
+							<a class="sidebar-link {%if basename == 'feature-overview' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/feature-overview.html">
 								<span>Feature Overview</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/using-the-dashboard') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/using-the-dashboard.html">
+							<a class="sidebar-link {%if basename == 'using-the-dashboard' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/using-the-dashboard.html">
 								<span>Using the Dashboard</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/using-the-command-line') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/using-the-command-line.html">
+							<a class="sidebar-link {%if basename == 'using-the-command-line' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/using-the-command-line.html">
 								<span>Using the Command-line</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/using-the-api-client') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/using-the-api-client.html">
+							<a class="sidebar-link {%if basename == 'using-the-api-client' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/using-the-api-client.html">
 								<span>Using the API Client</span>
 							</a>
 						</li>
 					</ul>
 				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/auth/">
+					<a class="sidebar-link" href="/docs/auth/js/">
 						<span class="sidebar-icon icon-16-persons"></span>
 						<span>Auth</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'auth' %}hidden{% endif %}">
 						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+							<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/{{section}}/">
 								<span>Getting Started</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/sign-in-with-facebook') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/sign-in-with-facebook.html">
+							<a class="sidebar-link {%if basepath == 'sign-in-with-facebook' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/{{section}}/sign-in-with-facebook.html">
 								<span>Sign-in With Facebook</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/sign-in-with-github') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/sign-in-with-github.html">
+							<a class="sidebar-link {%if basename == 'sign-in-with-github' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/{{section}}/sign-in-with-github.html">
 								<span>Sign-in With GitHub</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/sign-in-with-google') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/sign-in-with-google.html">
+							<a class="sidebar-link {%if basename == 'sign-in-with-google' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/{{section}}/sign-in-with-google.html">
 								<span>Sign-in With Google</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/sign-in-with-password') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/sign-in-with-password.html">
+							<a class="sidebar-link {%if basename == 'sign-in-with-password' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/{{section}}/sign-in-with-password.html">
 								<span>Sign-in With Password</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/manage-users') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/manage-users.html">
+							<a class="sidebar-link {%if basename == 'manage-users' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/{{section}}/manage-users.html">
 								<span>Manage Users</span>
 							</a>
 						</li>
@@ -116,32 +116,32 @@
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'data' %}hidden{% endif %}">
 						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+							<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
 								<span>Getting Started</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/saving-data') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/saving-data.html">
+							<a class="sidebar-link {%if basename == saving-data' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/saving-data.html">
 								<span>Saving Data</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/retrieving-data') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/retrieving-data.html">
+							<a class="sidebar-link {%if basename == retrieving-data' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/retrieving-data.html">
 								<span>Retrieving Data</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/searching-data') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/searching-data.html">
+							<a class="sidebar-link {%if basename == searching-data' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/searching-data.html">
 								<span>Searching Data</span>
 							</a>
-							<a class="sidebar-link {%if basepath == (lang + '/watching-data') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/watching-data.html">
+							<a class="sidebar-link {%if basename == watching-data' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/watching-data.html">
 								<span>Watching Data</span>
 							</a>
 						</li>
 					</ul>
 				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/email/">
+					<a class="sidebar-link" href="/docs/email/js/">
 						<span class="sidebar-icon icon-16-mail-full"></span>
 						<span>Email</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'email' %}hidden{% endif %}">
 						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+							<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/{{section}}/">
 								<span>Getting Started</span>
 							</a>
 						</li>
@@ -154,7 +154,7 @@
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'hosting' %}hidden{% endif %}">
 						<li class="sidebar-item">
-							<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+							<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
 								<span>Getting Started</span>
 							</a>
 						</li>
@@ -166,10 +166,10 @@
 						<span>Other</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if lang != 'other' %}hidden{% endif %}">
-						<a class="sidebar-link {%if basepath == (lang + '/index') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
+						<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/">
 							<span>Getting Started with Maven</span>
 						</a>
-						<a class="sidebar-link {%if basepath == (lang + '/nodejs') %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/nodejs.html">
+						<a class="sidebar-link {%if basename == 'nodejs' %}sidebar-link-selected{% endif %}" href="/docs/{{lang}}/nodejs.html">
 							<span>Getting Started with Node.js</span>
 						</a>
 					</ul>
@@ -186,6 +186,23 @@
 			</header>
 			<div class="container-hybrid">
 				<div class="docs-guide row">
+
+					{%if section %}
+					<div class="guide-topics-container">
+						<div class="guide-topics btn-group">
+							<a href="/docs/{{lang}}/js{%if basename == 'index' %}/{% else %}/{{basename}}.html{% endif %}" class="btn btn-default {%if section == 'js' %}btn-active{% endif %}">
+								JavaScript
+							</a>
+							<a href="/docs/{{lang}}/java{%if basename == 'index' %}/{% else %}/{{basename}}.html{% endif %}" class="btn btn-default {%if section == 'java' %}btn-active{% endif %}">
+								Java
+							</a>
+							<a href="/docs/{{lang}}/rest{%if basename == 'index' %}/{% else %}/{{basename}}.html{% endif %}" class="btn btn-default {%if section == 'rest' %}btn-active{% endif %}">
+								REST
+							</a>
+						</div>
+					</div>
+					{% endif %}
+
 					<div class="docs-content col-xs-16 col-md-12">
 						{{contents}}
 
@@ -199,7 +216,7 @@
 								<img src="/images/misc/octocat.png" alt="Octocat" width="80" height="69">
 							</div>
 							<div class="guide-github-text">
-								<p>Contribute to this Doc on Github! <a href="https://github.com/wedeploy/docs/edit/master/{{basepath}}.md" class="docs-github-link" target="_blank">Edit this section</a>.</p>
+								<p>Contribute to this Doc on Github! <a href="https://github.com/wedeploy/docs/edit/master/{{fullpath}}.md" class="docs-github-link" target="_blank">Edit this section</a>.</p>
 							</div>
 						</div>
 					</div>
