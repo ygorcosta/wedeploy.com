@@ -125,7 +125,7 @@ gulp.task('pages-guide', function() {
 			var docsTokens = docsPath.split('/');
 
 			var section, basename;
-			var lang = docsTokens[0];
+			var topic = docsTokens[0];
 			var fullpath = docsPath.replace('.html', '');
 
 			// Contains language specific content
@@ -140,7 +140,7 @@ gulp.task('pages-guide', function() {
 			return {
 				engine: 'nunjucks',
 				layout: 'src/layouts/guide.html',
-				lang: lang,
+				topic: topic,
 				section: section,
 				basename: basename,
 				fullpath: fullpath

@@ -5,7 +5,16 @@ $email: #ffb700;
 $hosting: #00a4ff;
 $other: #ff536b;
 
-@mixin lang($color) {
+@mixin docsTopic($color) {
+	color: $color;
+
+	.topic-icon,
+	&.radial-out:before {
+		background: $color;
+	}
+}
+
+@mixin guideTopic($color) {
 
 	// Topbar --------------------------------------------------------------------
 
@@ -174,25 +183,16 @@ $other: #ff536b;
 	}
 }
 
-@mixin topic($color) {
-	color: $color;
+.topic-intro   { @include docsTopic($intro); }
+.topic-auth    { @include docsTopic($auth); }
+.topic-data    { @include docsTopic($data); }
+.topic-email   { @include docsTopic($email); }
+.topic-hosting { @include docsTopic($hosting); }
+.topic-other   { @include docsTopic($other); }
 
-	.topic-icon,
-	&.radial-out:before {
-		background: $color;
-	}
-}
-
-.topic-intro   { @include topic($intro); }
-.topic-auth    { @include topic($auth); }
-.topic-data    { @include topic($data); }
-.topic-email   { @include topic($email); }
-.topic-hosting { @include topic($hosting); }
-.topic-other   { @include topic($other); }
-
-.guide-lang-intro   { @include lang($intro); }
-.guide-lang-auth    { @include lang($auth); }
-.guide-lang-data    { @include lang($data); }
-.guide-lang-email   { @include lang($email); }
-.guide-lang-hosting { @include lang($hosting); }
-.guide-lang-other   { @include lang($other); }
+.guide-topic-intro   { @include guideTopic($intro); }
+.guide-topic-auth    { @include guideTopic($auth); }
+.guide-topic-data    { @include guideTopic($data); }
+.guide-topic-email   { @include guideTopic($email); }
+.guide-topic-hosting { @include guideTopic($hosting); }
+.guide-topic-other   { @include guideTopic($other); }

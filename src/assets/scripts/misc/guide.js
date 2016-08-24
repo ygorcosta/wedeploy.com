@@ -21,9 +21,9 @@ var sideGuideInput = document.querySelector('.sidebar-search .form-control');
 
 var sideGuideAutocomplete = new metal.Autocomplete({
 	inputElement: sideGuideInput,
-	elementClasses: 'guide-lang-' + sideGuideInput.dataset.lang,
+	elementClasses: 'guide-topic-' + sideGuideInput.dataset.topic,
 	data: function(query) {
-		var docs = Launchpad.url('http://liferay.io/docs/search').path(sideGuideInput.dataset.lang);
+		var docs = Launchpad.url('http://liferay.io/docs/search').path(sideGuideInput.dataset.topic);
 
 		if (query) {
 			docs.search('*', 'prefix', query).limit(3).highlight('content');
