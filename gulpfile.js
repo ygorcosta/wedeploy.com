@@ -91,7 +91,7 @@ gulp.task('pages-search', function() {
 		.pipe(gulp.dest('dist/docs/search'));
 });
 
-gulp.task('pages-docs', function() {
+gulp.task('pages-docs', ['pages-docs-redirect'], function() {
 	return gulp.src('src/content/docs/index.html')
 		.pipe(layout({
 			layout: 'src/layouts/docs.html',
@@ -100,7 +100,7 @@ gulp.task('pages-docs', function() {
 		.pipe(gulp.dest('dist/docs'));
 });
 
-gulp.task('pages-guide-html', function() {
+gulp.task('pages-docs-redirect', function() {
 	return gulp.src('src/content/docs/**')
 		.pipe(gulp.dest('dist/docs'));
 });
@@ -119,7 +119,7 @@ gulp.task('pages-faq', function() {
 		.pipe(gulp.dest('dist/faq'));
 });
 
-gulp.task('pages-guide-md', function() {
+gulp.task('pages-guide', function() {
 	return gulp.src('bower_components/docs/**')
 		.pipe(markdown())
 		.pipe(replace('<!-- ', ''))
@@ -177,8 +177,8 @@ gulp.task('deploy', ['cname', 'build'], function() {
 
 gulp.task('build', [
 	'styles', 'vendor-styles', 'fonts', 'scripts', 'vendor-scripts', 'metal:build:js',
-	'images', 'pages-home', 'pages-search', 'pages-docs', 'pages-faq',
-	'pages-guide-html', 'pages-guide-md', 'registry'
+	'images', 'pages-home', 'pages-search', 'pages-faq', 'pages-docs', 'pages-guide',
+	'registry'
 ]);
 
 gulp.task('server', ['build'], function() {
