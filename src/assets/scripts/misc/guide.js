@@ -125,6 +125,6 @@ if (affix) {
 
 var affix = new metal.Affix({
 	element: '.docs-nav',
-	offsetTop: 250,
+	offsetTop: 450,
 	offsetBottom: 470
 });

@@ -80,6 +80,15 @@
 	display: none;
 }
 
+.docs-nav.affix {
+	top: 20px;
+}
+
+.docs-nav.affix-top {
+	position: absolute;
+	top: 0;
+}
+
 .docs-nav-group a {
 	@include anim(color);
 	color: rgba($primary, .8);
