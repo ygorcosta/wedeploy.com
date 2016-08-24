@@ -118,13 +118,21 @@ var progress = new metal.ReadingProgress({
 	}
 }, '#reading-container');
 
+/* ==========================================================================
+	 Reading Progress Affix
+	 ========================================================================== */
+
 if (affix) {
 	affix.dispose();
 	affix = null;
 }
 
+var topicsElement = document.querySelector('.guide-topics');
+var docsNavOffsetTop = topicsElement ? 450 : 330;
+var docsNavOffsetBottom = 470;
+
 var affix = new metal.Affix({
 	element: '.docs-nav',
-	offsetTop: 450,
-	offsetBottom: 470
+	offsetTop: docsNavOffsetTop,
+	offsetBottom: docsNavOffsetBottom
 });
