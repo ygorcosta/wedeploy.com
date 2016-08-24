@@ -110,26 +110,26 @@
 					</ul>
 				</li>
 				<li class="sidebar-item">
-					<a class="sidebar-link" href="/docs/data/">
+					<a class="sidebar-link" href="/docs/data/js">
 						<span class="sidebar-icon icon-16-database"></span>
 						<span>Data</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if topic != 'data' %}hidden{% endif %}">
 						<li class="sidebar-item">
-							<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/">
+							<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/{{section}}/">
 								<span>Getting Started</span>
 							</a>
-							<a class="sidebar-link {%if basename == saving-data' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/saving-data.html">
+							<a class="sidebar-link {%if basename == saving-data' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/{{section}}/saving-data.html">
 								<span>Saving Data</span>
 							</a>
-							<a class="sidebar-link {%if basename == retrieving-data' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/retrieving-data.html">
+							<a class="sidebar-link {%if basename == retrieving-data' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/{{section}}/retrieving-data.html">
 								<span>Retrieving Data</span>
 							</a>
-							<a class="sidebar-link {%if basename == searching-data' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/searching-data.html">
+							<a class="sidebar-link {%if basename == searching-data' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/{{section}}/searching-data.html">
 								<span>Searching Data</span>
 							</a>
-							<a class="sidebar-link {%if basename == watching-data' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/watching-data.html">
-								<span>Watching Data</span>
+							<a class="sidebar-link {%if basename == watching-data' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/{{section}}/real-time-feeds.html">
+								<span>Real-time feeds</span>
 							</a>
 						</li>
 					</ul>
