@@ -1,6 +1,6 @@
 $intro: #ff6e00;
 $auth: #9552ef;
-$data: #77d55a;
+$data: $accent;
 $email: #ffb700;
 $hosting: #00a4ff;
 $other: #ff536b;
@@ -22,7 +22,8 @@ $other: #ff536b;
 		background: $color;
 	}
 
-	.topbar-inverse .topbar-link.topbar-link-selected {
+	&.topbar.topbar-inverse .topbar-link.topbar-link-selected,
+	&.topbar.topbar-light .topbar-link.topbar-link-selected {
 		color: $color;
 	}
 
@@ -188,6 +189,7 @@ $other: #ff536b;
 .topic-hosting { @include docsTopic($hosting); }
 .topic-other   { @include docsTopic($other); }
 
+.topbar-docs-aux		 { @include guideTopic($accent); }
 .guide-topic-intro   { @include guideTopic($intro); }
 .guide-topic-auth    { @include guideTopic($auth); }
 .guide-topic-data    { @include guideTopic($data); }

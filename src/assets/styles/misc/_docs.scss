@@ -39,6 +39,7 @@
 			border-radius: 50%;
 			display: inline-block;
 			text-align: center;
+			background: $accent;
 		}
 
 		.deploy {
@@ -59,7 +60,8 @@
 
 }
 
-.topbar.topbar-inverse .topbar-link {
+.topbar.topbar-inverse .topbar-link,
+.topbar.topbar-light .topbar-link {
 	height: 48px;
 	line-height: 48px;
 	margin-top: 24px;
