@@ -148,7 +148,7 @@ function updateLangURLs() {
 		var sideLinks = document.querySelectorAll('.sidebar-link');
 
 		sideLinks.forEach(function(sideLink) {
-			sideLink.href = sideLink.href.replace(/(js)|(java)|(rest)/g, docsLang);
+			sideLink.href = sideLink.href.replace(/(\/js)|(\/java)|(\/rest)/g, '/' + docsLang);
 		});
 	}
 }
