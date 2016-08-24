@@ -9,7 +9,118 @@
 
 {% block markup %}
 	<main class="docs">
-		{{contents}}
+
+		<nav class="sidebar">
+			<a class="sidebar-header toggler-header-collapsed">
+				<span class="sidebar-icon icon-16-menu"></span>
+				<span>Docs Menu</span>
+				<span class="sidebar-icon-right">
+					<span class="icon-12-arrow-down-short"></span>
+					<span class="icon-12-arrow-up-short"></span>
+				</span>
+			</a>
+			<ul class="sidebar-list sidebar-list-1 toggler-collapsed">
+				<li class="sidebar-item">
+					<form class="sidebar-search" action="/docs/search/" method="GET" enctype="multipart/form-data">
+						<div class="form-group">
+							<div class="input-inner-addon input-inner-addon-right">
+								<input name="q" class="form-control" type="text" placeholder="Search Docs" autocomplete="off" required>
+								<span class="input-inner-icon-helper icon-16-magnifier"></span>
+							</div>
+						</div>
+					</form>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link sidebar-link-selected" href="/docs/">
+						<span class="sidebar-icon icon-16-house"></span>
+						<span>Docs Home</span>
+					</a>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/intro/">
+						<span class="sidebar-icon icon-16-arrow-right-rod"></span>
+						<span>Intro</span>
+					</a>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/auth/js/">
+						<span class="sidebar-icon icon-16-persons"></span>
+						<span>Auth</span>
+					</a>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/data/js/">
+						<span class="sidebar-icon icon-16-database"></span>
+						<span>Data</span>
+					</a>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/email/js/">
+						<span class="sidebar-icon icon-16-mail-full"></span>
+						<span>Email</span>
+					</a>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/hosting/">
+						<span class="sidebar-icon icon-16-folder"></span>
+						<span>Hosting</span>
+					</a>
+				</li>
+				<li class="sidebar-item">
+					<a class="sidebar-link" href="/docs/other/">
+						<span class="sidebar-icon icon-16-module"></span>
+						<span>Other</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="sidebar-offset">
+			<nav class="topbar topbar-light topbar-docs">
+				<div class="topbar-logo">
+					<a class="topbar-logo-link" href="/">
+						<span class="wedeploy-logo">
+							<span class="we">We</span>
+							<span class="deploy">Deploy™</span>
+							<span class="liferay">by Liferay</span>
+						</span>
+					</a>
+				</div>
+				<ul class="topbar-list">
+					<li class="topbar-item">
+						<a class="topbar-link" href="/docs">Docs</a>
+					</li>
+					<li class="topbar-item">
+						<a class="topbar-link" href="http://dashboard.wedeploy.io/login/signin" data-senna-off>Login</a>
+					</li>
+				</ul>
+			</nav>
+			{{contents}}
+			<div class="newsletter">
+				<div class="container-hybrid">
+					<div class="row">
+						<div class="col-md-12 col-md-offset-2 col-xs-16">
+							<span class="newsletter-avatar">
+								<span class="icon-16-mail"></span>
+							</span>
+							<h2 class="newsletter-subtitle">Couldn't find what you want?</h1>
+							<p class="newsletter-description">Don't worry, we're constantly working on improvements. Stay tuned!</p>
+							<form autocomplete="off" class="row newsletter-form">
+								<div class="col-md-9 col-md-offset-2 col-xs-16">
+									<div class="form-group">
+										<input class="form-control input-inverse-accent" name="email" type="email" placeholder="Your email address" required>
+									</div>
+								</div>
+								<div class="col-md-5 col-xs-16">
+									<input class="btn btn-inverse-accent btn-sm" type="submit" value="Subscribe">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</main>
 {% endblock %}
 
