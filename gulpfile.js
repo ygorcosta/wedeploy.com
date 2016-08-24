@@ -100,6 +100,11 @@ gulp.task('pages-docs', function() {
 		.pipe(gulp.dest('dist/docs'));
 });
 
+gulp.task('pages-guide-html', function() {
+	return gulp.src('src/content/docs/**')
+		.pipe(gulp.dest('dist/docs'));
+});
+
 // Markdown --------------------------------------------------------------------
 
 gulp.task('pages-faq', function() {
@@ -114,7 +119,7 @@ gulp.task('pages-faq', function() {
 		.pipe(gulp.dest('dist/faq'));
 });
 
-gulp.task('pages-guide', function() {
+gulp.task('pages-guide-md', function() {
 	return gulp.src('bower_components/docs/**')
 		.pipe(markdown())
 		.pipe(replace('<!-- ', ''))
@@ -172,8 +177,8 @@ gulp.task('deploy', ['cname', 'build'], function() {
 
 gulp.task('build', [
 	'styles', 'vendor-styles', 'fonts', 'scripts', 'vendor-scripts', 'metal:build:js',
-	'images', 'pages-home', 'pages-search', 'pages-docs', 'pages-faq', 'pages-guide',
-	'registry'
+	'images', 'pages-home', 'pages-search', 'pages-docs', 'pages-faq',
+	'pages-guide-html', 'pages-guide-md', 'registry'
 ]);
 
 gulp.task('server', ['build'], function() {
