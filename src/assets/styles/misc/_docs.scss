@@ -1,11 +1,17 @@
 /* Topbar
    ========================================================================== */
 
+.topbar.topbar-inverse {
+	background: rgba($primary, .02);
+	height: 84px;
+}
+
 .topbar.topbar-inverse.topbar-docs {
 	position: static;
 	top: 0;
 	width: 100%;
 	z-index: 1000;
+	background: rgba($primary, .02);
 }
 
 .topbar-docs-aux {
@@ -15,6 +21,54 @@
 .topbar-docs-main {
 	display: block;
 }
+
+.topbar .topbar-logo {
+	margin: 0;
+
+	.wedeploy-logo {
+		margin-top: 20px;
+
+		.we {
+			height: 48px;
+			width: 48px;
+			line-height: 48px;
+			color: $white;
+			font-size: 24px;
+			font-family: $font-family-secondary-semibold;
+			font-weight: 400;
+			border-radius: 50%;
+			display: inline-block;
+			text-align: center;
+		}
+
+		.deploy {
+			font-size: 24px;
+			line-height: 48px;
+			font-family: $font-family-secondary-bold;
+			font-weight: 400;
+			color: rgba($primary, .9);
+		}
+
+		.liferay {
+			color: rgba($primary, .3);
+			font-family: $font-family-secondary;
+			font-weight: 400;
+			font-size: 12px;
+		}
+	}
+
+}
+
+.topbar.topbar-inverse .topbar-link {
+	height: 48px;
+	line-height: 48px;
+	margin-top: 24px;
+	display: inline-block;
+	font-family: $font-family-secondary-semibold;
+	font-weight: 400;
+	color: rgba($primary, 0.6);
+}
+
 
 /* Navigation
    ========================================================================== */
@@ -384,8 +438,14 @@
 
 /* Medium screens
    ========================================================================== */
+@media (max-width: $screen-md-min) {
+	.docs .sidebar-offset {
+		padding-top: 60px;
+	}
+}
 
 @media (min-width: $screen-md-min) {
+
 	.topbar-docs-aux {
 		display: flex;
 	}

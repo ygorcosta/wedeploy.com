@@ -2,21 +2,22 @@
    ========================================================================== */
 
 .guide-header {
-	background: $accent;
+	background: rgba($primary, 0.02);
 	text-align: center;
-	padding: 80px 0 40px;
+	padding: 108px 0 96px;
 }
 
 .guide-header-title {
-	color: white;
+	color: rgba($primary, .9);
 	font-family: $font-family-secondary-bold;
-	font-size: 52px;
+	font-size: 53px;
 	font-weight: 400;
-	margin: 0;
+	line-height: 60px;
 }
 
 .guide-header-title span {
-	font-family: $font-family-secondary-semibold;
+	color: rgba($primary, .9);
+	font-family: $font-family-secondary-bold;
 	font-weight: 400;
 }
 
@@ -118,6 +119,10 @@
 
 .guide-topic .sidebar-list-2 .sidebar-link {
 	padding-left: 56px;
+}
+
+.docs .reading-progress {
+	width: 100%;
 }
 
 /* Medium screens

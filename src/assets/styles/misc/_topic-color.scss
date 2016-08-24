@@ -18,8 +18,12 @@ $other: #ff536b;
 
 	// Topbar --------------------------------------------------------------------
 
-	&.topbar.topbar-inverse {
+	&.topbar.topbar-inverse .we {
 		background: $color;
+	}
+
+	.topbar-inverse .topbar-link.topbar-link-selected {
+		color: $color;
 	}
 
 	// Sidebar -------------------------------------------------------------------
@@ -123,12 +127,6 @@ $other: #ff536b;
 
 	.btn-inverse-accent {
 		color: $color;
-	}
-
-	// Guide header --------------------------------------------------------------
-
-	.guide-header {
-		background: $color;
 	}
 
 	// Newsletter ----------------------------------------------------------------
