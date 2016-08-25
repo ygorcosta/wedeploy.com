@@ -17,16 +17,21 @@ if (sideGuideAutocomplete) {
 	sideGuideAutocomplete = null;
 }
 
+var docsLang = localStorage.getItem('docsLang') || 'js';
+
 var sideGuideInput = document.querySelector('.sidebar-search .form-control');
 
 var sideGuideAutocomplete = new metal.Autocomplete({
 	inputElement: sideGuideInput,
 	elementClasses: 'guide-topic-' + sideGuideInput.dataset.topic,
 	data: function(query) {
-		var docs = Launchpad.url('http://liferay.io/docs/search').path(sideGuideInput.dataset.topic);
+		var docs = Launchpad.url('http://liferay.io/wedeploy/docs');
 
 		if (query) {
-			docs.search('*', 'prefix', query).limit(3).highlight('content');
+			docs.search('*', 'prefix', query)
+				.search(Filter.equal('lang', docsLang).or('lang', 'none'))
+				.limit(3)
+				.highlight('content');
 		}
 
 		return docs.get().then(function(response) {
@@ -35,7 +40,7 @@ var sideGuideAutocomplete = new metal.Autocomplete({
 	},
 	format: function(item) {
 		return {
-			textPrimary: '<a class="autocomplete-link" href=".' + item.path + '">' +
+			textPrimary: '<a class="autocomplete-link" href="' + item.path + '">' +
 				'<p class="autocomplete-title">' + item.title + '</p>' +
 				'<p class="autocomplete-text">' + item.content.substr(0, 100) + '...</p></a>'
 		};

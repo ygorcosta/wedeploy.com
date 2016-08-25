@@ -21,8 +21,10 @@
     "gulp-metal": "^1.5.3",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.0.1",
+    "node-dir": "^0.1.16",
     "nunjucks": "^2.1.0",
     "remove-markdown": "zacharyfmarion/remove-markdown#master",
-    "request": "^2.65.0"
+    "request": "^2.65.0",
+    "striptags": "^2.1.1"
   }
 }
