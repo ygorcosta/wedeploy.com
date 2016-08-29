@@ -1,4 +1,9 @@
-window.toggler = new metal.Toggler({
+if (menuToggler) {
+	menuToggler.dispose();
+	menuToggler = null;
+}
+
+var menuToggler = new metal.Toggler({
 	content: '.sidebar-list-1',
 	header: '.sidebar-header'
 });
