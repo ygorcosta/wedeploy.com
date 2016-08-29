@@ -30,6 +30,10 @@
 	padding: 0;
 }
 
+.autocomplete .list .listitem:hover {
+	background: none;
+}
+
 .autocomplete .list .list-main-content {
 	margin: 0;
 	width: 100%;
@@ -40,6 +44,7 @@
 }
 
 .autocomplete-link {
+	@include anim(background);
 	cursor: pointer;
 	display: block;
 	padding: 20px;
