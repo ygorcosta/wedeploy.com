@@ -38,12 +38,14 @@ $other: #ff536b;
 
 	// Sidebar / Search ----------------------------------------------------------
 
-	.sidebar-inverse .sidebar-search .form-control:focus {
-		border-color: $color;
-	}
+	.sidebar-inverse .sidebar-search .form-control {
+		&:focus {
+			border-color: $color;
+		}
 
-	.sidebar-search .form-control:focus + .input-inner-icon-helper {
-		color: $color;
+		&:focus + .input-inner-icon-helper {
+			color: $color;
+		}
 	}
 
 	// Sidebar / First level -----------------------------------------------------

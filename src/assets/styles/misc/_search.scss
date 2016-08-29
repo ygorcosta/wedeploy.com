@@ -1,5 +1,9 @@
-.sidebar-search .form-control:focus {
-	border: 1px solid $accent;
+.sidebar-search .form-control {
+	border: 1px solid transparent;
+
+	&:focus {
+		border: 1px solid $accent;
+	}
 }
 
 /* Search input
@@ -10,15 +14,23 @@
 }
 
 .search .form-control {
+	@include anim(all);
+	border: 1px solid transparent;
 	font-size: 16px;
-}
+	font-weight: 600;
 
-.search .form-control .input-inner-icon-helper {
-	@include anim(color);
-}
+	.input-inner-icon-helper {
+		@include anim(color);
+	}
 
-.search .form-control:focus + .input-inner-icon-helper {
-	color: $accent;
+	&:focus {
+		background: white;
+		border-color: $accent;
+	}
+
+	&:focus + .input-inner-icon-helper {
+		color: $accent;
+	}
 }
 
 /* Search results

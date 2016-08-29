@@ -321,21 +321,27 @@
 	text-align: center;
 }
 
-.docs-home-top-form .form-control .input-inner-icon-helper {
-	@include anim(color);
-}
+.docs-home-top-form .form-control {
+	@include anim(all);
+	border: 1px solid transparent;
+	font-weight: 600;
 
-.docs-home-top-form .form-control:focus {
-	background: white;
-	border: 1px solid $accent;
-}
+	.input-inner-icon-helper {
+		@include anim(color);
+	}
 
-.docs-home-top-form .form-control:focus + .input-inner-icon-helper {
-	color: $accent;
-}
+	&:focus {
+		background: white;
+		border-color: $accent;
+	}
 
-.docs-home-top-form .btn-sm {
-	width: 100%;
+	&:focus + .input-inner-icon-helper {
+		color: $accent;
+	}
+
+	.btn-sm {
+		width: 100%;
+	}
 }
 
 /* Home - Middle

@@ -154,10 +154,11 @@
 
 	.sidebar-inverse .sidebar-search .form-control {
 		background: white;
-	}
+		border: 1px solid transparent;
 
-	.sidebar-inverse .sidebar-search .form-control:focus {
-		border-color: white;
+		&:focus {
+			border-color: white;
+		}
 	}
 
 	// First level ---------------------------------------------------------------
