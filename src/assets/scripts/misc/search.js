@@ -30,6 +30,7 @@ function search(term) {
 		.search('*', 'prefix', term)
 		.search(Filter.equal('lang', docsLang).or('lang', 'none'))
 		.highlight('content')
+		.limit(100)
 		.get()
 		.then(function(result) {
 			var data = result.body();
