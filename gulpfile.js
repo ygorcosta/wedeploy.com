@@ -23,7 +23,7 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest('dist/styles'));
 });
 
-gulp.task('vendor-styles', ['vendor-styles-v2', 'vendor-styles-v3'], function() {
+gulp.task('vendor-styles', ['vendor-westyles'], function() {
 	return gulp.src([
 			'bower_components/senna/build/senna.css',
 			'bower_components/highlightjs/styles/tomorrow-night-eighties.css'
@@ -31,14 +31,9 @@ gulp.task('vendor-styles', ['vendor-styles-v2', 'vendor-styles-v3'], function() 
 		.pipe(gulp.dest('dist/styles/vendor'));
 });
 
-gulp.task('vendor-styles-v2', function() {
-	return gulp.src(['bower_components/westyle-v2/build/**'])
-		.pipe(gulp.dest('dist/styles/vendor/westyle-v2'));
-});
-
-gulp.task('vendor-styles-v3', function() {
-	return gulp.src(['bower_components/westyle-v3/build/**'])
-		.pipe(gulp.dest('dist/styles/vendor/westyle-v3'));
+gulp.task('vendor-westyles', function() {
+	return gulp.src(['node_modules/westyle/build/**'])
+		.pipe(gulp.dest('dist/styles/vendor/westyle'));
 });
 
 // Fonts -----------------------------------------------------------------------

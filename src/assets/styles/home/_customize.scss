@@ -76,32 +76,6 @@ input:-webkit-autofill {
 	color: rgba($primary, 0.4);
 }
 
-.topbar .btn {
-	height: ($baseline * 4);
-	line-height: 46px;
-	font-size: 15px;
-	font-weight: 400;
-}
-
-.topbar .btn--theme {
-	font-family: 'galano-semibold', sans-serif;
-	margin-left: 20px;
-}
-
-.topbar .btn--default {
-	font-family: 'galano-medium', sans-serif;
-}
-
-.topbar .btn--transparent {
-	font-family: 'galano-medium', sans-serif;
-	margin-right: 20px;
-	color: rgba($primary, 0.6);
-
-	&:hover {
-		color: rgba($primary, 0.4);
-	}
-}
-
 .no-padding {
 	padding: 0;
 }
@@ -110,8 +84,10 @@ input:-webkit-autofill {
 	padding-right: 0;
 }
 
-.btn--sm {
+.btn-sm {
 	padding: 0 19px;
+	line-height: 48px;
+	font-size: 14px;
 }
 
 .flex-left-center {
