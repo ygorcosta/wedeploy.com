@@ -64,21 +64,13 @@
 	}
 }
 
-.topbar {
-	height: ($baseline * 7);
-	padding: ($baseline * 1) 0 ($baseline * 2);
-}
+#topbar .topbar {
+	padding: ($baseline * 2) 0 ($baseline * 1);
 
-.topbar .topbar-logo {
-	margin: 0 0 0 1px;
-	background: url('../images/home/logotype/logo_by_liferay.svg') no-repeat;
-	background-size: $logo-width $logo-height;
-	text-indent: -9999px;
-	width: $logo-width;
-	height: $logo-height;
-}
-
-.topbar .topbar-list {
-	height: ($baseline * 4);
-	margin-top: 0;
+	.topbar-link {
+		color: rgba($primary, 0.6);
+		&:hover {
+			color: rgba($primary, 0.4);
+		}
+	}
 }
