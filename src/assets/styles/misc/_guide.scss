@@ -1,6 +1,7 @@
 /* Custom TopbarColor
 		========================================================================== */
-.topbar.topbar-inverse {
+.topbar.topbar-inverse,
+.topbar.topbar-light {
 	background: rgba($primary, 0.02);
 
 	.we {
@@ -141,6 +142,10 @@
 
 .docs-content img {
 	max-width: 100%;
+}
+
+.docs-content em {
+	font-style: normal;
 }
 
 .guide-topic .sidebar-list-2 .sidebar-link {

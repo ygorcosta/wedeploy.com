@@ -102,6 +102,7 @@ $other: #ff536b;
 	// Button default ------------------------------------------------------------
 
 	.btn-default {
+		background-color: rgba($color, .05);
 		color: $color;
 		border-color: $color;
 	}
@@ -109,19 +110,19 @@ $other: #ff536b;
 	.btn-default:hover,
 	.btn-default:focus,
 	.btn-default.focus {
-		background-color: rgba($color, .1);
+		background-color: rgba($color, .2);
 		border-color: $color;
 	}
 
 	// Button active -------------------------------------------------------------
 
 	.btn-active {
-		background: rgba($color, .3);
+		background: rgba($color, .2);
 
 		&:hover,
 		&:focus,
 		&.focus {
-			background-color: rgba($color, .3);
+			background-color: rgba($color, .2);
 			border-color: $color;
 		}
 	}
