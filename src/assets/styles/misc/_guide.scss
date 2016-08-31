@@ -1,5 +1,30 @@
+/* Custom TopbarColor
+		========================================================================== */
+.topbar.topbar-inverse {
+	background: rgba($primary, 0.02);
+
+	.we {
+		color: $white;
+	}
+	.deploy {
+		color: rgba($primary, 0.9);
+		display: inline-block;
+	}
+	.liferay {
+		color: rgba($primary, 0.4);
+		display: inline-block;
+	}
+
+	.topbar-link {
+			color: rgba($primary, 0.6);
+		&:hover {
+			color: rgba($primary, 0.4);
+		}
+	}
+}
+
 /* Header
-   ========================================================================== */
+		========================================================================== */
 
 .guide-header {
 	background: rgba($primary, 0.02);
