@@ -86,14 +86,20 @@
 }
 
 .search-feedback {
-	margin: 65px 0 32px;
+	margin: 60px 0 24px;
+	line-height: 36px;
+	font-size: 18px;
+	color: rgba($primary, .8);
+	font-weight: 600;
+}
+.search-feedback-btn.btn-accent {
+	padding: 0 72px;
 }
 
 .search-feedback-btn.btn-default {
 	background: white;
 	border-color: $accent;
 	color: $accent;
-	margin-bottom: 65px;
 }
 
 .search-feedback-btn.btn-default:hover,

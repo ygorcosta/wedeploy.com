@@ -80,12 +80,6 @@ $other: #ff536b;
 		}
 	}
 
-	// Feedback ------------------------------------------------------------------
-
-	.guide-feedback {
-		background: rgba($color, .1);
-	}
-
 	// Button accent -------------------------------------------------------------
 
 	.btn-accent {
@@ -133,12 +127,6 @@ $other: #ff536b;
 		color: $color;
 	}
 
-	// Newsletter ----------------------------------------------------------------
-
-	.newsletter {
-		background: $color;
-	}
-
 	// Docs ----------------------------------------------------------------------
 
 	.docs-content a {
@@ -152,7 +140,6 @@ $other: #ff536b;
 
 	.docs-content code {
 		background: rgba($color, 0.1);
-		border: 1px solid $color;
 		color: $color;
 	}
 

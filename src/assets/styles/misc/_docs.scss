@@ -179,9 +179,10 @@
 
 .docs-content code {
 	background: rgba($accent, 0.1);
-	border: 1px solid $accent;
+	border: 0px solid $accent;
 	color: $accent;
-	padding: 2px;
+	padding: 3px;
+	font-weight: 600;
 }
 
 .docs-content pre {
@@ -343,20 +344,29 @@
    ========================================================================== */
 
 .newsletter {
-	background: $accent;
+	background: rgba($primary, .02);
+	padding: 132px 0 0;
 }
 
-.newsletter-subtitle,
-.newsletter-description {
-	color: white;
+.newsletter .newsletter-subtitle {
+	font-size: 33px;
+	font-family: $font-family-secondary-bold;
+	color: rgba($primary, 0.8);
+	line-height: 48px;
+	font-weight: 400;
+	margin: 0 0 12px;
 }
 
-.newsletter-subtitle {
-	font-size: 25px;
+.newsletter .newsletter-description {
+	font-size: 18px;
+	font-family: $font-family-sans-serif;
+	color: rgba($primary, 0.6);
+	line-height: 36px;
+	font-weight: 600;
 }
 
 .newsletter-form {
-	margin: 56px 0 72px;
+	margin: 60px 0 120px;
 }
 
 .newsletter .form-group {
@@ -367,7 +377,7 @@
 	background: transparent;
 	border-radius: 50%;
 	border: 1px solid white;
-	display: block;
+	display: none;
 	height: 84px;
 	margin: 72px auto 42px;
 	text-align: center;
@@ -378,10 +388,6 @@
 	color: white;
 	font-size: 32px;
 	line-height: 84px;
-}
-
-.newsletter .btn-sm {
-	width: 100%;
 }
 
 /* Medium screens
