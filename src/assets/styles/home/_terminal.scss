@@ -156,7 +156,7 @@
 #browser .browser__topbar .topbar__projects [class^="icon-12-"],
 #browser .browser__topbar .topbar__projects [class*="icon-12-"] {
 	margin-left: 13px;
-	line-height: 20px;
+	line-height: 23px;
 }
 
 #browser .browser__topbar .topbar-link {
@@ -186,8 +186,8 @@
 	color: $white;
 	flex: 0 1 auto;
 	margin: 0;
-	position: flex;
-	top: 0;
+	position: relative;
+	top: -1px;
 }
 
 //INSIDE TERMINAL
