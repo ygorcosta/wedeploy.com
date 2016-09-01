@@ -11,7 +11,7 @@
     "metal-autocomplete": "^1.0.0-rc.3",
     "metal-reading-progress": "^1.0.0-rc.1",
     "metal-toggler": "^v1.0.0-rc.1",
-    "westyle": "wedeploy/westyle#v2.0.x"
+    "westyle": "wedeploy/westyle#master"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

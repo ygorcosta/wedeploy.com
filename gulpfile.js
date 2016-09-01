@@ -19,7 +19,7 @@ metal.registerTasks({
 
 gulp.task('styles', function() {
 	return gulp.src('src/assets/styles/**/*.scss')
-		.pipe(sass({includePaths: ['bower_components']}))
+		.pipe(sass({includePaths: ['node_modules']}))
 		.pipe(gulp.dest('dist/styles'));
 });
 
