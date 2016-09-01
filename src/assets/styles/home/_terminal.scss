@@ -346,6 +346,7 @@
 
 #browser .browser__project-item .project-item__icon span {
 	color: rgba($primary, .5);
+	font-size: 24px;
 }
 
 //INFO
@@ -360,6 +361,10 @@
 	@media (min-width: 1440px) {
 		width: 130px;
 	}
+}
+
+.project-item__content {
+	box-shadow: 0 2px 8px rgba(14, 20, 26, 0.1);
 }
 
 .project-item__content p {
@@ -417,10 +422,6 @@
 }
 
 //STATUS
-//.project-item__status {
-//	margin-top: ($baseline * 4);
-//	margin-left: ($unit * 5);
-//}
 
 p.project-item__status {
 	font-size: 12px;
@@ -460,6 +461,7 @@ p.project-item__status span.text {
 
 .project-item__menu span {
 	color: rgba($primary, .6);
+	font-size: 12px;
 }
 
 //TERMINAL CLI
