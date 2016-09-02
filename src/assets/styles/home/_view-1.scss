@@ -2,7 +2,7 @@
 	position:relative;
 
 	@media (min-width: 1280px) and (min-height: 768px) {
-		height: calc(100% - 204px);
+		height: calc(100vh - 204px);
 		min-height: 552px;
 		//height: ($baseline * 73);
 	}
