@@ -8,6 +8,27 @@
 {% endblock %}
 
 {% block markup %}
+
+	<nav class="topbar topbar-light topbar-docs hidden-md hidden-lg">
+		<div class="topbar-logo">
+			<a class="topbar-logo-link" href="/">
+				<span class="wedeploy-logo">
+					<span class="we">We</span>
+					<span class="deploy">Deploy™</span>
+					<span class="liferay">by Liferay</span>
+				</span>
+			</a>
+		</div>
+		<ul class="topbar-list">
+			<li class="topbar-item">
+				<a class="topbar-link" href="/docs">Docs</a>
+			</li>
+			<li class="topbar-item">
+				<a class="topbar-link" href="http://dashboard.wedeploy.io/login/signin" data-senna-off>Login</a>
+			</li>
+		</ul>
+	</nav>
+
 	<main class="docs">
 
 		<nav class="sidebar">
@@ -76,7 +97,7 @@
 		</nav>
 
 		<div class="sidebar-offset">
-			<nav class="topbar topbar-light topbar-docs">
+			<nav class="topbar topbar-light topbar-docs hidden-xs hidden-sm">
 				<div class="topbar-logo">
 					<a class="topbar-logo-link" href="/">
 						<span class="wedeploy-logo">
@@ -95,27 +116,26 @@
 					</li>
 				</ul>
 			</nav>
+
 			{{contents}}
 			<div class="newsletter">
 				<div class="container-hybrid">
 					<div class="row">
-						<div class="col-md-12 col-md-offset-2 col-xs-16">
-							<span class="newsletter-avatar">
-								<span class="icon-16-mail"></span>
-							</span>
-							<h2 class="newsletter-subtitle">Couldn't find what you want?</h1>
-							<p class="newsletter-description">Don't worry, we're constantly working on improvements. Stay tuned!</p>
-							<form autocomplete="off" class="row newsletter-form">
-								<div class="col-md-9 col-md-offset-2 col-xs-16">
-									<div class="form-group">
-										<input class="form-control input-inverse-accent" name="email" type="email" placeholder="Your email address" required>
-									</div>
+						<span class="newsletter-avatar">
+							<span class="icon-16-mail"></span>
+						</span>
+						<h2 class="newsletter-subtitle">Couldn't find what you want?</h1>
+						<p class="newsletter-description">Don't worry, we're constantly working on improvements. Stay tuned!</p>
+						<form autocomplete="off" class="row newsletter-form">
+							<div class="col-md-7 col-md-offset-3 col-xs-16">
+								<div class="form-group">
+									<input class="form-control" name="email" type="email" placeholder="Your email address" required>
 								</div>
-								<div class="col-md-5 col-xs-16">
-									<input class="btn btn-inverse-accent btn-sm" type="submit" value="Subscribe">
-								</div>
-							</form>
-						</div>
+							</div>
+							<div class="col-md-3 col-xs-16">
+								<input class="btn btn-accent" type="submit" value="Subscribe">
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

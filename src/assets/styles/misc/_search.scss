@@ -93,7 +93,9 @@
 	font-weight: 600;
 }
 .search-feedback-btn.btn-accent {
-	padding: 0 72px;
+	padding: 0 24px;
+	margin-bottom: 60px;
+	max-width: 278px;
 }
 
 .search-feedback-btn.btn-default {
@@ -116,5 +118,15 @@
 
 	#search-result-container {
 		margin-bottom: 65px;
+	}
+}
+
+@media (max-width: $screen-md-min) {
+	.search-result-aside {
+		text-align: center;
+	}
+
+	.search-feedback-btn.btn-accent {
+		margin: 0 auto 60px;
 	}
 }

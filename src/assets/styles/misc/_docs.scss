@@ -272,6 +272,10 @@
 	}
 }
 
+.docs-home-top-form .btn {
+		padding: 0;
+}
+
 /* Home - Middle
    ========================================================================== */
 
@@ -395,6 +399,18 @@
 @media (max-width: $screen-md-min) {
 	.docs .sidebar-offset {
 		padding-top: 60px;
+	}
+
+	.docs .sidebar-offset .topbar {
+		display: none;
+	}
+
+	.topbar.topbar-large .wedeploy-logo .liferay {
+		display: none;
+	}
+
+	.docs-home-top-form .btn {
+		margin-top: 24px;
 	}
 }
 
