@@ -173,42 +173,42 @@
 				</ul>
 			</nav>
 
-			<div class="container-hybrid">
-	<div class="row">
-		<div class="col-xs-16 col-md-10 col-md-offset-3">
-			<div class="search">
-				<div class="form-group">
-					<div class="input-inner-addon input-inner-addon-right">
-						<input id="search-input" class="form-control" type="text" placeholder="What are you looking for?">
-						<span class="input-inner-icon-helper icon-16-magnifier"></span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-16 col-md-10">
-			<div id="search-result-container"></div>
+			&lt;div class=&quot;container-hybrid&quot;&gt;
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;col-xs-16 col-md-10 col-md-offset-3&quot;&gt;
+			&lt;div class=&quot;search&quot;&gt;
+				&lt;div class=&quot;form-group&quot;&gt;
+					&lt;div class=&quot;input-inner-addon input-inner-addon-right&quot;&gt;
+						&lt;input id=&quot;search-input&quot; class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;What are you looking for?&quot;&gt;
+						&lt;span class=&quot;input-inner-icon-helper icon-16-magnifier&quot;&gt;&lt;/span&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;col-xs-16 col-md-10&quot;&gt;
+			&lt;div id=&quot;search-result-container&quot;&gt;&lt;/div&gt;
 
-			<script id="search-result-template" type="text/x-handlebars-template">
-			<p class="search-result-summary">Showing {{ total }} results for <strong>"{{ term }}"</strong>.</p>
+			&lt;script id=&quot;search-result-template&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+			&lt;p class=&quot;search-result-summary&quot;&gt;Showing {{ total }} results for &lt;strong&gt;&quot;{{ term }}&quot;&lt;/strong&gt;.&lt;/p&gt;
 			{{#each documents}}
-			<div class="search-result">
-				<div class="search-result-icon" style="background:{{ topic.iconBg }}">
-					<span class="{{ topic.icon }}"></span>
-				</div>
-				<a class="search-result-link" href="{{ path }}">{{ title }}</a>
-				<p class="search-result-text">{{{ trimString content }}}</p>
-			</div>
+			&lt;div class=&quot;search-result&quot;&gt;
+				&lt;div class=&quot;search-result-icon&quot; style=&quot;background:{{ topic.iconBg }}&quot;&gt;
+					&lt;span class=&quot;{{ topic.icon }}&quot;&gt;&lt;/span&gt;
+				&lt;/div&gt;
+				&lt;a class=&quot;search-result-link&quot; href=&quot;{{ path }}&quot;&gt;{{ title }}&lt;/a&gt;
+				&lt;p class=&quot;search-result-text&quot;&gt;{{{ trimString content }}}&lt;/p&gt;
+			&lt;/div&gt;
 			{{/each}}
-			</script>
-		</div>
-		<div class="search-result-aside col-xs-16 col-md-5 col-md-offset-1">
-			<p class="search-feedback">Do you have any questions?</p>
-			<a class="search-feedback-btn btn btn-accent btn-block" href="mailto:eduardo.lundgren@liferay.com">Contact Us!</a>
-		</div>
-	</div>
-</div>
+			&lt;/script&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;search-result-aside col-xs-16 col-md-5 col-md-offset-1&quot;&gt;
+			&lt;p class=&quot;search-feedback&quot;&gt;Do you have any questions?&lt;/p&gt;
+			&lt;a class=&quot;search-feedback-btn btn btn-accent btn-block&quot; href=&quot;mailto:eduardo.lundgren@liferay.com&quot;&gt;Contact Us!&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
 
 			<div class="newsletter">
 				<div class="container-hybrid">
