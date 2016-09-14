@@ -168,12 +168,16 @@
 						<span>Other</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if topic != 'other' %}hidden{% endif %}">
-						<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/">
-							<span>Getting Started with Maven</span>
-						</a>
-						<a class="sidebar-link {%if basename == 'nodejs' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/nodejs.html">
-							<span>Getting Started with Node.js</span>
-						</a>
+						<li class="sidebar-item">
+							<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/">
+								<span>Getting Started with Maven</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link {%if basename == 'nodejs' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/nodejs.html">
+								<span>Getting Started with Node.js</span>
+							</a>
+						</li>
 					</ul>
 				</li>
 			</ul>
@@ -189,7 +193,7 @@
 			<div class="container-hybrid">
 				<div class="docs-guide row">
 
-					{%if section %}
+					<!-- {%if section %}
 					<div class="guide-topics-container">
 						<div class="guide-topics btn-group">
 							<a href="/docs/{{topic}}/js{%if basename == 'index' %}/{% else %}/{{basename}}.html{% endif %}" class="btn btn-default {%if section == 'js' %}btn-active{% endif %}">
@@ -203,7 +207,7 @@
 							</a>
 						</div>
 					</div>
-					{% endif %}
+					{% endif %} -->
 
 					<div class="docs-content col-xs-16 col-md-9">
 						{{contents}}

@@ -231,12 +231,16 @@
 						<span>Other</span>
 					</a>
 					<ul class="sidebar-list sidebar-list-2 hidden">
-						<a class="sidebar-link " href="/docs/data/">
-							<span>Getting Started with Maven</span>
-						</a>
-						<a class="sidebar-link " href="/docs/data/nodejs.html">
-							<span>Getting Started with Node.js</span>
-						</a>
+						<li class="sidebar-item">
+							<a class="sidebar-link " href="/docs/data/">
+								<span>Getting Started with Maven</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link " href="/docs/data/nodejs.html">
+								<span>Getting Started with Node.js</span>
+							</a>
+						</li>
 					</ul>
 				</li>
 			</ul>
@@ -272,7 +276,7 @@
 			<div class="container-hybrid">
 				<div class="docs-guide row">
 
-					
+					<!-- 
 					<div class="guide-topics-container">
 						<div class="guide-topics btn-group">
 							<a href="/docs/data/js/retrieving-data.html" class="btn btn-default btn-active">
@@ -286,7 +290,7 @@
 							</a>
 						</div>
 					</div>
-					
+					 -->
 
 					<div class="docs-content col-xs-16 col-md-9">
 						<h1 id="retrieving-data">Retrieving data</h1>
@@ -352,10 +356,10 @@ client.orderBy(&#39;rating&#39;, &#39;desc&#39;)
 <h2 id="applying-filters">Applying filters</h2>
 <p>In addition to sorting the results, we can also apply filters using the following code:</p>
 <pre><code class="lang-js">WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;)
-   .where(&#39;year&#39;, &#39;&lt;&#39;, 2000)
-   .where(&#39;rating&#39;, &#39;&gt;&#39;, 8.5)
-   .get(&#39;movies&#39;)
-   .then(response =&gt; console.log(response));
+  .where(&#39;year&#39;, &#39;&lt;&#39;, 2000)
+  .or(&#39;rating&#39;, &#39;&gt;&#39;, 8.5)
+  .get(&#39;movies&#39;)
+  .then(response =&gt; console.log(response));
 </code></pre>
 <p>The following entries are the result of the above filters:</p>
 <pre><code class="lang-js">[
@@ -368,11 +372,11 @@ client.orderBy(&#39;rating&#39;, &#39;desc&#39;)
 <h2 id="pagination">Pagination</h2>
 <p>We can also paginate the result using the &#39;limit&#39; and &#39;offset&#39; properties. Combining all the tools we&#39;ve learned so far, we can run a detailed query on our data:</p>
 <pre><code class="lang-js">WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;)
-   .where(&#39;year&#39;, &#39;&gt;&#39;, 2000)
-   .orderBy(&#39;rating&#39;)
-   .limit(2)
-   .offset(1)
-   .get();
+  .where(&#39;year&#39;, &#39;&gt;&#39;, 2000)
+  .orderBy(&#39;rating&#39;)
+  .limit(2)
+  .offset(1)
+  .get();
 </code></pre>
 <p>Notice that filtering by year only returns episodes I, II, III, and VII. Applying the &#39;rating&#39; sort will give us this same order. We also limited the result to show only two documents and skip the first one. The final result is the following entries:</p>
 <pre><code class="lang-js">[

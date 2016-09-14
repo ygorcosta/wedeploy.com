@@ -1,4 +1,3 @@
-
 /* Navigation
    ========================================================================== */
 
@@ -415,6 +414,14 @@
 }
 
 @media (min-width: $screen-md-min) {
+	.docs .sidebar {
+		width: 284px;
+	}
+
+	.docs .sidebar-offset {
+		width: calc(100% - 284px);
+		margin-left: 284px;
+	}
 
 	.topbar-docs-aux {
 		display: flex;
