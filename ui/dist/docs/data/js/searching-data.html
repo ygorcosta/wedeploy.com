@@ -297,45 +297,35 @@
 <h6 id="searching-data-intro">Searching Data Intro</h6>
 <article id="search-data">
 <h2 id="search-data">Search Data</h2>
-<p>We did some great stuff with basic data methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with where, sort, and pagination. What if we need more powerful queries with our documents? In WeDeploy you can do a text search, handle user misspellings, and show the number of documents by category with your data, and much more.</p>
+<p>We did some great stuff with basic HTTP methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with filter, sort, and pagination. What if we need more powerful queries with our documents? In WeDeploy you can do a text search, handle user misspellings, and show the number of documents by category with your data, and much more.</p>
 <p>First take a look at the text search. It&#39;s a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let&#39;s search for a Star Wars movie by the episode title, like &quot;Revenge of the Sith&quot;. We are not interested if the letter is in upper or lower case, since we are using English connectors like &quot;of&quot; and &quot;the&quot;. We want something flexible enough that it will also work for texts like &quot;The revenge of the Sith&quot;, or &quot;Sith&#39;s revenge&quot;. Our match operator is flexible enough for both.</p>
-<pre><code class="lang-js">WeDeploy
-  .data()
-  .match(&#39;title&#39;, &quot;Sith&#39;s revenge&quot;)
-  .get(&#39;movies&#39;);
+<pre><code class="lang-js">WeDeploy.url(&#39;http://data.datademo.wedeploy.me/movies&#39;)
+  .get(Filter.match(&#39;title&#39;, &quot;Sith&#39;s revenge&quot;));
 </code></pre>
 <p>The result of the match operator query is the following entry:</p>
 <pre><code class="lang-js">[{&quot;id&quot;:&quot;star_wars_iii&quot;,&quot;title&quot;:&quot;Star Wars: Episode III - Revenge of the Sith&quot;,&quot;year&quot;:2005,&quot;rating&quot;:7.7}]
 </code></pre>
 <p>We can also use simple text operators in our match:</p>
 <pre><code class="lang-js">// we can run this
-WeDeploy
-  .data()
-  .match(&#39;title&#39;, &#39;(jedi | force) -return&#39;)
-  .get(&#39;movies&#39;);
+WeDeploy.url(&#39;http://data.datademo.wedeploy.me/movies&#39;)
+  .get(Filter.match(&#39;title&#39;, &#39;(jedi | force) -return&#39;));
 
 // or this
-WeDeploy
-  .data()
-  .match(&#39;title&#39;, &#39;awake*&#39;)
-  .get(&#39;movies&#39;);
+WeDeploy.url(&#39;http://data.datademo.wedeploy.me/movies&#39;)
+  .get(Filter.match(&#39;title&#39;, &#39;awake*&#39;));
 
 // or even this
-WeDeploy
-  .data()
-  .match(&#39;title&#39;, &#39;wakens~&#39;)
-  .get(&#39;movies&#39;);
+WeDeploy.url(&#39;http://data.datademo.wedeploy.me/movies&#39;)
+  .get(Filter.match(&#39;title&#39;, &#39;wakens~&#39;));
 </code></pre>
 <p>Any search in the previous example results in the following match:</p>
 <pre><code class="lang-js">[{&quot;id&quot;:&quot;star_wars_vii&quot;,&quot;title&quot;:&quot;Star Wars: Episode VII - The Force Awakens&quot;,&quot;year&quot;:2015}]
 </code></pre>
 <p>What we did with * can also be done with the prefix operator Filter.prefix(&#39;title&#39;, &#39;awake&#39;). The fuzziness we added to &#39;wakens&#39; using ~, can also be done explicitly with the fuzzy operator Filter.fuzzy(&#39;title&#39;, &#39;wakens&#39;).</p>
 <p>So far we are still just filtering data with filters. We can do so much more than that! If we use &#39;query search&#39; instead of &#39;filter&#39; to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:</p>
-<pre><code class="lang-js">WeDeploy
-  .data()
-  .similar(&#39;title&#39;, &#39;The attack an awaken Jedi uses to strike a Sith is pure force!&#39;)
-  .onSearch()
-  .get(&#39;movies&#39;);
+<pre><code class="lang-js">WeDeploy.url(&#39;http://data.datademo.wedeploy.me/movies&#39;)
+  .search(Filter.similar(&#39;title&#39;, &#39;The attack an awaken Jedi uses to strike a Sith is pure force!&#39;))
+  .get();
 </code></pre>
 <p>We receive not only the documents that match the filter, but also search metadata:</p>
 <pre><code class="lang-js">{
@@ -374,11 +364,10 @@ WeDeploy
 </code></pre>
 <p>Notice that the score of the star_wars_vii document is bigger than the other matches, indicating its title is more similar to the given filter than the others. The documents in the result are now ordered by the relevance of the document, expressed as a number in the scores metadata, rather than the document&#39;s ID. Now we can show not only filtered results, but also order our results by relevance!</p>
 <p>Want more? Well, let&#39;s make things even easier for the user! Adding one entry to the search query, we can automatically highlight the words that matched our query, showing not only how relevant the document is to the search, but also where it matches our criteria. We can do this with small changes in our previous search, using the following code:</p>
-<pre><code class="lang-js">WeDeploy.data()
-  .similar(&#39;title&#39;, &#39;The attack an awakened Jedi uses to strike a Sith is pure force!&#39;)
-  .onSearch()
+<pre><code class="lang-js">WeDeploy.url(&#39;http://data.datademo.wedeploy.me/movies&#39;)
+  .search(Filter.similar(&#39;title&#39;, &#39;The attack an awakened Jedi uses to strike a Sith is pure force!&#39;))
   .highlight(&#39;title&#39;)
-  .get(&#39;movies&#39;);
+  .get();
 </code></pre>
 <p>As you can see in the code below, our keywords are highlighted in the results:</p>
 <pre><code class="lang-js">{
@@ -416,14 +405,13 @@ WeDeploy
 }
 </code></pre>
 <p>The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? We can do that with aggregations, using the following code:</p>
-<pre><code class="lang-js">WeDeploy
-  .data()
-  .lt(&#39;year&#39;, 1990)
-  .aggregate(&#39;Old Movies&#39;, &#39;rating&#39;, &#39;avg&#39;)
-  .count()
-  .get(&#39;movies&#39;);
+<pre><code class="lang-js">WeDeploy.url(&#39;http://data.datademo.wedeploy.me/movies&#39;)
+   .filter(Filter.lt(&#39;year&#39;, 1990))
+   .aggregate(&#39;Old Movies&#39;, &#39;rating&#39;, &#39;avg&#39;)
+   .count()
+   .get();
 </code></pre>
-<p>The count we added to the query informed the server that we are not interested in the documents themselves, but rather the number of matches and search metadata. The result, in this case, will be the following data:</p>
+<p>The count we added to the query informed the server thatwe are not interested in the documents themselves, but rather the number of matches and search metadata. The result, in this case, will be the following data:</p>
 <pre><code class="lang-js">{
   &quot;total&quot;: 3,
   &quot;queryTime&quot;: 13,
@@ -451,6 +439,52 @@ WeDeploy
   }
 }
 </code></pre>
+<p>The last search feature we will cover here needs a little setup before we put our documents in the data store, but it&#39;s not as complicated as it sounds. First, let&#39;s cover some basics on the datatypes we support. As previously noted, we offer a JSON storage (we support all JSON types), with the restriction that arrays must be of elements of the same type. Once we put a new document in a collection, we can automatically derive the datatype of the added fields, and bind the fields to that datatype. So, if we try to run the following request:</p>
+<pre><code class="lang-js">WeDeploy
+  .url(&#39;http://data.datademo.wedeploy.me/places/my_place/foo&#39;)
+  .put(&quot;bar&quot;);
+</code></pre>
+<p>And then run the following request:</p>
+<pre><code class="lang-js">WeDeploy
+  .url(&#39;http://data.datademo.wedeploy.me/places/my_place/foo&#39;)
+  .put({ someObject: true });
+</code></pre>
+<p>We will receive an error:</p>
+<pre><code class="lang-js">{
+  &quot;code&quot;: 400,
+  &quot;message&quot;: &quot;Bad Request&quot;,
+  &quot;errors&quot;: [
+    {
+      &quot;reason&quot;: &quot;invalidDocumentValue&quot;,
+      &quot;message&quot;: &quot;Document cannot be saved. One or more document values could not be parsed to the correct type.&quot;
+    }
+  ]
+}
+</code></pre>
+<p>The error was triggered because we could not convert the given data to the data type bounded to that field. We can do simple conversions, such as between numbers and strings. However, whenever we fail, we will inform you something is wrong.</p>
+<p>To access those datatypes, request the root of your service with a &quot;GET&quot;, and you&#39;ll receive something like the following result:</p>
+<pre><code class="lang-js">WeDeploy
+  .url(&#39;http://data.datademo.wedeploy.me/&#39;)
+  .get()
+  .then(function(response) {
+    console.log( response.body() );
+  });
+</code></pre>
+<pre><code class="lang-js">[
+  {
+    &quot;movies&quot;: {
+      &quot;title&quot;: &quot;string&quot;,
+      &quot;year&quot;: &quot;long&quot;,
+      &quot;rating&quot;: &quot;double&quot;
+    }
+  },
+  {
+    &quot;places&quot;: {
+      &quot;foo&quot;: &quot;string&quot;
+    }
+  }
+]
+</code></pre>
 <p>Notice that in order to read and write your service&#39;s root path you need to map it with an API endpoint and data flag active.
 If we want to inform the server of the data type of a collection field before it receives its first document, we can POST/PATCH the data root with the mapping information:</p>
 <pre><code class="lang-js">WeDeploy
@@ -463,11 +497,10 @@ If we want to inform the server of the data type of a collection field before it
 </code></pre>
 <p>We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: date, geo_point, and geo_shape. We will focus on geo_point for this next feature.</p>
 <p>So, we mapped a field called location, in the collection places, as representing a geolocation point. This means we can operate, filter, and aggregate the places we put in that collection, using geo filters over this field! Let&#39;s try something simple: find cinemas close to London&#39;s Waterloo Station. To run the search criteria, we&#39;ll use the following code:</p>
-<pre><code class="lang-js">WeDeploy
-  .data()
-  .any(&#39;category&#39;, &#39;cinema&#39;)
-  .distance(&#39;location&#39;, &#39;51.5031653,-0.1123051&#39;, &#39;1mi&#39;)
-  .get(&#39;places&#39;);
+<pre><code class="lang-js">WeDeploy.url(&#39;http://data.datademo.wedeploy.me/places&#39;)
+   .filter(Filter.any(&#39;category&#39;, &#39;cinema&#39;))
+   .filter(Filter.distance(&#39;location&#39;, &#39;51.5031653,-0.1123051&#39;, &#39;1mi&#39;))
+   .get();
 </code></pre>
 <p>Our result is the following matches:</p>
 <pre><code class="lang-js">[
