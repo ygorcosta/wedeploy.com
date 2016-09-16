@@ -101,16 +101,14 @@ gulp.task('pages-docs-redirect', function() {
 
 // Markdown --------------------------------------------------------------------
 
-gulp.task('pages-faq', function() {
-	return gulp.src('src/content/faq/index.md')
+gulp.task('pages-terms', function() {
+	return gulp.src('src/content/terms/index.md')
 		.pipe(markdown())
-		.pipe(replace('<!-- ', ''))
-		.pipe(replace(' -->', ''))
 		.pipe(layout({
-			layout: 'src/layouts/faq.html',
+			layout: 'src/layouts/terms.html',
 			engine: 'nunjucks'
 		}))
-		.pipe(gulp.dest('dist/faq'));
+		.pipe(gulp.dest('dist/terms'));
 });
 
 gulp.task('pages-guide', function() {
@@ -152,7 +150,7 @@ gulp.task('pages-guide', function() {
 
 gulp.task('build', [
 	'styles', 'vendor-styles', 'fonts', 'scripts', 'vendor-scripts', 'metal:build:js',
-	'images', 'pages-home', 'pages-search', 'pages-faq', 'pages-docs', 'pages-guide'
+	'images', 'pages-home', 'pages-search', 'pages-terms', 'pages-docs', 'pages-guide'
 ]);
 
 gulp.task('server', ['build'], function() {

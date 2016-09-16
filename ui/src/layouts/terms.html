@@ -1,10 +1,14 @@
 {% extends "src/layouts/base.html" %}
 
 {% block markup %}
-	<nav class="topbar topbar-inverse topbar-docs">
+	<nav class="topbar topbar-light topbar-docs">
 		<div class="topbar-logo">
 			<a class="topbar-logo-link" href="/">
-				<span class="icon-12-wedeploy-logo"></span>
+				<span class="wedeploy-logo">
+					<span class="we">We</span>
+					<span class="deploy">Deploy™</span>
+					<span class="liferay">by Liferay</span>
+				</span>
 			</a>
 		</div>
 		<ul class="topbar-list">
@@ -21,7 +25,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-16 col-md-10 col-md-offset-3">
-					<article class="docs-content docs-faq">
+					<article class="docs-content docs-terms">
 						{{contents}}
 					</article>
 				</div>
