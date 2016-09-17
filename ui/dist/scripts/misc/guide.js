@@ -134,7 +134,7 @@ if (affix) {
 
 var topicsElement = document.querySelector('.guide-topics');
 var docsNavOffsetTop = topicsElement ? 450 : 330;
-var docsNavOffsetBottom = 470;
+var docsNavOffsetBottom = 260;
 
 var affix = new metal.Affix({
 	element: '.docs-nav',
