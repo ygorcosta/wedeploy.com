@@ -156,6 +156,9 @@
 							<a class="sidebar-link " href="/docs/data/js/">
 								<span>Getting Started</span>
 							</a>
+							<a class="sidebar-link " href="/docs/data/js/manage-users.html">
+								<span>Manage Users</span>
+							</a>
 							<a class="sidebar-link " href="/docs/data/js/sign-in-with-facebook.html">
 								<span>Sign-in With Facebook</span>
 							</a>
@@ -168,9 +171,7 @@
 							<a class="sidebar-link " href="/docs/data/js/sign-in-with-password.html">
 								<span>Sign-in With Password</span>
 							</a>
-							<a class="sidebar-link " href="/docs/data/js/manage-users.html">
-								<span>Manage Users</span>
-							</a>
+
 						</li>
 					</ul>
 				</li>
@@ -306,7 +307,9 @@
 <p>Reading data from our storage takes only 3 lines of code.</p>
 <pre><code class="lang-js">WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;)
   .get(&#39;movies/star_wars_v&#39;)
-  .then(response =&gt; console.log(response));
+  .then(function(movie) {
+    console.log(movie);
+  });
 </code></pre>
 <p>The response body is the stored JSON document:</p>
 <pre><code class="lang-js">{
@@ -320,7 +323,9 @@
 <pre><code class="lang-js">WeDeploy
   .data(&#39;http://datademo.wedeploy.io&#39;)
   .get(&#39;movies/star_wars_v/title&#39;)
-  .then(response =&gt; console.log(response));
+  .then(function(title) {
+    console.log(title);
+  });
 </code></pre>
 <p>The full path returns the raw content in the response body:</p>
 <p>Star Wars: Episode V - The Empire Strikes Back
@@ -339,11 +344,13 @@ Requesting the entire movies collection using curl -X &quot;GET&quot; &quot;<a h
 <article id="sorting-data">
 <h2 id="sorting-data">Sorting Data</h2>
 <p>The result is ordered by document id, as we can see in the list above. We can select the order of the results by passing a sort parameter, using the following code:</p>
-<pre><code class="lang-js">client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;)
+<pre><code class="lang-js">var client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
 
 client.orderBy(&#39;rating&#39;, &#39;desc&#39;)
   .get(&#39;movies&#39;)
-  .then(response =&gt; console.log(response));
+  .then(function(movies) {
+    console.log(movies);
+  });
 </code></pre>
 <p>As expected, the result would be the following list:</p>
 <pre><code class="lang-js">[
@@ -362,10 +369,12 @@ client.orderBy(&#39;rating&#39;, &#39;desc&#39;)
 <h2 id="applying-filters">Applying filters</h2>
 <p>In addition to sorting the results, we can also apply filters using the following code:</p>
 <pre><code class="lang-js">WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;)
-   .where(&#39;year&#39;, &#39;&lt;&#39;, 2000)
-   .where(&#39;rating&#39;, &#39;&gt;&#39;, 8.5)
-   .get(&#39;movies&#39;)
-   .then(response =&gt; console.log(response));
+  .where(&#39;year&#39;, &#39;&lt;&#39;, 2000)
+  .or(&#39;rating&#39;, &#39;&gt;&#39;, 8.5)
+  .get(&#39;movies&#39;)
+  .then(function(movies) {
+    console.log(movies);
+  });
 </code></pre>
 <p>The following entries are the result of the above filters:</p>
 <pre><code class="lang-js">[
@@ -378,11 +387,14 @@ client.orderBy(&#39;rating&#39;, &#39;desc&#39;)
 <h2 id="pagination">Pagination</h2>
 <p>We can also paginate the result using the &#39;limit&#39; and &#39;offset&#39; properties. Combining all the tools we&#39;ve learned so far, we can run a detailed query on our data:</p>
 <pre><code class="lang-js">WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;)
-   .where(&#39;year&#39;, &#39;&gt;&#39;, 2000)
-   .orderBy(&#39;rating&#39;)
-   .limit(2)
-   .offset(1)
-   .get();
+  .where(&#39;year&#39;, &#39;&gt;&#39;, 2000)
+  .orderBy(&#39;rating&#39;)
+  .limit(2)
+  .offset(1)
+  .get(&#39;movies&#39;)
+  .then(function(movies) {
+    console.log(movies);
+  });
 </code></pre>
 <p>Notice that filtering by year only returns episodes I, II, III, and VII. Applying the &#39;rating&#39; sort will give us this same order. We also limited the result to show only two documents and skip the first one. The final result is the following entries:</p>
 <pre><code class="lang-js">[
@@ -393,7 +405,7 @@ client.orderBy(&#39;rating&#39;, &#39;desc&#39;)
 <p>We support all basic SQL-like operators (=, !=, &gt;, &gt;=, &lt;, &lt;=, ~), as well as &#39;any&#39; and &#39;none&#39; to filter elements in a list. We also give support for search operators, which we will see in more detail in the section Search Data.</p>
 </article>
 <h2 id="next-steps">Next Steps</h2>
-<p>Now that you have learned how to retrieve data, you can interact <a href="/docs/data/searching-data.html">searching data</a>.</p>
+<p>Now that you have learned how to retrieve data, you can interact <a href="/docs/data/js/searching-data.html">searching data</a>.</p>
 
 
 						<div class="guide-feedback">
