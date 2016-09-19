@@ -7348,21 +7348,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-@font-face {
-  font-family: "galano-medium";
-  src: url("../fonts/galano/311196_1_0.eot");
-  src: url("../fonts/galano/311196_1_0.eot?#iefix") format("eot"), url("../fonts/galano/311196_1_0.woff") format("woff"), url("../fonts/galano/311196_1_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "galano-semibold";
-  src: url("../fonts/galano/311196_2_0.eot");
-  src: url("../fonts/galano/311196_2_0.eot?#iefix") format("eot"), url("../fonts/galano/311196_2_0.woff") format("woff"), url("../fonts/galano/311196_2_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "galano-bold";
-  src: url("../fonts/galano/311196_0_0.eot");
-  src: url("../fonts/galano/311196_0_0.eot?#iefix") format("eot"), url("../fonts/galano/311196_0_0.woff") format("woff"), url("../fonts/galano/311196_0_0.ttf") format("truetype"); }
-
 .col--terminal {
   border: 0px solid transparent;
   float: left;
@@ -7765,7 +7750,7 @@ input:-webkit-autofill {
   margin: 0;
   padding: 0;
   opacity: 0;
-  font-family: 'galano-semibold', sans-serif;
+  font-family: 'Galano Semibold', sans-serif;
   color: rgba(14, 20, 26, 0.9);
   position: relative;
   top: -8px;
@@ -8204,7 +8189,7 @@ input:-webkit-autofill {
 #browser .browser__top h3 {
   margin: 0;
   padding: 0;
-  font-family: 'galano-medium', sans-serif;
+  font-family: 'Galano Medium', sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: rgba(14, 20, 26, 0.2); }
@@ -8527,7 +8512,7 @@ p.project-item__status span.text {
 #cli .cli__top h3 {
   margin: 0 0 0 2px;
   padding: 0;
-  font-family: 'galano-medium', sans-serif;
+  font-family: 'Galano Medium', sans-serif;
   font-size: 14.4px;
   line-height: 24px;
   font-weight: 400;
@@ -8637,7 +8622,7 @@ p.project-item__status span.text {
       left: 12.5%; } }
 
 #view-3__1 .info-box h3 {
-  font-family: 'galano-medium', sans-serif;
+  font-family: 'Galano Medium', sans-serif;
   line-height: 48px;
   margin-bottom: 36px;
   color: rgba(14, 20, 26, 0.9); }
@@ -8841,7 +8826,7 @@ p.project-item__status span.text {
       right: 12.5%; } }
 
 #view-3__2 .info-box h3 {
-  font-family: 'galano-medium', sans-serif;
+  font-family: 'Galano Medium', sans-serif;
   line-height: 48px;
   margin-bottom: 36px;
   color: white; }
@@ -9049,7 +9034,7 @@ p.project-item__status span.text {
   padding: 0;
   text-shadow: 0px 12px 20px rgba(0, 0, 0, 0.02), 0px 40px 40px rgba(0, 0, 0, 0.04);
   color: #fff;
-  font-family: 'galano-bold', sans-serif;
+  font-family: 'Galano Bold', sans-serif;
   position: relative;
   left: 0;
   width: 100%;
@@ -9140,7 +9125,7 @@ p.project-item__status span.text {
   padding: 0;
   position: relative;
   top: -1px;
-  font-family: 'galano-medium', sans-serif;
+  font-family: 'Galano Medium', sans-serif;
   color: rgba(14, 20, 26, 0.9);
   letter-spacing: -0.0125em; }
   @media (min-width: 320px) {
@@ -9330,7 +9315,7 @@ li.feature {
 .feature .feature__box .box__badge-container .we-container .we span {
   font-size: 14px;
   line-height: 24px;
-  font-family: 'galano-bold', sans-serif;
+  font-family: 'Galano Bold', sans-serif;
   font-weight: 400;
   color: #00d46a; }
 
@@ -9342,7 +9327,7 @@ li.feature {
   margin: 0;
   padding: 0;
   font-size: 22px;
-  font-family: 'galano-semibold', sans-serif;
+  font-family: 'Galano Semibold', sans-serif;
   line-height: 24px;
   color: rgba(14, 20, 26, 0.9);
   font-weight: 400;
@@ -9383,7 +9368,7 @@ li.feature {
   padding: 0;
   text-shadow: 0 40px 50px rgba(14, 20, 26, 0.05);
   color: #ffffff;
-  font-family: 'galano-bold', sans-serif;
+  font-family: 'Galano Bold', sans-serif;
   font-size: 498px;
   line-height: 360px;
   text-align: center;
@@ -9431,7 +9416,7 @@ li.feature {
       margin: 0 0 72px; } }
 
 #view-6 .info .info__title h2 {
-  font-family: 'galano-medium', sans-serif;
+  font-family: 'Galano Medium', sans-serif;
   color: rgba(14, 20, 26, 0.9);
   position: relative;
   top: -1px;
@@ -9651,7 +9636,7 @@ li.feature {
   margin: 0;
   padding: 0;
   font-size: 24px;
-  font-family: 'galano-bold', sans-serif;
+  font-family: 'Galano Bold', sans-serif;
   color: #fff; }
 
 @media (min-width: 320px) {
@@ -9714,7 +9699,7 @@ li.feature {
   line-height: 48px;
   display: flex;
   font-size: 15px;
-  font-family: 'galano-medium', sans-serif;
+  font-family: 'Galano Medium', sans-serif;
   font-weight: 400;
   padding: 0 20px; }
   @media (min-width: 320px) {
@@ -9863,7 +9848,7 @@ li.feature {
 
 #modal__form-container .form .logo span {
   line-height: 24px;
-  font-family: 'galano-bold', sans-serif;
+  font-family: 'Galano Bold', sans-serif;
   font-weight: 400;
   color: #fff; }
   @media (min-width: 320px) {
@@ -9875,7 +9860,7 @@ li.feature {
 
 #modal__form-container .form h2 {
   text-align: center;
-  font-family: 'galano-semibold', sans-serif;
+  font-family: 'Galano Semibold', sans-serif;
   color: rgba(14, 20, 26, 0.9); }
   @media (min-width: 320px) {
     #modal__form-container .form h2 {
@@ -9993,7 +9978,7 @@ li.feature {
   visibility: visible; }
 
 #modal__form-container .form form .btn {
-  font-family: 'galano-semibold', sans-serif;
+  font-family: 'Galano Semibold', sans-serif;
   font-size: 17px;
   line-height: 60px;
   font-weight: 400;
@@ -10091,7 +10076,7 @@ li.feature {
 
 #modal__response-container .logo span {
   line-height: 24px;
-  font-family: 'galano-bold', sans-serif;
+  font-family: 'Galano Bold', sans-serif;
   font-weight: 400;
   color: #fff; }
   @media (min-width: 320px) {
@@ -10103,7 +10088,7 @@ li.feature {
 
 #modal__response-container h2 {
   text-align: center;
-  font-family: 'galano-semibold', sans-serif;
+  font-family: 'Galano Semibold', sans-serif;
   color: rgba(14, 20, 26, 0.9); }
   @media (min-width: 320px) {
     #modal__response-container h2 {
