@@ -1,9 +1,9 @@
-$intro: #ff6e00;
+$intro: $accent;
 $auth: #9552ef;
-$data: $accent;
-$email: #ffb700;
-$hosting: #00a4ff;
-$other: #ff536b;
+$data: #ffb700;
+$email: #ff6e00;
+$hosting: #ff536b;
+$other: #00a4ff;
 
 @mixin docsTopic($color) {
 	color: $color;
