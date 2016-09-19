@@ -311,10 +311,10 @@
         email: &#39;user@domain.com&#39;,
         password: &#39;abc&#39;
     })
-    .then(function(user) {  
+    .then(function(user) {
         // Successfully created.
     })
-    .catch(function(err) {  
+    .catch(function(err) {
       // Not created.
     });
 </code></pre>
@@ -338,7 +338,7 @@ if (currentUser) {
     .then(function(user) {
         // User found.
     })
-    .catch(function(err) {  
+    .catch(function(err) {
         // User does not exist.
     });
 </code></pre>
@@ -349,10 +349,10 @@ if (currentUser) {
 <pre><code class="lang-js">var currentUser = WeDeploy.auth().currentUser;
 
 currentUser.deleteUser()
-    .then(function() {  
+    .then(function() {
         // Successfully deleted.
     })
-    .catch(function(err) {  
+    .catch(function(err) {
       // Not deleted.
     });
 </code></pre>
@@ -368,10 +368,10 @@ currentUser.updateUser({
     name: &quot;Eleven&quot;,
     photoUrl: &quot;https://hawkinslabs.com/011/profile.jpg&quot;
 })
-.then(function() {  
+.then(function() {
     // Successfully updated.
 })
-.catch(function(err) {  
+.catch(function(err) {
   // Not updated.
 });
 </code></pre>
@@ -385,7 +385,7 @@ currentUser.updateUser({
     .then(function() {
         // Email sent.
     })
-    .catch(function(err) {  
+    .catch(function(err) {
       // An error happened.
     });
 </code></pre>
@@ -398,14 +398,14 @@ currentUser.updateUser({
     .then(function() {
         // User is signed out.
     })
-    .catch(function(err) {  
+    .catch(function(err) {
       // User was signed out.
     });
 </code></pre>
 </article>
 <h2 id="what-s-next-">What&#39;s Next?</h2>
 <ul>
-<li>Now you can start building your apps with authentication.</li>
+<li>Now we&#39;re ready to start <a href="/docs/auth/js/sign-in-with-facebook.html">authenticating accounts and growing our user base</a>.</li>
 </ul>
 
 
