@@ -170,10 +170,16 @@
 					</a>
 					<ul class="sidebar-list sidebar-list-2 {%if topic != 'other' %}hidden{% endif %}">
 						<li class="sidebar-item">
-							<a class="sidebar-link {%if basename == 'nodejs' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/">
+							<a class="sidebar-link {%if basename == 'index' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/">
+								<span>Getting Started with Liferay</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link {%if basename == 'nodejs' %}sidebar-link-selected{% endif %}" href="/docs/{{topic}}/nodejs.html">
 								<span>Getting Started with Node.js</span>
 							</a>
 						</li>
+
 					</ul>
 				</li>
 			</ul>

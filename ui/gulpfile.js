@@ -166,8 +166,9 @@ gulp.task('server', ['build'], function() {
 gulp.task('watch', ['server'], function() {
 	livereload.listen();
 
-	gulp.watch('src/layouts/*.html',['pages-docs']);
+	gulp.watch('src/layouts/*.html',['pages-docs', 'pages-guide']);
 	gulp.watch('bower_components/docs/**/**/*.md',['pages-guide']);
+	gulp.watch('bower_components/docs/**/*.md',['pages-guide']);
 	gulp.watch('src/assets/styles/**/*.scss', ['styles']);
 	gulp.watch('src/assets/scripts/**/*.js', ['scripts']);
 });

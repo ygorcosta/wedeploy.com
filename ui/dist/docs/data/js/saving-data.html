@@ -240,9 +240,15 @@
 					<ul class="sidebar-list sidebar-list-2 hidden">
 						<li class="sidebar-item">
 							<a class="sidebar-link " href="/docs/data/">
+								<span>Getting Started with Liferay</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link " href="/docs/data/nodejs.html">
 								<span>Getting Started with Node.js</span>
 							</a>
 						</li>
+
 					</ul>
 				</li>
 			</ul>
@@ -303,8 +309,7 @@
 <p>By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see <a href="/docs/data/configuring-rules.html">configuring rules</a> section.</p>
 </blockquote>
 <p>Writing new data is as simple as sending a JSON.</p>
-<pre><code class="lang-js">
-var client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
+<pre><code class="lang-js">var client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
 
 client.create(&#39;movies&#39;, {
   &quot;title&quot;: &quot;Star Wars IV&quot;,
