@@ -6,6 +6,7 @@ var metal = require('gulp-metal');
 var replace = require('gulp-replace');
 var sass = require('gulp-sass');
 var path = require('path');
+var livereload = require('gulp-livereload');
 
 metal.registerTasks({
 	taskPrefix: 'metal:',
@@ -91,7 +92,8 @@ gulp.task('pages-docs', ['pages-docs-redirect'], function() {
 			layout: 'src/layouts/docs.html',
 			engine: 'nunjucks'
 		}))
-		.pipe(gulp.dest('dist/docs'));
+		.pipe(gulp.dest('dist/docs'))
+		.pipe(livereload());
 });
 
 gulp.task('pages-docs-redirect', function() {
@@ -143,7 +145,8 @@ gulp.task('pages-guide', function() {
 				fullpath: fullpath
 			}
 		}))
-		.pipe(gulp.dest('dist/docs'));
+		.pipe(gulp.dest('dist/docs'))
+		.pipe(livereload());
 });
 
 // Runner ----------------------------------------------------------------------
@@ -161,6 +164,10 @@ gulp.task('server', ['build'], function() {
 });
 
 gulp.task('watch', ['server'], function() {
+	livereload.listen();
+
+	gulp.watch('src/layouts/*.html',['pages-docs']);
+	gulp.watch('bower_components/docs/**/**/*.md',['pages-guide']);
 	gulp.watch('src/assets/styles/**/*.scss', ['styles']);
 	gulp.watch('src/assets/scripts/**/*.js', ['scripts']);
 });
