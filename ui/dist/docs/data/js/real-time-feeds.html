@@ -88,7 +88,7 @@
 				<a class="topbar-link topbar-link-selected" href="/docs">Docs</a>
 			</li>
 			<li class="topbar-item">
-				<a class="topbar-link" href="http://dashboard.wedeploy.io/login/signin" data-senna-off>Login</a>
+				<a class="topbar-link" href="http://dashboard.wedeploy.com/login/signin" data-senna-off>Login</a>
 			</li>
 		</ul>
 	</nav>
@@ -271,7 +271,7 @@
 				<a class="topbar-link topbar-link-selected" href="/docs">Docs</a>
 			</li>
 			<li class="topbar-item">
-				<a class="topbar-link" href="http://dashboard.wedeploy.io/login/signin" data-senna-off>Login</a>
+				<a class="topbar-link" href="http://dashboard.wedeploy.com/login/signin" data-senna-off>Login</a>
 			</li>
 		</ul>
 	</nav>
@@ -307,20 +307,20 @@
 <h2 id="watching-data-changes">Watching Data Changes</h2>
 <p>We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it&#39;s throughout the features we just presented to you. To access our data in real-time, all we need to do is change the <em>WeDeploy™</em> API method we use to the <code>watch</code> method:</p>
 <pre><code class="lang-js">WeDeploy
-    .data(&#39;http://data.datademo.wedeploy.io&#39;)
-    .where(Filter.any(&#39;category&#39;, &#39;cinema&#39;))
-    .where(Filter.distance(&#39;location&#39;, &#39;51.5031653,-0.1123051&#39;, &#39;1mi&#39;))
-    .watch(&#39;movies&#39;)
-    .on(&#39;changes&#39;, doSomethingWithReceivedData)
-    .on(&#39;fail&#39;, handleFailure);
+  .data(&#39;http://data.datademo.wedeploy.io&#39;)
+  .where(Filter.any(&#39;category&#39;, &#39;cinema&#39;))
+  .where(Filter.distance(&#39;location&#39;, &#39;51.5031653,-0.1123051&#39;, &#39;1mi&#39;))
+  .watch(&#39;movies&#39;)
+  .on(&#39;changes&#39;, doSomethingWithReceivedData)
+  .on(&#39;fail&#39;, handleFailure);
 
-    function doSomethingWithReceivedData(data) {
-      console.log(data);
-    }
+  function doSomethingWithReceivedData(data) {
+    console.log(data);
+  }
 
-    function handleFailure(error) {
-      console.log(error);
-    }
+  function handleFailure(error) {
+    console.log(error);
+  }
 </code></pre>
 <p>Now every time the storage detects changes that affect the query you&#39;re watching, you will receive a changes notification with the response body you&#39;d receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you&#39;ll receive the error object in a fail notification on the client.</p>
 </article>

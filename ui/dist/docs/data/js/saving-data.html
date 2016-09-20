@@ -88,7 +88,7 @@
 				<a class="topbar-link topbar-link-selected" href="/docs">Docs</a>
 			</li>
 			<li class="topbar-item">
-				<a class="topbar-link" href="http://dashboard.wedeploy.io/login/signin" data-senna-off>Login</a>
+				<a class="topbar-link" href="http://dashboard.wedeploy.com/login/signin" data-senna-off>Login</a>
 			</li>
 		</ul>
 	</nav>
@@ -271,7 +271,7 @@
 				<a class="topbar-link topbar-link-selected" href="/docs">Docs</a>
 			</li>
 			<li class="topbar-item">
-				<a class="topbar-link" href="http://dashboard.wedeploy.io/login/signin" data-senna-off>Login</a>
+				<a class="topbar-link" href="http://dashboard.wedeploy.com/login/signin" data-senna-off>Login</a>
 			</li>
 		</ul>
 	</nav>
@@ -309,15 +309,14 @@
 <p>By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see <a href="/docs/data/configuring-rules.html">configuring rules</a> section.</p>
 </blockquote>
 <p>Writing new data is as simple as sending a JSON.</p>
-<pre><code class="lang-js">
-client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
+<pre><code class="lang-js">var client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
 
 client.create(&#39;movies&#39;, {
   &quot;title&quot;: &quot;Star Wars IV&quot;,
   &quot;year&quot;: 1977,
   &quot;rating&quot;: 8.7
-}).then(function(response) {
-  console.log(response);
+}).then(function(movie) {
+  console.log(movie);
 });
 </code></pre>
 <p>As you can see, the data api uses Promises to help you to make async requests.</p>
@@ -334,7 +333,7 @@ client.create(&#39;movies&#39;, {
 <h2 id="inserting-multiple-data">Inserting multiple data</h2>
 <p>With the same method you&#39;re able to create multiple data instead using the method <code>.create</code> multiple times.
 You just need to use an array instead an object as the second param.</p>
-<pre><code class="lang-js">client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
+<pre><code class="lang-js">var client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
 
 client.create(&#39;movies&#39;, [
   {
@@ -347,8 +346,8 @@ client.create(&#39;movies&#39;, [
     &quot;year&quot;: 2002,
     &quot;rating&quot;: 8.6
   }
-]).then(function(response) {
-  console.log(response);
+]).then(function(movies) {
+  console.log(movies);
 });
 </code></pre>
 <p>This operation will return the newly created array of documents, with the following generated IDs:</p>
@@ -371,7 +370,7 @@ client.create(&#39;movies&#39;, [
 <article id="inserting-new-fields-in-an-existing-collection">
 <h2 id="inserting-new-fields-in-an-existing-collection">Inserting new fields in an existing collection</h2>
 <p>WeDeploy Data service is really flexible in therms of data structure. You&#39;re able to insert new fiels in a collection by adding the new key in the object param.</p>
-<pre><code class="lang-js">client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
+<pre><code class="lang-js">var client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
 
 client.create(&#39;movies&#39;, [
   {
@@ -380,8 +379,8 @@ client.create(&#39;movies&#39;, [
     &quot;year&quot;: 1999,
     &quot;rating&quot;: 9.0
   }
-]).then(function(response) {
-  console.log(response);
+]).then(function(movie) {
+  console.log(movie);
 });
 </code></pre>
 <p>This operation will return the newly created document, with the following generated ID:</p>
@@ -404,7 +403,7 @@ client.create(&#39;movies&#39;, [
 </code></pre>
 </article>
 <h2 id="next-steps">Next Steps</h2>
-<p>Now that you have learned how to create data, you can interact <a href="/docs/data/updating-data.html">updating data</a>.</p>
+<p>Now that you have learned how to create data, you can interact <a href="/docs/data/js/updating-data.html">updating data</a>.</p>
 
 
 						<div class="guide-feedback">
