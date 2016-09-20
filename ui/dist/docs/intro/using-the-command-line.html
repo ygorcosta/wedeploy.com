@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="/styles/vendor/westyle/fonts/icon-12/icon-12.css">
 	<link rel="stylesheet" href="/styles/vendor/westyle/fonts/icon-16/icon-16.css">
 	<link rel="stylesheet" href="/styles/vendor/tomorrow-night-eighties.css">
-	<link rel="stylesheet" href="/styles/main.css?v=1">
+	<link rel="stylesheet" href="/styles/main.css">
 
 	<!-- Senna -->
 	<link rel="stylesheet" href="/styles/vendor/senna.css">
@@ -329,15 +329,7 @@ cd boilerplate-hosting
 </li>
 </ol>
 </article>
-<article id="5-using-remotes">
-<h2 id="using-remotes">Using remotes</h2>
-<p>To use the CLI tool with the WeDeploy cloud you need to add remotes first.</p>
-<p>The commands here are pretty similar to git&#39;s remote commands.</p>
-<p>Watch for logs on the wechat project:</p>
-<pre><code class="lang-text">we remote add staging office-cloud.internal
-</code></pre>
-</article>
-<article id="6-fetching-logs">
+<article id="5-fetching-logs">
 <h2 id="fetching-project-and-container-logs">Fetching project and container logs</h2>
 <p>You can fetch projects and container logs with</p>
 <pre><code class="lang-text">we log &lt;project id&gt; &lt;container id&gt;
@@ -349,11 +341,8 @@ cd boilerplate-hosting
 <p>Watch for logs on the wechat project:</p>
 <pre><code class="lang-text">we log wechat --watch
 </code></pre>
-<p>Watch for logs on the wechat project on the production (remote) cloud:</p>
-<pre><code class="lang-text">we log wechat --remote production
-</code></pre>
 </article>
-<article id="7-list">
+<article id="6-list">
 <h2 id="listing-projects-and-containers">Listing projects and containers</h2>
 <p>Watch the listing of all projects running locally:</p>
 <pre><code class="lang-text">we list --watch
