@@ -10950,6 +10950,11 @@ li.feature {
     .guide-btn-cta .btn.btn-accent:hover, .guide-btn-cta .btn.btn-accent:focus {
       color: #fff; }
 
+.guide-aux-cta {
+  font-size: 13px;
+  margin: 5px 0 0;
+  text-align: center; }
+
 /* Feedback
    ========================================================================== */
 .guide-feedback {
