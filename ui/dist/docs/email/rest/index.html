@@ -330,12 +330,17 @@ cd boilerplate-email-js
 <h2 id="deploying-to-the-cloud">Deploying to the Cloud</h2>
 <ol>
 <li><a href="https://github.com/wedeploy/boilerplate-email/fork">Fork this repository</a>.</li>
-<li>Go to the <a href="http://dashboard.wedeploy.io">Dashboard</a>.</li>
-<li><a href="http://dashboard.wedeploy.io/projects/create">Create a project</a>.</li>
-<li>In the sidebar, click on <em>GitHub Integration</em>.</li>
-<li>Type your repository URL and <code>js</code> branch.</li>
-<li>Click on <em>Update Project</em>.</li>
-<li>Click on <em>Build All Repos</em> and wait a few seconds.</li>
+<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a>.</li>
+<li><a href="http://dashboard.wedeploy.com/projects/create">Create a project</a>.</li>
+<li>In the sidebar, click on <em>Deployment</em>.</li>
+<li>Using your local machine, clone your Github fork:<pre><code class="lang-text">git clone https://github.com/{your_github_username}/boilerplate-email
+</code></pre>
+</li>
+<li>Get into the folder: <code>cd boilerplate-email</code>.</li>
+<li>Using the content on <em>Deployment</em> page. Add the WeDeploy remote url:<pre><code class="lang-text">git remote add wedeploy http://git.wedeploy.com/&lt;projectID&gt;.git
+</code></pre>
+</li>
+<li>Push your data to wedeploy git server: <code>git push wedeploy master</code>.</li>
 <li><p>Once you see it in the Dashboard, your container will be ready to be used.</p>
 <pre><code class="lang-text">http://emaildemo.wedeploy.io
 </code></pre>
@@ -348,7 +353,7 @@ cd boilerplate-email-js
 <h3 id="api-endpoints">API Endpoints</h3>
 <h4 id="-post-emails-"><code>POST /emails</code></h4>
 <p>Sends an email asynchronously and returns its ID.</p>
-<h6 id="options">Options</h6>
+<p>Options:</p>
 <table class="table">
   <thead>
     <tr>
@@ -401,7 +406,6 @@ cd boilerplate-email-js
   </tbody>
 </table>
 
-<hr>
 <h3 id="-get-emails-id-status-"><code>GET /emails/:id/status</code></h3>
 </article>
 <h2 id="what-s-next-">What&#39;s Next?</h2>

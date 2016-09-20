@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "westyle",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  },
+  "devDependencies": {
+    "metal-toggler": "metal/metal-toggler#master",
+    "soyutils": "~2012.12.21"
+  },
+  "homepage": "https://github.com/wedeploy/westyle",
+  "_release": "94bb97d77a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "94bb97d77a3a998e50ea2c1b1f951a886af4bba6"
+  },
+  "_source": "git://github.com/wedeploy/westyle.git",
+  "_target": "master",
+  "_originalSource": "wedeploy/westyle"
+}
