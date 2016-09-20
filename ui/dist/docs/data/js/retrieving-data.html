@@ -305,9 +305,9 @@
 <pre><code class="lang-js">var data = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
 
 data.get(&#39;movies/star_wars_v&#39;)
-  .then(function(movie) {
-    console.log(movie);
-  });
+.then(function(movie) {
+  console.log(movie);
+});
 </code></pre>
 <p>The response body is the stored JSON document:</p>
 <pre><code class="lang-js">{
@@ -319,11 +319,11 @@ data.get(&#39;movies/star_wars_v&#39;)
 </code></pre>
 <p>We can also get any field value using the full path:</p>
 <pre><code class="lang-js">WeDeploy
-  .data(&#39;http://datademo.wedeploy.io&#39;)
-  .get(&#39;movies/star_wars_v/title&#39;)
-  .then(function(title) {
-    console.log(title);
-  });
+.data(&#39;http://datademo.wedeploy.io&#39;)
+.get(&#39;movies/star_wars_v/title&#39;)
+.then(function(title) {
+  console.log(title);
+});
 </code></pre>
 <p>The full path returns the raw content in the response body:</p>
 <p>Star Wars: Episode V - The Empire Strikes Back
@@ -345,10 +345,10 @@ Requesting the entire movies collection using curl -X &quot;GET&quot; &quot;<a h
 <pre><code class="lang-js">var client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
 
 client.orderBy(&#39;rating&#39;, &#39;desc&#39;)
-  .get(&#39;movies&#39;)
-  .then(function(movies) {
-    console.log(movies);
-  });
+.get(&#39;movies&#39;)
+.then(function(movies) {
+  console.log(movies);
+});
 </code></pre>
 <p>As expected, the result would be the following list:</p>
 <pre><code class="lang-js">[
@@ -367,12 +367,12 @@ client.orderBy(&#39;rating&#39;, &#39;desc&#39;)
 <h2 id="applying-filters">Applying filters</h2>
 <p>In addition to sorting the results, we can also apply filters using the following code:</p>
 <pre><code class="lang-js">WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;)
-  .where(&#39;year&#39;, &#39;&lt;&#39;, 2000)
-  .or(&#39;rating&#39;, &#39;&gt;&#39;, 8.5)
-  .get(&#39;movies&#39;)
-  .then(function(movies) {
-    console.log(movies);
-  });
+.where(&#39;year&#39;, &#39;&lt;&#39;, 2000)
+.or(&#39;rating&#39;, &#39;&gt;&#39;, 8.5)
+.get(&#39;movies&#39;)
+.then(function(movies) {
+  console.log(movies);
+});
 </code></pre>
 <p>The following entries are the result of the above filters:</p>
 <pre><code class="lang-js">[
@@ -385,14 +385,14 @@ client.orderBy(&#39;rating&#39;, &#39;desc&#39;)
 <h2 id="pagination">Pagination</h2>
 <p>We can also paginate the result using the &#39;limit&#39; and &#39;offset&#39; properties. Combining all the tools we&#39;ve learned so far, we can run a detailed query on our data:</p>
 <pre><code class="lang-js">WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;)
-  .where(&#39;year&#39;, &#39;&gt;&#39;, 2000)
-  .orderBy(&#39;rating&#39;)
-  .limit(2)
-  .offset(1)
-  .get(&#39;movies&#39;)
-  .then(function(movies) {
-    console.log(movies);
-  });
+.where(&#39;year&#39;, &#39;&gt;&#39;, 2000)
+.orderBy(&#39;rating&#39;)
+.limit(2)
+.offset(1)
+.get(&#39;movies&#39;)
+.then(function(movies) {
+  console.log(movies);
+});
 </code></pre>
 <p>Notice that filtering by year only returns episodes I, II, III, and VII. Applying the &#39;rating&#39; sort will give us this same order. We also limited the result to show only two documents and skip the first one. The final result is the following entries:</p>
 <pre><code class="lang-js">[
