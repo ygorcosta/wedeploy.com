@@ -56,7 +56,7 @@ var mainAutocomplete = new metal.Autocomplete({
 		if (query) {
 			docs.search('*', 'prefix', query)
 				.search(Filter.equal('lang', docsLang).or('lang', 'none'))
-				.limit(2)
+				.limit(3)
 				.highlight('content');
 		}
 
