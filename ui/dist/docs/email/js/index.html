@@ -15,27 +15,24 @@
 	<meta property="og:image:height" content="630">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto+Mono">
-
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
 	<!-- Scripts -->
 	<script src="/scripts/main.js"></script>
 
-	<!-- Westyle -->
+	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/vendor/westyle/fonts/galano/galano.css">
 	<link rel="stylesheet" href="/styles/vendor/westyle/fonts/icon-12/icon-12.css">
 	<link rel="stylesheet" href="/styles/vendor/westyle/fonts/icon-16/icon-16.css">
-
 	<link rel="stylesheet" href="/styles/vendor/tomorrow-night-eighties.css">
-
-	<!-- Main -->
 	<link rel="stylesheet" href="/styles/main.css?v=1">
 
 	<!-- Senna -->
 	<link rel="stylesheet" href="/styles/vendor/senna.css">
 	<script src="/scripts/vendor/senna-min.js"></script>
-
 	<script src="/scripts/navigation.js"></script>
+
+	<!-- Analytics -->
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -49,7 +46,7 @@
 	<!-- Inspectlet -->
 	<script id="inspectletjs">
 	window.__insp = window.__insp || [];
-	__insp.push(['wid', 1542265253]);
+	__insp.push(['wid', 1302580389]);
 	(function() {
 	function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
 	setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
@@ -362,17 +359,17 @@ cd boilerplate-email-js
 <p>Now that we have our container up and running, it&#39;s time to start sending some emails. We can use the API Client to facilitate the process of sending requests to WeDeploy.</p>
 <p>In order to send emails, we have to make a <code>POST</code> request to <code>/emails</code> passing some required parameters like <code>from</code>, <code>to</code>, and <code>subject</code>:</p>
 <pre><code class="lang-js">WeDeploy
-    .url(&#39;http://&lt;containerID&gt;.&lt;projectID&gt;.wedeploy.io/emails&#39;)
-    .form(&#39;from&#39;, &#39;from@domain.com&#39;)
-    .form(&#39;to&#39;, &#39;to@domain.com&#39;)
-    .form(&#39;subject&#39;, &#39;Hi there!&#39;)
-    .post()
-    .then(function(response) {
-        console.log(&#39;Email ID:&#39;, response.body());
-    })
-    .catch(function(error) {
-        // Some error has happened
-    });
+.url(&#39;http://&lt;containerID&gt;.&lt;projectID&gt;.wedeploy.io/emails&#39;)
+.form(&#39;from&#39;, &#39;from@domain.com&#39;)
+.form(&#39;to&#39;, &#39;to@domain.com&#39;)
+.form(&#39;subject&#39;, &#39;Hi there!&#39;)
+.post()
+.then(function(response) {
+    console.log(&#39;Email ID:&#39;, response.body());
+})
+.catch(function(error) {
+    // Some error has happened
+});
 </code></pre>
 <blockquote>
 <p>For the full list of parameters, check this container&#39;s README in the <a href="http://dashboard.wedeploy.io/">Dashboard</a>.</p>
@@ -383,14 +380,14 @@ cd boilerplate-email-js
 <h2 id="checking-an-email-status">Checking an Email Status</h2>
 <p>In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. <code>123</code>, and send a <code>GET</code> request to <code>/emails/123/status</code>.</p>
 <pre><code class="lang-js">WeDeploy
-    .url(&#39;http://&lt;containerID&gt;.&lt;projectID&gt;.wedeploy.io/emails/&lt;emailID&gt;/status&#39;)
-    .get()
-    .then(function(response) {
-        console.log(&#39;Email status:&#39;, response.body());
-    })
-    .catch(function(error) {
-        // Some error has happened
-    });
+.url(&#39;http://&lt;containerID&gt;.&lt;projectID&gt;.wedeploy.io/emails/&lt;emailID&gt;/status&#39;)
+.get()
+.then(function(response) {
+    console.log(&#39;Email status:&#39;, response.body());
+})
+.catch(function(error) {
+    // Some error has happened
+});
 </code></pre>
 </article>
 <h2 id="what-s-next-">What&#39;s Next?</h2>
