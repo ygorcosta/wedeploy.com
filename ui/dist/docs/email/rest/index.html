@@ -284,21 +284,18 @@
 			<div class="container-hybrid">
 				<div class="docs-guide row">
 
-					<!-- 
+					
 					<div class="guide-topics-container">
 						<div class="guide-topics btn-group">
 							<a href="/docs/email/js/" class="btn btn-default ">
 								JavaScript
-							</a>
-							<a href="/docs/email/java/" class="btn btn-default ">
-								Java
 							</a>
 							<a href="/docs/email/rest/" class="btn btn-default btn-active">
 								REST
 							</a>
 						</div>
 					</div>
-					 -->
+					
 
 					<div class="docs-content col-xs-16 col-md-9">
 						<h1 id="email">Email</h1>
@@ -348,38 +345,64 @@ cd boilerplate-email-js
 <article id="sending-an-email">
 <h2 id="sending-an-email">Sending an Email</h2>
 <p>Now that we have our container up and running, it&#39;s time to start sending some emails. We can use the API Client to facilitate the process of sending requests to WeDeploy.</p>
-<p>In order to send emails, we have to make a <code>POST</code> request to <code>/emails</code> passing some required parameters like <code>from</code>, <code>to</code>, and <code>subject</code>:</p>
-<pre><code class="lang-js">WeDeploy
-    .url(&#39;http://&lt;containerID&gt;.&lt;projectID&gt;.wedeploy.io/emails&#39;)
-    .form(&#39;from&#39;, &#39;from@domain.com&#39;)
-    .form(&#39;to&#39;, &#39;to@domain.com&#39;)
-    .form(&#39;subject&#39;, &#39;Hi there!&#39;)
-    .post()
-    .then(function(response) {
-        console.log(&#39;Email ID:&#39;, response.body());
-    })
-    .catch(function(error) {
-        // Some error has happened
-    });
-</code></pre>
-<blockquote>
-<p>For the full list of parameters, check this container&#39;s README in the <a href="http://dashboard.wedeploy.io/">Dashboard</a>.</p>
-</blockquote>
-<p>As a result, we&#39;ll receive an email ID. This doesn&#39;t indicate that the email was already sent, it actually says that it was added to the email queue. That&#39;s why we have another API to check the email status.</p>
-</article>
-<article id="checking-email-status">
-<h2 id="checking-an-email-status">Checking an Email Status</h2>
-<p>In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. <code>123</code>, and send a <code>GET</code> request to <code>/emails/123/status</code>.</p>
-<pre><code class="lang-js">WeDeploy
-    .url(&#39;http://&lt;containerID&gt;.&lt;projectID&gt;.wedeploy.io/emails/&lt;emailID&gt;/status&#39;)
-    .get()
-    .then(function(response) {
-        console.log(&#39;Email status:&#39;, response.body());
-    })
-    .catch(function(error) {
-        // Some error has happened
-    });
-</code></pre>
+<h3 id="api-endpoints">API Endpoints</h3>
+<h4 id="-post-emails-"><code>POST /emails</code></h4>
+<p>Sends an email asynchronously and returns its ID.</p>
+<p>Options:</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bcc</td>
+      <td>string</td>
+      <td>Bcc recipient email address. Multiple addresses should be defined in multiple parameters.</td>
+    </tr>
+    <tr>
+      <td>cc</td>
+      <td>string</td>
+      <td>Cc recipient email address. Multiple addresses should be defined in multiple parameters.</td>
+    </tr>
+    <tr>
+      <td>from</td>
+      <td>string</td>
+      <td>Sender email address.</td>
+    </tr>
+    <tr>
+      <td>message</td>
+      <td>string</td>
+      <td>HTML content of your email message. Up to 5MB.</td>
+    </tr>
+    <tr>
+      <td>priority</td>
+      <td>number</td>
+      <td>Used by email clients to define a message&#39;s importance. From 1 to 5 where &#39;1&#39; is highest and &#39;5&#39; is the lowest priority.</td>
+    </tr>
+    <tr>
+      <td>replyTo</td>
+      <td>string</td>
+      <td>Append a reply-to address to your email message.</td>
+    </tr>
+    <tr>
+      <td>subject</td>
+      <td>string</td>
+      <td>Subject of your email. Up to 1MB.</td>
+    </tr>
+    <tr>
+      <td>to</td>
+      <td>string</td>
+      <td>Recipient email address. Multiple addresses should be defined in multiple parameters.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h3 id="-get-emails-id-status-"><code>GET /emails/:id/status</code></h3>
 </article>
 <h2 id="what-s-next-">What&#39;s Next?</h2>
 <ul>

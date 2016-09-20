@@ -195,21 +195,18 @@
 			<div class="container-hybrid">
 				<div class="docs-guide row">
 
-					<!-- {%if section %}
+					{%if section %}
 					<div class="guide-topics-container">
 						<div class="guide-topics btn-group">
 							<a href="/docs/{{topic}}/js{%if basename == 'index' %}/{% else %}/{{basename}}.html{% endif %}" class="btn btn-default {%if section == 'js' %}btn-active{% endif %}">
 								JavaScript
-							</a>
-							<a href="/docs/{{topic}}/java{%if basename == 'index' %}/{% else %}/{{basename}}.html{% endif %}" class="btn btn-default {%if section == 'java' %}btn-active{% endif %}">
-								Java
 							</a>
 							<a href="/docs/{{topic}}/rest{%if basename == 'index' %}/{% else %}/{{basename}}.html{% endif %}" class="btn btn-default {%if section == 'rest' %}btn-active{% endif %}">
 								REST
 							</a>
 						</div>
 					</div>
-					{% endif %} -->
+					{% endif %}
 
 					<div class="docs-content col-xs-16 col-md-9">
 						{{contents}}
