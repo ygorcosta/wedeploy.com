@@ -2,7 +2,7 @@
 	position:relative;
 
 	@media (min-width: 1280px) and (min-height: 768px) {
-		height: calc(100vh - 204px);
+		height: calc(100vh - 84px);//204px);
 		min-height: 552px;
 		//height: ($baseline * 73);
 	}
@@ -114,6 +114,14 @@
 		left: 8.5%;
 	}*/
 
+	@media (min-width: 320px) {
+		padding: ($baseline * 4) 0 0;
+	}
+
+	@media (min-width: 600px) {
+		padding: ($baseline * 6) 0 0;
+	}
+
 	@media (min-width: 1280px) {
 		position: absolute;
 		top: 50%;
@@ -137,7 +145,7 @@
 	margin: 0;
 	padding: 0;
 	opacity: 0;
-	font-family: 'Galano Semibold', sans-serif;
+	font-family: $font-family-secondary-bold;
 	color: rgba($primary, 0.9);
 	position: relative;
 	top: -8px;
@@ -146,40 +154,20 @@
 	@media (min-width: 320px) {
 		font-size: 50px;
 		line-height: ($baseline * 5);
-		margin: ($baseline * 4) 0 0;
-		width: 320px;
-		padding: 0 20px;
+		padding: 0 5px;
+		display: inline-block;
 	}
 
 	@media (min-width: 480px) {
 		font-size: 60px;
 		line-height: ($baseline * 6);
-		margin: ($baseline * 6) 0 0;
-		width: 405px;
-		padding: 0 20px;
-	}
-
-	@media (min-width: 600px) {
-		margin: ($baseline * 6) 0 0;
-		width: 405px;
-		padding: 0 40px;
-	}
-
-	@media (min-width: 720px) {
-		margin: ($baseline * 6) 0 0;
-		width: 100%;
-		padding: 0 40px;
-	}
-
-	@media (min-width: 960px) {
-		margin: ($baseline * 6) 0 0;
-		width: 75%;
 	}
 
 	@media (min-width: 1280px) {
 		margin: 0;
 		width: 76%;
 		padding: 0;
+		display: block;
 	}
 
 	@media (min-width: 1440px) {
@@ -202,7 +190,7 @@
 #subscribe p {
 	opacity: 0;
 	padding: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-family-secondary;
 	font-weight: 400;
 	color: rgba($primary, 0.6);
 	position: relative;
@@ -218,41 +206,41 @@
 	}
 
 	@media (min-width: 480px) {
-		font-size: 20px;
-		line-height: 36px;
+		font-size: 18px;
+		line-height: 32px;
 		margin: ($baseline * 1) 0;
 		width: 100%;
-		padding: 0 20px;
+		padding: 6px 20px;
 	}
 
 	@media (min-width: 600px) {
 		margin: ($baseline * 1);
 		width: 100%;
-		padding: 0 40px;
+		padding: 6px 40px;
 	}
 
 	@media (min-width: 720px) {
 		margin: ($baseline * 1);
 		width: 75%;
-		padding: 0 40px;
+		padding: 6px 40px;
 	}
 
 	@media (min-width: 1280px) {
 		margin: ($baseline * 3 ) 0 0;
 		width: 100%;
-		padding: 0;
+		padding: 6px 0;
 	}
 
 	@media (min-width: 1440px) {
 		margin: ($baseline * 1 ) 0 0;
 		width: 100%;
-		padding: 0;
+		padding: 6px 0;
 	}
 
 	@media (min-width: 1920px) {
 		margin: ($baseline * 3 ) 0 0;
 		width: 100%;
-		padding: 0;
+		padding: 6px 0;
 	}
 }
 
@@ -380,8 +368,8 @@
 
 #subscribe form input {
 	height: 72px;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
+	font-family: 	$font-family-secondary-semibold;
+	font-size: 15px;
 	line-height: 72px;
 	color: rgba($primary, 0.9);
 	padding: 0 19px;
@@ -423,6 +411,7 @@
 #subscribe #subscribe__submit-small span,
 #subscribe form .btn span {
 	font-size: 17px;
+	font-family: 	$font-family-secondary-bold;
 	line-height: 72px;
 	letter-spacing: 0.0002em;
 }
@@ -433,9 +422,9 @@
 	display: block;
 	height: ($baseline * 3);
 	color: rgba($primary, .4);
-	font-size: 12px;
+	font-size: 11px;
 	line-height: 24px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-family-secondary;
 	text-align: left;
 	width: calc(100% - 8px);
 }

@@ -2,7 +2,7 @@ html, body {
 	width: 100%;
 	max-width: 100%;
 	overflow-x: hidden;
-	min-height: 100%;
+	min-height: 100vh;
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -86,7 +86,8 @@ input:-webkit-autofill {
 .btn-sm {
 	padding: 0 19px;
 	line-height: 48px;
-	font-size: 14px;
+	font-family: $font-family-secondary-bold;
+	font-size: 15px;
 }
 
 .flex-left-center {
@@ -94,6 +95,14 @@ input:-webkit-autofill {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	align-items: center;
+}
+
+.flex-right-center {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 	align-items: center;
 }
 

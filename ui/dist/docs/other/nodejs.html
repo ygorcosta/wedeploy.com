@@ -285,16 +285,6 @@
 					<div class="docs-content col-xs-16 col-md-9">
 						<h1 id="node-js">Node.js</h1>
 <h6 id="launch-a-node-js-application-in-few-steps-">Launch a Node.js application in few steps.</h6>
-<div class="guide-btn-cta">
-  <a class="btn btn-accent btn-sm" href="http://boilerplate-nodejs.wedeploy.io" target="_blank">
-    <span class="icon-16-external"></span>See Live Demo
-  </a>
-</div>
-
-<div class="guide-aux-cta">
-  or read the <a href="https://github.com/wedeploy/boilerplate-nodejs/" target="_blank">source code</a>.
-</div>
-
 <article id="install-dependencies">
 <h2 id="install-dependencies">Install Dependencies</h2>
 <p>This section assumes that you already have the <strong>WeDeploy CLI</strong> installed and <strong>Docker</strong> running. Make sure to <a href="/docs/intro/using-the-cli.html">visit the installation guide</a> if you need help setting that up.</p>
@@ -329,17 +319,12 @@ cd boilerplate-nodejs
 <h2 id="deploying-to-the-cloud">Deploying to the Cloud</h2>
 <ol>
 <li><a href="https://github.com/wedeploy/boilerplate-nodejs/fork">Fork this repository</a>.</li>
-<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a>.</li>
-<li><a href="http://dashboard.wedeploy.com/projects/create">Create a project</a>.</li>
-<li>In the sidebar, click on <em>Deployment</em>.</li>
-<li>Using your local machine, clone your Github fork:<pre><code class="lang-text">git clone https://github.com/&lt;username&gt;/boilerplate-nodejs
-</code></pre>
-</li>
-<li>Get into the folder: <code>cd boilerplate-nodejs</code>.</li>
-<li>Using the content on <em>Deployment</em> page. Add the WeDeploy remote url:<pre><code class="lang-text">git remote add wedeploy http://git.wedeploy.com/&lt;projectID&gt;.git
-</code></pre>
-</li>
-<li>Push your data to wedeploy git server: <code>git push wedeploy master</code>.</li>
+<li>Go to the <a href="http://dashboard.wedeploy.io">Dashboard</a>.</li>
+<li><a href="http://dashboard.wedeploy.io/projects/create">Create a project</a>.</li>
+<li>In the sidebar, click on <em>GitHub Integration</em>.</li>
+<li>Type your repository URL and <code>master</code> branch.</li>
+<li>Click on <em>Update Project</em>.</li>
+<li>Click on <em>Build All Repos</em> and wait a few seconds.</li>
 <li><p>Once you see it in the Dashboard, your container will be ready to be used.</p>
 <pre><code class="lang-text">http://nodejs.&lt;projectID&gt;.wedeploy.io
 </code></pre>

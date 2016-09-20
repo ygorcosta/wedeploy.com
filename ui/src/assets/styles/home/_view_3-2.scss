@@ -90,7 +90,7 @@
 }
 
 #view-3__2 .info-box h3 {
-	font-family: 'Galano Medium', sans-serif;
+	font-family: 'Galano Bold', sans-serif;
 	line-height: 48px;
 	margin-bottom: ($baseline * 3);
 	color: rgba($white, 1);
@@ -115,11 +115,16 @@
 }
 
 #view-3__2 .info-box p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-family-secondary;
 	line-height: 36px;
 	margin-bottom: ($baseline * 3);
 	color: rgba($white, .6);
 	width: 100%;
+
+	&.top-title {
+		margin-bottom: ($baseline * 2);
+		font-family: 'Galano Semibold', sans-serif;
+	}
 
 	@media (min-width: 320px) {
 		font-size: 14.5px;

@@ -2,6 +2,15 @@
 	opacity: 0;
 	background: rgba(255, 255, 255, 1.0);
 	box-shadow: 0 0 100px white;
+	position: relative;
+
+	.wedeploy-logo.logo-alpha {
+		background: url('../images/home/logotype/logo_by_liferay.svg');
+		background-size: 200px 84px;
+		position: absolute;
+		width: 200px;
+		height: 84px;
+	}
 }
 
 #topbar .container-wedeploy {
@@ -66,8 +75,22 @@
 
 #topbar .topbar {
 	padding: ($baseline * 2) 0 ($baseline * 1);
+	.topbar-list {
+		max-width: 100%;
+		@media	(max-width: 600px) {
+			display: none;
+		}
+
+		.get-started {
+			@media	(max-width: 720px) {
+				display: none;
+			}
+		}
+	}
 
 	.topbar-link {
+		font-family: $font-family-secondary-bold;
+		font-size: 15px;
 		color: rgba($primary, 0.6);
 		&:hover {
 			color: rgba($primary, 0.4);

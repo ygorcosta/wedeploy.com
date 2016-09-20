@@ -174,7 +174,7 @@
 	margin:0;
 	padding: 0;
 	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-family-secondary;
 	color: rgba($white, .5);
 	text-align: left;
 }
@@ -209,7 +209,7 @@
 	line-height: ($baseline * 4);
 	display: flex;
 	font-size: 15px;
-	font-family: 'Galano Medium', sans-serif;
+	font-family: 'Galano Semibold', sans-serif;
 	font-weight: 400;
 	padding: 0 20px;
 

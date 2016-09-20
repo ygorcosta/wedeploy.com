@@ -297,89 +297,78 @@
 						<h1 id="manage-users">Manage Users</h1>
 <h6 id="create-delete-or-update-users-by-using-wedeploy-auth-">Create, delete or update users by using <em>WeDeploy™ Auth</em>.</h6>
 <article id="create-user">
-<h2 id="create-an-user">Create an user</h2>
-<p>You create a new user in your WeDeploy project.</p>
-<h4 id="-post-users-"><code>POST /users</code></h4>
-<p>Options:</p>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>email<em></td>
-      <td>string</td>
-      <td>User Email</td>
-    </tr>
-    <tr>
-      <td>password</em></td>
-      <td>string</td>
-      <td>User Password</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>string</td>
-      <td>User Name</td>
-    </tr>
-    <tr>
-      <td>photoUrl</td>
-      <td>string</td>
-      <td>User Photo URL</td>
-    </tr>
-  </tbody>
-</table>
+<h2 id="create-user">Create user</h2>
+<p>You create a new user in your WeDeploy project by calling the <code>createUser</code> method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.</p>
+<pre><code class="lang-js">WeDeploy
+    .auth()
+    .createUser({
+        email: &#39;user@domain.com&#39;,
+        password: &#39;abc&#39;
+    })
+    .then(function(user) {  
+        // Successfully created.
+    })
+    .catch(function(err) {  
+      // Not created.
+    });
+</code></pre>
+</article>
+<article id="get-current-user">
+<h2 id="get-current-user">Get current user</h2>
+<pre><code class="lang-js">var currentUser = WeDeploy.auth().currentUser;
 
+if (currentUser) {
+    // User is signed in.
+} else {
+    // No user is signed in.
+}
+</code></pre>
 </article>
 <article id="get-user">
 <h2 id="get-user">Get user</h2>
-<h4 id="-get-users-1-"><code>GET /users/1</code></h4>
+<pre><code class="lang-js">WeDeploy
+    .auth()
+    .getUser(userId)
+    .then(function(user) {
+        // User found.
+    })
+    .catch(function(err) {  
+        // User does not exist.
+    });
+</code></pre>
 </article>
 <article id="delete-user">
 <h2 id="delete-user">Delete user</h2>
-<h4 id="-delete-users-1-"><code>DELETE /users/1</code></h4>
 <p>You can delete a user account with the delete method. For example:</p>
+<pre><code class="lang-js">var currentUser = WeDeploy.auth().currentUser;
+
+currentUser.deleteUser()
+    .then(function() {  
+        // Successfully deleted.
+    })
+    .catch(function(err) {  
+      // Not deleted.
+    });
+</code></pre>
 </article>
 <article id="update-user">
 <h2 id="update-user">Update user</h2>
 <p>You can update a user&#39;s basic information. For example:</p>
-<h4 id="-path-users-1-"><code>PATH /users/1</code></h4>
-<p>Options:</p>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>email</td>
-      <td>string</td>
-      <td>User Email</td>
-    </tr>
-    <tr>
-      <td>password</td>
-      <td>string</td>
-      <td>User Password</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>string</td>
-      <td>User Name</td>
-    </tr>
-    <tr>
-      <td>photoUrl</td>
-      <td>string</td>
-      <td>User Photo URL</td>
-    </tr>
-  </tbody>
-</table>
+<pre><code class="lang-js">var currentUser = WeDeploy.auth().currentUser;
 
+currentUser.updateUser({
+    password: &quot;password&quot;,
+    email: &quot;eleven@hawkinslabs.com&quot;,
+    name: &quot;Eleven&quot;,
+    photoUrl: &quot;https://hawkinslabs.com/011/profile.jpg&quot;
+})
+.then(function() {  
+    // Successfully updated.
+})
+.catch(function(err) {  
+  // Not updated.
+});
+</code></pre>
 </article>
 <article id="reset-email">
 <h2 id="send-a-password-reset-email">Send a password reset email</h2>
@@ -390,7 +379,7 @@
     .then(function() {
         // Email sent.
     })
-    .catch(function(err) {
+    .catch(function(err) {  
       // An error happened.
     });
 </code></pre>
@@ -403,7 +392,7 @@
     .then(function() {
         // User is signed out.
     })
-    .catch(function(err) {
+    .catch(function(err) {  
       // User was signed out.
     });
 </code></pre>
