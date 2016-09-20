@@ -303,9 +303,9 @@
 <h2 id="search-data">Search Data</h2>
 <p>We did some great stuff with basic data methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with where, sort, and pagination. What if we need more powerful queries with our documents? In WeDeploy you can do a text search, handle user misspellings, and show the number of documents by category with your data, and much more.</p>
 <p>First take a look at the text search. It&#39;s a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let&#39;s search for a Star Wars movie by the episode title, like &quot;Revenge of the Sith&quot;. We are not interested if the letter is in upper or lower case, since we are using English connectors like &quot;of&quot; and &quot;the&quot;. We want something flexible enough that it will also work for texts like &quot;The revenge of the Sith&quot;, or &quot;Sith&#39;s revenge&quot;. Our match operator is flexible enough for both.</p>
-<pre><code class="lang-js">WeDeploy
-  .data()
-  .match(&#39;title&#39;, &quot;Sith&#39;s revenge&quot;)
+<pre><code class="lang-js">var data = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
+
+data.match(&#39;title&#39;, &quot;Sith&#39;s revenge&quot;)
   .get(&#39;movies&#39;)
   .then(function(movies) {
     console.log(movies);

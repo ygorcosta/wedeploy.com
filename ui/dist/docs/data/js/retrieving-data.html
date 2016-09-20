@@ -302,8 +302,9 @@
 <article id="get-data">
 <h2 id="get-data">Get Data</h2>
 <p>Reading data from our storage takes only 3 lines of code.</p>
-<pre><code class="lang-js">WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;)
-  .get(&#39;movies/star_wars_v&#39;)
+<pre><code class="lang-js">var data = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
+
+data.get(&#39;movies/star_wars_v&#39;)
   .then(function(movie) {
     console.log(movie);
   });

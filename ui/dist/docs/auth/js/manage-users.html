@@ -302,9 +302,9 @@
 <article id="create-user">
 <h2 id="create-user">Create user</h2>
 <p>You create a new user in your WeDeploy project by calling the <code>createUser</code> method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.</p>
-<pre><code class="lang-js">WeDeploy
-    .auth()
-    .createUser({
+<pre><code class="lang-js">var client = WeDeploy.auth();
+
+client.createUser({
         email: &#39;user@domain.com&#39;,
         password: &#39;abc&#39;
     })
