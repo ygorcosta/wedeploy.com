@@ -8294,8 +8294,16 @@ input:-webkit-autofill {
     top: 0;
     left: 0; }
 
+#browser #browser__recent .btn:hover {
+  cursor: default;
+  background: rgba(14, 20, 26, 0.1);
+  color: rgba(14, 20, 26, 0.6); }
+
 #browser #browser__new-project {
   text-align: right; }
+  #browser #browser__new-project .btn:hover {
+    cursor: default;
+    background: #00d46a; }
 
 #browser__title {
   font-size: 20px;
