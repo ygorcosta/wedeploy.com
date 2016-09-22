@@ -8889,7 +8889,7 @@ p.project-item__status span.text {
 
 #view-3__2 {
   width: 100%;
-  background: #262b30;
+  background: #0e141a;
   position: relative; }
   @media (min-width: 320px) {
     #view-3__2 {
@@ -9010,7 +9010,7 @@ p.project-item__status span.text {
       padding: 0 20px; } }
 
 #view-3__2 .bg-text .bg-text__solid {
-  background: #262b30;
+  background: #0e141a;
   height: 100%;
   float: right; }
   @media (min-width: 1024px) {
@@ -9030,11 +9030,11 @@ p.project-item__status span.text {
       width: 34.5%; } }
 
 #view-3__2 .bg-text .bg-text__gradient {
-  background-image: -webkit-gradient(linear, right top, left top, from(#262b30), to(rgba(38, 43, 48, 0)));
-  background-image: -webkit-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
-  background-image: -moz-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
-  background-image: -o-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
-  background-image: linear-gradient(to left, #262b30, rgba(38, 43, 48, 0) 98%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#0e141a), to(rgba(38, 43, 48, 0)));
+  background-image: -webkit-linear-gradient(right, #0e141a, rgba(38, 43, 48, 0) 98%);
+  background-image: -moz-linear-gradient(right, #0e141a, rgba(38, 43, 48, 0) 98%);
+  background-image: -o-linear-gradient(right, #0e141a, rgba(38, 43, 48, 0) 98%);
+  background-image: linear-gradient(to left, #0e141a, rgba(38, 43, 48, 0) 98%);
   height: 100%;
   float: right; }
   @media (min-width: 1024px) {

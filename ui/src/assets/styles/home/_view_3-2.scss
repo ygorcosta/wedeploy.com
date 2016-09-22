@@ -6,7 +6,7 @@
 
 #view-3__2 {
 	width: 100%;
-	background: #262b30;//rgba($primary, 0.9);
+	background: $primary;//rgba($primary, 0.9);
 	position: relative;
 
 	@media (min-width: 320px) {
@@ -159,7 +159,7 @@
 }
 
 #view-3__2 .bg-text .bg-text__solid {
-	background: #262b30;
+	background: $primary;
 	height: 100%;
 	float: right;
 
@@ -185,11 +185,11 @@
 }
 
 #view-3__2 .bg-text .bg-text__gradient {
-	background-image: -webkit-gradient(linear, right top, left top, from(#262b30), to(rgba(38, 43, 48, 0)));
-	background-image: -webkit-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
-	background-image: -moz-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
-	background-image: -o-linear-gradient(right, #262b30, rgba(38, 43, 48, 0) 98%);
-	background-image: linear-gradient(to left, #262b30, rgba(38, 43, 48, 0) 98%);
+	background-image: -webkit-gradient(linear, right top, left top, from($primary), to(rgba(38, 43, 48, 0)));
+	background-image: -webkit-linear-gradient(right, $primary, rgba(38, 43, 48, 0) 98%);
+	background-image: -moz-linear-gradient(right, $primary, rgba(38, 43, 48, 0) 98%);
+	background-image: -o-linear-gradient(right, $primary, rgba(38, 43, 48, 0) 98%);
+	background-image: linear-gradient(to left, $primary, rgba(38, 43, 48, 0) 98%);
 	height: 100%;
 	float: right;
 
