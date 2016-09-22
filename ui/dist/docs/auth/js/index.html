@@ -297,14 +297,18 @@
 						<h1 id="auth">Auth</h1>
 <h6 id="allow-users-to-authenticate-using-passwords-popular-federated-identity-providers-like-google-facebook-github-and-more-using-wedeploy-auth-">Allow users to authenticate using passwords, popular federated identity providers like Google, Facebook, GitHub, and more using <em>WeDeploy™ Auth</em>.</h6>
 <div class="guide-btn-cta">
-  <a class="btn btn-accent btn-sm" href="http://authjs.boilerplate.wedeploy.io" target="_blank">
+  <a class="btn btn-accent btn-sm" href="http://boilerplate-auth.wedeploy.io" target="_blank">
     <span class="icon-16-external"></span>See Live Demo
   </a>
 </div>
 
+<div class="guide-aux-cta">
+  or read the <a href="https://github.com/wedeploy/boilerplate-auth/tree/js" target="_blank">source code</a>.
+</div>
+
 <article id="install-dependencies">
 <h2 id="install-dependencies">Install Dependencies</h2>
-<p>This section assumes that you already have the <strong>WeDeploy CLI</strong> installed and <strong>Docker</strong> running. Make sure to <a href="/docs/intro/using-the-cli.html">visit the installation guide</a> if you need help setting that up.</p>
+<p>This section assumes that you already have the <strong>WeDeploy CLI</strong> installed and <strong>Docker</strong> running. Make sure to <a href="/docs/intro/using-the-command-line.html">visit the installation guide</a> if you need help setting that up.</p>
 <p>We also feature code snippets using the API Client, <a href="/docs/intro/using-the-api-client.html">visit this guide</a> in order to start using it.</p>
 </article>
 <article id="running-locally">
@@ -333,27 +337,34 @@ cd boilerplate-auth-js
 <h2 id="deploying-to-the-cloud">Deploying to the Cloud</h2>
 <ol>
 <li><a href="https://github.com/wedeploy/boilerplate-auth/fork">Fork this repository</a>.</li>
-<li>Go to the <a href="http://dashboard.wedeploy.io">Dashboard</a>.</li>
-<li><a href="http://dashboard.wedeploy.io/projects/create">Create a project</a>.</li>
-<li>In the sidebar, click on <em>GitHub Integration</em>.</li>
-<li>Type your repository URL and <code>js</code> branch.</li>
-<li>Click on <em>Update Project</em>.</li>
-<li>Click on <em>Build All Repos</em> and wait a few seconds.</li>
+<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a>.</li>
+<li><a href="http://dashboard.wedeploy.com/projects/create">Create a project</a>.</li>
+<li>In the sidebar, click on <em>Deployment</em>.</li>
+<li>Using your local machine, clone your Github fork:<pre><code class="lang-text">git clone -b js https://github.com/&lt;username&gt;/boilerplate-auth
+</code></pre>
+</li>
+<li>Get into the folder: <code>cd boilerplate-auth</code>.</li>
+<li>Using the content on <em>Deployment</em> page. Add the WeDeploy remote url:<pre><code class="lang-text">git remote add wedeploy http://git.wedeploy.com/&lt;projectID&gt;.git
+</code></pre>
+</li>
+<li>Push your data to wedeploy git server: <code>git push wedeploy js:master</code>.</li>
 <li><p>Once you see it in the Dashboard, your container will be ready to be used.</p>
-<pre><code class="lang-text">http://authdemo.wedeploy.io
+<pre><code class="lang-text">http://boilerplate-auth.wedeploy.io
 </code></pre>
 </li>
 </ol>
 </article>
 <article id="key-capabilities">
 <h2 id="key-capabilities">Key capabilities</h2>
-<p>Easily add a complete sign-in system to your application. WeDeploy provides a ready-to-use auth solution that handles the UI flows for signing in users with email addresses and passwords, Google Sign-In, and GitHub Login.</p>
+<p>Easily add a complete sign-in system to your application. WeDeploy provides a ready-to-use auth solution that handles the UI flows for signing in users with email addresses and passwords, Google Sign-In, GitHub and Facebook Login.</p>
 <p><strong>Email and password</strong></p>
 <p>Authenticate users with their email addresses and passwords. Provides methods to create and manage users that use their email addresses and passwords to sign in, and sending password reset emails.</p>
-<p><strong>GitHub</strong></p>
-<p>Create a client id and client secret by <a href="https://github.com/settings/applications/new">registering your application</a> on GitHub.</p>
 <p><strong>Google</strong></p>
 <p>Create a client id and client secret by <a href="https://developers.google.com/youtube/registering_an_application">registering your application</a> on Google.</p>
+<p><strong>GitHub</strong></p>
+<p>Create a client id and client secret by <a href="https://github.com/settings/applications/new">registering your application</a> on GitHub.</p>
+<p><strong>Facebook</strong></p>
+<p>Create an app ID by <a href="https://developers.facebook.com/docs/apps/register">registering your application</a> on Facebook.</p>
 <p><strong>Manage Users</strong></p>
 <p>Create, delete or update users with a simple API.</p>
 </article>
@@ -369,7 +380,7 @@ cd boilerplate-auth-js
 </article>
 <h2 id="what-s-next-">What&#39;s Next?</h2>
 <ul>
-<li>Now we&#39;re ready to start <a href="/docs/auth/sign-in-with-facebook.html">authenticating accounts and growing our user base</a>.</li>
+<li>Now we&#39;re ready to <a href="/docs/auth/js/manage-users.html">start managing your users</a>.</li>
 </ul>
 
 
