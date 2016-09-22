@@ -7794,27 +7794,35 @@ input:-webkit-autofill {
       display: inline-block; } }
   @media (min-width: 480px) {
     #subscribe h1 {
+      line-height: 72px; } }
+  @media (min-width: 720px) {
+    #subscribe h1 {
       font-size: 60px;
       line-height: 72px; } }
   @media (min-width: 1280px) {
     #subscribe h1 {
+      font-size: 72px;
+      width: 100%;
+      line-height: 84px;
       margin: 0;
-      width: 76%;
       padding: 0;
       display: block; } }
   @media (min-width: 1440px) {
     #subscribe h1 {
+      font-size: 64px;
+      line-height: 84px;
       margin: 0;
-      width: 92%;
       padding: 0; } }
   @media (min-width: 1600px) {
     #subscribe h1 {
-      margin: 0;
-      width: 82%; } }
+      font-size: 64px;
+      line-height: 84px;
+      margin: 0; } }
   @media (min-width: 1920px) {
     #subscribe h1 {
-      margin: 0;
-      width: 80%; } }
+      font-size: 72px;
+      line-height: 84px;
+      margin: 0; } }
 
 #subscribe p {
   opacity: 0;
