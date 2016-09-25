@@ -14,7 +14,7 @@ This Liferay WeDeploy Alpha Services Agreement, including all referenced appendi
 
 **"Application(s)"** means the web application(s) that an End User creates and makes available through the use of WeDeploy.
 
-**"Alpha Term"** means the period of time Liferay makes the "beta" version of WeDeploy available to the general public. 
+**"Alpha Term"** means the period of time Liferay makes the "alpha" version of WeDeploy available to the general public.
 
 **"Content"** means any content or data whether developed in connection with WeDeploy or otherwise, software code, documentation, materials, information, text files, images and/or trademarks associated with Your Account, Application or any other use of WeDeploy and not provided by Liferay.
 
