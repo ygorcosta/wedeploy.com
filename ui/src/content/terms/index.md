@@ -22,8 +22,6 @@ This Liferay WeDeploy Alpha Services Agreement, including all referenced appendi
 
 **"Privacy Policy"** means Liferay’s privacy policy set forth at https://www.liferay.com/privacy-policy.
 
-**"Sensitive Data"** means
-
 **"Service Level"** means the resources allotted per each End User Account within the WeDeploy web service.
 
 **"Third Party Software and/or Services"** means the software and/or services made available through WeDeploy for End User to build an Application that is not owned or maintained by Liferay.
