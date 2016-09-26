@@ -288,27 +288,27 @@
 <article id="1-dependencies">
 <h2 id="dependencies">Dependencies</h2>
 <p>The following external software dependencies are necessary to correctly run some commands:</p>
-<p>a) <a href="https://git-scm.com/">Git</a> (download for <a href="https://git-scm.com/download/linux">Linux</a>, <a href="https://git-scm.com/download/mac">Mac OS X</a>, <a href="https://git-scm.com/download/win">Windows</a>)</p>
-<p>b) <a href="https://www.docker.com/">Docker</a> (download for <a href="https://download.docker.com/mac/stable/Docker.dmg">Mac OS X</a>, <a href="https://docs.docker.com/engine/installation/linux/">Linux</a>, <a href="https://download.docker.com/win/stable/InstallDocker.msi">Windows</a>)</p>
-<p>An useful error message feedback is given and the process is terminated, if a required dependency is not available when it is necessary.</p>
+<p>a) <a href="https://git-scm.com/">Git</a> (download for <a href="https://git-scm.com/download/linux">Linux</a>, <a href="https://git-scm.com/download/mac">macOS</a>, <a href="https://git-scm.com/download/win">Windows</a>)</p>
+<p>b) <a href="https://www.docker.com/">Docker</a> (download for <a href="https://docs.docker.com/engine/installation/linux/">Linux</a>, <a href="https://download.docker.com/mac/stable/Docker.dmg">macOS</a>, <a href="https://download.docker.com/win/stable/InstallDocker.msi">Windows</a>)</p>
+<p>Docker version 1.12.0 or later is required. If you use macOS, install the Docker for Mac. If you use Windows, please install Docker for Windows. Docker Toolbox, still available for earlier Mac and Windows systems is not supported.</p>
 </article>
 <article id="2-installing">
 <h2 id="installing">Installing</h2>
-<p>Install this tool with:</p>
-<pre><code class="lang-text">curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
+<p>Open your Terminal and run:</p>
+<pre><code class="lang-text">curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash
 </code></pre>
-<p>The tool verifies daily if new updates are available and let the user know when it is. To update, just run <code>we update</code>.</p>
 </article>
 <article id="3-creating-projects">
 <h2 id="creating-projects-locally">Creating projects locally</h2>
-<p>On the WeDeploy platform you create projects. Each project might have many containers, for handling static hosting, data API, email sending, etc.</p>
-<p>Use <code>we create</code> to create projects and containers. You can create a project anywhere on your machine. Containers are usually created from inside projects and are stored on the first subdirectory of its project.</p>
+<p>You are able to organize your services by project. Inside each project you can create services (called containers here), like static hosting, data API, Auth service, etc.</p>
+<p>Use <code>we create</code> to create projects and containers. You can create a project anywhere on your machine. Containers might be created one directory above a project for your convenience.</p>
 <pre><code class="lang-text">Usage:
-  we create &lt;project/container id&gt;
+  we create --project &lt;project&gt; --container &lt;container&gt;
 </code></pre>
 </article>
 <article id="4-running-projects-locally">
 <h2 id="running-projects-locally">Running projects locally</h2>
+<p>For this demo we are going to use the hosting boilerplate.</p>
 <ol>
 <li><p>Start local infrastructure:</p>
 <pre><code class="lang-text">we run
@@ -319,39 +319,66 @@
 cd boilerplate-hosting
 </code></pre>
 </li>
-<li><p>Link this container with the local infrastructure:</p>
-<pre><code class="lang-text">we link
+<li><p>Link this container to a new project named demo:</p>
+<pre><code class="lang-text">we link --project demo
 </code></pre>
 </li>
-<li><p>Now your container is ready at:</p>
-<pre><code class="lang-text">http://hosting.&lt;projectID&gt;.wedeploy.me
-</code></pre>
+<li><p>Now your container should be accessible from <a href="http://hosting.demo.wedeploy.me">http://hosting.demo.wedeploy.me</a></p>
 </li>
 </ol>
+<p><em>On the first first time it might take a few minutes while downloading the hosting image on the background.</em></p>
 </article>
-<article id="5-fetching-logs">
+<article id=“5-login-and-remotes”>
+<h2 id="remotes-and-friendly-host-style">Remotes and friendly host style</h2>
+<p>Many commands requires --project, --container, or --remote flags. You can use the following patterns for passing these values:</p>
+<pre><code class="lang-text">we &lt;command&gt; --project &lt;project&gt; --container &lt;container&gt;
+</code></pre>
+<p>and the friendly host style:</p>
+<pre><code class="lang-text">we &lt;command&gt; &lt;container&gt;.&lt;project&gt;.&lt;remote address&gt;
+</code></pre>
+<p>or even</p>
+<pre><code class="lang-text">we &lt;command&gt; &lt;container&gt;.&lt;project&gt; --remote &lt;remote&gt;
+</code></pre>
+<p>For the local cloud, just don&#39;t add a --remote or <remote address> value like in:</p>
+<pre><code class="lang-text">we log public.chat
+</code></pre>
+<p>or to list all logs by containers on the project &quot;chat&quot;:</p>
+<pre><code class="lang-text">we log chat
+</code></pre>
+<p>Remotes can be managed in a similar fashion as git&#39;s remote command:</p>
+<pre><code class="lang-text">$ we remote -v
+wedeploy           wedeploy.io
+</code></pre>
+<p>If you know how to use <code>git remote</code> you already know how to use <code>we remote</code>.</p>
+<p>For your convenience we include the wedeploy cloud remote by default once you log in on the CLI app with <code>we login</code> (requested when necessary).</p>
+<p>All commands that support --project, --container, and / or --remote support this host style as well.</p>
+</article>
+<article id=“6-fetching-logs">
 <h2 id="fetching-project-and-container-logs">Fetching project and container logs</h2>
 <p>You can fetch projects and container logs with</p>
-<pre><code class="lang-text">we log &lt;project id&gt; &lt;container id&gt;
+<pre><code class="lang-text">we log --project &lt;project&gt; --container &lt;container&gt;
+</code></pre>
+<p>or with a friendly host style like</p>
+<pre><code class="lang-text">we log &lt;container&gt;.&lt;project&gt;.wedeploy.me
 </code></pre>
 <h3 id="examples-">Examples:</h3>
 <p>See the logs for the last 20min for the data container on the wechat project:</p>
-<pre><code class="lang-text">we log wechat data --since 20min
+<pre><code class="lang-text">we log --project wechat --container data --since 20min
 </code></pre>
-<p>Watch for logs on the wechat project:</p>
-<pre><code class="lang-text">we log wechat --watch
+<p>Watch for logs on the hosting container on the demo project:</p>
+<pre><code class="lang-text">we log hosting.demo.wedeploy.me --watch
 </code></pre>
 </article>
-<article id="6-list">
+<article id=“7-list">
 <h2 id="listing-projects-and-containers">Listing projects and containers</h2>
 <p>Watch the listing of all projects running locally:</p>
 <pre><code class="lang-text">we list --watch
 </code></pre>
-<p>List all projects on a given cloud:</p>
-<pre><code class="lang-text">we list --remote &lt;remote&gt;
+<p>List all your projects running on the WeDeploy cloud:</p>
+<pre><code class="lang-text">we list wedeploy.io
 </code></pre>
-<p>List the containers of the project &quot;ci&quot; on the cloud &quot;staging&quot;:</p>
-<pre><code class="lang-text">we list ci --remote staging
+<p>or</p>
+<pre><code class="lang-text">we list --remote wedeploy
 </code></pre>
 </article>
 
