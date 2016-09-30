@@ -301,6 +301,7 @@
 </article>
 <article id="running-locally">
 <h2 id="running-locally">Running Locally</h2>
+<p>WeDeploy™ provides a way to run your project locally using a sandbox system.</p>
 <ol>
 <li><p>Start local infrastructure:</p>
 <pre><code class="lang-text">we run
@@ -320,13 +321,13 @@ cd boilerplate-hosting
 </code></pre>
 </li>
 </ol>
+<p>Inside this project folder, you can find a <code>container.json</code> with the container ID used in this case: <code>hosting</code>.</p>
 </article>
 <article id="deploying-to-the-cloud">
 <h2 id="deploying-to-the-cloud">Deploying to the Cloud</h2>
 <ol>
 <li><a href="https://github.com/wedeploy/boilerplate-hosting/fork">Fork this repository</a>.</li>
-<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a>.</li>
-<li><a href="http://dashboard.wedeploy.com/projects/create">Create a project</a>.</li>
+<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a> and create a project.</li>
 <li>In the sidebar, click on <em>Deployment</em>.</li>
 <li>Using your local machine, clone your Github fork:<pre><code class="lang-text">git clone https://github.com/&lt;username&gt;/boilerplate-hosting
 </code></pre>
@@ -341,6 +342,10 @@ cd boilerplate-hosting
 </code></pre>
 </li>
 </ol>
+</article>
+<article id="error-pages">
+<h2 id="error-pages">Error Pages</h2>
+<p>Files put into the special directory <code>/_error</code> are mapped as the error files to be served in case of an error. They must take the form of <code>&lt;error code&gt;.html</code>.</p>
 </article>
 <h2 id="what-s-next-">What&#39;s Next?</h2>
 <ul>
