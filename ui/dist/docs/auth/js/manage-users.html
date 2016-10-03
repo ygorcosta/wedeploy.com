@@ -302,18 +302,18 @@
 <article id="create-user">
 <h2 id="create-user">Create user</h2>
 <p>You create a new user in your WeDeploy project by calling the <code>createUser</code> method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.</p>
-<pre><code class="lang-js">WeDeploy
-    .auth()
-    .createUser({
-        email: &#39;user@domain.com&#39;,
-        password: &#39;abc&#39;
-    })
-    .then(function(user) {  
-        // Successfully created.
-    })
-    .catch(function(err) {  
-      // Not created.
-    });
+<pre><code class="lang-js">var auth = WeDeploy.auth();
+
+auth.createUser({
+    email: &#39;user@domain.com&#39;,
+    password: &#39;abc&#39;
+})
+.then(function(user) {
+    // Successfully created.
+})
+.catch(function(err) {
+  // Not created.
+});
 </code></pre>
 </article>
 <article id="get-current-user">
@@ -330,14 +330,14 @@ if (currentUser) {
 <article id="get-user">
 <h2 id="get-user">Get user</h2>
 <pre><code class="lang-js">WeDeploy
-    .auth()
-    .getUser(userId)
-    .then(function(user) {
-        // User found.
-    })
-    .catch(function(err) {  
-        // User does not exist.
-    });
+.auth()
+.getUser(userId)
+.then(function(user) {
+    // User found.
+})
+.catch(function(err) {
+    // User does not exist.
+});
 </code></pre>
 </article>
 <article id="delete-user">
@@ -346,12 +346,12 @@ if (currentUser) {
 <pre><code class="lang-js">var currentUser = WeDeploy.auth().currentUser;
 
 currentUser.deleteUser()
-    .then(function() {  
-        // Successfully deleted.
-    })
-    .catch(function(err) {  
-      // Not deleted.
-    });
+.then(function() {
+    // Successfully deleted.
+})
+.catch(function(err) {
+  // Not deleted.
+});
 </code></pre>
 </article>
 <article id="update-user">
@@ -365,10 +365,10 @@ currentUser.updateUser({
     name: &quot;Eleven&quot;,
     photoUrl: &quot;https://hawkinslabs.com/011/profile.jpg&quot;
 })
-.then(function() {  
+.then(function() {
     // Successfully updated.
 })
-.catch(function(err) {  
+.catch(function(err) {
   // Not updated.
 });
 </code></pre>
@@ -377,32 +377,32 @@ currentUser.updateUser({
 <h2 id="send-a-password-reset-email">Send a password reset email</h2>
 <p>You can send a password reset email to a user with the sendPasswordResetEmail method. For example:</p>
 <pre><code class="lang-js">WeDeploy
-    .auth()
-    .sendPasswordResetEmail(&quot;user@domain.com&quot;)
-    .then(function() {
-        // Email sent.
-    })
-    .catch(function(err) {  
-      // An error happened.
-    });
+.auth()
+.sendPasswordResetEmail(&quot;user@domain.com&quot;)
+.then(function() {
+    // Email sent.
+})
+.catch(function(err) {
+  // An error happened.
+});
 </code></pre>
 </article>
 <article id="sign-out">
 <h2 id="sign-out">Sign-out</h2>
 <pre><code class="lang-js">WeDeploy
-    .auth()
-    .signOut()
-    .then(function() {
-        // User is signed out.
-    })
-    .catch(function(err) {  
-      // User was signed out.
-    });
+.auth()
+.signOut()
+.then(function() {
+    // User is signed out.
+})
+.catch(function(err) {
+  // User was signed out.
+});
 </code></pre>
 </article>
 <h2 id="what-s-next-">What&#39;s Next?</h2>
 <ul>
-<li>Now you can start building your apps with authentication.</li>
+<li>Now we&#39;re ready to start <a href="/docs/auth/js/sign-in-with-facebook.html">authenticating accounts and growing our user base</a>.</li>
 </ul>
 
 

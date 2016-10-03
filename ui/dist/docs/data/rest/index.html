@@ -301,7 +301,8 @@
 <h6 id="leverage-a-nosql-database-with-search-and-real-time-capabilities-using-wedeploy-data-">Leverage a NoSQL database with search and real-time capabilities using <em>WeDeploy™ Data</em>.</h6>
 <article id="install-dependencies">
 <h2 id="install-dependencies">Install Dependencies</h2>
-<p>This section assumes you already have the <strong>WeDeploy CLI</strong> installed and <strong>Docker</strong> running. Make sure to <a href="/docs/intro/using-the-cli.html">visit the installation guide</a> if you need help setting that up.</p>
+<p>This section assumes you already have the <strong>WeDeploy CLI</strong> installed and <strong>Docker</strong> running. Make sure to <a href="/docs/intro/using-the-command-line.html">visit the installation guide</a> if you need help setting that up.</p>
+<p>We also feature code snippets using the API Client, <a href="/docs/intro/using-the-api-client.html">visit this guide</a> in order to start using it.</p>
 </article>
 <article id="running-locally">
 <h2 id="running-locally">Running Locally</h2>
@@ -329,12 +330,17 @@ cd boilerplate-data-js
 <h2 id="deploying-to-the-cloud">Deploying to the Cloud</h2>
 <ol>
 <li><a href="https://github.com/wedeploy/boilerplate-data/fork">Fork this repository</a>.</li>
-<li>Go to the <a href="http://dashboard.wedeploy.io">Dashboard</a>.</li>
-<li><a href="http://dashboard.wedeploy.io/projects/create">Create a project</a>.</li>
-<li>In the sidebar, click on <em>GitHub Integration</em>.</li>
-<li>Type your repository URL and <code>js</code> branch.</li>
-<li>Click on <em>Update Project</em>.</li>
-<li>Click on <em>Build All Repos</em> and wait a few seconds.</li>
+<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a>.</li>
+<li><a href="http://dashboard.wedeploy.com/projects/create">Create a project</a>.</li>
+<li>In the sidebar, click on <em>Deployment</em>.</li>
+<li>Using your local machine, clone your Github fork:<pre><code class="lang-text">git clone -b js https://github.com/&lt;username&gt;/boilerplate-data
+</code></pre>
+</li>
+<li>Get into the folder: <code>cd boilerplate-data</code>.</li>
+<li>Using the content on <em>Deployment</em> page. Add the WeDeploy remote url:<pre><code class="lang-text">git remote add wedeploy http://git.wedeploy.com/&lt;projectID&gt;.git
+</code></pre>
+</li>
+<li>Push your data to wedeploy git server: <code>git push wedeploy js:master</code>.</li>
 <li><p>Once you see it in the Dashboard, your container will be ready to be used.</p>
 <pre><code class="lang-text">http://datademo.wedeploy.io
 </code></pre>
@@ -342,7 +348,7 @@ cd boilerplate-data-js
 </ol>
 </article>
 <h2 id="next-steps">Next Steps</h2>
-<p>Now that you have <em>WeDeploy™ Data</em> API settled up, you can interact <a href="/docs/data/saving-data.html">saving new data</a>.</p>
+<p>Now that you have <em>WeDeploy™ Data</em> API settled up, you can interact <a href="/docs/data/rest/saving-data.html">saving data</a>.</p>
 
 
 						<div class="guide-feedback">
