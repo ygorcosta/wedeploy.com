@@ -613,7 +613,7 @@ p.project-item__status span.text {
 #terminal #cli {
 	height: ($baseline * 30);
 	position:absolute;
-	bottom: 60px;
+	bottom: 0;
 	opacity: 0;
 	background: rgba($primary, 1);
 	box-shadow: 0 40px 100px rgba(14, 20, 26, 0.4);

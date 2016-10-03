@@ -8603,7 +8603,7 @@ p.project-item__status span.text {
 #terminal #cli {
   height: 360px;
   position: absolute;
-  bottom: 60px;
+  bottom: 0;
   opacity: 0;
   background: #0e141a;
   box-shadow: 0 40px 100px rgba(14, 20, 26, 0.4);

@@ -305,12 +305,13 @@
 <p>By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see <a href="/docs/data/configuring-rules.html">configuring rules</a> section.</p>
 </blockquote>
 <p>Updating existing data is as simple as sending a JSON.</p>
-<pre><code class="lang-js">var client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
+<pre><code class="lang-js">
+client = WeDeploy.data(&#39;http://datademo.wedeploy.io&#39;);
 
 client.update(&#39;movies/115992383516607958&#39;, {
   &quot;rating&quot;: 9.1
-}).then(function(movie) {
-  console.log(movie);
+}).then(function(response) {
+  console.log(response);
 });
 </code></pre>
 <p>As you can see, the data api uses Promises to help you to make async requests.</p>
@@ -324,7 +325,7 @@ client.update(&#39;movies/115992383516607958&#39;, {
 </code></pre>
 </article>
 <h2 id="next-steps">Next Steps</h2>
-<p>Now that you have learned how to update data, you can interact <a href="/docs/data/js/deleting-data.html">deleting data</a>.</p>
+<p>Now that you have learned how to update data, you can interact <a href="/docs/data/deleting-data.html">deleting data</a>.</p>
 
 
 						<div class="guide-feedback">
