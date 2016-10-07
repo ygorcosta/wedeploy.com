@@ -77,7 +77,7 @@ function getTopic(path) {
 	switch(currentTopic) {
 		case 'intro':
 			icon = 'icon-16-arrow-right-rod';
-			iconBg = '#ff6e00';
+			iconBg = '#00d46a';
 			break;
 		case 'auth':
 			icon = 'icon-16-persons';
@@ -85,19 +85,19 @@ function getTopic(path) {
 			break;
 		case 'data':
 			icon = 'icon-16-database';
-			iconBg = '#00d46a';
+			iconBg = '#ffb700';
 			break;
 		case 'email':
 			icon = 'icon-16-mail-full';
-			iconBg = '#ffb700';
+			iconBg = '#ff6e00';
 			break;
 		case 'hosting':
 			icon = 'icon-16-folder';
-			iconBg = '#00a4ff';
+			iconBg = '#ff536b';
 			break;
 		case 'other':
 			icon = 'icon-16-module';
-			iconBg = '#ff536b';
+			iconBg = '#00a4ff';
 			break;
 	}
 
