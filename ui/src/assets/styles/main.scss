@@ -2,3 +2,11 @@
 
 @import "home";
 @import "misc";
+
+.wedeploy-logo.logo-alpha {
+	background: url('../images/home/logotype/logo_by_liferay.svg');
+	background-size: 200px 84px;
+	position: absolute;
+	width: 200px;
+	height: 84px;
+}
