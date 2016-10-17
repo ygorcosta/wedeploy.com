@@ -530,6 +530,14 @@
 #browser .browser__project-item .project-item__status {
 	width: 18%;
 	padding-left: 10px;
+
+	.box.box-project {
+		margin: 4px 0 0;
+	}
+
+	.box .bullet {
+		margin: 8px 0 0;
+	}
 }
 
 #browser .browser__project-item .project-item__services {
@@ -672,7 +680,7 @@ p.project-item__status span.text {
 	font-size: 14.4px;
 	line-height: 24px;
 	font-weight: 400;
-	color: rgba($theme, 1);
+	color: rgba($primary, 0.2);
 	position: relative;
 	top: -1px;
 }
