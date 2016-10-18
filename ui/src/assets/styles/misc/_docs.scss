@@ -396,6 +396,27 @@
 	line-height: 84px;
 }
 
+.topbar-docs .topbar-list {
+	max-width: 100%;
+	.topbar-link {
+		white-space: nowrap;
+
+		font-family: $font-family-secondary-bold;
+    font-size: 15px;
+    color: rgba($primary, 0.6);
+	}
+
+	@media	(max-width: 600px) {
+		display: none;
+	}
+
+	.get-started {
+		@media	(max-width: 720px) {
+			display: none;
+		}
+	}
+}
+
 /* Medium screens
 	 ========================================================================== */
 @media (max-width: $screen-md-min) {

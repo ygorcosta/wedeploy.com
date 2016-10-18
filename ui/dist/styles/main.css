@@ -19953,6 +19953,20 @@ li.feature {
   font-size: 32px;
   line-height: 84px; }
 
+.topbar-docs .topbar-list {
+  max-width: 100%; }
+  .topbar-docs .topbar-list .topbar-link {
+    white-space: nowrap;
+    font-family: "Galano Bold", sans-serif;
+    font-size: 15px;
+    color: rgba(14, 20, 26, 0.6); }
+  @media (max-width: 600px) {
+    .topbar-docs .topbar-list {
+      display: none; } }
+  @media (max-width: 720px) {
+    .topbar-docs .topbar-list .get-started {
+      display: none; } }
+
 /* Medium screens
 	 ========================================================================== */
 @media (max-width: 960px) {
