@@ -1,5 +1,5 @@
 {
 	"id": "landing",
 	"homeContainer": "ui",
-	"customDomain": ["wedeploy.com"]
+	"customDomain": ["wedeploy.com", "www.wedeploy.com"]
 }
