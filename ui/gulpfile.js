@@ -7,13 +7,6 @@ const gulp = require('gulp');
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
 const marble = require('marble');
-const metal = require('gulp-metal');
-
-metal.registerTasks({
-	bundleFileName: 'landing.js',
-	buildSrc: 'src/scripts/main.js',
-	buildDest: 'dist/js'
-});
 
 electric.registerTasks({
 	gulp: gulp,
