@@ -1,0 +1,30 @@
+
+{namespace docsDataDeletingDataHtml}
+
+/**
+ *
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			<h1>Deleting Data</h1>
+<h6>The delete() function destroys an existing field, document or collection in the database.</h6>
+<article id="article_1">
+<h2>Deleting existing data</h2>
+<blockquote>
+<p>By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see <a href="/docs/data/configuring-rules.html">configuring rules</a> section.</p>
+</blockquote>
+<p>To delete a field, document, or the entire collection, we use the DELETE method:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}var data = WeDeploy.data('http://datademo.wedeploy.io');
+
+data.delete('movies/star_wars_v/title');
+
+data.delete('movies/star_wars_v');
+
+data.delete('movies');{/literal}{/param}{param mode: 'javascript' /}{/call}</article>
+<h2>What's next?</h2>
+<p>Now that you have learned how to update data, you can interact <a href="/docs/data/js/retrieving-data.html">retrieving data</a>.</p>
+
+		{/param}
+	{/call}
+{/template}

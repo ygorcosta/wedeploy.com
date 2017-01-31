@@ -1,0 +1,155 @@
+---
+description: "Create, delete or update users by using WeDeploy™ Auth."
+headerTitle: "Auth"
+layout: "guide"
+title: "Manage Users"
+weight: 2
+---
+
+# Manage Users
+
+###### Create, delete or update users by using *WeDeploy™ Auth*.
+
+<article id="article_1">
+
+## Create user
+
+You create a new user in your WeDeploy project by calling the `createUser` method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.
+
+```js
+var auth = WeDeploy.auth();
+
+auth.createUser({
+	email: 'user@domain.com',
+	password: 'abc'
+})
+.then(function(user) {
+	// Successfully created.
+})
+.catch(function(err) {
+  // Not created.
+});
+```
+
+</article>
+
+<article id="article_2">
+
+## Get current user
+
+```js
+var currentUser = WeDeploy.auth().currentUser;
+
+if (currentUser) {
+	// User is signed in.
+} else {
+	// No user is signed in.
+}
+```
+
+</article>
+
+<article id="article_3">
+
+## Get user
+
+```js
+WeDeploy
+.auth()
+.getUser(userId)
+.then(function(user) {
+	// User found.
+})
+.catch(function(err) {
+	// User does not exist.
+});
+```
+
+</article>
+
+<article id="article_4">
+
+## Delete user
+
+You can delete a user account with the delete method. For example:
+
+```js
+var currentUser = WeDeploy.auth().currentUser;
+
+currentUser.deleteUser()
+.then(function() {
+	// Successfully deleted.
+})
+.catch(function(err) {
+  // Not deleted.
+});
+```
+
+</article>
+
+<article id="article_5">
+
+## Update user
+
+You can update a user's basic information. For example:
+
+```js
+var currentUser = WeDeploy.auth().currentUser;
+
+currentUser.updateUser({
+	password: "password",
+	email: "eleven@hawkinslabs.com",
+	name: "Eleven",
+	photoUrl: "https://hawkinslabs.com/011/profile.jpg"
+})
+.then(function() {
+	// Successfully updated.
+})
+.catch(function(err) {
+  // Not updated.
+});
+```
+
+</article>
+
+<article id="article_6">
+
+## Send a password reset email
+
+You can send a password reset email to a user with the sendPasswordResetEmail method. For example:
+
+```js
+WeDeploy
+.auth()
+.sendPasswordResetEmail("user@domain.com")
+.then(function() {
+	// Email sent.
+})
+.catch(function(err) {
+  // An error happened.
+});
+```
+
+</article>
+
+<article id="article_7">
+
+## Sign-out
+
+```js
+WeDeploy
+.auth()
+.signOut()
+.then(function() {
+	// User is signed out.
+})
+.catch(function(err) {
+  // User was signed out.
+});
+```
+
+</article>
+
+## What's next?
+
+* Now we're ready to start [authenticating accounts and growing our user base](/docs/auth/js/sign-in-with-facebook.html).

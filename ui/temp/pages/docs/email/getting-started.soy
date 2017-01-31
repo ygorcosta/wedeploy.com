@@ -1,0 +1,94 @@
+
+{namespace docsEmailGettingStartedHtml}
+
+/**
+ *
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			<h1>Email</h1>
+<h6>Send emails asynchronously and check their status using <em>WeDeploy™ Email</em>.</h6>
+<div class="guide-btn-cta">
+  <a class="btn btn-accent btn-sm" href="http://boilerplate-email.wedeploy.io" target="_blank">
+    <span class="icon-16-external"></span>See Live Demo
+  </a>
+</div>
+<div class="guide-aux-cta">
+  or read the <a href="https://github.com/wedeploy/boilerplate-email/tree/js" target="_blank">source code</a>.
+</div>
+<article id="article_1">
+<h2>Install dependencies</h2>
+<p>This section assumes that you already have the <strong>WeDeploy CLI</strong> installed and <strong>Docker</strong> running. Make sure to <a href="/docs/intro/using-the-command-line.html">visit the installation guide</a> if you need help setting that up.</p>
+<p>We also feature code snippets using the API Client, <a href="/docs/intro/using-the-api-client.html">visit this guide</a> in order to start using it.</p>
+</article>
+<article id="article_2">
+<h2>Running locally</h2>
+<ol>
+<li>Start local infrastructure:</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}we run{/literal}{/param}{param mode: 'xml' /}{/call}<ol start="2">
+<li>Clone this repository:</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}git clone -b js https://github.com/wedeploy/boilerplate-email.git boilerplate-email-js
+cd boilerplate-email-js{/literal}{/param}{param mode: 'xml' /}{/call}<ol start="3">
+<li>Link this container with the local infrastructure:</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}we link{/literal}{/param}{param mode: 'xml' /}{/call}<ol start="4">
+<li>Now your container is ready to be used:</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}http://emaildemo.wedeploy.me{/literal}{/param}{param mode: 'xml' /}{/call}</article>
+<article id="article_3">
+<h2>Deploying to the cloud</h2>
+<ol>
+<li><a href="https://github.com/wedeploy/boilerplate-email/fork">Fork this repository</a>.</li>
+<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a>.</li>
+<li><a href="http://dashboard.wedeploy.com/projects/create">Create a project</a>.</li>
+<li>In the sidebar, click on <em>Deployment</em>.</li>
+<li>Using your local machine, clone your Github fork:</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}git clone https://github.com/<username>/boilerplate-email{/literal}{/param}{param mode: 'xml' /}{/call}<ol start="6">
+<li>Get into the folder: <code>cd boilerplate-email</code>.</li>
+<li>Using the content on <em>Deployment</em> page. Add the WeDeploy remote url:</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}git remote add wedeploy http://git.wedeploy.com/<projectID>.git{/literal}{/param}{param mode: 'xml' /}{/call}<ol start="8">
+<li>Push your data to wedeploy git server: <code>git push wedeploy master</code>.</li>
+<li>Once you see it in the Dashboard, your container will be ready to be used.</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}http://emaildemo.wedeploy.io{/literal}{/param}{param mode: 'xml' /}{/call}<h2>Sending an email</h2>
+<p>Now that we have our container up and running, it's time to start sending some emails. We can use the API Client to facilitate the process of sending requests to WeDeploy.</p>
+<p>In order to send emails, we have to make a <code>POST</code> request to <code>/emails</code> passing some required parameters like <code>from</code>, <code>to</code>, and <code>subject</code>:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+.url('http://<containerID>.<projectID>.wedeploy.io/emails')
+.form('from', 'from@domain.com')
+.form('to', 'to@domain.com')
+.form('subject', 'Hi there!')
+.post()
+.then(function(response) {
+  console.log('Email ID:', response.body());
+})
+.catch(function(error) {
+  // Some error has happened
+});{/literal}{/param}{param mode: 'js' /}{/call}<blockquote>
+<p>For the full list of parameters, check this container's README in the <a href="http://dashboard.wedeploy.io/">Dashboard</a>.</p>
+</blockquote>
+<p>As a result, we'll receive an email ID. This doesn't indicate that the email was already sent, it actually says that it was added to the email queue. That's why we have another API to check the email status.</p>
+<h2>Checking an email status</h2>
+<p>In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. <code>123</code>, and send a <code>GET</code> request to <code>/emails/123/status</code>.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+.url('http://<containerID>.<projectID>.wedeploy.io/emails/<emailID>/status')
+.get()
+.then(function(response) {
+  console.log('Email status:', response.body());
+})
+.catch(function(error) {
+  // Some error has happened
+});{/literal}{/param}{param mode: 'js' /}{/call}</article>
+<h2>What's next?</h2>
+<ul>
+<li>That's it! Now we're ready to start sending emails to our users.</li>
+</ul>
+
+		{/param}
+	{/call}
+{/template}

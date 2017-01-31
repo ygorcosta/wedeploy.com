@@ -1,0 +1,97 @@
+
+{namespace docsDataSavingDataHtml}
+
+/**
+ *
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			<h1>Saving Data</h1>
+<h6>The create() function creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response.</h6>
+<article id="article_1">
+<h2>Inserting new data</h2>
+<blockquote>
+<p>By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see configuring rules section.</p>
+</blockquote>
+<p>Writing new data is as simple as sending a JSON.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}var data = WeDeploy.data('http://datademo.wedeploy.io');
+
+data.create('movies', {
+  "title": "Star Wars IV",
+  "year": 1977,
+  "rating": 8.7
+}).then(function(movie) {
+  console.log(movie);
+});{/literal}{/param}{param mode: 'javascript' /}{/call}<p>As you can see, the data api uses Promises to help you to make async requests.</p>
+<p>This operation will return the newly created document, with the following generated ID:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}{
+  "id":" "115992383516607958",
+  "title": "Star Wars IV",
+  "year": 1977,
+  "rating": 8.7
+}{/literal}{/param}{param mode: 'javascript' /}{/call}<p>Generated ID is a string and it's structure may vary. It is also possible to define custom app-specific value for the ID, by simply passing the <code>id</code> field as part of the new document.</p>
+</article>
+<article id="article_2">
+<h2>Inserting multiple data</h2>
+<p>With the same method you're able to create multiple data instead using the method <code>.create</code> multiple times.
+You just need to use an array instead an object as the second param.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy.data('http://datademo.wedeploy.io').create('movies', [
+  {
+    "title": "Star Wars III",
+    "year": 2005,
+    "rating": 8.0
+  },
+  {
+    "title": "Star Wars II",
+    "year": 2002,
+    "rating": 8.6
+  }
+]).then(function(movies) {
+  console.log(movies);
+});{/literal}{/param}{param mode: 'javascript' /}{/call}<p>This operation will return the newly created array of documents, with the following generated IDs:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}[
+  {
+    "id":" 115992383516607959",
+    "title": "Star Wars III",
+    "year": 2005,
+    "rating": 8.0
+  },
+  {
+    "id":" 115992383516607954",
+    "title": "Star Wars II",
+    "year": 2002,
+    "rating": 8.6
+  }
+]{/literal}{/param}{param mode: 'javascript' /}{/call}</article>
+<article id="article_3">
+<h2>Inserting new fields in an existing collection</h2>
+<p>WeDeploy Data service is really flexible in therms of data structure. You're able to insert new fiels in a collection by adding the new key in the object param.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy.data('http://datademo.wedeploy.io').create('movies', [
+  {
+    "title": "Star Wars I",
+    "obs": "First in ABC order",
+    "year": 1999,
+    "rating": 9.0
+  }
+]).then(function(movie) {
+  console.log(movie);
+});{/literal}{/param}{param mode: 'javascript' /}{/call}<p>This operation will return the newly created document, with the following generated ID:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}{
+  "id":" 115992383516607954",
+  "title": "Star Wars I",
+  "obs": "First in ABC order",
+  "year": 1999,
+  "rating": 9.0
+}{/literal}{/param}{param mode: 'javascript' /}{/call}</article>
+<article id="article_4">
+<h2>URL scope structure</h2>
+<p>The URL we just created stored a new document in our app's service inside the &quot;movies&quot; collection. More information on how to set up this datastore URL can be seen in the section Building APIs. For now, we only need to know that within the path where the data is mounted. The URL will be interpreted as a key that points to a stored resource like the one below:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}/collectionName/documentId/documentProperty/documentInnerProperty{/literal}{/param}{param mode: 'text' /}{/call}<p>For example, to reference the newly created Star Wars rating, we can use the path:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}http://data.datademo.wedeploy.me/movies/115992383516607958/rating{/literal}{/param}{param mode: 'text' /}{/call}</article>
+<h2>What's next?</h2>
+<p>Now that you have learned how to create data, you can interact <a href="/docs/data/js/updating-data.html">updating data</a>.</p>
+
+		{/param}
+	{/call}
+{/template}

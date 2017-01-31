@@ -1,0 +1,52 @@
+
+{namespace docsAuthSignInWithGoogleHtml}
+
+/**
+ *
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			<h1>Sign-in With Google</h1>
+<h6>You can let your users authenticate using their Google Accounts by integrating Google Sign-In into your app. <em>WeDeploy™ Authentication</em>.</h6>
+<article id="article_1">
+<h2>Sign-in with google</h2>
+<p>To sign in by redirecting to the sign-in page, call <code>signInWithRedirect</code>:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}var auth = WeDeploy.auth();
+
+var provider = new auth.provider.Google();
+provider.setProviderScope("email");
+
+auth.signInWithRedirect(provider);
+
+auth.onSignIn(function(user) {
+    // Fires when user is signed in after redirect.
+});{/literal}{/param}{param mode: 'js' /}{/call}</article>
+<article id="article_2">
+<h2>Setup app client id and secret</h2>
+<p>Create a client id and client secret by <a href="https://developers.google.com/youtube/registering_an_application">registering your application</a> on Google.</p>
+<blockquote>
+<p>Please be sure to add the callback url <code>http://&lt;auth-container-id&gt;.&lt;project-id&gt;.wedeploy.io/oauth/token</code> in your application.
+For local development, use <code>wedeploy.me</code> instead. To use with custom domains you can change the sufix <code>&lt;project-id&gt;.wedeploy.io</code> for your domain.</p>
+</blockquote>
+<p>After retrieving the client id and client secret you can configure them as environment variables of the authentication <code>container.json</code>.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}{
+    "id": "auth",
+    "name": "Auth",
+    "type": "wedeploy/auth",
+    "env": {
+        "WEDEPLOY_AUTH_GOOGLE": "true",
+        "WEDEPLOY_AUTH_GOOGLE_CLIENT_ID": "<your-google-client-id>",
+        "WEDEPLOY_AUTH_GOOGLE_CLIENT_SECRET": "<your-google-client-secret>"
+    }
+}{/literal}{/param}{param mode: 'json' /}{/call}<p>Or you can add those environment variables using the dashboard.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/1435318/20008152/2ceabade-a27e-11e6-9c86-435fc1c12412.png" alt="Project Container Environment"></p>
+</article>
+<h2>What's next?</h2>
+<ul>
+<li>Learn how to sign-up users using their <a href="/docs/auth/js/sign-in-with-password.html">email and password into your app</a>.</li>
+</ul>
+
+		{/param}
+	{/call}
+{/template}

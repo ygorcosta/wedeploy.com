@@ -1,0 +1,150 @@
+---
+description: "The create() function creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response."
+headerTitle: "Data"
+layout: "guide"
+title: "Saving Data"
+weight: 3
+---
+
+# Saving Data
+
+###### The create() function creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response.
+
+<article id="article_1">
+
+## Inserting new data
+
+> By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see configuring rules section.
+
+Writing new data is as simple as sending a JSON.
+
+```javascript
+var data = WeDeploy.data('http://datademo.wedeploy.io');
+
+data.create('movies', {
+  "title": "Star Wars IV",
+  "year": 1977,
+  "rating": 8.7
+}).then(function(movie) {
+  console.log(movie);
+});
+
+```
+As you can see, the data api uses Promises to help you to make async requests.
+
+This operation will return the newly created document, with the following generated ID:
+
+```javascript
+{
+  "id":" "115992383516607958",
+  "title": "Star Wars IV",
+  "year": 1977,
+  "rating": 8.7
+}
+```
+
+Generated ID is a string and it's structure may vary. It is also possible to define custom app-specific value for the ID, by simply passing the `id` field as part of the new document.
+
+</article>
+
+<article id="article_2">
+
+## Inserting multiple data
+
+With the same method you're able to create multiple data instead using the method `.create` multiple times.
+You just need to use an array instead an object as the second param.
+
+```javascript
+WeDeploy.data('http://datademo.wedeploy.io').create('movies', [
+  {
+    "title": "Star Wars III",
+    "year": 2005,
+    "rating": 8.0
+  },
+  {
+    "title": "Star Wars II",
+    "year": 2002,
+    "rating": 8.6
+  }
+]).then(function(movies) {
+  console.log(movies);
+});
+
+```
+
+This operation will return the newly created array of documents, with the following generated IDs:
+
+```javascript
+[
+  {
+    "id":" 115992383516607959",
+    "title": "Star Wars III",
+    "year": 2005,
+    "rating": 8.0
+  },
+  {
+    "id":" 115992383516607954",
+    "title": "Star Wars II",
+    "year": 2002,
+    "rating": 8.6
+  }
+]
+```
+
+</article>
+
+<article id="article_3">
+
+## Inserting new fields in an existing collection
+
+WeDeploy Data service is really flexible in therms of data structure. You're able to insert new fiels in a collection by adding the new key in the object param.
+
+```javascript
+WeDeploy.data('http://datademo.wedeploy.io').create('movies', [
+  {
+    "title": "Star Wars I",
+    "obs": "First in ABC order",
+    "year": 1999,
+    "rating": 9.0
+  }
+]).then(function(movie) {
+  console.log(movie);
+});
+
+```
+
+This operation will return the newly created document, with the following generated ID:
+
+```javascript
+{
+  "id":" 115992383516607954",
+  "title": "Star Wars I",
+  "obs": "First in ABC order",
+  "year": 1999,
+  "rating": 9.0
+}
+```
+
+</article>
+
+<article id="article_4">
+
+## URL scope structure
+
+The URL we just created stored a new document in our app's service inside the "movies" collection. More information on how to set up this datastore URL can be seen in the section Building APIs. For now, we only need to know that within the path where the data is mounted. The URL will be interpreted as a key that points to a stored resource like the one below:
+
+```text
+/collectionName/documentId/documentProperty/documentInnerProperty
+```
+
+For example, to reference the newly created Star Wars rating, we can use the path:
+
+```text
+http://data.datademo.wedeploy.me/movies/115992383516607958/rating
+```
+
+</article>
+
+## What's next?
+
+Now that you have learned how to create data, you can interact [updating data](/docs/data/js/updating-data.html).

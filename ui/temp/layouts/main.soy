@@ -1,0 +1,68 @@
+{namespace main}
+
+/**
+ * @param content
+ * @param? currentPage
+ * @param? elementClasses
+ */
+{template .render}
+	<div class="{$elementClasses ?: 'main'}">
+		<main class="content">
+			{call .topbar data="all" /}
+
+			{$content}
+		</main>
+	</div>
+{/template}
+
+/**
+ * 
+ */
+{template .topbar}
+	<nav class="topbar topbar-large topbar-light">
+		{call .logo data="all" /}
+		{call .menu data="all" /}
+	</nav>
+{/template}
+
+/**
+ * 
+ */
+{template .logo}
+	<div class="topbar-logo">
+		<a class="topbar-logo-link" href="/">
+			<span class="wedeploy-logo">
+				<span class="we-circle"><span class="we">We</span></span>
+				<span class="deploy">Deploy™</span>
+				<span class="liferay">by Liferay</span>
+				<span class="alpha-container">
+					<span class="arrow-up"></span>
+					<span class="alpha">alpha</span>
+				</span>
+			</span>
+		</a>
+	</div>
+{/template}
+
+/**
+ * @param? currentPage
+ */
+{template .menu}
+	<ul class="topbar-list">
+		<li class="topbar-item">
+			<a href="/blog" class="topbar-link{$currentPage == 'blog' ? ' topbar-link-selected' : ''}">Blog</a>
+		</li>
+		<li class="topbar-item">
+			<a href="/docs" class="topbar-link">Documentation</a>
+		</li>
+		<li class="topbar-item">
+			<a href="//chat.wedeploy.com/" class="topbar-link">Chat</a>
+		</li>
+		<li class="topbar-item login">
+			<a href="//dashboard.wedeploy.com/login" class="topbar-link">Log in</a>
+		</li>
+		<li class="topbar-item get-started">
+			<a href="//dashboard.wedeploy.com/signup" class="btn btn-accent btn-sm">Get Started</a>
+		</li>
+	</ul>
+{/template}

@@ -1,0 +1,16 @@
+.docs .docs-home-top-title span {
+	font-family: $font-family-secondary;
+}
+
+.docs .sidebar-search {
+    margin: 20px 12px;
+}
+
+.docs .sidebar-header {
+	background: rgba($primary, 0.03);
+	color: rgba($primary, 0.8);
+
+	.sidebar-icon {
+		color: rgba($primary, 0.8);
+	}
+}

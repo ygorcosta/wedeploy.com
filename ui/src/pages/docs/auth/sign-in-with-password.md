@@ -1,0 +1,36 @@
+---
+description: "You can let your users authenticate with WeDeploy using their email addresses and passwords."
+headerTitle: "Auth"
+layout: "guide"
+title: "Sign-in With Password"
+weight: 6
+---
+
+# Sign-in With Password
+
+###### You can let your users authenticate with WeDeploy using their email addresses and passwords. *WeDeploy™ Authentication*.
+
+<article id="article_1">
+
+## Sign-in with password
+
+To sign in by email and password, call `signInWithEmailAndPassword`:
+
+
+```js
+var auth = WeDeploy.auth();
+
+auth.signInWithEmailAndPassword("user@domain.com", "password")
+.then(function(user) {
+	// User is signed in.
+})
+.catch(function(err) {
+  // User is not signed in.
+});
+```
+
+</article>
+
+## What's next?
+
+* Now you can start building your apps with authentication.

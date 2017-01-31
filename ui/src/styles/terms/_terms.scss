@@ -1,0 +1,23 @@
+.blog .terms .content {
+	padding: calc(3rem * #{$lineHeight}) 0 0;
+}
+
+.blog .terms .content article {
+
+	margin: 0 0 calc(3rem * #{$lineHeight});
+
+	h3 {
+		margin-bottom: calc(2rem * #{$lineHeight});
+	}
+}
+
+.blog .topbar.topbar-large {
+	width: 100%;
+	margin: 0 auto;
+	padding: 24px 20px 12px;
+	height: 84px;
+
+	@media (min-width: 860px) {
+		width: 87.5%;
+	}
+}

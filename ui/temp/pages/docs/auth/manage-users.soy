@@ -1,0 +1,106 @@
+
+{namespace docsAuthManageUsersHtml}
+
+/**
+ *
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			<h1>Manage Users</h1>
+<h6>Create, delete or update users by using <em>WeDeploy™ Auth</em>.</h6>
+<article id="article_1">
+<h2>Create user</h2>
+<p>You create a new user in your WeDeploy project by calling the <code>createUser</code> method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}var auth = WeDeploy.auth();
+
+auth.createUser({
+    email: 'user@domain.com',
+    password: 'abc'
+})
+.then(function(user) {
+    // Successfully created.
+})
+.catch(function(err) {
+  // Not created.
+});{/literal}{/param}{param mode: 'js' /}{/call}</article>
+<article id="article_2">
+<h2>Get current user</h2>
+{call ElectricCode.render}{param code kind="text"}{literal}var currentUser = WeDeploy.auth().currentUser;
+
+if (currentUser) {
+    // User is signed in.
+} else {
+    // No user is signed in.
+}{/literal}{/param}{param mode: 'js' /}{/call}</article>
+<article id="article_3">
+<h2>Get user</h2>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+.auth()
+.getUser(userId)
+.then(function(user) {
+    // User found.
+})
+.catch(function(err) {
+    // User does not exist.
+});{/literal}{/param}{param mode: 'js' /}{/call}</article>
+<article id="article_4">
+<h2>Delete user</h2>
+<p>You can delete a user account with the delete method. For example:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}var currentUser = WeDeploy.auth().currentUser;
+
+currentUser.deleteUser()
+.then(function() {
+    // Successfully deleted.
+})
+.catch(function(err) {
+  // Not deleted.
+});{/literal}{/param}{param mode: 'js' /}{/call}</article>
+<article id="article_5">
+<h2>Update user</h2>
+<p>You can update a user's basic information. For example:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}var currentUser = WeDeploy.auth().currentUser;
+
+currentUser.updateUser({
+    password: "password",
+    email: "eleven@hawkinslabs.com",
+    name: "Eleven",
+    photoUrl: "https://hawkinslabs.com/011/profile.jpg"
+})
+.then(function() {
+    // Successfully updated.
+})
+.catch(function(err) {
+  // Not updated.
+});{/literal}{/param}{param mode: 'js' /}{/call}</article>
+<article id="article_6">
+<h2>Send a password reset email</h2>
+<p>You can send a password reset email to a user with the sendPasswordResetEmail method. For example:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+.auth()
+.sendPasswordResetEmail("user@domain.com")
+.then(function() {
+    // Email sent.
+})
+.catch(function(err) {
+  // An error happened.
+});{/literal}{/param}{param mode: 'js' /}{/call}</article>
+<article id="article_7">
+<h2>Sign-out</h2>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+.auth()
+.signOut()
+.then(function() {
+    // User is signed out.
+})
+.catch(function(err) {
+  // User was signed out.
+});{/literal}{/param}{param mode: 'js' /}{/call}</article>
+<h2>What's next?</h2>
+<ul>
+<li>Now we're ready to start <a href="/docs/auth/js/sign-in-with-facebook.html">authenticating accounts and growing our user base</a>.</li>
+</ul>
+
+		{/param}
+	{/call}
+{/template}

@@ -1,0 +1,37 @@
+
+{namespace docsDataUpdatingDataHtml}
+
+/**
+ *
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			<h1>Updating Data</h1>
+<h6>The update() function updates an existing record in the database using the current attributes. It then returns the newly updated object in the Promise response.</h6>
+<article id="article_1">
+<h2>Updating existing data</h2>
+<blockquote>
+<p>By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see <a href="/docs/data/configuring-rules.html">configuring rules</a> section.</p>
+</blockquote>
+<p>Updating existing data is as simple as sending a JSON.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}var client = WeDeploy.data('http://datademo.wedeploy.io');
+
+client.update('movies/115992383516607958', {
+  "rating": 9.1
+}).then(function(movie) {
+  console.log(movie);
+});{/literal}{/param}{param mode: 'javascript' /}{/call}<p>As you can see, the data api uses Promises to help you to make async requests.</p>
+<p>This operation will return the updated document with the new rating:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}{
+  "id":" 115992383516607958",
+  "title": "Star Wars IV",
+  "year": 1977,
+  "rating": 9.1
+}{/literal}{/param}{param mode: 'javascript' /}{/call}</article>
+<h2>What's next?</h2>
+<p>Now that you have learned how to update data, you can interact <a href="/docs/data/js/deleting-data.html">deleting data</a>.</p>
+
+		{/param}
+	{/call}
+{/template}

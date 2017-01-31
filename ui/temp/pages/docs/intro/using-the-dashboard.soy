@@ -1,0 +1,62 @@
+
+{namespace docsIntroUsingTheDashboardHtml}
+
+/**
+ *
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			<h1>Using the Dashboard</h1>
+<h6>In this section, you'll learn how to deploy an application using WeDeploy Dashboard.</h6>
+<article id="article_1">
+<h2>1. Create an account</h2>
+<p>First you need to create a WeDeploy account by signing up through the dashboard <a href="http://dashboard.wedeploy.com/signup">signup page</a>.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/301291/18884345/e5bd302e-849b-11e6-9be7-552acda97a31.png" alt="SignUp"></p>
+</article>
+<article id="article_2">
+<h2>2. Access your dashboard</h2>
+<p>As the main page, the dashboard will list all your projects and status of availability in the server. In the Dashboard, click in New Project .</p>
+<p><img src="https://cloud.githubusercontent.com/assets/301291/18655293/798013ae-7e9c-11e6-8f7f-4d029d73d2bb.png" alt="Dashboard"></p>
+</article>
+<article id="article_3">
+<h2>3. Create a new project</h2>
+<p>You are able to organize your services by project. Select a project ID and click in Create Project.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/301291/18656444/0409e49c-7ea6-11e6-8961-eeccd4deab43.png" alt="New Project"></p>
+</article>
+<article id="article_4">
+<h2>4. Open your project</h2>
+<p>Open your project by clicking on your project domain.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/301291/18656506/7e3d873c-7ea6-11e6-945b-2da9ba801c3e.png" alt="Project Container List"></p>
+</article>
+<article id="article_5">
+<h2>5. Click on install service</h2>
+<p>Projects can have more than one service. In this example we're going to deploy a static website.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/301291/18655453/c83e2a66-7e9d-11e6-8440-673e3781335b.png" alt="Install Container"></p>
+</article>
+<article id="article_6">
+<h2>6. Select a service type</h2>
+<p>In this tutorial we're going to use the WeDeploy Hosting in order to host a static project.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/301291/18656521/9f3392b0-7ea6-11e6-9d05-29c68a657f6d.png" alt="Select a Container Type"></p>
+</article>
+<article id="article_7">
+<h2>7. Fill in the ID click on install service</h2>
+<p><img src="https://cloud.githubusercontent.com/assets/301291/18656546/cac3682e-7ea6-11e6-8e24-354a1df99ea0.png" alt="Install Container Form"></p>
+</article>
+<article id="article_8">
+<h2>8. The container is going to be up and running</h2>
+<p><img src="https://cloud.githubusercontent.com/assets/301291/18656561/f076a57c-7ea6-11e6-9d9d-aa288ca72135.png" alt="Container Up and Running"></p>
+</article>
+<article id="article_9">
+<h2>9. Access the URL generated for your service</h2>
+<p>Now that you installed the boilerplate, in the service screen is possible to see the status of the service and its URL. Click on the URL to copy to your clipboard and open that in a new tab in your browser.
+<img src="https://cloud.githubusercontent.com/assets/301291/18656570/0e5adc7a-7ea7-11e6-8dd8-74f3697b520f.png" alt="URL Generated"></p>
+</article>
+<article id="article_10">
+<h2>10. It works!</h2>
+<p>That's it! Using a sofisticated Loadbalancer system and service discovering, WeDeploy automatically creates a URL and points that to your container.
+<img src="https://cloud.githubusercontent.com/assets/301291/17796616/b2ca3fd4-6576-11e6-8e18-85423f206b94.jpg" alt="URL Generated"></p>
+</article>
+		{/param}
+	{/call}
+{/template}
