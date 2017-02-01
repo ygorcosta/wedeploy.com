@@ -37,7 +37,10 @@
  * @param page
  */
 {deltemplate ElectricNavigation.anchor variant="'sidebar'"}
-	<a class="sidebar-link {$page.active ? 'sidebar-link-selected' : ''}" href="{$page.url}">
+
+	{let $linkSelect: $page.active and strContains($page.url, '.html') /}
+
+	<a class="sidebar-link{$linkSelect ? ' sidebar-link-selected' : ''}" href="{$page.url}">
 		<span class="sidebar-icon icon-16-{$page.icon}"></span>
 		<span>{$page.title}</span>
 	</a>
