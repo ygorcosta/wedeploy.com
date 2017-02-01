@@ -96,7 +96,7 @@ Now that we have our container up and running, it's time to start sending some e
 
 In order to send emails, we have to make a `POST` request to `/emails` passing some required parameters like `from`, `to`, and `subject`:
 
-```js
+```javascript
 WeDeploy
 .url('http://<containerID>.<projectID>.wedeploy.io/emails')
 .form('from', 'from@domain.com')
@@ -119,7 +119,7 @@ As a result, we'll receive an email ID. This doesn't indicate that the email was
 
 In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. `123`, and send a `GET` request to `/emails/123/status`.
 
-```js
+```javascript
 WeDeploy
 .url('http://<containerID>.<projectID>.wedeploy.io/emails/<emailID>/status')
 .get()

@@ -17,7 +17,7 @@ weight: 6
 To sign in by email and password, call `signInWithEmailAndPassword`:
 
 
-```js
+```javascript
 var auth = WeDeploy.auth();
 
 auth.signInWithEmailAndPassword("user@domain.com", "password")

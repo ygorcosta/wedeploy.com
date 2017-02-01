@@ -16,7 +16,7 @@ weight: 2
 
 You create a new user in your WeDeploy project by calling the `createUser` method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.
 
-```js
+```javascript
 var auth = WeDeploy.auth();
 
 auth.createUser({
@@ -37,7 +37,7 @@ auth.createUser({
 
 ## Get current user
 
-```js
+```javascript
 var currentUser = WeDeploy.auth().currentUser;
 
 if (currentUser) {
@@ -53,7 +53,7 @@ if (currentUser) {
 
 ## Get user
 
-```js
+```javascript
 WeDeploy
 .auth()
 .getUser(userId)
@@ -73,7 +73,7 @@ WeDeploy
 
 You can delete a user account with the delete method. For example:
 
-```js
+```javascript
 var currentUser = WeDeploy.auth().currentUser;
 
 currentUser.deleteUser()
@@ -93,7 +93,7 @@ currentUser.deleteUser()
 
 You can update a user's basic information. For example:
 
-```js
+```javascript
 var currentUser = WeDeploy.auth().currentUser;
 
 currentUser.updateUser({
@@ -118,7 +118,7 @@ currentUser.updateUser({
 
 You can send a password reset email to a user with the sendPasswordResetEmail method. For example:
 
-```js
+```javascript
 WeDeploy
 .auth()
 .sendPasswordResetEmail("user@domain.com")
@@ -136,7 +136,7 @@ WeDeploy
 
 ## Sign-out
 
-```js
+```javascript
 WeDeploy
 .auth()
 .signOut()
@@ -152,4 +152,4 @@ WeDeploy
 
 ## What's next?
 
-* Now we're ready to start [authenticating accounts and growing our user base](/docs/auth/js/sign-in-with-facebook.html).
+* Now we're ready to start [authenticating accounts and growing our user base](/docs/auth/javascript/sign-in-with-facebook.html).

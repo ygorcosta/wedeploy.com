@@ -17,7 +17,7 @@ weight: 4
 To sign in by redirecting to the sign-in page, call `signInWithRedirect`:
 
 
-```js
+```javascript
 var auth = WeDeploy.auth();
 
 var provider = new auth.provider.Github();

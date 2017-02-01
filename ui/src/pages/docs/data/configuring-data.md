@@ -42,7 +42,7 @@ After understanding how the api configuration files work, it's time to learn wha
 
 A path represents the resource used to store your project data.
 
-```
+```json
 [
   {
     "path": "/movies/:movieId"
