@@ -28,29 +28,15 @@ The api JSON files are located at the same path of the `./container.json` and ar
 
 After understanding how the api configuration files work, it's time to learn what are the supported attributes:
 
-<table class="table">
-  <tr>
-    <th>Field</th> <th>Description</th>
-  </tr>
-  <tr>
-    <td>path</td> <td>The path that represents the collection used to handle the request data.</td>
-  </tr>
-  <tr>
-    <td>data</td> <td>Tells the service if the request to a collection should be stored or not.</td>
-  </tr>
-  <tr>
-    <td>description</td> <td>Used to describe the behavior of an endpoint.</td>
-  </tr>
-  <tr>
-    <td>auth</td> <td>Used to define authentication rules for the endpoint.</td>
-  </tr>
-  <tr>
-    <td>method</td> <td>HTTP method allowed for the request.</td>
-  </tr>
-  <tr>
-    <td>parameters</td> <td>Parameters and validation rules for the collection.</td>
-  </tr>
-</table>
+| Field | Description |
+| - | - |
+| path | The path that represents the collection used to handle the request data. |
+| data | Tells the service if the request to a collection should be stored or not. |
+| description | Used to describe the behavior of an endpoint. |
+| auth | Used to define authentication rules for the endpoint. |
+| method | HTTP method allowed for the request. |
+| parameters | Parameters and validation rules for the collection. |
+
 
 ##### path
 
@@ -183,33 +169,16 @@ The validator can be used as an integration with the Auth service:
 
 The global variables are:
 
-<table class="table">
-  <tr>
-    <th>Variable</th> <th>Description</th>
-  </tr>
-  <tr>
-    <td>$auth</td> <td>The authenticated user of this request. If the request was not authenticated, it will be null.</td>
-  </tr>
-  <tr>
-    <td>$config</td> <td>The raw JSON data stored in the service's config.json file.</td>
-  </tr>
-  <tr>
-    <td>$session</td> <td>All stored session data. If the request had no session cookie, it will be an empty map for the new session created for this request.</td>
-  </tr>
-  <tr>
-    <td>$params</td> <td>The request params as they were loaded from url query and request body. All query and form parameters will be strings here.</td>
-  </tr>
-  <tr>
-    <td>$values</td> <td>The parsed request params, as they are used for parameter validation. All query and form parameters will be parsed to JSON values.</td>
-  </tr>
-  <tr>
-    <td>$body</td> <td>The parsed request body, according to the request Content-Type.</td>
-  </tr>
-  <tr>
-    <td>$data</td> <td>The data view for this request, if a data path is mounted in the API path, and the request path represents a key to access any data resource (collection, document or inner field from a document). It will be null otherwise.</td>
-  </tr>
+| Variable | Description |
+| - | - |
+| $auth | The authenticated user of this request. If the request was not authenticated, it will be null. |
+| $config | The raw JSON data stored in the service's config.json file. |
+| $session | All stored session data. If the request had no session cookie, it will be an empty map for the new session created for this request. |
+| $params | The request params as they were loaded from url query and request body. All query and form parameters will be strings here. |
+| $values | The parsed request params, as they are used for parameter validation. All query and form parameters will be parsed to JSON values. |
+| $body | The parsed request body, according to the request Content-Type. |
+| $data | The data view for this request, if a data path is mounted in the API path, and the request path represents a key to access any data resource (collection, document or inner field from a document). It will be null otherwise. |
 
-</table>
 
 Some common validators are:
 
