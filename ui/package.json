@@ -7,7 +7,8 @@
     "url": "https://github.com/wedeploy/landing"
   },
   "dependencies": {
-    "marble": "wedeploy/marble#master"
+    "marble": "wedeploy/marble#master",
+    "metal-toast": "^1.0.0"
   },
   "devDependencies": {
     "electric": "^1.1.0",

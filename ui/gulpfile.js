@@ -25,7 +25,7 @@ gulp.task('css', () => {
 
 gulp.task('scripts', () => {
 	return gulp.src('src/scripts/**/*.js')
-		.pipe(gulp.dest('dist/js/misc'));
+		.pipe(gulp.dest('dist/js'));
 });
 
 // Images ----------------------------------------------------------------------
@@ -75,7 +75,7 @@ gulp.task('watch', () => {
 // Build -----------------------------------------------------------------------
 
 gulp.task('build', (callback) => {
-	runSequence('generate', ['css', 'images', 'fonts', 'wedeploy'], callback);
+	runSequence('generate', ['css', 'images', 'fonts', 'wedeploy', 'scripts'], callback);
 });
 
 gulp.task('default', (callback) => {
