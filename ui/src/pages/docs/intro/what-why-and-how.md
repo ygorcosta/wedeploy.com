@@ -12,7 +12,7 @@ weight: 1
 
 <article id="article_1">
 
-## 1. What's WeDeploy?
+## What's WeDeploy?
 
 *WeDeploy* gives you access to intuitive APIs that can help you create modern apps faster.
 
@@ -31,7 +31,7 @@ With WeDeploy, you are able to quickly and efficiently respond to user demands:
 
 <article id="article_2">
 
-## 2. Why should I use WeDeploy?
+## Why should I use WeDeploy?
 
 When building highly scalable applications there are many things you need to consider: performance bottlenecks, database resiliency and scalability, authentication, authorization, and static hosting to name a few. WeDeploy is a new dynamic Liferay initiative, allowing you to handle all of your back-end challenges in one place. Focus on creating amazing user experiences and WeDeploy will take care of the rest.
 
@@ -41,7 +41,7 @@ This is why WeDeploy was also designed to serve as a platform for building a man
 
 <article id="article_3">
 
-## 3. How will WeDeploy help me to deploy from simple to advanced applications?
+## How will WeDeploy help me to deploy from simple to advanced applications?
 
 From a simple application to an advanced group of microservices, WeDeploy will provide the tools to manage the visibility, scale, and DNS for your application. WeDeploy provides an infrastructure to deploy micro-services in a managed cloud infrastructure.
 

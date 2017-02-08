@@ -12,7 +12,7 @@ weight: 3
 
 <article id="article_1">
 
-## 1. Create an account
+## Create an account
 
 First you need to create a WeDeploy account by signing up through the dashboard [signup page](http://dashboard.wedeploy.com/signup).
 
@@ -22,7 +22,7 @@ First you need to create a WeDeploy account by signing up through the dashboard 
 
 <article id="article_2">
 
-## 2. Access your dashboard
+## Access your dashboard
 
 As the main page, the dashboard will list all your projects and status of availability in the server. In the Dashboard, click in New Project .
 
@@ -32,7 +32,7 @@ As the main page, the dashboard will list all your projects and status of availa
 
 <article id="article_3">
 
-## 3. Create a new project
+## Create a new project
 
 You are able to organize your services by project. Select a project ID and click in Create Project.
 
@@ -42,7 +42,7 @@ You are able to organize your services by project. Select a project ID and click
 
 <article id="article_4">
 
-## 4. Open your project
+## Open your project
 
 Open your project by clicking on your project domain.
 
@@ -52,7 +52,7 @@ Open your project by clicking on your project domain.
 
 <article id="article_5">
 
-## 5. Click on install service
+## Click on install service
 
 Projects can have more than one service. In this example we're going to deploy a static website.
 
@@ -62,7 +62,7 @@ Projects can have more than one service. In this example we're going to deploy a
 
 <article id="article_6">
 
-## 6. Select a service type
+## Select a service type
 In this tutorial we're going to use the WeDeploy Hosting in order to host a static project.
 
 ![Select a Container Type](https://cloud.githubusercontent.com/assets/301291/18656521/9f3392b0-7ea6-11e6-9d05-29c68a657f6d.png)
@@ -71,7 +71,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 <article id="article_7">
 
-## 7. Fill in the ID click on install service
+## Fill in the ID click on install service
 
 ![Install Container Form](https://cloud.githubusercontent.com/assets/301291/18656546/cac3682e-7ea6-11e6-8e24-354a1df99ea0.png)
 
@@ -79,7 +79,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 <article id="article_8">
 
-## 8. The container is going to be up and running
+## The container is going to be up and running
 
 ![Container Up and Running](https://cloud.githubusercontent.com/assets/301291/18656561/f076a57c-7ea6-11e6-9d9d-aa288ca72135.png)
 
@@ -87,7 +87,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 <article id="article_9">
 
-## 9. Access the URL generated for your service
+## Access the URL generated for your service
 Now that you installed the boilerplate, in the service screen is possible to see the status of the service and its URL. Click on the URL to copy to your clipboard and open that in a new tab in your browser.
 ![URL Generated](https://cloud.githubusercontent.com/assets/301291/18656570/0e5adc7a-7ea7-11e6-8dd8-74f3697b520f.png)
 
@@ -95,7 +95,7 @@ Now that you installed the boilerplate, in the service screen is possible to see
 
 <article id="article_10">
 
-## 10. It works!
+## It works!
 That's it! Using a sofisticated Loadbalancer system and service discovering, WeDeploy automatically creates a URL and points that to your container.
 ![URL Generated](https://cloud.githubusercontent.com/assets/301291/17796616/b2ca3fd4-6576-11e6-8e18-85423f206b94.jpg)
 
