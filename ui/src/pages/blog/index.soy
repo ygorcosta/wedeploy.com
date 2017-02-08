@@ -2,6 +2,7 @@
 description: "Latest news."
 title: "Blog"
 type: "blog"
+url: '/blog/my-first-three-months-with-wedeploy'
 ---
 
 {namespace pageBlogIndex}
@@ -13,14 +14,14 @@ type: "blog"
 {/template}
 
 /**
- * @param page
+ *
  */
 {template .soyweb}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; URL='{$page.redirect}'">
+	<meta http-equiv="refresh" content="0; URL='/blog/my-first-three-months-with-wedeploy'">
 </head>
 </html>
 {/template}

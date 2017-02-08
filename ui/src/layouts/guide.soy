@@ -44,7 +44,7 @@
 				{call .feedback data="all" /}
 			</div>
 
-			<nav class="col-xs-16 col-md-offset-2 col-md-5">
+			<nav class="col-xs-16 col-md-offset-1 col-md-6">
 				<div class="docs-nav-container">
 					{call ElectricReadingProgress.render}
 						{param elementClasses: 'docs-nav' /}
@@ -113,26 +113,29 @@
 {/template}
 
 /**
- *
+ * @param site
  */
 {template .menu}
-	<ul class="topbar-list">
-		<li class="topbar-item">
-			<a href="/blog" class="topbar-link">Blog</a>
-		</li>
-		<li class="topbar-item">
-			<a href="/docs" class="topbar-link topbar-link-selected">Documentation</a>
-		</li>
-		<li class="topbar-item">
-			<a href="//chat.wedeploy.com/" class="topbar-link">Chat</a>
-		</li>
-		<li class="topbar-item login">
-			<a href="//dashboard.wedeploy.com/login" class="topbar-link">Log in</a>
-		</li>
-		<li class="topbar-item get-started">
-			<a href="//dashboard.wedeploy.com/signup" class="btn btn-accent btn-sm">Get Started</a>
-		</li>
-	</ul>
+	<div class="topbar-list-container">
+		{call ElectricNavigation.render}
+			{param depth: 1 /}
+			{param elementClasses: 'topbar-list' /}
+			{param linkClasses: 'topbar-link' /}
+			{param listItemClasses: 'topbar-item' /}
+			{param section: $site.index /}
+		{/call}
+		<ul class="topbar-list">
+			<li class="topbar-item">
+				<a href="//chat.wedeploy.com/" target="_blank" class="topbar-link">Chat</a>
+			</li>
+			<li class="topbar-item login">
+				<a href="//dashboard.wedeploy.com/login" class="topbar-link">Log in</a>
+			</li>
+			<li class="topbar-item get-started">
+				<a href="//dashboard.wedeploy.com/signup" class="btn btn-accent btn-sm">Get Started</a>
+			</li>
+		</ul>
+	</div>
 {/template}
 
 /**
@@ -154,7 +157,6 @@
 						<input class="btn btn-accent btn-block" type="submit" value="Submit">
 					</div>
 				</form>
-
 			</div>
 		</div>
 	</div>

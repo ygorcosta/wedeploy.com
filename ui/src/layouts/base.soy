@@ -31,12 +31,15 @@
 		<link rel="stylesheet" href="/styles/main.css">
 
 	</head>
-	<body>
-		<!-- inject:metal:js -->
-		<div>
-			{$content}
+	<body data-senna>
+		<div data-senna-surface id="wrapper">
+			<div class="senna-loading-bar"></div>
+			<!-- inject:metal:js -->
+			<div>
+				{$content}
+			</div>
+			<!-- endinject -->
 		</div>
-		<!-- endinject -->
 
 		{if $scripts}
 			{foreach $script in $scripts}
@@ -44,13 +47,10 @@
 			{/foreach}
 		{/if}
 
-		<!-- inject:codemirror:js -->
+		<!-- inject:vendor:js -->
 		<!-- endinject -->
 
 		<script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
-		<script src="/js/newsletter.js"></script>
-		<script src="/js/feedback.js"></script>
-		<script src="/js/reading-progress.js"></script>
 
 	</body>
 </html>

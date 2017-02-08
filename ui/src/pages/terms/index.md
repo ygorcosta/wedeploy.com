@@ -1,5 +1,6 @@
 ---
 description: "Liferay WeDeploy Alpha Services Agreement"
+hidden: true
 title: "Terms"
 layout: "termsPage"
 ---

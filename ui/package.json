@@ -1,22 +1,19 @@
 {
-  "name": "WeDeployLanding",
-  "version": "0.0.0",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wedeploy/landing"
-  },
-  "dependencies": {
-    "marble": "wedeploy/marble#master",
-    "metal-toast": "^1.0.0"
-  },
-  "devDependencies": {
-    "electric": "^1.1.0",
-    "gulp": "^3.9.0",
-    "gulp-connect": "^2.2.0",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-sass": "^2.0.1",
-    "metal-toggler": "^2.0.0",
-    "run-sequence": "^1.2.2"
-  }
+	"name": "wedeploy.com",
+	"version": "0.0.0",
+	"private": true,
+	"repository": "wedeploy/wedeploy.com",
+	"dependencies": {
+		"marble": "^2.3.0",
+		"metal-toast": "^2.0.0"
+	},
+	"devDependencies": {
+		"electric": "^1.2.0",
+		"gulp": "^3.9.0",
+		"gulp-connect": "^2.2.0",
+		"gulp-gh-pages": "^0.5.4",
+		"gulp-sass": "^2.0.1",
+		"metal-toggler": "^2.0.0",
+		"run-sequence": "^1.2.2"
+	}
 }
