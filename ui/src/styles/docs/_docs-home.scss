@@ -1,60 +1,3 @@
-.sidebar-offset {
-	.container,
-	.container-hybrid {
-		width: calc(100% - 40px);
-	}
-}
-
-.docs .docs-nav {
-	width: auto;
-	opacity: 0;
-	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
-}
-
-.docs .docs-nav .reading-title {
-	font-family: $font-family-secondary;
-	white-space: normal;
-	font-size: 14px;
-}
-.docs .docs-nav a.read .reading-title {
-	text-decoration: line-through;
-	color: rgba($primary, 0.6)
-}
-
-.docs .docs-nav .reading-subtitle {
-	font-size: 10px;
-}
-
-.docs .docs-nav .reading-progress {
-	background: $white;
-	box-shadow: 0 2px 8px rgba($primary, 0.1);
-}
-
-.docs .docs-nav .reading-progress a {
-	padding: 12px 12px 12px 60px;
-}
-
-.docs .docs-nav .reading-progress svg {
-	top: 11px;
-	left: 11px;
-	transform: none;
-	width: 38px;
-	height: 38px;
-}
-
-.docs .docs-nav .reading-progress a::before {
-	box-shadow: 0 2px 8px rgba($primary, 0.2);
-	font-family: $font-family-secondary;
-	font-size: 12px;
-	left: 12px;
-	top: 12px;
-	transform: none;
-}
-
-.docs .docs-nav .reading-progress a.reading:not(.read)::before {
-	color: $accent;
-}
-
 .docs .docs-home-top-title span {
 	font-family: $font-family-secondary;
 }
@@ -69,5 +12,14 @@
 
 	.sidebar-icon {
 		color: rgba($primary, 0.8);
+	}
+}
+
+.blog .topbar-list .topbar-item.get-started,
+.docs .topbar-list .topbar-item.get-started {
+	display: none;
+
+	@media (min-width: 1024px) {
+		display: inline-block;
 	}
 }
