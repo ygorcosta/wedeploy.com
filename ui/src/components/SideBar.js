@@ -7,7 +7,7 @@ import Toggler from 'metal-toggler';
 import templates from './SideBar.soy';
 
 class SideBar extends Component {
-	attached() {
+	rendered() {
 		new Toggler({
 			content: '.sidebar-toggler-content',
 			header: '.sidebar-header'
