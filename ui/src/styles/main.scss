@@ -83,3 +83,11 @@ $accent: #00d46a;
 		}
 	}
 }
+
+.guide .docs .sidebar-list.sidebar-list-1 .sidebar-link.sidebar-link-selected {
+	background: none;
+}
+
+.guide .docs .sidebar-list.sidebar-list-1 .sidebar-item.active > .sidebar-list.sidebar-list-1 .sidebar-item.active .sidebar-link.sidebar-link-selected {
+	background: rgba($accent, 0.1);
+}
