@@ -38,15 +38,15 @@
 
 	<div class="container-hybrid">
 		<div class="docs-guide row">
-			<div class="docs-content col-xs-16 col-md-9">
+			<div class="docs-content col-xs-16 col-md-offset-1 col-md-9">
 				{$content}
 
 				{call Feedback.render data="all" /}
 			</div>
 
-			<nav class="col-xs-16 col-md-offset-1 col-md-6">
+			<nav class="col-xs-16 col-md-offset-1 col-md-4">
 				<div class="docs-nav-container">
-					{call ElectricReadingProgress.render}
+					{call AffixedReadingProgress.render}
 						{param elementClasses: 'docs-nav' /}
 					{/call}
 				</div>
