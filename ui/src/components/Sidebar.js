@@ -4,17 +4,15 @@ import Component from 'metal-component';
 import Soy from 'metal-soy';
 import Toggler from 'metal-toggler';
 
-import templates from './SideBar.soy';
+import templates from './Sidebar.soy';
 
-class SideBar extends Component {
-	rendered() {
-		new Toggler({
+class Sidebar extends Component {
 			content: '.sidebar-toggler-content',
 			header: '.sidebar-header'
 		});
 	}
 };
 
-Soy.register(SideBar, templates);
+Soy.register(Sidebar, templates);
 
-export default SideBar;
+export default Sidebar;
