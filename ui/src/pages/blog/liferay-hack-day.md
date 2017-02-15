@@ -1,14 +1,15 @@
 ---
-author: "Jonni Lundy"
-date: "Feb 15, 2017"
-description: "WeDeploy at Liferay Hack Day 2017"
-layout: "blog"
 title: "Liferay Hack Day 2017"
+description: "The holiday season is an exciting time. Not only do we get to put all our diets on hold because of the never ending flow of tree shaped cookies and ooey gooey chocolate fudge, but it also means that the annual Liferay engineering retreat is right around the corner."
+date: "Feb 15, 2017"
+author: "Jonni Lundy"
+image: "http://wedeploy.com/images/blog/post-5--0.png"
+layout: "blog"
 ---
 
 <article>
 
-The holiday season is an exciting time. Not only do we get to put all our diets on hold because of the never ending flow of tree shaped cookies and ooey gooey chocolate fudge, but it also means that the annual Liferay engineering retreat is right around the corner.
+{$page.description}
 
 **Every January, developers from all around the world gather at our Los Angeles office.** 
 
