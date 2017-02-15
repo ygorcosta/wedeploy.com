@@ -1,4 +1,4 @@
-# Landing
+# wedeploy.com
 
 > Contains the [wedeploy.com](http://wedeploy.com) static pages like homepage, docs, etc.
 
