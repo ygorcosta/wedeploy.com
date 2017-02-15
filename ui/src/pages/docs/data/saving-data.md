@@ -1,14 +1,14 @@
 ---
+title: "Saving Data"
 description: "The create() function creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response."
 headerTitle: "Data"
 layout: "guide"
-title: "Saving Data"
 weight: 3
 ---
 
-# Saving Data
+# {$page.title}
 
-###### The create() function creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response.
+###### {$page.description}
 
 <article id="1">
 

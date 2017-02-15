@@ -1,14 +1,14 @@
 ---
+title: "Deleting Data"
 description: "The delete() function destroys an existing field, document or collection in the database."
 headerTitle: "Data"
 layout: "guide"
-title: "Deleting Data"
 weight: 5
 ---
 
-# Deleting Data
+# {$page.title}
 
-###### The delete() function destroys an existing field, document or collection in the database.
+###### {$page.description}
 
 <article id="1">
 

@@ -1,14 +1,14 @@
 ---
+title: "Getting Started With Ruby"
 description: "Launch a Ruby application in few steps."
 headerTitle: "Other"
 layout: "guide"
-title: "Getting Started With Ruby"
 weight: 3
 ---
 
 # Ruby
 
-###### Launch a Ruby application in few steps.
+###### {$page.description}
 
 <div class="guide-btn-cta">
   <a class="btn btn-accent btn-sm" href="http://boilerplate-ruby.wedeploy.io" target="_blank">

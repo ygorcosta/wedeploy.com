@@ -1,14 +1,14 @@
 ---
+title: "Searching Data"
 description: "Advanced queries using search."
 headerTitle: "Data"
 layout: "guide"
-title: "Searching Data"
 weight: 7
 ---
 
-# Searching Data
+# {$page.title}
 
-###### Advanced queries using search.
+###### {$page.description}
 
 <article id="1">
 

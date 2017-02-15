@@ -1,14 +1,14 @@
 ---
+title: "Getting Started"
 description: "Allow users to authenticate using passwords, popular federated identity providers like Google, Facebook, GitHub, and more using WeDeploy™ Auth"
 headerTitle: "Auth"
 layout: "guide"
-title: "Getting Started"
 weight: 1
 ---
 
 # Auth
 
-###### Allow users to authenticate using passwords, popular federated identity providers like Google, Facebook, GitHub, and more using *WeDeploy™ Auth*.
+###### {$page.description}
 
 <div class="guide-btn-cta">
   <a class="btn btn-accent btn-sm" href="http://boilerplate-auth.wedeploy.io" target="_blank">

@@ -1,14 +1,14 @@
 ---
+title: "Using the API Client"
 description: "Make requests to WeDeploy using a standardize interface."
 headerTitle: "Intro"
 layout: "guide"
-title: "Using the API Client"
 weight: 8
 ---
 
-# Using the API Client
+# {$page.title}
 
-###### Make requests to WeDeploy using a standardize interface.
+###### {$page.description}
 
 <article id="1">
 

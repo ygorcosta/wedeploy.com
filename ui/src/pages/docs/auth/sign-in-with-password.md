@@ -1,14 +1,14 @@
 ---
+title: "Sign-in With Password"
 description: "You can let your users authenticate with WeDeploy using their email addresses and passwords."
 headerTitle: "Auth"
 layout: "guide"
-title: "Sign-in With Password"
 weight: 6
 ---
 
-# Sign-in With Password
+# {$page.title}
 
-###### You can let your users authenticate with WeDeploy using their email addresses and passwords. *WeDeploy™ Authentication*.
+###### {$page.description}
 
 <article id="1">
 

@@ -1,15 +1,15 @@
 ---
-author: "Zeno Rocha"
-date: "Jan 03, 2017"
-description: "Blog description."
-layout: "blog"
-image: "http://wedeploy.com/images/blog/post-3--0.png"
 title: "Happy New Year from WeDeploy"
+description: "It’s officially 2017! Are you as excited as we are?"
+date: "Jan 03, 2017"
+author: "Zeno Rocha"
+image: "http://wedeploy.com/images/blog/post-3--0.png"
+layout: "blog"
 ---
 
 <article>
 
-It’s officially 2017! Are you as excited as we are?
+{$page.description}
 
 Last year, on September 20th, the very first app was created on WeDeploy. After that, we went to Chicago, Milan, London, Darmstad, and São Paulo to spread the word about this new product.
 

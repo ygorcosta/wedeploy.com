@@ -1,14 +1,14 @@
 ---
+title: "Feature Overview"
 description: "This is an overview of the features that make WeDeploy easiest way to deploy and scale applications."
 headerTitle: "Intro"
 layout: "guide"
-title: "Feature Overview"
 weight: 2
 ---
 
-# Feature Overview
+# {$page.title}
 
-###### This is an overview of the features that make WeDeploy easiest way to deploy and scale applications.
+###### {$page.description}
 
 <article id="1">
 

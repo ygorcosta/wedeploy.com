@@ -1,14 +1,14 @@
 ---
+title: "What Why and How"
 description: "Forget about infrastructure. WeDeploy helps you to dedicate your time to what really matters: building and scaling great apps. Before exploring WeDeploy further, make sure you understand its purpose and philosophy."
 headerTitle: "Intro"
 layout: "guide"
-title: "What Why and How"
 weight: 1
 ---
 
-# What, Why and How
+# {$page.title}
 
-###### Forget about infrastructure. WeDeploy helps you to dedicate your time to what really matters: building and scaling great apps. Before exploring WeDeploy further, make sure you understand its purpose and philosophy.
+###### {$page.description}
 
 <article id="1">
 

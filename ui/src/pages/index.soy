@@ -1,7 +1,6 @@
 ---
-icon: "home"
-title: "Home"
-description: "Something nice and compelling about the project. Make it short and sweet."
+title: "You Build. We Deploy."
+description: "Forget about infrastructure. Dedicate your time to what really matters: building great apps."
 ---
 
 {namespace pageIndex}
@@ -179,14 +178,14 @@ description: "Something nice and compelling about the project. Make it short and
 {/template}
 
 /**
- *
+ * @param page
  */
 {template .subscribe}
 	<div id="subscribe" class="col-xs-16 col-sm-16 col-md-16 col-lg-4 col-lg-offset-1">
 		<div id="subscribe__container">
 			<h1>You Build.</h1><h1>We Deploy.</h1>
 
-			<p>Forget about infrastructure. Dedicate your time to what really matters: building great apps.</p>
+			<p>{$page.description}</p>
 
 			<a href="//dashboard.wedeploy.com/signup" id="subscribe__submit-small" class="open-modal btn btn-accent btn-block">
 				<span>Get Started – It’s FREE</span>

@@ -1,14 +1,14 @@
 ---
+title: "Retrieving data"
 description: "The get() function retrieve an existing field, document or collection in the database."
 headerTitle: "Data"
 layout: "guide"
-title: "Retrieving data"
 weight: 6
 ---
 
-# Retrieving data
+# {$page.title}
 
-###### The get() function retrieve an existing field, document or collection in the database.
+###### {$page.description}
 
 <article id="1">
 

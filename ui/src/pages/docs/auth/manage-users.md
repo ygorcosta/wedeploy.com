@@ -1,14 +1,14 @@
 ---
+title: "Manage Users"
 description: "Create, delete or update users by using WeDeploy™ Auth."
 headerTitle: "Auth"
 layout: "guide"
-title: "Manage Users"
 weight: 2
 ---
 
-# Manage Users
+# {$page.title}
 
-###### Create, delete or update users by using *WeDeploy™ Auth*.
+###### {$page.description}
 
 <article id="1">
 

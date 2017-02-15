@@ -1,14 +1,14 @@
 ---
-description: "Launch a Liferay application in few steps."
-layout: "guide"
-headerTitle: "Other"
 title: "Getting Started With Liferay"
+description: "Launch a Liferay application in few steps."
+headerTitle: "Other"
+layout: "guide"
 weight: 1
 ---
 
 # Liferay
 
-###### Launch a Liferay application in few steps.
+###### {$page.description}
 
 <div class="guide-btn-cta">
   <a class="btn btn-accent btn-sm" href="http://boilerplate-liferay.wedeploy.io" target="_blank">

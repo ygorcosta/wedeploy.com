@@ -1,14 +1,14 @@
 ---
+title: "Environment Variables"
 description: "This is an overview of how WeDeploy manages environment variables for your projects."
 headerTitle: "Intro"
 layout: "guide"
-title: "Environment Variables"
 weight: 4
 ---
 
-# Environment Variables
+# {$page.title}
 
-###### This is an overview of how WeDeploy manages environment variables for your projects.
+###### {$page.description}
 
 <article id="1">
 

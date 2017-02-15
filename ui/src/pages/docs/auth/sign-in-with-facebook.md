@@ -1,14 +1,14 @@
 ---
+title: "Sign-in With Facebook"
 description: "You can let your users authenticate using their Facebook Accounts by integrating Facebook Sign-In into your app."
 headerTitle: "Auth"
 layout: "guide"
-title: "Sign-in With Facebook"
 weight: 3
 ---
 
-# Sign-in With Facebook
+# {$page.title}
 
-###### You can let your users authenticate using their Facebook Accounts by integrating Facebook Sign-In into your app. *WeDeploy™ Authentication*.
+###### {$page.description}
 
 <article id="1">
 

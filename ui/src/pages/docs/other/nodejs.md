@@ -1,14 +1,14 @@
 ---
-description: "Launch a Node.js application in few steps."
-layout: "guide"
-headerTitle: "Other"
 title: "Getting Started With Node.js"
+description: "Launch a Node.js application in few steps."
+headerTitle: "Other"
+layout: "guide"
 weight: 2
 ---
 
 # Node.js
 
-###### Launch a Node.js application in few steps.
+###### {$page.description}
 
 <div class="guide-btn-cta">
   <a class="btn btn-accent btn-sm" href="http://boilerplate-nodejs.wedeploy.io" target="_blank">

@@ -1,14 +1,14 @@
 ---
+title: "Getting Started With Java"
 description: "Launch a Java 8 application in few steps."
 headerTitle: "Other"
 layout: "guide"
-title: "Getting Started With Java"
 weight: 4
 ---
 
 # Java
 
-###### Launch a Java 8 application in few steps.
+###### {$page.description}
 
 <div class="guide-btn-cta">
   <a class="btn btn-accent btn-sm" href="http://boilerplate-java.wedeploy.io" target="_blank">

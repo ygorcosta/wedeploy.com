@@ -1,14 +1,14 @@
 ---
+title: "Getting Started"
 description: "Leverage a NoSQL database with search and real-time capabilities using WeDeploy™ Data."
 headerTitle: "Data"
 layout: "guide"
-title: "Getting Started"
 weight: 1
 ---
 
 # Data
 
-###### Leverage a NoSQL database with search and real-time capabilities using *WeDeploy™ Data*.
+###### {$page.description}
 
 <div class="guide-btn-cta">
   <a class="btn btn-accent btn-sm" href="http://boilerplate-data.wedeploy.io" target="_blank">

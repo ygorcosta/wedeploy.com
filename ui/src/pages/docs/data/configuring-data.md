@@ -1,14 +1,14 @@
 ---
-description: "The 'api.json' and 'api-*.json' files allow us to configure the accessible paths for each data service."
+title: "Configuring Data"
+description: "The api.json and api-*.json files allow us to configure the accessible paths for each data service."
 headerTitle: "Data"
 layout: "guide"
-title: "Configuring Data"
 weight: 2
 ---
 
-# Configuring Data
+# {$page.title}
 
-###### The `api.json` and `api-*.json` files allow us to configure the accessible paths for each data service.
+###### {$page.description}
 
 <article id="1">
 

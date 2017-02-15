@@ -1,14 +1,14 @@
 ---
+title: "Sign-in With GitHub"
 description: "You can let your users authenticate using their GitHub Accounts by integrating GitHub Sign-In into your app."
 headerTitle: "Auth"
 layout: "guide"
-title: "Sign-in With GitHub"
 weight: 4
 ---
 
-# Sign-in With GitHub
+# {$page.title}
 
-###### You can let your users authenticate using their GitHub Accounts by integrating GitHub Sign-In into your app. *WeDeploy™ Authentication*.
+###### {$page.description}
 
 <article id="1">
 

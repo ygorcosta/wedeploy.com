@@ -1,10 +1,7 @@
 ---
-description: "Serve static files easily using WeDeploy™ Hosting."
-icon: "folder"
-headerTitle: "Hosting"
-layout: "guide"
-title: "Hosting"
 url: "/docs/hosting/getting-started.html"
+icon: "folder"
+layout: "guide"
 weight: 5
 ---
 
@@ -17,14 +14,14 @@ weight: 5
 {/template}
 
 /**
- *
+ * @param page
  */
 {template .soyweb}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; URL='/docs/hosting/getting-started.html'">
+	<meta http-equiv="refresh" content="0; URL='{$page.description}'">
 </head>
 </html>
 {/template}

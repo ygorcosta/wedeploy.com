@@ -1,15 +1,15 @@
 ---
-author: "Zeno Rocha"
-date: "Oct 10, 2016"
-description: "Blog description."
-layout: "blog"
-image: "http://wedeploy.com/images/blog/post-1--0.png"
 title: "Uptime status, new Ruby service, and more!"
+description: "First of all, we would like to say thanks for trying WeDeploy! You're shaping the future of this product, so we appreciate you taking the time to provide some feedback."
+date: "Oct 10, 2016"
+author: "Zeno Rocha"
+image: "http://wedeploy.com/images/blog/post-1--0.png"
+layout: "blog"
 ---
 
 <article>
 
-First of all, we would like to say thanks for trying WeDeploy! You're shaping the future of this product, so we appreciate you taking the time to provide some feedback.
+{$page.description}
 
 > You're shaping the future of this product.
 

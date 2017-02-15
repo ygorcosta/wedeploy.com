@@ -1,15 +1,14 @@
 ---
+title: "Getting Started"
 description: "Send emails asynchronously and check their status using WeDeploy™ Email"
-icon: "mail-full"
 headerTitle: "Email"
 layout: "guide"
-title: "Getting Started"
 weight: 1
 ---
 
 # Email
 
-###### Send emails asynchronously and check their status using *WeDeploy™ Email*.
+###### {$page.description}
 
 <div class="guide-btn-cta">
   <a class="btn btn-accent btn-sm" href="http://boilerplate-email.wedeploy.io" target="_blank">

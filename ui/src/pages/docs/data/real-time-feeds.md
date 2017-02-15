@@ -1,14 +1,14 @@
 ---
+title: "Real-time Feeds"
 description: "WeDeploy™ Data inverts the traditional database architecture, instead of polling for changes, the developer can tell WeDeploy Data to continuously push updated query results to applications in real-time."
 headerTitle: "Data"
 layout: "guide"
-title: "Real-time Feeds"
 weight: 8
 ---
 
-# Real-time Feeds
+# {$page.title}
 
-###### *WeDeploy™ Data* inverts the traditional database architecture, instead of polling for changes, the developer can tell WeDeploy Data to continuously push updated query results to applications in real-time.
+###### {$page.description}
 
 <article id="1">
 

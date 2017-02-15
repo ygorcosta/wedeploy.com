@@ -1,14 +1,14 @@
 ---
+title: "Understanding Configuration Files"
 description: "This is an overview of how WeDeploy uses json files to help you to configure your project."
 headerTitle: "Intro"
 layout: "guide"
-title: "Understanding Configuration Files"
 weight: 5
 ---
 
-# Understanding Configuration Files
+# {$page.title}
 
-###### This is an overview of how WeDeploy uses json files to help you to configure your project.
+###### {$page.description}
 
 <article id="1">
 

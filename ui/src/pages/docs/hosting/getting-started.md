@@ -1,14 +1,14 @@
 ---
+title: "Getting Started"
 description: "Serve static files easily using WeDeploy™ Hosting."
 headerTitle: "Hosting"
 layout: "guide"
-title: "Getting Started"
 weight: 1
 ---
 
 # Hosting
 
-###### Serve static files easily using *WeDeploy™ Hosting*.
+###### {$page.description}
 
 <div class="guide-btn-cta">
   <a class="btn btn-accent btn-sm" href="http://boilerplate-hosting.wedeploy.io" target="_blank">

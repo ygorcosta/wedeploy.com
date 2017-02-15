@@ -1,14 +1,14 @@
 ---
+title: "Sign-in With Google"
 description: "You can let your users authenticate using their Google Accounts by integrating Google Sign-In into your app."
 headerTitle: "Auth"
 layout: "guide"
-title: "Sign-in With Google"
 weight: 5
 ---
 
-# Sign-in With Google
+# {$page.title}
 
-###### You can let your users authenticate using their Google Accounts by integrating Google Sign-In into your app. *WeDeploy™ Authentication*.
+###### {$page.description}
 
 <article id="1">
 

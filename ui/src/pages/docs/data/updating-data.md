@@ -1,14 +1,14 @@
 ---
+title: "Updating Data"
 description: "The update() function updates an existing record in the database using the current attributes. It then returns the newly updated object in the Promise response."
 headerTitle: "Data"
 layout: "guide"
-title: "Updating Data"
 weight: 4
 ---
 
-# Updating Data
+# {$page.title}
 
-###### The update() function updates an existing record in the database using the current attributes. It then returns the newly updated object in the Promise response.
+###### {$page.description}
 
 <article id="1">
 
