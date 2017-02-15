@@ -14397,7 +14397,7 @@ li.feature {
     .docs .topbar-list .topbar-item.get-started {
       display: inline-block; } }
 
-.guide .topbar {
+.guide:not(.content) .topbar {
   background: rgba(14, 20, 26, 0.02); }
 
 .sidebar-search .form-control {
