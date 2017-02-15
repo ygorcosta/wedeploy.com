@@ -20,7 +20,7 @@ weight: 1
   or read the <a href="https://github.com/wedeploy/boilerplate-auth/tree/js" target="_blank">source code</a>.
 </div>
 
-<article id="article_1">
+<article id="1">
 
 ## Install dependencies
 
@@ -30,7 +30,7 @@ We also feature code snippets using the API Client, [visit this guide](/docs/int
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Running locally
 
@@ -69,7 +69,7 @@ http://authdemo.wedeploy.me
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## Deploying to the cloud
 
@@ -102,7 +102,7 @@ http://boilerplate-auth.wedeploy.io
 
 </article>
 
-<article id="article_4">
+<article id="4">
 
 ## Key capabilities
 
@@ -131,7 +131,7 @@ Create, delete or update users with a simple API.
 
 </article>
 
-<article id="article_5">
+<article id="5">
 
 ## Initializing auth service
 

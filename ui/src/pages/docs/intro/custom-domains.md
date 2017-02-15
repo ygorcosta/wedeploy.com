@@ -10,7 +10,7 @@ weight: 6
 
 ###### This is an overview of how WeDeploy manages custom domains for your projects.
 
-<article id="article_1">
+<article id="1">
 
 ## Introduction
 
@@ -18,7 +18,7 @@ To make your app accessible right away, WeDeploy makes any project accessible vi
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Configuring custom domains
 
@@ -36,7 +36,7 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 </article>
 
 
-<article id="article_3">
+<article id="3">
 
 ## Configuring DNS for root domains
 
@@ -56,7 +56,7 @@ In many DNS Providers, you are only allowed to use Address Records (A) for your 
 
 </article>
 
-<article id="article_4">
+<article id="4">
 
 ## Configuring DNS for subdomains
 
@@ -68,7 +68,7 @@ After configuring the custom domains on the Project Settings, you must point you
 
 </article>
 
-<article id="article_5">
+<article id="5">
 
 ## Configuring DNS for wildcard domain
 

@@ -10,7 +10,7 @@ weight: 6
 
 ###### You can let your users authenticate with WeDeploy using their email addresses and passwords. *WeDeploy™ Authentication*.
 
-<article id="article_1">
+<article id="1">
 
 ## Sign-in with password
 

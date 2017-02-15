@@ -10,7 +10,7 @@ weight: 2
 
 ###### Create, delete or update users by using *WeDeploy™ Auth*.
 
-<article id="article_1">
+<article id="1">
 
 ## Create user
 
@@ -33,7 +33,7 @@ auth.createUser({
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Get current user
 
@@ -49,7 +49,7 @@ if (currentUser) {
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## Get user
 
@@ -67,7 +67,7 @@ WeDeploy
 
 </article>
 
-<article id="article_4">
+<article id="4">
 
 ## Delete user
 
@@ -87,7 +87,7 @@ currentUser.deleteUser()
 
 </article>
 
-<article id="article_5">
+<article id="5">
 
 ## Update user
 
@@ -112,7 +112,7 @@ currentUser.updateUser({
 
 </article>
 
-<article id="article_6">
+<article id="6">
 
 ## Send a password reset email
 
@@ -132,7 +132,7 @@ WeDeploy
 
 </article>
 
-<article id="article_7">
+<article id="7">
 
 ## Sign-out
 

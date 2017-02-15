@@ -10,7 +10,7 @@ weight: 3
 
 ###### In this section, you'll learn how to deploy an application using WeDeploy Dashboard.
 
-<article id="article_1">
+<article id="1">
 
 ## Create an account
 
@@ -20,7 +20,7 @@ First you need to create a WeDeploy account by signing up through the dashboard 
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Access your dashboard
 
@@ -30,7 +30,7 @@ As the main page, the dashboard will list all your projects and status of availa
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## Create a new project
 
@@ -40,7 +40,7 @@ You are able to organize your services by project. Select a project ID and click
 
 </article>
 
-<article id="article_4">
+<article id="4">
 
 ## Open your project
 
@@ -50,7 +50,7 @@ Open your project by clicking on your project domain.
 
 </article>
 
-<article id="article_5">
+<article id="5">
 
 ## Click on install service
 
@@ -60,7 +60,7 @@ Projects can have more than one service. In this example we're going to deploy a
 
 </article>
 
-<article id="article_6">
+<article id="6">
 
 ## Select a service type
 In this tutorial we're going to use the WeDeploy Hosting in order to host a static project.
@@ -69,7 +69,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 </article>
 
-<article id="article_7">
+<article id="7">
 
 ## Fill in the ID click on install service
 
@@ -77,7 +77,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 </article>
 
-<article id="article_8">
+<article id="8">
 
 ## The container is going to be up and running
 
@@ -85,7 +85,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 </article>
 
-<article id="article_9">
+<article id="9">
 
 ## Access the URL generated for your service
 Now that you installed the boilerplate, in the service screen is possible to see the status of the service and its URL. Click on the URL to copy to your clipboard and open that in a new tab in your browser.
@@ -93,7 +93,7 @@ Now that you installed the boilerplate, in the service screen is possible to see
 
 </article>
 
-<article id="article_10">
+<article id="10">
 
 ## It works!
 That's it! Using a sofisticated Loadbalancer system and service discovering, WeDeploy automatically creates a URL and points that to your container.

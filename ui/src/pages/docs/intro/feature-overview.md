@@ -10,7 +10,7 @@ weight: 2
 
 ###### This is an overview of the features that make WeDeploy easiest way to deploy and scale applications.
 
-<article id="article_1">
+<article id="1">
 
 ## Zero downtime upgrades
 
@@ -20,7 +20,7 @@ WeDeploy services can all be updated with rolling, blue-green, or canary deploym
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Service discovery and load balancing
 
@@ -30,7 +30,7 @@ Distributed services create distributed problems, but you don’t have to solve 
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## Service visibility
 
@@ -38,7 +38,7 @@ WeDeploy provides an option for you to specify whether your service is going to 
 
 </article>
 
-<article id="article_4">
+<article id="4">
 
 ## High availability
 
@@ -50,7 +50,7 @@ To achieve self-healing, WeDeploy services are monitored and restarted when they
 
 </article>
 
-<article id="article_5">
+<article id="5">
 
 ## Elastic scalability
 
@@ -60,7 +60,7 @@ Horizontal scaling is trivial in Docker Swarm, as long as your service supports 
 
 </article>
 
-<article id="article_6">
+<article id="6">
 
 ## User interfaces
 

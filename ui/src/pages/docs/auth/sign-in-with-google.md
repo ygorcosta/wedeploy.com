@@ -10,7 +10,7 @@ weight: 5
 
 ###### You can let your users authenticate using their Google Accounts by integrating Google Sign-In into your app. *WeDeploy™ Authentication*.
 
-<article id="article_1">
+<article id="1">
 
 ## Sign-in with google
 
@@ -32,7 +32,7 @@ auth.onSignIn(function(user) {
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Setup app client id and secret
 

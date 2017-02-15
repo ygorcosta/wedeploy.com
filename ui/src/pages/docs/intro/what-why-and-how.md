@@ -10,7 +10,7 @@ weight: 1
 
 ###### Forget about infrastructure. WeDeploy helps you to dedicate your time to what really matters: building and scaling great apps. Before exploring WeDeploy further, make sure you understand its purpose and philosophy.
 
-<article id="article_1">
+<article id="1">
 
 ## What's WeDeploy?
 
@@ -29,7 +29,7 @@ With WeDeploy, you are able to quickly and efficiently respond to user demands:
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Why should I use WeDeploy?
 
@@ -39,7 +39,7 @@ This is why WeDeploy was also designed to serve as a platform for building a man
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## How will WeDeploy help me to deploy from simple to advanced applications?
 

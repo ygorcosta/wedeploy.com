@@ -10,7 +10,7 @@ weight: 8
 
 ###### Make requests to WeDeploy using a standardize interface.
 
-<article id="article_1">
+<article id="1">
 
 ## Installation
 

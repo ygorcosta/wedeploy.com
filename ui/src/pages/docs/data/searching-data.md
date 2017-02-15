@@ -10,7 +10,7 @@ weight: 7
 
 ###### Advanced queries using search.
 
-<article id="article_1">
+<article id="1">
 
 ## Search data
 

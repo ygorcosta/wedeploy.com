@@ -20,7 +20,7 @@ weight: 1
   or read the <a href="https://github.com/wedeploy/boilerplate-liferay/" target="_blank">source code</a>.
 </div>
 
-<article id="article_1">
+<article id="1">
 
 ## Install dependencies
 
@@ -28,7 +28,7 @@ This section assumes that you already have the **WeDeploy CLI** installed and **
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Running locally
 
@@ -59,7 +59,7 @@ http://liferay.<projectID>.wedeploy.me
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## Deploying to the cloud
 

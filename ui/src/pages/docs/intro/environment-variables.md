@@ -10,7 +10,7 @@ weight: 4
 
 ###### This is an overview of how WeDeploy manages environment variables for your projects.
 
-<article id="article_1">
+<article id="1">
 
 ## Introduction
 
@@ -21,7 +21,7 @@ configurations in different files. On WeDeploy you can take advantage of Environ
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Configuring environment variables
 

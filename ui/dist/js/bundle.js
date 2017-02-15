@@ -22869,664 +22869,6 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageIndex.
-     * @public
-     */
-
-    goog.module('pageIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('landing.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param220 = function param220() {
-        $view_1(opt_data, null, opt_ijData);
-        $view_3_1(opt_data, null, opt_ijData);
-        $view_3_2(opt_data, null, opt_ijData);
-        $view_4(opt_data, null, opt_ijData);
-        $view_6(opt_data, null, opt_ijData);
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param220 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $view_1(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      ie_open('div', null, null, 'id', 'view-1');
-      ie_open('div', null, null, 'class', 'container-wedeploy');
-      ie_open('div', null, null, 'id', 'view-1__container');
-      $subscribe(opt_data, null, opt_ijData);
-      $terminal(opt_data, null, opt_ijData);
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.view_1 = $view_1;
-    if (goog.DEBUG) {
-      $view_1.soyTemplateName = 'pageIndex.view_1';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $view_3_1(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'view-3__1');
-      ie_open('div', null, null, 'class', 'container-wedeploy');
-      ie_open('div', null, null, 'class', 'info-box');
-      ie_open('div', null, null, 'class', 'info-box__container');
-      ie_open('p', null, null, 'class', 'top-title');
-      itext('Microservices');
-      ie_close('p');
-      ie_open('h3');
-      itext('Built-in APIs that can help you create modern apps faster.');
-      ie_close('h3');
-      ie_open('p');
-      itext('We provide a set of ready-to-use services that enables you to store data in the cloud, search and stream content in realtime, authenticate users, send emails to your users, and so on.');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'bg-text');
-      ie_void('div', null, null, 'class', 'bg-text__solid');
-      ie_void('div', null, null, 'class', 'bg-text__gradient');
-      ie_close('div');
-      ie_void('div', null, null, 'class', 'info-img');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.view_3_1 = $view_3_1;
-    if (goog.DEBUG) {
-      $view_3_1.soyTemplateName = 'pageIndex.view_3_1';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $view_3_2(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'view-3__2');
-      ie_open('div', null, null, 'class', 'container-wedeploy');
-      ie_open('div', null, null, 'class', 'info-box');
-      ie_open('div', null, null, 'class', 'info-box__container flex-center-top');
-      ie_open('p', null, null, 'class', 'top-title');
-      itext('Containers');
-      ie_close('p');
-      ie_open('h3');
-      itext('Your favorite stack on the cloud in just few clicks.');
-      ie_close('h3');
-      ie_open('p');
-      itext('Choose between dozens of languages, frameworks, or entire application stacks. Launch production-ready environments in a matter of minutes.');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'bg-text');
-      ie_void('div', null, null, 'class', 'bg-text__solid');
-      ie_void('div', null, null, 'class', 'bg-text__gradient');
-      ie_close('div');
-      ie_void('div', null, null, 'class', 'info-img');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.view_3_2 = $view_3_2;
-    if (goog.DEBUG) {
-      $view_3_2.soyTemplateName = 'pageIndex.view_3_2';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $view_4(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'view-4');
-      ie_open('div', null, null, 'class', 'container-wedeploy');
-      ie_open('div', null, null, 'id', 'view-4__giant', 'class', 'giant');
-      ie_open('span');
-      itext('We');
-      ie_close('span');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'text-center');
-      ie_open('h2');
-      itext('Carefully designed features');
-      ie_close('h2');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'text-center');
-      ie_open('h4');
-      itext('Empowering you to build amazing apps.');
-      ie_close('h4');
-      ie_close('div');
-      ie_open('ul', null, null, 'id', 'features-container', 'class', 'flex-center-top');
-      var features__soy238 = [{ icon: 'icon_data.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Data', description: 'Store data securely with a NoSQL cloud database. Make complex queries instantly and consume information in real-time.' }, { icon: 'icon_users.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Auth', description: 'Avoid the headache of operating your own user management system. Authenticate users in few lines of code using our SDKs.' }, { icon: 'icon_cloud.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Hosting', description: 'Deliver HTML, CSS, JS, and any kind of static files using a powerful static hosting. It\'s super fast and will save you a lot of time.' }, { icon: 'icon_terminal.svg', hasWeIcon: false, title: 'Command Line Tool', description: 'We designed a CLI that seamlessly integrates into your workflow. Almost everything you can do from the dashboard can also be done from your terminal.' }, { icon: 'icon_servers.svg', hasWeIcon: false, title: 'Load Balancer', description: 'Automagically distribute incoming traffic across multiple instances without the client ever knowing about the internal separation of containers.' }, { icon: 'icon_velocimeter.svg', hasWeIcon: false, title: 'High Availability', description: 'Don\'t worry about having your app taken offline during deployment of the new code. Push updates or restart your containers with zero downtime.' }, { icon: 'icon_file.svg', hasWeIcon: false, title: 'Log Management', description: 'Detect and diagnose an error from your terminal or from the dashboard. Watch logs in realtime and find the specific cause, fast.' }, { icon: 'icon_heart.svg', hasWeIcon: false, title: 'Health Checks', description: 'Be the first one to know when something wrong happens. Monitor the status and control the lifecycle of your containers very easily.' }, { icon: 'icon_globe.svg', hasWeIcon: false, title: 'Custom Domains', description: 'Every project is accessible via a wedeploy.io subdomain. We know that\'s not enough for apps in production, that\'s why you can set up your own custom domains.' }];
-      var featureList244 = features__soy238;
-      var featureListLen244 = featureList244.length;
-      for (var featureIndex244 = 0; featureIndex244 < featureListLen244; featureIndex244++) {
-        var featureData244 = featureList244[featureIndex244];
-        $feature({ icon: featureData244.icon, hasWeIcon: featureData244.hasWeIcon, title: featureData244.title, description: featureData244.description }, null, opt_ijData);
-      }
-      ie_close('ul');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.view_4 = $view_4;
-    if (goog.DEBUG) {
-      $view_4.soyTemplateName = 'pageIndex.view_4';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $view_6(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'view-6', 'class', 'text-center');
-      ie_open('div', null, null, 'id', 'view-6__giant', 'class', 'giant');
-      ie_open('span', null, null, 'id', 'giant__deploy');
-      itext('Deploy');
-      ie_close('span');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'info');
-      ie_open('div', null, null, 'class', 'info__title');
-      ie_open('h2');
-      itext('We can\'t wait to see what you\'re going to build.');
-      ie_close('h2');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'info__button');
-      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'class', 'btn btn-accent btn-block');
-      itext('Get Started \u2013 It\u2019s FREE');
-      ie_close('a');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'info__question');
-      ie_open('h5');
-      itext('Have a question? Give our team a call: ');
-      ie_open('a', null, null, 'href', 'tel:+1 (909) 378-5432', 'class', 'phone');
-      itext('+1 (909) 378-5432.');
-      ie_close('a');
-      ie_close('h5');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.view_6 = $view_6;
-    if (goog.DEBUG) {
-      $view_6.soyTemplateName = 'pageIndex.view_6';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $feature(opt_data, opt_ignored, opt_ijData) {
-      ie_open('li', null, null, 'class', 'feature');
-      ie_open('div', null, null, 'class', 'feature__box text-center');
-      ie_open('div', null, null, 'class', 'box__badge-container');
-      ie_open('div', null, null, 'id', 'badge-data', 'class', 'badge flex-center-center');
-      ie_open('img', null, null, 'src', '/images/home/icons_view_2/' + opt_data.icon);
-      ie_close('img');
-      ie_close('div');
-      if (opt_data.hasWeIcon) {
-        ie_open('div', null, null, 'class', 'we-container');
-        ie_open('div', null, null, 'class', 'we flex-center-center');
-        ie_open('span');
-        itext('We');
-        ie_close('span');
-        ie_close('div');
-        ie_close('div');
-      }
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'feature__title');
-      ie_open('h3');
-      var dyn15 = opt_data.title;
-      if (typeof dyn15 == 'function') dyn15();else if (dyn15 != null) itext(dyn15);
-      ie_close('h3');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'feature__description');
-      ie_open('p');
-      var dyn16 = opt_data.description;
-      if (typeof dyn16 == 'function') dyn16();else if (dyn16 != null) itext(dyn16);
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_close('li');
-    }
-    exports.feature = $feature;
-    if (goog.DEBUG) {
-      $feature.soyTemplateName = 'pageIndex.feature';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $subscribe(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'subscribe', 'class', 'col-xs-16 col-sm-16 col-md-16 col-lg-4 col-lg-offset-1');
-      ie_open('div', null, null, 'id', 'subscribe__container');
-      ie_open('h1');
-      itext('You Build.');
-      ie_close('h1');
-      ie_open('h1');
-      itext('We Deploy.');
-      ie_close('h1');
-      ie_open('p');
-      itext('Forget about infrastructure. Dedicate your time to what really matters: building great apps.');
-      ie_close('p');
-      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'id', 'subscribe__submit-small', 'class', 'open-modal btn btn-accent btn-block');
-      ie_open('span');
-      itext('Get Started \u2013 It\u2019s FREE');
-      ie_close('span');
-      ie_close('a');
-      ie_void('div', null, null, 'id', 'terminal-img');
-      ie_open('form', null, null, 'id', 'view-1__form', 'class', 'form-signup');
-      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'type', 'submit', 'class', 'btn btn-accent btn-block');
-      ie_open('span');
-      itext('Get Started \u2013 It\u2019s FREE');
-      ie_close('span');
-      ie_close('a');
-      ie_close('form');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.subscribe = $subscribe;
-    if (goog.DEBUG) {
-      $subscribe.soyTemplateName = 'pageIndex.subscribe';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $terminal(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'terminal', 'class', 'col-xs-16 col-sm-16 col-md-9 col-lg-9 col-lg-offset-1');
-      ie_open('div', null, null, 'class', 'terminal__content');
-      ie_open('div', null, null, 'class', 'content__wrapper');
-      $browser(null, null, opt_ijData);
-      $cli(null, null, opt_ijData);
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.terminal = $terminal;
-    if (goog.DEBUG) {
-      $terminal.soyTemplateName = 'pageIndex.terminal';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $browser(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'browser');
-      ie_open('div', null, null, 'class', 'browser__top flex-center-center');
-      ie_open('div', null, null, 'class', 'top__bullets flex-left-center');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_close('div');
-      ie_open('h3');
-      itext('WeDeploy\u2122 Dashboard');
-      ie_close('h3');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'browser__topbar flex-left-center');
-      ie_open('a', null, null, 'href', 'javascript:void(0);', 'class', 'topbar__logo');
-      itext('WeDeploy\u2122');
-      ie_close('a');
-      ie_open('a', null, null, 'href', 'javascript:void(0);', 'class', 'topbar__projects btn btn-inverse btn-sm');
-      itext('Projects ');
-      ie_void('span', null, null, 'class', 'icon-12-arrow-down-short');
-      ie_close('a');
-      ie_open('div', null, null, 'class', 'topbar-link btn-transparent flex-left-spacebetween');
-      ie_open('a', null, null, 'class', 'avatar-icon-12', 'href', '#');
-      ie_void('span', null, null, 'class', 'icon-12-person');
-      ie_close('a');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'id', 'browser__content');
-      ie_open('div', null, null, 'id', 'content__scroll');
-      ie_open('div', null, null, 'class', 'flex-left-spacebetween');
-      ie_open('div', null, null, 'id', 'browser__recent', 'class', 'input-inner-addon input-inner-addon-right');
-      ie_open('div', null, null, 'class', 'btn btn-default btn-sm flex-center-center');
-      itext('Recent ');
-      ie_void('span', null, null, 'class', 'icon-12-arrow-down-short');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'id', 'browser__title');
-      itext('Projects');
-      ie_close('div');
-      ie_open('div', null, null, 'id', 'browser__new-project');
-      ie_open('div', null, null, 'class', 'btn btn-accent btn-sm flex-center-center');
-      ie_void('span', null, null, 'class', 'icon-12-plus');
-      itext(' New Project');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'content-header-menu');
-      ie_open('span', null, null, 'class', 'header__info');
-      itext('Project');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'header__status');
-      itext('Status');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'header__services');
-      itext('Service');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'header__activity');
-      itext('Last Activity');
-      ie_close('span');
-      ie_close('div');
-      var param274 = function param274() {
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-database');
-        ie_close('span');
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-mail');
-        ie_close('span');
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-cloud');
-        ie_close('span');
-      };
-      var param276 = function param276() {
-        ie_void('span', null, null, 'class', 'icon-12-module');
-      };
-      $browser_project({ first: true, projectName: 'mycompany.com', status: 'up', statusLabel: 'online', services: param274, activityIcon: param276, activityTimeElapsed: '7m' }, null, opt_ijData);
-      var param284 = function param284() {
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-folder');
-        ie_close('span');
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-mail');
-        ie_close('span');
-      };
-      var param286 = function param286() {
-        ie_void('span', null, null, 'class', 'icon-12-arrow-up-rod');
-      };
-      $browser_project({ first: false, projectName: 'intranet.wedeploy.io', status: 'up', statusLabel: 'online', services: param284, activityIcon: param286, activityTimeElapsed: '1d' }, null, opt_ijData);
-      var param294 = function param294() {
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-database');
-        ie_close('span');
-      };
-      var param296 = function param296() {
-        ie_void('span', null, null, 'class', 'icon-12-spinner-double-arrow');
-      };
-      $browser_project({ first: false, projectName: 'newproject.com', status: 'up', statusLabel: 'online', services: param294, activityIcon: param296, activityTimeElapsed: '30s' }, null, opt_ijData);
-      var param304 = function param304() {
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-cloud');
-        ie_close('span');
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-folder');
-        ie_close('span');
-      };
-      var param306 = function param306() {
-        ie_void('span', null, null, 'class', 'icon-12-house');
-      };
-      $browser_project({ first: false, projectName: 'mobileapp.wedeploy.io', status: 'up', statusLabel: 'online', services: param304, activityIcon: param306, activityTimeElapsed: '2h' }, null, opt_ijData);
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.browser = $browser;
-    if (goog.DEBUG) {
-      $browser.soyTemplateName = 'pageIndex.browser';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $browser_project(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'class', 'no-padding col--browser span_6 browser__project-item' + (opt_data.first ? ' first' : ''));
-      ie_open('div', null, null, 'class', 'project-item__content flex-left-center');
-      ie_open('div', null, null, 'class', 'project-item__info');
-      ie_open('p', null, null, 'class', 'large');
-      var dyn17 = opt_data.projectName;
-      if (typeof dyn17 == 'function') dyn17();else if (dyn17 != null) itext(dyn17);
-      ie_close('p');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'project-item__status flex-column-left-center');
-      ie_open('span', null, null, 'class', 'box box-project flex-left-center');
-      ie_void('span', null, null, 'class', 'bullet ' + opt_data.status);
-      ie_open('span', null, null, 'class', 'label-status');
-      var dyn18 = opt_data.statusLabel;
-      if (typeof dyn18 == 'function') dyn18();else if (dyn18 != null) itext(dyn18);
-      ie_close('span');
-      ie_close('span');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'project-item__services flex-column-left-center');
-      var dyn19 = opt_data.services;
-      if (typeof dyn19 == 'function') dyn19();else if (dyn19 != null) itext(dyn19);
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'project-item__activity flex-column-left-center');
-      ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-      var dyn20 = opt_data.activityIcon;
-      if (typeof dyn20 == 'function') dyn20();else if (dyn20 != null) itext(dyn20);
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'time-small');
-      var dyn21 = opt_data.activityTimeElapsed;
-      if (typeof dyn21 == 'function') dyn21();else if (dyn21 != null) itext(dyn21);
-      ie_close('span');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'project-item__settings flex-column-left-center');
-      ie_open('span', null, null, 'class', 'flex-right-center');
-      ie_void('span', null, null, 'class', 'icon-12-ellipsis');
-      ie_close('span');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.browser_project = $browser_project;
-    if (goog.DEBUG) {
-      $browser_project.soyTemplateName = 'pageIndex.browser_project';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $cli(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'cli', 'class', 'no-padding col--terminal span_3');
-      ie_open('div', null, null, 'class', 'cli__top flex-center-center');
-      ie_open('div', null, null, 'class', 'top__bullets flex-left-center');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_close('div');
-      ie_open('h3');
-      itext('WeDeploy\u2122 CLI');
-      ie_close('h3');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'cli__terminal flex-column-left-top');
-      ie_open('div', null, null, 'class', 'terminal-content');
-      ie_open('p');
-      itext('Available Commands:');
-      ie_close('p');
-      ie_open('p', null, null, 'class', 'no-margin');
-      ie_open('span', null, null, 'class', 'one');
-      itext('create');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'two');
-      itext('Creates a project or container;');
-      ie_close('span');
-      ie_close('p');
-      ie_open('p', null, null, 'class', 'no-margin');
-      ie_open('span', null, null, 'class', 'one');
-      itext('run');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'two');
-      itext('Run the infrastructure for development locally;');
-      ie_close('span');
-      ie_close('p');
-      ie_open('p', null, null, 'class', 'no-margin');
-      ie_open('span', null, null, 'class', 'one');
-      itext('link');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'two');
-      itext('Links the given project or service locally;');
-      ie_close('span');
-      ie_close('p');
-      ie_open('p');
-      itext('$ ');
-      ie_open('strong');
-      itext('we');
-      ie_close('strong');
-      itext(' create |');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.cli = $cli;
-    if (goog.DEBUG) {
-      $cli.soyTemplateName = 'pageIndex.cli';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.view_1.params = [];
-    exports.view_1.types = {};
-    exports.view_3_1.params = [];
-    exports.view_3_1.types = {};
-    exports.view_3_2.params = [];
-    exports.view_3_2.types = {};
-    exports.view_4.params = [];
-    exports.view_4.types = {};
-    exports.view_6.params = [];
-    exports.view_6.types = {};
-    exports.feature.params = ["icon", "hasWeIcon", "title", "description"];
-    exports.feature.types = { "icon": "any", "hasWeIcon": "any", "title": "any", "description": "any" };
-    exports.subscribe.params = [];
-    exports.subscribe.types = {};
-    exports.terminal.params = [];
-    exports.terminal.types = {};
-    exports.browser.params = [];
-    exports.browser.types = {};
-    exports.browser_project.params = ["first", "projectName", "status", "statusLabel", "services", "activityIcon", "activityTimeElapsed"];
-    exports.browser_project.types = { "first": "any", "projectName": "any", "status": "any", "statusLabel": "any", "services": "any", "activityIcon": "any", "activityTimeElapsed": "any" };
-    exports.cli.params = [];
-    exports.cli.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var pageIndex = function (_Component) {
-    babelHelpers.inherits(pageIndex, _Component);
-
-    function pageIndex() {
-      babelHelpers.classCallCheck(this, pageIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
-    }
-
-    return pageIndex;
-  }(Component);
-
-  Soy.register(pageIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageIndex'] = pageIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageIndex = function (_Component) {
-    babelHelpers.inherits(pageIndex, _Component);
-
-    function pageIndex() {
-      babelHelpers.classCallCheck(this, pageIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
-    }
-
-    return pageIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageIndex, templates);
-
-  this['metal']['pageIndex'] = pageIndex;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
     // This file was automatically generated from blog.soy.
     // Please don't edit this file by hand.
 
@@ -24974,6 +24316,664 @@ babelHelpers;
   Soy.register(tutorial, templates);
 
   this['metal']['tutorial'] = tutorial;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageIndex.
+     * @public
+     */
+
+    goog.module('pageIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('landing.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      opt_data = opt_data || {};
+      var param220 = function param220() {
+        $view_1(opt_data, null, opt_ijData);
+        $view_3_1(opt_data, null, opt_ijData);
+        $view_3_2(opt_data, null, opt_ijData);
+        $view_4(opt_data, null, opt_ijData);
+        $view_6(opt_data, null, opt_ijData);
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param220 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $view_1(opt_data, opt_ignored, opt_ijData) {
+      opt_data = opt_data || {};
+      ie_open('div', null, null, 'id', 'view-1');
+      ie_open('div', null, null, 'class', 'container-wedeploy');
+      ie_open('div', null, null, 'id', 'view-1__container');
+      $subscribe(opt_data, null, opt_ijData);
+      $terminal(opt_data, null, opt_ijData);
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.view_1 = $view_1;
+    if (goog.DEBUG) {
+      $view_1.soyTemplateName = 'pageIndex.view_1';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $view_3_1(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'view-3__1');
+      ie_open('div', null, null, 'class', 'container-wedeploy');
+      ie_open('div', null, null, 'class', 'info-box');
+      ie_open('div', null, null, 'class', 'info-box__container');
+      ie_open('p', null, null, 'class', 'top-title');
+      itext('Microservices');
+      ie_close('p');
+      ie_open('h3');
+      itext('Built-in APIs that can help you create modern apps faster.');
+      ie_close('h3');
+      ie_open('p');
+      itext('We provide a set of ready-to-use services that enables you to store data in the cloud, search and stream content in realtime, authenticate users, send emails to your users, and so on.');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'bg-text');
+      ie_void('div', null, null, 'class', 'bg-text__solid');
+      ie_void('div', null, null, 'class', 'bg-text__gradient');
+      ie_close('div');
+      ie_void('div', null, null, 'class', 'info-img');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.view_3_1 = $view_3_1;
+    if (goog.DEBUG) {
+      $view_3_1.soyTemplateName = 'pageIndex.view_3_1';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $view_3_2(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'view-3__2');
+      ie_open('div', null, null, 'class', 'container-wedeploy');
+      ie_open('div', null, null, 'class', 'info-box');
+      ie_open('div', null, null, 'class', 'info-box__container flex-center-top');
+      ie_open('p', null, null, 'class', 'top-title');
+      itext('Containers');
+      ie_close('p');
+      ie_open('h3');
+      itext('Your favorite stack on the cloud in just few clicks.');
+      ie_close('h3');
+      ie_open('p');
+      itext('Choose between dozens of languages, frameworks, or entire application stacks. Launch production-ready environments in a matter of minutes.');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'bg-text');
+      ie_void('div', null, null, 'class', 'bg-text__solid');
+      ie_void('div', null, null, 'class', 'bg-text__gradient');
+      ie_close('div');
+      ie_void('div', null, null, 'class', 'info-img');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.view_3_2 = $view_3_2;
+    if (goog.DEBUG) {
+      $view_3_2.soyTemplateName = 'pageIndex.view_3_2';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $view_4(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'view-4');
+      ie_open('div', null, null, 'class', 'container-wedeploy');
+      ie_open('div', null, null, 'id', 'view-4__giant', 'class', 'giant');
+      ie_open('span');
+      itext('We');
+      ie_close('span');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'text-center');
+      ie_open('h2');
+      itext('Carefully designed features');
+      ie_close('h2');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'text-center');
+      ie_open('h4');
+      itext('Empowering you to build amazing apps.');
+      ie_close('h4');
+      ie_close('div');
+      ie_open('ul', null, null, 'id', 'features-container', 'class', 'flex-center-top');
+      var features__soy238 = [{ icon: 'icon_data.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Data', description: 'Store data securely with a NoSQL cloud database. Make complex queries instantly and consume information in real-time.' }, { icon: 'icon_users.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Auth', description: 'Avoid the headache of operating your own user management system. Authenticate users in few lines of code using our SDKs.' }, { icon: 'icon_cloud.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Hosting', description: 'Deliver HTML, CSS, JS, and any kind of static files using a powerful static hosting. It\'s super fast and will save you a lot of time.' }, { icon: 'icon_terminal.svg', hasWeIcon: false, title: 'Command Line Tool', description: 'We designed a CLI that seamlessly integrates into your workflow. Almost everything you can do from the dashboard can also be done from your terminal.' }, { icon: 'icon_servers.svg', hasWeIcon: false, title: 'Load Balancer', description: 'Automagically distribute incoming traffic across multiple instances without the client ever knowing about the internal separation of containers.' }, { icon: 'icon_velocimeter.svg', hasWeIcon: false, title: 'High Availability', description: 'Don\'t worry about having your app taken offline during deployment of the new code. Push updates or restart your containers with zero downtime.' }, { icon: 'icon_file.svg', hasWeIcon: false, title: 'Log Management', description: 'Detect and diagnose an error from your terminal or from the dashboard. Watch logs in realtime and find the specific cause, fast.' }, { icon: 'icon_heart.svg', hasWeIcon: false, title: 'Health Checks', description: 'Be the first one to know when something wrong happens. Monitor the status and control the lifecycle of your containers very easily.' }, { icon: 'icon_globe.svg', hasWeIcon: false, title: 'Custom Domains', description: 'Every project is accessible via a wedeploy.io subdomain. We know that\'s not enough for apps in production, that\'s why you can set up your own custom domains.' }];
+      var featureList244 = features__soy238;
+      var featureListLen244 = featureList244.length;
+      for (var featureIndex244 = 0; featureIndex244 < featureListLen244; featureIndex244++) {
+        var featureData244 = featureList244[featureIndex244];
+        $feature({ icon: featureData244.icon, hasWeIcon: featureData244.hasWeIcon, title: featureData244.title, description: featureData244.description }, null, opt_ijData);
+      }
+      ie_close('ul');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.view_4 = $view_4;
+    if (goog.DEBUG) {
+      $view_4.soyTemplateName = 'pageIndex.view_4';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $view_6(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'view-6', 'class', 'text-center');
+      ie_open('div', null, null, 'id', 'view-6__giant', 'class', 'giant');
+      ie_open('span', null, null, 'id', 'giant__deploy');
+      itext('Deploy');
+      ie_close('span');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'info');
+      ie_open('div', null, null, 'class', 'info__title');
+      ie_open('h2');
+      itext('We can\'t wait to see what you\'re going to build.');
+      ie_close('h2');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'info__button');
+      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'class', 'btn btn-accent btn-block');
+      itext('Get Started \u2013 It\u2019s FREE');
+      ie_close('a');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'info__question');
+      ie_open('h5');
+      itext('Have a question? Give our team a call: ');
+      ie_open('a', null, null, 'href', 'tel:+1 (909) 378-5432', 'class', 'phone');
+      itext('+1 (909) 378-5432.');
+      ie_close('a');
+      ie_close('h5');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.view_6 = $view_6;
+    if (goog.DEBUG) {
+      $view_6.soyTemplateName = 'pageIndex.view_6';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $feature(opt_data, opt_ignored, opt_ijData) {
+      ie_open('li', null, null, 'class', 'feature');
+      ie_open('div', null, null, 'class', 'feature__box text-center');
+      ie_open('div', null, null, 'class', 'box__badge-container');
+      ie_open('div', null, null, 'id', 'badge-data', 'class', 'badge flex-center-center');
+      ie_open('img', null, null, 'src', '/images/home/icons_view_2/' + opt_data.icon);
+      ie_close('img');
+      ie_close('div');
+      if (opt_data.hasWeIcon) {
+        ie_open('div', null, null, 'class', 'we-container');
+        ie_open('div', null, null, 'class', 'we flex-center-center');
+        ie_open('span');
+        itext('We');
+        ie_close('span');
+        ie_close('div');
+        ie_close('div');
+      }
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'feature__title');
+      ie_open('h3');
+      var dyn15 = opt_data.title;
+      if (typeof dyn15 == 'function') dyn15();else if (dyn15 != null) itext(dyn15);
+      ie_close('h3');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'feature__description');
+      ie_open('p');
+      var dyn16 = opt_data.description;
+      if (typeof dyn16 == 'function') dyn16();else if (dyn16 != null) itext(dyn16);
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_close('li');
+    }
+    exports.feature = $feature;
+    if (goog.DEBUG) {
+      $feature.soyTemplateName = 'pageIndex.feature';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $subscribe(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'subscribe', 'class', 'col-xs-16 col-sm-16 col-md-16 col-lg-4 col-lg-offset-1');
+      ie_open('div', null, null, 'id', 'subscribe__container');
+      ie_open('h1');
+      itext('You Build.');
+      ie_close('h1');
+      ie_open('h1');
+      itext('We Deploy.');
+      ie_close('h1');
+      ie_open('p');
+      itext('Forget about infrastructure. Dedicate your time to what really matters: building great apps.');
+      ie_close('p');
+      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'id', 'subscribe__submit-small', 'class', 'open-modal btn btn-accent btn-block');
+      ie_open('span');
+      itext('Get Started \u2013 It\u2019s FREE');
+      ie_close('span');
+      ie_close('a');
+      ie_void('div', null, null, 'id', 'terminal-img');
+      ie_open('form', null, null, 'id', 'view-1__form', 'class', 'form-signup');
+      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'type', 'submit', 'class', 'btn btn-accent btn-block');
+      ie_open('span');
+      itext('Get Started \u2013 It\u2019s FREE');
+      ie_close('span');
+      ie_close('a');
+      ie_close('form');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.subscribe = $subscribe;
+    if (goog.DEBUG) {
+      $subscribe.soyTemplateName = 'pageIndex.subscribe';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $terminal(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'terminal', 'class', 'col-xs-16 col-sm-16 col-md-9 col-lg-9 col-lg-offset-1');
+      ie_open('div', null, null, 'class', 'terminal__content');
+      ie_open('div', null, null, 'class', 'content__wrapper');
+      $browser(null, null, opt_ijData);
+      $cli(null, null, opt_ijData);
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.terminal = $terminal;
+    if (goog.DEBUG) {
+      $terminal.soyTemplateName = 'pageIndex.terminal';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $browser(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'browser');
+      ie_open('div', null, null, 'class', 'browser__top flex-center-center');
+      ie_open('div', null, null, 'class', 'top__bullets flex-left-center');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_close('div');
+      ie_open('h3');
+      itext('WeDeploy\u2122 Dashboard');
+      ie_close('h3');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'browser__topbar flex-left-center');
+      ie_open('a', null, null, 'href', 'javascript:void(0);', 'class', 'topbar__logo');
+      itext('WeDeploy\u2122');
+      ie_close('a');
+      ie_open('a', null, null, 'href', 'javascript:void(0);', 'class', 'topbar__projects btn btn-inverse btn-sm');
+      itext('Projects ');
+      ie_void('span', null, null, 'class', 'icon-12-arrow-down-short');
+      ie_close('a');
+      ie_open('div', null, null, 'class', 'topbar-link btn-transparent flex-left-spacebetween');
+      ie_open('a', null, null, 'class', 'avatar-icon-12', 'href', '#');
+      ie_void('span', null, null, 'class', 'icon-12-person');
+      ie_close('a');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'id', 'browser__content');
+      ie_open('div', null, null, 'id', 'content__scroll');
+      ie_open('div', null, null, 'class', 'flex-left-spacebetween');
+      ie_open('div', null, null, 'id', 'browser__recent', 'class', 'input-inner-addon input-inner-addon-right');
+      ie_open('div', null, null, 'class', 'btn btn-default btn-sm flex-center-center');
+      itext('Recent ');
+      ie_void('span', null, null, 'class', 'icon-12-arrow-down-short');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'id', 'browser__title');
+      itext('Projects');
+      ie_close('div');
+      ie_open('div', null, null, 'id', 'browser__new-project');
+      ie_open('div', null, null, 'class', 'btn btn-accent btn-sm flex-center-center');
+      ie_void('span', null, null, 'class', 'icon-12-plus');
+      itext(' New Project');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'content-header-menu');
+      ie_open('span', null, null, 'class', 'header__info');
+      itext('Project');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'header__status');
+      itext('Status');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'header__services');
+      itext('Service');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'header__activity');
+      itext('Last Activity');
+      ie_close('span');
+      ie_close('div');
+      var param274 = function param274() {
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-database');
+        ie_close('span');
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-mail');
+        ie_close('span');
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-cloud');
+        ie_close('span');
+      };
+      var param276 = function param276() {
+        ie_void('span', null, null, 'class', 'icon-12-module');
+      };
+      $browser_project({ first: true, projectName: 'mycompany.com', status: 'up', statusLabel: 'online', services: param274, activityIcon: param276, activityTimeElapsed: '7m' }, null, opt_ijData);
+      var param284 = function param284() {
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-folder');
+        ie_close('span');
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-mail');
+        ie_close('span');
+      };
+      var param286 = function param286() {
+        ie_void('span', null, null, 'class', 'icon-12-arrow-up-rod');
+      };
+      $browser_project({ first: false, projectName: 'intranet.wedeploy.io', status: 'up', statusLabel: 'online', services: param284, activityIcon: param286, activityTimeElapsed: '1d' }, null, opt_ijData);
+      var param294 = function param294() {
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-database');
+        ie_close('span');
+      };
+      var param296 = function param296() {
+        ie_void('span', null, null, 'class', 'icon-12-spinner-double-arrow');
+      };
+      $browser_project({ first: false, projectName: 'newproject.com', status: 'up', statusLabel: 'online', services: param294, activityIcon: param296, activityTimeElapsed: '30s' }, null, opt_ijData);
+      var param304 = function param304() {
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-cloud');
+        ie_close('span');
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-folder');
+        ie_close('span');
+      };
+      var param306 = function param306() {
+        ie_void('span', null, null, 'class', 'icon-12-house');
+      };
+      $browser_project({ first: false, projectName: 'mobileapp.wedeploy.io', status: 'up', statusLabel: 'online', services: param304, activityIcon: param306, activityTimeElapsed: '2h' }, null, opt_ijData);
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.browser = $browser;
+    if (goog.DEBUG) {
+      $browser.soyTemplateName = 'pageIndex.browser';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $browser_project(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'class', 'no-padding col--browser span_6 browser__project-item' + (opt_data.first ? ' first' : ''));
+      ie_open('div', null, null, 'class', 'project-item__content flex-left-center');
+      ie_open('div', null, null, 'class', 'project-item__info');
+      ie_open('p', null, null, 'class', 'large');
+      var dyn17 = opt_data.projectName;
+      if (typeof dyn17 == 'function') dyn17();else if (dyn17 != null) itext(dyn17);
+      ie_close('p');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'project-item__status flex-column-left-center');
+      ie_open('span', null, null, 'class', 'box box-project flex-left-center');
+      ie_void('span', null, null, 'class', 'bullet ' + opt_data.status);
+      ie_open('span', null, null, 'class', 'label-status');
+      var dyn18 = opt_data.statusLabel;
+      if (typeof dyn18 == 'function') dyn18();else if (dyn18 != null) itext(dyn18);
+      ie_close('span');
+      ie_close('span');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'project-item__services flex-column-left-center');
+      var dyn19 = opt_data.services;
+      if (typeof dyn19 == 'function') dyn19();else if (dyn19 != null) itext(dyn19);
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'project-item__activity flex-column-left-center');
+      ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+      var dyn20 = opt_data.activityIcon;
+      if (typeof dyn20 == 'function') dyn20();else if (dyn20 != null) itext(dyn20);
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'time-small');
+      var dyn21 = opt_data.activityTimeElapsed;
+      if (typeof dyn21 == 'function') dyn21();else if (dyn21 != null) itext(dyn21);
+      ie_close('span');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'project-item__settings flex-column-left-center');
+      ie_open('span', null, null, 'class', 'flex-right-center');
+      ie_void('span', null, null, 'class', 'icon-12-ellipsis');
+      ie_close('span');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.browser_project = $browser_project;
+    if (goog.DEBUG) {
+      $browser_project.soyTemplateName = 'pageIndex.browser_project';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $cli(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'cli', 'class', 'no-padding col--terminal span_3');
+      ie_open('div', null, null, 'class', 'cli__top flex-center-center');
+      ie_open('div', null, null, 'class', 'top__bullets flex-left-center');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_close('div');
+      ie_open('h3');
+      itext('WeDeploy\u2122 CLI');
+      ie_close('h3');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'cli__terminal flex-column-left-top');
+      ie_open('div', null, null, 'class', 'terminal-content');
+      ie_open('p');
+      itext('Available Commands:');
+      ie_close('p');
+      ie_open('p', null, null, 'class', 'no-margin');
+      ie_open('span', null, null, 'class', 'one');
+      itext('create');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'two');
+      itext('Creates a project or container;');
+      ie_close('span');
+      ie_close('p');
+      ie_open('p', null, null, 'class', 'no-margin');
+      ie_open('span', null, null, 'class', 'one');
+      itext('run');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'two');
+      itext('Run the infrastructure for development locally;');
+      ie_close('span');
+      ie_close('p');
+      ie_open('p', null, null, 'class', 'no-margin');
+      ie_open('span', null, null, 'class', 'one');
+      itext('link');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'two');
+      itext('Links the given project or service locally;');
+      ie_close('span');
+      ie_close('p');
+      ie_open('p');
+      itext('$ ');
+      ie_open('strong');
+      itext('we');
+      ie_close('strong');
+      itext(' create |');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.cli = $cli;
+    if (goog.DEBUG) {
+      $cli.soyTemplateName = 'pageIndex.cli';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.view_1.params = [];
+    exports.view_1.types = {};
+    exports.view_3_1.params = [];
+    exports.view_3_1.types = {};
+    exports.view_3_2.params = [];
+    exports.view_3_2.types = {};
+    exports.view_4.params = [];
+    exports.view_4.types = {};
+    exports.view_6.params = [];
+    exports.view_6.types = {};
+    exports.feature.params = ["icon", "hasWeIcon", "title", "description"];
+    exports.feature.types = { "icon": "any", "hasWeIcon": "any", "title": "any", "description": "any" };
+    exports.subscribe.params = [];
+    exports.subscribe.types = {};
+    exports.terminal.params = [];
+    exports.terminal.types = {};
+    exports.browser.params = [];
+    exports.browser.types = {};
+    exports.browser_project.params = ["first", "projectName", "status", "statusLabel", "services", "activityIcon", "activityTimeElapsed"];
+    exports.browser_project.types = { "first": "any", "projectName": "any", "status": "any", "statusLabel": "any", "services": "any", "activityIcon": "any", "activityTimeElapsed": "any" };
+    exports.cli.params = [];
+    exports.cli.types = {};
+    templates = exports;
+    return exports;
+  });
+
+  var pageIndex = function (_Component) {
+    babelHelpers.inherits(pageIndex, _Component);
+
+    function pageIndex() {
+      babelHelpers.classCallCheck(this, pageIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    }
+
+    return pageIndex;
+  }(Component);
+
+  Soy.register(pageIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageIndex'] = pageIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageIndex = function (_Component) {
+    babelHelpers.inherits(pageIndex, _Component);
+
+    function pageIndex() {
+      babelHelpers.classCallCheck(this, pageIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    }
+
+    return pageIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageIndex, templates);
+
+  this['metal']['pageIndex'] = pageIndex;
 }).call(this);
 'use strict';
 
@@ -26624,7 +26624,7 @@ babelHelpers;
         ie_close('a');
         itext('.');
         ie_close('div');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Install dependencies');
         ie_close('h2');
@@ -26651,7 +26651,7 @@ babelHelpers;
         itext(' in order to start using it.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Running locally');
         ie_close('h2');
@@ -26680,7 +26680,7 @@ babelHelpers;
         ie_close('ol');
         $templateAlias2({ code: 'http://authdemo.wedeploy.me', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Deploying to the cloud');
         ie_close('h2');
@@ -26741,7 +26741,7 @@ babelHelpers;
         ie_close('ol');
         $templateAlias2({ code: 'http://boilerplate-auth.wedeploy.io', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_4');
+        ie_open('article', null, null, 'id', '4');
         ie_open('h2');
         itext('Key capabilities');
         ie_close('h2');
@@ -26801,7 +26801,7 @@ babelHelpers;
         itext('Create, delete or update users with a simple API.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_5');
+        ie_open('article', null, null, 'id', '5');
         ie_open('h2');
         itext('Initializing auth service');
         ie_close('h2');
@@ -26948,7 +26948,7 @@ babelHelpers;
         ie_close('em');
         itext('.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Create user');
         ie_close('h2');
@@ -26961,19 +26961,19 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: 'var auth = WeDeploy.auth();\n\nauth.createUser({\n    email: \'user@domain.com\',\n    password: \'abc\'\n})\n.then(function(user) {\n    // Successfully created.\n})\n.catch(function(err) {\n  // Not created.\n});', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Get current user');
         ie_close('h2');
         $templateAlias2({ code: 'var currentUser = WeDeploy.auth().currentUser;\n\nif (currentUser) {\n    // User is signed in.\n} else {\n    // No user is signed in.\n}', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Get user');
         ie_close('h2');
         $templateAlias2({ code: 'WeDeploy\n.auth()\n.getUser(userId)\n.then(function(user) {\n    // User found.\n})\n.catch(function(err) {\n    // User does not exist.\n});', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_4');
+        ie_open('article', null, null, 'id', '4');
         ie_open('h2');
         itext('Delete user');
         ie_close('h2');
@@ -26982,7 +26982,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: 'var currentUser = WeDeploy.auth().currentUser;\n\ncurrentUser.deleteUser()\n.then(function() {\n    // Successfully deleted.\n})\n.catch(function(err) {\n  // Not deleted.\n});', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_5');
+        ie_open('article', null, null, 'id', '5');
         ie_open('h2');
         itext('Update user');
         ie_close('h2');
@@ -26991,7 +26991,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: 'var currentUser = WeDeploy.auth().currentUser;\n\ncurrentUser.updateUser({\n    password: "password",\n    email: "eleven@hawkinslabs.com",\n    name: "Eleven",\n    photoUrl: "https://hawkinslabs.com/011/profile.jpg"\n})\n.then(function() {\n    // Successfully updated.\n})\n.catch(function(err) {\n  // Not updated.\n});', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_6');
+        ie_open('article', null, null, 'id', '6');
         ie_open('h2');
         itext('Send a password reset email');
         ie_close('h2');
@@ -27000,7 +27000,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: 'WeDeploy\n.auth()\n.sendPasswordResetEmail("user@domain.com")\n.then(function() {\n    // Email sent.\n})\n.catch(function(err) {\n  // An error happened.\n});', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_7');
+        ie_open('article', null, null, 'id', '7');
         ie_open('h2');
         itext('Sign-out');
         ie_close('h2');
@@ -27137,7 +27137,7 @@ babelHelpers;
         ie_close('em');
         itext('.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Sign-in with facebook');
         ie_close('h2');
@@ -27150,7 +27150,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: 'var auth = WeDeploy.auth();\n\nvar provider = new auth.provider.Facebook();\nprovider.setProviderScope("email");\n\nauth.signInWithRedirect(provider);\n\nauth.onSignIn(function(user) {\n    // Fires when user is signed in after redirect.\n});', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Setup app client id and secret');
         ie_close('h2');
@@ -27325,7 +27325,7 @@ babelHelpers;
         ie_close('em');
         itext('.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Sign-in with gitHub');
         ie_close('h2');
@@ -27338,7 +27338,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: 'var auth = WeDeploy.auth();\n\nvar provider = new auth.provider.Github();\nprovider.setProviderScope("user:email");\n\nauth.signInWithRedirect(provider);\n\nauth.onSignIn(function(user) {\n    // Fires when user is signed in after redirect.\n});', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Setup app client id and secret');
         ie_close('h2');
@@ -27513,7 +27513,7 @@ babelHelpers;
         ie_close('em');
         itext('.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Sign-in with google');
         ie_close('h2');
@@ -27526,7 +27526,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: 'var auth = WeDeploy.auth();\n\nvar provider = new auth.provider.Google();\nprovider.setProviderScope("email");\n\nauth.signInWithRedirect(provider);\n\nauth.onSignIn(function(user) {\n    // Fires when user is signed in after redirect.\n});', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Setup app client id and secret');
         ie_close('h2');
@@ -27701,7 +27701,7 @@ babelHelpers;
         ie_close('em');
         itext('.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Sign-in with password');
         ie_close('h2');
@@ -27913,455 +27913,6 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from getting-started.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace docsEmailGettingStartedHtml.
-     * @public
-     */
-
-    goog.module('docsEmailGettingStartedHtml.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param876 = function param876() {
-        ie_open('h1');
-        itext('Email');
-        ie_close('h1');
-        ie_open('h6');
-        itext('Send emails asynchronously and check their status using ');
-        ie_open('em');
-        itext('WeDeploy\u2122 Email');
-        ie_close('em');
-        itext('.');
-        ie_close('h6');
-        ie_open('div', null, null, 'class', 'guide-btn-cta');
-        ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-email.wedeploy.io', 'target', '_blank');
-        ie_void('span', null, null, 'class', 'icon-16-external');
-        itext('See Live Demo');
-        ie_close('a');
-        ie_close('div');
-        ie_open('div', null, null, 'class', 'guide-aux-cta');
-        itext('or read the ');
-        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-email/tree/js', 'target', '_blank');
-        itext('source code');
-        ie_close('a');
-        itext('.');
-        ie_close('div');
-        ie_open('article', null, null, 'id', 'article_1');
-        ie_open('h2');
-        itext('Install dependencies');
-        ie_close('h2');
-        ie_open('p');
-        itext('This section assumes that you already have the ');
-        ie_open('strong');
-        itext('WeDeploy CLI');
-        ie_close('strong');
-        itext(' installed and ');
-        ie_open('strong');
-        itext('Docker');
-        ie_close('strong');
-        itext(' running. Make sure to ');
-        ie_open('a', null, null, 'href', '/docs/intro/using-the-command-line.html');
-        itext('visit the installation guide');
-        ie_close('a');
-        itext(' if you need help setting that up.');
-        ie_close('p');
-        ie_open('p');
-        itext('We also feature code snippets using the API Client, ');
-        ie_open('a', null, null, 'href', '/docs/intro/using-the-api-client.html');
-        itext('visit this guide');
-        ie_close('a');
-        itext(' in order to start using it.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
-        ie_open('h2');
-        itext('Running locally');
-        ie_close('h2');
-        ie_open('ol');
-        ie_open('li');
-        itext('Start local infrastructure:');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
-        ie_open('ol', null, null, 'start', '2');
-        ie_open('li');
-        itext('Clone this repository:');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: 'git clone -b js https://github.com/wedeploy/boilerplate-email.git boilerplate-email-js\ncd boilerplate-email-js', mode: 'xml' }, null, opt_ijData);
-        ie_open('ol', null, null, 'start', '3');
-        ie_open('li');
-        itext('Link this container with the local infrastructure:');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: 'we link', mode: 'xml' }, null, opt_ijData);
-        ie_open('ol', null, null, 'start', '4');
-        ie_open('li');
-        itext('Now your container is ready to be used:');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: 'http://emaildemo.wedeploy.me', mode: 'xml' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
-        ie_open('h2');
-        itext('Deploying to the cloud');
-        ie_close('h2');
-        ie_open('ol');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-email/fork');
-        itext('Fork this repository');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Go to the ');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
-        itext('Dashboard');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com/projects/create');
-        itext('Create a project');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('In the sidebar, click on ');
-        ie_open('em');
-        itext('Deployment');
-        ie_close('em');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Using your local machine, clone your Github fork:');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: 'git clone https://github.com/<username>/boilerplate-email', mode: 'xml' }, null, opt_ijData);
-        ie_open('ol', null, null, 'start', '6');
-        ie_open('li');
-        itext('Get into the folder: ');
-        ie_open('code');
-        itext('cd boilerplate-email');
-        ie_close('code');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Using the content on ');
-        ie_open('em');
-        itext('Deployment');
-        ie_close('em');
-        itext(' page. Add the WeDeploy remote url:');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<projectID>.git', mode: 'xml' }, null, opt_ijData);
-        ie_open('ol', null, null, 'start', '8');
-        ie_open('li');
-        itext('Push your data to wedeploy git server: ');
-        ie_open('code');
-        itext('git push wedeploy master');
-        ie_close('code');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Once you see it in the Dashboard, your container will be ready to be used.');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: 'http://emaildemo.wedeploy.io', mode: 'xml' }, null, opt_ijData);
-        ie_open('h2');
-        itext('Sending an email');
-        ie_close('h2');
-        ie_open('p');
-        itext('Now that we have our container up and running, it\'s time to start sending some emails. We can use the API Client to facilitate the process of sending requests to WeDeploy.');
-        ie_close('p');
-        ie_open('p');
-        itext('In order to send emails, we have to make a ');
-        ie_open('code');
-        itext('POST');
-        ie_close('code');
-        itext(' request to ');
-        ie_open('code');
-        itext('/emails');
-        ie_close('code');
-        itext(' passing some required parameters like ');
-        ie_open('code');
-        itext('from');
-        ie_close('code');
-        itext(', ');
-        ie_open('code');
-        itext('to');
-        ie_close('code');
-        itext(', and ');
-        ie_open('code');
-        itext('subject');
-        ie_close('code');
-        itext(':');
-        ie_close('p');
-        $templateAlias2({ code: 'WeDeploy\n.url(\'http://<containerID>.<projectID>.wedeploy.io/emails\')\n.form(\'from\', \'from@domain.com\')\n.form(\'to\', \'to@domain.com\')\n.form(\'subject\', \'Hi there!\')\n.post()\n.then(function(response) {\n  console.log(\'Email ID:\', response.body());\n})\n.catch(function(error) {\n  // Some error has happened\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_open('blockquote');
-        ie_open('p');
-        itext('For the full list of parameters, check this container\'s README in the ');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.io/');
-        itext('Dashboard');
-        ie_close('a');
-        itext('.');
-        ie_close('p');
-        ie_close('blockquote');
-        ie_open('p');
-        itext('As a result, we\'ll receive an email ID. This doesn\'t indicate that the email was already sent, it actually says that it was added to the email queue. That\'s why we have another API to check the email status.');
-        ie_close('p');
-        ie_open('h2');
-        itext('Checking an email status');
-        ie_close('h2');
-        ie_open('p');
-        itext('In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. ');
-        ie_open('code');
-        itext('123');
-        ie_close('code');
-        itext(', and send a ');
-        ie_open('code');
-        itext('GET');
-        ie_close('code');
-        itext(' request to ');
-        ie_open('code');
-        itext('/emails/123/status');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        $templateAlias2({ code: 'WeDeploy\n.url(\'http://<containerID>.<projectID>.wedeploy.io/emails/<emailID>/status\')\n.get()\n.then(function(response) {\n  console.log(\'Email status:\', response.body());\n})\n.catch(function(error) {\n  // Some error has happened\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('h2');
-        itext('What\'s next?');
-        ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('That\'s it! Now we\'re ready to start sending emails to our users.');
-        ie_close('li');
-        ie_close('ul');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param876 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'docsEmailGettingStartedHtml.render';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var docsEmailGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(docsEmailGettingStartedHtml, _Component);
-
-    function docsEmailGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, docsEmailGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (docsEmailGettingStartedHtml.__proto__ || Object.getPrototypeOf(docsEmailGettingStartedHtml)).apply(this, arguments));
-    }
-
-    return docsEmailGettingStartedHtml;
-  }(Component);
-
-  Soy.register(docsEmailGettingStartedHtml, templates);
-  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['docsEmailGettingStartedHtml'] = docsEmailGettingStartedHtml;
-  this['metalNamed']['getting-started']['templates'] = templates;
-  this['metal']['getting-started'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['getting-started'];
-
-  var docsEmailGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(docsEmailGettingStartedHtml, _Component);
-
-    function docsEmailGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, docsEmailGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (docsEmailGettingStartedHtml.__proto__ || Object.getPrototypeOf(docsEmailGettingStartedHtml)).apply(this, arguments));
-    }
-
-    return docsEmailGettingStartedHtml;
-  }(Component);
-
-  ;
-
-  Soy.register(docsEmailGettingStartedHtml, templates);
-
-  this['metal']['docsEmailGettingStartedHtml'] = docsEmailGettingStartedHtml;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageDocsEmailIndex.
-     * @public
-     */
-
-    goog.module('pageDocsEmailIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {}
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageDocsEmailIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $soyweb(opt_data, opt_ignored, opt_ijData) {
-      ie_open('!DOCTYPE', null, null, 'html', '');
-      ie_open('html', null, null, 'lang', 'en');
-      ie_open('head');
-      ie_open('meta', null, null, 'charset', 'UTF-8');
-      ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/docs/email/getting-started.html\'');
-      ie_close('meta');
-      ie_close('head');
-      ie_close('html');
-    }
-    exports.soyweb = $soyweb;
-    if (goog.DEBUG) {
-      $soyweb.soyTemplateName = 'pageDocsEmailIndex.soyweb';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.soyweb.params = [];
-    exports.soyweb.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var pageDocsEmailIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsEmailIndex, _Component);
-
-    function pageDocsEmailIndex() {
-      babelHelpers.classCallCheck(this, pageDocsEmailIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsEmailIndex.__proto__ || Object.getPrototypeOf(pageDocsEmailIndex)).apply(this, arguments));
-    }
-
-    return pageDocsEmailIndex;
-  }(Component);
-
-  Soy.register(pageDocsEmailIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageDocsEmailIndex'] = pageDocsEmailIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageDocsEmailIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsEmailIndex, _Component);
-
-    function pageDocsEmailIndex() {
-      babelHelpers.classCallCheck(this, pageDocsEmailIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsEmailIndex.__proto__ || Object.getPrototypeOf(pageDocsEmailIndex)).apply(this, arguments));
-    }
-
-    return pageDocsEmailIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageDocsEmailIndex, templates);
-
-  this['metal']['pageDocsEmailIndex'] = pageDocsEmailIndex;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
     // This file was automatically generated from configuring-data.soy.
     // Please don't edit this file by hand.
 
@@ -28404,7 +27955,7 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param547 = function param547() {
+      var param750 = function param750() {
         ie_open('h1');
         itext('Configuring Data');
         ie_close('h1');
@@ -28419,7 +27970,7 @@ babelHelpers;
         ie_close('code');
         itext(' files allow us to configure the accessible paths for each data service.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Understanding configuration files');
         ie_close('h2');
@@ -28445,7 +27996,7 @@ babelHelpers;
         itext(' and are used following the ordering filesystem.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('JSON attributes');
         ie_close('h2');
@@ -28561,7 +28112,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: '[\n  {\n    "description": "Creates a new movie",\n    "path": "/movies",\n    "method": "POST",\n    "parameters": {\n      "title": {\n        "type": "string"\n      }\n    },\n    "data": true\n  }\n]', mode: 'json' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Allowing usage of all the collections');
         ie_close('h2');
@@ -28581,7 +28132,7 @@ babelHelpers;
         itext(' tells the data service to allow any request to the base path of the data service.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_4');
+        ie_open('article', null, null, 'id', '4');
         ie_open('h2');
         itext('Validating resources');
         ie_close('h2');
@@ -28708,7 +28259,7 @@ babelHelpers;
         itext('.');
         ie_close('p');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param547 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param750 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -28791,14 +28342,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param612 = function param612() {
+      var param815 = function param815() {
         ie_open('h1');
         itext('Deleting Data');
         ie_close('h1');
         ie_open('h6');
         itext('The delete() function destroys an existing field, document or collection in the database.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Deleting existing data');
         ie_close('h2');
@@ -28827,7 +28378,7 @@ babelHelpers;
         itext('.');
         ie_close('p');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param612 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param815 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -28958,7 +28509,7 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param622 = function param622() {
+      var param825 = function param825() {
         ie_open('h1');
         itext('Data');
         ie_close('h1');
@@ -28982,7 +28533,7 @@ babelHelpers;
         ie_close('a');
         itext('.');
         ie_close('div');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Install dependencies');
         ie_close('h2');
@@ -29009,7 +28560,7 @@ babelHelpers;
         itext(' in order to start using it.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Running locally');
         ie_close('h2');
@@ -29038,7 +28589,7 @@ babelHelpers;
         ie_close('ol');
         $templateAlias2({ code: 'http://boilerplate-data.wedeploy.me', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Deploying to the cloud');
         ie_close('h2');
@@ -29120,7 +28671,7 @@ babelHelpers;
         itext('.');
         ie_close('p');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param622 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param825 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -29227,7 +28778,7 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param666 = function param666() {
+      var param869 = function param869() {
         ie_open('h1');
         itext('Real-time Feeds');
         ie_close('h1');
@@ -29237,7 +28788,7 @@ babelHelpers;
         ie_close('em');
         itext(' inverts the traditional database architecture, instead of polling for changes, the developer can tell WeDeploy Data to continuously push updated query results to applications in real-time.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Watching data changes');
         ie_close('h2');
@@ -29261,7 +28812,7 @@ babelHelpers;
         itext('Now every time the storage detects changes that affect the query you\'re watching, you will receive a changes notification with the response body you\'d receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you\'ll receive the error object in a fail notification on the client.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Watching with advanced filters');
         ie_close('h2');
@@ -29274,7 +28825,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: 'WeDeploy.data(\'http://datademo.wedeploy.io\')\n.where(\'category\', \'cinema\')\n.or(\'category\', \'cartoon\')\n.watch(\'movies\')\n.on(\'changes\', function(data){\n   console.log(data);\n})\n.on(\'fail\', function(error){\n   console.log(error);\n});', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Getting the latest changes');
         ie_close('h2');
@@ -29308,7 +28859,7 @@ babelHelpers;
         ie_close('li');
         ie_close('ul');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param666 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param869 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -29415,14 +28966,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param686 = function param686() {
+      var param889 = function param889() {
         ie_open('h1');
         itext('Retrieving data');
         ie_close('h1');
         ie_open('h6');
         itext('The get() function retrieve an existing field, document or collection in the database.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Get data');
         ie_close('h2');
@@ -29446,7 +28997,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: '[\n  {"id":"star_wars_i", "title":"Star Wars: Episode I - The Phantom Menace", "year":1999, "rating":6.5},\n  {"id":"star_wars_ii", "title":"Star Wars: Episode II - Attack of the Clones", "year":2002, "rating":6.7},\n  {"id":"star_wars_iii", "title":"Star Wars: Episode III - Revenge of the Sith", "year":2005, "rating":7.7},\n  {"id":"star_wars_iv", "title":"Star Wars: Episode IV - A New Hope", "year":1977, "rating":8.7},\n  {"id":"star_wars_v", "title":"Star Wars: Episode V - The Empire Strikes Back", "year":1980, "rating":8.8},\n  {"id":"star_wars_vi", "title":"Star Wars: Episode VI - Return of the Jedi", "year":1983, "rating":8.4},\n  {"id":"star_wars_vii", "title":"Star Wars: Episode VII - The Force Awakens", "year":2015}\n]', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Sorting data');
         ie_close('h2');
@@ -29462,7 +29013,7 @@ babelHelpers;
         itext('Notice that because Episode VII has no rating (as it was not released yet), it\'s sorted as the last document.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Applying filters');
         ie_close('h2');
@@ -29475,7 +29026,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: '[\n  {"id":"star_wars_iv","title":"Star Wars: Episode IV - A New Hope","year":1977,"rating":8.7},\n  {"id":"star_wars_v","title":"Star Wars: Episode V - The Empire Strikes Back","year":1980,"rating":8.8}\n]', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_4');
+        ie_open('article', null, null, 'id', '4');
         ie_open('h2');
         itext('Pagination');
         ie_close('h2');
@@ -29502,7 +29053,7 @@ babelHelpers;
         itext('.');
         ie_close('p');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param686 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param889 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -29609,14 +29160,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param741 = function param741() {
+      var param944 = function param944() {
         ie_open('h1');
         itext('Saving Data');
         ie_close('h1');
         ie_open('h6');
         itext('The create() function creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Inserting new data');
         ie_close('h2');
@@ -29644,7 +29195,7 @@ babelHelpers;
         itext(' field as part of the new document.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Inserting multiple data');
         ie_close('h2');
@@ -29661,7 +29212,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: '[\n  {\n    "id":" 115992383516607959",\n    "title": "Star Wars III",\n    "year": 2005,\n    "rating": 8.0\n  },\n  {\n    "id":" 115992383516607954",\n    "title": "Star Wars II",\n    "year": 2002,\n    "rating": 8.6\n  }\n]', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Inserting new fields in an existing collection');
         ie_close('h2');
@@ -29674,7 +29225,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: '{\n  "id":" 115992383516607954",\n  "title": "Star Wars I",\n  "obs": "First in ABC order",\n  "year": 1999,\n  "rating": 9.0\n}', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_4');
+        ie_open('article', null, null, 'id', '4');
         ie_open('h2');
         itext('URL scope structure');
         ie_close('h2');
@@ -29698,7 +29249,7 @@ babelHelpers;
         itext('.');
         ie_close('p');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param741 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param944 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -29805,14 +29356,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param786 = function param786() {
+      var param989 = function param989() {
         ie_open('h1');
         itext('Searching Data');
         ie_close('h1');
         ie_open('h6');
         itext('Advanced queries using search.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Search data');
         ie_close('h2');
@@ -29899,7 +29450,7 @@ babelHelpers;
         itext('.');
         ie_close('p');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param786 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param989 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -30006,14 +29557,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param861 = function param861() {
+      var param1064 = function param1064() {
         ie_open('h1');
         itext('Updating Data');
         ie_close('h1');
         ie_open('h6');
         itext('The update() function updates an existing record in the database using the current attributes. It then returns the newly updated object in the Promise response.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Updating existing data');
         ie_close('h2');
@@ -30049,7 +29600,7 @@ babelHelpers;
         itext('.');
         ie_close('p');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param861 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1064 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -30243,6 +29794,455 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
+     * @fileoverview Templates in namespace docsEmailGettingStartedHtml.
+     * @public
+     */
+
+    goog.module('docsEmailGettingStartedHtml.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      opt_data = opt_data || {};
+      var param547 = function param547() {
+        ie_open('h1');
+        itext('Email');
+        ie_close('h1');
+        ie_open('h6');
+        itext('Send emails asynchronously and check their status using ');
+        ie_open('em');
+        itext('WeDeploy\u2122 Email');
+        ie_close('em');
+        itext('.');
+        ie_close('h6');
+        ie_open('div', null, null, 'class', 'guide-btn-cta');
+        ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-email.wedeploy.io', 'target', '_blank');
+        ie_void('span', null, null, 'class', 'icon-16-external');
+        itext('See Live Demo');
+        ie_close('a');
+        ie_close('div');
+        ie_open('div', null, null, 'class', 'guide-aux-cta');
+        itext('or read the ');
+        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-email/tree/js', 'target', '_blank');
+        itext('source code');
+        ie_close('a');
+        itext('.');
+        ie_close('div');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Install dependencies');
+        ie_close('h2');
+        ie_open('p');
+        itext('This section assumes that you already have the ');
+        ie_open('strong');
+        itext('WeDeploy CLI');
+        ie_close('strong');
+        itext(' installed and ');
+        ie_open('strong');
+        itext('Docker');
+        ie_close('strong');
+        itext(' running. Make sure to ');
+        ie_open('a', null, null, 'href', '/docs/intro/using-the-command-line.html');
+        itext('visit the installation guide');
+        ie_close('a');
+        itext(' if you need help setting that up.');
+        ie_close('p');
+        ie_open('p');
+        itext('We also feature code snippets using the API Client, ');
+        ie_open('a', null, null, 'href', '/docs/intro/using-the-api-client.html');
+        itext('visit this guide');
+        ie_close('a');
+        itext(' in order to start using it.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Running locally');
+        ie_close('h2');
+        ie_open('ol');
+        ie_open('li');
+        itext('Start local infrastructure:');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
+        ie_open('ol', null, null, 'start', '2');
+        ie_open('li');
+        itext('Clone this repository:');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: 'git clone -b js https://github.com/wedeploy/boilerplate-email.git boilerplate-email-js\ncd boilerplate-email-js', mode: 'xml' }, null, opt_ijData);
+        ie_open('ol', null, null, 'start', '3');
+        ie_open('li');
+        itext('Link this container with the local infrastructure:');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: 'we link', mode: 'xml' }, null, opt_ijData);
+        ie_open('ol', null, null, 'start', '4');
+        ie_open('li');
+        itext('Now your container is ready to be used:');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: 'http://emaildemo.wedeploy.me', mode: 'xml' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '3');
+        ie_open('h2');
+        itext('Deploying to the cloud');
+        ie_close('h2');
+        ie_open('ol');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-email/fork');
+        itext('Fork this repository');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Go to the ');
+        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
+        itext('Dashboard');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com/projects/create');
+        itext('Create a project');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('In the sidebar, click on ');
+        ie_open('em');
+        itext('Deployment');
+        ie_close('em');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Using your local machine, clone your Github fork:');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: 'git clone https://github.com/<username>/boilerplate-email', mode: 'xml' }, null, opt_ijData);
+        ie_open('ol', null, null, 'start', '6');
+        ie_open('li');
+        itext('Get into the folder: ');
+        ie_open('code');
+        itext('cd boilerplate-email');
+        ie_close('code');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Using the content on ');
+        ie_open('em');
+        itext('Deployment');
+        ie_close('em');
+        itext(' page. Add the WeDeploy remote url:');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<projectID>.git', mode: 'xml' }, null, opt_ijData);
+        ie_open('ol', null, null, 'start', '8');
+        ie_open('li');
+        itext('Push your data to wedeploy git server: ');
+        ie_open('code');
+        itext('git push wedeploy master');
+        ie_close('code');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Once you see it in the Dashboard, your container will be ready to be used.');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: 'http://emaildemo.wedeploy.io', mode: 'xml' }, null, opt_ijData);
+        ie_open('h2');
+        itext('Sending an email');
+        ie_close('h2');
+        ie_open('p');
+        itext('Now that we have our container up and running, it\'s time to start sending some emails. We can use the API Client to facilitate the process of sending requests to WeDeploy.');
+        ie_close('p');
+        ie_open('p');
+        itext('In order to send emails, we have to make a ');
+        ie_open('code');
+        itext('POST');
+        ie_close('code');
+        itext(' request to ');
+        ie_open('code');
+        itext('/emails');
+        ie_close('code');
+        itext(' passing some required parameters like ');
+        ie_open('code');
+        itext('from');
+        ie_close('code');
+        itext(', ');
+        ie_open('code');
+        itext('to');
+        ie_close('code');
+        itext(', and ');
+        ie_open('code');
+        itext('subject');
+        ie_close('code');
+        itext(':');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n.url(\'http://<containerID>.<projectID>.wedeploy.io/emails\')\n.form(\'from\', \'from@domain.com\')\n.form(\'to\', \'to@domain.com\')\n.form(\'subject\', \'Hi there!\')\n.post()\n.then(function(response) {\n  console.log(\'Email ID:\', response.body());\n})\n.catch(function(error) {\n  // Some error has happened\n});', mode: 'javascript' }, null, opt_ijData);
+        ie_open('blockquote');
+        ie_open('p');
+        itext('For the full list of parameters, check this container\'s README in the ');
+        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.io/');
+        itext('Dashboard');
+        ie_close('a');
+        itext('.');
+        ie_close('p');
+        ie_close('blockquote');
+        ie_open('p');
+        itext('As a result, we\'ll receive an email ID. This doesn\'t indicate that the email was already sent, it actually says that it was added to the email queue. That\'s why we have another API to check the email status.');
+        ie_close('p');
+        ie_open('h2');
+        itext('Checking an email status');
+        ie_close('h2');
+        ie_open('p');
+        itext('In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. ');
+        ie_open('code');
+        itext('123');
+        ie_close('code');
+        itext(', and send a ');
+        ie_open('code');
+        itext('GET');
+        ie_close('code');
+        itext(' request to ');
+        ie_open('code');
+        itext('/emails/123/status');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n.url(\'http://<containerID>.<projectID>.wedeploy.io/emails/<emailID>/status\')\n.get()\n.then(function(response) {\n  console.log(\'Email status:\', response.body());\n})\n.catch(function(error) {\n  // Some error has happened\n});', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('h2');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('That\'s it! Now we\'re ready to start sending emails to our users.');
+        ie_close('li');
+        ie_close('ul');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param547 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'docsEmailGettingStartedHtml.render';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    templates = exports;
+    return exports;
+  });
+
+  var docsEmailGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(docsEmailGettingStartedHtml, _Component);
+
+    function docsEmailGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, docsEmailGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (docsEmailGettingStartedHtml.__proto__ || Object.getPrototypeOf(docsEmailGettingStartedHtml)).apply(this, arguments));
+    }
+
+    return docsEmailGettingStartedHtml;
+  }(Component);
+
+  Soy.register(docsEmailGettingStartedHtml, templates);
+  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
+  this['metalNamed']['getting-started']['docsEmailGettingStartedHtml'] = docsEmailGettingStartedHtml;
+  this['metalNamed']['getting-started']['templates'] = templates;
+  this['metal']['getting-started'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['getting-started'];
+
+  var docsEmailGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(docsEmailGettingStartedHtml, _Component);
+
+    function docsEmailGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, docsEmailGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (docsEmailGettingStartedHtml.__proto__ || Object.getPrototypeOf(docsEmailGettingStartedHtml)).apply(this, arguments));
+    }
+
+    return docsEmailGettingStartedHtml;
+  }(Component);
+
+  ;
+
+  Soy.register(docsEmailGettingStartedHtml, templates);
+
+  this['metal']['docsEmailGettingStartedHtml'] = docsEmailGettingStartedHtml;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageDocsEmailIndex.
+     * @public
+     */
+
+    goog.module('pageDocsEmailIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {}
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageDocsEmailIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $soyweb(opt_data, opt_ignored, opt_ijData) {
+      ie_open('!DOCTYPE', null, null, 'html', '');
+      ie_open('html', null, null, 'lang', 'en');
+      ie_open('head');
+      ie_open('meta', null, null, 'charset', 'UTF-8');
+      ie_close('meta');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/docs/email/getting-started.html\'');
+      ie_close('meta');
+      ie_close('head');
+      ie_close('html');
+    }
+    exports.soyweb = $soyweb;
+    if (goog.DEBUG) {
+      $soyweb.soyTemplateName = 'pageDocsEmailIndex.soyweb';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.soyweb.params = [];
+    exports.soyweb.types = {};
+    templates = exports;
+    return exports;
+  });
+
+  var pageDocsEmailIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsEmailIndex, _Component);
+
+    function pageDocsEmailIndex() {
+      babelHelpers.classCallCheck(this, pageDocsEmailIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsEmailIndex.__proto__ || Object.getPrototypeOf(pageDocsEmailIndex)).apply(this, arguments));
+    }
+
+    return pageDocsEmailIndex;
+  }(Component);
+
+  Soy.register(pageDocsEmailIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageDocsEmailIndex'] = pageDocsEmailIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageDocsEmailIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsEmailIndex, _Component);
+
+    function pageDocsEmailIndex() {
+      babelHelpers.classCallCheck(this, pageDocsEmailIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsEmailIndex.__proto__ || Object.getPrototypeOf(pageDocsEmailIndex)).apply(this, arguments));
+    }
+
+    return pageDocsEmailIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageDocsEmailIndex, templates);
+
+  this['metal']['pageDocsEmailIndex'] = pageDocsEmailIndex;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from getting-started.soy.
+    // Please don't edit this file by hand.
+
+    /**
      * @fileoverview Templates in namespace docsHostingGettingStartedHtml.
      * @public
      */
@@ -30281,7 +30281,7 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param930 = function param930() {
+      var param1079 = function param1079() {
         ie_open('h1');
         itext('Hosting');
         ie_close('h1');
@@ -30305,7 +30305,7 @@ babelHelpers;
         ie_close('a');
         itext('.');
         ie_close('div');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Install dependencies');
         ie_close('h2');
@@ -30325,7 +30325,7 @@ babelHelpers;
         itext(' if you need help setting that up.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Running locally');
         ie_close('h2');
@@ -30368,7 +30368,7 @@ babelHelpers;
         itext('.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Deploying to the cloud');
         ie_close('h2');
@@ -30445,7 +30445,7 @@ babelHelpers;
         ie_close('ol');
         $templateAlias2({ code: 'http://hosting.<projectID>.wedeploy.io', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_4');
+        ie_open('article', null, null, 'id', '4');
         ie_open('h2');
         itext('Error pages');
         ie_close('h2');
@@ -30470,7 +30470,7 @@ babelHelpers;
         ie_close('li');
         ie_close('ul');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param930 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1079 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -30722,7 +30722,7 @@ babelHelpers;
         ie_close('a');
         itext('.');
         ie_close('div');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Install dependencies');
         ie_close('h2');
@@ -30742,7 +30742,7 @@ babelHelpers;
         itext(' if you need help setting that up.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Running locally');
         ie_close('h2');
@@ -30777,7 +30777,7 @@ babelHelpers;
         ie_close('ol');
         $templateAlias2({ code: 'http://java.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Deploying to the cloud');
         ie_close('h2');
@@ -30998,7 +30998,7 @@ babelHelpers;
         ie_close('a');
         itext('.');
         ie_close('div');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Install dependencies');
         ie_close('h2');
@@ -31018,7 +31018,7 @@ babelHelpers;
         itext(' if you need help setting that up.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Running locally');
         ie_close('h2');
@@ -31047,7 +31047,7 @@ babelHelpers;
         ie_close('ol');
         $templateAlias2({ code: 'http://liferay.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Deploying to the cloud');
         ie_close('h2');
@@ -31268,7 +31268,7 @@ babelHelpers;
         ie_close('a');
         itext('.');
         ie_close('div');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Install dependencies');
         ie_close('h2');
@@ -31288,7 +31288,7 @@ babelHelpers;
         itext(' if you need help setting that up.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Running locally');
         ie_close('h2');
@@ -31323,7 +31323,7 @@ babelHelpers;
         ie_close('ol');
         $templateAlias2({ code: 'http://nodejs.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Deploying to the cloud');
         ie_close('h2');
@@ -31544,7 +31544,7 @@ babelHelpers;
         ie_close('a');
         itext('.');
         ie_close('div');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Install dependencies');
         ie_close('h2');
@@ -31564,7 +31564,7 @@ babelHelpers;
         itext(' if you need help setting that up.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Running locally');
         ie_close('h2');
@@ -31599,7 +31599,7 @@ babelHelpers;
         ie_close('ol');
         $templateAlias2({ code: 'http://ruby.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Deploying to the cloud');
         ie_close('h2');
@@ -31925,14 +31925,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param974 = function param974() {
+      var param601 = function param601() {
         ie_open('h1');
         itext('Understanding Configuration Files');
         ie_close('h1');
         ie_open('h6');
         itext('This is an overview of how WeDeploy uses json files to help you to configure your project.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Project file reference');
         ie_close('h2');
@@ -32042,7 +32042,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: '{\n  "id": "projectexample",\n  "homeContainer": "ui",\n  "customDomains": ["projectexample.wedeploy.com"]\n}', mode: 'json' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Service file reference');
         ie_close('h2');
@@ -32144,7 +32144,7 @@ babelHelpers;
         $templateAlias2({ code: '{\n  "id": "conqueror",\n  "type": "wedeploy/java",\n  "description": "WeDeploy Service Example",\n  "hooks": {\n    "build": "./gradlew clean build installDist -x test"\n  },\n  "env": {\n    "WEDEPLOY_USER": "user"\n  }\n}', mode: 'json' }, null, opt_ijData);
         ie_close('article');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param974 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param601 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -32225,14 +32225,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param989 = function param989() {
+      var param616 = function param616() {
         ie_open('h1');
         itext('Custom Domains');
         ie_close('h1');
         ie_open('h6');
         itext('This is an overview of how WeDeploy manages custom domains for your projects.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Introduction');
         ie_close('h2');
@@ -32256,7 +32256,7 @@ babelHelpers;
         itext('. Every project in WeDeploy supports one or more custom domains.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Configuring custom domains');
         ie_close('h2');
@@ -32298,7 +32298,7 @@ babelHelpers;
         ie_close('img');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Configuring DNS for root domains');
         ie_close('h2');
@@ -32394,7 +32394,7 @@ babelHelpers;
         ie_close('tbody');
         ie_close('table');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_4');
+        ie_open('article', null, null, 'id', '4');
         ie_open('h2');
         itext('Configuring DNS for subdomains');
         ie_close('h2');
@@ -32435,7 +32435,7 @@ babelHelpers;
         ie_close('tbody');
         ie_close('table');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_5');
+        ie_open('article', null, null, 'id', '5');
         ie_open('h2');
         itext('Configuring DNS for wildcard domain');
         ie_close('h2');
@@ -32531,7 +32531,7 @@ babelHelpers;
         ie_close('table');
         ie_close('article');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param989 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param616 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -32660,14 +32660,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param994 = function param994() {
+      var param621 = function param621() {
         ie_open('h1');
         itext('Environment Variables');
         ie_close('h1');
         ie_open('h6');
         itext('This is an overview of how WeDeploy manages environment variables for your projects.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Introduction');
         ie_close('h2');
@@ -32678,7 +32678,7 @@ babelHelpers;
         itext('A good example would be credentials for the database, where each environment has its own credentials. The ideal scenario for handling this scenario, would be using Environment variables, in order to set up different configurations for different environment using the same code. In a traditional development proccess, you would speciffy the configurations in different files. On WeDeploy you can take advantage of Environment Variables using the dashboard.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Configuring environment variables');
         ie_close('h2');
@@ -32713,7 +32713,7 @@ babelHelpers;
         ie_close('p');
         ie_close('article');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param994 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param621 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -32818,14 +32818,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param999 = function param999() {
+      var param626 = function param626() {
         ie_open('h1');
         itext('Feature Overview');
         ie_close('h1');
         ie_open('h6');
         itext('This is an overview of the features that make WeDeploy easiest way to deploy and scale applications.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Zero downtime upgrades');
         ie_close('h2');
@@ -32836,7 +32836,7 @@ babelHelpers;
         itext('WeDeploy services can all be updated with rolling, blue-green, or canary deployment patterns. If the update fails, roll it back with a single click. These powerful tools are critical for minimizing downtime and user interruption.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Service discovery and load balancing');
         ie_close('h2');
@@ -32847,7 +32847,7 @@ babelHelpers;
         itext('Distributed services create distributed problems, but you don\u2019t have to solve them all yourself. WeDeploy includes automatic DNS endpoint generation, an API for service lookup, transport layer (L4) virtual IP proxying for high speed internal communication, and application layer (L7) load balancing for external-facing services.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Service visibility');
         ie_close('h2');
@@ -32855,7 +32855,7 @@ babelHelpers;
         itext('WeDeploy provides an option for you to specify whether your service is going to be public or private for public access.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_4');
+        ie_open('article', null, null, 'id', '4');
         ie_open('h2');
         itext('High availability');
         ie_close('h2');
@@ -32869,7 +32869,7 @@ babelHelpers;
         itext('To achieve self-healing, WeDeploy services are monitored and restarted when they fail. Even legacy services that don\u2019t support distribution or replication can be automatically restarted to maximize uptime and reduce service interruption.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_5');
+        ie_open('article', null, null, 'id', '5');
         ie_open('h2');
         itext('Elastic scalability');
         ie_close('h2');
@@ -32880,7 +32880,7 @@ babelHelpers;
         itext('Horizontal scaling is trivial in Docker Swarm, as long as your service supports it. You can change the number of service instances at any time. WeDeploy even lets you autoscale the number of instances based on session count, using the WeDeploy Load Balancer.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_6');
+        ie_open('article', null, null, 'id', '6');
         ie_open('h2');
         itext('User interfaces');
         ie_close('h2');
@@ -32903,7 +32903,7 @@ babelHelpers;
         ie_close('p');
         ie_close('article');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param999 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param626 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -33010,14 +33010,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param1008 = function param1008() {
+      var param635 = function param635() {
         ie_open('h1');
         itext('Using the API Client');
         ie_close('h1');
         ie_open('h6');
         itext('Make requests to WeDeploy using a standardize interface.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Installation');
         ie_close('h2');
@@ -33027,7 +33027,7 @@ babelHelpers;
         $templateAlias2({ code: '<script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"><\/script>', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1008 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param635 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -33134,14 +33134,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param1018 = function param1018() {
+      var param645 = function param645() {
         ie_open('h1');
         itext('Using the Command-line');
         ie_close('h1');
         ie_open('h6');
         itext('The WeDeploy Command-Line Interface is a tool for helping you to use the WeDeploy platform by providing support to things like creating, managing, and scaling applications.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Dependencies');
         ie_close('h2');
@@ -33190,7 +33190,7 @@ babelHelpers;
         itext('Docker version 1.12.0 or later is required. If you use macOS, install the Docker for Mac. If you use Windows, please install Docker for Windows. Docker Toolbox, still available for earlier Mac and Windows systems is not supported.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Installing');
         ie_close('h2');
@@ -33216,7 +33216,7 @@ babelHelpers;
         itext(' docker comes with a 2.0GB maximum memory limit by default on macOS and Windows. You should increase this limit to at least 4.0GB.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Creating projects locally');
         ie_close('h2');
@@ -33232,7 +33232,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: 'Usage:\n  we create --project <project> --container <container>', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_4');
+        ie_open('article', null, null, 'id', '4');
         ie_open('h2');
         itext('Running projects locally');
         ie_close('h2');
@@ -33271,7 +33271,7 @@ babelHelpers;
         ie_close('em');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_5');
+        ie_open('article', null, null, 'id', '5');
         ie_open('h2');
         itext('Remotes and friendly host style');
         ie_close('h2');
@@ -33353,7 +33353,7 @@ babelHelpers;
         itext(' support this host style as well.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_6');
+        ie_open('article', null, null, 'id', '6');
         ie_open('h2');
         itext('Fetching project and container logs');
         ie_close('h2');
@@ -33377,7 +33377,7 @@ babelHelpers;
         ie_close('p');
         $templateAlias2({ code: 'we log hosting.demo.wedeploy.me --watch', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_7');
+        ie_open('article', null, null, 'id', '7');
         ie_open('h2');
         itext('Listing projects and containers');
         ie_close('h2');
@@ -33395,7 +33395,7 @@ babelHelpers;
         $templateAlias2({ code: 'we list --remote wedeploy', mode: 'xml' }, null, opt_ijData);
         ie_close('article');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1018 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param645 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -33500,14 +33500,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param1113 = function param1113() {
+      var param740 = function param740() {
         ie_open('h1');
         itext('Using the Dashboard');
         ie_close('h1');
         ie_open('h6');
         itext('In this section, you\'ll learn how to deploy an application using WeDeploy Dashboard.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('Create an account');
         ie_close('h2');
@@ -33523,7 +33523,7 @@ babelHelpers;
         ie_close('img');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Access your dashboard');
         ie_close('h2');
@@ -33535,7 +33535,7 @@ babelHelpers;
         ie_close('img');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('Create a new project');
         ie_close('h2');
@@ -33547,7 +33547,7 @@ babelHelpers;
         ie_close('img');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_4');
+        ie_open('article', null, null, 'id', '4');
         ie_open('h2');
         itext('Open your project');
         ie_close('h2');
@@ -33559,7 +33559,7 @@ babelHelpers;
         ie_close('img');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_5');
+        ie_open('article', null, null, 'id', '5');
         ie_open('h2');
         itext('Click on install service');
         ie_close('h2');
@@ -33571,7 +33571,7 @@ babelHelpers;
         ie_close('img');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_6');
+        ie_open('article', null, null, 'id', '6');
         ie_open('h2');
         itext('Select a service type');
         ie_close('h2');
@@ -33583,7 +33583,7 @@ babelHelpers;
         ie_close('img');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_7');
+        ie_open('article', null, null, 'id', '7');
         ie_open('h2');
         itext('Fill in the ID click on install service');
         ie_close('h2');
@@ -33592,7 +33592,7 @@ babelHelpers;
         ie_close('img');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_8');
+        ie_open('article', null, null, 'id', '8');
         ie_open('h2');
         itext('The container is going to be up and running');
         ie_close('h2');
@@ -33601,7 +33601,7 @@ babelHelpers;
         ie_close('img');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_9');
+        ie_open('article', null, null, 'id', '9');
         ie_open('h2');
         itext('Access the URL generated for your service');
         ie_close('h2');
@@ -33611,7 +33611,7 @@ babelHelpers;
         ie_close('img');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_10');
+        ie_open('article', null, null, 'id', '10');
         ie_open('h2');
         itext('It works!');
         ie_close('h2');
@@ -33622,7 +33622,7 @@ babelHelpers;
         ie_close('p');
         ie_close('article');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1113 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param740 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -33727,14 +33727,14 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param1118 = function param1118() {
+      var param745 = function param745() {
         ie_open('h1');
         itext('What, Why and How');
         ie_close('h1');
         ie_open('h6');
         itext('Forget about infrastructure. WeDeploy helps you to dedicate your time to what really matters: building and scaling great apps. Before exploring WeDeploy further, make sure you understand its purpose and philosophy.');
         ie_close('h6');
-        ie_open('article', null, null, 'id', 'article_1');
+        ie_open('article', null, null, 'id', '1');
         ie_open('h2');
         itext('What\'s WeDeploy?');
         ie_close('h2');
@@ -33771,7 +33771,7 @@ babelHelpers;
         ie_close('li');
         ie_close('ul');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_2');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
         itext('Why should I use WeDeploy?');
         ie_close('h2');
@@ -33782,7 +33782,7 @@ babelHelpers;
         itext('This is why WeDeploy was also designed to serve as a platform for building a manageable ecosystem of components and tools to make it easier to deploy and scale any application.');
         ie_close('p');
         ie_close('article');
-        ie_open('article', null, null, 'id', 'article_3');
+        ie_open('article', null, null, 'id', '3');
         ie_open('h2');
         itext('How will WeDeploy help me to deploy from simple to advanced applications?');
         ie_close('h2');
@@ -33791,7 +33791,7 @@ babelHelpers;
         ie_close('p');
         ie_close('article');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1118 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param745 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {

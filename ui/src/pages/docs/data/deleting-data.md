@@ -10,7 +10,7 @@ weight: 5
 
 ###### The delete() function destroys an existing field, document or collection in the database.
 
-<article id="article_1">
+<article id="1">
 
 ## Deleting existing data
 

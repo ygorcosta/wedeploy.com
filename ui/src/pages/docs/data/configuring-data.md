@@ -10,7 +10,7 @@ weight: 2
 
 ###### The `api.json` and `api-*.json` files allow us to configure the accessible paths for each data service.
 
-<article id="article_1">
+<article id="1">
 
 ## Understanding configuration files
 
@@ -22,7 +22,7 @@ The api JSON files are located at the same path of the `./container.json` and ar
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## JSON attributes
 
@@ -131,7 +131,7 @@ You generally would use `parameters` to force validation in order to make sure t
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## Allowing usage of all the collections
 
@@ -150,7 +150,7 @@ The path `/\*` tells the data service to allow any request to the base path of t
 
 </article>
 
-<article id="article_4">
+<article id="4">
 
 ## Validating resources
 

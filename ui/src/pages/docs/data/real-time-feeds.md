@@ -10,7 +10,7 @@ weight: 8
 
 ###### *WeDeploy™ Data* inverts the traditional database architecture, instead of polling for changes, the developer can tell WeDeploy Data to continuously push updated query results to applications in real-time.
 
-<article id="article_1">
+<article id="1">
 
 ## Watching data changes
 
@@ -32,7 +32,7 @@ Now every time the storage detects changes that affect the query you're watching
 
 </article>	
 
-<article id="article_2">
+<article id="2">
 
 ## Watching with advanced filters
 
@@ -53,7 +53,7 @@ WeDeploy.data('http://datademo.wedeploy.io')
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## Getting the latest changes
 

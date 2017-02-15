@@ -10,7 +10,7 @@ weight: 3
 
 ###### The create() function creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response.
 
-<article id="article_1">
+<article id="1">
 
 ## Inserting new data
 
@@ -47,7 +47,7 @@ Generated ID is a string and it's structure may vary. It is also possible to def
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Inserting multiple data
 
@@ -93,7 +93,7 @@ This operation will return the newly created array of documents, with the follow
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## Inserting new fields in an existing collection
 
@@ -127,7 +127,7 @@ This operation will return the newly created document, with the following genera
 
 </article>
 
-<article id="article_4">
+<article id="4">
 
 ## URL scope structure
 

@@ -10,7 +10,7 @@ weight: 4
 
 ###### The update() function updates an existing record in the database using the current attributes. It then returns the newly updated object in the Promise response.
 
-<article id="article_1">
+<article id="1">
 
 ## Updating existing data
 

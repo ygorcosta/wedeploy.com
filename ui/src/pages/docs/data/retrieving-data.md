@@ -10,7 +10,7 @@ weight: 6
 
 ###### The get() function retrieve an existing field, document or collection in the database.
 
-<article id="article_1">
+<article id="1">
 
 ## Get data
 
@@ -66,7 +66,7 @@ Requesting the entire movies collection using curl -X "GET" "http://datademo.wed
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Sorting data
 
@@ -100,7 +100,7 @@ Notice that because Episode VII has no rating (as it was not released yet), it's
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## Applying filters
 
@@ -127,7 +127,7 @@ The following entries are the result of the above filters:
 
 </article>
 
-<article id="article_4">
+<article id="4">
 
 ## Pagination
 

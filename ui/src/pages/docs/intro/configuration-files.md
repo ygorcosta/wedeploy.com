@@ -10,7 +10,7 @@ weight: 5
 
 ###### This is an overview of how WeDeploy uses json files to help you to configure your project.
 
-<article id="article_1">
+<article id="1">
 
 ## Project file reference
 
@@ -51,7 +51,7 @@ WeDeploy uses this json file to reference to project in case it's already create
 ```
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Service file reference
 

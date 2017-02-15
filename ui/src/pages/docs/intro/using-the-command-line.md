@@ -10,7 +10,7 @@ weight: 7
 
 ###### The WeDeploy Command-Line Interface is a tool for helping you to use the WeDeploy platform by providing support to things like creating, managing, and scaling applications.
 
-<article id="article_1">
+<article id="1">
 
 ## Dependencies
 
@@ -24,7 +24,7 @@ Docker version 1.12.0 or later is required. If you use macOS, install the Docker
 
 </article>
 
-<article id="article_2">
+<article id="2">
 
 ## Installing
 
@@ -40,7 +40,7 @@ If you use Windows, you probably want the [Windows amd64 installer](https://bin.
 
 </article>
 
-<article id="article_3">
+<article id="3">
 
 ## Creating projects locally
 
@@ -55,7 +55,7 @@ Usage:
 
 </article>
 
-<article id="article_4">
+<article id="4">
 
 ## Running projects locally
 
@@ -86,7 +86,7 @@ we link --project demo
 
 </article>
 
-<article id="article_5">
+<article id="5">
 
 ## Remotes and friendly host style
 Many commands requires `--project`, `--container`, or `--remote` flags. You can use the following patterns for passing these values:
@@ -134,7 +134,7 @@ All commands that support `--project`, `--container`, and / or `--remote` suppor
 
 </article>
 
-<article id="article_6">
+<article id="6">
 
 ## Fetching project and container logs
 
@@ -165,7 +165,7 @@ we log hosting.demo.wedeploy.me --watch
 
 </article>
 
-<article id="article_7">
+<article id="7">
 
 ## Listing projects and containers
 
