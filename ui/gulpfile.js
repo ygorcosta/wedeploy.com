@@ -52,20 +52,6 @@ gulp.task('server', () => {
 	});
 });
 
-// Deploy ----------------------------------------------------------------------
-
-gulp.task('wedeploy', () => {
-	return gulp.src('src/container.json')
-		.pipe(gulp.dest('dist'));
-});
-
-gulp.task('deploy', ['default'], () => {
-	return gulp.src('dist/**/*')
-		.pipe(ghPages({
-			branch: 'wedeploy'
-		}));
-});
-
 // Watch -----------------------------------------------------------------------
 
 gulp.task('watch', () => {
@@ -76,7 +62,7 @@ gulp.task('watch', () => {
 // Build -----------------------------------------------------------------------
 
 gulp.task('build', (callback) => {
-	runSequence('generate', ['css', 'images', 'fonts', 'wedeploy', 'scripts'], callback);
+	runSequence('generate', ['css', 'images', 'fonts', 'scripts'], callback);
 });
 
 gulp.task('default', (callback) => {
