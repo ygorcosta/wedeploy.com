@@ -43,7 +43,7 @@ Create a client id and client secret by [registering your application](https://g
 
 After retrieving the client id and client secret you can configure them as environment variables of the authentication `container.json`.
 
-```json
+```application/json
 {
 	"id": "auth",
 	"name": "Auth",

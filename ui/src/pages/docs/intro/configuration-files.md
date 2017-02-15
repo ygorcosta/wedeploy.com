@@ -42,7 +42,7 @@ WeDeploy uses this json file to reference to project in case it's already create
 
 `project.json`
 
-```json
+```application/json
 {
   "id": "projectexample",
   "homeContainer": "ui",
@@ -75,7 +75,7 @@ WeDeploy uses this json file to reference to service in case it's already create
 
 `container.json`
 
-```json
+```application/json
 {
   "id": "conqueror",
   "type": "wedeploy/java",

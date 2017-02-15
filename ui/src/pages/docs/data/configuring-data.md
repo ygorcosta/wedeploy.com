@@ -42,7 +42,7 @@ After understanding how the api configuration files work, it's time to learn wha
 
 A path represents the resource used to store your project data.
 
-```json
+```application/json
 [
   {
     "path": "/movies/:movieId"
@@ -57,7 +57,7 @@ A path represents the resource used to store your project data.
 
 You can create endpoints just for validation, in this case, data is used to finish the request in case you just need a validation or want to store the request in the collection.
 
-```json
+```application/json
 [
   {
     "path": "/fruits/*",
@@ -70,7 +70,7 @@ You can create endpoints just for validation, in this case, data is used to fini
 
 Used to describe the behavior of an endpoint.
 
-```json
+```application/json
 [
   {
     "description": "Returns actors of a movie",
@@ -84,7 +84,7 @@ Used to describe the behavior of an endpoint.
 
 You can unauthorized applications and users to access any endpoint by using the auth field. The example below verify if the application is authenticated in order to perform the request:
 
-```json
+```application/json
 [
   {
     "path": "/movies/*",
@@ -99,7 +99,7 @@ You can unauthorized applications and users to access any endpoint by using the 
 
 Specifies the HTTP method used for the request. In the example bellow, it allows a GET request and if you try to do a PUT or DELETE the route will not be recognized and will fail.
 
-```json
+```application/json
 [
   {
     "path": "/moives/:movieId",
@@ -113,7 +113,7 @@ Specifies the HTTP method used for the request. In the example bellow, it allows
 
 You generally would use `parameters` to force validation in order to make sure that the params sent to a collection follow predefined rules.
 
-```json
+```application/json
 [
   {
     "description": "Creates a new movie",
@@ -137,7 +137,7 @@ You generally would use `parameters` to force validation in order to make sure t
 
 In order to freely use any collection with any kind of operation, you just need to add the following content in your `api.json`.
 
-```json
+```application/json
 [
   {
     "path": "/*",
@@ -158,7 +158,7 @@ The Validator script will be executed in an environment where several request an
 
 The validator can be used as an integration with the Auth service:
 
-```json
+```application/json
 {
   "path": "/movies/*",
   "auth": {
