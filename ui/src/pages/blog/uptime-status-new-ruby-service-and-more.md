@@ -3,6 +3,7 @@ author: "Zeno Rocha"
 date: "Oct 10, 2016"
 description: "Blog description."
 layout: "blog"
+image: "http://wedeploy.com/images/blog/post-1--0.png"
 title: "Uptime status, new Ruby service, and more!"
 ---
 

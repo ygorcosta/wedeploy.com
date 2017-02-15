@@ -3,6 +3,7 @@ author: "Jonni Lundy"
 date: "Jan 13, 2017"
 description: "Blog description."
 layout: "blog"
+image: "http://wedeploy.com/images/blog/post-4--0.png"
 title: "My First Three Months With WeDeploy"
 ---
 

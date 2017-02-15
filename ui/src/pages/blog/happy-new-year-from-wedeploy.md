@@ -3,6 +3,7 @@ author: "Zeno Rocha"
 date: "Jan 03, 2017"
 description: "Blog description."
 layout: "blog"
+image: "http://wedeploy.com/images/blog/post-3--0.png"
 title: "Happy New Year from WeDeploy"
 ---
 

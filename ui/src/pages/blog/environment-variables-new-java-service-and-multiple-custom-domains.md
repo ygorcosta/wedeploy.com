@@ -3,6 +3,7 @@ author: "Eduardo Lundgren"
 date: "Oct  31, 2016"
 description: "Blog description."
 layout: "blog"
+image: "http://wedeploy.com/images/blog/post-2--2.png"
 title: "Environment variables, new Java service, and multiple custom domains!"
 ---
 
