@@ -1,7 +1,6 @@
 ---
 title: "Blog"
 description: "Discover all the latest about WeDeploy."
-url: '/blog/my-first-three-months-with-wedeploy'
 type: "blog"
 ---
 
@@ -14,14 +13,14 @@ type: "blog"
 {/template}
 
 /**
- *
+ * @param page
  */
 {template .soyweb}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; URL='/blog/my-first-three-months-with-wedeploy'">
+	<meta http-equiv="refresh" content="0; URL='{$page.redirect}'">
 </head>
 </html>
 {/template}
