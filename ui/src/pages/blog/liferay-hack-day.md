@@ -29,7 +29,7 @@ There are only two requirements for their projects:
 
 On top of that, this year we encouraged the teams to use WeDeploy to host their projects. Four teams did, and these were there projects.
 
-### Game Room Availability
+#### Game Room Availability
 
 Nobody wants to walk all the way down to the Game Room to find that the ping pong table is taken. Never fear, Game Room Availability app is here to show you in real time if anyone is using your game.
 
@@ -39,7 +39,7 @@ Nobody wants to walk all the way down to the Game Room to find that the ping pon
 		<img src="../images/blog/post-5--1.png" alt="Game Room Availability">
 </figure>
 
-### Liferay Home
+#### Liferay Home
 
 Don't ever come home to a freezing cold house again. Liferay home will learn your habits, track your commute, and automate pretty much anything in your house.
 
@@ -49,7 +49,7 @@ Don't ever come home to a freezing cold house again. Liferay home will learn you
 	<img src="../images/blog/post-5--2.png" alt="Liferay Home">
 </figure>
 
-### Release Notes
+#### Release Notes
 
 Annoyed by manually checking for fix pack releases for Portal 7.0? This team created an app that fetched the fix pack information and sorted them by component so you easily find what you need.
 
@@ -59,7 +59,7 @@ Annoyed by manually checking for fix pack releases for Portal 7.0? This team cre
 	<img src="../images/blog/post-5--3.png" alt="Release Notes">
 </figure>
 
-### Chicken Fingers
+#### Chicken Fingers
 
 Don't let the name deceive you, this project was the real deal- and the grand prize winner of the hack day. Using voice recognition, they paved the way for a stellar hands-free-recipe cooking experience.
 
