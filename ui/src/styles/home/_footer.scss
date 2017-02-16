@@ -258,24 +258,36 @@
 
 }
 
-#footer .ic-github {
-	flex: 0 1 auto;
-	height: 32px;
 
-	@media (min-width: 320px) {
-		margin-left: 0;
+#footer {
+	.ic-github, .ic-twitter {
+		flex: 0 1 auto;
+		height: 32px;
+
+		@media (min-width: 320px) {
+			margin-left: 0;
+		}
+
+		@media (min-width: 600px) {
+			margin-left: 30px;
+		}
+
+		span {
+			font-size: 32px;
+			color: $theme;
+		}
+
+		&:hover span {
+			color: rgba($theme, .8);
+		}
 	}
 
-	@media (min-width: 600px) {
-		margin-left: 50px;
+	.ic-twitter {
+		margin-top: 30px;
+
+		@media (min-width: 600px) {
+			margin-top: 0px;
+		}
 	}
-}
 
-#footer .ic-github span {
-	font-size: 32px;
-	color: $theme;
-}
-
-#footer .ic-github:hover span {
-	color: rgba($theme, .8);
 }
