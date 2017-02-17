@@ -18,10 +18,16 @@
  *
  */
 {template .topbar}
-	<nav class="topbar topbar-large topbar-light">
-		{call .logo data="all" /}
-		{call .menu data="all" /}
-	</nav>
+	<div id="topbar">
+		<div class="col-xs-16 col-lg-14 col-lg-offset-1">
+			<div class="row">
+				<nav class="topbar topbar-large topbar-light">
+					{call .logo data="all" /}
+					{call .menu data="all" /}
+				</nav>
+			</div>
+		</div>
+	</div>
 {/template}
 
 /**
@@ -47,24 +53,7 @@
  * @param site
  */
 {template .menu}
-	<div class="topbar-list-container">
-		{call ElectricNavigation.render}
-			{param depth: 1 /}
-			{param elementClasses: 'topbar-list' /}
-			{param linkClasses: 'topbar-link' /}
-			{param listItemClasses: 'topbar-item' /}
-			{param section: $site.index /}
-		{/call}
-		<ul class="topbar-list">
-			<li class="topbar-item">
-				<a href="//chat.wedeploy.com/" target="_blank" class="topbar-link">Chat</a>
-			</li>
-			<li class="topbar-item login">
-				<a href="//dashboard.wedeploy.com/login" class="topbar-link">Log in</a>
-			</li>
-			<li class="topbar-item get-started">
-				<a href="//dashboard.wedeploy.com/signup" class="btn btn-accent btn-sm">Get Started</a>
-			</li>
-		</ul>
-	</div>
+	{call Topbar.render}
+		{param section: $site.index /}
+	{/call}
 {/template}

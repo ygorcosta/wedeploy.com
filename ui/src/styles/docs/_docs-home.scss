@@ -1,12 +1,3 @@
 .docs .docs-home-top-title span {
 	font-family: $font-family-secondary;
 }
-
-.blog .topbar-list .topbar-item.get-started,
-.docs .topbar-list .topbar-item.get-started {
-	display: none;
-
-	@media (min-width: 1024px) {
-		display: inline-block;
-	}
-}

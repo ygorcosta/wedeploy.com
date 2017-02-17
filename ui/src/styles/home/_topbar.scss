@@ -1,11 +1,10 @@
 #topbar {
 	opacity: 0;
-	background: rgba(255, 255, 255, 1.0);
 	box-shadow: 0 0 100px white;
 	position: relative;
 }
 
-#topbar .container-wedeploy {
+#topbar {
 	@media	(min-width: 320px) {
 		padding: 0 20px;
 	}
@@ -63,59 +62,4 @@
 	#topbar .col-lg-14 {
 		width: 87.5%;
 	}
-}
-
-#topbar .topbar {
-	padding: ($baseline * 2) 0 ($baseline * 1);
-	.topbar-list {
-		max-width: 100%;
-
-		.topbar-item {
-			@media	(max-width: 679px) {
-				margin: 0;
-				&:not(.login) {
-					display: none;
-				}
-			}
-
-			@media	(min-width: 600px) {
-				margin: 0 16px;
-			}
-
-			@media	(min-width: 720px) {
-				margin: 0 12px;
-			}
-
-			@media	(min-width: 1024px) {
-				margin: 0 20px;
-			}
-
-			&:last-child {
-				margin-right: 0px;
-			}
-		}
-
-		.get-started {
-			@media	(max-width: 780px) {
-				display: none;
-			}
-		}
-	}
-
-	.topbar-link {
-		font-family: $font-family-secondary-bold;
-		font-size: 15px;
-		color: rgba($primary, 0.6);
-		&:hover {
-			color: rgba($primary, 0.4);
-		}
-	}
-}
-
-.wedeploy-logo.logo-alpha {
-	background: url('../images/home/logotype/logo_by_liferay.svg');
-	background-size: 200px 84px;
-	position: absolute;
-	width: 200px;
-	height: 84px;
 }

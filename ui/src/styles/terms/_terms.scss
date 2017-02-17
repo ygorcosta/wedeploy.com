@@ -10,14 +10,3 @@
 		margin-bottom: calc(2rem * #{$lineHeight});
 	}
 }
-
-.blog .topbar.topbar-large {
-	width: 100%;
-	margin: 0 auto;
-	padding: 24px 20px 12px;
-	height: 84px;
-
-	@media (min-width: 860px) {
-		width: 87.5%;
-	}
-}
