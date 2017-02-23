@@ -145,7 +145,8 @@
 	margin: 0;
 	padding: 0;
 	opacity: 0;
-	font-family: $font-family-secondary-bold;
+	font-family: $font-primary;
+	font-weight: 700;
 	color: rgba($primary, 0.9);
 	position: relative;
 	top: -8px;
@@ -199,12 +200,11 @@
 #subscribe p {
 	opacity: 0;
 	padding: 0;
-	font-family: $font-family-secondary-semibold;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 600;
 	color: rgba($primary, 0.4);
 	position: relative;
 	top: -2px;
-	//letter-spacing: 0.007em;
 
 	@media (min-width: 320px) {
 		font-size: 17px;
@@ -377,7 +377,8 @@
 
 #subscribe form input {
 	height: 72px;
-	font-family: 	$font-family-secondary-semibold;
+	font-family: $font-primary;
+	font-weight: 600;
 	font-size: 15px;
 	line-height: 72px;
 	color: rgba($primary, 0.9);
@@ -420,7 +421,8 @@
 #subscribe #subscribe__submit-small span,
 #subscribe form .btn span {
 	font-size: 17px;
-	font-family: 	$font-family-secondary-bold;
+	font-family: $font-primary;
+	font-weight: 700;
 	line-height: 72px;
 	letter-spacing: 0.0002em;
 }
@@ -433,7 +435,8 @@
 	color: rgba($primary, .4);
 	font-size: 11px;
 	line-height: 24px;
-	font-family: $font-family-secondary;
+	font-family: $font-primary;
+	font-weight: 400;
 	text-align: left;
 	width: calc(100% - 8px);
 }

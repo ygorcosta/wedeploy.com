@@ -116,9 +116,9 @@
 #browser .browser__top h3 {
 	margin: 0;
 	padding: 0;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
+	font-family: $font-secondary;
 	font-weight: 700;
+	font-size: 14px;
 	color: rgba($primary, 0.2);
 }
 
@@ -147,7 +147,7 @@
 	line-height: 24px;
 	font-size: 11px;
 	margin-left: ($unit * 5);
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	font-weight: 700;
 	display: flex;
 	background: rgba(255, 255, 255, 0.2);
@@ -228,7 +228,7 @@
 
 #browser #browser__recent {
 	.btn {
-		font-family: 'Open Sans', sans-serif;
+		font-family: $font-secondary;
 		font-weight: 700;
 		font-size: 12px;
 	}
@@ -243,7 +243,7 @@
 	text-align: right;
 
 	.btn {
-		font-family: 'Open Sans', sans-serif;
+		font-family: $font-secondary;
 		font-weight: 700;
 	}
 
@@ -255,10 +255,10 @@
 
 #browser__title {
 	font-size: 23px;
-	font-family: $font-family-secondary-bold;
+	font-family: $font-primary;
+	font-weight: 700;
 	line-height: 36px;
 	text-align: center;
-	font-weight: 400;
 }
 
 .svg-ic img {
@@ -280,7 +280,7 @@
 	height: ($baseline * 4);
 	line-height: ($baseline * 4);
 	font-size: 13px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	font-weight: 700;
 	position: absolute;
 	right:0;
@@ -306,7 +306,7 @@
 
 	span {
 		font-size: 10px;
-		font-family: 'Open Sans', sans-serif;
+		font-family: $font-secondary;
 		font-weight: 600;
 		display: inline-flex;
 	}
@@ -321,7 +321,8 @@
 	font-size: 12px;
 	color: rgba($primary, 0.8);
 	box-shadow: 0 2px 12px rgba($primary, 0.12);
-	font-family: $font-family-secondary-semibold;
+	font-family: $font-primary;
+	font-weight: 600;
 	border-radius: 4px;
 
 	&.show-custom-tooltip:hover {
@@ -400,7 +401,7 @@
 	padding: 3px 8px;
 	font-size: 10.5px;
 	font-weight: 700;
-	font-family: "Open Sans", sans-serif;
+	font-family: $font-secondary;
 	position: relative;
 	line-height: 10.5px;
 }
@@ -471,7 +472,7 @@
 }
 
 .project-item__content p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	font-weight: 600;
 	padding: 0;
 	margin: 0;
@@ -494,7 +495,7 @@
 	line-height: 26px;
 	font-weight: 700;
 	position: relative;
-	font-family: $font-family-sans-serif;
+	font-family: $font-secondary;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -577,7 +578,7 @@
 
 .project-item__overview .label {
 	font-size: 12px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	height: ($baseline * 3);
 	padding: 0 12px;
 	margin-right: ($unit * 5);
@@ -591,7 +592,7 @@
 
 p.project-item__status {
 	font-size: 12px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	font-weight: 600;
 	color: rgba($primary, .6);
 	margin: 12px 0 0;
@@ -689,10 +690,10 @@ p.project-item__status span.text {
 #cli .cli__top h3 {
 	margin: 0 0 0 2px;
 	padding: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
+	font-weight: 700;
 	font-size: 14px;
 	line-height: 24px;
-	font-weight: 700;
 	color: rgba($primary, 0.2);
 }
 
@@ -713,7 +714,7 @@ p.project-item__status span.text {
 
 #cli .cli__terminal .terminal-content p {
 	width: 100%;
-	font-family: 'Roboto Mono', sans-serif;
+	font-family: $font-mono;
 	font-size: 14px;
 	color: $white;
 	margin: 0 0 12px;
@@ -744,7 +745,7 @@ p.project-item__status span.text {
 }
 
 #browser .box.box-project span.label-status {
-	font-family: $font-family-sans-serif;
-	font-size: 11px;
+	font-family: $font-secondary;
 	font-weight: 700;
+	font-size: 11px;
 }

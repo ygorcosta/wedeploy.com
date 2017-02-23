@@ -141,8 +141,8 @@
 
 #modal__form-container .form .logo span {
 	line-height: ($baseline * 2);
-	font-family: 'Galano Bold', sans-serif;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 700;
 	color: $white;
 
 	@media (min-width: 320px) {
@@ -156,7 +156,8 @@
 
 #modal__form-container .form h2 {
 	text-align: center;
-	font-family: 'Galano Semibold', sans-serif;
+	font-family: $font-primary;
+	font-weight: 600;
 	color: rgba($primary, .9);
 
 	@media (min-width: 320px) {
@@ -189,7 +190,7 @@
 
 #modal__form-container .form p {
 	text-align: center;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	color: rgba($primary, .6);
 
 	@media (min-width: 320px) {
@@ -251,7 +252,7 @@
 #modal__form-container .form form label {
 	width: 100%;
 	font-size: 14px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	line-height: 36px;
 	color: rgba($primary, .6);
 	text-align: left;
@@ -278,7 +279,7 @@
 	visibility: hidden;
 	font-size: 14px;
 	line-height: 36px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	text-align: left;
 	width: calc(100% - 8px);
 	min-width: calc(100% - 8px);
@@ -292,10 +293,10 @@
 }
 
 #modal__form-container .form form .btn {
-	font-family: 'Galano Semibold', sans-serif;
+	font-family: $font-primary;
+	font-weight: 600;
 	font-size: 17px;
 	line-height: 60px;
-	font-weight: 400;
 	position:relative;
 	top: -2px;
 	letter-spacing: 0.0002em;
@@ -325,7 +326,7 @@
 	color: rgba($primary, .4);
 	font-size: 12px;
 	line-height: 24px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	text-align: center;
 	position: relative;
 
@@ -361,7 +362,7 @@
 	line-height: 48px;
 	color: rgba($primary, .4);
 	text-align: center;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	font-weight: 600;
 }
 
@@ -409,8 +410,8 @@
 
 #modal__response-container .logo span {
 	line-height: ($baseline * 2);
-	font-family: 'Galano Bold', sans-serif;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 700;
 	color: $white;
 
 	@media (min-width: 320px) {
@@ -424,7 +425,8 @@
 
 #modal__response-container h2 {
 	text-align: center;
-	font-family: 'Galano Semibold', sans-serif;
+	font-family: $font-primary;
+	font-weight: 600;
 	color: rgba($primary, .9);
 
 	@media (min-width: 320px) {
@@ -455,7 +457,7 @@
 	text-align: center;
 	font-size: 20px;
 	line-height: 36px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-secondary;
 	color: rgba($primary, .6);
 
 	@media (min-width: 320px) {

@@ -83,7 +83,8 @@
 }
 
 #view-3__1 .info-box h3 {
-	font-family: 'Galano Bold', sans-serif;
+	font-family: $font-primary;
+	font-weight: 700;
 	line-height: 48px;
 	margin-bottom: ($baseline * 3);
 	color: rgba($primary, .9);
@@ -100,14 +101,16 @@
 }
 
 #view-3__1 .info-box p {
-	font-family: $font-family-secondary-semibold;
+	font-family: $font-primary;
+	font-weight: 600;
 	line-height: 36px;
 	margin-bottom: ($baseline * 3);
 	color: rgba($primary, .4);
 
 	&.top-title {
 		margin-bottom: ($baseline * 2);
-		font-family: 'Galano Semibold', sans-serif;
+		font-family: $font-primary;
+		font-weight: 600;
 	}
 
 	@media (min-width: 320px) {
