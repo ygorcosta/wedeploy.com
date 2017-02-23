@@ -2,6 +2,13 @@
 	opacity: 0;
 	box-shadow: 0 0 100px white;
 	position: relative;
+	> * {
+		float: none;
+	}
+
+	.topbar {
+		padding: 24px 0 12px;
+	}
 }
 
 #topbar {
