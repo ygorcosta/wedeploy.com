@@ -34,7 +34,8 @@ We also feature code snippets using the API Client, [visit this guide](/docs/int
 
 ## Running locally
 
-1. Start local infrastructure:
+<ol>
+<li>Start local infrastructure:</li>
 
 
 ```xml
@@ -42,8 +43,7 @@ we run
 
 ```
 
-2. Clone this repository:
-
+<li>Clone this repository:</li>
 
 ```xml
 git clone -b js https://github.com/wedeploy/boilerplate-auth.git boilerplate-auth-js
@@ -51,21 +51,21 @@ cd boilerplate-auth-js
 
 ```
 
-3. Link this container with the local infrastructure:
-
+<li>Link this container with the local infrastructure:</li>
 
 ```xml
 we link
 
 ```
 
-4. Now your container is ready to be used:
+<li>Now your container is ready to be used:</li>
 
 
 ```xml
 http://authdemo.wedeploy.me
 
 ```
+</ol>
 
 </article>
 
@@ -73,32 +73,32 @@ http://authdemo.wedeploy.me
 
 ## Deploying to the cloud
 
-1. [Fork this repository](https://github.com/wedeploy/boilerplate-auth/fork).
-2. Go to the [Dashboard](http://dashboard.wedeploy.com) and create a project.
-3. In the sidebar, click on *Deployment*.
-4. Using your local machine, clone your Github fork:
+<ol>
+<li><a href="https://github.com/wedeploy/boilerplate-auth/fork">Fork this repository</a>.</li>
+<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a> and create a project.</li>
+<li>In the sidebar, click on <strong>Deployment</strong>.</li>
+<li>Using your local machine, clone your Github fork:</li>
 
 ```xml
 git clone -b js https://github.com/<username>/boilerplate-auth
 
 ```
 
-5. Get into the folder: `cd boilerplate-auth`.
-6. Using the content on *Deployment* page. Add the WeDeploy remote url:
+<li>Get into the folder: <code>cd boilerplate-auth</code>.</li>
+<li>Using the content on <strong>Deployment</strong> page. Add the WeDeploy remote url:</li>
 
 ```xml
 git remote add wedeploy http://git.wedeploy.com/<projectID>.git
 
 ```
-
-7. Push your data to wedeploy git server: `git push wedeploy js:master`.
-8. Once you see it in the Dashboard, your container will be ready to be used.
-
+<li>Push your data to wedeploy git server: <code>git push wedeploy js:master</code>.</li>
+<li>Once you see it in the Dashboard, your container will be ready to be used.</li>
 
 ```xml
 http://boilerplate-auth.wedeploy.io
 
 ```
+</ol>
 
 </article>
 

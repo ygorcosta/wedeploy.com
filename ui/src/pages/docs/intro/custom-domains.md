@@ -78,11 +78,7 @@ WeDeploy automatically creates a subdomain for each service. Since you typically
 | ----------------- | -------------------- | --------------------- |
 | `CNAME`           | *.mydomain.com       | project1.wedeploy.io. |
 
-<br>
-
 Result:
-
-<br>
 
 | WeDeploy Domain              | Custom Domain         |
 | ---------------------------- | --------------------- |

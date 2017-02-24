@@ -34,30 +34,34 @@ We also feature code snippets using the API Client, [visit this guide](/docs/int
 
 ## Running locally
 
-1. Start local infrastructure:
+<ol>
+
+<li>Start local infrastructure:</li>
 
 ```xml
 we run
 ```
 
-2. Clone this repository:
+<li>Clone this repository:</li>
 
 ```xml
 git clone -b js https://github.com/wedeploy/boilerplate-email.git boilerplate-email-js
 cd boilerplate-email-js
 ```
 
-3. Link this container with the local infrastructure:
+<li>Link this container with the local infrastructure:</li>
 
 ```xml
 we link
 ```
 
-4. Now your container is ready to be used:
+<li>Now your container is ready to be used:</li>
 
 ```xml
 http://emaildemo.wedeploy.me
 ```
+
+</ol>
 
 </article>
 
@@ -65,29 +69,33 @@ http://emaildemo.wedeploy.me
 
 ## Deploying to the cloud
 
-1. [Fork this repository](https://github.com/wedeploy/boilerplate-email/fork).
-2. Go to the [Dashboard](http://dashboard.wedeploy.com).
-3. [Create a project](http://dashboard.wedeploy.com/projects/create).
-4. In the sidebar, click on *Deployment*.
-5. Using your local machine, clone your Github fork:
+<ol>
+
+<li><a href="https://github.com/wedeploy/boilerplate-email/fork">Fork this repository</a>.</li>
+<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a>.</li>
+<li><a href="http://dashboard.wedeploy.com/projects/create">Create a project</a>.</li>
+<li>In the sidebar, click on <strong>Deployment</strong>.</li>
+<li>Using your local machine, clone your Github fork:</li>
 
 ```xml
 git clone https://github.com/<username>/boilerplate-email
 ```
 
-6. Get into the folder: `cd boilerplate-email`.
-7. Using the content on *Deployment* page. Add the WeDeploy remote url:
+<li>Get into the folder: <code>cd boilerplate-email</code>.</li>
+<li>Using the content on <strong>Deployment</strong> page. Add the WeDeploy remote url:</li>
 
 ```xml
 git remote add wedeploy http://git.wedeploy.com/<projectID>.git
 ```
 
-8. Push your data to wedeploy git server: `git push wedeploy master`.
-9. Once you see it in the Dashboard, your container will be ready to be used.
+<li>Push your data to wedeploy git server: <code>git push wedeploy master</code>.</li>
+<li>Once you see it in the Dashboard, your container will be ready to be used.</li>
 
 ```xml
 http://emaildemo.wedeploy.io
 ```
+
+</ol>
 
 ## Sending an email
 
@@ -110,7 +118,11 @@ WeDeploy
 });
 ```
 
-> For the full list of parameters, check this container's README in the [Dashboard](http://dashboard.wedeploy.io/).
+<aside>
+
+For the full list of parameters, check this container's README in the [Dashboard](http://dashboard.wedeploy.io/).
+
+</aside>
 
 As a result, we'll receive an email ID. This doesn't indicate that the email was already sent, it actually says that it was added to the email queue. That's why we have another API to check the email status.
 

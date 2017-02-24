@@ -30,17 +30,18 @@
  * @param content
  */
 {template .guide}
-	<header class="guide-header">
+	<header>
 		<div class="container-hybrid">
-			<h1 class="guide-header-title">{$page.headerTitle} Guide</h1>
+			<h1 class="title">{$page.headerTitle} Guide</h1>
 		</div>
 	</header>
 
 	<div class="container-hybrid">
 		<div class="docs-guide row">
 			<div class="docs-content col-xs-16 col-md-10 col-lg-offset-1 col-lg-9">
-				{$content}
-
+				<div class="guide-content">
+					{$content}
+				</div>
 				{call Feedback.render data="all" /}
 			</div>
 

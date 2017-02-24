@@ -34,30 +34,35 @@ This section assumes that you already have the **WeDeploy CLI** installed and **
 
 WeDeploy™ provides a way to run your project locally using a sandbox system.
 
-1. Start local infrastructure:
+<ol>
+
+<li>Start local infrastructure:</li>
 
 ```xml
 we run
 ```
 
-2. Clone this repository:
+<li>Clone this repository:</li>
 
 ```xml
 git clone https://github.com/wedeploy/boilerplate-hosting.git
 cd boilerplate-hosting
 ```
 
-3. Link this container with the local infrastructure:
+<li>Link this container with the local infrastructure:</li>
 
 ```xml
 we link
 ```
 
-4. Now your container is ready to be used:
+<li>Now your container is ready to be used:</li>
 
 ```xml
 http://hosting.<projectID>.wedeploy.me
 ```
+
+</ol>
+
 
 Inside this project folder, you can find a `container.json` with the container ID used in this case: `hosting`.
 
@@ -67,33 +72,36 @@ Inside this project folder, you can find a `container.json` with the container I
 
 ## Deploying to the cloud
 
-1. [Fork this repository](https://github.com/wedeploy/boilerplate-hosting/fork).
+<ol>
 
-2. Go to the [Dashboard](http://dashboard.wedeploy.com) and create a project.
+<li><a href="https://github.com/wedeploy/boilerplate-hosting/fork">Fork this repository</a>.</li>
 
-3. In the sidebar, click on *Deployment*.
+<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a> and create a project.</li>
 
-4. Using your local machine, clone your Github fork:
+<li>In the sidebar, click on <strong>Deployment</strong>.</li>
+
+<li>Using your local machine, clone your Github fork:</li>
 
 ```xml
 git clone https://github.com/<username>/boilerplate-hosting
 ```
 
-5. Get into the folder: `cd boilerplate-hosting`.
+<li>Get into the folder: <code>cd boilerplate-hosting</code>.</li>
 
-6. Using the content on *Deployment* page. Add the WeDeploy remote url:
+<li>Using the content on <strong>Deployment</strong> page. Add the WeDeploy remote url:</li>
 
 ```xml
 git remote add wedeploy http://git.wedeploy.com/<projectID>.git
 ```
 
-7. Push your data to wedeploy git server: `git push wedeploy master`.
+<li>Push your data to wedeploy git server: <code>git push wedeploy master</code>.</li>
 
-8. Once you see it in the Dashboard, your container will be ready to be used.
+<li>Once you see it in the Dashboard, your container will be ready to be used.</li>
 
 ```xml
 http://hosting.<projectID>.wedeploy.io
 ```
+</ol>
 
 </article>
 

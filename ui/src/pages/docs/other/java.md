@@ -32,36 +32,39 @@ This section assumes that you already have the **WeDeploy CLI** installed and **
 
 ## Running locally
 
-1. Start local infrastructure:
+<ol>
+
+<li>Start local infrastructure:</li>
 
 ```xml
 we run
 ```
 
-2. Clone this repository:
+<li>Clone this repository:</li>
 
 ```xml
 git clone https://github.com/wedeploy/boilerplate-java.git
 cd boilerplate-java
 ```
 
-3. Build the container:
+<li>Build the container:</li>
 
 ```xml
 we build
 ```
 
-4. Link this container with the local infrastructure:
+<li>Link this container with the local infrastructure:</li>
 
 ```xml
 we link --project <projectID>
 ```
 
-5. Now your container is ready to be used:
+<li>Now your container is ready to be used:</li>
 
 ```xml
 http://java.<projectID>.wedeploy.me
 ```
+</ol>
 
 </article>
 
@@ -69,35 +72,38 @@ http://java.<projectID>.wedeploy.me
 
 ## Deploying to the cloud
 
-1. [Fork this repository](https://github.com/wedeploy/boilerplate-java/fork).
+<ol>
 
-2. Go to the [Dashboard](http://dashboard.wedeploy.com).
+<li><a href="https://github.com/wedeploy/boilerplate-java/fork">Fork this repository</a>.</li>
 
-3. [Create a project](http://dashboard.wedeploy.com/projects/create).
+<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a>.</li>
 
-4. In the sidebar, click on *Deployment*.
+<li><a href="http://dashboard.wedeploy.com/projects/create">Create a project</a>.</li>
 
-5. Using your local machine, clone your Github fork:
+<li>In the sidebar, click on <strong>Deployment</strong>.</li>
+
+<li>Using your local machine, clone your Github fork:</li>
 
 ```xml
 git clone https://github.com/<username>/boilerplate-java
 ```
 
-6. Get into the folder: `cd boilerplate-java`.
+<li>Get into the folder: <code>cd boilerplate-java</code>.</li>
 
-7. Using the content on *Deployment* page. Add the WeDeploy remote url:
+<li>Using the content on <strong>Deployment</strong> page. Add the WeDeploy remote url:</li>
 
 ```xml
 git remote add wedeploy http://git.wedeploy.com/<projectID>.git
 ```
 
-8. Push your data to wedeploy git server: `git push wedeploy master`.
+<li>Push your data to wedeploy git server: <code>git push wedeploy master</code>.</li>
 
-9. Once you see it in the Dashboard, your container will be ready to be used.
+<li>Once you see it in the Dashboard, your container will be ready to be used.</li>
 
 ```xml
 http://java.<projectID>.wedeploy.io
 ```
+</ol>
 
 </article>
 

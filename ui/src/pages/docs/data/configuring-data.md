@@ -182,29 +182,33 @@ The global variables are:
 
 Some common validators are:
 
-1) Authenticated users only:
+<ol>
+
+<li>Authenticated users only:</li>
 
 ```xml
 $auth !== null
 ```
 
-2) Mixed with dynamic values:
+<li>Mixed with dynamic values:</li>
 
 ```xml
-$auth.id === $params.id
+<li>$auth.id === $params.id</li>
 ```
 
-3) Validate new data value agains old one:
+<li>Validate new data value agains old one:</li>
 
 ```xml
 $body.timestamp > $data.timestamp
 ```
 
-4) Multiple contitional validation:
+<li>Multiple contitional validation:</li>
 
 ```xml
 $auth !== null && $auth.id === $params.id
 ```
+
+</ol>
 
 </article>
 

@@ -89,6 +89,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 ## Access the URL generated for your service
 Now that you installed the boilerplate, in the service screen is possible to see the status of the service and its URL. Click on the URL to copy to your clipboard and open that in a new tab in your browser.
+
 ![URL Generated](https://cloud.githubusercontent.com/assets/301291/18656570/0e5adc7a-7ea7-11e6-8dd8-74f3697b520f.png)
 
 </article>
@@ -97,6 +98,7 @@ Now that you installed the boilerplate, in the service screen is possible to see
 
 ## It works!
 That's it! Using a sofisticated Loadbalancer system and service discovering, WeDeploy automatically creates a URL and points that to your container.
+
 ![URL Generated](https://cloud.githubusercontent.com/assets/301291/17796616/b2ca3fd4-6576-11e6-8e18-85423f206b94.jpg)
 
 </article>
