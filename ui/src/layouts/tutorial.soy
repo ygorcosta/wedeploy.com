@@ -3,11 +3,75 @@
 /**
  * @param content
  * @param? elementClasses
+ * @param page
+ * @param site
  */
 {template .render}
 	<div class="{$elementClasses ?: 'main'}">
 		<main class="content">
-			{$content}
+			<div class="tutorial">
+				{call TutorialSidebar.render}
+					{param page: $page /}
+					{param section: $site.index.children[6] /}
+				{/call}
+				{call .tutorials data="all"}
+					{param content: $content /}
+					{param page: $page /}
+					{param site: $site /}
+				{/call}
+			</div>
 		</main>
+	</div>
+{/template}
+
+/**
+ * @param content
+ * @param page
+ * @param site
+ */
+{template .tutorials}
+	<div class="sidebar-offset">
+		{call TutorialTopbar.render}
+			{param elementClasses: 'topbar-light' /}
+			{param page: $page /}
+			{param logo kind="html"}
+				<div class="topbar-logo">
+					<span class="wedeploy-logo dashboard-logo">
+						<span class="we-circle">
+							<span class="we">We</span>
+						</span>
+					</span>
+				</div>
+			{/param}
+		{/call}
+		<div class="container">
+			<div class="container-blog card">
+				{$content}
+				{call .footerButtons }
+					{param page: $page /}
+					{param site: $site /}
+				{/call}
+			</div>
+		</div>
+	</div>
+{/template}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .footerButtons}
+	<div class="tutorial-page-nav">
+		{if $site.githubRepo}
+			<a href="https://github.com/{$site.githubRepo}/issues/new?title=Tutorial+Problem&body={$page.url}" class="btn btn-default btn-sm">
+				<span class="icon-16-github"></span> Report a problem
+			</a>
+		{/if}
+		{if $page.buttonTitle}
+			{let $nextPageUrl: $site.index.children[6].children[$page.weight].url /}
+			<a href="{$nextPageUrl}" class="btn btn-accent btn-sm">
+				<span class="icon-16-checkmark"></span> {$page.buttonTitle}
+			</a>
+		{/if}
 	</div>
 {/template}
