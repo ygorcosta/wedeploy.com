@@ -67,7 +67,7 @@
 				<span class="icon-16-github"></span> Report a problem
 			</a>
 		{/if}
-		{if $page.buttonTitle}
+		{if $page.buttonTitle and $page.weight < length($site.index.children[6].children)}
 			{let $nextPageUrl: $site.index.children[6].children[$page.weight].url /}
 			<a href="{$nextPageUrl}" class="btn btn-accent btn-sm">
 				<span class="icon-16-checkmark"></span> {$page.buttonTitle}
