@@ -1,7 +1,6 @@
 {namespace guide}
 
 /**
- * @param page
  * @param site
  */
 {template .render}
@@ -13,7 +12,7 @@
 				{/call}
 
 				{call Sidebar.render}
-					{param section: $site.index.children[1] /}
+					{param page: $site.index.children['docs'] /}
 				{/call}
 
 				<div class="sidebar-offset">

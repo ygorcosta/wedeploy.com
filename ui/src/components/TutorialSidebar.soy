@@ -2,7 +2,6 @@
 
 /**
  * @param page
- * @param section
  */
 {template .render}
 	<div class="sidebar-navigation{$page.navigationToggler ? ' open' : ''}">
@@ -11,8 +10,8 @@
 			{call ElectricNavigation.render}
 				{param elementClasses: 'sidebar-list' /}
 				{param listItemClasses: 'sidebar-item' /}
-				{param anchorVariant: 'tutorial' /}	
-				{param section: $section /}
+				{param anchorVariant: 'tutorial' /}
+				{param section: $page /}
 			{/call}
 		</nav>
 	</div>

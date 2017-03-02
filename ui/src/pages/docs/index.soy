@@ -7,7 +7,7 @@ weight: 2
 {namespace pageDocsIndex}
 
 /**
- * @param site
+ *
  */
 {template .render}
 	{call docs.render data="all"}
@@ -18,6 +18,7 @@ weight: 2
 {/template}
 
 /**
+ * @param page
  * @param site
  */
 {template .topics}
@@ -57,14 +58,14 @@ weight: 2
 			<div class="row">
 				<div class="col-md-12 col-md-offset-2 col-xs-16">
 					<div class="row">
-						{foreach $topic in $site.index.children[1].children}
-							{if not $topic.hidden}
+						{foreach $childId in $page.childIds}
+							{if not $page.children[$childId].hidden}
 								<div class="col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1">
-									<a class="topic radial-out" href="{$topic.url}">
+									<a class="topic radial-out" href="{$page.children[$childId].url}">
 										<div class="topic-icon">
-											<span class="icon-16-{$topic.icon}"></span>
+											<span class="icon-16-{$page.children[$childId].icon}"></span>
 										</div>
-										<h3 class="topic-title">{$topic.title}</h3>
+										<h3 class="topic-title">{$page.children[$childId].title}</h3>
 									</a>
 								</div>
 							{/if}

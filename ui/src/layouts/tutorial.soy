@@ -11,8 +11,7 @@
 		<main class="content">
 			<div class="tutorial">
 				{call TutorialSidebar.render}
-					{param page: $page /}
-					{param section: $site.index.children[6] /}
+					{param page: $site.index.children['hosting-tutorial'] /}
 				{/call}
 				{call .tutorials data="all"}
 					{param content: $content /}
@@ -67,8 +66,9 @@
 				<span class="icon-16-github"></span> Report a problem
 			</a>
 		{/if}
-		{if $page.buttonTitle and $page.weight < length($site.index.children[6].children)}
-			{let $nextPageUrl: $site.index.children[6].children[$page.weight].url /}
+		{let $tutorialObject: $site.index.children['hosting-tutorial'] /}
+		{if $page.buttonTitle and $page.weight < length($tutorialObject.childIds)}
+			{let $nextPageUrl: $tutorialObject.children[$tutorialObject.childIds[$page.weight]].url /}
 			<a href="{$nextPageUrl}" class="btn btn-accent btn-sm">
 				<span class="icon-16-checkmark"></span> {$page.buttonTitle}
 			</a>

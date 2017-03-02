@@ -41,18 +41,19 @@
 {/template}
 
 /**
- * @param site
  * @param page
+ * @param site
  */
 {template .olderPosts}
 	<div class="posts-list">
 		<div class="container">
-			{foreach $childPage in $site.index.children[0].children}
-				{if $page.url != $childPage.url}
+			{let $blogObject: $site.index.children['blog'] /}
+			{foreach $childId in $blogObject.childIds}
+				{if $page.url != $blogObject.children[$childId].url}
 					<div class="post-item container-blog">
-						<a class="post-item__link" href="{$childPage.url}">
-							<small>By {$childPage.author} <span>| {$childPage.date}</span></small>
-							<h4 class="post-item__title">{$childPage.title}</h4>
+						<a class="post-item__link" href="{$blogObject.children[$childId].url}">
+							<small>By {$blogObject.children[$childId].author} <span>| {$blogObject.children[$childId].date}</span></small>
+							<h4 class="post-item__title">{$blogObject.children[$childId].title}</h4>
 						</a>
 					</div>
 				{/if}

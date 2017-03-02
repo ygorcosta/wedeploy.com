@@ -23,19 +23,19 @@ class TutorialSidebar extends Component {
 				indexSelected = i;
 			}
 
-			if (indexSelected === -1) {	
+			if (indexSelected === -1) {
 				addClasses(item, 'sidebar-link-read');
 				timeRead += parseInt(item.dataset.time);
 				return;
 			}
 		});
 
-		data.page.timeRemaining = moment.duration(((totalTime - timeRead) * 1000)).humanize();
+		page.timeRemaining = moment.duration(((totalTime - timeRead) * 1000)).humanize();
 		dispatchGlobalState();
 	}
 
 	closeNavigationMenu(e) {
-		data.page.navigationToggler = false;
+		page.navigationToggler = false;
 		dispatchGlobalState();
 	}
 
