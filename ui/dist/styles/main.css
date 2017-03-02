@@ -13670,7 +13670,7 @@ li.feature {
       align-items: flex-start; } }
 
 #view-6 .info .info__question h5 {
-  font-family: 'Galano Medium', sans-serif;
+  font-family: "Galano", sans-serif;
   color: rgba(14, 20, 26, 0.9);
   position: relative;
   top: -4px;
