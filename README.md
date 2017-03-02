@@ -13,7 +13,7 @@ node -v && npm -v
 2. Install our global dependencies:
 
 	```sh
-[sudo] npm i -g gulp
+[sudo] npm i -g electric-cli
 	```
 
 3. Install our local dependencies:
@@ -24,10 +24,28 @@ npm i
 
 ## Usage
 
-* Build the site, serve it locally, and watch for any changes:
+### build
+
+* Builds the site and places file in dist directory.
 
 	```
-gulp
+electric build
+	```
+
+### server
+
+* Starts up a local development server.
+
+	```
+electric server
+	```
+
+### watch
+
+* Watches for changes and triggers build.
+
+	```
+electric watch
 	```
 
 ## License
