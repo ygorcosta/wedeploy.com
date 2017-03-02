@@ -24743,665 +24743,6 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageIndex.
-     * @public
-     */
-
-    goog.module('pageIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('landing.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param303 = function param303() {
-        $view_1(opt_data, null, opt_ijData);
-        $view_3_1(opt_data, null, opt_ijData);
-        $view_3_2(opt_data, null, opt_ijData);
-        $view_4(opt_data, null, opt_ijData);
-        $view_6(opt_data, null, opt_ijData);
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param303 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $view_1(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      ie_open('div', null, null, 'id', 'view-1');
-      ie_open('div', null, null, 'class', 'container-wedeploy');
-      ie_open('div', null, null, 'id', 'view-1__container');
-      $subscribe(opt_data, null, opt_ijData);
-      $terminal(opt_data, null, opt_ijData);
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.view_1 = $view_1;
-    if (goog.DEBUG) {
-      $view_1.soyTemplateName = 'pageIndex.view_1';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $view_3_1(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'view-3__1');
-      ie_open('div', null, null, 'class', 'container-wedeploy');
-      ie_open('div', null, null, 'class', 'info-box');
-      ie_open('div', null, null, 'class', 'info-box__container');
-      ie_open('p', null, null, 'class', 'top-title');
-      itext('Microservices');
-      ie_close('p');
-      ie_open('h3');
-      itext('Built-in APIs that can help you create modern apps faster.');
-      ie_close('h3');
-      ie_open('p');
-      itext('We provide a set of ready-to-use services that enables you to store data in the cloud, search and stream content in realtime, authenticate users, send emails to your users, and so on.');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'bg-text');
-      ie_void('div', null, null, 'class', 'bg-text__solid');
-      ie_void('div', null, null, 'class', 'bg-text__gradient');
-      ie_close('div');
-      ie_void('div', null, null, 'class', 'info-img');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.view_3_1 = $view_3_1;
-    if (goog.DEBUG) {
-      $view_3_1.soyTemplateName = 'pageIndex.view_3_1';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $view_3_2(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'view-3__2');
-      ie_open('div', null, null, 'class', 'container-wedeploy');
-      ie_open('div', null, null, 'class', 'info-box');
-      ie_open('div', null, null, 'class', 'info-box__container flex-center-top');
-      ie_open('p', null, null, 'class', 'top-title');
-      itext('Containers');
-      ie_close('p');
-      ie_open('h3');
-      itext('Your favorite stack on the cloud in just few clicks.');
-      ie_close('h3');
-      ie_open('p');
-      itext('Choose between dozens of languages, frameworks, or entire application stacks. Launch production-ready environments in a matter of minutes.');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'bg-text');
-      ie_void('div', null, null, 'class', 'bg-text__solid');
-      ie_void('div', null, null, 'class', 'bg-text__gradient');
-      ie_close('div');
-      ie_void('div', null, null, 'class', 'info-img');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.view_3_2 = $view_3_2;
-    if (goog.DEBUG) {
-      $view_3_2.soyTemplateName = 'pageIndex.view_3_2';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $view_4(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'view-4');
-      ie_open('div', null, null, 'class', 'container-wedeploy');
-      ie_open('div', null, null, 'id', 'view-4__giant', 'class', 'giant');
-      ie_open('span');
-      itext('We');
-      ie_close('span');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'text-center');
-      ie_open('h2');
-      itext('Carefully designed features');
-      ie_close('h2');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'text-center');
-      ie_open('h4');
-      itext('Empowering you to build amazing apps.');
-      ie_close('h4');
-      ie_close('div');
-      ie_open('ul', null, null, 'id', 'features-container', 'class', 'flex-center-top');
-      var features__soy321 = [{ icon: 'icon_data.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Data', description: 'Store data securely with a NoSQL cloud database. Make complex queries instantly and consume information in real-time.' }, { icon: 'icon_users.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Auth', description: 'Avoid the headache of operating your own user management system. Authenticate users in few lines of code using our SDKs.' }, { icon: 'icon_cloud.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Hosting', description: 'Deliver HTML, CSS, JS, and any kind of static files using a powerful static hosting. It\'s super fast and will save you a lot of time.' }, { icon: 'icon_terminal.svg', hasWeIcon: false, title: 'Command Line Tool', description: 'We designed a CLI that seamlessly integrates into your workflow. Almost everything you can do from the dashboard can also be done from your terminal.' }, { icon: 'icon_servers.svg', hasWeIcon: false, title: 'Load Balancer', description: 'Automagically distribute incoming traffic across multiple instances without the client ever knowing about the internal separation of containers.' }, { icon: 'icon_velocimeter.svg', hasWeIcon: false, title: 'High Availability', description: 'Don\'t worry about having your app taken offline during deployment of the new code. Push updates or restart your containers with zero downtime.' }, { icon: 'icon_file.svg', hasWeIcon: false, title: 'Log Management', description: 'Detect and diagnose an error from your terminal or from the dashboard. Watch logs in realtime and find the specific cause, fast.' }, { icon: 'icon_heart.svg', hasWeIcon: false, title: 'Health Checks', description: 'Be the first one to know when something wrong happens. Monitor the status and control the lifecycle of your containers very easily.' }, { icon: 'icon_globe.svg', hasWeIcon: false, title: 'Custom Domains', description: 'Every project is accessible via a wedeploy.io subdomain. We know that\'s not enough for apps in production, that\'s why you can set up your own custom domains.' }];
-      var featureList327 = features__soy321;
-      var featureListLen327 = featureList327.length;
-      for (var featureIndex327 = 0; featureIndex327 < featureListLen327; featureIndex327++) {
-        var featureData327 = featureList327[featureIndex327];
-        $feature({ icon: featureData327.icon, hasWeIcon: featureData327.hasWeIcon, title: featureData327.title, description: featureData327.description }, null, opt_ijData);
-      }
-      ie_close('ul');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.view_4 = $view_4;
-    if (goog.DEBUG) {
-      $view_4.soyTemplateName = 'pageIndex.view_4';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $view_6(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'view-6', 'class', 'text-center');
-      ie_open('div', null, null, 'id', 'view-6__giant', 'class', 'giant');
-      ie_open('span', null, null, 'id', 'giant__deploy');
-      itext('Deploy');
-      ie_close('span');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'info');
-      ie_open('div', null, null, 'class', 'info__title');
-      ie_open('h2');
-      itext('We can\'t wait to see what you\'re going to build.');
-      ie_close('h2');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'info__button');
-      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'class', 'btn btn-accent btn-block');
-      itext('Get Started \u2013 It\u2019s FREE');
-      ie_close('a');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'info__question');
-      ie_open('h5');
-      itext('Have a question? Give our team a call: ');
-      ie_open('a', null, null, 'href', 'tel:+1 (909) 378-5432', 'class', 'phone');
-      itext('+1 (909) 378-5432.');
-      ie_close('a');
-      ie_close('h5');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.view_6 = $view_6;
-    if (goog.DEBUG) {
-      $view_6.soyTemplateName = 'pageIndex.view_6';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $feature(opt_data, opt_ignored, opt_ijData) {
-      ie_open('li', null, null, 'class', 'feature');
-      ie_open('div', null, null, 'class', 'feature__box text-center');
-      ie_open('div', null, null, 'class', 'box__badge-container');
-      ie_open('div', null, null, 'id', 'badge-data', 'class', 'badge flex-center-center');
-      ie_open('img', null, null, 'src', '/images/home/icons_view_2/' + opt_data.icon);
-      ie_close('img');
-      ie_close('div');
-      if (opt_data.hasWeIcon) {
-        ie_open('div', null, null, 'class', 'we-container');
-        ie_open('div', null, null, 'class', 'we flex-center-center');
-        ie_open('span');
-        itext('We');
-        ie_close('span');
-        ie_close('div');
-        ie_close('div');
-      }
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'feature__title');
-      ie_open('h3');
-      var dyn22 = opt_data.title;
-      if (typeof dyn22 == 'function') dyn22();else if (dyn22 != null) itext(dyn22);
-      ie_close('h3');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'feature__description');
-      ie_open('p');
-      var dyn23 = opt_data.description;
-      if (typeof dyn23 == 'function') dyn23();else if (dyn23 != null) itext(dyn23);
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_close('li');
-    }
-    exports.feature = $feature;
-    if (goog.DEBUG) {
-      $feature.soyTemplateName = 'pageIndex.feature';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $subscribe(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'subscribe', 'class', 'col-xs-16 col-sm-16 col-md-16 col-lg-4 col-lg-offset-1');
-      ie_open('div', null, null, 'id', 'subscribe__container');
-      ie_open('h1');
-      itext('You Build.');
-      ie_close('h1');
-      ie_open('h1');
-      itext('We Deploy.');
-      ie_close('h1');
-      ie_open('p');
-      var dyn24 = opt_data.page.description;
-      if (typeof dyn24 == 'function') dyn24();else if (dyn24 != null) itext(dyn24);
-      ie_close('p');
-      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'id', 'subscribe__submit-small', 'class', 'open-modal btn btn-accent btn-block');
-      ie_open('span');
-      itext('Get Started \u2013 It\u2019s FREE');
-      ie_close('span');
-      ie_close('a');
-      ie_void('div', null, null, 'id', 'terminal-img');
-      ie_open('form', null, null, 'id', 'view-1__form', 'class', 'form-signup');
-      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'type', 'submit', 'class', 'btn btn-accent btn-block');
-      ie_open('span');
-      itext('Get Started \u2013 It\u2019s FREE');
-      ie_close('span');
-      ie_close('a');
-      ie_close('form');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.subscribe = $subscribe;
-    if (goog.DEBUG) {
-      $subscribe.soyTemplateName = 'pageIndex.subscribe';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $terminal(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'terminal', 'class', 'col-xs-16 col-sm-16 col-md-9 col-lg-9 col-lg-offset-1');
-      ie_open('div', null, null, 'class', 'terminal__content');
-      ie_open('div', null, null, 'class', 'content__wrapper');
-      $browser(null, null, opt_ijData);
-      $cli(null, null, opt_ijData);
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.terminal = $terminal;
-    if (goog.DEBUG) {
-      $terminal.soyTemplateName = 'pageIndex.terminal';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $browser(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'browser');
-      ie_open('div', null, null, 'class', 'browser__top flex-center-center');
-      ie_open('div', null, null, 'class', 'top__bullets flex-left-center');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_close('div');
-      ie_open('h3');
-      itext('WeDeploy\u2122 Dashboard');
-      ie_close('h3');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'browser__topbar flex-left-center');
-      ie_open('a', null, null, 'href', 'javascript:void(0);', 'class', 'topbar__logo');
-      itext('WeDeploy\u2122');
-      ie_close('a');
-      ie_open('a', null, null, 'href', 'javascript:void(0);', 'class', 'topbar__projects btn btn-inverse btn-sm');
-      itext('Projects ');
-      ie_void('span', null, null, 'class', 'icon-12-arrow-down-short');
-      ie_close('a');
-      ie_open('div', null, null, 'class', 'topbar-link btn-transparent flex-left-spacebetween');
-      ie_open('a', null, null, 'class', 'avatar-round avatar-icon-12', 'href', '#');
-      ie_void('span', null, null, 'class', 'icon-12-person');
-      ie_close('a');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'id', 'browser__content');
-      ie_open('div', null, null, 'id', 'content__scroll');
-      ie_open('div', null, null, 'class', 'flex-left-spacebetween');
-      ie_open('div', null, null, 'id', 'browser__recent', 'class', 'input-inner-addon input-inner-addon-right');
-      ie_open('div', null, null, 'class', 'btn btn-default btn-sm flex-center-center');
-      itext('Recent ');
-      ie_void('span', null, null, 'class', 'icon-12-arrow-down-short');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'id', 'browser__title');
-      itext('Projects');
-      ie_close('div');
-      ie_open('div', null, null, 'id', 'browser__new-project');
-      ie_open('div', null, null, 'class', 'btn btn-accent btn-sm flex-center-center');
-      ie_void('span', null, null, 'class', 'icon-12-plus');
-      itext(' New Project');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'content-header-menu');
-      ie_open('span', null, null, 'class', 'header__info');
-      itext('Project');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'header__status');
-      itext('Status');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'header__services');
-      itext('Service');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'header__activity');
-      itext('Last Activity');
-      ie_close('span');
-      ie_close('div');
-      var param359 = function param359() {
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-database');
-        ie_close('span');
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-mail');
-        ie_close('span');
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-cloud');
-        ie_close('span');
-      };
-      var param361 = function param361() {
-        ie_void('span', null, null, 'class', 'icon-12-module');
-      };
-      $browser_project({ first: true, projectName: 'mycompany.com', status: 'up', statusLabel: 'online', services: param359, activityIcon: param361, activityTimeElapsed: '7m' }, null, opt_ijData);
-      var param369 = function param369() {
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-folder');
-        ie_close('span');
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-mail');
-        ie_close('span');
-      };
-      var param371 = function param371() {
-        ie_void('span', null, null, 'class', 'icon-12-arrow-up-rod');
-      };
-      $browser_project({ first: false, projectName: 'intranet.wedeploy.io', status: 'up', statusLabel: 'online', services: param369, activityIcon: param371, activityTimeElapsed: '1d' }, null, opt_ijData);
-      var param379 = function param379() {
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-database');
-        ie_close('span');
-      };
-      var param381 = function param381() {
-        ie_void('span', null, null, 'class', 'icon-12-spinner-double-arrow');
-      };
-      $browser_project({ first: false, projectName: 'newproject.com', status: 'up', statusLabel: 'online', services: param379, activityIcon: param381, activityTimeElapsed: '30s' }, null, opt_ijData);
-      var param389 = function param389() {
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-cloud');
-        ie_close('span');
-        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-        ie_void('span', null, null, 'class', 'icon-12-folder');
-        ie_close('span');
-      };
-      var param391 = function param391() {
-        ie_void('span', null, null, 'class', 'icon-12-house');
-      };
-      $browser_project({ first: false, projectName: 'mobileapp.wedeploy.io', status: 'up', statusLabel: 'online', services: param389, activityIcon: param391, activityTimeElapsed: '2h' }, null, opt_ijData);
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.browser = $browser;
-    if (goog.DEBUG) {
-      $browser.soyTemplateName = 'pageIndex.browser';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $browser_project(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'class', 'no-padding col--browser span_6 browser__project-item' + (opt_data.first ? ' first' : ''));
-      ie_open('div', null, null, 'class', 'project-item__content flex-left-center');
-      ie_open('div', null, null, 'class', 'project-item__info');
-      ie_open('p', null, null, 'class', 'large');
-      var dyn25 = opt_data.projectName;
-      if (typeof dyn25 == 'function') dyn25();else if (dyn25 != null) itext(dyn25);
-      ie_close('p');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'project-item__status flex-column-left-center');
-      ie_open('span', null, null, 'class', 'box box-project flex-left-center');
-      ie_void('span', null, null, 'class', 'bullet ' + opt_data.status);
-      ie_open('span', null, null, 'class', 'label-status');
-      var dyn26 = opt_data.statusLabel;
-      if (typeof dyn26 == 'function') dyn26();else if (dyn26 != null) itext(dyn26);
-      ie_close('span');
-      ie_close('span');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'project-item__services flex-column-left-center');
-      var dyn27 = opt_data.services;
-      if (typeof dyn27 == 'function') dyn27();else if (dyn27 != null) itext(dyn27);
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'project-item__activity flex-column-left-center');
-      ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
-      var dyn28 = opt_data.activityIcon;
-      if (typeof dyn28 == 'function') dyn28();else if (dyn28 != null) itext(dyn28);
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'time-small');
-      var dyn29 = opt_data.activityTimeElapsed;
-      if (typeof dyn29 == 'function') dyn29();else if (dyn29 != null) itext(dyn29);
-      ie_close('span');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'project-item__settings flex-column-left-center');
-      ie_open('span', null, null, 'class', 'flex-right-center');
-      ie_void('span', null, null, 'class', 'icon-12-ellipsis');
-      ie_close('span');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.browser_project = $browser_project;
-    if (goog.DEBUG) {
-      $browser_project.soyTemplateName = 'pageIndex.browser_project';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $cli(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'id', 'cli', 'class', 'no-padding col--terminal span_3');
-      ie_open('div', null, null, 'class', 'cli__top flex-center-center');
-      ie_open('div', null, null, 'class', 'top__bullets flex-left-center');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_void('span', null, null, 'class', 'bullet');
-      ie_close('div');
-      ie_open('h3');
-      itext('WeDeploy\u2122 CLI');
-      ie_close('h3');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'cli__terminal flex-column-left-top');
-      ie_open('div', null, null, 'class', 'terminal-content');
-      ie_open('p');
-      itext('Available Commands:');
-      ie_close('p');
-      ie_open('p', null, null, 'class', 'no-margin');
-      ie_open('span', null, null, 'class', 'one');
-      itext('create');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'two');
-      itext('Creates a project or container;');
-      ie_close('span');
-      ie_close('p');
-      ie_open('p', null, null, 'class', 'no-margin');
-      ie_open('span', null, null, 'class', 'one');
-      itext('run');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'two');
-      itext('Run the infrastructure for development locally;');
-      ie_close('span');
-      ie_close('p');
-      ie_open('p', null, null, 'class', 'no-margin');
-      ie_open('span', null, null, 'class', 'one');
-      itext('link');
-      ie_close('span');
-      ie_open('span', null, null, 'class', 'two');
-      itext('Links the given project or service locally;');
-      ie_close('span');
-      ie_close('p');
-      ie_open('p');
-      itext('$ ');
-      ie_open('strong');
-      itext('we');
-      ie_close('strong');
-      itext(' create |');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.cli = $cli;
-    if (goog.DEBUG) {
-      $cli.soyTemplateName = 'pageIndex.cli';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.view_1.params = [];
-    exports.view_1.types = {};
-    exports.view_3_1.params = [];
-    exports.view_3_1.types = {};
-    exports.view_3_2.params = [];
-    exports.view_3_2.types = {};
-    exports.view_4.params = [];
-    exports.view_4.types = {};
-    exports.view_6.params = [];
-    exports.view_6.types = {};
-    exports.feature.params = ["icon", "hasWeIcon", "title", "description"];
-    exports.feature.types = { "icon": "any", "hasWeIcon": "any", "title": "any", "description": "any" };
-    exports.subscribe.params = ["page"];
-    exports.subscribe.types = { "page": "any" };
-    exports.terminal.params = [];
-    exports.terminal.types = {};
-    exports.browser.params = [];
-    exports.browser.types = {};
-    exports.browser_project.params = ["first", "projectName", "status", "statusLabel", "services", "activityIcon", "activityTimeElapsed"];
-    exports.browser_project.types = { "first": "any", "projectName": "any", "status": "any", "statusLabel": "any", "services": "any", "activityIcon": "any", "activityTimeElapsed": "any" };
-    exports.cli.params = [];
-    exports.cli.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var pageIndex = function (_Component) {
-    babelHelpers.inherits(pageIndex, _Component);
-
-    function pageIndex() {
-      babelHelpers.classCallCheck(this, pageIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
-    }
-
-    return pageIndex;
-  }(Component);
-
-  Soy.register(pageIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageIndex'] = pageIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageIndex = function (_Component) {
-    babelHelpers.inherits(pageIndex, _Component);
-
-    function pageIndex() {
-      babelHelpers.classCallCheck(this, pageIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
-    }
-
-    return pageIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageIndex, templates);
-
-  this['metal']['pageIndex'] = pageIndex;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
     // This file was automatically generated from blog.soy.
     // Please don't edit this file by hand.
 
@@ -26705,6 +26046,665 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageIndex.
+     * @public
+     */
+
+    goog.module('pageIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('landing.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      opt_data = opt_data || {};
+      var param303 = function param303() {
+        $view_1(opt_data, null, opt_ijData);
+        $view_3_1(opt_data, null, opt_ijData);
+        $view_3_2(opt_data, null, opt_ijData);
+        $view_4(opt_data, null, opt_ijData);
+        $view_6(opt_data, null, opt_ijData);
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param303 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $view_1(opt_data, opt_ignored, opt_ijData) {
+      opt_data = opt_data || {};
+      ie_open('div', null, null, 'id', 'view-1');
+      ie_open('div', null, null, 'class', 'container-wedeploy');
+      ie_open('div', null, null, 'id', 'view-1__container');
+      $subscribe(opt_data, null, opt_ijData);
+      $terminal(opt_data, null, opt_ijData);
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.view_1 = $view_1;
+    if (goog.DEBUG) {
+      $view_1.soyTemplateName = 'pageIndex.view_1';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $view_3_1(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'view-3__1');
+      ie_open('div', null, null, 'class', 'container-wedeploy');
+      ie_open('div', null, null, 'class', 'info-box');
+      ie_open('div', null, null, 'class', 'info-box__container');
+      ie_open('p', null, null, 'class', 'top-title');
+      itext('Microservices');
+      ie_close('p');
+      ie_open('h3');
+      itext('Built-in APIs that can help you create modern apps faster.');
+      ie_close('h3');
+      ie_open('p');
+      itext('We provide a set of ready-to-use services that enables you to store data in the cloud, search and stream content in realtime, authenticate users, send emails to your users, and so on.');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'bg-text');
+      ie_void('div', null, null, 'class', 'bg-text__solid');
+      ie_void('div', null, null, 'class', 'bg-text__gradient');
+      ie_close('div');
+      ie_void('div', null, null, 'class', 'info-img');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.view_3_1 = $view_3_1;
+    if (goog.DEBUG) {
+      $view_3_1.soyTemplateName = 'pageIndex.view_3_1';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $view_3_2(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'view-3__2');
+      ie_open('div', null, null, 'class', 'container-wedeploy');
+      ie_open('div', null, null, 'class', 'info-box');
+      ie_open('div', null, null, 'class', 'info-box__container flex-center-top');
+      ie_open('p', null, null, 'class', 'top-title');
+      itext('Containers');
+      ie_close('p');
+      ie_open('h3');
+      itext('Your favorite stack on the cloud in just few clicks.');
+      ie_close('h3');
+      ie_open('p');
+      itext('Choose between dozens of languages, frameworks, or entire application stacks. Launch production-ready environments in a matter of minutes.');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'bg-text');
+      ie_void('div', null, null, 'class', 'bg-text__solid');
+      ie_void('div', null, null, 'class', 'bg-text__gradient');
+      ie_close('div');
+      ie_void('div', null, null, 'class', 'info-img');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.view_3_2 = $view_3_2;
+    if (goog.DEBUG) {
+      $view_3_2.soyTemplateName = 'pageIndex.view_3_2';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $view_4(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'view-4');
+      ie_open('div', null, null, 'class', 'container-wedeploy');
+      ie_open('div', null, null, 'id', 'view-4__giant', 'class', 'giant');
+      ie_open('span');
+      itext('We');
+      ie_close('span');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'text-center');
+      ie_open('h2');
+      itext('Carefully designed features');
+      ie_close('h2');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'text-center');
+      ie_open('h4');
+      itext('Empowering you to build amazing apps.');
+      ie_close('h4');
+      ie_close('div');
+      ie_open('ul', null, null, 'id', 'features-container', 'class', 'flex-center-top');
+      var features__soy321 = [{ icon: 'icon_data.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Data', description: 'Store data securely with a NoSQL cloud database. Make complex queries instantly and consume information in real-time.' }, { icon: 'icon_users.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Auth', description: 'Avoid the headache of operating your own user management system. Authenticate users in few lines of code using our SDKs.' }, { icon: 'icon_cloud.svg', hasWeIcon: true, title: 'WeDeploy\u2122 Hosting', description: 'Deliver HTML, CSS, JS, and any kind of static files using a powerful static hosting. It\'s super fast and will save you a lot of time.' }, { icon: 'icon_terminal.svg', hasWeIcon: false, title: 'Command Line Tool', description: 'We designed a CLI that seamlessly integrates into your workflow. Almost everything you can do from the dashboard can also be done from your terminal.' }, { icon: 'icon_servers.svg', hasWeIcon: false, title: 'Load Balancer', description: 'Automagically distribute incoming traffic across multiple instances without the client ever knowing about the internal separation of containers.' }, { icon: 'icon_velocimeter.svg', hasWeIcon: false, title: 'High Availability', description: 'Don\'t worry about having your app taken offline during deployment of the new code. Push updates or restart your containers with zero downtime.' }, { icon: 'icon_file.svg', hasWeIcon: false, title: 'Log Management', description: 'Detect and diagnose an error from your terminal or from the dashboard. Watch logs in realtime and find the specific cause, fast.' }, { icon: 'icon_heart.svg', hasWeIcon: false, title: 'Health Checks', description: 'Be the first one to know when something wrong happens. Monitor the status and control the lifecycle of your containers very easily.' }, { icon: 'icon_globe.svg', hasWeIcon: false, title: 'Custom Domains', description: 'Every project is accessible via a wedeploy.io subdomain. We know that\'s not enough for apps in production, that\'s why you can set up your own custom domains.' }];
+      var featureList327 = features__soy321;
+      var featureListLen327 = featureList327.length;
+      for (var featureIndex327 = 0; featureIndex327 < featureListLen327; featureIndex327++) {
+        var featureData327 = featureList327[featureIndex327];
+        $feature({ icon: featureData327.icon, hasWeIcon: featureData327.hasWeIcon, title: featureData327.title, description: featureData327.description }, null, opt_ijData);
+      }
+      ie_close('ul');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.view_4 = $view_4;
+    if (goog.DEBUG) {
+      $view_4.soyTemplateName = 'pageIndex.view_4';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $view_6(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'view-6', 'class', 'text-center');
+      ie_open('div', null, null, 'id', 'view-6__giant', 'class', 'giant');
+      ie_open('span', null, null, 'id', 'giant__deploy');
+      itext('Deploy');
+      ie_close('span');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'info');
+      ie_open('div', null, null, 'class', 'info__title');
+      ie_open('h2');
+      itext('We can\'t wait to see what you\'re going to build.');
+      ie_close('h2');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'info__button');
+      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'class', 'btn btn-accent btn-block');
+      itext('Get Started \u2013 It\u2019s FREE');
+      ie_close('a');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'info__question');
+      ie_open('h5');
+      itext('Have a question? Give our team a call: ');
+      ie_open('a', null, null, 'href', 'tel:+1 (909) 378-5432', 'class', 'phone');
+      itext('+1 (909) 378-5432.');
+      ie_close('a');
+      ie_close('h5');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.view_6 = $view_6;
+    if (goog.DEBUG) {
+      $view_6.soyTemplateName = 'pageIndex.view_6';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $feature(opt_data, opt_ignored, opt_ijData) {
+      ie_open('li', null, null, 'class', 'feature');
+      ie_open('div', null, null, 'class', 'feature__box text-center');
+      ie_open('div', null, null, 'class', 'box__badge-container');
+      ie_open('div', null, null, 'id', 'badge-data', 'class', 'badge flex-center-center');
+      ie_open('img', null, null, 'src', '/images/home/icons_view_2/' + opt_data.icon);
+      ie_close('img');
+      ie_close('div');
+      if (opt_data.hasWeIcon) {
+        ie_open('div', null, null, 'class', 'we-container');
+        ie_open('div', null, null, 'class', 'we flex-center-center');
+        ie_open('span');
+        itext('We');
+        ie_close('span');
+        ie_close('div');
+        ie_close('div');
+      }
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'feature__title');
+      ie_open('h3');
+      var dyn22 = opt_data.title;
+      if (typeof dyn22 == 'function') dyn22();else if (dyn22 != null) itext(dyn22);
+      ie_close('h3');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'feature__description');
+      ie_open('p');
+      var dyn23 = opt_data.description;
+      if (typeof dyn23 == 'function') dyn23();else if (dyn23 != null) itext(dyn23);
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_close('li');
+    }
+    exports.feature = $feature;
+    if (goog.DEBUG) {
+      $feature.soyTemplateName = 'pageIndex.feature';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $subscribe(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'subscribe', 'class', 'col-xs-16 col-sm-16 col-md-16 col-lg-4 col-lg-offset-1');
+      ie_open('div', null, null, 'id', 'subscribe__container');
+      ie_open('h1');
+      itext('You Build.');
+      ie_close('h1');
+      ie_open('h1');
+      itext('We Deploy.');
+      ie_close('h1');
+      ie_open('p');
+      var dyn24 = opt_data.page.description;
+      if (typeof dyn24 == 'function') dyn24();else if (dyn24 != null) itext(dyn24);
+      ie_close('p');
+      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'id', 'subscribe__submit-small', 'class', 'open-modal btn btn-accent btn-block');
+      ie_open('span');
+      itext('Get Started \u2013 It\u2019s FREE');
+      ie_close('span');
+      ie_close('a');
+      ie_void('div', null, null, 'id', 'terminal-img');
+      ie_open('form', null, null, 'id', 'view-1__form', 'class', 'form-signup');
+      ie_open('a', null, null, 'href', '//dashboard.wedeploy.com/signup', 'type', 'submit', 'class', 'btn btn-accent btn-block');
+      ie_open('span');
+      itext('Get Started \u2013 It\u2019s FREE');
+      ie_close('span');
+      ie_close('a');
+      ie_close('form');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.subscribe = $subscribe;
+    if (goog.DEBUG) {
+      $subscribe.soyTemplateName = 'pageIndex.subscribe';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $terminal(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'terminal', 'class', 'col-xs-16 col-sm-16 col-md-9 col-lg-9 col-lg-offset-1');
+      ie_open('div', null, null, 'class', 'terminal__content');
+      ie_open('div', null, null, 'class', 'content__wrapper');
+      $browser(null, null, opt_ijData);
+      $cli(null, null, opt_ijData);
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.terminal = $terminal;
+    if (goog.DEBUG) {
+      $terminal.soyTemplateName = 'pageIndex.terminal';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $browser(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'browser');
+      ie_open('div', null, null, 'class', 'browser__top flex-center-center');
+      ie_open('div', null, null, 'class', 'top__bullets flex-left-center');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_close('div');
+      ie_open('h3');
+      itext('WeDeploy\u2122 Dashboard');
+      ie_close('h3');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'browser__topbar flex-left-center');
+      ie_open('a', null, null, 'href', 'javascript:void(0);', 'class', 'topbar__logo');
+      itext('WeDeploy\u2122');
+      ie_close('a');
+      ie_open('a', null, null, 'href', 'javascript:void(0);', 'class', 'topbar__projects btn btn-inverse btn-sm');
+      itext('Projects ');
+      ie_void('span', null, null, 'class', 'icon-12-arrow-down-short');
+      ie_close('a');
+      ie_open('div', null, null, 'class', 'topbar-link btn-transparent flex-left-spacebetween');
+      ie_open('a', null, null, 'class', 'avatar-round avatar-icon-12', 'href', '#');
+      ie_void('span', null, null, 'class', 'icon-12-person');
+      ie_close('a');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'id', 'browser__content');
+      ie_open('div', null, null, 'id', 'content__scroll');
+      ie_open('div', null, null, 'class', 'flex-left-spacebetween');
+      ie_open('div', null, null, 'id', 'browser__recent', 'class', 'input-inner-addon input-inner-addon-right');
+      ie_open('div', null, null, 'class', 'btn btn-default btn-sm flex-center-center');
+      itext('Recent ');
+      ie_void('span', null, null, 'class', 'icon-12-arrow-down-short');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'id', 'browser__title');
+      itext('Projects');
+      ie_close('div');
+      ie_open('div', null, null, 'id', 'browser__new-project');
+      ie_open('div', null, null, 'class', 'btn btn-accent btn-sm flex-center-center');
+      ie_void('span', null, null, 'class', 'icon-12-plus');
+      itext(' New Project');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'content-header-menu');
+      ie_open('span', null, null, 'class', 'header__info');
+      itext('Project');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'header__status');
+      itext('Status');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'header__services');
+      itext('Service');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'header__activity');
+      itext('Last Activity');
+      ie_close('span');
+      ie_close('div');
+      var param359 = function param359() {
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-database');
+        ie_close('span');
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-mail');
+        ie_close('span');
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-cloud');
+        ie_close('span');
+      };
+      var param361 = function param361() {
+        ie_void('span', null, null, 'class', 'icon-12-module');
+      };
+      $browser_project({ first: true, projectName: 'mycompany.com', status: 'up', statusLabel: 'online', services: param359, activityIcon: param361, activityTimeElapsed: '7m' }, null, opt_ijData);
+      var param369 = function param369() {
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-folder');
+        ie_close('span');
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-mail');
+        ie_close('span');
+      };
+      var param371 = function param371() {
+        ie_void('span', null, null, 'class', 'icon-12-arrow-up-rod');
+      };
+      $browser_project({ first: false, projectName: 'intranet.wedeploy.io', status: 'up', statusLabel: 'online', services: param369, activityIcon: param371, activityTimeElapsed: '1d' }, null, opt_ijData);
+      var param379 = function param379() {
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-database');
+        ie_close('span');
+      };
+      var param381 = function param381() {
+        ie_void('span', null, null, 'class', 'icon-12-spinner-double-arrow');
+      };
+      $browser_project({ first: false, projectName: 'newproject.com', status: 'up', statusLabel: 'online', services: param379, activityIcon: param381, activityTimeElapsed: '30s' }, null, opt_ijData);
+      var param389 = function param389() {
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-cloud');
+        ie_close('span');
+        ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+        ie_void('span', null, null, 'class', 'icon-12-folder');
+        ie_close('span');
+      };
+      var param391 = function param391() {
+        ie_void('span', null, null, 'class', 'icon-12-house');
+      };
+      $browser_project({ first: false, projectName: 'mobileapp.wedeploy.io', status: 'up', statusLabel: 'online', services: param389, activityIcon: param391, activityTimeElapsed: '2h' }, null, opt_ijData);
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.browser = $browser;
+    if (goog.DEBUG) {
+      $browser.soyTemplateName = 'pageIndex.browser';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $browser_project(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'class', 'no-padding col--browser span_6 browser__project-item' + (opt_data.first ? ' first' : ''));
+      ie_open('div', null, null, 'class', 'project-item__content flex-left-center');
+      ie_open('div', null, null, 'class', 'project-item__info');
+      ie_open('p', null, null, 'class', 'large');
+      var dyn25 = opt_data.projectName;
+      if (typeof dyn25 == 'function') dyn25();else if (dyn25 != null) itext(dyn25);
+      ie_close('p');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'project-item__status flex-column-left-center');
+      ie_open('span', null, null, 'class', 'box box-project flex-left-center');
+      ie_void('span', null, null, 'class', 'bullet ' + opt_data.status);
+      ie_open('span', null, null, 'class', 'label-status');
+      var dyn26 = opt_data.statusLabel;
+      if (typeof dyn26 == 'function') dyn26();else if (dyn26 != null) itext(dyn26);
+      ie_close('span');
+      ie_close('span');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'project-item__services flex-column-left-center');
+      var dyn27 = opt_data.services;
+      if (typeof dyn27 == 'function') dyn27();else if (dyn27 != null) itext(dyn27);
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'project-item__activity flex-column-left-center');
+      ie_open('span', null, null, 'class', 'box box-icon flex-center-center');
+      var dyn28 = opt_data.activityIcon;
+      if (typeof dyn28 == 'function') dyn28();else if (dyn28 != null) itext(dyn28);
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'time-small');
+      var dyn29 = opt_data.activityTimeElapsed;
+      if (typeof dyn29 == 'function') dyn29();else if (dyn29 != null) itext(dyn29);
+      ie_close('span');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'project-item__settings flex-column-left-center');
+      ie_open('span', null, null, 'class', 'flex-right-center');
+      ie_void('span', null, null, 'class', 'icon-12-ellipsis');
+      ie_close('span');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.browser_project = $browser_project;
+    if (goog.DEBUG) {
+      $browser_project.soyTemplateName = 'pageIndex.browser_project';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $cli(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'id', 'cli', 'class', 'no-padding col--terminal span_3');
+      ie_open('div', null, null, 'class', 'cli__top flex-center-center');
+      ie_open('div', null, null, 'class', 'top__bullets flex-left-center');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_void('span', null, null, 'class', 'bullet');
+      ie_close('div');
+      ie_open('h3');
+      itext('WeDeploy\u2122 CLI');
+      ie_close('h3');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'cli__terminal flex-column-left-top');
+      ie_open('div', null, null, 'class', 'terminal-content');
+      ie_open('p');
+      itext('Available Commands:');
+      ie_close('p');
+      ie_open('p', null, null, 'class', 'no-margin');
+      ie_open('span', null, null, 'class', 'one');
+      itext('create');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'two');
+      itext('Creates a project or container;');
+      ie_close('span');
+      ie_close('p');
+      ie_open('p', null, null, 'class', 'no-margin');
+      ie_open('span', null, null, 'class', 'one');
+      itext('run');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'two');
+      itext('Run the infrastructure for development locally;');
+      ie_close('span');
+      ie_close('p');
+      ie_open('p', null, null, 'class', 'no-margin');
+      ie_open('span', null, null, 'class', 'one');
+      itext('link');
+      ie_close('span');
+      ie_open('span', null, null, 'class', 'two');
+      itext('Links the given project or service locally;');
+      ie_close('span');
+      ie_close('p');
+      ie_open('p');
+      itext('$ ');
+      ie_open('strong');
+      itext('we');
+      ie_close('strong');
+      itext(' create |');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.cli = $cli;
+    if (goog.DEBUG) {
+      $cli.soyTemplateName = 'pageIndex.cli';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.view_1.params = [];
+    exports.view_1.types = {};
+    exports.view_3_1.params = [];
+    exports.view_3_1.types = {};
+    exports.view_3_2.params = [];
+    exports.view_3_2.types = {};
+    exports.view_4.params = [];
+    exports.view_4.types = {};
+    exports.view_6.params = [];
+    exports.view_6.types = {};
+    exports.feature.params = ["icon", "hasWeIcon", "title", "description"];
+    exports.feature.types = { "icon": "any", "hasWeIcon": "any", "title": "any", "description": "any" };
+    exports.subscribe.params = ["page"];
+    exports.subscribe.types = { "page": "any" };
+    exports.terminal.params = [];
+    exports.terminal.types = {};
+    exports.browser.params = [];
+    exports.browser.types = {};
+    exports.browser_project.params = ["first", "projectName", "status", "statusLabel", "services", "activityIcon", "activityTimeElapsed"];
+    exports.browser_project.types = { "first": "any", "projectName": "any", "status": "any", "statusLabel": "any", "services": "any", "activityIcon": "any", "activityTimeElapsed": "any" };
+    exports.cli.params = [];
+    exports.cli.types = {};
+    templates = exports;
+    return exports;
+  });
+
+  var pageIndex = function (_Component) {
+    babelHelpers.inherits(pageIndex, _Component);
+
+    function pageIndex() {
+      babelHelpers.classCallCheck(this, pageIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    }
+
+    return pageIndex;
+  }(Component);
+
+  Soy.register(pageIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageIndex'] = pageIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageIndex = function (_Component) {
+    babelHelpers.inherits(pageIndex, _Component);
+
+    function pageIndex() {
+      babelHelpers.classCallCheck(this, pageIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    }
+
+    return pageIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageIndex, templates);
+
+  this['metal']['pageIndex'] = pageIndex;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
     // This file was automatically generated from environment-variables-new-java-service-and-multiple-custom-domains.soy.
     // Please don't edit this file by hand.
 
@@ -26744,11 +26744,11 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param442 = function param442() {
+      var param416 = function param416() {
         ie_open('article');
         ie_open('p');
-        var dyn32 = opt_data.page.description;
-        if (typeof dyn32 == 'function') dyn32();else if (dyn32 != null) itext(dyn32);
+        var dyn30 = opt_data.page.description;
+        if (typeof dyn30 == 'function') dyn30();else if (dyn30 != null) itext(dyn30);
         ie_close('p');
         ie_open('h4');
         itext('Environment Variables');
@@ -26820,7 +26820,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param442 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param416 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -26924,11 +26924,11 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param453 = function param453() {
+      var param427 = function param427() {
         ie_open('article');
         ie_open('p');
-        var dyn33 = opt_data.page.description;
-        if (typeof dyn33 == 'function') dyn33();else if (dyn33 != null) itext(dyn33);
+        var dyn31 = opt_data.page.description;
+        if (typeof dyn31 == 'function') dyn31();else if (dyn31 != null) itext(dyn31);
         ie_close('p');
         ie_open('p');
         itext('Last year, on September 20th, the very first app was created on WeDeploy. After that, we went to Chicago, Milan, London, Darmstad, and S\xE3o Paulo to spread the word about this new product.');
@@ -26961,7 +26961,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param453 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param427 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -27065,11 +27065,11 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param470 = function param470() {
+      var param444 = function param444() {
         ie_open('article');
         ie_open('p');
-        var dyn34 = opt_data.page.description;
-        if (typeof dyn34 == 'function') dyn34();else if (dyn34 != null) itext(dyn34);
+        var dyn32 = opt_data.page.description;
+        if (typeof dyn32 == 'function') dyn32();else if (dyn32 != null) itext(dyn32);
         ie_close('p');
         ie_open('p');
         ie_open('strong');
@@ -27190,7 +27190,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param470 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param444 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -27294,11 +27294,11 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param481 = function param481() {
+      var param455 = function param455() {
         ie_open('article');
         ie_open('p');
-        var dyn35 = opt_data.page.description;
-        if (typeof dyn35 == 'function') dyn35();else if (dyn35 != null) itext(dyn35);
+        var dyn33 = opt_data.page.description;
+        if (typeof dyn33 == 'function') dyn33();else if (dyn33 != null) itext(dyn33);
         ie_close('p');
         ie_open('figure');
         ie_open('img', null, null, 'src', '../images/blog/post-4--0.png', 'alt', 'Jonni Lundy Working');
@@ -27340,7 +27340,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param481 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param455 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -27444,11 +27444,11 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param492 = function param492() {
+      var param466 = function param466() {
         ie_open('article');
         ie_open('p');
-        var dyn36 = opt_data.page.description;
-        if (typeof dyn36 == 'function') dyn36();else if (dyn36 != null) itext(dyn36);
+        var dyn34 = opt_data.page.description;
+        if (typeof dyn34 == 'function') dyn34();else if (dyn34 != null) itext(dyn34);
         ie_close('p');
         ie_open('blockquote');
         ie_open('p');
@@ -27515,7 +27515,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param492 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param466 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -27747,10 +27747,10 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param416 = function param416() {
+      var param477 = function param477() {
         $topics(opt_data, null, opt_ijData);
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param416 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param477 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -27773,8 +27773,8 @@ babelHelpers;
       ie_close('h1');
       ie_open('p', null, null, 'class', 'docs-home-top-description');
       itext('Start learning how to leverage the power of ');
-      var dyn30 = opt_data.site.title;
-      if (typeof dyn30 == 'function') dyn30();else if (dyn30 != null) itext(dyn30);
+      var dyn35 = opt_data.site.title;
+      if (typeof dyn35 == 'function') dyn35();else if (dyn35 != null) itext(dyn35);
       itext(' in your project.');
       ie_close('p');
       ie_close('div');
@@ -27808,19 +27808,19 @@ babelHelpers;
       ie_open('div', null, null, 'class', 'row');
       ie_open('div', null, null, 'class', 'col-md-12 col-md-offset-2 col-xs-16');
       ie_open('div', null, null, 'class', 'row');
-      var childIdList437 = opt_data.page.childIds;
-      var childIdListLen437 = childIdList437.length;
-      for (var childIdIndex437 = 0; childIdIndex437 < childIdListLen437; childIdIndex437++) {
-        var childIdData437 = childIdList437[childIdIndex437];
-        if (!opt_data.page.children[childIdData437].hidden) {
+      var childIdList498 = opt_data.page.childIds;
+      var childIdListLen498 = childIdList498.length;
+      for (var childIdIndex498 = 0; childIdIndex498 < childIdListLen498; childIdIndex498++) {
+        var childIdData498 = childIdList498[childIdIndex498];
+        if (!opt_data.page.children[childIdData498].hidden) {
           ie_open('div', null, null, 'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
-          ie_open('a', null, null, 'class', 'topic radial-out', 'href', opt_data.page.children[childIdData437].url);
+          ie_open('a', null, null, 'class', 'topic radial-out', 'href', opt_data.page.children[childIdData498].url);
           ie_open('div', null, null, 'class', 'topic-icon');
-          ie_void('span', null, null, 'class', 'icon-16-' + opt_data.page.children[childIdData437].icon);
+          ie_void('span', null, null, 'class', 'icon-16-' + opt_data.page.children[childIdData498].icon);
           ie_close('div');
           ie_open('h3', null, null, 'class', 'topic-title');
-          var dyn31 = opt_data.page.children[childIdData437].title;
-          if (typeof dyn31 == 'function') dyn31();else if (dyn31 != null) itext(dyn31);
+          var dyn36 = opt_data.page.children[childIdData498].title;
+          if (typeof dyn36 == 'function') dyn36();else if (dyn36 != null) itext(dyn36);
           ie_close('h3');
           ie_close('a');
           ie_close('div');
@@ -29307,13 +29307,13 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param975 = function param975() {
+      var param582 = function param582() {
         ie_open('h1');
         itext('Auth');
         ie_close('h1');
         ie_open('h6');
-        var dyn53 = opt_data.page.description;
-        if (typeof dyn53 == 'function') dyn53();else if (dyn53 != null) itext(dyn53);
+        var dyn38 = opt_data.page.description;
+        if (typeof dyn38 == 'function') dyn38();else if (dyn38 != null) itext(dyn38);
         ie_close('h6');
         ie_open('div', null, null, 'class', 'guide-btn-cta');
         ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-auth.wedeploy.io', 'target', '_blank');
@@ -29528,7 +29528,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param975 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param582 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -29634,14 +29634,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1037 = function param1037() {
+      var param644 = function param644() {
         ie_open('h1');
-        var dyn54 = opt_data.page.title;
-        if (typeof dyn54 == 'function') dyn54();else if (dyn54 != null) itext(dyn54);
+        var dyn39 = opt_data.page.title;
+        if (typeof dyn39 == 'function') dyn39();else if (dyn39 != null) itext(dyn39);
         ie_close('h1');
         ie_open('h6');
-        var dyn55 = opt_data.page.description;
-        if (typeof dyn55 == 'function') dyn55();else if (dyn55 != null) itext(dyn55);
+        var dyn40 = opt_data.page.description;
+        if (typeof dyn40 == 'function') dyn40();else if (dyn40 != null) itext(dyn40);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -29718,7 +29718,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1037 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param644 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -29824,14 +29824,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1085 = function param1085() {
+      var param692 = function param692() {
         ie_open('h1');
-        var dyn56 = opt_data.page.title;
-        if (typeof dyn56 == 'function') dyn56();else if (dyn56 != null) itext(dyn56);
+        var dyn41 = opt_data.page.title;
+        if (typeof dyn41 == 'function') dyn41();else if (dyn41 != null) itext(dyn41);
         ie_close('h1');
         ie_open('h6');
-        var dyn57 = opt_data.page.description;
-        if (typeof dyn57 == 'function') dyn57();else if (dyn57 != null) itext(dyn57);
+        var dyn42 = opt_data.page.description;
+        if (typeof dyn42 == 'function') dyn42();else if (dyn42 != null) itext(dyn42);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -29907,7 +29907,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1085 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param692 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -30013,14 +30013,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1108 = function param1108() {
+      var param715 = function param715() {
         ie_open('h1');
-        var dyn58 = opt_data.page.title;
-        if (typeof dyn58 == 'function') dyn58();else if (dyn58 != null) itext(dyn58);
+        var dyn43 = opt_data.page.title;
+        if (typeof dyn43 == 'function') dyn43();else if (dyn43 != null) itext(dyn43);
         ie_close('h1');
         ie_open('h6');
-        var dyn59 = opt_data.page.description;
-        if (typeof dyn59 == 'function') dyn59();else if (dyn59 != null) itext(dyn59);
+        var dyn44 = opt_data.page.description;
+        if (typeof dyn44 == 'function') dyn44();else if (dyn44 != null) itext(dyn44);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -30096,7 +30096,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1108 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param715 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -30202,14 +30202,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1131 = function param1131() {
+      var param738 = function param738() {
         ie_open('h1');
-        var dyn60 = opt_data.page.title;
-        if (typeof dyn60 == 'function') dyn60();else if (dyn60 != null) itext(dyn60);
+        var dyn45 = opt_data.page.title;
+        if (typeof dyn45 == 'function') dyn45();else if (dyn45 != null) itext(dyn45);
         ie_close('h1');
         ie_open('h6');
-        var dyn61 = opt_data.page.description;
-        if (typeof dyn61 == 'function') dyn61();else if (dyn61 != null) itext(dyn61);
+        var dyn46 = opt_data.page.description;
+        if (typeof dyn46 == 'function') dyn46();else if (dyn46 != null) itext(dyn46);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -30285,7 +30285,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1131 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param738 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -30391,14 +30391,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1154 = function param1154() {
+      var param761 = function param761() {
         ie_open('h1');
-        var dyn62 = opt_data.page.title;
-        if (typeof dyn62 == 'function') dyn62();else if (dyn62 != null) itext(dyn62);
+        var dyn47 = opt_data.page.title;
+        if (typeof dyn47 == 'function') dyn47();else if (dyn47 != null) itext(dyn47);
         ie_close('h1');
         ie_open('h6');
-        var dyn63 = opt_data.page.description;
-        if (typeof dyn63 == 'function') dyn63();else if (dyn63 != null) itext(dyn63);
+        var dyn48 = opt_data.page.description;
+        if (typeof dyn48 == 'function') dyn48();else if (dyn48 != null) itext(dyn48);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -30426,7 +30426,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1154 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param761 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -30657,14 +30657,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param582 = function param582() {
+      var param841 = function param841() {
         ie_open('h1');
-        var dyn38 = opt_data.page.title;
-        if (typeof dyn38 == 'function') dyn38();else if (dyn38 != null) itext(dyn38);
+        var dyn50 = opt_data.page.title;
+        if (typeof dyn50 == 'function') dyn50();else if (dyn50 != null) itext(dyn50);
         ie_close('h1');
         ie_open('h6');
-        var dyn39 = opt_data.page.description;
-        if (typeof dyn39 == 'function') dyn39();else if (dyn39 != null) itext(dyn39);
+        var dyn51 = opt_data.page.description;
+        if (typeof dyn51 == 'function') dyn51();else if (dyn51 != null) itext(dyn51);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -30953,7 +30953,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param582 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param841 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -31035,14 +31035,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param655 = function param655() {
+      var param914 = function param914() {
         ie_open('h1');
-        var dyn40 = opt_data.page.title;
-        if (typeof dyn40 == 'function') dyn40();else if (dyn40 != null) itext(dyn40);
+        var dyn52 = opt_data.page.title;
+        if (typeof dyn52 == 'function') dyn52();else if (dyn52 != null) itext(dyn52);
         ie_close('h1');
         ie_open('h6');
-        var dyn41 = opt_data.page.description;
-        if (typeof dyn41 == 'function') dyn41();else if (dyn41 != null) itext(dyn41);
+        var dyn53 = opt_data.page.description;
+        if (typeof dyn53 == 'function') dyn53();else if (dyn53 != null) itext(dyn53);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -31077,7 +31077,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param655 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param914 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -31207,13 +31207,13 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param673 = function param673() {
+      var param932 = function param932() {
         ie_open('h1');
         itext('Data');
         ie_close('h1');
         ie_open('h6');
-        var dyn42 = opt_data.page.description;
-        if (typeof dyn42 == 'function') dyn42();else if (dyn42 != null) itext(dyn42);
+        var dyn54 = opt_data.page.description;
+        if (typeof dyn54 == 'function') dyn54();else if (dyn54 != null) itext(dyn54);
         ie_close('h6');
         ie_open('div', null, null, 'class', 'guide-btn-cta');
         ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-data.wedeploy.io', 'target', '_blank');
@@ -31360,7 +31360,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param673 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param932 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -31466,14 +31466,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param725 = function param725() {
+      var param984 = function param984() {
         ie_open('h1');
-        var dyn43 = opt_data.page.title;
-        if (typeof dyn43 == 'function') dyn43();else if (dyn43 != null) itext(dyn43);
+        var dyn55 = opt_data.page.title;
+        if (typeof dyn55 == 'function') dyn55();else if (dyn55 != null) itext(dyn55);
         ie_close('h1');
         ie_open('h6');
-        var dyn44 = opt_data.page.description;
-        if (typeof dyn44 == 'function') dyn44();else if (dyn44 != null) itext(dyn44);
+        var dyn56 = opt_data.page.description;
+        if (typeof dyn56 == 'function') dyn56();else if (dyn56 != null) itext(dyn56);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -31550,7 +31550,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param725 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param984 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -31656,14 +31656,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param753 = function param753() {
+      var param1012 = function param1012() {
         ie_open('h1');
-        var dyn45 = opt_data.page.title;
-        if (typeof dyn45 == 'function') dyn45();else if (dyn45 != null) itext(dyn45);
+        var dyn57 = opt_data.page.title;
+        if (typeof dyn57 == 'function') dyn57();else if (dyn57 != null) itext(dyn57);
         ie_close('h1');
         ie_open('h6');
-        var dyn46 = opt_data.page.description;
-        if (typeof dyn46 == 'function') dyn46();else if (dyn46 != null) itext(dyn46);
+        var dyn58 = opt_data.page.description;
+        if (typeof dyn58 == 'function') dyn58();else if (dyn58 != null) itext(dyn58);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -31749,7 +31749,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param753 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1012 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -31855,14 +31855,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param816 = function param816() {
+      var param1075 = function param1075() {
         ie_open('h1');
-        var dyn47 = opt_data.page.title;
-        if (typeof dyn47 == 'function') dyn47();else if (dyn47 != null) itext(dyn47);
+        var dyn59 = opt_data.page.title;
+        if (typeof dyn59 == 'function') dyn59();else if (dyn59 != null) itext(dyn59);
         ie_close('h1');
         ie_open('h6');
-        var dyn48 = opt_data.page.description;
-        if (typeof dyn48 == 'function') dyn48();else if (dyn48 != null) itext(dyn48);
+        var dyn60 = opt_data.page.description;
+        if (typeof dyn60 == 'function') dyn60();else if (dyn60 != null) itext(dyn60);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -31950,7 +31950,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param816 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1075 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -32056,14 +32056,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param869 = function param869() {
+      var param1128 = function param1128() {
         ie_open('h1');
-        var dyn49 = opt_data.page.title;
-        if (typeof dyn49 == 'function') dyn49();else if (dyn49 != null) itext(dyn49);
+        var dyn61 = opt_data.page.title;
+        if (typeof dyn61 == 'function') dyn61();else if (dyn61 != null) itext(dyn61);
         ie_close('h1');
         ie_open('h6');
-        var dyn50 = opt_data.page.description;
-        if (typeof dyn50 == 'function') dyn50();else if (dyn50 != null) itext(dyn50);
+        var dyn62 = opt_data.page.description;
+        if (typeof dyn62 == 'function') dyn62();else if (dyn62 != null) itext(dyn62);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -32156,7 +32156,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param869 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1128 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -32262,14 +32262,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param952 = function param952() {
+      var param1211 = function param1211() {
         ie_open('h1');
-        var dyn51 = opt_data.page.title;
-        if (typeof dyn51 == 'function') dyn51();else if (dyn51 != null) itext(dyn51);
+        var dyn63 = opt_data.page.title;
+        if (typeof dyn63 == 'function') dyn63();else if (dyn63 != null) itext(dyn63);
         ie_close('h1');
         ie_open('h6');
-        var dyn52 = opt_data.page.description;
-        if (typeof dyn52 == 'function') dyn52();else if (dyn52 != null) itext(dyn52);
+        var dyn64 = opt_data.page.description;
+        if (typeof dyn64 == 'function') dyn64();else if (dyn64 != null) itext(dyn64);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -32311,7 +32311,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param952 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1211 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -32542,13 +32542,13 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1172 = function param1172() {
+      var param779 = function param779() {
         ie_open('h1');
         itext('Email');
         ie_close('h1');
         ie_open('h6');
-        var dyn64 = opt_data.page.description;
-        if (typeof dyn64 == 'function') dyn64();else if (dyn64 != null) itext(dyn64);
+        var dyn49 = opt_data.page.description;
+        if (typeof dyn49 == 'function') dyn49();else if (dyn49 != null) itext(dyn49);
         ie_close('h6');
         ie_open('div', null, null, 'class', 'guide-btn-cta');
         ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-email.wedeploy.io', 'target', '_blank');
@@ -32750,7 +32750,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1172 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param779 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
