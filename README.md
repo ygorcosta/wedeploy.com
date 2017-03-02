@@ -16,13 +16,21 @@ node -v && npm -v
 [sudo] npm i -g electric-cli
 	```
 
-3. Install our local dependencies:
+3. Go to `ui` folder:
+
+	```sh
+cd ui
+	```
+
+4. Install our local dependencies:
 
 	```sh
 npm i
 	```
 
 ## Usage
+
+To run these commands above, make sure you are in `ui` folder.
 
 ### build
 
@@ -46,6 +54,14 @@ electric server
 
 	```
 electric watch
+	```
+
+### run
+
+* Runs the `build`, `watch`, and `server` commands for quick development.
+
+	```
+electric run
 	```
 
 ## License
