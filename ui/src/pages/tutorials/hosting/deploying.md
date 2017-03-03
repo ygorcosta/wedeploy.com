@@ -27,4 +27,4 @@ Go to the WeDeploy dashboard and select your project. On the right you should se
 
 Once you see "Deploy was successful" go to `<service-name>.<project-name>.wedeploy.io`.
 
-Voilà! Your page is live!
+Voilà! Your page is live! 
