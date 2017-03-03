@@ -65,14 +65,14 @@
 	<div class="tutorial-page-nav">
 		{if $site.githubRepo}
 			<a href="https://github.com/{$site.githubRepo}/issues/new?title=Tutorial+Problem&body={$page.url}" class="btn btn-default btn-sm">
-				<span class="icon-16-github"></span> Report a problem
+				Report a problem
 			</a>
 		{/if}
 		{let $tutorialObject: $site.index.children['tutorials'].children[$page.parentId] /}
 		{if $page.buttonTitle and $page.weight < length($tutorialObject.childIds)}
 			{let $nextPageUrl: $tutorialObject.children[$tutorialObject.childIds[$page.weight]].url /}
 			<a href="{$nextPageUrl}" class="btn btn-accent btn-sm">
-				<span class="icon-16-checkmark"></span> {$page.buttonTitle}
+				{$page.buttonTitle}
 			</a>
 		{/if}
 	</div>
