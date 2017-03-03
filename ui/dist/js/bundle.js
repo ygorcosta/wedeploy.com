@@ -5840,6 +5840,14 @@ babelHelpers;
 			_this.scheduledBatchData_ = null;
 
 			/**
+    * Throws exception when validator returns an `Error` instance.
+    * @type {boolean}
+    * @default false
+    * @protected
+    */
+			_this.throwValidationError_ = false;
+
+			/**
     * Object that contains information about all this instance's state keys.
     * @type {!Object<string, !Object>}
     * @protected
@@ -5877,7 +5885,7 @@ babelHelpers;
 					var value = info.state === State.KeyStates.INITIALIZED ? this.get(name) : this.initialValues_[name];
 					if (!isDefAndNotNull(value)) {
 						var errorMessage = 'The property called "' + name + '" is required but didn\'t receive a value.';
-						if (this.shouldThrowValidationError()) {
+						if (this.getThrowValidationError()) {
 							throw new Error(errorMessage);
 						} else {
 							console.error(errorMessage);
@@ -5896,7 +5904,7 @@ babelHelpers;
 			key: 'assertValidatorReturnInstanceOfError_',
 			value: function assertValidatorReturnInstanceOfError_(validatorReturn) {
 				if (validatorReturn instanceof Error) {
-					if (this.shouldThrowValidationError()) {
+					if (this.getThrowValidationError()) {
 						throw validatorReturn;
 					} else {
 						console.error('Warning: ' + validatorReturn);
@@ -6214,6 +6222,18 @@ babelHelpers;
 			}
 
 			/**
+    * Gets the configuration value for whether or not should throw error when
+    * vaildator functions returns an `Error` instance.
+    * @return {boolean}
+    */
+
+		}, {
+			key: 'getThrowValidationError',
+			value: function getThrowValidationError() {
+				return this.throwValidationError_;
+			}
+
+			/**
     * Merges the STATE static variable for the given constructor function.
     * @param  {!Function} ctor Constructor function.
     * @return {boolean} Returns true if merge happens, false otherwise.
@@ -6494,15 +6514,15 @@ babelHelpers;
 			}
 
 			/**
-    * Returns a boolean that determines whether or not should throw error when
+    * Sets the configuration value for whether or not should throw error when
     * vaildator functions returns an `Error` instance.
-    * @return {boolean} By default returns false.
+    * @param {boolean} throwValidationError
     */
 
 		}, {
-			key: 'shouldThrowValidationError',
-			value: function shouldThrowValidationError() {
-				return false;
+			key: 'setThrowValidationError',
+			value: function setThrowValidationError(throwValidationError) {
+				this.throwValidationError_ = throwValidationError;
 			}
 
 			/**
@@ -26739,720 +26759,6 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageDocsIndex.
-     * @public
-     */
-
-    goog.module('pageDocsIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param490 = function param490() {
-        $topics(opt_data, null, opt_ijData);
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param490 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageDocsIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $topics(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'class', 'container-hybrid docs-home-top');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 col-md-16 col-md-offset-0');
-      ie_open('h1', null, null, 'class', 'docs-home-top-title');
-      itext('WeDeploy Docs Center');
-      ie_close('h1');
-      ie_open('p', null, null, 'class', 'docs-home-top-description');
-      itext('Start learning how to leverage the power of ');
-      var dyn36 = opt_data.site.title;
-      if (typeof dyn36 == 'function') dyn36();else if (dyn36 != null) itext(dyn36);
-      itext(' in your project.');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'container-hybrid');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 col-md-10 col-md-offset-3 col-lg-6 col-lg-offset-5');
-      ie_open('div', null, null, 'class', 'search');
-      $templateAlias2({ maxResults: 3, path: '/docs/', placeholder: 'Enter a search term here' }, null, opt_ijData);
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'docs-home-topics');
-      ie_open('div', null, null, 'class', 'container-hybrid');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 ');
-      ie_open('section', null, null, 'class', 'docs-home-middle');
-      ie_open('h2', null, null, 'class', 'docs-home-middle-subtitle');
-      itext('Choose a Guide');
-      ie_close('h2');
-      ie_open('p', null, null, 'class', 'docs-home-middle-description');
-      itext('Each one provide step by step coverage for every core feature.');
-      ie_close('p');
-      ie_close('section');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-md-12 col-md-offset-2 col-xs-16');
-      ie_open('div', null, null, 'class', 'row');
-      var childIdList511 = opt_data.page.childIds;
-      var childIdListLen511 = childIdList511.length;
-      for (var childIdIndex511 = 0; childIdIndex511 < childIdListLen511; childIdIndex511++) {
-        var childIdData511 = childIdList511[childIdIndex511];
-        if (!opt_data.page.children[childIdData511].hidden) {
-          ie_open('div', null, null, 'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
-          ie_open('a', null, null, 'class', 'topic radial-out', 'href', opt_data.page.children[childIdData511].url);
-          ie_open('div', null, null, 'class', 'topic-icon');
-          ie_void('span', null, null, 'class', 'icon-16-' + opt_data.page.children[childIdData511].icon);
-          ie_close('div');
-          ie_open('h3', null, null, 'class', 'topic-title');
-          var dyn37 = opt_data.page.children[childIdData511].title;
-          if (typeof dyn37 == 'function') dyn37();else if (dyn37 != null) itext(dyn37);
-          ie_close('h3');
-          ie_close('a');
-          ie_close('div');
-        }
-      }
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.topics = $topics;
-    if (goog.DEBUG) {
-      $topics.soyTemplateName = 'pageDocsIndex.topics';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.topics.params = ["page", "site"];
-    exports.topics.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var pageDocsIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsIndex, _Component);
-
-    function pageDocsIndex() {
-      babelHelpers.classCallCheck(this, pageDocsIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsIndex.__proto__ || Object.getPrototypeOf(pageDocsIndex)).apply(this, arguments));
-    }
-
-    return pageDocsIndex;
-  }(Component);
-
-  Soy.register(pageDocsIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageDocsIndex'] = pageDocsIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageDocsIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsIndex, _Component);
-
-    function pageDocsIndex() {
-      babelHelpers.classCallCheck(this, pageDocsIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsIndex.__proto__ || Object.getPrototypeOf(pageDocsIndex)).apply(this, arguments));
-    }
-
-    return pageDocsIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageDocsIndex, templates);
-
-  this['metal']['pageDocsIndex'] = pageDocsIndex;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace terms.
-     * @public
-     */
-
-    goog.module('terms.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('termsPage.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param479 = function param479() {
-        ie_open('article');
-        ie_open('h3');
-        var dyn35 = opt_data.page.description;
-        if (typeof dyn35 == 'function') dyn35();else if (dyn35 != null) itext(dyn35);
-        ie_close('h3');
-        ie_open('p');
-        itext('PLEASE READ THIS AGREEMENT CAREFULLY BEFORE PURCHASING AND/OR USING WEDEPLOY. BY USING WEDEPLOY, END USER SIGNIFIES ITS ASSENT TO AND ACCEPTANCE OF THIS AGREEMENT AND ACKNOWLEDGES IT HAS READ AND UNDERSTANDS THIS AGREEMENT. AN INDIVIDUAL ACTING ON BEHALF OF AN ENTITY REPRESENTS THAT HE OR SHE HAS THE AUTHORITY TO ENTER INTO THIS AGREEMENT ON BEHALF OF THAT ENTITY. IF END USER DOES NOT ACCEPT THE TERMS OF THIS AGREEMENT, THEN IT MUST NOT USE WEDEPLOY.');
-        ie_close('p');
-        ie_open('p');
-        itext('This Liferay WeDeploy Alpha Services Agreement, including all referenced appendices and documents located at URLs (the ');
-        ie_open('strong');
-        itext('"Agreement"');
-        ie_close('strong');
-        itext('), is between Liferay, Inc. (');
-        ie_open('strong');
-        itext('"Liferay"');
-        ie_close('strong');
-        itext(') with a principal place of business at 1400 Montefino Ave, Diamond Bar, CA 91765 and the user of WeDeploy (');
-        ie_open('strong');
-        itext('"WeDeploy"');
-        ie_close('strong');
-        itext(') who accepts the terms of this Agreement (');
-        ie_open('strong');
-        itext('"You"');
-        ie_close('strong');
-        itext(' or ');
-        ie_open('strong');
-        itext('"End User"');
-        ie_close('strong');
-        itext('). The effective date of this Agreement is the earlier of the date that End User accepts this Agreement or the date that End User uses WeDeploy (');
-        ie_open('strong');
-        itext('"Effective Date"');
-        ie_close('strong');
-        itext(').');
-        ie_close('p');
-        ie_open('h5');
-        itext('1. Definitions');
-        ie_close('h5');
-        ie_open('p');
-        ie_open('strong');
-        itext('"Account"');
-        ie_close('strong');
-        itext(' means the individual account each End User must create and use to access WeDeploy.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('"Acceptable Use Policy"');
-        ie_close('strong');
-        itext(' means the WeDeploy Acceptable Use Policy set forth in Appendix A, attached to this Agreement.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('"Affiliate"');
-        ie_close('strong');
-        itext(' means in the case of a company, an entity that owns or controls, is owned or controlled by, or is under common control or ownership with a party, where \u2018control\u2019 is the possession, direct or indirect, of the power to direct or cause the direction of the management and policies of an entity, whether though ownership of voting shares, by contract or otherwise.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('"Application(s)"');
-        ie_close('strong');
-        itext(' means the web application(s) that an End User creates and makes available through the use of WeDeploy.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('"Alpha Term"');
-        ie_close('strong');
-        itext(' means the period of time Liferay makes the "alpha" version of WeDeploy available to the general public.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('"Content"');
-        ie_close('strong');
-        itext(' means any content or data whether developed in connection with WeDeploy or otherwise, software code, documentation, materials, information, text files, images and/or trademarks associated with Your Account, Application or any other use of WeDeploy and not provided by Liferay.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('"Liferay Software and/or Services"');
-        ie_close('strong');
-        itext(' means the software and/or services made available through WeDeploy for End User to build an Application that is owned by, maintained by, or is a community project sponsored by Liferay.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('"Privacy Policy"');
-        ie_close('strong');
-        itext(' means Liferay\u2019s privacy policy set forth at https://www.liferay.com/privacy-policy.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('"Service Level"');
-        ie_close('strong');
-        itext(' means the resources allotted per each End User Account within the WeDeploy web service.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('"Third Party Software and/or Services"');
-        ie_close('strong');
-        itext(' means the software and/or services made available through WeDeploy for End User to build an Application that is not owned or maintained by Liferay.');
-        ie_close('p');
-        ie_open('h5');
-        itext('2. Accounts');
-        ie_close('h5');
-        ie_open('p');
-        itext('An End User is required to create and maintain an Account to access and use Liferay WeDeploy to create Applications by providing a valid email address and creating a password. End Users may not create multiple Accounts to increase the Service Level provided for each End User. Each End User remains fully responsible for any activity through an End User\u2019s Account.');
-        ie_close('p');
-        ie_open('h5');
-        itext('3. Use');
-        ie_close('h5');
-        ie_open('p');
-        itext('Liferay grants End User a non-exclusive, non-assignable, worldwide right to access and use WeDeploy for the Alpha Term solely for the Customer\'s evaluation and testing of WeDeploy and subject to the terms herein. Each End User is responsible for determining the suitability of WeDeploy for each End User\u2019s individual use, including with respect to any laws and/or regulations relating to data protection or privacy. After the Alpha Term, WeDeploy may be made available under a separate agreement for use other than solely for evaluation and subject to terms that vary from this Agreement. You understand that Lifeary is not obligated to provide You access to WeDeploy, your Application or your Content after expiration of the Alpha Term. You are responsible for backing up your Application, Content or other data. Liferay\u2019s provision of the WeDeploy under this Agreement does not require Liferay to meet any service level agreements, promises, or uptimes. Liferay retains all right, title, and interest in WeDeploy.');
-        ie_close('p');
-        ie_open('h5');
-        itext('4. Content');
-        ie_close('h5');
-        ie_open('p');
-        itext('Each End User is responsible for the Content made available through use of WeDeploy, including but not limited to the Content\u2019s compliance with law, the Content\u2019s compliance with the Acceptable Use Policy, the right to use such Content, and administering take down notices related to the Content. Liferay however reserves the right to suspend or terminate an End User\u2019s use of or access to WeDeploy immediately and without liability to a End User if any Content breaks any applicable law, requires additional consent or permission a End User has not obtained, or does not comply with the Acceptable Use Policy. An End User may be required upon a reasonable request by Liferay to provide Content or other information as may be reasonably necessary to ensure a End User\u2019s compliance with the Acceptable Use Policy. End Users are prohibited from using WeDeploy to store, create, or deploy Content that is regulated under the International Traffic in Arms Regulations (ITAR).');
-        ie_close('p');
-        ie_open('h5');
-        itext('5. Third Party Software and Services');
-        ie_close('h5');
-        ie_open('p');
-        itext('Certain Third Party Software and/or Services may be made available for use through WeDeploy for an End User to create its own Application(s). Each End User is fully responsible for the choice of any Third Party Software and/or Services within an End User\u2019s Application. The availability of such Third Party Software and/or Services does not constitute and endorsement by Liferay. The terms and/or conditions that apply to an End User\u2019s use of any Third Party Software and/or Services within a End User\u2019s Application are as solely agreed upon between a End User and the Third Party Software and/or Services provider. If an End User chooses to use Third Party Software and/or Services within an End User\u2019s Application, Liferay may be required to grant the Third Party Software and/or Services provider access to a End User\u2019s Content or Account to the extent necessary to provide the Third Party Software and/or Services or for interoperability with the Third Party Software and/or Services. Third Party Services may be removed from or no longer available through WeDeploy at any time, for example but not limited to if a take down is required by law or due to inconsistent interoperability.');
-        ie_close('p');
-        ie_open('h5');
-        itext('6. Provision of Services');
-        ie_close('h5');
-        ie_open('p');
-        itext('You give Liferay, its Affiliates, subcontractors, and vendors a worldwide, royalty-free, non-exclusive license to (a) host the Content provided by You through Your use of WeDeploy, and (b) display the Content provided by You through Your use of WeDeploy accessible by other users. You represent and warrant that you own all rights in, or have received a valid license to use the Content, with rights or license sufficient to enable any activities in connection with WeDeploy. You must provide all required and appropriate warnings, information and disclosures as may be required due to the nature of the Content. You are solely responsible for backing up Content and otherwise using measures, as You deem necessary to ensure that Content is not lost.');
-        ie_close('p');
-        ie_open('h5');
-        itext('7. Fees');
-        ie_close('h5');
-        ie_open('p');
-        itext('There are currently no fees associated with an End Users use of WeDeploy during the Alpha Term. Use of WeDeploy may be subject to fees under a separate agreement upon conclusion of the Alpha Term.');
-        ie_close('p');
-        ie_open('h5');
-        itext('8. Term and Termination');
-        ie_close('h5');
-        ie_open('p');
-        itext('This Agreement will terminate upon expiration of the Alpha Term. Sections # will survive termination of this agreement.');
-        ie_close('p');
-        ie_open('h5');
-        itext('9. Feedback');
-        ie_close('h5');
-        ie_open('p');
-        itext('End Users may choose to submit, including but not limited to, comments, information, feedback, enhancement requests, recommendations, corrections, and ideas regarding Liferay\u2019s products or services (collectively "Feedback") to Liferay in order for Liferay to improve its products and services. If End Users do not want Liferay to improve the products and services using Feedback, please do not submit the Feedback. If you do submit Feedback, Liferay may incorporate such Suggestions as Liferay\u2019s own into its product and services without any obligation to account to You in any way and Liferay shall be the owner of any products and services it creates as a result of Your Feedback. Liferay may use solutions or technologies that monitor an End Users usage statistics while using WeDeploy. Liferay will only use such usage statistics related to an End User Account in accordance with the Privacy Policy and only to improve WeDeploy or to assist an End User in its use of WeDeploy.');
-        ie_close('p');
-        ie_open('h5');
-        itext('10. Data');
-        ie_close('h5');
-        ie_open('p');
-        itext('To provide Liferay WeDeploy to End Users, Liferay may transfer an End User\u2019s Content or other information between Liferay, its Affiliates, vendors, and/or subcontractors, which may be located worldwide. Liferay\u2019s Affiliates and/or subcontractors are acting as data processors on behalf of an End User, and may process the Content to provide Liferay WeDeploy. Each End User is responsible for obtaining any necessary consents from users whose sensitive data or other Content is hosted in an End User\u2019s Application. Any Content or other data used by an End User in an Application an run on Liferay WeDeploy will be subject to and may be used in accordance with the Privacy Policy. Each End User that creates an Application for End Users agrees to protect the privacy of the Application\u2019s End Users, including implementing appropriate policies and safeguards (that at minimum contain terms substantially similar to those in the Privacy Policy) and notifying such End Users that their data will be stored on facilities accessible to Liferay, its Affiliates, vendors and/or subcontractors. Liferay may provide information including but not limited to Content and information concerning your Account as required by law or to establish or to exercise its legal rights to defend itself against claims without liability.');
-        ie_close('p');
-        ie_open('h5');
-        itext('11. Warranties');
-        ie_close('h5');
-        ie_open('p');
-        itext('You represent and warrant that (a) Your use of WeDeploy you will comply with all applicable laws and regulations; (b) You will comply with the Acceptable Use Policy when using WeDeploy; (c) You have the rights in the Content and Application to use such Content and Application with WeDeploy; (d) Your Content and Application do not infringe a third party\u2019s intellectual property rights (e); You will take all reasonable security precautions when using WeDeploy; and (f) You will not reverse engineer or attempt to reverse engineer WeDeploy.');
-        ie_close('p');
-        ie_open('p');
-        itext('TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WEDEPLOY (INCLUDING ANY SOFTWARE) AS PROVIDED BY LIFERAY AND ITS AFFILIATES ARE PROVIDED AND LICENSED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTY OF QUALITY, MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE, AND SUCH IMPLIED WARRANTIES, AND ANY OTHER WARRANTIES, REPRESENTATIONS, CONDITIONS AND TERMS, EXPRESS OR IMPLIED (AND WHETHER IMPLIED BY STATUTE, COMMON LAW, COURSE OF DEALING, TRADE USAGE OR OTHERWISE) ARE HEREBY EXCLUDED TO THE FULLEST EXTENT PERMITTED BY LAW. LIFERAY AND ITS AFFILIATES DO NOT GUARANTEE THAT WEDEPLOY OR ANY SOFTWARE OR SERVICES PROVIDED UNDER THIS AGREEMENT HAVE BEEN DESIGNED TO MEET CUSTOMER\u2019S SPECIFIC BUSINESS REQUIREMENTS, THE USE OF WEDEPLOY SERVICES OR SOFTWARE WILL BE UNINTERRUPTED OR ERROR FREE, COMPLY WITH LEGAL OR REGULATORY REQUIREMENTS APPLICABLE TO CUSTOMER, OR THAT LIFERAY WILL CORRECT ALL ERRORS. END USER AGREES THAT IT IS SOLELY RESPONSIBLE FOR THE RESULTS OBTAINED FROM THE USE WEDEPLOY SERVICES AND SOFTWARE PROVIDED UNDER THIS AGREEMENT.');
-        ie_close('p');
-        ie_open('p');
-        itext('WITHOUT LIMITING THE GENERALITY OF THE FOREGOING DISCLAIMER, WEDEPLOY SERVICES AND ANY SOFTWARE PROVIDED UNDER THIS AGREEMENT ARE NOT SPECIFICALLY DESIGNED, MANUFACTURED OR INTENDED FOR USE IN (I) FACILITIES OR ENVIRONMENTS REQUIRING FAILSAFE PERFORMANCE, INCLUDING BUT NOT LIMITED TO (A) THE PLANNING, CONSTRUCTION, MAINTENANCE, CONTROL, OR DIRECT OPERATION OF NUCLEAR FACILITIES, (B) AIRCRAFT NAVIGATION, CONTROL OR COMMUNICATION SYSTEMS, WEAPONS SYSTEMS, (C) DIRECT LIFE SUPPORT SYSTEMS OR (II) ULTRA-HAZARDOUS OR STRICT LIABILITY ACTIVITIES AND THE CUSTOMER IS SOLELY RESPONSIBLE AND EXPRESSLY ASSUMES ALL RISK FOR ANY SUCH USE.');
-        ie_close('p');
-        ie_open('h5');
-        itext('12. Limitation of Liability');
-        ie_close('h5');
-        ie_open('p');
-        itext('NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED IN THIS AGREEMENT AND TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, IN NO EVENT WILL LIFERAY OR ITS AFFILIATES HAVE ANY LIABILITY TO END USER AND/OR ITS AFFILIATES, UNDER ANY LEGAL OR EQUITABLE THEORY, WHETHER IN CONTRACT, TORT (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE), PRODUCT LIABILITY, STATUTE OR OTHERWISE, FOR OR IN CONNECTION WITH: (I) ANY ECONOMIC LOSSES, LOSS OF REVENUE, LOSS OF CUSTOMERS OR BUSINESS, LOSS OF OR DAMAGE TO REPUTATION OR GOODWILL, LOSS OF ANTICIPATED PROFITS, LOSS UNDER OR IN RELATION TO ANY OTHER CONTRACT, LOSS OF DATA OR INTERRUPTION OF SERVICES, LOSS OF ANTICIPATED SAVINGS OR BENEFITS, OR COVER OR ANALOGOUS COST RELATED TO THE PROCUREMENT OF REPLACEMENT SERVICES OR SOFTWARE; (II) ANY LOSSES, COSTS, EXPENSES OR DAMAGES ARISING OUT OF OR IN CONNECTION WITH ANY MALFUNCTIONS, REGULATORY NON-COMPLIANCE, DELAYS, PRODUCT LIABILITY, RELIANCE, BREACH OF ANY IMPLIED DUTY; OR (III) ANY LOSSES, COSTS, EXPENSES OR DAMAGES OTHER THAN DIRECT DAMAGES, INCLUDING WITHOUT LIMITATION, ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL OR PUNITIVE DAMAGES, LOSSES, COSTS OR EXPENSES. IN EACH CASE (I) THROUGH (III), WHETHER OR NOT FORESEEABLE; EVEN IF A PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, LOSSES, COSTS OR EXPENSES.');
-        ie_close('p');
-        ie_open('p');
-        itext('FOR ALL EVENTS AND CIRCUMSTANCES AND TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, THE AGGREGATE AND CUMULATIVE LIABILITY OF LIFERAY AND ITS AFFILIATES TO THE OTHER PARTY AND/OR ITS AFFILIATES ARISING OUT OF OR RELATING TO THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ON ACCOUNT OF PERFORMANCE OR NON-PERFORMANCE OF OBLIGATIONS, REGARDLESS OF THE FORM OF THE CAUSE OF ACTION, WHETHER IN CONTRACT, TORT (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE), STATUTE OR OTHERWISE WILL NOT EXCEED FIFTY UNITED STATES DOLLARS ($50).');
-        ie_close('p');
-        ie_open('h5');
-        itext('13. Indemnification');
-        ie_close('h5');
-        ie_open('p');
-        itext('If a third party makes a claim against Liferay or its Affiliates that Your Application, Content or other use of WeDeploy infringes any patent, copyright or trademark, or misappropriates any trade secret, then You shall indemnify and defend Liferay, its Affiliates, its directors, officers and employees against such a claim at Your expense and You shall pay all losses, damages and expenses (including reasonable attorneys\' fees) finally awarded against such parties or agreed to in a written settlement agreement signed by Liferay and/or its Affiliates, to the extent arising from the claim.');
-        ie_close('p');
-        ie_open('h5');
-        itext('14. Governing Law; Jurisdiction');
-        ie_close('h5');
-        ie_open('p');
-        itext('The validity, interpretation and enforcement of this Agreement (and any dispute or claim relating to it, or its formation, existence, construction, performance or termination) will be governed by and construed in accordance with the laws of the United States and of the State of California without giving effect to the conflicts of laws provisions thereof or the United Nations Convention on Contracts for the International Sale of Goods. All disputes or claims arising out of or relating to this Agreement or its subject matter will be submitted to the exclusive jurisdiction of the state or federal courts of competent jurisdiction located in Los Angeles County, California and each party irrevocably consents to such personal jurisdiction and waives all objections to this venue. In the event the Uniform Computer Information Transactions Act (UCITA) or any similar federal or state laws or regulations are enacted, it will not apply to this Agreement, and the governing law will remain as if such law or regulation had not been enacted.');
-        ie_close('p');
-        ie_open('h5');
-        itext('15. Notices');
-        ie_close('h5');
-        ie_open('p');
-        itext('All notices to Liferay permitted or required under this Agreement shall be in English, in writing and shall be delivered in person, by certified or registered express mail, by other nationally recognized overnight delivery service, electronic mail, or facsimile. Notices shall be deemed received the day of personal delivery, or in relation to transmission by electronic mail, at the time at which the notice enters an information system which is under the control of the recipient or in relation to facsimile, on receipt by the sender of an acknowledgment or transmission report generated by the machine from which the facsimile was sent that the facsimile was successfully sent in its entirety or five (5) days after deposit in the mail or with a nationally recognized overnight delivery service. End Users shall direct all notices to Liferay under this Agreement to the following address: Liferay, Inc., Attn: Legal Department, 1400 Montefino Avenue, Diamond Bar, California 91765; E-mail: legal@liferay.com; FAX: (866) 497-9792. All notices to End Users permitted or required under this Agreement shall be addressed to the e-mail address associated with an End Users Account and shall be deemed received immediately after being sent to the e-mail address provided to Liferay.');
-        ie_close('p');
-        ie_open('h5');
-        itext('16. Assignment');
-        ie_close('h5');
-        ie_open('p');
-        itext('You may not assign this Agreement or any of its rights or obligations under this Agreement without the Liferay\u2019s prior written consent. Liferay may assign this Agreement or any of its rights or obligations under this agreement (i) to any Affiliate, or (ii) in connection with any sale, transfer, or other disposition of all or substantially all of its business or assets.');
-        ie_close('p');
-        ie_open('h5');
-        itext('17. Force Majeure');
-        ie_close('h5');
-        ie_open('p');
-        itext('Neither party shall be liable to the other for failure or delay in the performance of a required obligation under this Agreement if such failure or delay is caused by acts of God, wars, riots, strikes, fire, terrorist acts, flood, explosion, failure or diminishment of power or of telecommunications or data networks or services, earthquake or other natural disaster, government regulation, or other similar cause beyond such party\'s reasonable control.');
-        ie_close('p');
-        ie_open('h5');
-        itext('18. Headings');
-        ie_close('h5');
-        ie_open('p');
-        itext('Headings to the sections of this Agreement are for convenience only and shall not have any effect on construction and interpretation of this Agreement. No provision shall be construed adversely to a party solely on the ground that the party was responsible for the preparation of this Agreement or that provision');
-        ie_close('p');
-        ie_open('h5');
-        itext('19. Entire Agreement');
-        ie_close('h5');
-        ie_open('p');
-        itext('This agreement contains all the terms agreed to by the parties relating to its subject matter. It replaces all previous discussions, understandings, and agreements.');
-        ie_close('p');
-        ie_open('h5');
-        itext('20. Severability');
-        ie_close('h5');
-        ie_open('p');
-        itext('If any part of this agreement is declared unenforceable or invalid, the remainder will continue to be valid and enforceable.');
-        ie_close('p');
-        ie_open('h5');
-        itext('21. Waiver');
-        ie_close('h5');
-        ie_open('p');
-        itext('A party\'s failure or neglect to enforce any of rights under this agreement will not be deemed to be a waiver of that party\'s rights.');
-        ie_close('p');
-        ie_open('h5');
-        itext('22. Waiver of Jury Trial');
-        ie_close('h5');
-        ie_open('p');
-        itext('TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, EACH PARTY WAIVES THE RIGHT TO TRIAL BY JURY IN ANY LEGAL PROCEEDING ARISING OUT OF OR RELATING TO THIS AGREEMENT OR THE TRANSACTIONS CONTEMPLATED UNDER THIS AGREEMENT.');
-        ie_close('p');
-        ie_open('h5');
-        itext('23. Agreement Updates');
-        ie_close('h5');
-        ie_open('p');
-        itext('Liferay reserves the right to update this Agreement from time to time by posting an updated version no later than thirty (30) days prior to the posted effective date of such update. Your continued use and access of WeDeploy after the posted effective date signifies your acceptance to the updated Agreement.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article');
-        ie_open('h3');
-        itext('Appendix A: WeDeploy Acceptable Use Policy');
-        ie_close('h3');
-        ie_open('h5');
-        itext('1. Content');
-        ie_close('h5');
-        ie_open('p');
-        itext('Your use of WeDeploy is subject to all applicable laws and regulations, and You agree not to violate such laws and/or regulations. In addition, You agree not to insert, upload, contribute, share, post, distribute, transmit or otherwise promote or facilitate Content that, including but not limited to: (a) is illegal; (b) violates, misappropriates or infringes the third party intellectual property rights of others; (c) solicits, encourages, or promotes use of illegal substances or activities; (d) is threatening, abusive, harassing, defamatory, slanderous, libelous, derogatory, or violent; (e) is invasive of a third party\u2019s legal rights, including privacy or publicity rights; (f) is vulgar, obscene, bigoted, hateful, or that advocates racial or ethnic intolerance; (g) is profane, scandalous, pornographic, indecent, or otherwise objectionable; (h) is malicious or contains technology that may damage, interfere with, or intercept any system, program or data, including viruses, trojan horses, worms, time bombs or other harmful or disruptive components.');
-        ie_close('p');
-        ie_open('h5');
-        itext('2. Conduct');
-        ie_close('h5');
-        ie_open('p');
-        itext('Liferay provides access to WeDeploy for use and purposes in conformance with applicable documentation and/or as otherwise generally described by Liferay and not for interfering with other users enjoyment of WeDeploy or to harass other users or third parties. You are prohibited from conduct, including but not limited to: (a) using WeDeploy for any act or action that gives rise to civil or criminal liability for Yourself or for Liferay or otherwise violates any applicable law or regulation; (b) engaging in any activity that inappropriately restricts or inhibits any other user from using or enjoying WeDeploy, including hacking, cracking, spoofing, or defacing any portion of WeDeploy; (c) posting, distributing, or transmitting chain letters, mass mailings, spam mail, any robot, spider, site search/retrieval application, or other manual or automatic device or process to retrieve or index data or "data mine"; (d) harvesting or collecting information about other WeDeploy users without their express written consent; (e) interfering with others\u2019 use and enjoyment of WeDeploy, including intentionally attempting to overload any portion of WeDeploy; (f) launching or facilitating a denial of service attack from or on WeDeploy or (g) using WeDeploy in connection with illegal or unlawful sharing.');
-        ie_close('p');
-        ie_open('h5');
-        itext('3. Security');
-        ie_close('h5');
-        ie_open('p');
-        itext('You may not use WeDeploy in any manner that would comprise or violate the security of WeDeploy or other users of WeDeploy, including but not limited to: (a) accessing or using WeDeploy in violation of law, any applicable terms and conditions, or without permission, attempting to test the vulnerability of the security of WeDeploy or to breach any of the security measures of WeDeploy; (b) imitating or impersonating another person or his or her email address or creating false accounts intended to misrepresent yourself or the source of your email; (c) intercepting or monitoring activity on WeDeploy without permission or (d) using any means to circumvent the security limitations of WeDeploy.');
-        ie_close('p');
-        ie_open('h5');
-        itext('4. Reporting');
-        ie_close('h5');
-        ie_open('p');
-        itext('Liferay encourages You to report violations of this Acceptable Use Policy to Liferay. Liferay has the right, but not the obligation, to monitor Your activity and Content to determine Your compliance with this Acceptable Use Policy. Liferay has the right in its sole discretion to monitor your activity and Content within any part of WeDeploy accessible to other users such as chat rooms or discussion forums to determine compliance with this Acceptable Use Policy. Liferay has the right in its sole discretion to edit, refuse to post or remove any material submitted to or posted on a Liferay website or WeDeploy that Liferay finds to be in violation of this Acceptable Use Policy or is otherwise objectionable. You are solely responsible for Your activities and any Content You post, transmit, or otherwise make available on a Liferay website or WeDeploy. You acknowledge and agree that Liferay does not have any liability for any action or inaction with respect to your Conduct, communication or posting on a Liferay website or WeDeploy. Liferay may report any activity Liferay believes may violate any law to law enforcement, regulators, or other relevant third parties.');
-        ie_close('p');
-        ie_open('h5');
-        itext('5. Trademarks');
-        ie_close('h5');
-        ie_open('p');
-        itext('The trademarks, trade names, service marks and logos of Liferay, Liferay\u2019s Affiliates and third parties used in the Liferay websites and other WeDeploy ("Trademarks") are the property of Liferay, Liferay\u2019s Affiliates or the third parties. You have no right to use any such Trademarks, and nothing contained in WeDeploy or this Policy grants any right to use (by implication, waiver, estoppel or otherwise) any Trademarks without the prior written permission of Liferay, Liferay\u2019s Affiliate or the respective third party owner. Please see www.liferay.com/trademark.');
-        ie_close('p');
-        ie_open('h5');
-        itext('6. Linking');
-        ie_close('h5');
-        ie_open('p');
-        itext('You may encounter links to non-Liferay sites or services while using WeDeploy, which should not be interpreted as endorsement of Liferay of such third party sites or the company, products, services or content to which they link as such sites are not under Liferay control and Liferay is not responsible for the content of any linked site or any link contained in a linked site. If You decide to access any third party site, product or service linked through WeDeploy, you do so at your own risk.');
-        ie_close('p');
-        ie_open('h5');
-        itext('7. Updates');
-        ie_close('h5');
-        ie_open('p');
-        itext('Liferay reserves the right to update this Policy from time to time by posting an updated version no later than thirty (30) days prior to the posted effective date of such update. Your continued use and access of WeDeploy after the posted effective date signifies your acceptance to the updated Policy.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param479 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'terms.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var terms = function (_Component) {
-    babelHelpers.inherits(terms, _Component);
-
-    function terms() {
-      babelHelpers.classCallCheck(this, terms);
-      return babelHelpers.possibleConstructorReturn(this, (terms.__proto__ || Object.getPrototypeOf(terms)).apply(this, arguments));
-    }
-
-    return terms;
-  }(Component);
-
-  Soy.register(terms, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['terms'] = terms;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var terms = function (_Component) {
-    babelHelpers.inherits(terms, _Component);
-
-    function terms() {
-      babelHelpers.classCallCheck(this, terms);
-      return babelHelpers.possibleConstructorReturn(this, (terms.__proto__ || Object.getPrototypeOf(terms)).apply(this, arguments));
-    }
-
-    return terms;
-  }(Component);
-
-  ;
-
-  Soy.register(terms, templates);
-
-  this['metal']['terms'] = terms;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageTutorialsIndex.
-     * @public
-     */
-
-    goog.module('pageTutorialsIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {}
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageTutorialsIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $soyweb(opt_data, opt_ignored, opt_ijData) {
-      ie_open('!DOCTYPE', null, null, 'html', '');
-      ie_open('html', null, null, 'lang', 'en');
-      ie_open('head');
-      ie_open('meta', null, null, 'charset', 'UTF-8');
-      ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/hosting-tutorial/getting-started.html\'');
-      ie_close('meta');
-      ie_close('head');
-      ie_close('html');
-    }
-    exports.soyweb = $soyweb;
-    if (goog.DEBUG) {
-      $soyweb.soyTemplateName = 'pageTutorialsIndex.soyweb';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.soyweb.params = [];
-    exports.soyweb.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var pageTutorialsIndex = function (_Component) {
-    babelHelpers.inherits(pageTutorialsIndex, _Component);
-
-    function pageTutorialsIndex() {
-      babelHelpers.classCallCheck(this, pageTutorialsIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageTutorialsIndex.__proto__ || Object.getPrototypeOf(pageTutorialsIndex)).apply(this, arguments));
-    }
-
-    return pageTutorialsIndex;
-  }(Component);
-
-  Soy.register(pageTutorialsIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageTutorialsIndex'] = pageTutorialsIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageTutorialsIndex = function (_Component) {
-    babelHelpers.inherits(pageTutorialsIndex, _Component);
-
-    function pageTutorialsIndex() {
-      babelHelpers.classCallCheck(this, pageTutorialsIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageTutorialsIndex.__proto__ || Object.getPrototypeOf(pageTutorialsIndex)).apply(this, arguments));
-    }
-
-    return pageTutorialsIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageTutorialsIndex, templates);
-
-  this['metal']['pageTutorialsIndex'] = pageTutorialsIndex;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
     // This file was automatically generated from environment-variables-new-java-service-and-multiple-custom-domains.soy.
     // Please don't edit this file by hand.
 
@@ -28442,6 +27748,720 @@ babelHelpers;
   Soy.register(pageBlogIndex, templates);
 
   this['metal']['pageBlogIndex'] = pageBlogIndex;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageDocsIndex.
+     * @public
+     */
+
+    goog.module('pageDocsIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      opt_data = opt_data || {};
+      var param490 = function param490() {
+        $topics(opt_data, null, opt_ijData);
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param490 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageDocsIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $topics(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'class', 'container-hybrid docs-home-top');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 col-md-16 col-md-offset-0');
+      ie_open('h1', null, null, 'class', 'docs-home-top-title');
+      itext('WeDeploy Docs Center');
+      ie_close('h1');
+      ie_open('p', null, null, 'class', 'docs-home-top-description');
+      itext('Start learning how to leverage the power of ');
+      var dyn36 = opt_data.site.title;
+      if (typeof dyn36 == 'function') dyn36();else if (dyn36 != null) itext(dyn36);
+      itext(' in your project.');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('div', null, null, 'class', 'container-hybrid');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 col-md-10 col-md-offset-3 col-lg-6 col-lg-offset-5');
+      ie_open('div', null, null, 'class', 'search');
+      $templateAlias2({ maxResults: 3, path: '/docs/', placeholder: 'Enter a search term here' }, null, opt_ijData);
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'docs-home-topics');
+      ie_open('div', null, null, 'class', 'container-hybrid');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 ');
+      ie_open('section', null, null, 'class', 'docs-home-middle');
+      ie_open('h2', null, null, 'class', 'docs-home-middle-subtitle');
+      itext('Choose a Guide');
+      ie_close('h2');
+      ie_open('p', null, null, 'class', 'docs-home-middle-description');
+      itext('Each one provide step by step coverage for every core feature.');
+      ie_close('p');
+      ie_close('section');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('div', null, null, 'class', 'col-md-12 col-md-offset-2 col-xs-16');
+      ie_open('div', null, null, 'class', 'row');
+      var childIdList511 = opt_data.page.childIds;
+      var childIdListLen511 = childIdList511.length;
+      for (var childIdIndex511 = 0; childIdIndex511 < childIdListLen511; childIdIndex511++) {
+        var childIdData511 = childIdList511[childIdIndex511];
+        if (!opt_data.page.children[childIdData511].hidden) {
+          ie_open('div', null, null, 'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
+          ie_open('a', null, null, 'class', 'topic radial-out', 'href', opt_data.page.children[childIdData511].url);
+          ie_open('div', null, null, 'class', 'topic-icon');
+          ie_void('span', null, null, 'class', 'icon-16-' + opt_data.page.children[childIdData511].icon);
+          ie_close('div');
+          ie_open('h3', null, null, 'class', 'topic-title');
+          var dyn37 = opt_data.page.children[childIdData511].title;
+          if (typeof dyn37 == 'function') dyn37();else if (dyn37 != null) itext(dyn37);
+          ie_close('h3');
+          ie_close('a');
+          ie_close('div');
+        }
+      }
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.topics = $topics;
+    if (goog.DEBUG) {
+      $topics.soyTemplateName = 'pageDocsIndex.topics';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.topics.params = ["page", "site"];
+    exports.topics.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var pageDocsIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsIndex, _Component);
+
+    function pageDocsIndex() {
+      babelHelpers.classCallCheck(this, pageDocsIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsIndex.__proto__ || Object.getPrototypeOf(pageDocsIndex)).apply(this, arguments));
+    }
+
+    return pageDocsIndex;
+  }(Component);
+
+  Soy.register(pageDocsIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageDocsIndex'] = pageDocsIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageDocsIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsIndex, _Component);
+
+    function pageDocsIndex() {
+      babelHelpers.classCallCheck(this, pageDocsIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsIndex.__proto__ || Object.getPrototypeOf(pageDocsIndex)).apply(this, arguments));
+    }
+
+    return pageDocsIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageDocsIndex, templates);
+
+  this['metal']['pageDocsIndex'] = pageDocsIndex;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace terms.
+     * @public
+     */
+
+    goog.module('terms.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('termsPage.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param479 = function param479() {
+        ie_open('article');
+        ie_open('h3');
+        var dyn35 = opt_data.page.description;
+        if (typeof dyn35 == 'function') dyn35();else if (dyn35 != null) itext(dyn35);
+        ie_close('h3');
+        ie_open('p');
+        itext('PLEASE READ THIS AGREEMENT CAREFULLY BEFORE PURCHASING AND/OR USING WEDEPLOY. BY USING WEDEPLOY, END USER SIGNIFIES ITS ASSENT TO AND ACCEPTANCE OF THIS AGREEMENT AND ACKNOWLEDGES IT HAS READ AND UNDERSTANDS THIS AGREEMENT. AN INDIVIDUAL ACTING ON BEHALF OF AN ENTITY REPRESENTS THAT HE OR SHE HAS THE AUTHORITY TO ENTER INTO THIS AGREEMENT ON BEHALF OF THAT ENTITY. IF END USER DOES NOT ACCEPT THE TERMS OF THIS AGREEMENT, THEN IT MUST NOT USE WEDEPLOY.');
+        ie_close('p');
+        ie_open('p');
+        itext('This Liferay WeDeploy Alpha Services Agreement, including all referenced appendices and documents located at URLs (the ');
+        ie_open('strong');
+        itext('"Agreement"');
+        ie_close('strong');
+        itext('), is between Liferay, Inc. (');
+        ie_open('strong');
+        itext('"Liferay"');
+        ie_close('strong');
+        itext(') with a principal place of business at 1400 Montefino Ave, Diamond Bar, CA 91765 and the user of WeDeploy (');
+        ie_open('strong');
+        itext('"WeDeploy"');
+        ie_close('strong');
+        itext(') who accepts the terms of this Agreement (');
+        ie_open('strong');
+        itext('"You"');
+        ie_close('strong');
+        itext(' or ');
+        ie_open('strong');
+        itext('"End User"');
+        ie_close('strong');
+        itext('). The effective date of this Agreement is the earlier of the date that End User accepts this Agreement or the date that End User uses WeDeploy (');
+        ie_open('strong');
+        itext('"Effective Date"');
+        ie_close('strong');
+        itext(').');
+        ie_close('p');
+        ie_open('h5');
+        itext('1. Definitions');
+        ie_close('h5');
+        ie_open('p');
+        ie_open('strong');
+        itext('"Account"');
+        ie_close('strong');
+        itext(' means the individual account each End User must create and use to access WeDeploy.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('"Acceptable Use Policy"');
+        ie_close('strong');
+        itext(' means the WeDeploy Acceptable Use Policy set forth in Appendix A, attached to this Agreement.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('"Affiliate"');
+        ie_close('strong');
+        itext(' means in the case of a company, an entity that owns or controls, is owned or controlled by, or is under common control or ownership with a party, where \u2018control\u2019 is the possession, direct or indirect, of the power to direct or cause the direction of the management and policies of an entity, whether though ownership of voting shares, by contract or otherwise.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('"Application(s)"');
+        ie_close('strong');
+        itext(' means the web application(s) that an End User creates and makes available through the use of WeDeploy.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('"Alpha Term"');
+        ie_close('strong');
+        itext(' means the period of time Liferay makes the "alpha" version of WeDeploy available to the general public.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('"Content"');
+        ie_close('strong');
+        itext(' means any content or data whether developed in connection with WeDeploy or otherwise, software code, documentation, materials, information, text files, images and/or trademarks associated with Your Account, Application or any other use of WeDeploy and not provided by Liferay.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('"Liferay Software and/or Services"');
+        ie_close('strong');
+        itext(' means the software and/or services made available through WeDeploy for End User to build an Application that is owned by, maintained by, or is a community project sponsored by Liferay.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('"Privacy Policy"');
+        ie_close('strong');
+        itext(' means Liferay\u2019s privacy policy set forth at https://www.liferay.com/privacy-policy.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('"Service Level"');
+        ie_close('strong');
+        itext(' means the resources allotted per each End User Account within the WeDeploy web service.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('"Third Party Software and/or Services"');
+        ie_close('strong');
+        itext(' means the software and/or services made available through WeDeploy for End User to build an Application that is not owned or maintained by Liferay.');
+        ie_close('p');
+        ie_open('h5');
+        itext('2. Accounts');
+        ie_close('h5');
+        ie_open('p');
+        itext('An End User is required to create and maintain an Account to access and use Liferay WeDeploy to create Applications by providing a valid email address and creating a password. End Users may not create multiple Accounts to increase the Service Level provided for each End User. Each End User remains fully responsible for any activity through an End User\u2019s Account.');
+        ie_close('p');
+        ie_open('h5');
+        itext('3. Use');
+        ie_close('h5');
+        ie_open('p');
+        itext('Liferay grants End User a non-exclusive, non-assignable, worldwide right to access and use WeDeploy for the Alpha Term solely for the Customer\'s evaluation and testing of WeDeploy and subject to the terms herein. Each End User is responsible for determining the suitability of WeDeploy for each End User\u2019s individual use, including with respect to any laws and/or regulations relating to data protection or privacy. After the Alpha Term, WeDeploy may be made available under a separate agreement for use other than solely for evaluation and subject to terms that vary from this Agreement. You understand that Lifeary is not obligated to provide You access to WeDeploy, your Application or your Content after expiration of the Alpha Term. You are responsible for backing up your Application, Content or other data. Liferay\u2019s provision of the WeDeploy under this Agreement does not require Liferay to meet any service level agreements, promises, or uptimes. Liferay retains all right, title, and interest in WeDeploy.');
+        ie_close('p');
+        ie_open('h5');
+        itext('4. Content');
+        ie_close('h5');
+        ie_open('p');
+        itext('Each End User is responsible for the Content made available through use of WeDeploy, including but not limited to the Content\u2019s compliance with law, the Content\u2019s compliance with the Acceptable Use Policy, the right to use such Content, and administering take down notices related to the Content. Liferay however reserves the right to suspend or terminate an End User\u2019s use of or access to WeDeploy immediately and without liability to a End User if any Content breaks any applicable law, requires additional consent or permission a End User has not obtained, or does not comply with the Acceptable Use Policy. An End User may be required upon a reasonable request by Liferay to provide Content or other information as may be reasonably necessary to ensure a End User\u2019s compliance with the Acceptable Use Policy. End Users are prohibited from using WeDeploy to store, create, or deploy Content that is regulated under the International Traffic in Arms Regulations (ITAR).');
+        ie_close('p');
+        ie_open('h5');
+        itext('5. Third Party Software and Services');
+        ie_close('h5');
+        ie_open('p');
+        itext('Certain Third Party Software and/or Services may be made available for use through WeDeploy for an End User to create its own Application(s). Each End User is fully responsible for the choice of any Third Party Software and/or Services within an End User\u2019s Application. The availability of such Third Party Software and/or Services does not constitute and endorsement by Liferay. The terms and/or conditions that apply to an End User\u2019s use of any Third Party Software and/or Services within a End User\u2019s Application are as solely agreed upon between a End User and the Third Party Software and/or Services provider. If an End User chooses to use Third Party Software and/or Services within an End User\u2019s Application, Liferay may be required to grant the Third Party Software and/or Services provider access to a End User\u2019s Content or Account to the extent necessary to provide the Third Party Software and/or Services or for interoperability with the Third Party Software and/or Services. Third Party Services may be removed from or no longer available through WeDeploy at any time, for example but not limited to if a take down is required by law or due to inconsistent interoperability.');
+        ie_close('p');
+        ie_open('h5');
+        itext('6. Provision of Services');
+        ie_close('h5');
+        ie_open('p');
+        itext('You give Liferay, its Affiliates, subcontractors, and vendors a worldwide, royalty-free, non-exclusive license to (a) host the Content provided by You through Your use of WeDeploy, and (b) display the Content provided by You through Your use of WeDeploy accessible by other users. You represent and warrant that you own all rights in, or have received a valid license to use the Content, with rights or license sufficient to enable any activities in connection with WeDeploy. You must provide all required and appropriate warnings, information and disclosures as may be required due to the nature of the Content. You are solely responsible for backing up Content and otherwise using measures, as You deem necessary to ensure that Content is not lost.');
+        ie_close('p');
+        ie_open('h5');
+        itext('7. Fees');
+        ie_close('h5');
+        ie_open('p');
+        itext('There are currently no fees associated with an End Users use of WeDeploy during the Alpha Term. Use of WeDeploy may be subject to fees under a separate agreement upon conclusion of the Alpha Term.');
+        ie_close('p');
+        ie_open('h5');
+        itext('8. Term and Termination');
+        ie_close('h5');
+        ie_open('p');
+        itext('This Agreement will terminate upon expiration of the Alpha Term. Sections # will survive termination of this agreement.');
+        ie_close('p');
+        ie_open('h5');
+        itext('9. Feedback');
+        ie_close('h5');
+        ie_open('p');
+        itext('End Users may choose to submit, including but not limited to, comments, information, feedback, enhancement requests, recommendations, corrections, and ideas regarding Liferay\u2019s products or services (collectively "Feedback") to Liferay in order for Liferay to improve its products and services. If End Users do not want Liferay to improve the products and services using Feedback, please do not submit the Feedback. If you do submit Feedback, Liferay may incorporate such Suggestions as Liferay\u2019s own into its product and services without any obligation to account to You in any way and Liferay shall be the owner of any products and services it creates as a result of Your Feedback. Liferay may use solutions or technologies that monitor an End Users usage statistics while using WeDeploy. Liferay will only use such usage statistics related to an End User Account in accordance with the Privacy Policy and only to improve WeDeploy or to assist an End User in its use of WeDeploy.');
+        ie_close('p');
+        ie_open('h5');
+        itext('10. Data');
+        ie_close('h5');
+        ie_open('p');
+        itext('To provide Liferay WeDeploy to End Users, Liferay may transfer an End User\u2019s Content or other information between Liferay, its Affiliates, vendors, and/or subcontractors, which may be located worldwide. Liferay\u2019s Affiliates and/or subcontractors are acting as data processors on behalf of an End User, and may process the Content to provide Liferay WeDeploy. Each End User is responsible for obtaining any necessary consents from users whose sensitive data or other Content is hosted in an End User\u2019s Application. Any Content or other data used by an End User in an Application an run on Liferay WeDeploy will be subject to and may be used in accordance with the Privacy Policy. Each End User that creates an Application for End Users agrees to protect the privacy of the Application\u2019s End Users, including implementing appropriate policies and safeguards (that at minimum contain terms substantially similar to those in the Privacy Policy) and notifying such End Users that their data will be stored on facilities accessible to Liferay, its Affiliates, vendors and/or subcontractors. Liferay may provide information including but not limited to Content and information concerning your Account as required by law or to establish or to exercise its legal rights to defend itself against claims without liability.');
+        ie_close('p');
+        ie_open('h5');
+        itext('11. Warranties');
+        ie_close('h5');
+        ie_open('p');
+        itext('You represent and warrant that (a) Your use of WeDeploy you will comply with all applicable laws and regulations; (b) You will comply with the Acceptable Use Policy when using WeDeploy; (c) You have the rights in the Content and Application to use such Content and Application with WeDeploy; (d) Your Content and Application do not infringe a third party\u2019s intellectual property rights (e); You will take all reasonable security precautions when using WeDeploy; and (f) You will not reverse engineer or attempt to reverse engineer WeDeploy.');
+        ie_close('p');
+        ie_open('p');
+        itext('TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WEDEPLOY (INCLUDING ANY SOFTWARE) AS PROVIDED BY LIFERAY AND ITS AFFILIATES ARE PROVIDED AND LICENSED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTY OF QUALITY, MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE, AND SUCH IMPLIED WARRANTIES, AND ANY OTHER WARRANTIES, REPRESENTATIONS, CONDITIONS AND TERMS, EXPRESS OR IMPLIED (AND WHETHER IMPLIED BY STATUTE, COMMON LAW, COURSE OF DEALING, TRADE USAGE OR OTHERWISE) ARE HEREBY EXCLUDED TO THE FULLEST EXTENT PERMITTED BY LAW. LIFERAY AND ITS AFFILIATES DO NOT GUARANTEE THAT WEDEPLOY OR ANY SOFTWARE OR SERVICES PROVIDED UNDER THIS AGREEMENT HAVE BEEN DESIGNED TO MEET CUSTOMER\u2019S SPECIFIC BUSINESS REQUIREMENTS, THE USE OF WEDEPLOY SERVICES OR SOFTWARE WILL BE UNINTERRUPTED OR ERROR FREE, COMPLY WITH LEGAL OR REGULATORY REQUIREMENTS APPLICABLE TO CUSTOMER, OR THAT LIFERAY WILL CORRECT ALL ERRORS. END USER AGREES THAT IT IS SOLELY RESPONSIBLE FOR THE RESULTS OBTAINED FROM THE USE WEDEPLOY SERVICES AND SOFTWARE PROVIDED UNDER THIS AGREEMENT.');
+        ie_close('p');
+        ie_open('p');
+        itext('WITHOUT LIMITING THE GENERALITY OF THE FOREGOING DISCLAIMER, WEDEPLOY SERVICES AND ANY SOFTWARE PROVIDED UNDER THIS AGREEMENT ARE NOT SPECIFICALLY DESIGNED, MANUFACTURED OR INTENDED FOR USE IN (I) FACILITIES OR ENVIRONMENTS REQUIRING FAILSAFE PERFORMANCE, INCLUDING BUT NOT LIMITED TO (A) THE PLANNING, CONSTRUCTION, MAINTENANCE, CONTROL, OR DIRECT OPERATION OF NUCLEAR FACILITIES, (B) AIRCRAFT NAVIGATION, CONTROL OR COMMUNICATION SYSTEMS, WEAPONS SYSTEMS, (C) DIRECT LIFE SUPPORT SYSTEMS OR (II) ULTRA-HAZARDOUS OR STRICT LIABILITY ACTIVITIES AND THE CUSTOMER IS SOLELY RESPONSIBLE AND EXPRESSLY ASSUMES ALL RISK FOR ANY SUCH USE.');
+        ie_close('p');
+        ie_open('h5');
+        itext('12. Limitation of Liability');
+        ie_close('h5');
+        ie_open('p');
+        itext('NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED IN THIS AGREEMENT AND TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, IN NO EVENT WILL LIFERAY OR ITS AFFILIATES HAVE ANY LIABILITY TO END USER AND/OR ITS AFFILIATES, UNDER ANY LEGAL OR EQUITABLE THEORY, WHETHER IN CONTRACT, TORT (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE), PRODUCT LIABILITY, STATUTE OR OTHERWISE, FOR OR IN CONNECTION WITH: (I) ANY ECONOMIC LOSSES, LOSS OF REVENUE, LOSS OF CUSTOMERS OR BUSINESS, LOSS OF OR DAMAGE TO REPUTATION OR GOODWILL, LOSS OF ANTICIPATED PROFITS, LOSS UNDER OR IN RELATION TO ANY OTHER CONTRACT, LOSS OF DATA OR INTERRUPTION OF SERVICES, LOSS OF ANTICIPATED SAVINGS OR BENEFITS, OR COVER OR ANALOGOUS COST RELATED TO THE PROCUREMENT OF REPLACEMENT SERVICES OR SOFTWARE; (II) ANY LOSSES, COSTS, EXPENSES OR DAMAGES ARISING OUT OF OR IN CONNECTION WITH ANY MALFUNCTIONS, REGULATORY NON-COMPLIANCE, DELAYS, PRODUCT LIABILITY, RELIANCE, BREACH OF ANY IMPLIED DUTY; OR (III) ANY LOSSES, COSTS, EXPENSES OR DAMAGES OTHER THAN DIRECT DAMAGES, INCLUDING WITHOUT LIMITATION, ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL OR PUNITIVE DAMAGES, LOSSES, COSTS OR EXPENSES. IN EACH CASE (I) THROUGH (III), WHETHER OR NOT FORESEEABLE; EVEN IF A PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, LOSSES, COSTS OR EXPENSES.');
+        ie_close('p');
+        ie_open('p');
+        itext('FOR ALL EVENTS AND CIRCUMSTANCES AND TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, THE AGGREGATE AND CUMULATIVE LIABILITY OF LIFERAY AND ITS AFFILIATES TO THE OTHER PARTY AND/OR ITS AFFILIATES ARISING OUT OF OR RELATING TO THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ON ACCOUNT OF PERFORMANCE OR NON-PERFORMANCE OF OBLIGATIONS, REGARDLESS OF THE FORM OF THE CAUSE OF ACTION, WHETHER IN CONTRACT, TORT (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE), STATUTE OR OTHERWISE WILL NOT EXCEED FIFTY UNITED STATES DOLLARS ($50).');
+        ie_close('p');
+        ie_open('h5');
+        itext('13. Indemnification');
+        ie_close('h5');
+        ie_open('p');
+        itext('If a third party makes a claim against Liferay or its Affiliates that Your Application, Content or other use of WeDeploy infringes any patent, copyright or trademark, or misappropriates any trade secret, then You shall indemnify and defend Liferay, its Affiliates, its directors, officers and employees against such a claim at Your expense and You shall pay all losses, damages and expenses (including reasonable attorneys\' fees) finally awarded against such parties or agreed to in a written settlement agreement signed by Liferay and/or its Affiliates, to the extent arising from the claim.');
+        ie_close('p');
+        ie_open('h5');
+        itext('14. Governing Law; Jurisdiction');
+        ie_close('h5');
+        ie_open('p');
+        itext('The validity, interpretation and enforcement of this Agreement (and any dispute or claim relating to it, or its formation, existence, construction, performance or termination) will be governed by and construed in accordance with the laws of the United States and of the State of California without giving effect to the conflicts of laws provisions thereof or the United Nations Convention on Contracts for the International Sale of Goods. All disputes or claims arising out of or relating to this Agreement or its subject matter will be submitted to the exclusive jurisdiction of the state or federal courts of competent jurisdiction located in Los Angeles County, California and each party irrevocably consents to such personal jurisdiction and waives all objections to this venue. In the event the Uniform Computer Information Transactions Act (UCITA) or any similar federal or state laws or regulations are enacted, it will not apply to this Agreement, and the governing law will remain as if such law or regulation had not been enacted.');
+        ie_close('p');
+        ie_open('h5');
+        itext('15. Notices');
+        ie_close('h5');
+        ie_open('p');
+        itext('All notices to Liferay permitted or required under this Agreement shall be in English, in writing and shall be delivered in person, by certified or registered express mail, by other nationally recognized overnight delivery service, electronic mail, or facsimile. Notices shall be deemed received the day of personal delivery, or in relation to transmission by electronic mail, at the time at which the notice enters an information system which is under the control of the recipient or in relation to facsimile, on receipt by the sender of an acknowledgment or transmission report generated by the machine from which the facsimile was sent that the facsimile was successfully sent in its entirety or five (5) days after deposit in the mail or with a nationally recognized overnight delivery service. End Users shall direct all notices to Liferay under this Agreement to the following address: Liferay, Inc., Attn: Legal Department, 1400 Montefino Avenue, Diamond Bar, California 91765; E-mail: legal@liferay.com; FAX: (866) 497-9792. All notices to End Users permitted or required under this Agreement shall be addressed to the e-mail address associated with an End Users Account and shall be deemed received immediately after being sent to the e-mail address provided to Liferay.');
+        ie_close('p');
+        ie_open('h5');
+        itext('16. Assignment');
+        ie_close('h5');
+        ie_open('p');
+        itext('You may not assign this Agreement or any of its rights or obligations under this Agreement without the Liferay\u2019s prior written consent. Liferay may assign this Agreement or any of its rights or obligations under this agreement (i) to any Affiliate, or (ii) in connection with any sale, transfer, or other disposition of all or substantially all of its business or assets.');
+        ie_close('p');
+        ie_open('h5');
+        itext('17. Force Majeure');
+        ie_close('h5');
+        ie_open('p');
+        itext('Neither party shall be liable to the other for failure or delay in the performance of a required obligation under this Agreement if such failure or delay is caused by acts of God, wars, riots, strikes, fire, terrorist acts, flood, explosion, failure or diminishment of power or of telecommunications or data networks or services, earthquake or other natural disaster, government regulation, or other similar cause beyond such party\'s reasonable control.');
+        ie_close('p');
+        ie_open('h5');
+        itext('18. Headings');
+        ie_close('h5');
+        ie_open('p');
+        itext('Headings to the sections of this Agreement are for convenience only and shall not have any effect on construction and interpretation of this Agreement. No provision shall be construed adversely to a party solely on the ground that the party was responsible for the preparation of this Agreement or that provision');
+        ie_close('p');
+        ie_open('h5');
+        itext('19. Entire Agreement');
+        ie_close('h5');
+        ie_open('p');
+        itext('This agreement contains all the terms agreed to by the parties relating to its subject matter. It replaces all previous discussions, understandings, and agreements.');
+        ie_close('p');
+        ie_open('h5');
+        itext('20. Severability');
+        ie_close('h5');
+        ie_open('p');
+        itext('If any part of this agreement is declared unenforceable or invalid, the remainder will continue to be valid and enforceable.');
+        ie_close('p');
+        ie_open('h5');
+        itext('21. Waiver');
+        ie_close('h5');
+        ie_open('p');
+        itext('A party\'s failure or neglect to enforce any of rights under this agreement will not be deemed to be a waiver of that party\'s rights.');
+        ie_close('p');
+        ie_open('h5');
+        itext('22. Waiver of Jury Trial');
+        ie_close('h5');
+        ie_open('p');
+        itext('TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, EACH PARTY WAIVES THE RIGHT TO TRIAL BY JURY IN ANY LEGAL PROCEEDING ARISING OUT OF OR RELATING TO THIS AGREEMENT OR THE TRANSACTIONS CONTEMPLATED UNDER THIS AGREEMENT.');
+        ie_close('p');
+        ie_open('h5');
+        itext('23. Agreement Updates');
+        ie_close('h5');
+        ie_open('p');
+        itext('Liferay reserves the right to update this Agreement from time to time by posting an updated version no later than thirty (30) days prior to the posted effective date of such update. Your continued use and access of WeDeploy after the posted effective date signifies your acceptance to the updated Agreement.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article');
+        ie_open('h3');
+        itext('Appendix A: WeDeploy Acceptable Use Policy');
+        ie_close('h3');
+        ie_open('h5');
+        itext('1. Content');
+        ie_close('h5');
+        ie_open('p');
+        itext('Your use of WeDeploy is subject to all applicable laws and regulations, and You agree not to violate such laws and/or regulations. In addition, You agree not to insert, upload, contribute, share, post, distribute, transmit or otherwise promote or facilitate Content that, including but not limited to: (a) is illegal; (b) violates, misappropriates or infringes the third party intellectual property rights of others; (c) solicits, encourages, or promotes use of illegal substances or activities; (d) is threatening, abusive, harassing, defamatory, slanderous, libelous, derogatory, or violent; (e) is invasive of a third party\u2019s legal rights, including privacy or publicity rights; (f) is vulgar, obscene, bigoted, hateful, or that advocates racial or ethnic intolerance; (g) is profane, scandalous, pornographic, indecent, or otherwise objectionable; (h) is malicious or contains technology that may damage, interfere with, or intercept any system, program or data, including viruses, trojan horses, worms, time bombs or other harmful or disruptive components.');
+        ie_close('p');
+        ie_open('h5');
+        itext('2. Conduct');
+        ie_close('h5');
+        ie_open('p');
+        itext('Liferay provides access to WeDeploy for use and purposes in conformance with applicable documentation and/or as otherwise generally described by Liferay and not for interfering with other users enjoyment of WeDeploy or to harass other users or third parties. You are prohibited from conduct, including but not limited to: (a) using WeDeploy for any act or action that gives rise to civil or criminal liability for Yourself or for Liferay or otherwise violates any applicable law or regulation; (b) engaging in any activity that inappropriately restricts or inhibits any other user from using or enjoying WeDeploy, including hacking, cracking, spoofing, or defacing any portion of WeDeploy; (c) posting, distributing, or transmitting chain letters, mass mailings, spam mail, any robot, spider, site search/retrieval application, or other manual or automatic device or process to retrieve or index data or "data mine"; (d) harvesting or collecting information about other WeDeploy users without their express written consent; (e) interfering with others\u2019 use and enjoyment of WeDeploy, including intentionally attempting to overload any portion of WeDeploy; (f) launching or facilitating a denial of service attack from or on WeDeploy or (g) using WeDeploy in connection with illegal or unlawful sharing.');
+        ie_close('p');
+        ie_open('h5');
+        itext('3. Security');
+        ie_close('h5');
+        ie_open('p');
+        itext('You may not use WeDeploy in any manner that would comprise or violate the security of WeDeploy or other users of WeDeploy, including but not limited to: (a) accessing or using WeDeploy in violation of law, any applicable terms and conditions, or without permission, attempting to test the vulnerability of the security of WeDeploy or to breach any of the security measures of WeDeploy; (b) imitating or impersonating another person or his or her email address or creating false accounts intended to misrepresent yourself or the source of your email; (c) intercepting or monitoring activity on WeDeploy without permission or (d) using any means to circumvent the security limitations of WeDeploy.');
+        ie_close('p');
+        ie_open('h5');
+        itext('4. Reporting');
+        ie_close('h5');
+        ie_open('p');
+        itext('Liferay encourages You to report violations of this Acceptable Use Policy to Liferay. Liferay has the right, but not the obligation, to monitor Your activity and Content to determine Your compliance with this Acceptable Use Policy. Liferay has the right in its sole discretion to monitor your activity and Content within any part of WeDeploy accessible to other users such as chat rooms or discussion forums to determine compliance with this Acceptable Use Policy. Liferay has the right in its sole discretion to edit, refuse to post or remove any material submitted to or posted on a Liferay website or WeDeploy that Liferay finds to be in violation of this Acceptable Use Policy or is otherwise objectionable. You are solely responsible for Your activities and any Content You post, transmit, or otherwise make available on a Liferay website or WeDeploy. You acknowledge and agree that Liferay does not have any liability for any action or inaction with respect to your Conduct, communication or posting on a Liferay website or WeDeploy. Liferay may report any activity Liferay believes may violate any law to law enforcement, regulators, or other relevant third parties.');
+        ie_close('p');
+        ie_open('h5');
+        itext('5. Trademarks');
+        ie_close('h5');
+        ie_open('p');
+        itext('The trademarks, trade names, service marks and logos of Liferay, Liferay\u2019s Affiliates and third parties used in the Liferay websites and other WeDeploy ("Trademarks") are the property of Liferay, Liferay\u2019s Affiliates or the third parties. You have no right to use any such Trademarks, and nothing contained in WeDeploy or this Policy grants any right to use (by implication, waiver, estoppel or otherwise) any Trademarks without the prior written permission of Liferay, Liferay\u2019s Affiliate or the respective third party owner. Please see www.liferay.com/trademark.');
+        ie_close('p');
+        ie_open('h5');
+        itext('6. Linking');
+        ie_close('h5');
+        ie_open('p');
+        itext('You may encounter links to non-Liferay sites or services while using WeDeploy, which should not be interpreted as endorsement of Liferay of such third party sites or the company, products, services or content to which they link as such sites are not under Liferay control and Liferay is not responsible for the content of any linked site or any link contained in a linked site. If You decide to access any third party site, product or service linked through WeDeploy, you do so at your own risk.');
+        ie_close('p');
+        ie_open('h5');
+        itext('7. Updates');
+        ie_close('h5');
+        ie_open('p');
+        itext('Liferay reserves the right to update this Policy from time to time by posting an updated version no later than thirty (30) days prior to the posted effective date of such update. Your continued use and access of WeDeploy after the posted effective date signifies your acceptance to the updated Policy.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param479 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'terms.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var terms = function (_Component) {
+    babelHelpers.inherits(terms, _Component);
+
+    function terms() {
+      babelHelpers.classCallCheck(this, terms);
+      return babelHelpers.possibleConstructorReturn(this, (terms.__proto__ || Object.getPrototypeOf(terms)).apply(this, arguments));
+    }
+
+    return terms;
+  }(Component);
+
+  Soy.register(terms, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['terms'] = terms;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var terms = function (_Component) {
+    babelHelpers.inherits(terms, _Component);
+
+    function terms() {
+      babelHelpers.classCallCheck(this, terms);
+      return babelHelpers.possibleConstructorReturn(this, (terms.__proto__ || Object.getPrototypeOf(terms)).apply(this, arguments));
+    }
+
+    return terms;
+  }(Component);
+
+  ;
+
+  Soy.register(terms, templates);
+
+  this['metal']['terms'] = terms;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageTutorialsIndex.
+     * @public
+     */
+
+    goog.module('pageTutorialsIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {}
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageTutorialsIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $soyweb(opt_data, opt_ignored, opt_ijData) {
+      ie_open('!DOCTYPE', null, null, 'html', '');
+      ie_open('html', null, null, 'lang', 'en');
+      ie_open('head');
+      ie_open('meta', null, null, 'charset', 'UTF-8');
+      ie_close('meta');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/hosting-tutorial/getting-started.html\'');
+      ie_close('meta');
+      ie_close('head');
+      ie_close('html');
+    }
+    exports.soyweb = $soyweb;
+    if (goog.DEBUG) {
+      $soyweb.soyTemplateName = 'pageTutorialsIndex.soyweb';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.soyweb.params = [];
+    exports.soyweb.types = {};
+    templates = exports;
+    return exports;
+  });
+
+  var pageTutorialsIndex = function (_Component) {
+    babelHelpers.inherits(pageTutorialsIndex, _Component);
+
+    function pageTutorialsIndex() {
+      babelHelpers.classCallCheck(this, pageTutorialsIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageTutorialsIndex.__proto__ || Object.getPrototypeOf(pageTutorialsIndex)).apply(this, arguments));
+    }
+
+    return pageTutorialsIndex;
+  }(Component);
+
+  Soy.register(pageTutorialsIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageTutorialsIndex'] = pageTutorialsIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageTutorialsIndex = function (_Component) {
+    babelHelpers.inherits(pageTutorialsIndex, _Component);
+
+    function pageTutorialsIndex() {
+      babelHelpers.classCallCheck(this, pageTutorialsIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageTutorialsIndex.__proto__ || Object.getPrototypeOf(pageTutorialsIndex)).apply(this, arguments));
+    }
+
+    return pageTutorialsIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageTutorialsIndex, templates);
+
+  this['metal']['pageTutorialsIndex'] = pageTutorialsIndex;
 }).call(this);
 'use strict';
 
@@ -29844,13 +29864,13 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1110 = function param1110() {
+      var param717 = function param717() {
         ie_open('h1');
         itext('Email');
         ie_close('h1');
         ie_open('h6');
-        var dyn64 = opt_data.page.description;
-        if (typeof dyn64 == 'function') dyn64();else if (dyn64 != null) itext(dyn64);
+        var dyn49 = opt_data.page.description;
+        if (typeof dyn49 == 'function') dyn49();else if (dyn49 != null) itext(dyn49);
         ie_close('h6');
         ie_open('div', null, null, 'class', 'guide-btn-cta');
         ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-email.wedeploy.io', 'target', '_blank');
@@ -30052,7 +30072,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1110 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param717 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -30283,14 +30303,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param717 = function param717() {
+      var param779 = function param779() {
         ie_open('h1');
-        var dyn49 = opt_data.page.title;
-        if (typeof dyn49 == 'function') dyn49();else if (dyn49 != null) itext(dyn49);
+        var dyn50 = opt_data.page.title;
+        if (typeof dyn50 == 'function') dyn50();else if (dyn50 != null) itext(dyn50);
         ie_close('h1');
         ie_open('h6');
-        var dyn50 = opt_data.page.description;
-        if (typeof dyn50 == 'function') dyn50();else if (dyn50 != null) itext(dyn50);
+        var dyn51 = opt_data.page.description;
+        if (typeof dyn51 == 'function') dyn51();else if (dyn51 != null) itext(dyn51);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -30579,7 +30599,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param717 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param779 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -30661,14 +30681,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param790 = function param790() {
+      var param852 = function param852() {
         ie_open('h1');
-        var dyn51 = opt_data.page.title;
-        if (typeof dyn51 == 'function') dyn51();else if (dyn51 != null) itext(dyn51);
+        var dyn52 = opt_data.page.title;
+        if (typeof dyn52 == 'function') dyn52();else if (dyn52 != null) itext(dyn52);
         ie_close('h1');
         ie_open('h6');
-        var dyn52 = opt_data.page.description;
-        if (typeof dyn52 == 'function') dyn52();else if (dyn52 != null) itext(dyn52);
+        var dyn53 = opt_data.page.description;
+        if (typeof dyn53 == 'function') dyn53();else if (dyn53 != null) itext(dyn53);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -30703,7 +30723,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param790 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param852 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -30833,13 +30853,13 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param808 = function param808() {
+      var param870 = function param870() {
         ie_open('h1');
         itext('Data');
         ie_close('h1');
         ie_open('h6');
-        var dyn53 = opt_data.page.description;
-        if (typeof dyn53 == 'function') dyn53();else if (dyn53 != null) itext(dyn53);
+        var dyn54 = opt_data.page.description;
+        if (typeof dyn54 == 'function') dyn54();else if (dyn54 != null) itext(dyn54);
         ie_close('h6');
         ie_open('div', null, null, 'class', 'guide-btn-cta');
         ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-data.wedeploy.io', 'target', '_blank');
@@ -30986,7 +31006,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param808 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param870 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -31092,14 +31112,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param860 = function param860() {
+      var param922 = function param922() {
         ie_open('h1');
-        var dyn54 = opt_data.page.title;
-        if (typeof dyn54 == 'function') dyn54();else if (dyn54 != null) itext(dyn54);
+        var dyn55 = opt_data.page.title;
+        if (typeof dyn55 == 'function') dyn55();else if (dyn55 != null) itext(dyn55);
         ie_close('h1');
         ie_open('h6');
-        var dyn55 = opt_data.page.description;
-        if (typeof dyn55 == 'function') dyn55();else if (dyn55 != null) itext(dyn55);
+        var dyn56 = opt_data.page.description;
+        if (typeof dyn56 == 'function') dyn56();else if (dyn56 != null) itext(dyn56);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -31176,7 +31196,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param860 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param922 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -31282,14 +31302,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param888 = function param888() {
+      var param950 = function param950() {
         ie_open('h1');
-        var dyn56 = opt_data.page.title;
-        if (typeof dyn56 == 'function') dyn56();else if (dyn56 != null) itext(dyn56);
+        var dyn57 = opt_data.page.title;
+        if (typeof dyn57 == 'function') dyn57();else if (dyn57 != null) itext(dyn57);
         ie_close('h1');
         ie_open('h6');
-        var dyn57 = opt_data.page.description;
-        if (typeof dyn57 == 'function') dyn57();else if (dyn57 != null) itext(dyn57);
+        var dyn58 = opt_data.page.description;
+        if (typeof dyn58 == 'function') dyn58();else if (dyn58 != null) itext(dyn58);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -31375,7 +31395,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param888 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param950 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -31481,14 +31501,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param951 = function param951() {
+      var param1013 = function param1013() {
         ie_open('h1');
-        var dyn58 = opt_data.page.title;
-        if (typeof dyn58 == 'function') dyn58();else if (dyn58 != null) itext(dyn58);
+        var dyn59 = opt_data.page.title;
+        if (typeof dyn59 == 'function') dyn59();else if (dyn59 != null) itext(dyn59);
         ie_close('h1');
         ie_open('h6');
-        var dyn59 = opt_data.page.description;
-        if (typeof dyn59 == 'function') dyn59();else if (dyn59 != null) itext(dyn59);
+        var dyn60 = opt_data.page.description;
+        if (typeof dyn60 == 'function') dyn60();else if (dyn60 != null) itext(dyn60);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -31576,7 +31596,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param951 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1013 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -31682,14 +31702,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1004 = function param1004() {
+      var param1066 = function param1066() {
         ie_open('h1');
-        var dyn60 = opt_data.page.title;
-        if (typeof dyn60 == 'function') dyn60();else if (dyn60 != null) itext(dyn60);
+        var dyn61 = opt_data.page.title;
+        if (typeof dyn61 == 'function') dyn61();else if (dyn61 != null) itext(dyn61);
         ie_close('h1');
         ie_open('h6');
-        var dyn61 = opt_data.page.description;
-        if (typeof dyn61 == 'function') dyn61();else if (dyn61 != null) itext(dyn61);
+        var dyn62 = opt_data.page.description;
+        if (typeof dyn62 == 'function') dyn62();else if (dyn62 != null) itext(dyn62);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -31782,7 +31802,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1004 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1066 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -31888,14 +31908,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1087 = function param1087() {
+      var param1149 = function param1149() {
         ie_open('h1');
-        var dyn62 = opt_data.page.title;
-        if (typeof dyn62 == 'function') dyn62();else if (dyn62 != null) itext(dyn62);
+        var dyn63 = opt_data.page.title;
+        if (typeof dyn63 == 'function') dyn63();else if (dyn63 != null) itext(dyn63);
         ie_close('h1');
         ie_open('h6');
-        var dyn63 = opt_data.page.description;
-        if (typeof dyn63 == 'function') dyn63();else if (dyn63 != null) itext(dyn63);
+        var dyn64 = opt_data.page.description;
+        if (typeof dyn64 == 'function') dyn64();else if (dyn64 != null) itext(dyn64);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -31937,7 +31957,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1087 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1149 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -35769,11 +35789,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialAddFilesHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsAddFilesHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialAddFilesHtml.incrementaldom');
+    goog.module('tutorialsDataJsAddFilesHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -35890,7 +35910,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialAddFilesHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsAddFilesHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -35899,20 +35919,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialAddFilesHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialAddFilesHtml, _Component);
+  var tutorialsDataJsAddFilesHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsAddFilesHtml, _Component);
 
-    function tutorialsDataTutorialAddFilesHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialAddFilesHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialAddFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialAddFilesHtml)).apply(this, arguments));
+    function tutorialsDataJsAddFilesHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsAddFilesHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsAddFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsAddFilesHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialAddFilesHtml;
+    return tutorialsDataJsAddFilesHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialAddFilesHtml, templates);
+  Soy.register(tutorialsDataJsAddFilesHtml, templates);
   this['metalNamed']['add-files'] = this['metalNamed']['add-files'] || {};
-  this['metalNamed']['add-files']['tutorialsDataTutorialAddFilesHtml'] = tutorialsDataTutorialAddFilesHtml;
+  this['metalNamed']['add-files']['tutorialsDataJsAddFilesHtml'] = tutorialsDataJsAddFilesHtml;
   this['metalNamed']['add-files']['templates'] = templates;
   this['metal']['add-files'] = templates;
   /* jshint ignore:end */
@@ -35931,11 +35951,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialCloneSampleHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsCloneSampleHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialCloneSampleHtml.incrementaldom');
+    goog.module('tutorialsDataJsCloneSampleHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -35994,7 +36014,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialCloneSampleHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsCloneSampleHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36003,20 +36023,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialCloneSampleHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialCloneSampleHtml, _Component);
+  var tutorialsDataJsCloneSampleHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsCloneSampleHtml, _Component);
 
-    function tutorialsDataTutorialCloneSampleHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialCloneSampleHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialCloneSampleHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialCloneSampleHtml)).apply(this, arguments));
+    function tutorialsDataJsCloneSampleHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsCloneSampleHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsCloneSampleHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsCloneSampleHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialCloneSampleHtml;
+    return tutorialsDataJsCloneSampleHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialCloneSampleHtml, templates);
+  Soy.register(tutorialsDataJsCloneSampleHtml, templates);
   this['metalNamed']['clone-sample'] = this['metalNamed']['clone-sample'] || {};
-  this['metalNamed']['clone-sample']['tutorialsDataTutorialCloneSampleHtml'] = tutorialsDataTutorialCloneSampleHtml;
+  this['metalNamed']['clone-sample']['tutorialsDataJsCloneSampleHtml'] = tutorialsDataJsCloneSampleHtml;
   this['metalNamed']['clone-sample']['templates'] = templates;
   this['metal']['clone-sample'] = templates;
   /* jshint ignore:end */
@@ -36086,7 +36106,7 @@ babelHelpers;
       ie_open('head');
       ie_open('meta', null, null, 'charset', 'UTF-8');
       ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/data-tutorial/getting-started.html\'');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/data-js/getting-started.html\'');
       ie_close('meta');
       ie_close('head');
       ie_close('html');
@@ -36160,11 +36180,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialDeployingHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsDeployingHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialDeployingHtml.incrementaldom');
+    goog.module('tutorialsDataJsDeployingHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36251,7 +36271,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialDeployingHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsDeployingHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36260,20 +36280,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialDeployingHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialDeployingHtml, _Component);
+  var tutorialsDataJsDeployingHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsDeployingHtml, _Component);
 
-    function tutorialsDataTutorialDeployingHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialDeployingHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialDeployingHtml)).apply(this, arguments));
+    function tutorialsDataJsDeployingHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsDeployingHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsDeployingHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialDeployingHtml;
+    return tutorialsDataJsDeployingHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialDeployingHtml, templates);
+  Soy.register(tutorialsDataJsDeployingHtml, templates);
   this['metalNamed']['deploying'] = this['metalNamed']['deploying'] || {};
-  this['metalNamed']['deploying']['tutorialsDataTutorialDeployingHtml'] = tutorialsDataTutorialDeployingHtml;
+  this['metalNamed']['deploying']['tutorialsDataJsDeployingHtml'] = tutorialsDataJsDeployingHtml;
   this['metalNamed']['deploying']['templates'] = templates;
   this['metal']['deploying'] = templates;
   /* jshint ignore:end */
@@ -36292,11 +36312,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialGetDataHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsGetDataHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialGetDataHtml.incrementaldom');
+    goog.module('tutorialsDataJsGetDataHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36363,7 +36383,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialGetDataHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsGetDataHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36372,20 +36392,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialGetDataHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialGetDataHtml, _Component);
+  var tutorialsDataJsGetDataHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsGetDataHtml, _Component);
 
-    function tutorialsDataTutorialGetDataHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialGetDataHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialGetDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialGetDataHtml)).apply(this, arguments));
+    function tutorialsDataJsGetDataHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsGetDataHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsGetDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsGetDataHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialGetDataHtml;
+    return tutorialsDataJsGetDataHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialGetDataHtml, templates);
+  Soy.register(tutorialsDataJsGetDataHtml, templates);
   this['metalNamed']['get-data'] = this['metalNamed']['get-data'] || {};
-  this['metalNamed']['get-data']['tutorialsDataTutorialGetDataHtml'] = tutorialsDataTutorialGetDataHtml;
+  this['metalNamed']['get-data']['tutorialsDataJsGetDataHtml'] = tutorialsDataJsGetDataHtml;
   this['metalNamed']['get-data']['templates'] = templates;
   this['metal']['get-data'] = templates;
   /* jshint ignore:end */
@@ -36404,11 +36424,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialGettingStartedHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsGettingStartedHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialGettingStartedHtml.incrementaldom');
+    goog.module('tutorialsDataJsGettingStartedHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36535,7 +36555,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialGettingStartedHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsGettingStartedHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36544,20 +36564,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialGettingStartedHtml, _Component);
+  var tutorialsDataJsGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsGettingStartedHtml, _Component);
 
-    function tutorialsDataTutorialGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialGettingStartedHtml)).apply(this, arguments));
+    function tutorialsDataJsGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsGettingStartedHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialGettingStartedHtml;
+    return tutorialsDataJsGettingStartedHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialGettingStartedHtml, templates);
+  Soy.register(tutorialsDataJsGettingStartedHtml, templates);
   this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['tutorialsDataTutorialGettingStartedHtml'] = tutorialsDataTutorialGettingStartedHtml;
+  this['metalNamed']['getting-started']['tutorialsDataJsGettingStartedHtml'] = tutorialsDataJsGettingStartedHtml;
   this['metalNamed']['getting-started']['templates'] = templates;
   this['metal']['getting-started'] = templates;
   /* jshint ignore:end */
@@ -36576,11 +36596,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialRunningLocallyHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsRunningLocallyHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialRunningLocallyHtml.incrementaldom');
+    goog.module('tutorialsDataJsRunningLocallyHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36644,7 +36664,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialRunningLocallyHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsRunningLocallyHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36653,20 +36673,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialRunningLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialRunningLocallyHtml, _Component);
+  var tutorialsDataJsRunningLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsRunningLocallyHtml, _Component);
 
-    function tutorialsDataTutorialRunningLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialRunningLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialRunningLocallyHtml)).apply(this, arguments));
+    function tutorialsDataJsRunningLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsRunningLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsRunningLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialRunningLocallyHtml;
+    return tutorialsDataJsRunningLocallyHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialRunningLocallyHtml, templates);
+  Soy.register(tutorialsDataJsRunningLocallyHtml, templates);
   this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
-  this['metalNamed']['running-locally']['tutorialsDataTutorialRunningLocallyHtml'] = tutorialsDataTutorialRunningLocallyHtml;
+  this['metalNamed']['running-locally']['tutorialsDataJsRunningLocallyHtml'] = tutorialsDataJsRunningLocallyHtml;
   this['metalNamed']['running-locally']['templates'] = templates;
   this['metal']['running-locally'] = templates;
   /* jshint ignore:end */
@@ -36685,11 +36705,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialSaveDataHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsSaveDataHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialSaveDataHtml.incrementaldom');
+    goog.module('tutorialsDataJsSaveDataHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36776,7 +36796,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialSaveDataHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsSaveDataHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36785,20 +36805,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialSaveDataHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialSaveDataHtml, _Component);
+  var tutorialsDataJsSaveDataHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsSaveDataHtml, _Component);
 
-    function tutorialsDataTutorialSaveDataHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialSaveDataHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialSaveDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialSaveDataHtml)).apply(this, arguments));
+    function tutorialsDataJsSaveDataHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsSaveDataHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsSaveDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsSaveDataHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialSaveDataHtml;
+    return tutorialsDataJsSaveDataHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialSaveDataHtml, templates);
+  Soy.register(tutorialsDataJsSaveDataHtml, templates);
   this['metalNamed']['save-data'] = this['metalNamed']['save-data'] || {};
-  this['metalNamed']['save-data']['tutorialsDataTutorialSaveDataHtml'] = tutorialsDataTutorialSaveDataHtml;
+  this['metalNamed']['save-data']['tutorialsDataJsSaveDataHtml'] = tutorialsDataJsSaveDataHtml;
   this['metalNamed']['save-data']['templates'] = templates;
   this['metal']['save-data'] = templates;
   /* jshint ignore:end */
@@ -36810,22 +36830,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['add-files'];
 
-  var tutorialsDataTutorialAddFilesHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialAddFilesHtml, _Component);
+  var tutorialsDataJsAddFilesHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsAddFilesHtml, _Component);
 
-    function tutorialsDataTutorialAddFilesHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialAddFilesHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialAddFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialAddFilesHtml)).apply(this, arguments));
+    function tutorialsDataJsAddFilesHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsAddFilesHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsAddFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsAddFilesHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialAddFilesHtml;
+    return tutorialsDataJsAddFilesHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialAddFilesHtml, templates);
+  Soy.register(tutorialsDataJsAddFilesHtml, templates);
 
-  this['metal']['tutorialsDataTutorialAddFilesHtml'] = tutorialsDataTutorialAddFilesHtml;
+  this['metal']['tutorialsDataJsAddFilesHtml'] = tutorialsDataJsAddFilesHtml;
 }).call(this);
 'use strict';
 
@@ -36834,22 +36854,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['clone-sample'];
 
-  var tutorialsDataTutorialCloneSampleHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialCloneSampleHtml, _Component);
+  var tutorialsDataJsCloneSampleHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsCloneSampleHtml, _Component);
 
-    function tutorialsDataTutorialCloneSampleHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialCloneSampleHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialCloneSampleHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialCloneSampleHtml)).apply(this, arguments));
+    function tutorialsDataJsCloneSampleHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsCloneSampleHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsCloneSampleHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsCloneSampleHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialCloneSampleHtml;
+    return tutorialsDataJsCloneSampleHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialCloneSampleHtml, templates);
+  Soy.register(tutorialsDataJsCloneSampleHtml, templates);
 
-  this['metal']['tutorialsDataTutorialCloneSampleHtml'] = tutorialsDataTutorialCloneSampleHtml;
+  this['metal']['tutorialsDataJsCloneSampleHtml'] = tutorialsDataJsCloneSampleHtml;
 }).call(this);
 'use strict';
 
@@ -36858,22 +36878,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['deploying'];
 
-  var tutorialsDataTutorialDeployingHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialDeployingHtml, _Component);
+  var tutorialsDataJsDeployingHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsDeployingHtml, _Component);
 
-    function tutorialsDataTutorialDeployingHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialDeployingHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialDeployingHtml)).apply(this, arguments));
+    function tutorialsDataJsDeployingHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsDeployingHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsDeployingHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialDeployingHtml;
+    return tutorialsDataJsDeployingHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialDeployingHtml, templates);
+  Soy.register(tutorialsDataJsDeployingHtml, templates);
 
-  this['metal']['tutorialsDataTutorialDeployingHtml'] = tutorialsDataTutorialDeployingHtml;
+  this['metal']['tutorialsDataJsDeployingHtml'] = tutorialsDataJsDeployingHtml;
 }).call(this);
 'use strict';
 
@@ -36882,22 +36902,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['get-data'];
 
-  var tutorialsDataTutorialGetDataHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialGetDataHtml, _Component);
+  var tutorialsDataJsGetDataHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsGetDataHtml, _Component);
 
-    function tutorialsDataTutorialGetDataHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialGetDataHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialGetDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialGetDataHtml)).apply(this, arguments));
+    function tutorialsDataJsGetDataHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsGetDataHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsGetDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsGetDataHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialGetDataHtml;
+    return tutorialsDataJsGetDataHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialGetDataHtml, templates);
+  Soy.register(tutorialsDataJsGetDataHtml, templates);
 
-  this['metal']['tutorialsDataTutorialGetDataHtml'] = tutorialsDataTutorialGetDataHtml;
+  this['metal']['tutorialsDataJsGetDataHtml'] = tutorialsDataJsGetDataHtml;
 }).call(this);
 'use strict';
 
@@ -36906,22 +36926,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['getting-started'];
 
-  var tutorialsDataTutorialGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialGettingStartedHtml, _Component);
+  var tutorialsDataJsGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsGettingStartedHtml, _Component);
 
-    function tutorialsDataTutorialGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialGettingStartedHtml)).apply(this, arguments));
+    function tutorialsDataJsGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsGettingStartedHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialGettingStartedHtml;
+    return tutorialsDataJsGettingStartedHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialGettingStartedHtml, templates);
+  Soy.register(tutorialsDataJsGettingStartedHtml, templates);
 
-  this['metal']['tutorialsDataTutorialGettingStartedHtml'] = tutorialsDataTutorialGettingStartedHtml;
+  this['metal']['tutorialsDataJsGettingStartedHtml'] = tutorialsDataJsGettingStartedHtml;
 }).call(this);
 'use strict';
 
@@ -36930,22 +36950,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['running-locally'];
 
-  var tutorialsDataTutorialRunningLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialRunningLocallyHtml, _Component);
+  var tutorialsDataJsRunningLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsRunningLocallyHtml, _Component);
 
-    function tutorialsDataTutorialRunningLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialRunningLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialRunningLocallyHtml)).apply(this, arguments));
+    function tutorialsDataJsRunningLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsRunningLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsRunningLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialRunningLocallyHtml;
+    return tutorialsDataJsRunningLocallyHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialRunningLocallyHtml, templates);
+  Soy.register(tutorialsDataJsRunningLocallyHtml, templates);
 
-  this['metal']['tutorialsDataTutorialRunningLocallyHtml'] = tutorialsDataTutorialRunningLocallyHtml;
+  this['metal']['tutorialsDataJsRunningLocallyHtml'] = tutorialsDataJsRunningLocallyHtml;
 }).call(this);
 'use strict';
 
@@ -36954,22 +36974,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['save-data'];
 
-  var tutorialsDataTutorialSaveDataHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialSaveDataHtml, _Component);
+  var tutorialsDataJsSaveDataHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsSaveDataHtml, _Component);
 
-    function tutorialsDataTutorialSaveDataHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialSaveDataHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialSaveDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialSaveDataHtml)).apply(this, arguments));
+    function tutorialsDataJsSaveDataHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsSaveDataHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsSaveDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsSaveDataHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialSaveDataHtml;
+    return tutorialsDataJsSaveDataHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialSaveDataHtml, templates);
+  Soy.register(tutorialsDataJsSaveDataHtml, templates);
 
-  this['metal']['tutorialsDataTutorialSaveDataHtml'] = tutorialsDataTutorialSaveDataHtml;
+  this['metal']['tutorialsDataJsSaveDataHtml'] = tutorialsDataJsSaveDataHtml;
 }).call(this);
 'use strict';
 
@@ -36985,11 +37005,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialContainerJsonHtml.
+     * @fileoverview Templates in namespace tutorialsHostingContainerJsonHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialContainerJsonHtml.incrementaldom');
+    goog.module('tutorialsHostingContainerJsonHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37027,13 +37047,13 @@ babelHelpers;
         itext('Adding the container.json');
         ie_close('h5');
         ie_open('p');
-        itext('Every service folder needs a container.json file to specify the id and type of service you are using. Let\'s create one for hosting.');
+        itext('Every WeDeploy container needs a container.json file to specify the id and type of service you are using. Let\'s create one for hosting.');
         ie_close('p');
         ie_open('ol');
         ie_open('li');
-        itext('Open the ');
+        itext('Go to the ');
         ie_open('code');
-        itext('boilerplate-hosting');
+        itext('tutorial-hosting');
         ie_close('code');
         itext(' directory');
         ie_close('li');
@@ -37047,7 +37067,7 @@ babelHelpers;
         itext('Open it in your text editor');
         ie_close('li');
         ie_open('li');
-        itext('Paste the follow code into that file');
+        itext('Paste the follow code');
         ie_close('li');
         ie_close('ol');
         $templateAlias2({ code: '{\n    "id": "hosting",\n    "type": "wedeploy/hosting"\n}', mode: 'application/json' }, null, opt_ijData);
@@ -37058,7 +37078,7 @@ babelHelpers;
         ie_close('code');
         itext(' is the custom name designated for this service. If you named your service something other than "hosting", change the value of the ');
         ie_open('code');
-        itext('"hosting"');
+        itext('id');
         ie_close('code');
         itext(' to the name of the hosting service you created on the dashboard.');
         ie_close('li');
@@ -37078,7 +37098,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialContainerJsonHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingContainerJsonHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37087,20 +37107,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialContainerJsonHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialContainerJsonHtml, _Component);
+  var tutorialsHostingContainerJsonHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingContainerJsonHtml, _Component);
 
-    function tutorialsHostingTutorialContainerJsonHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialContainerJsonHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialContainerJsonHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialContainerJsonHtml)).apply(this, arguments));
+    function tutorialsHostingContainerJsonHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingContainerJsonHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingContainerJsonHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingContainerJsonHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialContainerJsonHtml;
+    return tutorialsHostingContainerJsonHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialContainerJsonHtml, templates);
+  Soy.register(tutorialsHostingContainerJsonHtml, templates);
   this['metalNamed']['container-json'] = this['metalNamed']['container-json'] || {};
-  this['metalNamed']['container-json']['tutorialsHostingTutorialContainerJsonHtml'] = tutorialsHostingTutorialContainerJsonHtml;
+  this['metalNamed']['container-json']['tutorialsHostingContainerJsonHtml'] = tutorialsHostingContainerJsonHtml;
   this['metalNamed']['container-json']['templates'] = templates;
   this['metal']['container-json'] = templates;
   /* jshint ignore:end */
@@ -37119,11 +37139,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialDeployingHtml.
+     * @fileoverview Templates in namespace tutorialsHostingDeployingHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialDeployingHtml.incrementaldom');
+    goog.module('tutorialsHostingDeployingHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37161,12 +37181,12 @@ babelHelpers;
         itext('Deploying your project');
         ie_close('h5');
         ie_open('p');
-        itext('Now its time to push your local boilerplate to your WeDeploy project.');
+        itext('Now its time to push your local files to your WeDeploy project.');
         ie_close('p');
         ie_open('p');
         itext('First, add a git remote. Within ');
         ie_open('code');
-        itext('boilerplate-hosting');
+        itext('tutorial-hosting');
         ie_close('code');
         itext(' on your command line, run:');
         ie_close('p');
@@ -37213,7 +37233,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialDeployingHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingDeployingHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37222,20 +37242,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialDeployingHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialDeployingHtml, _Component);
+  var tutorialsHostingDeployingHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingDeployingHtml, _Component);
 
-    function tutorialsHostingTutorialDeployingHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialDeployingHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialDeployingHtml)).apply(this, arguments));
+    function tutorialsHostingDeployingHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingDeployingHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingDeployingHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialDeployingHtml;
+    return tutorialsHostingDeployingHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialDeployingHtml, templates);
+  Soy.register(tutorialsHostingDeployingHtml, templates);
   this['metalNamed']['deploying'] = this['metalNamed']['deploying'] || {};
-  this['metalNamed']['deploying']['tutorialsHostingTutorialDeployingHtml'] = tutorialsHostingTutorialDeployingHtml;
+  this['metalNamed']['deploying']['tutorialsHostingDeployingHtml'] = tutorialsHostingDeployingHtml;
   this['metalNamed']['deploying']['templates'] = templates;
   this['metal']['deploying'] = templates;
   /* jshint ignore:end */
@@ -37254,11 +37274,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialGettingStartedHtml.
+     * @fileoverview Templates in namespace tutorialsHostingGettingStartedHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialGettingStartedHtml.incrementaldom');
+    goog.module('tutorialsHostingGettingStartedHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37382,7 +37402,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialGettingStartedHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingGettingStartedHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37391,20 +37411,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialGettingStartedHtml, _Component);
+  var tutorialsHostingGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingGettingStartedHtml, _Component);
 
-    function tutorialsHostingTutorialGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialGettingStartedHtml)).apply(this, arguments));
+    function tutorialsHostingGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingGettingStartedHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialGettingStartedHtml;
+    return tutorialsHostingGettingStartedHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialGettingStartedHtml, templates);
+  Soy.register(tutorialsHostingGettingStartedHtml, templates);
   this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['tutorialsHostingTutorialGettingStartedHtml'] = tutorialsHostingTutorialGettingStartedHtml;
+  this['metalNamed']['getting-started']['tutorialsHostingGettingStartedHtml'] = tutorialsHostingGettingStartedHtml;
   this['metalNamed']['getting-started']['templates'] = templates;
   this['metal']['getting-started'] = templates;
   /* jshint ignore:end */
@@ -37474,7 +37494,7 @@ babelHelpers;
       ie_open('head');
       ie_open('meta', null, null, 'charset', 'UTF-8');
       ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/hosting-tutorial/getting-started.html\'');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/hosting/getting-started.html\'');
       ie_close('meta');
       ie_close('head');
       ie_close('html');
@@ -37548,11 +37568,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialRunningLocallyHtml.
+     * @fileoverview Templates in namespace tutorialsHostingRunningLocallyHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialRunningLocallyHtml.incrementaldom');
+    goog.module('tutorialsHostingRunningLocallyHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37597,15 +37617,15 @@ babelHelpers;
         ie_close('code');
         itext('. Now in a new tab, run ');
         ie_open('code');
-        itext('we link --project boilerplate-hosting');
+        itext('we link --project tutorial-hosting');
         ie_close('code');
         ie_close('p');
         ie_open('p');
         itext('You can go to ');
         ie_open('code');
-        itext('http://<hosting-service-id>.boilerplate-hosting.wedeploy.me');
+        itext('http://<hosting-service-id>.tutorial-hosting.wedeploy.me');
         ie_close('code');
-        itext(' in your browser and see the local deployment of the boilerplate. Any changes you make to your project folder now will automatically be deployed to this local server.');
+        itext(' in your browser and see the local deployment of the sample static site. Any changes you make to your project folder now will automatically be deployed to this local server.');
         ie_close('p');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
         ie_close('input');
@@ -37616,7 +37636,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialRunningLocallyHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingRunningLocallyHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37625,20 +37645,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialRunningLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialRunningLocallyHtml, _Component);
+  var tutorialsHostingRunningLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingRunningLocallyHtml, _Component);
 
-    function tutorialsHostingTutorialRunningLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialRunningLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialRunningLocallyHtml)).apply(this, arguments));
+    function tutorialsHostingRunningLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingRunningLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingRunningLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialRunningLocallyHtml;
+    return tutorialsHostingRunningLocallyHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialRunningLocallyHtml, templates);
+  Soy.register(tutorialsHostingRunningLocallyHtml, templates);
   this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
-  this['metalNamed']['running-locally']['tutorialsHostingTutorialRunningLocallyHtml'] = tutorialsHostingTutorialRunningLocallyHtml;
+  this['metalNamed']['running-locally']['tutorialsHostingRunningLocallyHtml'] = tutorialsHostingRunningLocallyHtml;
   this['metalNamed']['running-locally']['templates'] = templates;
   this['metal']['running-locally'] = templates;
   /* jshint ignore:end */
@@ -37657,11 +37677,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialSampleFilesHtml.
+     * @fileoverview Templates in namespace tutorialsHostingSampleFilesHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialSampleFilesHtml.incrementaldom');
+    goog.module('tutorialsHostingSampleFilesHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37696,19 +37716,19 @@ babelHelpers;
     function $render(opt_data, opt_ignored, opt_ijData) {
       var param1796 = function param1796() {
         ie_open('h5');
-        itext('Initializing the sample files');
+        itext('Clone the sample repo');
         ie_close('h5');
         ie_open('p');
-        itext('To start, you will clone our Hosting boilerplate so you can get to know the deployment process. After the tutorial, you are free to add your own files to the folder or start from scratch with a new service.');
+        itext('To start, you will clone our sample files so you can get to know the deployment process. After the tutorial, you are free to add your own files to the folder or start from scratch with a new service.');
         ie_close('p');
         ie_open('p');
         itext('First, run this command in your terminal:');
         ie_close('p');
-        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-hosting.git && cd boilerplate-hosting', mode: 'text' }, null, opt_ijData);
+        $templateAlias2({ code: 'git clone https://github.com/jonnilundy/tutorial-hosting.git', mode: 'text' }, null, opt_ijData);
         ie_open('p');
         itext('You now have a folder called ');
         ie_open('code');
-        itext('boilerplate-hosting');
+        itext('tutorial-hosting');
         ie_close('code');
         itext(' that contains almost all the files necessary to get your static site of the ground- besides one.');
         ie_close('p');
@@ -37721,7 +37741,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialSampleFilesHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingSampleFilesHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37730,20 +37750,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialSampleFilesHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialSampleFilesHtml, _Component);
+  var tutorialsHostingSampleFilesHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingSampleFilesHtml, _Component);
 
-    function tutorialsHostingTutorialSampleFilesHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialSampleFilesHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialSampleFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialSampleFilesHtml)).apply(this, arguments));
+    function tutorialsHostingSampleFilesHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingSampleFilesHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingSampleFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingSampleFilesHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialSampleFilesHtml;
+    return tutorialsHostingSampleFilesHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialSampleFilesHtml, templates);
+  Soy.register(tutorialsHostingSampleFilesHtml, templates);
   this['metalNamed']['sample-files'] = this['metalNamed']['sample-files'] || {};
-  this['metalNamed']['sample-files']['tutorialsHostingTutorialSampleFilesHtml'] = tutorialsHostingTutorialSampleFilesHtml;
+  this['metalNamed']['sample-files']['tutorialsHostingSampleFilesHtml'] = tutorialsHostingSampleFilesHtml;
   this['metalNamed']['sample-files']['templates'] = templates;
   this['metal']['sample-files'] = templates;
   /* jshint ignore:end */
@@ -37762,11 +37782,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialTestingLocallyHtml.
+     * @fileoverview Templates in namespace tutorialsHostingTestingLocallyHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialTestingLocallyHtml.incrementaldom');
+    goog.module('tutorialsHostingTestingLocallyHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37805,7 +37825,11 @@ babelHelpers;
         itext('Now that we have the local environment running, let\'s test the project by making a change to it.');
         ie_close('p');
         ie_open('p');
-        itext('Go back to the boilerplate in your text editor, open ');
+        itext('Open ');
+        ie_open('code');
+        itext('tutorial-hosting');
+        ie_close('code');
+        itext(' in your text editor. Go to ');
         ie_open('code');
         itext('index.html');
         ie_close('code');
@@ -37835,7 +37859,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialTestingLocallyHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingTestingLocallyHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37844,20 +37868,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialTestingLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialTestingLocallyHtml, _Component);
+  var tutorialsHostingTestingLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingTestingLocallyHtml, _Component);
 
-    function tutorialsHostingTutorialTestingLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialTestingLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialTestingLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialTestingLocallyHtml)).apply(this, arguments));
+    function tutorialsHostingTestingLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingTestingLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTestingLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTestingLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialTestingLocallyHtml;
+    return tutorialsHostingTestingLocallyHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialTestingLocallyHtml, templates);
+  Soy.register(tutorialsHostingTestingLocallyHtml, templates);
   this['metalNamed']['testing-locally'] = this['metalNamed']['testing-locally'] || {};
-  this['metalNamed']['testing-locally']['tutorialsHostingTutorialTestingLocallyHtml'] = tutorialsHostingTutorialTestingLocallyHtml;
+  this['metalNamed']['testing-locally']['tutorialsHostingTestingLocallyHtml'] = tutorialsHostingTestingLocallyHtml;
   this['metalNamed']['testing-locally']['templates'] = templates;
   this['metal']['testing-locally'] = templates;
   /* jshint ignore:end */
@@ -37869,22 +37893,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['container-json'];
 
-  var tutorialsHostingTutorialContainerJsonHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialContainerJsonHtml, _Component);
+  var tutorialsHostingContainerJsonHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingContainerJsonHtml, _Component);
 
-    function tutorialsHostingTutorialContainerJsonHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialContainerJsonHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialContainerJsonHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialContainerJsonHtml)).apply(this, arguments));
+    function tutorialsHostingContainerJsonHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingContainerJsonHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingContainerJsonHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingContainerJsonHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialContainerJsonHtml;
+    return tutorialsHostingContainerJsonHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialContainerJsonHtml, templates);
+  Soy.register(tutorialsHostingContainerJsonHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialContainerJsonHtml'] = tutorialsHostingTutorialContainerJsonHtml;
+  this['metal']['tutorialsHostingContainerJsonHtml'] = tutorialsHostingContainerJsonHtml;
 }).call(this);
 'use strict';
 
@@ -37893,22 +37917,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['deploying'];
 
-  var tutorialsHostingTutorialDeployingHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialDeployingHtml, _Component);
+  var tutorialsHostingDeployingHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingDeployingHtml, _Component);
 
-    function tutorialsHostingTutorialDeployingHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialDeployingHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialDeployingHtml)).apply(this, arguments));
+    function tutorialsHostingDeployingHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingDeployingHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingDeployingHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialDeployingHtml;
+    return tutorialsHostingDeployingHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialDeployingHtml, templates);
+  Soy.register(tutorialsHostingDeployingHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialDeployingHtml'] = tutorialsHostingTutorialDeployingHtml;
+  this['metal']['tutorialsHostingDeployingHtml'] = tutorialsHostingDeployingHtml;
 }).call(this);
 'use strict';
 
@@ -37917,22 +37941,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['getting-started'];
 
-  var tutorialsHostingTutorialGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialGettingStartedHtml, _Component);
+  var tutorialsHostingGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingGettingStartedHtml, _Component);
 
-    function tutorialsHostingTutorialGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialGettingStartedHtml)).apply(this, arguments));
+    function tutorialsHostingGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingGettingStartedHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialGettingStartedHtml;
+    return tutorialsHostingGettingStartedHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialGettingStartedHtml, templates);
+  Soy.register(tutorialsHostingGettingStartedHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialGettingStartedHtml'] = tutorialsHostingTutorialGettingStartedHtml;
+  this['metal']['tutorialsHostingGettingStartedHtml'] = tutorialsHostingGettingStartedHtml;
 }).call(this);
 'use strict';
 
@@ -37941,22 +37965,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['running-locally'];
 
-  var tutorialsHostingTutorialRunningLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialRunningLocallyHtml, _Component);
+  var tutorialsHostingRunningLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingRunningLocallyHtml, _Component);
 
-    function tutorialsHostingTutorialRunningLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialRunningLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialRunningLocallyHtml)).apply(this, arguments));
+    function tutorialsHostingRunningLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingRunningLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingRunningLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialRunningLocallyHtml;
+    return tutorialsHostingRunningLocallyHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialRunningLocallyHtml, templates);
+  Soy.register(tutorialsHostingRunningLocallyHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialRunningLocallyHtml'] = tutorialsHostingTutorialRunningLocallyHtml;
+  this['metal']['tutorialsHostingRunningLocallyHtml'] = tutorialsHostingRunningLocallyHtml;
 }).call(this);
 'use strict';
 
@@ -37965,22 +37989,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['sample-files'];
 
-  var tutorialsHostingTutorialSampleFilesHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialSampleFilesHtml, _Component);
+  var tutorialsHostingSampleFilesHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingSampleFilesHtml, _Component);
 
-    function tutorialsHostingTutorialSampleFilesHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialSampleFilesHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialSampleFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialSampleFilesHtml)).apply(this, arguments));
+    function tutorialsHostingSampleFilesHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingSampleFilesHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingSampleFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingSampleFilesHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialSampleFilesHtml;
+    return tutorialsHostingSampleFilesHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialSampleFilesHtml, templates);
+  Soy.register(tutorialsHostingSampleFilesHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialSampleFilesHtml'] = tutorialsHostingTutorialSampleFilesHtml;
+  this['metal']['tutorialsHostingSampleFilesHtml'] = tutorialsHostingSampleFilesHtml;
 }).call(this);
 'use strict';
 
@@ -37989,22 +38013,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['testing-locally'];
 
-  var tutorialsHostingTutorialTestingLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialTestingLocallyHtml, _Component);
+  var tutorialsHostingTestingLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingTestingLocallyHtml, _Component);
 
-    function tutorialsHostingTutorialTestingLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialTestingLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialTestingLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialTestingLocallyHtml)).apply(this, arguments));
+    function tutorialsHostingTestingLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingTestingLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTestingLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTestingLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialTestingLocallyHtml;
+    return tutorialsHostingTestingLocallyHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialTestingLocallyHtml, templates);
+  Soy.register(tutorialsHostingTestingLocallyHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialTestingLocallyHtml'] = tutorialsHostingTutorialTestingLocallyHtml;
+  this['metal']['tutorialsHostingTestingLocallyHtml'] = tutorialsHostingTestingLocallyHtml;
 }).call(this);
 }).call(this);
 //# sourceMappingURL=bundle.js.map
