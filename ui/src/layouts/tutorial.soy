@@ -10,14 +10,16 @@
 	<div class="{$elementClasses ?: 'main'}">
 		<main class="content">
 			<div class="tutorial">
-				{call TutorialSidebar.render}
-					{param page: $site.index.children['hosting-tutorial'] /}
-				{/call}
-				{call .tutorials data="all"}
-					{param content: $content /}
-					{param page: $page /}
-					{param site: $site /}
-				{/call}
+				{if $page}
+					{call TutorialSidebar.render}
+						{param page: $site.index.children['tutorials'].children[$page.parentId] /}
+					{/call}
+					{call .tutorials data="all"}
+						{param content: $content /}
+						{param page: $page /}
+						{param site: $site /}
+					{/call}
+				{/if}
 			</div>
 		</main>
 	</div>
@@ -66,7 +68,7 @@
 				<span class="icon-16-github"></span> Report a problem
 			</a>
 		{/if}
-		{let $tutorialObject: $site.index.children['hosting-tutorial'] /}
+		{let $tutorialObject: $site.index.children['tutorials'].children[$page.parentId] /}
 		{if $page.buttonTitle and $page.weight < length($tutorialObject.childIds)}
 			{let $nextPageUrl: $tutorialObject.children[$tutorialObject.childIds[$page.weight]].url /}
 			<a href="{$nextPageUrl}" class="btn btn-accent btn-sm">
