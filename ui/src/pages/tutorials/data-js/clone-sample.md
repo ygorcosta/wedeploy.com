@@ -18,7 +18,7 @@ Next we will download a sample repo with the necessary files to get us started.
 To download, run this command in your terminal:
 
 ```
-git clone https://github.com/wedeploy/tutorial-data-js.git
+git clone https://github.com/jonnilundy/tutorial-data-js.git
 ```
 
 After the tutorial, you are free to push your own files or start from scratch with a new project.
