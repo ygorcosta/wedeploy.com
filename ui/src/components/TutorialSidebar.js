@@ -10,7 +10,6 @@ import templates from './TutorialSidebar.soy';
 
 class TutorialSidebar extends Component {
 	attached() {
-		this.formatRelativeTime('custom');
 
 		var timeRead = 0;
 		var totalTime = 0;
@@ -30,7 +29,9 @@ class TutorialSidebar extends Component {
 			}
 		});
 
-		page.timeRemaining = moment.duration(((totalTime - timeRead) * 1000)).humanize();
+		var milliseconds = (totalTime - timeRead);
+		var eventDuration = moment.duration(milliseconds, 'seconds');
+		page.timeRemaining = this.humanizeDuration(eventDuration);
 		dispatchGlobalState();
 	}
 
@@ -39,30 +40,29 @@ class TutorialSidebar extends Component {
 		dispatchGlobalState();
 	}
 
-	disposed() {
-		this.formatRelativeTime('en');
+	humanizeDuration(eventDuration) {
+		console.log(eventDuration);
+		eventDurationString = '';
+
+		if (eventDuration.days() > 0) {
+			eventDurationString += ' ' + moment.duration(eventDuration.days(), 'days').asDays() + 'd';
+		}
+
+		if (eventDuration.hours() > 0) {
+			eventDurationString += ' ' + moment.duration(eventDuration.hours(), 'hours').asHours() + 'h';
+		}
+
+		if (eventDuration.minutes() > 0) {
+			eventDurationString += ' ' + moment.duration(eventDuration.minutes(), 'minutes').asMinutes() + 'min';
+		}
+
+		if (eventDuration.seconds() > 0) {
+			eventDurationString += ' ' + moment.duration(eventDuration.seconds(), 'seconds').asSeconds() + 'sec';
+		}
+
+		return eventDurationString.trim();
 	}
 
-	formatRelativeTime(type) {
-		if (type === 'custom') {
-			moment.lang(type, {
-				relativeTime: {
-					future: '%s',
-					past: '%s',
-					s: '%d sec',
-					ss: '%d sec',
-					m: '1 min',
-					mm: '%d min',
-					h: '1 h',
-					hh: '%d h',
-					d: '1 d',
-					dd: '%d d'
-				}
-			});
-		} else {
-			moment.lang(type);
-		}
-	}
 };
 
 Soy.register(TutorialSidebar, templates);
