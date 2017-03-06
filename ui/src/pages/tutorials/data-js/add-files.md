@@ -13,7 +13,7 @@ weight: 3
 
 Now that we have the sample files, we can setup our data container. 
 
-First go to `tutorial-data-js` and create a directory named `data`. Inside of that directory, we will create a container.json file and a api.json file.
+First go to `tutorial-data-js` and create a directory named `data`. Inside of that directory, we will create a container.json file and an api.json file.
 
 ###### Container.json
 

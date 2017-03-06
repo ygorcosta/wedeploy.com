@@ -13,6 +13,8 @@ weight: 1
 
 You are here because you just finished installing the Data service on your project. In this tutorial you will learn how to setup a test environment for your project using our boilerplate and how to deploy the Data service using Javascript.
 
+###### What to expect
+
 <ul class="checklist">
 	<li>How to setup your machine as a local dev environment</li>
 	<li>How to create the necessary files for your containers</li>
