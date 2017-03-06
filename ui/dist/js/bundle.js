@@ -5840,6 +5840,14 @@ babelHelpers;
 			_this.scheduledBatchData_ = null;
 
 			/**
+    * Throws exception when validator returns an `Error` instance.
+    * @type {boolean}
+    * @default false
+    * @protected
+    */
+			_this.throwValidationError_ = false;
+
+			/**
     * Object that contains information about all this instance's state keys.
     * @type {!Object<string, !Object>}
     * @protected
@@ -5877,7 +5885,7 @@ babelHelpers;
 					var value = info.state === State.KeyStates.INITIALIZED ? this.get(name) : this.initialValues_[name];
 					if (!isDefAndNotNull(value)) {
 						var errorMessage = 'The property called "' + name + '" is required but didn\'t receive a value.';
-						if (this.shouldThrowValidationError()) {
+						if (this.getThrowValidationError()) {
 							throw new Error(errorMessage);
 						} else {
 							console.error(errorMessage);
@@ -5896,7 +5904,7 @@ babelHelpers;
 			key: 'assertValidatorReturnInstanceOfError_',
 			value: function assertValidatorReturnInstanceOfError_(validatorReturn) {
 				if (validatorReturn instanceof Error) {
-					if (this.shouldThrowValidationError()) {
+					if (this.getThrowValidationError()) {
 						throw validatorReturn;
 					} else {
 						console.error('Warning: ' + validatorReturn);
@@ -6214,6 +6222,18 @@ babelHelpers;
 			}
 
 			/**
+    * Gets the configuration value for whether or not should throw error when
+    * vaildator functions returns an `Error` instance.
+    * @return {boolean}
+    */
+
+		}, {
+			key: 'getThrowValidationError',
+			value: function getThrowValidationError() {
+				return this.throwValidationError_;
+			}
+
+			/**
     * Merges the STATE static variable for the given constructor function.
     * @param  {!Function} ctor Constructor function.
     * @return {boolean} Returns true if merge happens, false otherwise.
@@ -6494,15 +6514,15 @@ babelHelpers;
 			}
 
 			/**
-    * Returns a boolean that determines whether or not should throw error when
+    * Sets the configuration value for whether or not should throw error when
     * vaildator functions returns an `Error` instance.
-    * @return {boolean} By default returns false.
+    * @param {boolean} throwValidationError
     */
 
 		}, {
-			key: 'shouldThrowValidationError',
-			value: function shouldThrowValidationError() {
-				return false;
+			key: 'setThrowValidationError',
+			value: function setThrowValidationError(throwValidationError) {
+				this.throwValidationError_ = throwValidationError;
 			}
 
 			/**
@@ -26021,16 +26041,13 @@ babelHelpers;
       ie_open('div', null, null, 'class', 'tutorial-page-nav');
       if (opt_data.site.githubRepo) {
         ie_open('a', null, null, 'href', 'https://github.com/' + opt_data.site.githubRepo + '/issues/new?title=Tutorial+Problem&body=' + opt_data.page.url, 'class', 'btn btn-default btn-sm');
-        ie_void('span', null, null, 'class', 'icon-16-github');
-        itext(' Report a problem');
+        itext('Report a problem');
         ie_close('a');
       }
       var tutorialObject__soy293 = opt_data.site.index.children['tutorials'].children[opt_data.page.parentId];
       if (opt_data.page.buttonTitle && opt_data.page.weight < tutorialObject__soy293.childIds.length) {
         var nextPageUrl__soy296 = tutorialObject__soy293.children[tutorialObject__soy293.childIds[opt_data.page.weight]].url;
         ie_open('a', null, null, 'href', nextPageUrl__soy296, 'class', 'btn btn-accent btn-sm');
-        ie_void('span', null, null, 'class', 'icon-16-checkmark');
-        itext(' ');
         var dyn21 = opt_data.page.buttonTitle;
         if (typeof dyn21 == 'function') dyn21();else if (dyn21 != null) itext(dyn21);
         ie_close('a');
@@ -26781,10 +26798,10 @@ babelHelpers;
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
       opt_data = opt_data || {};
-      var param490 = function param490() {
+      var param479 = function param479() {
         $topics(opt_data, null, opt_ijData);
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param490 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param479 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -26807,8 +26824,8 @@ babelHelpers;
       ie_close('h1');
       ie_open('p', null, null, 'class', 'docs-home-top-description');
       itext('Start learning how to leverage the power of ');
-      var dyn36 = opt_data.site.title;
-      if (typeof dyn36 == 'function') dyn36();else if (dyn36 != null) itext(dyn36);
+      var dyn35 = opt_data.site.title;
+      if (typeof dyn35 == 'function') dyn35();else if (dyn35 != null) itext(dyn35);
       itext(' in your project.');
       ie_close('p');
       ie_close('div');
@@ -26842,19 +26859,19 @@ babelHelpers;
       ie_open('div', null, null, 'class', 'row');
       ie_open('div', null, null, 'class', 'col-md-12 col-md-offset-2 col-xs-16');
       ie_open('div', null, null, 'class', 'row');
-      var childIdList511 = opt_data.page.childIds;
-      var childIdListLen511 = childIdList511.length;
-      for (var childIdIndex511 = 0; childIdIndex511 < childIdListLen511; childIdIndex511++) {
-        var childIdData511 = childIdList511[childIdIndex511];
-        if (!opt_data.page.children[childIdData511].hidden) {
+      var childIdList500 = opt_data.page.childIds;
+      var childIdListLen500 = childIdList500.length;
+      for (var childIdIndex500 = 0; childIdIndex500 < childIdListLen500; childIdIndex500++) {
+        var childIdData500 = childIdList500[childIdIndex500];
+        if (!opt_data.page.children[childIdData500].hidden) {
           ie_open('div', null, null, 'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
-          ie_open('a', null, null, 'class', 'topic radial-out', 'href', opt_data.page.children[childIdData511].url);
+          ie_open('a', null, null, 'class', 'topic radial-out', 'href', opt_data.page.children[childIdData500].url);
           ie_open('div', null, null, 'class', 'topic-icon');
-          ie_void('span', null, null, 'class', 'icon-16-' + opt_data.page.children[childIdData511].icon);
+          ie_void('span', null, null, 'class', 'icon-16-' + opt_data.page.children[childIdData500].icon);
           ie_close('div');
           ie_open('h3', null, null, 'class', 'topic-title');
-          var dyn37 = opt_data.page.children[childIdData511].title;
-          if (typeof dyn37 == 'function') dyn37();else if (dyn37 != null) itext(dyn37);
+          var dyn36 = opt_data.page.children[childIdData500].title;
+          if (typeof dyn36 == 'function') dyn36();else if (dyn36 != null) itext(dyn36);
           ie_close('h3');
           ie_close('a');
           ie_close('div');
@@ -26970,11 +26987,11 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param479 = function param479() {
+      var param505 = function param505() {
         ie_open('article');
         ie_open('h3');
-        var dyn35 = opt_data.page.description;
-        if (typeof dyn35 == 'function') dyn35();else if (dyn35 != null) itext(dyn35);
+        var dyn37 = opt_data.page.description;
+        if (typeof dyn37 == 'function') dyn37();else if (dyn37 != null) itext(dyn37);
         ie_close('h3');
         ie_open('p');
         itext('PLEASE READ THIS AGREEMENT CAREFULLY BEFORE PURCHASING AND/OR USING WEDEPLOY. BY USING WEDEPLOY, END USER SIGNIFIES ITS ASSENT TO AND ACCEPTANCE OF THIS AGREEMENT AND ACKNOWLEDGES IT HAS READ AND UNDERSTANDS THIS AGREEMENT. AN INDIVIDUAL ACTING ON BEHALF OF AN ENTITY REPRESENTS THAT HE OR SHE HAS THE AUTHORITY TO ENTER INTO THIS AGREEMENT ON BEHALF OF THAT ENTITY. IF END USER DOES NOT ACCEPT THE TERMS OF THIS AGREEMENT, THEN IT MUST NOT USE WEDEPLOY.');
@@ -27263,7 +27280,7 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param479 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param505 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
@@ -27317,131 +27334,6 @@ babelHelpers;
   Soy.register(terms, templates);
 
   this['metal']['terms'] = terms;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageTutorialsIndex.
-     * @public
-     */
-
-    goog.module('pageTutorialsIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {}
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageTutorialsIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $soyweb(opt_data, opt_ignored, opt_ijData) {
-      ie_open('!DOCTYPE', null, null, 'html', '');
-      ie_open('html', null, null, 'lang', 'en');
-      ie_open('head');
-      ie_open('meta', null, null, 'charset', 'UTF-8');
-      ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/hosting-tutorial/getting-started.html\'');
-      ie_close('meta');
-      ie_close('head');
-      ie_close('html');
-    }
-    exports.soyweb = $soyweb;
-    if (goog.DEBUG) {
-      $soyweb.soyTemplateName = 'pageTutorialsIndex.soyweb';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.soyweb.params = [];
-    exports.soyweb.types = {};
-    templates = exports;
-    return exports;
-  });
-
-  var pageTutorialsIndex = function (_Component) {
-    babelHelpers.inherits(pageTutorialsIndex, _Component);
-
-    function pageTutorialsIndex() {
-      babelHelpers.classCallCheck(this, pageTutorialsIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageTutorialsIndex.__proto__ || Object.getPrototypeOf(pageTutorialsIndex)).apply(this, arguments));
-    }
-
-    return pageTutorialsIndex;
-  }(Component);
-
-  Soy.register(pageTutorialsIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageTutorialsIndex'] = pageTutorialsIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageTutorialsIndex = function (_Component) {
-    babelHelpers.inherits(pageTutorialsIndex, _Component);
-
-    function pageTutorialsIndex() {
-      babelHelpers.classCallCheck(this, pageTutorialsIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageTutorialsIndex.__proto__ || Object.getPrototypeOf(pageTutorialsIndex)).apply(this, arguments));
-    }
-
-    return pageTutorialsIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageTutorialsIndex, templates);
-
-  this['metal']['pageTutorialsIndex'] = pageTutorialsIndex;
 }).call(this);
 'use strict';
 
@@ -28442,6 +28334,131 @@ babelHelpers;
   Soy.register(pageBlogIndex, templates);
 
   this['metal']['pageBlogIndex'] = pageBlogIndex;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageTutorialsIndex.
+     * @public
+     */
+
+    goog.module('pageTutorialsIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {}
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageTutorialsIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $soyweb(opt_data, opt_ignored, opt_ijData) {
+      ie_open('!DOCTYPE', null, null, 'html', '');
+      ie_open('html', null, null, 'lang', 'en');
+      ie_open('head');
+      ie_open('meta', null, null, 'charset', 'UTF-8');
+      ie_close('meta');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/hosting/getting-started.html\'');
+      ie_close('meta');
+      ie_close('head');
+      ie_close('html');
+    }
+    exports.soyweb = $soyweb;
+    if (goog.DEBUG) {
+      $soyweb.soyTemplateName = 'pageTutorialsIndex.soyweb';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.soyweb.params = [];
+    exports.soyweb.types = {};
+    templates = exports;
+    return exports;
+  });
+
+  var pageTutorialsIndex = function (_Component) {
+    babelHelpers.inherits(pageTutorialsIndex, _Component);
+
+    function pageTutorialsIndex() {
+      babelHelpers.classCallCheck(this, pageTutorialsIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageTutorialsIndex.__proto__ || Object.getPrototypeOf(pageTutorialsIndex)).apply(this, arguments));
+    }
+
+    return pageTutorialsIndex;
+  }(Component);
+
+  Soy.register(pageTutorialsIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageTutorialsIndex'] = pageTutorialsIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageTutorialsIndex = function (_Component) {
+    babelHelpers.inherits(pageTutorialsIndex, _Component);
+
+    function pageTutorialsIndex() {
+      babelHelpers.classCallCheck(this, pageTutorialsIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageTutorialsIndex.__proto__ || Object.getPrototypeOf(pageTutorialsIndex)).apply(this, arguments));
+    }
+
+    return pageTutorialsIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageTutorialsIndex, templates);
+
+  this['metal']['pageTutorialsIndex'] = pageTutorialsIndex;
 }).call(this);
 'use strict';
 
@@ -30231,6 +30248,401 @@ babelHelpers;
   Soy.register(pageDocsEmailIndex, templates);
 
   this['metal']['pageDocsEmailIndex'] = pageDocsEmailIndex;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from getting-started.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace docsHostingGettingStartedHtml.
+     * @public
+     */
+
+    goog.module('docsHostingGettingStartedHtml.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1172 = function param1172() {
+        ie_open('h1');
+        itext('Hosting');
+        ie_close('h1');
+        ie_open('h6');
+        var dyn65 = opt_data.page.description;
+        if (typeof dyn65 == 'function') dyn65();else if (dyn65 != null) itext(dyn65);
+        ie_close('h6');
+        ie_open('div', null, null, 'class', 'guide-btn-cta');
+        ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-hosting.wedeploy.io', 'target', '_blank');
+        ie_void('span', null, null, 'class', 'icon-16-external');
+        itext('See Live Demo');
+        ie_close('a');
+        ie_close('div');
+        ie_open('div', null, null, 'class', 'guide-aux-cta');
+        itext('or read the ');
+        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-hosting', 'target', '_blank');
+        itext('source code');
+        ie_close('a');
+        itext('.');
+        ie_close('div');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Install dependencies');
+        ie_close('h2');
+        ie_open('p');
+        itext('This section assumes that you already have the ');
+        ie_open('strong');
+        itext('WeDeploy CLI');
+        ie_close('strong');
+        itext(' installed and ');
+        ie_open('strong');
+        itext('Docker');
+        ie_close('strong');
+        itext(' running. Make sure to ');
+        ie_open('a', null, null, 'href', '/docs/intro/using-the-command-line.html');
+        itext('visit the installation guide');
+        ie_close('a');
+        itext(' if you need help setting that up.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Running locally');
+        ie_close('h2');
+        ie_open('p');
+        itext('WeDeploy\u2122 provides a way to run your project locally using a sandbox system.');
+        ie_close('p');
+        ie_open('ol');
+        ie_open('li');
+        itext('Start local infrastructure:');
+        ie_close('li');
+        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Clone this repository:');
+        ie_close('li');
+        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-hosting.git\ncd boilerplate-hosting', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Link this container with the local infrastructure:');
+        ie_close('li');
+        $templateAlias2({ code: 'we link', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Now your container is ready to be used:');
+        ie_close('li');
+        $templateAlias2({ code: 'http://hosting.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
+        ie_close('ol');
+        ie_open('p');
+        itext('Inside this project folder, you can find a ');
+        ie_open('code');
+        itext('container.json');
+        ie_close('code');
+        itext(' with the container ID used in this case: ');
+        ie_open('code');
+        itext('hosting');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '3');
+        ie_open('h2');
+        itext('Deploying to the cloud');
+        ie_close('h2');
+        ie_open('ol');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-hosting/fork');
+        itext('Fork this repository');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Go to the ');
+        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
+        itext('Dashboard');
+        ie_close('a');
+        itext(' and create a project.');
+        ie_close('li');
+        ie_open('li');
+        itext('In the sidebar, click on ');
+        ie_open('strong');
+        itext('Deployment');
+        ie_close('strong');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Using your local machine, clone your Github fork:');
+        ie_close('li');
+        $templateAlias2({ code: 'git clone https://github.com/<username>/boilerplate-hosting', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Get into the folder: ');
+        ie_open('code');
+        itext('cd boilerplate-hosting');
+        ie_close('code');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Using the content on ');
+        ie_open('strong');
+        itext('Deployment');
+        ie_close('strong');
+        itext(' page. Add the WeDeploy remote url:');
+        ie_close('li');
+        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<projectID>.git', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Push your data to wedeploy git server: ');
+        ie_open('code');
+        itext('git push wedeploy master');
+        ie_close('code');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Once you see it in the Dashboard, your container will be ready to be used.');
+        ie_close('li');
+        $templateAlias2({ code: 'http://hosting.<projectID>.wedeploy.io', mode: 'xml' }, null, opt_ijData);
+        ie_close('ol');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '4');
+        ie_open('h2');
+        itext('Error pages');
+        ie_close('h2');
+        ie_open('p');
+        itext('Files put into the special directory ');
+        ie_open('code');
+        itext('/_error');
+        ie_close('code');
+        itext(' are mapped as the error files to be served in case of an error. They must take the form of ');
+        ie_open('code');
+        itext('<error code>.html');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('h2');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('Now you can start adding new static files and grow your application.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1172 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'docsHostingGettingStartedHtml.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var docsHostingGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(docsHostingGettingStartedHtml, _Component);
+
+    function docsHostingGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, docsHostingGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (docsHostingGettingStartedHtml.__proto__ || Object.getPrototypeOf(docsHostingGettingStartedHtml)).apply(this, arguments));
+    }
+
+    return docsHostingGettingStartedHtml;
+  }(Component);
+
+  Soy.register(docsHostingGettingStartedHtml, templates);
+  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
+  this['metalNamed']['getting-started']['docsHostingGettingStartedHtml'] = docsHostingGettingStartedHtml;
+  this['metalNamed']['getting-started']['templates'] = templates;
+  this['metal']['getting-started'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['getting-started'];
+
+  var docsHostingGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(docsHostingGettingStartedHtml, _Component);
+
+    function docsHostingGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, docsHostingGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (docsHostingGettingStartedHtml.__proto__ || Object.getPrototypeOf(docsHostingGettingStartedHtml)).apply(this, arguments));
+    }
+
+    return docsHostingGettingStartedHtml;
+  }(Component);
+
+  ;
+
+  Soy.register(docsHostingGettingStartedHtml, templates);
+
+  this['metal']['docsHostingGettingStartedHtml'] = docsHostingGettingStartedHtml;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageDocsHostingIndex.
+     * @public
+     */
+
+    goog.module('pageDocsHostingIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {}
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageDocsHostingIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $soyweb(opt_data, opt_ignored, opt_ijData) {
+      ie_open('!DOCTYPE', null, null, 'html', '');
+      ie_open('html', null, null, 'lang', 'en');
+      ie_open('head');
+      ie_open('meta', null, null, 'charset', 'UTF-8');
+      ie_close('meta');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
+      ie_close('meta');
+      ie_close('head');
+      ie_close('html');
+    }
+    exports.soyweb = $soyweb;
+    if (goog.DEBUG) {
+      $soyweb.soyTemplateName = 'pageDocsHostingIndex.soyweb';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.soyweb.params = ["page"];
+    exports.soyweb.types = { "page": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var pageDocsHostingIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsHostingIndex, _Component);
+
+    function pageDocsHostingIndex() {
+      babelHelpers.classCallCheck(this, pageDocsHostingIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsHostingIndex.__proto__ || Object.getPrototypeOf(pageDocsHostingIndex)).apply(this, arguments));
+    }
+
+    return pageDocsHostingIndex;
+  }(Component);
+
+  Soy.register(pageDocsHostingIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageDocsHostingIndex'] = pageDocsHostingIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageDocsHostingIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsHostingIndex, _Component);
+
+    function pageDocsHostingIndex() {
+      babelHelpers.classCallCheck(this, pageDocsHostingIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsHostingIndex.__proto__ || Object.getPrototypeOf(pageDocsHostingIndex)).apply(this, arguments));
+    }
+
+    return pageDocsHostingIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageDocsHostingIndex, templates);
+
+  this['metal']['pageDocsHostingIndex'] = pageDocsHostingIndex;
 }).call(this);
 'use strict';
 
@@ -32116,401 +32528,6 @@ babelHelpers;
   Soy.register(pageDocsDataIndex, templates);
 
   this['metal']['pageDocsDataIndex'] = pageDocsDataIndex;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from getting-started.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace docsHostingGettingStartedHtml.
-     * @public
-     */
-
-    goog.module('docsHostingGettingStartedHtml.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1172 = function param1172() {
-        ie_open('h1');
-        itext('Hosting');
-        ie_close('h1');
-        ie_open('h6');
-        var dyn65 = opt_data.page.description;
-        if (typeof dyn65 == 'function') dyn65();else if (dyn65 != null) itext(dyn65);
-        ie_close('h6');
-        ie_open('div', null, null, 'class', 'guide-btn-cta');
-        ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-hosting.wedeploy.io', 'target', '_blank');
-        ie_void('span', null, null, 'class', 'icon-16-external');
-        itext('See Live Demo');
-        ie_close('a');
-        ie_close('div');
-        ie_open('div', null, null, 'class', 'guide-aux-cta');
-        itext('or read the ');
-        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-hosting', 'target', '_blank');
-        itext('source code');
-        ie_close('a');
-        itext('.');
-        ie_close('div');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Install dependencies');
-        ie_close('h2');
-        ie_open('p');
-        itext('This section assumes that you already have the ');
-        ie_open('strong');
-        itext('WeDeploy CLI');
-        ie_close('strong');
-        itext(' installed and ');
-        ie_open('strong');
-        itext('Docker');
-        ie_close('strong');
-        itext(' running. Make sure to ');
-        ie_open('a', null, null, 'href', '/docs/intro/using-the-command-line.html');
-        itext('visit the installation guide');
-        ie_close('a');
-        itext(' if you need help setting that up.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Running locally');
-        ie_close('h2');
-        ie_open('p');
-        itext('WeDeploy\u2122 provides a way to run your project locally using a sandbox system.');
-        ie_close('p');
-        ie_open('ol');
-        ie_open('li');
-        itext('Start local infrastructure:');
-        ie_close('li');
-        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Clone this repository:');
-        ie_close('li');
-        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-hosting.git\ncd boilerplate-hosting', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Link this container with the local infrastructure:');
-        ie_close('li');
-        $templateAlias2({ code: 'we link', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Now your container is ready to be used:');
-        ie_close('li');
-        $templateAlias2({ code: 'http://hosting.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
-        ie_close('ol');
-        ie_open('p');
-        itext('Inside this project folder, you can find a ');
-        ie_open('code');
-        itext('container.json');
-        ie_close('code');
-        itext(' with the container ID used in this case: ');
-        ie_open('code');
-        itext('hosting');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '3');
-        ie_open('h2');
-        itext('Deploying to the cloud');
-        ie_close('h2');
-        ie_open('ol');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-hosting/fork');
-        itext('Fork this repository');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Go to the ');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
-        itext('Dashboard');
-        ie_close('a');
-        itext(' and create a project.');
-        ie_close('li');
-        ie_open('li');
-        itext('In the sidebar, click on ');
-        ie_open('strong');
-        itext('Deployment');
-        ie_close('strong');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Using your local machine, clone your Github fork:');
-        ie_close('li');
-        $templateAlias2({ code: 'git clone https://github.com/<username>/boilerplate-hosting', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Get into the folder: ');
-        ie_open('code');
-        itext('cd boilerplate-hosting');
-        ie_close('code');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Using the content on ');
-        ie_open('strong');
-        itext('Deployment');
-        ie_close('strong');
-        itext(' page. Add the WeDeploy remote url:');
-        ie_close('li');
-        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<projectID>.git', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Push your data to wedeploy git server: ');
-        ie_open('code');
-        itext('git push wedeploy master');
-        ie_close('code');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Once you see it in the Dashboard, your container will be ready to be used.');
-        ie_close('li');
-        $templateAlias2({ code: 'http://hosting.<projectID>.wedeploy.io', mode: 'xml' }, null, opt_ijData);
-        ie_close('ol');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '4');
-        ie_open('h2');
-        itext('Error pages');
-        ie_close('h2');
-        ie_open('p');
-        itext('Files put into the special directory ');
-        ie_open('code');
-        itext('/_error');
-        ie_close('code');
-        itext(' are mapped as the error files to be served in case of an error. They must take the form of ');
-        ie_open('code');
-        itext('<error code>.html');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('h2');
-        itext('What\'s next?');
-        ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('Now you can start adding new static files and grow your application.');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1172 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'docsHostingGettingStartedHtml.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var docsHostingGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(docsHostingGettingStartedHtml, _Component);
-
-    function docsHostingGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, docsHostingGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (docsHostingGettingStartedHtml.__proto__ || Object.getPrototypeOf(docsHostingGettingStartedHtml)).apply(this, arguments));
-    }
-
-    return docsHostingGettingStartedHtml;
-  }(Component);
-
-  Soy.register(docsHostingGettingStartedHtml, templates);
-  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['docsHostingGettingStartedHtml'] = docsHostingGettingStartedHtml;
-  this['metalNamed']['getting-started']['templates'] = templates;
-  this['metal']['getting-started'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['getting-started'];
-
-  var docsHostingGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(docsHostingGettingStartedHtml, _Component);
-
-    function docsHostingGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, docsHostingGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (docsHostingGettingStartedHtml.__proto__ || Object.getPrototypeOf(docsHostingGettingStartedHtml)).apply(this, arguments));
-    }
-
-    return docsHostingGettingStartedHtml;
-  }(Component);
-
-  ;
-
-  Soy.register(docsHostingGettingStartedHtml, templates);
-
-  this['metal']['docsHostingGettingStartedHtml'] = docsHostingGettingStartedHtml;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageDocsHostingIndex.
-     * @public
-     */
-
-    goog.module('pageDocsHostingIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {}
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageDocsHostingIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $soyweb(opt_data, opt_ignored, opt_ijData) {
-      ie_open('!DOCTYPE', null, null, 'html', '');
-      ie_open('html', null, null, 'lang', 'en');
-      ie_open('head');
-      ie_open('meta', null, null, 'charset', 'UTF-8');
-      ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
-      ie_close('meta');
-      ie_close('head');
-      ie_close('html');
-    }
-    exports.soyweb = $soyweb;
-    if (goog.DEBUG) {
-      $soyweb.soyTemplateName = 'pageDocsHostingIndex.soyweb';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.soyweb.params = ["page"];
-    exports.soyweb.types = { "page": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var pageDocsHostingIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsHostingIndex, _Component);
-
-    function pageDocsHostingIndex() {
-      babelHelpers.classCallCheck(this, pageDocsHostingIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsHostingIndex.__proto__ || Object.getPrototypeOf(pageDocsHostingIndex)).apply(this, arguments));
-    }
-
-    return pageDocsHostingIndex;
-  }(Component);
-
-  Soy.register(pageDocsHostingIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageDocsHostingIndex'] = pageDocsHostingIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageDocsHostingIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsHostingIndex, _Component);
-
-    function pageDocsHostingIndex() {
-      babelHelpers.classCallCheck(this, pageDocsHostingIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsHostingIndex.__proto__ || Object.getPrototypeOf(pageDocsHostingIndex)).apply(this, arguments));
-    }
-
-    return pageDocsHostingIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageDocsHostingIndex, templates);
-
-  this['metal']['pageDocsHostingIndex'] = pageDocsHostingIndex;
 }).call(this);
 'use strict';
 
@@ -35769,11 +35786,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialAddFilesHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsAddFilesHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialAddFilesHtml.incrementaldom');
+    goog.module('tutorialsDataJsAddFilesHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -35822,7 +35839,7 @@ babelHelpers;
         ie_open('code');
         itext('data');
         ie_close('code');
-        itext('. Inside of that directory, we will create a container.json file and a api.json file.');
+        itext('. Inside of that directory, we will create a container.json file and an api.json file.');
         ie_close('p');
         ie_open('h6');
         itext('Container.json');
@@ -35890,7 +35907,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialAddFilesHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsAddFilesHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -35899,20 +35916,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialAddFilesHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialAddFilesHtml, _Component);
+  var tutorialsDataJsAddFilesHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsAddFilesHtml, _Component);
 
-    function tutorialsDataTutorialAddFilesHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialAddFilesHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialAddFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialAddFilesHtml)).apply(this, arguments));
+    function tutorialsDataJsAddFilesHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsAddFilesHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsAddFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsAddFilesHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialAddFilesHtml;
+    return tutorialsDataJsAddFilesHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialAddFilesHtml, templates);
+  Soy.register(tutorialsDataJsAddFilesHtml, templates);
   this['metalNamed']['add-files'] = this['metalNamed']['add-files'] || {};
-  this['metalNamed']['add-files']['tutorialsDataTutorialAddFilesHtml'] = tutorialsDataTutorialAddFilesHtml;
+  this['metalNamed']['add-files']['tutorialsDataJsAddFilesHtml'] = tutorialsDataJsAddFilesHtml;
   this['metalNamed']['add-files']['templates'] = templates;
   this['metal']['add-files'] = templates;
   /* jshint ignore:end */
@@ -35931,11 +35948,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialCloneSampleHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsCloneSampleHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialCloneSampleHtml.incrementaldom');
+    goog.module('tutorialsDataJsCloneSampleHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -35981,7 +35998,7 @@ babelHelpers;
         ie_open('p');
         itext('To download, run this command in your terminal:');
         ie_close('p');
-        $templateAlias2({ code: 'git clone https://github.com/wedeploy/tutorial-data-js.git', mode: 'text' }, null, opt_ijData);
+        $templateAlias2({ code: 'git clone https://github.com/jonnilundy/tutorial-data-js.git', mode: 'text' }, null, opt_ijData);
         ie_open('p');
         itext('After the tutorial, you are free to push your own files or start from scratch with a new project.');
         ie_close('p');
@@ -35994,7 +36011,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialCloneSampleHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsCloneSampleHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36003,20 +36020,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialCloneSampleHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialCloneSampleHtml, _Component);
+  var tutorialsDataJsCloneSampleHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsCloneSampleHtml, _Component);
 
-    function tutorialsDataTutorialCloneSampleHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialCloneSampleHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialCloneSampleHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialCloneSampleHtml)).apply(this, arguments));
+    function tutorialsDataJsCloneSampleHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsCloneSampleHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsCloneSampleHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsCloneSampleHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialCloneSampleHtml;
+    return tutorialsDataJsCloneSampleHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialCloneSampleHtml, templates);
+  Soy.register(tutorialsDataJsCloneSampleHtml, templates);
   this['metalNamed']['clone-sample'] = this['metalNamed']['clone-sample'] || {};
-  this['metalNamed']['clone-sample']['tutorialsDataTutorialCloneSampleHtml'] = tutorialsDataTutorialCloneSampleHtml;
+  this['metalNamed']['clone-sample']['tutorialsDataJsCloneSampleHtml'] = tutorialsDataJsCloneSampleHtml;
   this['metalNamed']['clone-sample']['templates'] = templates;
   this['metal']['clone-sample'] = templates;
   /* jshint ignore:end */
@@ -36035,11 +36052,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace dataTutorials.
+     * @fileoverview Templates in namespace dataJSTutorials.
      * @public
      */
 
-    goog.module('dataTutorials.incrementaldom');
+    goog.module('dataJSTutorials.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36070,7 +36087,7 @@ babelHelpers;
     function $render(opt_data, opt_ignored, opt_ijData) {}
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'dataTutorials.render';
+      $render.soyTemplateName = 'dataJSTutorials.render';
     }
 
     /**
@@ -36086,14 +36103,14 @@ babelHelpers;
       ie_open('head');
       ie_open('meta', null, null, 'charset', 'UTF-8');
       ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/data-tutorial/getting-started.html\'');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/data-js/getting-started.html\'');
       ie_close('meta');
       ie_close('head');
       ie_close('html');
     }
     exports.soyweb = $soyweb;
     if (goog.DEBUG) {
-      $soyweb.soyTemplateName = 'dataTutorials.soyweb';
+      $soyweb.soyTemplateName = 'dataJSTutorials.soyweb';
     }
 
     exports.render.params = [];
@@ -36104,20 +36121,20 @@ babelHelpers;
     return exports;
   });
 
-  var dataTutorials = function (_Component) {
-    babelHelpers.inherits(dataTutorials, _Component);
+  var dataJSTutorials = function (_Component) {
+    babelHelpers.inherits(dataJSTutorials, _Component);
 
-    function dataTutorials() {
-      babelHelpers.classCallCheck(this, dataTutorials);
-      return babelHelpers.possibleConstructorReturn(this, (dataTutorials.__proto__ || Object.getPrototypeOf(dataTutorials)).apply(this, arguments));
+    function dataJSTutorials() {
+      babelHelpers.classCallCheck(this, dataJSTutorials);
+      return babelHelpers.possibleConstructorReturn(this, (dataJSTutorials.__proto__ || Object.getPrototypeOf(dataJSTutorials)).apply(this, arguments));
     }
 
-    return dataTutorials;
+    return dataJSTutorials;
   }(Component);
 
-  Soy.register(dataTutorials, templates);
+  Soy.register(dataJSTutorials, templates);
   this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['dataTutorials'] = dataTutorials;
+  this['metalNamed']['index']['dataJSTutorials'] = dataJSTutorials;
   this['metalNamed']['index']['templates'] = templates;
   this['metal']['index'] = templates;
   /* jshint ignore:end */
@@ -36129,22 +36146,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['index'];
 
-  var dataTutorials = function (_Component) {
-    babelHelpers.inherits(dataTutorials, _Component);
+  var dataJSTutorials = function (_Component) {
+    babelHelpers.inherits(dataJSTutorials, _Component);
 
-    function dataTutorials() {
-      babelHelpers.classCallCheck(this, dataTutorials);
-      return babelHelpers.possibleConstructorReturn(this, (dataTutorials.__proto__ || Object.getPrototypeOf(dataTutorials)).apply(this, arguments));
+    function dataJSTutorials() {
+      babelHelpers.classCallCheck(this, dataJSTutorials);
+      return babelHelpers.possibleConstructorReturn(this, (dataJSTutorials.__proto__ || Object.getPrototypeOf(dataJSTutorials)).apply(this, arguments));
     }
 
-    return dataTutorials;
+    return dataJSTutorials;
   }(Component);
 
   ;
 
-  Soy.register(dataTutorials, templates);
+  Soy.register(dataJSTutorials, templates);
 
-  this['metal']['dataTutorials'] = dataTutorials;
+  this['metal']['dataJSTutorials'] = dataJSTutorials;
 }).call(this);
 'use strict';
 
@@ -36160,11 +36177,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialDeployingHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsDeployingHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialDeployingHtml.incrementaldom');
+    goog.module('tutorialsDataJsDeployingHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36251,7 +36268,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialDeployingHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsDeployingHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36260,20 +36277,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialDeployingHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialDeployingHtml, _Component);
+  var tutorialsDataJsDeployingHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsDeployingHtml, _Component);
 
-    function tutorialsDataTutorialDeployingHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialDeployingHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialDeployingHtml)).apply(this, arguments));
+    function tutorialsDataJsDeployingHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsDeployingHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsDeployingHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialDeployingHtml;
+    return tutorialsDataJsDeployingHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialDeployingHtml, templates);
+  Soy.register(tutorialsDataJsDeployingHtml, templates);
   this['metalNamed']['deploying'] = this['metalNamed']['deploying'] || {};
-  this['metalNamed']['deploying']['tutorialsDataTutorialDeployingHtml'] = tutorialsDataTutorialDeployingHtml;
+  this['metalNamed']['deploying']['tutorialsDataJsDeployingHtml'] = tutorialsDataJsDeployingHtml;
   this['metalNamed']['deploying']['templates'] = templates;
   this['metal']['deploying'] = templates;
   /* jshint ignore:end */
@@ -36292,11 +36309,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialGetDataHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsGetDataHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialGetDataHtml.incrementaldom');
+    goog.module('tutorialsDataJsGetDataHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36363,7 +36380,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialGetDataHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsGetDataHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36372,20 +36389,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialGetDataHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialGetDataHtml, _Component);
+  var tutorialsDataJsGetDataHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsGetDataHtml, _Component);
 
-    function tutorialsDataTutorialGetDataHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialGetDataHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialGetDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialGetDataHtml)).apply(this, arguments));
+    function tutorialsDataJsGetDataHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsGetDataHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsGetDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsGetDataHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialGetDataHtml;
+    return tutorialsDataJsGetDataHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialGetDataHtml, templates);
+  Soy.register(tutorialsDataJsGetDataHtml, templates);
   this['metalNamed']['get-data'] = this['metalNamed']['get-data'] || {};
-  this['metalNamed']['get-data']['tutorialsDataTutorialGetDataHtml'] = tutorialsDataTutorialGetDataHtml;
+  this['metalNamed']['get-data']['tutorialsDataJsGetDataHtml'] = tutorialsDataJsGetDataHtml;
   this['metalNamed']['get-data']['templates'] = templates;
   this['metal']['get-data'] = templates;
   /* jshint ignore:end */
@@ -36404,11 +36421,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialGettingStartedHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsGettingStartedHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialGettingStartedHtml.incrementaldom');
+    goog.module('tutorialsDataJsGettingStartedHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36448,6 +36465,9 @@ babelHelpers;
         ie_open('p');
         itext('You are here because you just finished installing the Data service on your project. In this tutorial you will learn how to setup a test environment for your project using our boilerplate and how to deploy the Data service using Javascript.');
         ie_close('p');
+        ie_open('h6');
+        itext('What to expect');
+        ie_close('h6');
         ie_open('ul', null, null, 'class', 'checklist');
         ie_open('li');
         itext('How to setup your machine as a local dev environment');
@@ -36535,7 +36555,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialGettingStartedHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsGettingStartedHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36544,20 +36564,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialGettingStartedHtml, _Component);
+  var tutorialsDataJsGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsGettingStartedHtml, _Component);
 
-    function tutorialsDataTutorialGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialGettingStartedHtml)).apply(this, arguments));
+    function tutorialsDataJsGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsGettingStartedHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialGettingStartedHtml;
+    return tutorialsDataJsGettingStartedHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialGettingStartedHtml, templates);
+  Soy.register(tutorialsDataJsGettingStartedHtml, templates);
   this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['tutorialsDataTutorialGettingStartedHtml'] = tutorialsDataTutorialGettingStartedHtml;
+  this['metalNamed']['getting-started']['tutorialsDataJsGettingStartedHtml'] = tutorialsDataJsGettingStartedHtml;
   this['metalNamed']['getting-started']['templates'] = templates;
   this['metal']['getting-started'] = templates;
   /* jshint ignore:end */
@@ -36576,11 +36596,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialRunningLocallyHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsRunningLocallyHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialRunningLocallyHtml.incrementaldom');
+    goog.module('tutorialsDataJsRunningLocallyHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36644,7 +36664,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialRunningLocallyHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsRunningLocallyHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36653,20 +36673,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialRunningLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialRunningLocallyHtml, _Component);
+  var tutorialsDataJsRunningLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsRunningLocallyHtml, _Component);
 
-    function tutorialsDataTutorialRunningLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialRunningLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialRunningLocallyHtml)).apply(this, arguments));
+    function tutorialsDataJsRunningLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsRunningLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsRunningLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialRunningLocallyHtml;
+    return tutorialsDataJsRunningLocallyHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialRunningLocallyHtml, templates);
+  Soy.register(tutorialsDataJsRunningLocallyHtml, templates);
   this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
-  this['metalNamed']['running-locally']['tutorialsDataTutorialRunningLocallyHtml'] = tutorialsDataTutorialRunningLocallyHtml;
+  this['metalNamed']['running-locally']['tutorialsDataJsRunningLocallyHtml'] = tutorialsDataJsRunningLocallyHtml;
   this['metalNamed']['running-locally']['templates'] = templates;
   this['metal']['running-locally'] = templates;
   /* jshint ignore:end */
@@ -36685,11 +36705,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsDataTutorialSaveDataHtml.
+     * @fileoverview Templates in namespace tutorialsDataJsSaveDataHtml.
      * @public
      */
 
-    goog.module('tutorialsDataTutorialSaveDataHtml.incrementaldom');
+    goog.module('tutorialsDataJsSaveDataHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36776,7 +36796,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsDataTutorialSaveDataHtml.render';
+      $render.soyTemplateName = 'tutorialsDataJsSaveDataHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36785,20 +36805,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsDataTutorialSaveDataHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialSaveDataHtml, _Component);
+  var tutorialsDataJsSaveDataHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsSaveDataHtml, _Component);
 
-    function tutorialsDataTutorialSaveDataHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialSaveDataHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialSaveDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialSaveDataHtml)).apply(this, arguments));
+    function tutorialsDataJsSaveDataHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsSaveDataHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsSaveDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsSaveDataHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialSaveDataHtml;
+    return tutorialsDataJsSaveDataHtml;
   }(Component);
 
-  Soy.register(tutorialsDataTutorialSaveDataHtml, templates);
+  Soy.register(tutorialsDataJsSaveDataHtml, templates);
   this['metalNamed']['save-data'] = this['metalNamed']['save-data'] || {};
-  this['metalNamed']['save-data']['tutorialsDataTutorialSaveDataHtml'] = tutorialsDataTutorialSaveDataHtml;
+  this['metalNamed']['save-data']['tutorialsDataJsSaveDataHtml'] = tutorialsDataJsSaveDataHtml;
   this['metalNamed']['save-data']['templates'] = templates;
   this['metal']['save-data'] = templates;
   /* jshint ignore:end */
@@ -36810,22 +36830,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['add-files'];
 
-  var tutorialsDataTutorialAddFilesHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialAddFilesHtml, _Component);
+  var tutorialsDataJsAddFilesHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsAddFilesHtml, _Component);
 
-    function tutorialsDataTutorialAddFilesHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialAddFilesHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialAddFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialAddFilesHtml)).apply(this, arguments));
+    function tutorialsDataJsAddFilesHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsAddFilesHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsAddFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsAddFilesHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialAddFilesHtml;
+    return tutorialsDataJsAddFilesHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialAddFilesHtml, templates);
+  Soy.register(tutorialsDataJsAddFilesHtml, templates);
 
-  this['metal']['tutorialsDataTutorialAddFilesHtml'] = tutorialsDataTutorialAddFilesHtml;
+  this['metal']['tutorialsDataJsAddFilesHtml'] = tutorialsDataJsAddFilesHtml;
 }).call(this);
 'use strict';
 
@@ -36834,22 +36854,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['clone-sample'];
 
-  var tutorialsDataTutorialCloneSampleHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialCloneSampleHtml, _Component);
+  var tutorialsDataJsCloneSampleHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsCloneSampleHtml, _Component);
 
-    function tutorialsDataTutorialCloneSampleHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialCloneSampleHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialCloneSampleHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialCloneSampleHtml)).apply(this, arguments));
+    function tutorialsDataJsCloneSampleHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsCloneSampleHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsCloneSampleHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsCloneSampleHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialCloneSampleHtml;
+    return tutorialsDataJsCloneSampleHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialCloneSampleHtml, templates);
+  Soy.register(tutorialsDataJsCloneSampleHtml, templates);
 
-  this['metal']['tutorialsDataTutorialCloneSampleHtml'] = tutorialsDataTutorialCloneSampleHtml;
+  this['metal']['tutorialsDataJsCloneSampleHtml'] = tutorialsDataJsCloneSampleHtml;
 }).call(this);
 'use strict';
 
@@ -36858,22 +36878,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['deploying'];
 
-  var tutorialsDataTutorialDeployingHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialDeployingHtml, _Component);
+  var tutorialsDataJsDeployingHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsDeployingHtml, _Component);
 
-    function tutorialsDataTutorialDeployingHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialDeployingHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialDeployingHtml)).apply(this, arguments));
+    function tutorialsDataJsDeployingHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsDeployingHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsDeployingHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialDeployingHtml;
+    return tutorialsDataJsDeployingHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialDeployingHtml, templates);
+  Soy.register(tutorialsDataJsDeployingHtml, templates);
 
-  this['metal']['tutorialsDataTutorialDeployingHtml'] = tutorialsDataTutorialDeployingHtml;
+  this['metal']['tutorialsDataJsDeployingHtml'] = tutorialsDataJsDeployingHtml;
 }).call(this);
 'use strict';
 
@@ -36882,22 +36902,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['get-data'];
 
-  var tutorialsDataTutorialGetDataHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialGetDataHtml, _Component);
+  var tutorialsDataJsGetDataHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsGetDataHtml, _Component);
 
-    function tutorialsDataTutorialGetDataHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialGetDataHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialGetDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialGetDataHtml)).apply(this, arguments));
+    function tutorialsDataJsGetDataHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsGetDataHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsGetDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsGetDataHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialGetDataHtml;
+    return tutorialsDataJsGetDataHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialGetDataHtml, templates);
+  Soy.register(tutorialsDataJsGetDataHtml, templates);
 
-  this['metal']['tutorialsDataTutorialGetDataHtml'] = tutorialsDataTutorialGetDataHtml;
+  this['metal']['tutorialsDataJsGetDataHtml'] = tutorialsDataJsGetDataHtml;
 }).call(this);
 'use strict';
 
@@ -36906,22 +36926,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['getting-started'];
 
-  var tutorialsDataTutorialGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialGettingStartedHtml, _Component);
+  var tutorialsDataJsGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsGettingStartedHtml, _Component);
 
-    function tutorialsDataTutorialGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialGettingStartedHtml)).apply(this, arguments));
+    function tutorialsDataJsGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsGettingStartedHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialGettingStartedHtml;
+    return tutorialsDataJsGettingStartedHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialGettingStartedHtml, templates);
+  Soy.register(tutorialsDataJsGettingStartedHtml, templates);
 
-  this['metal']['tutorialsDataTutorialGettingStartedHtml'] = tutorialsDataTutorialGettingStartedHtml;
+  this['metal']['tutorialsDataJsGettingStartedHtml'] = tutorialsDataJsGettingStartedHtml;
 }).call(this);
 'use strict';
 
@@ -36930,22 +36950,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['running-locally'];
 
-  var tutorialsDataTutorialRunningLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialRunningLocallyHtml, _Component);
+  var tutorialsDataJsRunningLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsRunningLocallyHtml, _Component);
 
-    function tutorialsDataTutorialRunningLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialRunningLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialRunningLocallyHtml)).apply(this, arguments));
+    function tutorialsDataJsRunningLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsRunningLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsRunningLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialRunningLocallyHtml;
+    return tutorialsDataJsRunningLocallyHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialRunningLocallyHtml, templates);
+  Soy.register(tutorialsDataJsRunningLocallyHtml, templates);
 
-  this['metal']['tutorialsDataTutorialRunningLocallyHtml'] = tutorialsDataTutorialRunningLocallyHtml;
+  this['metal']['tutorialsDataJsRunningLocallyHtml'] = tutorialsDataJsRunningLocallyHtml;
 }).call(this);
 'use strict';
 
@@ -36954,22 +36974,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['save-data'];
 
-  var tutorialsDataTutorialSaveDataHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsDataTutorialSaveDataHtml, _Component);
+  var tutorialsDataJsSaveDataHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsDataJsSaveDataHtml, _Component);
 
-    function tutorialsDataTutorialSaveDataHtml() {
-      babelHelpers.classCallCheck(this, tutorialsDataTutorialSaveDataHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataTutorialSaveDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataTutorialSaveDataHtml)).apply(this, arguments));
+    function tutorialsDataJsSaveDataHtml() {
+      babelHelpers.classCallCheck(this, tutorialsDataJsSaveDataHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsDataJsSaveDataHtml.__proto__ || Object.getPrototypeOf(tutorialsDataJsSaveDataHtml)).apply(this, arguments));
     }
 
-    return tutorialsDataTutorialSaveDataHtml;
+    return tutorialsDataJsSaveDataHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsDataTutorialSaveDataHtml, templates);
+  Soy.register(tutorialsDataJsSaveDataHtml, templates);
 
-  this['metal']['tutorialsDataTutorialSaveDataHtml'] = tutorialsDataTutorialSaveDataHtml;
+  this['metal']['tutorialsDataJsSaveDataHtml'] = tutorialsDataJsSaveDataHtml;
 }).call(this);
 'use strict';
 
@@ -36981,15 +37001,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from container-json.soy.
+    // This file was automatically generated from add-files.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialContainerJsonHtml.
+     * @fileoverview Templates in namespace tutorialsEmailJsAddFilesHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialContainerJsonHtml.incrementaldom');
+    goog.module('tutorialsEmailJsAddFilesHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37024,43 +37044,36 @@ babelHelpers;
     function $render(opt_data, opt_ignored, opt_ijData) {
       var param1741 = function param1741() {
         ie_open('h5');
-        itext('Adding the container.json');
+        itext('Create files');
         ie_close('h5');
         ie_open('p');
-        itext('Every service folder needs a container.json file to specify the id and type of service you are using. Let\'s create one for hosting.');
+        itext('Now that we have the sample files, we can setup our email container.');
         ie_close('p');
-        ie_open('ol');
-        ie_open('li');
-        itext('Open the ');
+        ie_open('p');
+        itext('First go to ');
         ie_open('code');
-        itext('boilerplate-hosting');
+        itext('tutorial-email-js');
         ie_close('code');
-        itext(' directory');
-        ie_close('li');
-        ie_open('li');
-        itext('Create a file called ');
+        itext(' and create a directory named ');
+        ie_open('code');
+        itext('email');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        itext('Within that directory, create a new file named ');
         ie_open('code');
         itext('container.json');
         ie_close('code');
-        ie_close('li');
-        ie_open('li');
-        itext('Open it in your text editor');
-        ie_close('li');
-        ie_open('li');
-        itext('Paste the follow code into that file');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: '{\n    "id": "hosting",\n    "type": "wedeploy/hosting"\n}', mode: 'application/json' }, null, opt_ijData);
+        itext('. This file will designate the id and type of service you are using. Inside of that file, add:');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "id": "email",\n    "type": "wedeploy/email"\n}', mode: 'application/json' }, null, opt_ijData);
         ie_open('ul');
         ie_open('li');
         ie_open('code');
         itext('id');
         ie_close('code');
-        itext(' is the custom name designated for this service. If you named your service something other than "hosting", change the value of the ');
-        ie_open('code');
-        itext('"hosting"');
-        ie_close('code');
-        itext(' to the name of the hosting service you created on the dashboard.');
+        itext(' is the custom name designated for this service. In future projects, feel free to change this value to whatever best describes your service.');
         ie_close('li');
         ie_open('li');
         ie_open('code');
@@ -37078,7 +37091,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialContainerJsonHtml.render';
+      $render.soyTemplateName = 'tutorialsEmailJsAddFilesHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37087,22 +37100,22 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialContainerJsonHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialContainerJsonHtml, _Component);
+  var tutorialsEmailJsAddFilesHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsAddFilesHtml, _Component);
 
-    function tutorialsHostingTutorialContainerJsonHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialContainerJsonHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialContainerJsonHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialContainerJsonHtml)).apply(this, arguments));
+    function tutorialsEmailJsAddFilesHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsAddFilesHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsAddFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsAddFilesHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialContainerJsonHtml;
+    return tutorialsEmailJsAddFilesHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialContainerJsonHtml, templates);
-  this['metalNamed']['container-json'] = this['metalNamed']['container-json'] || {};
-  this['metalNamed']['container-json']['tutorialsHostingTutorialContainerJsonHtml'] = tutorialsHostingTutorialContainerJsonHtml;
-  this['metalNamed']['container-json']['templates'] = templates;
-  this['metal']['container-json'] = templates;
+  Soy.register(tutorialsEmailJsAddFilesHtml, templates);
+  this['metalNamed']['add-files'] = this['metalNamed']['add-files'] || {};
+  this['metalNamed']['add-files']['tutorialsEmailJsAddFilesHtml'] = tutorialsEmailJsAddFilesHtml;
+  this['metalNamed']['add-files']['templates'] = templates;
+  this['metal']['add-files'] = templates;
   /* jshint ignore:end */
 }).call(this);
 'use strict';
@@ -37115,15 +37128,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from deploying.soy.
+    // This file was automatically generated from clone-sample.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialDeployingHtml.
+     * @fileoverview Templates in namespace tutorialsEmailJsCloneSampleHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialDeployingHtml.incrementaldom');
+    goog.module('tutorialsEmailJsCloneSampleHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37158,15 +37171,1124 @@ babelHelpers;
     function $render(opt_data, opt_ignored, opt_ijData) {
       var param1755 = function param1755() {
         ie_open('h5');
+        itext('Cloning the sample repo');
+        ie_close('h5');
+        ie_open('p');
+        itext('To start, you need to create a new project on your WeDeploy dashboard, if you have not already (trying to migrate this tutorial with other tutorials will result in file conflict).');
+        ie_close('p');
+        ie_open('p');
+        itext('Next we will download a sample repo with the necessary files to get us started. To download, run this command in your terminal:');
+        ie_close('p');
+        $templateAlias2({ code: 'git clone https://github.com/jonnilundy/tutorial-email-js.git', mode: 'text' }, null, opt_ijData);
+        ie_open('p');
+        itext('**After the tutorial, you are free to push your own files or start from scratch with a new project.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1755 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'tutorialsEmailJsCloneSampleHtml.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var tutorialsEmailJsCloneSampleHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsCloneSampleHtml, _Component);
+
+    function tutorialsEmailJsCloneSampleHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsCloneSampleHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsCloneSampleHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsCloneSampleHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsCloneSampleHtml;
+  }(Component);
+
+  Soy.register(tutorialsEmailJsCloneSampleHtml, templates);
+  this['metalNamed']['clone-sample'] = this['metalNamed']['clone-sample'] || {};
+  this['metalNamed']['clone-sample']['tutorialsEmailJsCloneSampleHtml'] = tutorialsEmailJsCloneSampleHtml;
+  this['metalNamed']['clone-sample']['templates'] = templates;
+  this['metal']['clone-sample'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from deploying.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace tutorialsEmailJsDeployingHtml.
+     * @public
+     */
+
+    goog.module('tutorialsEmailJsDeployingHtml.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1769 = function param1769() {
+        ie_open('h5');
         itext('Deploying your project');
         ie_close('h5');
         ie_open('p');
-        itext('Now its time to push your local boilerplate to your WeDeploy project.');
+        itext('Now its time to push these local files to your WeDeploy project.');
         ie_close('p');
         ie_open('p');
         itext('First, add a git remote. Within ');
         ie_open('code');
-        itext('boilerplate-hosting');
+        itext('tutorial-email-js');
+        ie_close('code');
+        itext(' on your command line, run ');
+        ie_open('code');
+        itext('git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        itext('Then make a first commit.');
+        ie_close('p');
+        ie_open('ol');
+        ie_open('li');
+        ie_open('code');
+        itext('git add .');
+        ie_close('code');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('git commit -m "Awesome commit"');
+        ie_close('code');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('git push wedeploy master');
+        ie_close('code');
+        ie_close('li');
+        ie_close('ol');
+        ie_open('p');
+        itext('Go to the WeDeploy dashboard and select your project. On the right you should see the build log of your recent commit.');
+        ie_close('p');
+        ie_open('p');
+        itext('Once it says "Deploy was successful" go to ');
+        ie_open('code');
+        itext('<project-name>.wedeploy.io');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        itext('Voil\xE0! Your page is live!');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1769 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'tutorialsEmailJsDeployingHtml.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var tutorialsEmailJsDeployingHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsDeployingHtml, _Component);
+
+    function tutorialsEmailJsDeployingHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsDeployingHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsDeployingHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsDeployingHtml;
+  }(Component);
+
+  Soy.register(tutorialsEmailJsDeployingHtml, templates);
+  this['metalNamed']['deploying'] = this['metalNamed']['deploying'] || {};
+  this['metalNamed']['deploying']['tutorialsEmailJsDeployingHtml'] = tutorialsEmailJsDeployingHtml;
+  this['metalNamed']['deploying']['templates'] = templates;
+  this['metal']['deploying'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from email-parameters.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace tutorialsEmailJsEmailParametersHtml.
+     * @public
+     */
+
+    goog.module('tutorialsEmailJsEmailParametersHtml.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1778 = function param1778() {
+        ie_open('h5');
+        itext('Setup Email Parameters');
+        ie_close('h5');
+        ie_open('p');
+        itext('We have a local deployment of our email sample site but the ');
+        ie_open('code');
+        itext('Submit');
+        ie_close('code');
+        itext(' button is not working. We need to edit the parameters to make it active.');
+        ie_close('p');
+        ie_open('p');
+        itext('Open ');
+        ie_open('code');
+        itext('tutorial-email-js/hosting/main.js');
+        ie_close('code');
+        itext(' in your text editor. Right bellow ');
+        ie_open('code');
+        itext('WeDeploy');
+        ie_close('code');
+        itext(' on line 6, paste this code:');
+        ie_close('p');
+        $templateAlias2({ code: '.url(\'http://email.test-email-js.wedeploy.me/emails\')\n        .auth(\'dummyMasterToken\')', mode: 'javascript' }, null, opt_ijData);
+        ie_open('ul');
+        ie_open('li');
+        ie_open('code');
+        itext('.url');
+        ie_close('code');
+        itext(' is specifying the project and service that it would send the emails through. In your future project, put ');
+        ie_open('code');
+        itext('http://<email-service-id>.<project-id>.wedeploy.io/emails');
+        ie_close('code');
+        itext(' here (notice that you must change the ');
+        ie_open('code');
+        itext('.me');
+        ie_close('code');
+        itext(' to ');
+        ie_open('code');
+        itext('.io');
+        ie_close('code');
+        itext(' for deployment).');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('.auth');
+        ie_close('code');
+        itext(' is the authentication key. For demo purposes, we created a dummy local ');
+        ie_open('code');
+        itext('masterToken');
+        ie_close('code');
+        itext(' within the ');
+        ie_open('code');
+        itext('project.json');
+        ie_close('code');
+        itext(' file. For future deployment, you will need to find your project\'s master token on the settings tab inside your project\'s dashboard.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('p');
+        itext('Right bellow that, paste this code:');
+        ie_close('p');
+        $templateAlias2({ code: '.form(\'from\', form.from.value)\n        .form(\'to\', form.to.value)\n        .form(\'subject\', form.subject.value)\n        .form(\'message\', form.subject.value)\n        .post()', mode: 'javascript' }, null, opt_ijData);
+        ie_open('ul');
+        ie_open('li');
+        ie_open('code');
+        itext('form');
+        ie_close('code');
+        itext(', ');
+        ie_open('code');
+        itext('to');
+        ie_close('code');
+        itext(', ');
+        ie_open('code');
+        itext('subject');
+        ie_close('code');
+        itext(', and ');
+        ie_open('code');
+        itext('message');
+        ie_close('code');
+        itext(' are all email parameter that allow you to choose what ');
+        ie_open('code');
+        itext('form');
+        ie_close('code');
+        itext(' inputs correlate to what email elements.');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('.post()');
+        ie_close('code');
+        itext(' is the api request to send the email.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('p');
+        itext('Now go back to the ');
+        ie_open('a', null, null, 'href', 'http://tutorial-email-js.wedeploy.me');
+        itext('homepage');
+        ie_close('a');
+        itext(' and try sending an email to yourself.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1778 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'tutorialsEmailJsEmailParametersHtml.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var tutorialsEmailJsEmailParametersHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsEmailParametersHtml, _Component);
+
+    function tutorialsEmailJsEmailParametersHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsEmailParametersHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsEmailParametersHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsEmailParametersHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsEmailParametersHtml;
+  }(Component);
+
+  Soy.register(tutorialsEmailJsEmailParametersHtml, templates);
+  this['metalNamed']['email-parameters'] = this['metalNamed']['email-parameters'] || {};
+  this['metalNamed']['email-parameters']['tutorialsEmailJsEmailParametersHtml'] = tutorialsEmailJsEmailParametersHtml;
+  this['metalNamed']['email-parameters']['templates'] = templates;
+  this['metal']['email-parameters'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace emailJSTutorials.
+     * @public
+     */
+
+    goog.module('emailJSTutorials.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {}
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'emailJSTutorials.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $soyweb(opt_data, opt_ignored, opt_ijData) {
+      ie_open('!DOCTYPE', null, null, 'html', '');
+      ie_open('html', null, null, 'lang', 'en');
+      ie_open('head');
+      ie_open('meta', null, null, 'charset', 'UTF-8');
+      ie_close('meta');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/email-js/getting-started.html\'');
+      ie_close('meta');
+      ie_close('head');
+      ie_close('html');
+    }
+    exports.soyweb = $soyweb;
+    if (goog.DEBUG) {
+      $soyweb.soyTemplateName = 'emailJSTutorials.soyweb';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.soyweb.params = [];
+    exports.soyweb.types = {};
+    templates = exports;
+    return exports;
+  });
+
+  var emailJSTutorials = function (_Component) {
+    babelHelpers.inherits(emailJSTutorials, _Component);
+
+    function emailJSTutorials() {
+      babelHelpers.classCallCheck(this, emailJSTutorials);
+      return babelHelpers.possibleConstructorReturn(this, (emailJSTutorials.__proto__ || Object.getPrototypeOf(emailJSTutorials)).apply(this, arguments));
+    }
+
+    return emailJSTutorials;
+  }(Component);
+
+  Soy.register(emailJSTutorials, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['emailJSTutorials'] = emailJSTutorials;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var emailJSTutorials = function (_Component) {
+    babelHelpers.inherits(emailJSTutorials, _Component);
+
+    function emailJSTutorials() {
+      babelHelpers.classCallCheck(this, emailJSTutorials);
+      return babelHelpers.possibleConstructorReturn(this, (emailJSTutorials.__proto__ || Object.getPrototypeOf(emailJSTutorials)).apply(this, arguments));
+    }
+
+    return emailJSTutorials;
+  }(Component);
+
+  ;
+
+  Soy.register(emailJSTutorials, templates);
+
+  this['metal']['emailJSTutorials'] = emailJSTutorials;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from getting-started.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace tutorialsEmailJsGettingStartedHtml.
+     * @public
+     */
+
+    goog.module('tutorialsEmailJsGettingStartedHtml.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1797 = function param1797() {
+        ie_open('h5');
+        itext('Getting Started');
+        ie_close('h5');
+        ie_open('p');
+        itext('You are here because you just finished installing the Email service on your project. In this tutorial you will learn how to setup a test environment for your project using our boilerplate and how to deploy the Data service using Javascript.');
+        ie_close('p');
+        ie_open('h6');
+        itext('What to expect');
+        ie_close('h6');
+        ie_open('ul', null, null, 'class', 'checklist');
+        ie_open('li');
+        itext('How to setup your machine as a local dev environment');
+        ie_close('li');
+        ie_open('li');
+        itext('How to create the necessary files for your containers');
+        ie_close('li');
+        ie_open('li');
+        itext('How to run your service locally');
+        ie_close('li');
+        ie_open('li');
+        itext('How to push your service into deployment');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('h6');
+        itext('What you\'ll need');
+        ie_close('h6');
+        ie_open('ul');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/');
+        itext('Git');
+        ie_close('a');
+        itext(' (download for ');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/download/linux');
+        itext('Linux');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/download/mac');
+        itext('macOS');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/download/win');
+        itext('Windows');
+        ie_close('a');
+        itext(')');
+        ie_close('li');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'https://www.docker.com/');
+        itext('Docker');
+        ie_close('a');
+        itext(' (download for ');
+        ie_open('a', null, null, 'href', 'https://docs.docker.com/engine/installation/linux/');
+        itext('Linux');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'macOS');
+        itext('macOS');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'https://download.docker.com/win/stable/InstallDocker.msi');
+        itext('Windows');
+        ie_close('a');
+        itext(')');
+        ie_close('li');
+        ie_open('li');
+        itext('WeDeploy CLI');
+        ie_open('ul');
+        ie_open('li');
+        itext('For linux systems, open your Terminal and run:');
+        ie_close('li');
+        ie_close('ul');
+        $templateAlias2({ code: 'curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash', mode: 'text' }, null, opt_ijData);
+        ie_open('ul');
+        ie_open('li');
+        itext('For Windows, you probably want the ');
+        ie_open('a', null, null, 'href', 'https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.msi');
+        itext('Windows amd64 installer');
+        ie_close('a');
+        ie_close('li');
+        ie_open('li');
+        itext('For other systems, cehck the list of ');
+        ie_open('a', null, null, 'href', 'https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.zip');
+        itext('all builds available');
+        ie_close('a');
+        ie_close('li');
+        ie_close('ul');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1797 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'tutorialsEmailJsGettingStartedHtml.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var tutorialsEmailJsGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsGettingStartedHtml, _Component);
+
+    function tutorialsEmailJsGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsGettingStartedHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsGettingStartedHtml;
+  }(Component);
+
+  Soy.register(tutorialsEmailJsGettingStartedHtml, templates);
+  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
+  this['metalNamed']['getting-started']['tutorialsEmailJsGettingStartedHtml'] = tutorialsEmailJsGettingStartedHtml;
+  this['metalNamed']['getting-started']['templates'] = templates;
+  this['metal']['getting-started'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from running-locally.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace tutorialsEmailJsRunningLocallyHtml.
+     * @public
+     */
+
+    goog.module('tutorialsEmailJsRunningLocallyHtml.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1815 = function param1815() {
+        ie_open('h5');
+        itext('Running locally');
+        ie_close('h5');
+        ie_open('p');
+        itext('WeDeploy provides a dev environment for you to run and test your app before pushing it to production. Lets get that running for this project!');
+        ie_close('p');
+        ie_open('p');
+        itext('In your terminal, run ');
+        ie_open('code');
+        itext('we run');
+        ie_close('code');
+        itext('. Once it is done, open a new tab and run ');
+        ie_open('code');
+        itext('we link --project tutorial-email-js');
+        ie_close('code');
+        ie_close('p');
+        ie_open('p');
+        itext('You can now go to ');
+        ie_open('code');
+        itext('http://tutorial-email-js.wedeploy.me');
+        ie_close('code');
+        itext(' in your browser and see the local deployment of your project. Any changes you make to your project folder now will automatically be deployed to this local server.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1815 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'tutorialsEmailJsRunningLocallyHtml.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var tutorialsEmailJsRunningLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsRunningLocallyHtml, _Component);
+
+    function tutorialsEmailJsRunningLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsRunningLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsRunningLocallyHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsRunningLocallyHtml;
+  }(Component);
+
+  Soy.register(tutorialsEmailJsRunningLocallyHtml, templates);
+  this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
+  this['metalNamed']['running-locally']['tutorialsEmailJsRunningLocallyHtml'] = tutorialsEmailJsRunningLocallyHtml;
+  this['metalNamed']['running-locally']['templates'] = templates;
+  this['metal']['running-locally'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['add-files'];
+
+  var tutorialsEmailJsAddFilesHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsAddFilesHtml, _Component);
+
+    function tutorialsEmailJsAddFilesHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsAddFilesHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsAddFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsAddFilesHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsAddFilesHtml;
+  }(Component);
+
+  ;
+
+  Soy.register(tutorialsEmailJsAddFilesHtml, templates);
+
+  this['metal']['tutorialsEmailJsAddFilesHtml'] = tutorialsEmailJsAddFilesHtml;
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['clone-sample'];
+
+  var tutorialsEmailJsCloneSampleHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsCloneSampleHtml, _Component);
+
+    function tutorialsEmailJsCloneSampleHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsCloneSampleHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsCloneSampleHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsCloneSampleHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsCloneSampleHtml;
+  }(Component);
+
+  ;
+
+  Soy.register(tutorialsEmailJsCloneSampleHtml, templates);
+
+  this['metal']['tutorialsEmailJsCloneSampleHtml'] = tutorialsEmailJsCloneSampleHtml;
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['deploying'];
+
+  var tutorialsEmailJsDeployingHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsDeployingHtml, _Component);
+
+    function tutorialsEmailJsDeployingHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsDeployingHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsDeployingHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsDeployingHtml;
+  }(Component);
+
+  ;
+
+  Soy.register(tutorialsEmailJsDeployingHtml, templates);
+
+  this['metal']['tutorialsEmailJsDeployingHtml'] = tutorialsEmailJsDeployingHtml;
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['email-parameters'];
+
+  var tutorialsEmailJsEmailParametersHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsEmailParametersHtml, _Component);
+
+    function tutorialsEmailJsEmailParametersHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsEmailParametersHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsEmailParametersHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsEmailParametersHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsEmailParametersHtml;
+  }(Component);
+
+  ;
+
+  Soy.register(tutorialsEmailJsEmailParametersHtml, templates);
+
+  this['metal']['tutorialsEmailJsEmailParametersHtml'] = tutorialsEmailJsEmailParametersHtml;
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['getting-started'];
+
+  var tutorialsEmailJsGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsGettingStartedHtml, _Component);
+
+    function tutorialsEmailJsGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsGettingStartedHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsGettingStartedHtml;
+  }(Component);
+
+  ;
+
+  Soy.register(tutorialsEmailJsGettingStartedHtml, templates);
+
+  this['metal']['tutorialsEmailJsGettingStartedHtml'] = tutorialsEmailJsGettingStartedHtml;
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['running-locally'];
+
+  var tutorialsEmailJsRunningLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsEmailJsRunningLocallyHtml, _Component);
+
+    function tutorialsEmailJsRunningLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsEmailJsRunningLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsEmailJsRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsEmailJsRunningLocallyHtml)).apply(this, arguments));
+    }
+
+    return tutorialsEmailJsRunningLocallyHtml;
+  }(Component);
+
+  ;
+
+  Soy.register(tutorialsEmailJsRunningLocallyHtml, templates);
+
+  this['metal']['tutorialsEmailJsRunningLocallyHtml'] = tutorialsEmailJsRunningLocallyHtml;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from container-json.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace tutorialsHostingContainerJsonHtml.
+     * @public
+     */
+
+    goog.module('tutorialsHostingContainerJsonHtml.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1824 = function param1824() {
+        ie_open('h5');
+        itext('Adding the container.json');
+        ie_close('h5');
+        ie_open('p');
+        itext('Every WeDeploy container needs a container.json file to specify the id and type of service you are using. Let\'s create one for hosting.');
+        ie_close('p');
+        ie_open('ol');
+        ie_open('li');
+        itext('Go to the ');
+        ie_open('code');
+        itext('tutorial-hosting');
+        ie_close('code');
+        itext(' directory');
+        ie_close('li');
+        ie_open('li');
+        itext('Create a file called ');
+        ie_open('code');
+        itext('container.json');
+        ie_close('code');
+        ie_close('li');
+        ie_open('li');
+        itext('Open it in your text editor');
+        ie_close('li');
+        ie_open('li');
+        itext('Paste the follow code');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: '{\n    "id": "hosting",\n    "type": "wedeploy/hosting"\n}', mode: 'application/json' }, null, opt_ijData);
+        ie_open('ul');
+        ie_open('li');
+        ie_open('code');
+        itext('id');
+        ie_close('code');
+        itext(' is the custom name designated for this service. If you named your service something other than "hosting", change the value of the ');
+        ie_open('code');
+        itext('id');
+        ie_close('code');
+        itext(' to the name of the hosting service you created on the dashboard.');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('type');
+        ie_close('code');
+        itext(' tells WeDeploy what service to use.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1824 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'tutorialsHostingContainerJsonHtml.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var tutorialsHostingContainerJsonHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingContainerJsonHtml, _Component);
+
+    function tutorialsHostingContainerJsonHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingContainerJsonHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingContainerJsonHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingContainerJsonHtml)).apply(this, arguments));
+    }
+
+    return tutorialsHostingContainerJsonHtml;
+  }(Component);
+
+  Soy.register(tutorialsHostingContainerJsonHtml, templates);
+  this['metalNamed']['container-json'] = this['metalNamed']['container-json'] || {};
+  this['metalNamed']['container-json']['tutorialsHostingContainerJsonHtml'] = tutorialsHostingContainerJsonHtml;
+  this['metalNamed']['container-json']['templates'] = templates;
+  this['metal']['container-json'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from deploying.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace tutorialsHostingDeployingHtml.
+     * @public
+     */
+
+    goog.module('tutorialsHostingDeployingHtml.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1838 = function param1838() {
+        ie_open('h5');
+        itext('Deploying your project');
+        ie_close('h5');
+        ie_open('p');
+        itext('Now its time to push your local files to your WeDeploy project.');
+        ie_close('p');
+        ie_open('p');
+        itext('First, add a git remote. Within ');
+        ie_open('code');
+        itext('tutorial-hosting');
         ie_close('code');
         itext(' on your command line, run:');
         ie_close('p');
@@ -37209,11 +38331,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1755 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1838 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialDeployingHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingDeployingHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37222,20 +38344,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialDeployingHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialDeployingHtml, _Component);
+  var tutorialsHostingDeployingHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingDeployingHtml, _Component);
 
-    function tutorialsHostingTutorialDeployingHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialDeployingHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialDeployingHtml)).apply(this, arguments));
+    function tutorialsHostingDeployingHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingDeployingHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingDeployingHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialDeployingHtml;
+    return tutorialsHostingDeployingHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialDeployingHtml, templates);
+  Soy.register(tutorialsHostingDeployingHtml, templates);
   this['metalNamed']['deploying'] = this['metalNamed']['deploying'] || {};
-  this['metalNamed']['deploying']['tutorialsHostingTutorialDeployingHtml'] = tutorialsHostingTutorialDeployingHtml;
+  this['metalNamed']['deploying']['tutorialsHostingDeployingHtml'] = tutorialsHostingDeployingHtml;
   this['metalNamed']['deploying']['templates'] = templates;
   this['metal']['deploying'] = templates;
   /* jshint ignore:end */
@@ -37254,11 +38376,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialGettingStartedHtml.
+     * @fileoverview Templates in namespace tutorialsHostingGettingStartedHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialGettingStartedHtml.incrementaldom');
+    goog.module('tutorialsHostingGettingStartedHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37291,13 +38413,16 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1769 = function param1769() {
+      var param1852 = function param1852() {
         ie_open('h5');
         itext('Getting Started');
         ie_close('h5');
         ie_open('p');
         itext('You are here because you just finished installing the host service on your project. In this tutorial you will learn how to setup a test environment for your project and how to deploy those files to the Hosting service.');
         ie_close('p');
+        ie_open('h6');
+        itext('What to expect');
+        ie_close('h6');
         ie_open('ul', null, null, 'class', 'checklist');
         ie_open('li');
         itext('How to setup your machine as a local dev environment');
@@ -37378,11 +38503,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1769 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1852 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialGettingStartedHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingGettingStartedHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37391,20 +38516,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialGettingStartedHtml, _Component);
+  var tutorialsHostingGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingGettingStartedHtml, _Component);
 
-    function tutorialsHostingTutorialGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialGettingStartedHtml)).apply(this, arguments));
+    function tutorialsHostingGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingGettingStartedHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialGettingStartedHtml;
+    return tutorialsHostingGettingStartedHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialGettingStartedHtml, templates);
+  Soy.register(tutorialsHostingGettingStartedHtml, templates);
   this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['tutorialsHostingTutorialGettingStartedHtml'] = tutorialsHostingTutorialGettingStartedHtml;
+  this['metalNamed']['getting-started']['tutorialsHostingGettingStartedHtml'] = tutorialsHostingGettingStartedHtml;
   this['metalNamed']['getting-started']['templates'] = templates;
   this['metal']['getting-started'] = templates;
   /* jshint ignore:end */
@@ -37474,7 +38599,7 @@ babelHelpers;
       ie_open('head');
       ie_open('meta', null, null, 'charset', 'UTF-8');
       ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/hosting-tutorial/getting-started.html\'');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'/tutorials/hosting/getting-started.html\'');
       ie_close('meta');
       ie_close('head');
       ie_close('html');
@@ -37548,11 +38673,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialRunningLocallyHtml.
+     * @fileoverview Templates in namespace tutorialsHostingRunningLocallyHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialRunningLocallyHtml.incrementaldom');
+    goog.module('tutorialsHostingRunningLocallyHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37583,7 +38708,7 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1787 = function param1787() {
+      var param1870 = function param1870() {
         ie_open('h5');
         itext('Running locally');
         ie_close('h5');
@@ -37597,26 +38722,26 @@ babelHelpers;
         ie_close('code');
         itext('. Now in a new tab, run ');
         ie_open('code');
-        itext('we link --project boilerplate-hosting');
+        itext('we link --project tutorial-hosting');
         ie_close('code');
         ie_close('p');
         ie_open('p');
         itext('You can go to ');
         ie_open('code');
-        itext('http://<hosting-service-id>.boilerplate-hosting.wedeploy.me');
+        itext('http://<hosting-service-id>.tutorial-hosting.wedeploy.me');
         ie_close('code');
-        itext(' in your browser and see the local deployment of the boilerplate. Any changes you make to your project folder now will automatically be deployed to this local server.');
+        itext(' in your browser and see the local deployment of the sample static site. Any changes you make to your project folder now will automatically be deployed to this local server.');
         ie_close('p');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
         ie_close('input');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1787 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1870 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialRunningLocallyHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingRunningLocallyHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37625,20 +38750,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialRunningLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialRunningLocallyHtml, _Component);
+  var tutorialsHostingRunningLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingRunningLocallyHtml, _Component);
 
-    function tutorialsHostingTutorialRunningLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialRunningLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialRunningLocallyHtml)).apply(this, arguments));
+    function tutorialsHostingRunningLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingRunningLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingRunningLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialRunningLocallyHtml;
+    return tutorialsHostingRunningLocallyHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialRunningLocallyHtml, templates);
+  Soy.register(tutorialsHostingRunningLocallyHtml, templates);
   this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
-  this['metalNamed']['running-locally']['tutorialsHostingTutorialRunningLocallyHtml'] = tutorialsHostingTutorialRunningLocallyHtml;
+  this['metalNamed']['running-locally']['tutorialsHostingRunningLocallyHtml'] = tutorialsHostingRunningLocallyHtml;
   this['metalNamed']['running-locally']['templates'] = templates;
   this['metal']['running-locally'] = templates;
   /* jshint ignore:end */
@@ -37657,11 +38782,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialSampleFilesHtml.
+     * @fileoverview Templates in namespace tutorialsHostingSampleFilesHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialSampleFilesHtml.incrementaldom');
+    goog.module('tutorialsHostingSampleFilesHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37694,21 +38819,21 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1796 = function param1796() {
+      var param1879 = function param1879() {
         ie_open('h5');
-        itext('Initializing the sample files');
+        itext('Clone the sample repo');
         ie_close('h5');
         ie_open('p');
-        itext('To start, you will clone our Hosting boilerplate so you can get to know the deployment process. After the tutorial, you are free to add your own files to the folder or start from scratch with a new service.');
+        itext('To start, you will clone our sample files so you can get to know the deployment process. After the tutorial, you are free to add your own files to the folder or start from scratch with a new service.');
         ie_close('p');
         ie_open('p');
         itext('First, run this command in your terminal:');
         ie_close('p');
-        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-hosting.git && cd boilerplate-hosting', mode: 'text' }, null, opt_ijData);
+        $templateAlias2({ code: 'git clone https://github.com/jonnilundy/tutorial-hosting.git', mode: 'text' }, null, opt_ijData);
         ie_open('p');
         itext('You now have a folder called ');
         ie_open('code');
-        itext('boilerplate-hosting');
+        itext('tutorial-hosting');
         ie_close('code');
         itext(' that contains almost all the files necessary to get your static site of the ground- besides one.');
         ie_close('p');
@@ -37717,11 +38842,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1796 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1879 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialSampleFilesHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingSampleFilesHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37730,20 +38855,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialSampleFilesHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialSampleFilesHtml, _Component);
+  var tutorialsHostingSampleFilesHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingSampleFilesHtml, _Component);
 
-    function tutorialsHostingTutorialSampleFilesHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialSampleFilesHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialSampleFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialSampleFilesHtml)).apply(this, arguments));
+    function tutorialsHostingSampleFilesHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingSampleFilesHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingSampleFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingSampleFilesHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialSampleFilesHtml;
+    return tutorialsHostingSampleFilesHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialSampleFilesHtml, templates);
+  Soy.register(tutorialsHostingSampleFilesHtml, templates);
   this['metalNamed']['sample-files'] = this['metalNamed']['sample-files'] || {};
-  this['metalNamed']['sample-files']['tutorialsHostingTutorialSampleFilesHtml'] = tutorialsHostingTutorialSampleFilesHtml;
+  this['metalNamed']['sample-files']['tutorialsHostingSampleFilesHtml'] = tutorialsHostingSampleFilesHtml;
   this['metalNamed']['sample-files']['templates'] = templates;
   this['metal']['sample-files'] = templates;
   /* jshint ignore:end */
@@ -37762,11 +38887,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace tutorialsHostingTutorialTestingLocallyHtml.
+     * @fileoverview Templates in namespace tutorialsHostingTestingLocallyHtml.
      * @public
      */
 
-    goog.module('tutorialsHostingTutorialTestingLocallyHtml.incrementaldom');
+    goog.module('tutorialsHostingTestingLocallyHtml.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37797,7 +38922,7 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1810 = function param1810() {
+      var param1893 = function param1893() {
         ie_open('h5');
         itext('Testing locally');
         ie_close('h5');
@@ -37805,7 +38930,11 @@ babelHelpers;
         itext('Now that we have the local environment running, let\'s test the project by making a change to it.');
         ie_close('p');
         ie_open('p');
-        itext('Go back to the boilerplate in your text editor, open ');
+        itext('Open ');
+        ie_open('code');
+        itext('tutorial-hosting');
+        ie_close('code');
+        itext(' in your text editor. Go to ');
         ie_open('code');
         itext('index.html');
         ie_close('code');
@@ -37831,11 +38960,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1810 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1893 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'tutorialsHostingTutorialTestingLocallyHtml.render';
+      $render.soyTemplateName = 'tutorialsHostingTestingLocallyHtml.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37844,20 +38973,20 @@ babelHelpers;
     return exports;
   });
 
-  var tutorialsHostingTutorialTestingLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialTestingLocallyHtml, _Component);
+  var tutorialsHostingTestingLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingTestingLocallyHtml, _Component);
 
-    function tutorialsHostingTutorialTestingLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialTestingLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialTestingLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialTestingLocallyHtml)).apply(this, arguments));
+    function tutorialsHostingTestingLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingTestingLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTestingLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTestingLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialTestingLocallyHtml;
+    return tutorialsHostingTestingLocallyHtml;
   }(Component);
 
-  Soy.register(tutorialsHostingTutorialTestingLocallyHtml, templates);
+  Soy.register(tutorialsHostingTestingLocallyHtml, templates);
   this['metalNamed']['testing-locally'] = this['metalNamed']['testing-locally'] || {};
-  this['metalNamed']['testing-locally']['tutorialsHostingTutorialTestingLocallyHtml'] = tutorialsHostingTutorialTestingLocallyHtml;
+  this['metalNamed']['testing-locally']['tutorialsHostingTestingLocallyHtml'] = tutorialsHostingTestingLocallyHtml;
   this['metalNamed']['testing-locally']['templates'] = templates;
   this['metal']['testing-locally'] = templates;
   /* jshint ignore:end */
@@ -37869,22 +38998,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['container-json'];
 
-  var tutorialsHostingTutorialContainerJsonHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialContainerJsonHtml, _Component);
+  var tutorialsHostingContainerJsonHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingContainerJsonHtml, _Component);
 
-    function tutorialsHostingTutorialContainerJsonHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialContainerJsonHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialContainerJsonHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialContainerJsonHtml)).apply(this, arguments));
+    function tutorialsHostingContainerJsonHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingContainerJsonHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingContainerJsonHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingContainerJsonHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialContainerJsonHtml;
+    return tutorialsHostingContainerJsonHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialContainerJsonHtml, templates);
+  Soy.register(tutorialsHostingContainerJsonHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialContainerJsonHtml'] = tutorialsHostingTutorialContainerJsonHtml;
+  this['metal']['tutorialsHostingContainerJsonHtml'] = tutorialsHostingContainerJsonHtml;
 }).call(this);
 'use strict';
 
@@ -37893,22 +39022,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['deploying'];
 
-  var tutorialsHostingTutorialDeployingHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialDeployingHtml, _Component);
+  var tutorialsHostingDeployingHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingDeployingHtml, _Component);
 
-    function tutorialsHostingTutorialDeployingHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialDeployingHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialDeployingHtml)).apply(this, arguments));
+    function tutorialsHostingDeployingHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingDeployingHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingDeployingHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingDeployingHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialDeployingHtml;
+    return tutorialsHostingDeployingHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialDeployingHtml, templates);
+  Soy.register(tutorialsHostingDeployingHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialDeployingHtml'] = tutorialsHostingTutorialDeployingHtml;
+  this['metal']['tutorialsHostingDeployingHtml'] = tutorialsHostingDeployingHtml;
 }).call(this);
 'use strict';
 
@@ -37917,22 +39046,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['getting-started'];
 
-  var tutorialsHostingTutorialGettingStartedHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialGettingStartedHtml, _Component);
+  var tutorialsHostingGettingStartedHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingGettingStartedHtml, _Component);
 
-    function tutorialsHostingTutorialGettingStartedHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialGettingStartedHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialGettingStartedHtml)).apply(this, arguments));
+    function tutorialsHostingGettingStartedHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingGettingStartedHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingGettingStartedHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingGettingStartedHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialGettingStartedHtml;
+    return tutorialsHostingGettingStartedHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialGettingStartedHtml, templates);
+  Soy.register(tutorialsHostingGettingStartedHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialGettingStartedHtml'] = tutorialsHostingTutorialGettingStartedHtml;
+  this['metal']['tutorialsHostingGettingStartedHtml'] = tutorialsHostingGettingStartedHtml;
 }).call(this);
 'use strict';
 
@@ -37941,22 +39070,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['running-locally'];
 
-  var tutorialsHostingTutorialRunningLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialRunningLocallyHtml, _Component);
+  var tutorialsHostingRunningLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingRunningLocallyHtml, _Component);
 
-    function tutorialsHostingTutorialRunningLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialRunningLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialRunningLocallyHtml)).apply(this, arguments));
+    function tutorialsHostingRunningLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingRunningLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingRunningLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingRunningLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialRunningLocallyHtml;
+    return tutorialsHostingRunningLocallyHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialRunningLocallyHtml, templates);
+  Soy.register(tutorialsHostingRunningLocallyHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialRunningLocallyHtml'] = tutorialsHostingTutorialRunningLocallyHtml;
+  this['metal']['tutorialsHostingRunningLocallyHtml'] = tutorialsHostingRunningLocallyHtml;
 }).call(this);
 'use strict';
 
@@ -37965,22 +39094,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['sample-files'];
 
-  var tutorialsHostingTutorialSampleFilesHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialSampleFilesHtml, _Component);
+  var tutorialsHostingSampleFilesHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingSampleFilesHtml, _Component);
 
-    function tutorialsHostingTutorialSampleFilesHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialSampleFilesHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialSampleFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialSampleFilesHtml)).apply(this, arguments));
+    function tutorialsHostingSampleFilesHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingSampleFilesHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingSampleFilesHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingSampleFilesHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialSampleFilesHtml;
+    return tutorialsHostingSampleFilesHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialSampleFilesHtml, templates);
+  Soy.register(tutorialsHostingSampleFilesHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialSampleFilesHtml'] = tutorialsHostingTutorialSampleFilesHtml;
+  this['metal']['tutorialsHostingSampleFilesHtml'] = tutorialsHostingSampleFilesHtml;
 }).call(this);
 'use strict';
 
@@ -37989,22 +39118,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['testing-locally'];
 
-  var tutorialsHostingTutorialTestingLocallyHtml = function (_Component) {
-    babelHelpers.inherits(tutorialsHostingTutorialTestingLocallyHtml, _Component);
+  var tutorialsHostingTestingLocallyHtml = function (_Component) {
+    babelHelpers.inherits(tutorialsHostingTestingLocallyHtml, _Component);
 
-    function tutorialsHostingTutorialTestingLocallyHtml() {
-      babelHelpers.classCallCheck(this, tutorialsHostingTutorialTestingLocallyHtml);
-      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTutorialTestingLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTutorialTestingLocallyHtml)).apply(this, arguments));
+    function tutorialsHostingTestingLocallyHtml() {
+      babelHelpers.classCallCheck(this, tutorialsHostingTestingLocallyHtml);
+      return babelHelpers.possibleConstructorReturn(this, (tutorialsHostingTestingLocallyHtml.__proto__ || Object.getPrototypeOf(tutorialsHostingTestingLocallyHtml)).apply(this, arguments));
     }
 
-    return tutorialsHostingTutorialTestingLocallyHtml;
+    return tutorialsHostingTestingLocallyHtml;
   }(Component);
 
   ;
 
-  Soy.register(tutorialsHostingTutorialTestingLocallyHtml, templates);
+  Soy.register(tutorialsHostingTestingLocallyHtml, templates);
 
-  this['metal']['tutorialsHostingTutorialTestingLocallyHtml'] = tutorialsHostingTutorialTestingLocallyHtml;
+  this['metal']['tutorialsHostingTestingLocallyHtml'] = tutorialsHostingTestingLocallyHtml;
 }).call(this);
 }).call(this);
 //# sourceMappingURL=bundle.js.map
