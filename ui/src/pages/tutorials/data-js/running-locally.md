@@ -13,7 +13,7 @@ weight: 4
 
 WeDeploy provides a dev environment for you to run and test your app before pushing it to production. Lets get that running for this project!
 
-In your terminal, run `we run`. Once it is done, open a new tab and run `we link --project tutorial-data-js`
+In your terminal, go to `tutorial-data-js` and run `we dev`.
 
 You can now go to `http://tutorial-data-js.wedeploy.me` in your browser and see the local deployment of your project. Any changes you make to your project folder now will automatically be deployed to this local server.  
 

@@ -13,7 +13,7 @@ weight: 4
 
 WeDeploy provides a dev environment for you to run and test your apps before pushing them to production. Let's set that up!
 
-In your terminal, run `we run`. Now in a new tab, run `we link --project tutorial-hosting`
+In your terminal, go to your project directory and run `we dev`. 
 
 You can go to `http://<hosting-service-id>.tutorial-hosting.wedeploy.me` in your browser and see the local deployment of the sample static site. Any changes you make to your project folder now will automatically be deployed to this local server. 
 
