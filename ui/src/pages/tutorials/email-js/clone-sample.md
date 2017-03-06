@@ -14,7 +14,7 @@ weight: 2
 To start, you need to create a new project on your WeDeploy dashboard, if you have not already (trying to migrate this tutorial with other tutorials will result in file conflict). 
 
 Next we will download a sample repo with the necessary files to get us started.
-To download, run this command in your terminal:
+To download, run this command in your terminal: 
 
 ```
 git clone https://github.com/jonnilundy/tutorial-email-js.git
