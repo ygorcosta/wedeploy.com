@@ -13726,17 +13726,19 @@ li.feature {
       height: 348px; } }
 
 #footer .container-wedeploy {
-  height: inherit; }
-  @media (min-width: 320px) {
-    #footer .container-wedeploy {
-      justify-content: center;
-      align-items: flex-start;
-      align-content: flex-start; } }
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start; }
   @media (min-width: 600px) {
     #footer .container-wedeploy {
       justify-content: flex-start;
       align-items: center;
-      align-content: center; } }
+      align-content: center;
+      flex-wrap: nowrap; } }
 
 @media (min-width: 1280px) {
   #footer .col-lg-offset-1 {
