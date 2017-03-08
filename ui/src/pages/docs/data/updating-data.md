@@ -50,4 +50,4 @@ This operation will return the updated document with the new rating:
 
 ## What's next?
 
-Now that you have learned how to update data, you can interact [deleting data](/docs/data/js/deleting-data.html).
+Now that you have learned how to update data, you can interact [deleting data](/docs/data/deleting-data.html).

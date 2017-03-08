@@ -68,4 +68,4 @@ Or you can add those environment variables using the dashboard.
 
 ## What's next?
 
-* Now we're ready to start [enabling other login providers into your app](/docs/auth/js/sign-in-with-google.html).
+* Now we're ready to start [enabling other login providers into your app](/docs/auth/sign-in-with-google.html).

@@ -153,4 +153,4 @@ WeDeploy.auth('http://<containerID>.<projectID>.wedeploy.io');
 
 ## What's next?
 
-* Now we're ready to [start managing your users](/docs/auth/js/manage-users.html).
+* Now we're ready to [start managing your users](/docs/auth/manage-users.html).

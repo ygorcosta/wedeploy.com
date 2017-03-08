@@ -151,4 +151,4 @@ http://data.datademo.wedeploy.me/movies/115992383516607958/rating
 
 ## What's next?
 
-Now that you have learned how to create data, you can interact [updating data](/docs/data/js/updating-data.html).
+Now that you have learned how to create data, you can interact [updating data](/docs/data/updating-data.html).

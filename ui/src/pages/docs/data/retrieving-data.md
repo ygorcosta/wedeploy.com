@@ -160,4 +160,4 @@ We support all basic SQL-like operators (=, !=, >, >=, <, <=, ~), as well as 'an
 
 ## What's next?
 
-Now that you have learned how to retrieve data, you can interact [searching data](/docs/data/js/searching-data.html).
+Now that you have learned how to retrieve data, you can interact [searching data](/docs/data/searching-data.html).

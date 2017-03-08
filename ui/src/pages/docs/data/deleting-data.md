@@ -37,4 +37,4 @@ data.delete('movies');
 
 ## What's next?
 
-Now that you have learned how to update data, you can interact [retrieving data](/docs/data/js/retrieving-data.html).
+Now that you have learned how to update data, you can interact [retrieving data](/docs/data/retrieving-data.html).
