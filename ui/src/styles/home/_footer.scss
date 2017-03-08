@@ -10,16 +10,18 @@
 
 #footer .container-wedeploy {
 	height: inherit;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
 
-	@media (min-width: 320px) {
-		justify-content: center;
-		align-items: flex-start;
-		align-content: flex-start;
-	}
 	@media (min-width: 600px) {
 		justify-content: flex-start;
 		align-items: center;
 		align-content: center;
+		flex-wrap: nowrap;
 	}
 }
 
