@@ -13,7 +13,7 @@ node -v && npm -v
 2. Install our global dependencies:
 
 	```sh
-[sudo] npm i -g electric-cli
+[sudo] npm i -g electric-cli@v2.0.0-alpha.3
 	```
 
 3. Go to `ui` folder:
