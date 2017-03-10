@@ -25,60 +25,6 @@
 	}
 }
 
-#footer .col-lg-offset-1 {
-	@media (min-width: 1280px) {
-		margin-left: 0;
-	}
-
-	@media (min-width: 1440px) {
-		margin-left: 6.25%;
-	}
-}
-
-#footer .col-lg-offset-6 {
-	@media (min-width: 1280px) {
-		margin-left: 0;
-	}
-
-	@media (min-width: 1440px) {
-		margin-left: 37.5%;
-	}
-}
-
-#footer .col-lg-2 {
-	@media (min-width: 1280px) {
-		width: 25%;
-	}
-
-	@media (min-width: 1440px) {
-		width: 12.5%;
-	}
-}
-
-#footer .col-lg-3 {
-	@media (min-width: 1280px) {
-		width: 25%;
-	}
-
-	@media (min-width: 1440px) {
-		width: 18.75%;
-	}
-}
-
-#footer .col-sm-offset-6 {
-	@media (min-width: 320px) {
-		margin-left: 0;
-	}
-
-	@media (min-width: 960px) {
-		margin-left: 0;
-	}
-
-	@media (min-width: 1440px) {
-		margin-left: 31.25%;
-	}
-}
-
 #footer .info-container {
 	@media (min-width: 320px) {
 		text-align: center;
