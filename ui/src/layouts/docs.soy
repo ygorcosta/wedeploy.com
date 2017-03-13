@@ -8,17 +8,14 @@
 	<div class="main">
 		<main class="content guide">
 			<div class="docs">
-				{call .topbar data="all" }
-					{param elementClasses: 'topbar-docs-main' /}
-				{/call}
+				{call .topbar data="all" /}
 
 				{call Sidebar.render}
 					{param page: $page /}
 				{/call}
 
 				<div class="sidebar-offset">
-					{call .topbar data="all" /}
-						{$content}
+					{$content}
 					{call Newsletter.render /}
 				</div>
 			</div>
@@ -27,10 +24,9 @@
 {/template}
 
 /**
- * @param? elementClasses
  */
 {template .topbar}
-	<nav class="topbar topbar-light topbar-large{$elementClasses ? ' ' + $elementClasses : ''}">
+	<nav class="topbar topbar-docs topbar-light topbar-large">
 		{call .logo data="all" /}
 		{call .menu data="all" /}
 	</nav>
