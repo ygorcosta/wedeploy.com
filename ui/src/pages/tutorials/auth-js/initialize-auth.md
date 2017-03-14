@@ -11,9 +11,9 @@ weight: 4
 
 ##### Initializing the Auth Service
 
-Now that we have the sample files clones and a local environemnt running, we can initialize our Authentication. 
+Now that we have the sample files cloned and the local environemnt running, we can initialize our Authentication. 
 
-First go to `tutorial-auth-js` and create a file named `main.js`. This file will contain our Authentication scripts. Inside of `main.js`, add: 
+First go to the `tutorial-auth-js` directory that we cloned and create a file named `main.js`. This file will contain our Authentication scripts. Inside of `main.js`, add: 
 
 ```javascript
 WeDeploy.auth('auth.tutorial-auth-js.wedeploy.io')

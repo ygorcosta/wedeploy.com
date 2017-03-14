@@ -11,7 +11,7 @@ weight: 6
 
 ##### Adding GitHub
 
-You added email and password authentication but what if you want to let give your users the option of loggin in with their GitHub credentials? Underneath the email and password script in `main.js`, paste: 
+You added email and password authentication but what if you want to give your users the option of logging in with their GitHub credentials? Underneath the email and password script in `main.js`, paste: 
 
 ```javascript
 function signInWithGithub() {

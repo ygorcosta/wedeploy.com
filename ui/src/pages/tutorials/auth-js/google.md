@@ -11,7 +11,7 @@ weight: 7
 
 ##### Adding Google
 
-You added GitHub authentication but what if you want to let give your users the option of loggin in with their Google credentials? Underneath the GitHub script in `main.js`, paste: 
+You added GitHub authentication but what if you want to give your users the option of logging in with their Google credentials? Underneath the GitHub script in `main.js`, paste: 
 
 ```javascript
 function signInWithGoogle() {

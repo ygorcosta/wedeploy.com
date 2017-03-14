@@ -18,7 +18,7 @@ You are here because you just finished installing the Auth service on your proje
 <ul class="checklist">
 	<li>How to setup your machine as a local dev environment</li>
 	<li>How to create the necessary files for your Auth container</li>
-	<li>How to setup email/password athentication</li>
+	<li>How to setup email/password authentication</li>
 	<li>How to push your service into deployment</li>
 </ul>
 

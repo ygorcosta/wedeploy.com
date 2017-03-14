@@ -19,7 +19,7 @@ auth.onSignIn(function(user) {
 });
 ```
 
-Now go back to your [homepage](http://tutorial-auth-js.wedeploy.me) and try logging in again. If you see an alert that says `Signed-in <your-email>` than it is working! 
+Now go back to your [homepage](http://tutorial-auth-js.wedeploy.me) and try logging in again. If you see an alert that says `Signed-in <your-email>` then it is working! 
 
 
       
