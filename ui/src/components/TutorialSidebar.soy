@@ -2,9 +2,10 @@
 
 /**
  * @param page
+ * @param? navigationToggler
  */
 {template .render}
-	<div class="sidebar-navigation{$page.navigationToggler ? ' open' : ''}">
+	<div class="sidebar-navigation{$navigationToggler ? ' open' : ''}">
 		<div class="sidebar-navigation-fade" data-onclick="closeNavigationMenu"></div>
 		<nav class="sidebar">
 			{call ElectricNavigation.render}

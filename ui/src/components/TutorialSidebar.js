@@ -9,6 +9,11 @@ import 'moment';
 import templates from './TutorialSidebar.soy';
 
 class TutorialSidebar extends Component {
+
+	syncPage(val) {
+		this.navigationToggler = page.navigationToggler;
+	}
+
 	attached() {
 
 		var timeRead = 0;
@@ -32,7 +37,6 @@ class TutorialSidebar extends Component {
 		var milliseconds = (totalTime - timeRead);
 		var eventDuration = moment.duration(milliseconds, 'seconds');
 		page.timeRemaining = this.humanizeDuration(eventDuration);
-		dispatchGlobalState();
 	}
 
 	closeNavigationMenu(e) {
@@ -41,7 +45,6 @@ class TutorialSidebar extends Component {
 	}
 
 	humanizeDuration(eventDuration) {
-		console.log(eventDuration);
 		eventDurationString = '';
 
 		if (eventDuration.days() > 0) {
@@ -64,6 +67,13 @@ class TutorialSidebar extends Component {
 	}
 
 };
+
+TutorialSidebar.STATE = {
+	navigationToggler: {
+		internal: true,
+		value: false
+	}
+}
 
 Soy.register(TutorialSidebar, templates);
 

@@ -9,7 +9,8 @@ import {dispatchGlobalState} from './utils';
 class TutorialTopbar extends Component {
 	openNavigationMenu(e) {
 		e.preventDefault();
-		data.page.navigationToggler = true;
+
+		page.navigationToggler = true;
 		dispatchGlobalState();
 	}
 };

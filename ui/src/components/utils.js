@@ -2,7 +2,7 @@ export function dispatchGlobalState() {
 	if (window.electricPageComponent) {
 		window.electricPageComponent.setState({
 			element: '#pageComponent',
-			page: data.page,
+			page: page,
 			site: data.site
 		});
 	}
