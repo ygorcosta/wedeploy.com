@@ -105,14 +105,6 @@ http://hosting.<projectID>.wedeploy.io
 
 </article>
 
-<article id="4">
-
-## Error pages
-
-Files put into the special directory `/_error` are mapped as the error files to be served in case of an error. They must take the form of `<error code>.html`.
-
-</article>
-
 ## What's next?
 
-* Now you can start adding new static files and grow your application.
+* Now you can learn how to [show custom error pages to your users](/docs/hosting/custom-error-pages.html).
