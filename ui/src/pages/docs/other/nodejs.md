@@ -109,6 +109,14 @@ http://nodejs.<projectID>.wedeploy.io
 
 </article>
 
+<article id="4">
+
+## Additional Notes
+
+As of right now, node.js servers running on WeDeploy only accept connections through port 80.
+
+</article>
+
 ## What's next?
 
 * Now you can start building your Node.js based application.
