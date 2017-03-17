@@ -15098,23 +15098,12 @@ babelHelpers;
     * @param {Align.Top|Align.Right|Align.Bottom|Align.Left} pos
     *     The initial position to try. Options `Align.Top`, `Align.Right`,
     *     `Align.Bottom`, `Align.Left`.
-    * @param {boolean} autoBestAlign Option to suggest or not the best region
-    *      to align.
     * @return {string} The final chosen position for the aligned element.
     * @static
     */
 			value: function align(element, alignElement, position) {
-				var autoBestAlign = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
-
-				var bestRegion;
-
-				if (autoBestAlign) {
-					var suggestion = this.suggestAlignBestRegion(element, alignElement, position);
-					position = suggestion.position;
-					bestRegion = suggestion.region;
-				} else {
-					bestRegion = this.getAlignRegion(element, alignElement, position);
-				}
+				var suggestion = this.suggestAlignBestRegion(element, alignElement, position);
+				var bestRegion = suggestion.region;
 
 				var computedStyle = window.getComputedStyle(element, null);
 				if (computedStyle.getPropertyValue('position') !== 'fixed') {
@@ -15130,7 +15119,7 @@ babelHelpers;
 
 				element.style.top = bestRegion.top + 'px';
 				element.style.left = bestRegion.left + 'px';
-				return position;
+				return suggestion.position;
 			}
 
 			/**
@@ -26743,15 +26732,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from my-first-three-months-with-wedeploy.soy.
+    // This file was automatically generated from happy-new-year-from-wedeploy.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace CqYtU.
+     * @fileoverview Templates in namespace CyGEd.
      * @public
      */
 
-    goog.module('CqYtU.incrementaldom');
+    goog.module('CyGEd.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -26782,57 +26771,48 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param449 = function param449() {
+      var param421 = function param421() {
         ie_open('article');
         ie_open('p');
-        var dyn33 = opt_data.page.description;
-        if (typeof dyn33 == 'function') dyn33();else if (dyn33 != null) itext(dyn33);
+        var dyn31 = opt_data.page.description;
+        if (typeof dyn31 == 'function') dyn31();else if (dyn31 != null) itext(dyn31);
+        ie_close('p');
+        ie_open('p');
+        itext('Last year, on September 20th, the very first app was created on WeDeploy. After that, we went to Chicago, Milan, London, Darmstad, and S\xE3o Paulo to spread the word about this new product.');
         ie_close('p');
         ie_open('figure');
-        ie_open('img', null, null, 'src', '../images/blog/post-4--0.png', 'alt', 'Jonni Lundy Working');
+        ie_open('img', null, null, 'src', '../images/blog/post-3--0.png', 'alt', 'WeDeploy Presentation');
         ie_close('img');
         ie_close('figure');
         ie_open('p');
-        itext('I have no coding background. Before my internship, I had never opened DevTools in my life and I thought that Java and JavaScript were the same thing.');
-        ie_close('p');
-        ie_open('p');
-        itext('Needless to say, I was a little intimidated of coming in as the new guy, but once I started using WeDeploy and working with the team, those fears drifted away like a bunch of balloons strapped to a house (\'UP\' anyone?).');
-        ie_close('p');
-        ie_open('p');
-        itext('I still remember the first time I deployed. I had just finished making my very first website, and Zeno said I should try deploying it by myself. I honestly didn\'t know where to start, so I went to the docs, read through some guides, and gave it a shot.');
+        itext('Today, we\'re serving hundreds of projects from awesome developers like you. We\'re proud. We\'re thankful. We\'re motivated! So, thank you all for being on this journey with us.');
         ie_close('p');
         ie_open('blockquote');
         ie_open('p');
-        itext('Within 15 minutes, it was live!');
+        itext('We\'re serving hundreds of projects from awesome developers like you.');
         ie_close('p');
         ie_close('blockquote');
         ie_open('p');
-        itext('It was one of the best feelings I\'ve had during this internship.');
+        itext('And you know what, this is just the beginning. We have new and amazing stuff coming soon, including brand new services and tons of scalability improvements for you.');
         ie_close('p');
         ie_open('p');
-        itext('Knowing that I, the new guy who didn\'t know what an API was or how to run \'npm install\', could deploy my own website faster than it takes me to run to Starbucks and get my triple ristretto hazelnut latte (with almond milk please).');
+        itext('Happy New Year!');
         ie_close('p');
         ie_open('figure');
-        ie_open('img', null, null, 'src', '../images/blog/post-4--1.png', 'alt', 'Jonni Lundy Collaborating');
+        ie_open('img', null, null, 'src', '../images/blog/post-3--1.png', 'alt', 'WeDeploy Team');
         ie_close('img');
         ie_close('figure');
-        ie_open('p');
-        itext('By far my favorite thing about being on the WeDeploy team is being able to get behind a product that is so powerful and yet incredibly intuitive to use.');
-        ie_close('p');
-        ie_open('p');
-        itext('If I can deploy, then I\'m sure you can! So what are you waiting for?!');
-        ie_close('p');
         ie_close('article');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
         ie_close('input');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param449 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param421 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'CqYtU.render';
+      $render.soyTemplateName = 'CyGEd.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -26841,22 +26821,22 @@ babelHelpers;
     return exports;
   });
 
-  var CqYtU = function (_Component) {
-    babelHelpers.inherits(CqYtU, _Component);
+  var CyGEd = function (_Component) {
+    babelHelpers.inherits(CyGEd, _Component);
 
-    function CqYtU() {
-      babelHelpers.classCallCheck(this, CqYtU);
-      return babelHelpers.possibleConstructorReturn(this, (CqYtU.__proto__ || Object.getPrototypeOf(CqYtU)).apply(this, arguments));
+    function CyGEd() {
+      babelHelpers.classCallCheck(this, CyGEd);
+      return babelHelpers.possibleConstructorReturn(this, (CyGEd.__proto__ || Object.getPrototypeOf(CyGEd)).apply(this, arguments));
     }
 
-    return CqYtU;
+    return CyGEd;
   }(Component);
 
-  Soy.register(CqYtU, templates);
-  this['metalNamed']['my-first-three-months-with-wedeploy'] = this['metalNamed']['my-first-three-months-with-wedeploy'] || {};
-  this['metalNamed']['my-first-three-months-with-wedeploy']['CqYtU'] = CqYtU;
-  this['metalNamed']['my-first-three-months-with-wedeploy']['templates'] = templates;
-  this['metal']['my-first-three-months-with-wedeploy'] = templates;
+  Soy.register(CyGEd, templates);
+  this['metalNamed']['happy-new-year-from-wedeploy'] = this['metalNamed']['happy-new-year-from-wedeploy'] || {};
+  this['metalNamed']['happy-new-year-from-wedeploy']['CyGEd'] = CyGEd;
+  this['metalNamed']['happy-new-year-from-wedeploy']['templates'] = templates;
+  this['metal']['happy-new-year-from-wedeploy'] = templates;
   /* jshint ignore:end */
 }).call(this);
 'use strict';
@@ -26864,24 +26844,24 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['my-first-three-months-with-wedeploy'];
+  var templates = this['metal']['happy-new-year-from-wedeploy'];
 
-  var CqYtU = function (_Component) {
-    babelHelpers.inherits(CqYtU, _Component);
+  var CyGEd = function (_Component) {
+    babelHelpers.inherits(CyGEd, _Component);
 
-    function CqYtU() {
-      babelHelpers.classCallCheck(this, CqYtU);
-      return babelHelpers.possibleConstructorReturn(this, (CqYtU.__proto__ || Object.getPrototypeOf(CqYtU)).apply(this, arguments));
+    function CyGEd() {
+      babelHelpers.classCallCheck(this, CyGEd);
+      return babelHelpers.possibleConstructorReturn(this, (CyGEd.__proto__ || Object.getPrototypeOf(CyGEd)).apply(this, arguments));
     }
 
-    return CqYtU;
+    return CyGEd;
   }(Component);
 
   ;
 
-  Soy.register(CqYtU, templates);
+  Soy.register(CyGEd, templates);
 
-  this['metal']['CqYtU'] = CqYtU;
+  this['metal']['CyGEd'] = CyGEd;
 }).call(this);
 'use strict';
 
@@ -26897,11 +26877,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace bBfqk.
+     * @fileoverview Templates in namespace NpqKz.
      * @public
      */
 
-    goog.module('bBfqk.incrementaldom');
+    goog.module('NpqKz.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -27069,7 +27049,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'bBfqk.render';
+      $render.soyTemplateName = 'NpqKz.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -27078,20 +27058,20 @@ babelHelpers;
     return exports;
   });
 
-  var bBfqk = function (_Component) {
-    babelHelpers.inherits(bBfqk, _Component);
+  var NpqKz = function (_Component) {
+    babelHelpers.inherits(NpqKz, _Component);
 
-    function bBfqk() {
-      babelHelpers.classCallCheck(this, bBfqk);
-      return babelHelpers.possibleConstructorReturn(this, (bBfqk.__proto__ || Object.getPrototypeOf(bBfqk)).apply(this, arguments));
+    function NpqKz() {
+      babelHelpers.classCallCheck(this, NpqKz);
+      return babelHelpers.possibleConstructorReturn(this, (NpqKz.__proto__ || Object.getPrototypeOf(NpqKz)).apply(this, arguments));
     }
 
-    return bBfqk;
+    return NpqKz;
   }(Component);
 
-  Soy.register(bBfqk, templates);
+  Soy.register(NpqKz, templates);
   this['metalNamed']['liferay-hack-day'] = this['metalNamed']['liferay-hack-day'] || {};
-  this['metalNamed']['liferay-hack-day']['bBfqk'] = bBfqk;
+  this['metalNamed']['liferay-hack-day']['NpqKz'] = NpqKz;
   this['metalNamed']['liferay-hack-day']['templates'] = templates;
   this['metal']['liferay-hack-day'] = templates;
   /* jshint ignore:end */
@@ -27103,22 +27083,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['liferay-hack-day'];
 
-  var bBfqk = function (_Component) {
-    babelHelpers.inherits(bBfqk, _Component);
+  var NpqKz = function (_Component) {
+    babelHelpers.inherits(NpqKz, _Component);
 
-    function bBfqk() {
-      babelHelpers.classCallCheck(this, bBfqk);
-      return babelHelpers.possibleConstructorReturn(this, (bBfqk.__proto__ || Object.getPrototypeOf(bBfqk)).apply(this, arguments));
+    function NpqKz() {
+      babelHelpers.classCallCheck(this, NpqKz);
+      return babelHelpers.possibleConstructorReturn(this, (NpqKz.__proto__ || Object.getPrototypeOf(NpqKz)).apply(this, arguments));
     }
 
-    return bBfqk;
+    return NpqKz;
   }(Component);
 
   ;
 
-  Soy.register(bBfqk, templates);
+  Soy.register(NpqKz, templates);
 
-  this['metal']['bBfqk'] = bBfqk;
+  this['metal']['NpqKz'] = NpqKz;
 }).call(this);
 'use strict';
 
@@ -27134,11 +27114,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace rwoze.
+     * @fileoverview Templates in namespace TTItY.
      * @public
      */
 
-    goog.module('rwoze.incrementaldom');
+    goog.module('TTItY.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -27249,7 +27229,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'rwoze.render';
+      $render.soyTemplateName = 'TTItY.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -27258,20 +27238,20 @@ babelHelpers;
     return exports;
   });
 
-  var rwoze = function (_Component) {
-    babelHelpers.inherits(rwoze, _Component);
+  var TTItY = function (_Component) {
+    babelHelpers.inherits(TTItY, _Component);
 
-    function rwoze() {
-      babelHelpers.classCallCheck(this, rwoze);
-      return babelHelpers.possibleConstructorReturn(this, (rwoze.__proto__ || Object.getPrototypeOf(rwoze)).apply(this, arguments));
+    function TTItY() {
+      babelHelpers.classCallCheck(this, TTItY);
+      return babelHelpers.possibleConstructorReturn(this, (TTItY.__proto__ || Object.getPrototypeOf(TTItY)).apply(this, arguments));
     }
 
-    return rwoze;
+    return TTItY;
   }(Component);
 
-  Soy.register(rwoze, templates);
+  Soy.register(TTItY, templates);
   this['metalNamed']['environment-variables-new-java-service-and-multiple-custom-domains'] = this['metalNamed']['environment-variables-new-java-service-and-multiple-custom-domains'] || {};
-  this['metalNamed']['environment-variables-new-java-service-and-multiple-custom-domains']['rwoze'] = rwoze;
+  this['metalNamed']['environment-variables-new-java-service-and-multiple-custom-domains']['TTItY'] = TTItY;
   this['metalNamed']['environment-variables-new-java-service-and-multiple-custom-domains']['templates'] = templates;
   this['metal']['environment-variables-new-java-service-and-multiple-custom-domains'] = templates;
   /* jshint ignore:end */
@@ -27279,268 +27259,26 @@ babelHelpers;
 'use strict';
 
 (function () {
-  /* jshint ignore:start */
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
+  var templates = this['metal']['environment-variables-new-java-service-and-multiple-custom-domains'];
 
-  var templates;
-  goog.loadModule(function (exports) {
+  var TTItY = function (_Component) {
+    babelHelpers.inherits(TTItY, _Component);
 
-    // This file was automatically generated from happy-new-year-from-wedeploy.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace gjcwY.
-     * @public
-     */
-
-    goog.module('gjcwY.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('blog.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param421 = function param421() {
-        ie_open('article');
-        ie_open('p');
-        var dyn31 = opt_data.page.description;
-        if (typeof dyn31 == 'function') dyn31();else if (dyn31 != null) itext(dyn31);
-        ie_close('p');
-        ie_open('p');
-        itext('Last year, on September 20th, the very first app was created on WeDeploy. After that, we went to Chicago, Milan, London, Darmstad, and S\xE3o Paulo to spread the word about this new product.');
-        ie_close('p');
-        ie_open('figure');
-        ie_open('img', null, null, 'src', '../images/blog/post-3--0.png', 'alt', 'WeDeploy Presentation');
-        ie_close('img');
-        ie_close('figure');
-        ie_open('p');
-        itext('Today, we\'re serving hundreds of projects from awesome developers like you. We\'re proud. We\'re thankful. We\'re motivated! So, thank you all for being on this journey with us.');
-        ie_close('p');
-        ie_open('blockquote');
-        ie_open('p');
-        itext('We\'re serving hundreds of projects from awesome developers like you.');
-        ie_close('p');
-        ie_close('blockquote');
-        ie_open('p');
-        itext('And you know what, this is just the beginning. We have new and amazing stuff coming soon, including brand new services and tons of scalability improvements for you.');
-        ie_close('p');
-        ie_open('p');
-        itext('Happy New Year!');
-        ie_close('p');
-        ie_open('figure');
-        ie_open('img', null, null, 'src', '../images/blog/post-3--1.png', 'alt', 'WeDeploy Team');
-        ie_close('img');
-        ie_close('figure');
-        ie_close('article');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param421 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'gjcwY.render';
+    function TTItY() {
+      babelHelpers.classCallCheck(this, TTItY);
+      return babelHelpers.possibleConstructorReturn(this, (TTItY.__proto__ || Object.getPrototypeOf(TTItY)).apply(this, arguments));
     }
 
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var gjcwY = function (_Component) {
-    babelHelpers.inherits(gjcwY, _Component);
-
-    function gjcwY() {
-      babelHelpers.classCallCheck(this, gjcwY);
-      return babelHelpers.possibleConstructorReturn(this, (gjcwY.__proto__ || Object.getPrototypeOf(gjcwY)).apply(this, arguments));
-    }
-
-    return gjcwY;
-  }(Component);
-
-  Soy.register(gjcwY, templates);
-  this['metalNamed']['happy-new-year-from-wedeploy'] = this['metalNamed']['happy-new-year-from-wedeploy'] || {};
-  this['metalNamed']['happy-new-year-from-wedeploy']['gjcwY'] = gjcwY;
-  this['metalNamed']['happy-new-year-from-wedeploy']['templates'] = templates;
-  this['metal']['happy-new-year-from-wedeploy'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['happy-new-year-from-wedeploy'];
-
-  var gjcwY = function (_Component) {
-    babelHelpers.inherits(gjcwY, _Component);
-
-    function gjcwY() {
-      babelHelpers.classCallCheck(this, gjcwY);
-      return babelHelpers.possibleConstructorReturn(this, (gjcwY.__proto__ || Object.getPrototypeOf(gjcwY)).apply(this, arguments));
-    }
-
-    return gjcwY;
+    return TTItY;
   }(Component);
 
   ;
 
-  Soy.register(gjcwY, templates);
+  Soy.register(TTItY, templates);
 
-  this['metal']['gjcwY'] = gjcwY;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageBlogIndex.
-     * @public
-     */
-
-    goog.module('pageBlogIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {}
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageBlogIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $soyweb(opt_data, opt_ignored, opt_ijData) {
-      ie_open('!DOCTYPE', null, null, 'html', '');
-      ie_open('html', null, null, 'lang', 'en');
-      ie_open('head');
-      ie_open('meta', null, null, 'charset', 'UTF-8');
-      ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.redirect + '\'');
-      ie_close('meta');
-      ie_close('head');
-      ie_close('html');
-    }
-    exports.soyweb = $soyweb;
-    if (goog.DEBUG) {
-      $soyweb.soyTemplateName = 'pageBlogIndex.soyweb';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.soyweb.params = ["page"];
-    exports.soyweb.types = { "page": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var pageBlogIndex = function (_Component) {
-    babelHelpers.inherits(pageBlogIndex, _Component);
-
-    function pageBlogIndex() {
-      babelHelpers.classCallCheck(this, pageBlogIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageBlogIndex.__proto__ || Object.getPrototypeOf(pageBlogIndex)).apply(this, arguments));
-    }
-
-    return pageBlogIndex;
-  }(Component);
-
-  Soy.register(pageBlogIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageBlogIndex'] = pageBlogIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageBlogIndex = function (_Component) {
-    babelHelpers.inherits(pageBlogIndex, _Component);
-
-    function pageBlogIndex() {
-      babelHelpers.classCallCheck(this, pageBlogIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageBlogIndex.__proto__ || Object.getPrototypeOf(pageBlogIndex)).apply(this, arguments));
-    }
-
-    return pageBlogIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageBlogIndex, templates);
-
-  this['metal']['pageBlogIndex'] = pageBlogIndex;
+  this['metal']['TTItY'] = TTItY;
 }).call(this);
 'use strict';
 
@@ -27556,11 +27294,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace qSGbI.
+     * @fileoverview Templates in namespace aeFzO.
      * @public
      */
 
-    goog.module('qSGbI.incrementaldom');
+    goog.module('aeFzO.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -27666,7 +27404,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'qSGbI.render';
+      $render.soyTemplateName = 'aeFzO.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -27675,20 +27413,20 @@ babelHelpers;
     return exports;
   });
 
-  var qSGbI = function (_Component) {
-    babelHelpers.inherits(qSGbI, _Component);
+  var aeFzO = function (_Component) {
+    babelHelpers.inherits(aeFzO, _Component);
 
-    function qSGbI() {
-      babelHelpers.classCallCheck(this, qSGbI);
-      return babelHelpers.possibleConstructorReturn(this, (qSGbI.__proto__ || Object.getPrototypeOf(qSGbI)).apply(this, arguments));
+    function aeFzO() {
+      babelHelpers.classCallCheck(this, aeFzO);
+      return babelHelpers.possibleConstructorReturn(this, (aeFzO.__proto__ || Object.getPrototypeOf(aeFzO)).apply(this, arguments));
     }
 
-    return qSGbI;
+    return aeFzO;
   }(Component);
 
-  Soy.register(qSGbI, templates);
+  Soy.register(aeFzO, templates);
   this['metalNamed']['uptime-status-new-ruby-service-and-more'] = this['metalNamed']['uptime-status-new-ruby-service-and-more'] || {};
-  this['metalNamed']['uptime-status-new-ruby-service-and-more']['qSGbI'] = qSGbI;
+  this['metalNamed']['uptime-status-new-ruby-service-and-more']['aeFzO'] = aeFzO;
   this['metalNamed']['uptime-status-new-ruby-service-and-more']['templates'] = templates;
   this['metal']['uptime-status-new-ruby-service-and-more'] = templates;
   /* jshint ignore:end */
@@ -27700,46 +27438,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['uptime-status-new-ruby-service-and-more'];
 
-  var qSGbI = function (_Component) {
-    babelHelpers.inherits(qSGbI, _Component);
+  var aeFzO = function (_Component) {
+    babelHelpers.inherits(aeFzO, _Component);
 
-    function qSGbI() {
-      babelHelpers.classCallCheck(this, qSGbI);
-      return babelHelpers.possibleConstructorReturn(this, (qSGbI.__proto__ || Object.getPrototypeOf(qSGbI)).apply(this, arguments));
+    function aeFzO() {
+      babelHelpers.classCallCheck(this, aeFzO);
+      return babelHelpers.possibleConstructorReturn(this, (aeFzO.__proto__ || Object.getPrototypeOf(aeFzO)).apply(this, arguments));
     }
 
-    return qSGbI;
+    return aeFzO;
   }(Component);
 
   ;
 
-  Soy.register(qSGbI, templates);
+  Soy.register(aeFzO, templates);
 
-  this['metal']['qSGbI'] = qSGbI;
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['environment-variables-new-java-service-and-multiple-custom-domains'];
-
-  var rwoze = function (_Component) {
-    babelHelpers.inherits(rwoze, _Component);
-
-    function rwoze() {
-      babelHelpers.classCallCheck(this, rwoze);
-      return babelHelpers.possibleConstructorReturn(this, (rwoze.__proto__ || Object.getPrototypeOf(rwoze)).apply(this, arguments));
-    }
-
-    return rwoze;
-  }(Component);
-
-  ;
-
-  Soy.register(rwoze, templates);
-
-  this['metal']['rwoze'] = rwoze;
+  this['metal']['aeFzO'] = aeFzO;
 }).call(this);
 'use strict';
 
@@ -27755,11 +27469,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace pageDocsIndex.
+     * @fileoverview Templates in namespace pageBlogIndex.
      * @public
      */
 
-    goog.module('pageDocsIndex.incrementaldom');
+    goog.module('pageBlogIndex.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -27780,9 +27494,108 @@ babelHelpers;
     var itext = IncrementalDom.text;
     var iattr = IncrementalDom.attr;
 
-    var $templateAlias2 = Soy.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {}
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageBlogIndex.render';
+    }
 
-    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $soyweb(opt_data, opt_ignored, opt_ijData) {
+      ie_open('!DOCTYPE', null, null, 'html', '');
+      ie_open('html', null, null, 'lang', 'en');
+      ie_open('head');
+      ie_open('meta', null, null, 'charset', 'UTF-8');
+      ie_close('meta');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.redirect + '\'');
+      ie_close('meta');
+      ie_close('head');
+      ie_close('html');
+    }
+    exports.soyweb = $soyweb;
+    if (goog.DEBUG) {
+      $soyweb.soyTemplateName = 'pageBlogIndex.soyweb';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.soyweb.params = ["page"];
+    exports.soyweb.types = { "page": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var pageBlogIndex = function (_Component) {
+    babelHelpers.inherits(pageBlogIndex, _Component);
+
+    function pageBlogIndex() {
+      babelHelpers.classCallCheck(this, pageBlogIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageBlogIndex.__proto__ || Object.getPrototypeOf(pageBlogIndex)).apply(this, arguments));
+    }
+
+    return pageBlogIndex;
+  }(Component);
+
+  Soy.register(pageBlogIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageBlogIndex'] = pageBlogIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from my-first-three-months-with-wedeploy.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace nBdAd.
+     * @public
+     */
+
+    goog.module('nBdAd.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('blog.incrementaldom', 'render');
 
     /**
      * @param {Object<string, *>=} opt_data
@@ -27792,122 +27605,106 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      opt_data = opt_data || {};
-      var param471 = function param471() {
-        $topics(opt_data, null, opt_ijData);
+      var param449 = function param449() {
+        ie_open('article');
+        ie_open('p');
+        var dyn33 = opt_data.page.description;
+        if (typeof dyn33 == 'function') dyn33();else if (dyn33 != null) itext(dyn33);
+        ie_close('p');
+        ie_open('figure');
+        ie_open('img', null, null, 'src', '../images/blog/post-4--0.png', 'alt', 'Jonni Lundy Working');
+        ie_close('img');
+        ie_close('figure');
+        ie_open('p');
+        itext('I have no coding background. Before my internship, I had never opened DevTools in my life and I thought that Java and JavaScript were the same thing.');
+        ie_close('p');
+        ie_open('p');
+        itext('Needless to say, I was a little intimidated of coming in as the new guy, but once I started using WeDeploy and working with the team, those fears drifted away like a bunch of balloons strapped to a house (\'UP\' anyone?).');
+        ie_close('p');
+        ie_open('p');
+        itext('I still remember the first time I deployed. I had just finished making my very first website, and Zeno said I should try deploying it by myself. I honestly didn\'t know where to start, so I went to the docs, read through some guides, and gave it a shot.');
+        ie_close('p');
+        ie_open('blockquote');
+        ie_open('p');
+        itext('Within 15 minutes, it was live!');
+        ie_close('p');
+        ie_close('blockquote');
+        ie_open('p');
+        itext('It was one of the best feelings I\'ve had during this internship.');
+        ie_close('p');
+        ie_open('p');
+        itext('Knowing that I, the new guy who didn\'t know what an API was or how to run \'npm install\', could deploy my own website faster than it takes me to run to Starbucks and get my triple ristretto hazelnut latte (with almond milk please).');
+        ie_close('p');
+        ie_open('figure');
+        ie_open('img', null, null, 'src', '../images/blog/post-4--1.png', 'alt', 'Jonni Lundy Collaborating');
+        ie_close('img');
+        ie_close('figure');
+        ie_open('p');
+        itext('By far my favorite thing about being on the WeDeploy team is being able to get behind a product that is so powerful and yet incredibly intuitive to use.');
+        ie_close('p');
+        ie_open('p');
+        itext('If I can deploy, then I\'m sure you can! So what are you waiting for?!');
+        ie_close('p');
+        ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param471 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param449 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageDocsIndex.render';
+      $render.soyTemplateName = 'nBdAd.render';
     }
 
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $topics(opt_data, opt_ignored, opt_ijData) {
-      ie_open('div', null, null, 'class', 'container-hybrid docs-home-top');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 col-md-16 col-md-offset-0');
-      ie_open('h1', null, null, 'class', 'docs-home-top-title');
-      itext('WeDeploy Docs Center');
-      ie_close('h1');
-      ie_open('p', null, null, 'class', 'docs-home-top-description');
-      itext('Start learning how to leverage the power of ');
-      var dyn35 = opt_data.site.title;
-      if (typeof dyn35 == 'function') dyn35();else if (dyn35 != null) itext(dyn35);
-      itext(' in your project.');
-      ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'container-hybrid');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 col-md-10 col-md-offset-3 col-lg-6 col-lg-offset-5');
-      ie_open('div', null, null, 'class', 'search');
-      $templateAlias2({ maxResults: 3, path: '/docs/', placeholder: 'Enter a search term here' }, null, opt_ijData);
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'docs-home-topics');
-      ie_open('div', null, null, 'class', 'container-hybrid');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 ');
-      ie_open('section', null, null, 'class', 'docs-home-middle');
-      ie_open('h2', null, null, 'class', 'docs-home-middle-subtitle');
-      itext('Choose a Guide');
-      ie_close('h2');
-      ie_open('p', null, null, 'class', 'docs-home-middle-description');
-      itext('Each one provide step by step coverage for every core feature.');
-      ie_close('p');
-      ie_close('section');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-md-12 col-md-offset-2 col-xs-16');
-      ie_open('div', null, null, 'class', 'row');
-      var childIdList492 = opt_data.page.childIds;
-      var childIdListLen492 = childIdList492.length;
-      for (var childIdIndex492 = 0; childIdIndex492 < childIdListLen492; childIdIndex492++) {
-        var childIdData492 = childIdList492[childIdIndex492];
-        if (!opt_data.page.children[childIdData492].hidden) {
-          ie_open('div', null, null, 'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
-          ie_open('a', null, null, 'class', 'topic radial-out', 'href', opt_data.page.children[childIdData492].url);
-          ie_open('div', null, null, 'class', 'topic-icon');
-          ie_void('span', null, null, 'class', 'icon-16-' + opt_data.page.children[childIdData492].icon);
-          ie_close('div');
-          ie_open('h3', null, null, 'class', 'topic-title');
-          var dyn36 = opt_data.page.children[childIdData492].title;
-          if (typeof dyn36 == 'function') dyn36();else if (dyn36 != null) itext(dyn36);
-          ie_close('h3');
-          ie_close('a');
-          ie_close('div');
-        }
-      }
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    }
-    exports.topics = $topics;
-    if (goog.DEBUG) {
-      $topics.soyTemplateName = 'pageDocsIndex.topics';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.topics.params = ["page", "site"];
-    exports.topics.types = { "page": "any", "site": "any" };
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
     templates = exports;
     return exports;
   });
 
-  var pageDocsIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsIndex, _Component);
+  var nBdAd = function (_Component) {
+    babelHelpers.inherits(nBdAd, _Component);
 
-    function pageDocsIndex() {
-      babelHelpers.classCallCheck(this, pageDocsIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsIndex.__proto__ || Object.getPrototypeOf(pageDocsIndex)).apply(this, arguments));
+    function nBdAd() {
+      babelHelpers.classCallCheck(this, nBdAd);
+      return babelHelpers.possibleConstructorReturn(this, (nBdAd.__proto__ || Object.getPrototypeOf(nBdAd)).apply(this, arguments));
     }
 
-    return pageDocsIndex;
+    return nBdAd;
   }(Component);
 
-  Soy.register(pageDocsIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageDocsIndex'] = pageDocsIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
+  Soy.register(nBdAd, templates);
+  this['metalNamed']['my-first-three-months-with-wedeploy'] = this['metalNamed']['my-first-three-months-with-wedeploy'] || {};
+  this['metalNamed']['my-first-three-months-with-wedeploy']['nBdAd'] = nBdAd;
+  this['metalNamed']['my-first-three-months-with-wedeploy']['templates'] = templates;
+  this['metal']['my-first-three-months-with-wedeploy'] = templates;
   /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['my-first-three-months-with-wedeploy'];
+
+  var nBdAd = function (_Component) {
+    babelHelpers.inherits(nBdAd, _Component);
+
+    function nBdAd() {
+      babelHelpers.classCallCheck(this, nBdAd);
+      return babelHelpers.possibleConstructorReturn(this, (nBdAd.__proto__ || Object.getPrototypeOf(nBdAd)).apply(this, arguments));
+    }
+
+    return nBdAd;
+  }(Component);
+
+  ;
+
+  Soy.register(nBdAd, templates);
+
+  this['metal']['nBdAd'] = nBdAd;
 }).call(this);
 'use strict';
 
@@ -27916,22 +27713,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['index'];
 
-  var pageDocsIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsIndex, _Component);
+  var pageBlogIndex = function (_Component) {
+    babelHelpers.inherits(pageBlogIndex, _Component);
 
-    function pageDocsIndex() {
-      babelHelpers.classCallCheck(this, pageDocsIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsIndex.__proto__ || Object.getPrototypeOf(pageDocsIndex)).apply(this, arguments));
+    function pageBlogIndex() {
+      babelHelpers.classCallCheck(this, pageBlogIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageBlogIndex.__proto__ || Object.getPrototypeOf(pageBlogIndex)).apply(this, arguments));
     }
 
-    return pageDocsIndex;
+    return pageBlogIndex;
   }(Component);
 
   ;
 
-  Soy.register(pageDocsIndex, templates);
+  Soy.register(pageBlogIndex, templates);
 
-  this['metal']['pageDocsIndex'] = pageDocsIndex;
+  this['metal']['pageBlogIndex'] = pageBlogIndex;
 }).call(this);
 'use strict';
 
@@ -27947,11 +27744,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace Cssli.
+     * @fileoverview Templates in namespace mYPls.
      * @public
      */
 
-    goog.module('Cssli.incrementaldom');
+    goog.module('mYPls.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -28279,7 +28076,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'Cssli.render';
+      $render.soyTemplateName = 'mYPls.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -28288,20 +28085,20 @@ babelHelpers;
     return exports;
   });
 
-  var Cssli = function (_Component) {
-    babelHelpers.inherits(Cssli, _Component);
+  var mYPls = function (_Component) {
+    babelHelpers.inherits(mYPls, _Component);
 
-    function Cssli() {
-      babelHelpers.classCallCheck(this, Cssli);
-      return babelHelpers.possibleConstructorReturn(this, (Cssli.__proto__ || Object.getPrototypeOf(Cssli)).apply(this, arguments));
+    function mYPls() {
+      babelHelpers.classCallCheck(this, mYPls);
+      return babelHelpers.possibleConstructorReturn(this, (mYPls.__proto__ || Object.getPrototypeOf(mYPls)).apply(this, arguments));
     }
 
-    return Cssli;
+    return mYPls;
   }(Component);
 
-  Soy.register(Cssli, templates);
+  Soy.register(mYPls, templates);
   this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['Cssli'] = Cssli;
+  this['metalNamed']['index']['mYPls'] = mYPls;
   this['metalNamed']['index']['templates'] = templates;
   this['metal']['index'] = templates;
   /* jshint ignore:end */
@@ -28313,22 +28110,214 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['index'];
 
-  var Cssli = function (_Component) {
-    babelHelpers.inherits(Cssli, _Component);
+  var mYPls = function (_Component) {
+    babelHelpers.inherits(mYPls, _Component);
 
-    function Cssli() {
-      babelHelpers.classCallCheck(this, Cssli);
-      return babelHelpers.possibleConstructorReturn(this, (Cssli.__proto__ || Object.getPrototypeOf(Cssli)).apply(this, arguments));
+    function mYPls() {
+      babelHelpers.classCallCheck(this, mYPls);
+      return babelHelpers.possibleConstructorReturn(this, (mYPls.__proto__ || Object.getPrototypeOf(mYPls)).apply(this, arguments));
     }
 
-    return Cssli;
+    return mYPls;
   }(Component);
 
   ;
 
-  Soy.register(Cssli, templates);
+  Soy.register(mYPls, templates);
 
-  this['metal']['Cssli'] = Cssli;
+  this['metal']['mYPls'] = mYPls;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageDocsIndex.
+     * @public
+     */
+
+    goog.module('pageDocsIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('docs.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      opt_data = opt_data || {};
+      var param471 = function param471() {
+        $topics(opt_data, null, opt_ijData);
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param471 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageDocsIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $topics(opt_data, opt_ignored, opt_ijData) {
+      ie_open('div', null, null, 'class', 'container-hybrid docs-home-top');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 col-md-16 col-md-offset-0');
+      ie_open('h1', null, null, 'class', 'docs-home-top-title');
+      itext('WeDeploy Docs Center');
+      ie_close('h1');
+      ie_open('p', null, null, 'class', 'docs-home-top-description');
+      itext('Start learning how to leverage the power of ');
+      var dyn35 = opt_data.site.title;
+      if (typeof dyn35 == 'function') dyn35();else if (dyn35 != null) itext(dyn35);
+      itext(' in your project.');
+      ie_close('p');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('div', null, null, 'class', 'container-hybrid');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 col-md-10 col-md-offset-3 col-lg-6 col-lg-offset-5');
+      ie_open('div', null, null, 'class', 'search');
+      $templateAlias2({ maxResults: 3, path: '/docs/', placeholder: 'Enter a search term here' }, null, opt_ijData);
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'docs-home-topics');
+      ie_open('div', null, null, 'class', 'container-hybrid');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('div', null, null, 'class', 'col-xs-14 col-xs-offset-1 ');
+      ie_open('section', null, null, 'class', 'docs-home-middle');
+      ie_open('h2', null, null, 'class', 'docs-home-middle-subtitle');
+      itext('Choose a Guide');
+      ie_close('h2');
+      ie_open('p', null, null, 'class', 'docs-home-middle-description');
+      itext('Each one provide step by step coverage for every core feature.');
+      ie_close('p');
+      ie_close('section');
+      ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null, 'class', 'row');
+      ie_open('div', null, null, 'class', 'col-md-12 col-md-offset-2 col-xs-16');
+      ie_open('div', null, null, 'class', 'row');
+      var childIdList492 = opt_data.page.childIds;
+      var childIdListLen492 = childIdList492.length;
+      for (var childIdIndex492 = 0; childIdIndex492 < childIdListLen492; childIdIndex492++) {
+        var childIdData492 = childIdList492[childIdIndex492];
+        if (!opt_data.page.children[childIdData492].hidden) {
+          ie_open('div', null, null, 'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
+          ie_open('a', null, null, 'class', 'topic radial-out', 'href', opt_data.page.children[childIdData492].url);
+          ie_open('div', null, null, 'class', 'topic-icon');
+          ie_void('span', null, null, 'class', 'icon-16-' + opt_data.page.children[childIdData492].icon);
+          ie_close('div');
+          ie_open('h3', null, null, 'class', 'topic-title');
+          var dyn36 = opt_data.page.children[childIdData492].title;
+          if (typeof dyn36 == 'function') dyn36();else if (dyn36 != null) itext(dyn36);
+          ie_close('h3');
+          ie_close('a');
+          ie_close('div');
+        }
+      }
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+      ie_close('div');
+    }
+    exports.topics = $topics;
+    if (goog.DEBUG) {
+      $topics.soyTemplateName = 'pageDocsIndex.topics';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.topics.params = ["page", "site"];
+    exports.topics.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var pageDocsIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsIndex, _Component);
+
+    function pageDocsIndex() {
+      babelHelpers.classCallCheck(this, pageDocsIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsIndex.__proto__ || Object.getPrototypeOf(pageDocsIndex)).apply(this, arguments));
+    }
+
+    return pageDocsIndex;
+  }(Component);
+
+  Soy.register(pageDocsIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageDocsIndex'] = pageDocsIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageDocsIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsIndex, _Component);
+
+    function pageDocsIndex() {
+      babelHelpers.classCallCheck(this, pageDocsIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsIndex.__proto__ || Object.getPrototypeOf(pageDocsIndex)).apply(this, arguments));
+    }
+
+    return pageDocsIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageDocsIndex, templates);
+
+  this['metal']['pageDocsIndex'] = pageDocsIndex;
 }).call(this);
 'use strict';
 
@@ -28465,204 +28454,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from sign-in-with-google.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace UfCLj.
-     * @public
-     */
-
-    goog.module('UfCLj.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param668 = function param668() {
-        ie_open('h1');
-        var dyn45 = opt_data.page.title;
-        if (typeof dyn45 == 'function') dyn45();else if (dyn45 != null) itext(dyn45);
-        ie_close('h1');
-        ie_open('h6');
-        var dyn46 = opt_data.page.description;
-        if (typeof dyn46 == 'function') dyn46();else if (dyn46 != null) itext(dyn46);
-        ie_close('h6');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Sign-in with google');
-        ie_close('h2');
-        ie_open('p');
-        itext('To sign in by redirecting to the sign-in page, call ');
-        ie_open('code');
-        itext('signInWithRedirect');
-        ie_close('code');
-        itext(':');
-        ie_close('p');
-        $templateAlias2({ code: 'var auth = WeDeploy.auth();\n\nvar provider = new auth.provider.Google();\nprovider.setProviderScope("email");\n\nauth.signInWithRedirect(provider);\n\nauth.onSignIn(function(user) {\n    // Fires when user is signed in after redirect.\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Setup app client id and secret');
-        ie_close('h2');
-        ie_open('p');
-        itext('Create a client id and client secret by ');
-        ie_open('a', null, null, 'href', 'https://developers.google.com/youtube/registering_an_application');
-        itext('registering your application');
-        ie_close('a');
-        itext(' on Google.');
-        ie_close('p');
-        ie_open('aside');
-        ie_open('p');
-        itext('Please be sure to add the callback url ');
-        ie_open('code');
-        itext('http://<auth-container-id>.<project-id>.wedeploy.io/oauth/token');
-        ie_close('code');
-        itext(' in your application. For local development, use ');
-        ie_open('code');
-        itext('wedeploy.me');
-        ie_close('code');
-        itext(' instead. To use with custom domains you can change the sufix ');
-        ie_open('code');
-        itext('<project-id>.wedeploy.io');
-        ie_close('code');
-        itext(' for your domain.');
-        ie_close('p');
-        ie_close('aside');
-        ie_open('p');
-        itext('After retrieving the client id and client secret you can configure them as environment variables of the authentication ');
-        ie_open('code');
-        itext('container.json');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        $templateAlias2({ code: '{\n    "id": "auth",\n    "name": "Auth",\n    "type": "wedeploy/auth",\n    "env": {\n        "WEDEPLOY_AUTH_GOOGLE": "true",\n        "WEDEPLOY_AUTH_GOOGLE_CLIENT_ID": "<your-google-client-id>",\n        "WEDEPLOY_AUTH_GOOGLE_CLIENT_SECRET": "<your-google-client-secret>"\n    }\n}', mode: 'application/json' }, null, opt_ijData);
-        ie_open('p');
-        itext('Or you can add those environment variables using the dashboard.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('img', null, null, 'src', 'https://cloud.githubusercontent.com/assets/1435318/20008152/2ceabade-a27e-11e6-9c86-435fc1c12412.png', 'alt', 'Project Container Environment');
-        ie_close('img');
-        ie_close('p');
-        ie_close('article');
-        ie_open('h2');
-        itext('What\'s next?');
-        ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('Learn how to sign-up users using their ');
-        ie_open('a', null, null, 'href', '/docs/auth/sign-in-with-password.html');
-        itext('email and password into your app');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param668 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'UfCLj.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var UfCLj = function (_Component) {
-    babelHelpers.inherits(UfCLj, _Component);
-
-    function UfCLj() {
-      babelHelpers.classCallCheck(this, UfCLj);
-      return babelHelpers.possibleConstructorReturn(this, (UfCLj.__proto__ || Object.getPrototypeOf(UfCLj)).apply(this, arguments));
-    }
-
-    return UfCLj;
-  }(Component);
-
-  Soy.register(UfCLj, templates);
-  this['metalNamed']['sign-in-with-google'] = this['metalNamed']['sign-in-with-google'] || {};
-  this['metalNamed']['sign-in-with-google']['UfCLj'] = UfCLj;
-  this['metalNamed']['sign-in-with-google']['templates'] = templates;
-  this['metal']['sign-in-with-google'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['sign-in-with-google'];
-
-  var UfCLj = function (_Component) {
-    babelHelpers.inherits(UfCLj, _Component);
-
-    function UfCLj() {
-      babelHelpers.classCallCheck(this, UfCLj);
-      return babelHelpers.possibleConstructorReturn(this, (UfCLj.__proto__ || Object.getPrototypeOf(UfCLj)).apply(this, arguments));
-    }
-
-    return UfCLj;
-  }(Component);
-
-  ;
-
-  Soy.register(UfCLj, templates);
-
-  this['metal']['UfCLj'] = UfCLj;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
     // This file was automatically generated from getting-started.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace WHYXk.
+     * @fileoverview Templates in namespace BYxnu.
      * @public
      */
 
-    goog.module('WHYXk.incrementaldom');
+    goog.module('BYxnu.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -28890,14 +28690,14 @@ babelHelpers;
         ie_open('p');
         itext('By using WeDeploy API client you can initialize the authentication service by referencing its URL, like in the example below.');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy.auth(\'http://<containerID>.<projectID>.wedeploy.me\');', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy.auth(\'http://<serviceID>.<projectID>.wedeploy.me\');', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
         itext('After initializing the authentication service URL, WeDeploy client stores its information for future calls.');
         ie_close('p');
         ie_open('p');
         itext('Note that if you are initializing an auth service pointing to the Cloud you should use the proper domain:');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy.auth(\'http://<containerID>.<projectID>.wedeploy.io\');', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy.auth(\'http://<serviceID>.<projectID>.wedeploy.io\');', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
         ie_open('h2');
         itext('What\'s next?');
@@ -28920,7 +28720,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'WHYXk.render';
+      $render.soyTemplateName = 'BYxnu.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -28929,20 +28729,20 @@ babelHelpers;
     return exports;
   });
 
-  var WHYXk = function (_Component) {
-    babelHelpers.inherits(WHYXk, _Component);
+  var BYxnu = function (_Component) {
+    babelHelpers.inherits(BYxnu, _Component);
 
-    function WHYXk() {
-      babelHelpers.classCallCheck(this, WHYXk);
-      return babelHelpers.possibleConstructorReturn(this, (WHYXk.__proto__ || Object.getPrototypeOf(WHYXk)).apply(this, arguments));
+    function BYxnu() {
+      babelHelpers.classCallCheck(this, BYxnu);
+      return babelHelpers.possibleConstructorReturn(this, (BYxnu.__proto__ || Object.getPrototypeOf(BYxnu)).apply(this, arguments));
     }
 
-    return WHYXk;
+    return BYxnu;
   }(Component);
 
-  Soy.register(WHYXk, templates);
+  Soy.register(BYxnu, templates);
   this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['WHYXk'] = WHYXk;
+  this['metalNamed']['getting-started']['BYxnu'] = BYxnu;
   this['metalNamed']['getting-started']['templates'] = templates;
   this['metal']['getting-started'] = templates;
   /* jshint ignore:end */
@@ -28954,22 +28754,352 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['getting-started'];
 
-  var WHYXk = function (_Component) {
-    babelHelpers.inherits(WHYXk, _Component);
+  var BYxnu = function (_Component) {
+    babelHelpers.inherits(BYxnu, _Component);
 
-    function WHYXk() {
-      babelHelpers.classCallCheck(this, WHYXk);
-      return babelHelpers.possibleConstructorReturn(this, (WHYXk.__proto__ || Object.getPrototypeOf(WHYXk)).apply(this, arguments));
+    function BYxnu() {
+      babelHelpers.classCallCheck(this, BYxnu);
+      return babelHelpers.possibleConstructorReturn(this, (BYxnu.__proto__ || Object.getPrototypeOf(BYxnu)).apply(this, arguments));
     }
 
-    return WHYXk;
+    return BYxnu;
   }(Component);
 
   ;
 
-  Soy.register(WHYXk, templates);
+  Soy.register(BYxnu, templates);
 
-  this['metal']['WHYXk'] = WHYXk;
+  this['metal']['BYxnu'] = BYxnu;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from sign-in-with-password.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace LUlqG.
+     * @public
+     */
+
+    goog.module('LUlqG.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param691 = function param691() {
+        ie_open('h1');
+        var dyn47 = opt_data.page.title;
+        if (typeof dyn47 == 'function') dyn47();else if (dyn47 != null) itext(dyn47);
+        ie_close('h1');
+        ie_open('h6');
+        var dyn48 = opt_data.page.description;
+        if (typeof dyn48 == 'function') dyn48();else if (dyn48 != null) itext(dyn48);
+        ie_close('h6');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Sign-in with password');
+        ie_close('h2');
+        ie_open('p');
+        itext('To sign in by email and password, call ');
+        ie_open('code');
+        itext('signInWithEmailAndPassword');
+        ie_close('code');
+        itext(':');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .auth()\n    .signInWithEmailAndPassword("user@domain.com", "password")\n    .then(function(user) {\n        // User is signed in.\n    })\n    .catch(function(err) {\n        // User is not signed in.\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('h2');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('Now you can start building your apps with authentication.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param691 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'LUlqG.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var LUlqG = function (_Component) {
+    babelHelpers.inherits(LUlqG, _Component);
+
+    function LUlqG() {
+      babelHelpers.classCallCheck(this, LUlqG);
+      return babelHelpers.possibleConstructorReturn(this, (LUlqG.__proto__ || Object.getPrototypeOf(LUlqG)).apply(this, arguments));
+    }
+
+    return LUlqG;
+  }(Component);
+
+  Soy.register(LUlqG, templates);
+  this['metalNamed']['sign-in-with-password'] = this['metalNamed']['sign-in-with-password'] || {};
+  this['metalNamed']['sign-in-with-password']['LUlqG'] = LUlqG;
+  this['metalNamed']['sign-in-with-password']['templates'] = templates;
+  this['metal']['sign-in-with-password'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['sign-in-with-password'];
+
+  var LUlqG = function (_Component) {
+    babelHelpers.inherits(LUlqG, _Component);
+
+    function LUlqG() {
+      babelHelpers.classCallCheck(this, LUlqG);
+      return babelHelpers.possibleConstructorReturn(this, (LUlqG.__proto__ || Object.getPrototypeOf(LUlqG)).apply(this, arguments));
+    }
+
+    return LUlqG;
+  }(Component);
+
+  ;
+
+  Soy.register(LUlqG, templates);
+
+  this['metal']['LUlqG'] = LUlqG;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from sign-in-with-google.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace eGMRl.
+     * @public
+     */
+
+    goog.module('eGMRl.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param668 = function param668() {
+        ie_open('h1');
+        var dyn45 = opt_data.page.title;
+        if (typeof dyn45 == 'function') dyn45();else if (dyn45 != null) itext(dyn45);
+        ie_close('h1');
+        ie_open('h6');
+        var dyn46 = opt_data.page.description;
+        if (typeof dyn46 == 'function') dyn46();else if (dyn46 != null) itext(dyn46);
+        ie_close('h6');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Sign-in with google');
+        ie_close('h2');
+        ie_open('p');
+        itext('To sign in by redirecting to the sign-in page, call ');
+        ie_open('code');
+        itext('signInWithRedirect');
+        ie_close('code');
+        itext(':');
+        ie_close('p');
+        $templateAlias2({ code: 'var auth = WeDeploy.auth();\n\nvar provider = new auth.provider.Google();\nprovider.setProviderScope("email");\n\nauth.signInWithRedirect(provider);\n\nauth.onSignIn(function(user) {\n    // Fires when user is signed in after redirect.\n});', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Setup app client id and secret');
+        ie_close('h2');
+        ie_open('p');
+        itext('Create a client id and client secret by ');
+        ie_open('a', null, null, 'href', 'https://developers.google.com/youtube/registering_an_application');
+        itext('registering your application');
+        ie_close('a');
+        itext(' on Google.');
+        ie_close('p');
+        ie_open('aside');
+        ie_open('p');
+        itext('Please be sure to add the callback url ');
+        ie_open('code');
+        itext('http://<auth-container-id>.<project-id>.wedeploy.io/oauth/token');
+        ie_close('code');
+        itext(' in your application. For local development, use ');
+        ie_open('code');
+        itext('wedeploy.me');
+        ie_close('code');
+        itext(' instead. To use with custom domains you can change the sufix ');
+        ie_open('code');
+        itext('<project-id>.wedeploy.io');
+        ie_close('code');
+        itext(' for your domain.');
+        ie_close('p');
+        ie_close('aside');
+        ie_open('p');
+        itext('After retrieving the client id and client secret you can configure them as environment variables of the authentication ');
+        ie_open('code');
+        itext('container.json');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "id": "auth",\n    "name": "Auth",\n    "type": "wedeploy/auth",\n    "env": {\n        "WEDEPLOY_AUTH_GOOGLE": "true",\n        "WEDEPLOY_AUTH_GOOGLE_CLIENT_ID": "<your-google-client-id>",\n        "WEDEPLOY_AUTH_GOOGLE_CLIENT_SECRET": "<your-google-client-secret>"\n    }\n}', mode: 'application/json' }, null, opt_ijData);
+        ie_open('p');
+        itext('Or you can add those environment variables using the dashboard.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('img', null, null, 'src', 'https://cloud.githubusercontent.com/assets/1435318/20008152/2ceabade-a27e-11e6-9c86-435fc1c12412.png', 'alt', 'Project Container Environment');
+        ie_close('img');
+        ie_close('p');
+        ie_close('article');
+        ie_open('h2');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('Learn how to sign-up users using their ');
+        ie_open('a', null, null, 'href', '/docs/auth/sign-in-with-password.html');
+        itext('email and password into your app');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param668 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'eGMRl.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var eGMRl = function (_Component) {
+    babelHelpers.inherits(eGMRl, _Component);
+
+    function eGMRl() {
+      babelHelpers.classCallCheck(this, eGMRl);
+      return babelHelpers.possibleConstructorReturn(this, (eGMRl.__proto__ || Object.getPrototypeOf(eGMRl)).apply(this, arguments));
+    }
+
+    return eGMRl;
+  }(Component);
+
+  Soy.register(eGMRl, templates);
+  this['metalNamed']['sign-in-with-google'] = this['metalNamed']['sign-in-with-google'] || {};
+  this['metalNamed']['sign-in-with-google']['eGMRl'] = eGMRl;
+  this['metalNamed']['sign-in-with-google']['templates'] = templates;
+  this['metal']['sign-in-with-google'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['sign-in-with-google'];
+
+  var eGMRl = function (_Component) {
+    babelHelpers.inherits(eGMRl, _Component);
+
+    function eGMRl() {
+      babelHelpers.classCallCheck(this, eGMRl);
+      return babelHelpers.possibleConstructorReturn(this, (eGMRl.__proto__ || Object.getPrototypeOf(eGMRl)).apply(this, arguments));
+    }
+
+    return eGMRl;
+  }(Component);
+
+  ;
+
+  Soy.register(eGMRl, templates);
+
+  this['metal']['eGMRl'] = eGMRl;
 }).call(this);
 'use strict';
 
@@ -28985,11 +29115,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace WhdMT.
+     * @fileoverview Templates in namespace gFGSl.
      * @public
      */
 
-    goog.module('WhdMT.incrementaldom');
+    goog.module('gFGSl.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -29109,7 +29239,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'WhdMT.render';
+      $render.soyTemplateName = 'gFGSl.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -29118,20 +29248,20 @@ babelHelpers;
     return exports;
   });
 
-  var WhdMT = function (_Component) {
-    babelHelpers.inherits(WhdMT, _Component);
+  var gFGSl = function (_Component) {
+    babelHelpers.inherits(gFGSl, _Component);
 
-    function WhdMT() {
-      babelHelpers.classCallCheck(this, WhdMT);
-      return babelHelpers.possibleConstructorReturn(this, (WhdMT.__proto__ || Object.getPrototypeOf(WhdMT)).apply(this, arguments));
+    function gFGSl() {
+      babelHelpers.classCallCheck(this, gFGSl);
+      return babelHelpers.possibleConstructorReturn(this, (gFGSl.__proto__ || Object.getPrototypeOf(gFGSl)).apply(this, arguments));
     }
 
-    return WhdMT;
+    return gFGSl;
   }(Component);
 
-  Soy.register(WhdMT, templates);
+  Soy.register(gFGSl, templates);
   this['metalNamed']['sign-in-with-facebook'] = this['metalNamed']['sign-in-with-facebook'] || {};
-  this['metalNamed']['sign-in-with-facebook']['WhdMT'] = WhdMT;
+  this['metalNamed']['sign-in-with-facebook']['gFGSl'] = gFGSl;
   this['metalNamed']['sign-in-with-facebook']['templates'] = templates;
   this['metal']['sign-in-with-facebook'] = templates;
   /* jshint ignore:end */
@@ -29143,478 +29273,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['sign-in-with-facebook'];
 
-  var WhdMT = function (_Component) {
-    babelHelpers.inherits(WhdMT, _Component);
+  var gFGSl = function (_Component) {
+    babelHelpers.inherits(gFGSl, _Component);
 
-    function WhdMT() {
-      babelHelpers.classCallCheck(this, WhdMT);
-      return babelHelpers.possibleConstructorReturn(this, (WhdMT.__proto__ || Object.getPrototypeOf(WhdMT)).apply(this, arguments));
+    function gFGSl() {
+      babelHelpers.classCallCheck(this, gFGSl);
+      return babelHelpers.possibleConstructorReturn(this, (gFGSl.__proto__ || Object.getPrototypeOf(gFGSl)).apply(this, arguments));
     }
 
-    return WhdMT;
+    return gFGSl;
   }(Component);
 
   ;
 
-  Soy.register(WhdMT, templates);
+  Soy.register(gFGSl, templates);
 
-  this['metal']['WhdMT'] = WhdMT;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from manage-users.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace hqoRE.
-     * @public
-     */
-
-    goog.module('hqoRE.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param574 = function param574() {
-        ie_open('h1');
-        var dyn39 = opt_data.page.title;
-        if (typeof dyn39 == 'function') dyn39();else if (dyn39 != null) itext(dyn39);
-        ie_close('h1');
-        ie_open('h6');
-        var dyn40 = opt_data.page.description;
-        if (typeof dyn40 == 'function') dyn40();else if (dyn40 != null) itext(dyn40);
-        ie_close('h6');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Create user');
-        ie_close('h2');
-        ie_open('p');
-        itext('You create a new user in your WeDeploy project by calling the ');
-        ie_open('code');
-        itext('createUser');
-        ie_close('code');
-        itext(' method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.');
-        ie_close('p');
-        $templateAlias2({ code: 'var auth = WeDeploy.auth();\n\nauth.createUser({\n    email: \'user@domain.com\',\n    password: \'abc\'\n})\n.then(function(user) {\n    // Successfully created.\n})\n.catch(function(err) {\n  // Not created.\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Get current user');
-        ie_close('h2');
-        $templateAlias2({ code: 'var currentUser = WeDeploy.auth().currentUser;\n\nif (currentUser) {\n    // User is signed in.\n} else {\n    // No user is signed in.\n}', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '3');
-        ie_open('h2');
-        itext('Get user');
-        ie_close('h2');
-        $templateAlias2({ code: 'WeDeploy\n.auth()\n.getUser(userId)\n.then(function(user) {\n    // User found.\n})\n.catch(function(err) {\n    // User does not exist.\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '4');
-        ie_open('h2');
-        itext('Delete user');
-        ie_close('h2');
-        ie_open('p');
-        itext('You can delete a user account with the delete method. For example:');
-        ie_close('p');
-        $templateAlias2({ code: 'var currentUser = WeDeploy.auth().currentUser;\n\ncurrentUser.deleteUser()\n.then(function() {\n    // Successfully deleted.\n})\n.catch(function(err) {\n  // Not deleted.\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '5');
-        ie_open('h2');
-        itext('Update user');
-        ie_close('h2');
-        ie_open('p');
-        itext('You can update a user\'s basic information. For example:');
-        ie_close('p');
-        $templateAlias2({ code: 'var currentUser = WeDeploy.auth().currentUser;\n\ncurrentUser.updateUser({\n    password: "password",\n    email: "eleven@hawkinslabs.com",\n    name: "Eleven",\n    photoUrl: "https://hawkinslabs.com/011/profile.jpg"\n})\n.then(function() {\n    // Successfully updated.\n})\n.catch(function(err) {\n  // Not updated.\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '6');
-        ie_open('h2');
-        itext('Send a password reset email');
-        ie_close('h2');
-        ie_open('p');
-        itext('You can send a password reset email to a user with the sendPasswordResetEmail method. For example:');
-        ie_close('p');
-        $templateAlias2({ code: 'WeDeploy\n.auth()\n.sendPasswordResetEmail("user@domain.com")\n.then(function() {\n    // Email sent.\n})\n.catch(function(err) {\n  // An error happened.\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '7');
-        ie_open('h2');
-        itext('Sign-out');
-        ie_close('h2');
-        $templateAlias2({ code: 'WeDeploy\n.auth()\n.signOut()\n.then(function() {\n    // User is signed out.\n})\n.catch(function(err) {\n  // User was signed out.\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('h2');
-        itext('What\'s next?');
-        ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('Now we\'re ready to start ');
-        ie_open('a', null, null, 'href', '/docs/auth/javascript/sign-in-with-facebook.html');
-        itext('authenticating accounts and growing our user base');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param574 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'hqoRE.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var hqoRE = function (_Component) {
-    babelHelpers.inherits(hqoRE, _Component);
-
-    function hqoRE() {
-      babelHelpers.classCallCheck(this, hqoRE);
-      return babelHelpers.possibleConstructorReturn(this, (hqoRE.__proto__ || Object.getPrototypeOf(hqoRE)).apply(this, arguments));
-    }
-
-    return hqoRE;
-  }(Component);
-
-  Soy.register(hqoRE, templates);
-  this['metalNamed']['manage-users'] = this['metalNamed']['manage-users'] || {};
-  this['metalNamed']['manage-users']['hqoRE'] = hqoRE;
-  this['metalNamed']['manage-users']['templates'] = templates;
-  this['metal']['manage-users'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['manage-users'];
-
-  var hqoRE = function (_Component) {
-    babelHelpers.inherits(hqoRE, _Component);
-
-    function hqoRE() {
-      babelHelpers.classCallCheck(this, hqoRE);
-      return babelHelpers.possibleConstructorReturn(this, (hqoRE.__proto__ || Object.getPrototypeOf(hqoRE)).apply(this, arguments));
-    }
-
-    return hqoRE;
-  }(Component);
-
-  ;
-
-  Soy.register(hqoRE, templates);
-
-  this['metal']['hqoRE'] = hqoRE;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from index.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace pageDocsAuthIndex.
-     * @public
-     */
-
-    goog.module('pageDocsAuthIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {}
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageDocsAuthIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $soyweb(opt_data, opt_ignored, opt_ijData) {
-      ie_open('!DOCTYPE', null, null, 'html', '');
-      ie_open('html', null, null, 'lang', 'en');
-      ie_open('head');
-      ie_open('meta', null, null, 'charset', 'UTF-8');
-      ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
-      ie_close('meta');
-      ie_close('head');
-      ie_close('html');
-    }
-    exports.soyweb = $soyweb;
-    if (goog.DEBUG) {
-      $soyweb.soyTemplateName = 'pageDocsAuthIndex.soyweb';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.soyweb.params = ["page"];
-    exports.soyweb.types = { "page": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var pageDocsAuthIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsAuthIndex, _Component);
-
-    function pageDocsAuthIndex() {
-      babelHelpers.classCallCheck(this, pageDocsAuthIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsAuthIndex.__proto__ || Object.getPrototypeOf(pageDocsAuthIndex)).apply(this, arguments));
-    }
-
-    return pageDocsAuthIndex;
-  }(Component);
-
-  Soy.register(pageDocsAuthIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageDocsAuthIndex'] = pageDocsAuthIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from sign-in-with-password.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace mQuPz.
-     * @public
-     */
-
-    goog.module('mQuPz.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param691 = function param691() {
-        ie_open('h1');
-        var dyn47 = opt_data.page.title;
-        if (typeof dyn47 == 'function') dyn47();else if (dyn47 != null) itext(dyn47);
-        ie_close('h1');
-        ie_open('h6');
-        var dyn48 = opt_data.page.description;
-        if (typeof dyn48 == 'function') dyn48();else if (dyn48 != null) itext(dyn48);
-        ie_close('h6');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Sign-in with password');
-        ie_close('h2');
-        ie_open('p');
-        itext('To sign in by email and password, call ');
-        ie_open('code');
-        itext('signInWithEmailAndPassword');
-        ie_close('code');
-        itext(':');
-        ie_close('p');
-        $templateAlias2({ code: 'var auth = WeDeploy.auth();\n\nauth.signInWithEmailAndPassword("user@domain.com", "password")\n.then(function(user) {\n    // User is signed in.\n})\n.catch(function(err) {\n  // User is not signed in.\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('h2');
-        itext('What\'s next?');
-        ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('Now you can start building your apps with authentication.');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param691 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'mQuPz.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var mQuPz = function (_Component) {
-    babelHelpers.inherits(mQuPz, _Component);
-
-    function mQuPz() {
-      babelHelpers.classCallCheck(this, mQuPz);
-      return babelHelpers.possibleConstructorReturn(this, (mQuPz.__proto__ || Object.getPrototypeOf(mQuPz)).apply(this, arguments));
-    }
-
-    return mQuPz;
-  }(Component);
-
-  Soy.register(mQuPz, templates);
-  this['metalNamed']['sign-in-with-password'] = this['metalNamed']['sign-in-with-password'] || {};
-  this['metalNamed']['sign-in-with-password']['mQuPz'] = mQuPz;
-  this['metalNamed']['sign-in-with-password']['templates'] = templates;
-  this['metal']['sign-in-with-password'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['sign-in-with-password'];
-
-  var mQuPz = function (_Component) {
-    babelHelpers.inherits(mQuPz, _Component);
-
-    function mQuPz() {
-      babelHelpers.classCallCheck(this, mQuPz);
-      return babelHelpers.possibleConstructorReturn(this, (mQuPz.__proto__ || Object.getPrototypeOf(mQuPz)).apply(this, arguments));
-    }
-
-    return mQuPz;
-  }(Component);
-
-  ;
-
-  Soy.register(mQuPz, templates);
-
-  this['metal']['mQuPz'] = mQuPz;
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
-
-  var pageDocsAuthIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsAuthIndex, _Component);
-
-    function pageDocsAuthIndex() {
-      babelHelpers.classCallCheck(this, pageDocsAuthIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsAuthIndex.__proto__ || Object.getPrototypeOf(pageDocsAuthIndex)).apply(this, arguments));
-    }
-
-    return pageDocsAuthIndex;
-  }(Component);
-
-  ;
-
-  Soy.register(pageDocsAuthIndex, templates);
-
-  this['metal']['pageDocsAuthIndex'] = pageDocsAuthIndex;
+  this['metal']['gFGSl'] = gFGSl;
 }).call(this);
 'use strict';
 
@@ -29630,11 +29304,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace rCbKq.
+     * @fileoverview Templates in namespace iMYJo.
      * @public
      */
 
-    goog.module('rCbKq.incrementaldom');
+    goog.module('iMYJo.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -29754,7 +29428,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'rCbKq.render';
+      $render.soyTemplateName = 'iMYJo.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -29763,20 +29437,20 @@ babelHelpers;
     return exports;
   });
 
-  var rCbKq = function (_Component) {
-    babelHelpers.inherits(rCbKq, _Component);
+  var iMYJo = function (_Component) {
+    babelHelpers.inherits(iMYJo, _Component);
 
-    function rCbKq() {
-      babelHelpers.classCallCheck(this, rCbKq);
-      return babelHelpers.possibleConstructorReturn(this, (rCbKq.__proto__ || Object.getPrototypeOf(rCbKq)).apply(this, arguments));
+    function iMYJo() {
+      babelHelpers.classCallCheck(this, iMYJo);
+      return babelHelpers.possibleConstructorReturn(this, (iMYJo.__proto__ || Object.getPrototypeOf(iMYJo)).apply(this, arguments));
     }
 
-    return rCbKq;
+    return iMYJo;
   }(Component);
 
-  Soy.register(rCbKq, templates);
+  Soy.register(iMYJo, templates);
   this['metalNamed']['sign-in-with-github'] = this['metalNamed']['sign-in-with-github'] || {};
-  this['metalNamed']['sign-in-with-github']['rCbKq'] = rCbKq;
+  this['metalNamed']['sign-in-with-github']['iMYJo'] = iMYJo;
   this['metalNamed']['sign-in-with-github']['templates'] = templates;
   this['metal']['sign-in-with-github'] = templates;
   /* jshint ignore:end */
@@ -29788,22 +29462,922 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['sign-in-with-github'];
 
-  var rCbKq = function (_Component) {
-    babelHelpers.inherits(rCbKq, _Component);
+  var iMYJo = function (_Component) {
+    babelHelpers.inherits(iMYJo, _Component);
 
-    function rCbKq() {
-      babelHelpers.classCallCheck(this, rCbKq);
-      return babelHelpers.possibleConstructorReturn(this, (rCbKq.__proto__ || Object.getPrototypeOf(rCbKq)).apply(this, arguments));
+    function iMYJo() {
+      babelHelpers.classCallCheck(this, iMYJo);
+      return babelHelpers.possibleConstructorReturn(this, (iMYJo.__proto__ || Object.getPrototypeOf(iMYJo)).apply(this, arguments));
     }
 
-    return rCbKq;
+    return iMYJo;
   }(Component);
 
   ;
 
-  Soy.register(rCbKq, templates);
+  Soy.register(iMYJo, templates);
 
-  this['metal']['rCbKq'] = rCbKq;
+  this['metal']['iMYJo'] = iMYJo;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageDocsAuthIndex.
+     * @public
+     */
+
+    goog.module('pageDocsAuthIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {}
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageDocsAuthIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $soyweb(opt_data, opt_ignored, opt_ijData) {
+      ie_open('!DOCTYPE', null, null, 'html', '');
+      ie_open('html', null, null, 'lang', 'en');
+      ie_open('head');
+      ie_open('meta', null, null, 'charset', 'UTF-8');
+      ie_close('meta');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
+      ie_close('meta');
+      ie_close('head');
+      ie_close('html');
+    }
+    exports.soyweb = $soyweb;
+    if (goog.DEBUG) {
+      $soyweb.soyTemplateName = 'pageDocsAuthIndex.soyweb';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.soyweb.params = ["page"];
+    exports.soyweb.types = { "page": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var pageDocsAuthIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsAuthIndex, _Component);
+
+    function pageDocsAuthIndex() {
+      babelHelpers.classCallCheck(this, pageDocsAuthIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsAuthIndex.__proto__ || Object.getPrototypeOf(pageDocsAuthIndex)).apply(this, arguments));
+    }
+
+    return pageDocsAuthIndex;
+  }(Component);
+
+  Soy.register(pageDocsAuthIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageDocsAuthIndex'] = pageDocsAuthIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from manage-users.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace rKrHt.
+     * @public
+     */
+
+    goog.module('rKrHt.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param574 = function param574() {
+        ie_open('h1');
+        var dyn39 = opt_data.page.title;
+        if (typeof dyn39 == 'function') dyn39();else if (dyn39 != null) itext(dyn39);
+        ie_close('h1');
+        ie_open('h6');
+        var dyn40 = opt_data.page.description;
+        if (typeof dyn40 == 'function') dyn40();else if (dyn40 != null) itext(dyn40);
+        ie_close('h6');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Create user');
+        ie_close('h2');
+        ie_open('p');
+        itext('You create a new user in your WeDeploy project by calling the ');
+        ie_open('code');
+        itext('createUser');
+        ie_close('code');
+        itext(' method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .auth()\n    .createUser({\n        email: \'user@domain.com\',\n        password: \'abc\'\n    })\n    .then(function(user) {\n        // Successfully created.\n    })\n    .catch(function(err) {\n        // Not created.\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Get current user');
+        ie_close('h2');
+        $templateAlias2({ code: 'var currentUser = WeDeploy.auth().currentUser;\n\nif (currentUser) {\n    // User is signed in.\n} else {\n    // No user is signed in.\n}', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '3');
+        ie_open('h2');
+        itext('Get user');
+        ie_close('h2');
+        $templateAlias2({ code: 'WeDeploy\n    .auth()\n    .getUser(userId)\n    .then(function(user) {\n        // User found.\n    })\n    .catch(function(err) {\n        // User does not exist.\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '4');
+        ie_open('h2');
+        itext('Delete user');
+        ie_close('h2');
+        ie_open('p');
+        itext('You can delete a user account with the delete method. For example:');
+        ie_close('p');
+        $templateAlias2({ code: 'var currentUser = WeDeploy.auth().currentUser;\n\ncurrentUser\n    .deleteUser()\n    .then(function() {\n        // Successfully deleted.\n    })\n    .catch(function(err) {\n        // Not deleted.\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '5');
+        ie_open('h2');
+        itext('Update user');
+        ie_close('h2');
+        ie_open('p');
+        itext('You can update a user\'s basic information. For example:');
+        ie_close('p');
+        $templateAlias2({ code: 'var currentUser = WeDeploy.auth().currentUser;\n\ncurrentUser\n    .updateUser({\n        password: "password",\n        email: "eleven@hawkinslabs.com",\n        name: "Eleven",\n        photoUrl: "https://hawkinslabs.com/011/profile.jpg"\n    })\n    .then(function() {\n        // Successfully updated.\n    })\n    .catch(function(err) {\n        // Not updated.\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '6');
+        ie_open('h2');
+        itext('Send a password reset email');
+        ie_close('h2');
+        ie_open('p');
+        itext('You can send a password reset email to a user with the sendPasswordResetEmail method. For example:');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .auth()\n    .sendPasswordResetEmail("user@domain.com")\n    .then(function() {\n        // Email sent.\n    })\n    .catch(function(err) {\n        // An error happened.\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '7');
+        ie_open('h2');
+        itext('Sign-out');
+        ie_close('h2');
+        $templateAlias2({ code: 'WeDeploy\n    .auth()\n    .signOut()\n    .then(function() {\n        // User is signed out.\n    })\n    .catch(function(err) {\n        // User was signed out.\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('h2');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('Now we\'re ready to start ');
+        ie_open('a', null, null, 'href', '/docs/auth/javascript/sign-in-with-facebook.html');
+        itext('authenticating accounts and growing our user base');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param574 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'rKrHt.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var rKrHt = function (_Component) {
+    babelHelpers.inherits(rKrHt, _Component);
+
+    function rKrHt() {
+      babelHelpers.classCallCheck(this, rKrHt);
+      return babelHelpers.possibleConstructorReturn(this, (rKrHt.__proto__ || Object.getPrototypeOf(rKrHt)).apply(this, arguments));
+    }
+
+    return rKrHt;
+  }(Component);
+
+  Soy.register(rKrHt, templates);
+  this['metalNamed']['manage-users'] = this['metalNamed']['manage-users'] || {};
+  this['metalNamed']['manage-users']['rKrHt'] = rKrHt;
+  this['metalNamed']['manage-users']['templates'] = templates;
+  this['metal']['manage-users'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageDocsAuthIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsAuthIndex, _Component);
+
+    function pageDocsAuthIndex() {
+      babelHelpers.classCallCheck(this, pageDocsAuthIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsAuthIndex.__proto__ || Object.getPrototypeOf(pageDocsAuthIndex)).apply(this, arguments));
+    }
+
+    return pageDocsAuthIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageDocsAuthIndex, templates);
+
+  this['metal']['pageDocsAuthIndex'] = pageDocsAuthIndex;
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['manage-users'];
+
+  var rKrHt = function (_Component) {
+    babelHelpers.inherits(rKrHt, _Component);
+
+    function rKrHt() {
+      babelHelpers.classCallCheck(this, rKrHt);
+      return babelHelpers.possibleConstructorReturn(this, (rKrHt.__proto__ || Object.getPrototypeOf(rKrHt)).apply(this, arguments));
+    }
+
+    return rKrHt;
+  }(Component);
+
+  ;
+
+  Soy.register(rKrHt, templates);
+
+  this['metal']['rKrHt'] = rKrHt;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from getting-started.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace sxidx.
+     * @public
+     */
+
+    goog.module('sxidx.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1102 = function param1102() {
+        ie_open('h1');
+        itext('Hosting');
+        ie_close('h1');
+        ie_open('h6');
+        var dyn64 = opt_data.page.description;
+        if (typeof dyn64 == 'function') dyn64();else if (dyn64 != null) itext(dyn64);
+        ie_close('h6');
+        ie_open('div', null, null, 'class', 'guide-btn-cta');
+        ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-hosting.wedeploy.io', 'target', '_blank');
+        ie_void('span', null, null, 'class', 'icon-16-external');
+        itext('See Live Demo');
+        ie_close('a');
+        ie_close('div');
+        ie_open('div', null, null, 'class', 'guide-aux-cta');
+        itext('or read the ');
+        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-hosting', 'target', '_blank');
+        itext('source code');
+        ie_close('a');
+        itext('.');
+        ie_close('div');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Install dependencies');
+        ie_close('h2');
+        ie_open('p');
+        itext('This section assumes that you already have the ');
+        ie_open('strong');
+        itext('WeDeploy CLI');
+        ie_close('strong');
+        itext(' installed and ');
+        ie_open('strong');
+        itext('Docker');
+        ie_close('strong');
+        itext(' running. Make sure to ');
+        ie_open('a', null, null, 'href', '/docs/intro/using-the-command-line.html');
+        itext('visit the installation guide');
+        ie_close('a');
+        itext(' if you need help setting that up.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Running locally');
+        ie_close('h2');
+        ie_open('p');
+        itext('WeDeploy\u2122 provides a way to run your project locally using a sandbox system.');
+        ie_close('p');
+        ie_open('ol');
+        ie_open('li');
+        itext('Start local infrastructure:');
+        ie_close('li');
+        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Clone this repository:');
+        ie_close('li');
+        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-hosting.git\ncd boilerplate-hosting', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Link this container with the local infrastructure:');
+        ie_close('li');
+        $templateAlias2({ code: 'we link', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Now your container is ready to be used:');
+        ie_close('li');
+        $templateAlias2({ code: 'http://hosting.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
+        ie_close('ol');
+        ie_open('p');
+        itext('Inside this project folder, you can find a ');
+        ie_open('code');
+        itext('container.json');
+        ie_close('code');
+        itext(' with the container ID used in this case: ');
+        ie_open('code');
+        itext('hosting');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '3');
+        ie_open('h2');
+        itext('Deploying to the cloud');
+        ie_close('h2');
+        ie_open('ol');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-hosting/fork');
+        itext('Fork this repository');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Go to the ');
+        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
+        itext('Dashboard');
+        ie_close('a');
+        itext(' and create a project.');
+        ie_close('li');
+        ie_open('li');
+        itext('In the sidebar, click on ');
+        ie_open('strong');
+        itext('Deployment');
+        ie_close('strong');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Using your local machine, clone your Github fork:');
+        ie_close('li');
+        $templateAlias2({ code: 'git clone https://github.com/<username>/boilerplate-hosting', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Get into the folder: ');
+        ie_open('code');
+        itext('cd boilerplate-hosting');
+        ie_close('code');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Using the content on ');
+        ie_open('strong');
+        itext('Deployment');
+        ie_close('strong');
+        itext(' page. Add the WeDeploy remote url:');
+        ie_close('li');
+        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<projectID>.git', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Push your data to wedeploy git server: ');
+        ie_open('code');
+        itext('git push wedeploy master');
+        ie_close('code');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Once you see it in the Dashboard, your container will be ready to be used.');
+        ie_close('li');
+        $templateAlias2({ code: 'http://hosting.<projectID>.wedeploy.io', mode: 'xml' }, null, opt_ijData);
+        ie_close('ol');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '4');
+        ie_open('h2');
+        itext('Error pages');
+        ie_close('h2');
+        ie_open('p');
+        itext('Files put into the special directory ');
+        ie_open('code');
+        itext('/_error');
+        ie_close('code');
+        itext(' are mapped as the error files to be served in case of an error. They must take the form of ');
+        ie_open('code');
+        itext('<error code>.html');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('h2');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('Now you can start adding new static files and grow your application.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1102 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'sxidx.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var sxidx = function (_Component) {
+    babelHelpers.inherits(sxidx, _Component);
+
+    function sxidx() {
+      babelHelpers.classCallCheck(this, sxidx);
+      return babelHelpers.possibleConstructorReturn(this, (sxidx.__proto__ || Object.getPrototypeOf(sxidx)).apply(this, arguments));
+    }
+
+    return sxidx;
+  }(Component);
+
+  Soy.register(sxidx, templates);
+  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
+  this['metalNamed']['getting-started']['sxidx'] = sxidx;
+  this['metalNamed']['getting-started']['templates'] = templates;
+  this['metal']['getting-started'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageDocsHostingIndex.
+     * @public
+     */
+
+    goog.module('pageDocsHostingIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {}
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageDocsHostingIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $soyweb(opt_data, opt_ignored, opt_ijData) {
+      ie_open('!DOCTYPE', null, null, 'html', '');
+      ie_open('html', null, null, 'lang', 'en');
+      ie_open('head');
+      ie_open('meta', null, null, 'charset', 'UTF-8');
+      ie_close('meta');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
+      ie_close('meta');
+      ie_close('head');
+      ie_close('html');
+    }
+    exports.soyweb = $soyweb;
+    if (goog.DEBUG) {
+      $soyweb.soyTemplateName = 'pageDocsHostingIndex.soyweb';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.soyweb.params = ["page"];
+    exports.soyweb.types = { "page": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var pageDocsHostingIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsHostingIndex, _Component);
+
+    function pageDocsHostingIndex() {
+      babelHelpers.classCallCheck(this, pageDocsHostingIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsHostingIndex.__proto__ || Object.getPrototypeOf(pageDocsHostingIndex)).apply(this, arguments));
+    }
+
+    return pageDocsHostingIndex;
+  }(Component);
+
+  Soy.register(pageDocsHostingIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageDocsHostingIndex'] = pageDocsHostingIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['index'];
+
+  var pageDocsHostingIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsHostingIndex, _Component);
+
+    function pageDocsHostingIndex() {
+      babelHelpers.classCallCheck(this, pageDocsHostingIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsHostingIndex.__proto__ || Object.getPrototypeOf(pageDocsHostingIndex)).apply(this, arguments));
+    }
+
+    return pageDocsHostingIndex;
+  }(Component);
+
+  ;
+
+  Soy.register(pageDocsHostingIndex, templates);
+
+  this['metal']['pageDocsHostingIndex'] = pageDocsHostingIndex;
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['getting-started'];
+
+  var sxidx = function (_Component) {
+    babelHelpers.inherits(sxidx, _Component);
+
+    function sxidx() {
+      babelHelpers.classCallCheck(this, sxidx);
+      return babelHelpers.possibleConstructorReturn(this, (sxidx.__proto__ || Object.getPrototypeOf(sxidx)).apply(this, arguments));
+    }
+
+    return sxidx;
+  }(Component);
+
+  ;
+
+  Soy.register(sxidx, templates);
+
+  this['metal']['sxidx'] = sxidx;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from real-time-feeds.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace DTOwA.
+     * @public
+     */
+
+    goog.module('DTOwA.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param852 = function param852() {
+        ie_open('h1');
+        var dyn54 = opt_data.page.title;
+        if (typeof dyn54 == 'function') dyn54();else if (dyn54 != null) itext(dyn54);
+        ie_close('h1');
+        ie_open('h6');
+        var dyn55 = opt_data.page.description;
+        if (typeof dyn55 == 'function') dyn55();else if (dyn55 != null) itext(dyn55);
+        ie_close('h6');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Watching data changes');
+        ie_close('h2');
+        ie_open('p');
+        itext('We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it\'s throughout the features we just presented to you. To access our data in real-time, all we need to do is change the ');
+        ie_open('em');
+        itext('WeDeploy\u2122');
+        ie_close('em');
+        itext(' API  ');
+        ie_open('code');
+        itext('get');
+        ie_close('code');
+        itext(' method to use to the ');
+        ie_open('code');
+        itext('watch');
+        ie_close('code');
+        itext(' method:');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .watch(\'movies\')\n    .on(\'changes\', function(data) {\n        console.log(data);\n    })\n    .on(\'fail\', function(error) {\n        console.log(error);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('Now every time the storage detects changes that affect the query you\'re watching, you will receive a changes notification with the response body you\'d receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you\'ll receive the error object in a fail notification on the client.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Watching with advanced filters');
+        ie_close('h2');
+        ie_open('p');
+        itext('To present data using advanced search is simple as performing normal queries. You just would need to keep using the ');
+        ie_open('code');
+        itext('watch');
+        ie_close('code');
+        itext(' method and apply any filter you desire.');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .where(\'category\', \'cinema\')\n    .or(\'category\', \'cartoon\')\n    .watch(\'movies\')\n    .on(\'changes\', function(data) {\n        console.log(data);\n    })\n    .on(\'fail\', function(error) {\n        console.log(error);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '3');
+        ie_open('h2');
+        itext('Getting the latest changes');
+        ie_close('h2');
+        ie_open('p');
+        itext('The data service uses a query limit ');
+        ie_open('code');
+        itext('500');
+        ie_close('code');
+        itext(' by default. In order to always get the latest new record, you would need to limit the query by ');
+        ie_open('code');
+        itext('1');
+        ie_close('code');
+        itext(' and order by ');
+        ie_open('code');
+        itext('id');
+        ie_close('code');
+        itext(' ');
+        ie_open('code');
+        itext('desc');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .limit(1)\n    .orderBy(\'id\', \'desc\')\n    .watch(\'movies\')\n    .on(\'changes\', function(data) {\n        console.log(data);\n    })\n    .on(\'fail\', function(error) {\n        console.log(error);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('h2');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('Now we\'re ready to save and retrieve data in real-time.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param852 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'DTOwA.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var DTOwA = function (_Component) {
+    babelHelpers.inherits(DTOwA, _Component);
+
+    function DTOwA() {
+      babelHelpers.classCallCheck(this, DTOwA);
+      return babelHelpers.possibleConstructorReturn(this, (DTOwA.__proto__ || Object.getPrototypeOf(DTOwA)).apply(this, arguments));
+    }
+
+    return DTOwA;
+  }(Component);
+
+  Soy.register(DTOwA, templates);
+  this['metalNamed']['real-time-feeds'] = this['metalNamed']['real-time-feeds'] || {};
+  this['metalNamed']['real-time-feeds']['DTOwA'] = DTOwA;
+  this['metalNamed']['real-time-feeds']['templates'] = templates;
+  this['metal']['real-time-feeds'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['real-time-feeds'];
+
+  var DTOwA = function (_Component) {
+    babelHelpers.inherits(DTOwA, _Component);
+
+    function DTOwA() {
+      babelHelpers.classCallCheck(this, DTOwA);
+      return babelHelpers.possibleConstructorReturn(this, (DTOwA.__proto__ || Object.getPrototypeOf(DTOwA)).apply(this, arguments));
+    }
+
+    return DTOwA;
+  }(Component);
+
+  ;
+
+  Soy.register(DTOwA, templates);
+
+  this['metal']['DTOwA'] = DTOwA;
 }).call(this);
 'use strict';
 
@@ -29819,11 +30393,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace ELjLU.
+     * @fileoverview Templates in namespace MPzxD.
      * @public
      */
 
-    goog.module('ELjLU.incrementaldom');
+    goog.module('MPzxD.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -29966,35 +30540,35 @@ babelHelpers;
         ie_open('p');
         itext('A path represents the resource used to store your project data.');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {\n    "path": "/movies/:movieId"\n  },\n  {\n    "path": "/fruits/*"\n  }\n]', mode: 'application/json' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {\n        "path": "/movies/:movieId"\n    },\n    {\n        "path": "/fruits/*"\n    }\n]', mode: 'application/json' }, null, opt_ijData);
         ie_open('h5');
         itext('data');
         ie_close('h5');
         ie_open('p');
         itext('You can create endpoints just for validation, in this case, data is used to finish the request in case you just need a validation or want to store the request in the collection.');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {\n    "path": "/fruits/*",\n    "data": true\n  }\n]', mode: 'application/json' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {\n        "path": "/fruits/*",\n        "data": true\n    }\n]', mode: 'application/json' }, null, opt_ijData);
         ie_open('h5');
         itext('description');
         ie_close('h5');
         ie_open('p');
         itext('Used to describe the behavior of an endpoint.');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {\n    "description": "Returns actors of a movie",\n    "path": "/movies/:movieId/actors",\n    "method": "GET"\n  }\n]', mode: 'application/json' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {\n        "description": "Returns actors of a movie",\n        "path": "/movies/:movieId/actors",\n        "method": "GET"\n    }\n]', mode: 'application/json' }, null, opt_ijData);
         ie_open('h5');
         itext('auth');
         ie_close('h5');
         ie_open('p');
         itext('You can unauthorized applications and users to access any endpoint by using the auth field. The example below verify if the application is authenticated in order to perform the request:');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {\n    "path": "/movies/*",\n    "auth": {\n      "validator": "$auth != null"\n    }\n  }\n]', mode: 'application/json' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {\n        "path": "/movies/*",\n        "auth": {\n            "validator": "$auth != null"\n        }\n    }\n]', mode: 'application/json' }, null, opt_ijData);
         ie_open('h5');
         itext('method');
         ie_close('h5');
         ie_open('p');
         itext('Specifies the HTTP method used for the request. In the example bellow, it allows a GET request and if you try to do a PUT or DELETE the route will not be recognized and will fail.');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {\n    "path": "/moives/:movieId",\n    "data": true,\n    "method": "GET"\n  }\n]', mode: 'application/json' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {\n        "path": "/movies/:movieId",\n        "data": true,\n        "method": "GET"\n    }\n]', mode: 'application/json' }, null, opt_ijData);
         ie_open('h5');
         itext('parameters');
         ie_close('h5');
@@ -30005,7 +30579,7 @@ babelHelpers;
         ie_close('code');
         itext(' to force validation in order to make sure that the params sent to a collection follow predefined rules.');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {\n    "description": "Creates a new movie",\n    "path": "/movies",\n    "method": "POST",\n    "parameters": {\n      "title": {\n        "type": "string"\n      }\n    },\n    "data": true\n  }\n]', mode: 'application/json' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {\n        "description": "Creates a new movie",\n        "path": "/movies",\n        "method": "POST",\n        "parameters": {\n            "title": {\n                "type": "string"\n            }\n        },\n        "data": true\n    }\n]', mode: 'application/json' }, null, opt_ijData);
         ie_close('article');
         ie_open('article', null, null, 'id', '3');
         ie_open('h2');
@@ -30018,7 +30592,7 @@ babelHelpers;
         ie_close('code');
         itext('.');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {\n    "path": "/*",\n    "data": true\n  }\n]', mode: 'application/json' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {\n        "path": "/*",\n        "data": true\n    }\n]', mode: 'application/json' }, null, opt_ijData);
         ie_open('p');
         itext('The path ');
         ie_open('code');
@@ -30037,7 +30611,7 @@ babelHelpers;
         ie_open('p');
         itext('The validator can be used as an integration with the Auth service:');
         ie_close('p');
-        $templateAlias2({ code: '{\n  "path": "/movies/*",\n  "auth": {\n    "validator": "$auth != null"\n  }\n}', mode: 'application/json' }, null, opt_ijData);
+        $templateAlias2({ code: '{\n    "path": "/movies/*",\n    "auth": {\n        "validator": "$auth != null"\n    }\n}', mode: 'application/json' }, null, opt_ijData);
         ie_open('p');
         itext('The global variables are:');
         ie_close('p');
@@ -30122,7 +30696,7 @@ babelHelpers;
         ie_open('li');
         itext('Mixed with dynamic values:');
         ie_close('li');
-        $templateAlias2({ code: '<li>$auth.id === $params.id</li>', mode: 'xml' }, null, opt_ijData);
+        $templateAlias2({ code: '$auth.id === $params.id', mode: 'xml' }, null, opt_ijData);
         ie_open('li');
         itext('Validate new data value agains old one:');
         ie_close('li');
@@ -30156,7 +30730,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'ELjLU.render';
+      $render.soyTemplateName = 'MPzxD.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -30165,20 +30739,20 @@ babelHelpers;
     return exports;
   });
 
-  var ELjLU = function (_Component) {
-    babelHelpers.inherits(ELjLU, _Component);
+  var MPzxD = function (_Component) {
+    babelHelpers.inherits(MPzxD, _Component);
 
-    function ELjLU() {
-      babelHelpers.classCallCheck(this, ELjLU);
-      return babelHelpers.possibleConstructorReturn(this, (ELjLU.__proto__ || Object.getPrototypeOf(ELjLU)).apply(this, arguments));
+    function MPzxD() {
+      babelHelpers.classCallCheck(this, MPzxD);
+      return babelHelpers.possibleConstructorReturn(this, (MPzxD.__proto__ || Object.getPrototypeOf(MPzxD)).apply(this, arguments));
     }
 
-    return ELjLU;
+    return MPzxD;
   }(Component);
 
-  Soy.register(ELjLU, templates);
+  Soy.register(MPzxD, templates);
   this['metalNamed']['configuring-data'] = this['metalNamed']['configuring-data'] || {};
-  this['metalNamed']['configuring-data']['ELjLU'] = ELjLU;
+  this['metalNamed']['configuring-data']['MPzxD'] = MPzxD;
   this['metalNamed']['configuring-data']['templates'] = templates;
   this['metal']['configuring-data'] = templates;
   /* jshint ignore:end */
@@ -30190,22 +30764,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['configuring-data'];
 
-  var ELjLU = function (_Component) {
-    babelHelpers.inherits(ELjLU, _Component);
+  var MPzxD = function (_Component) {
+    babelHelpers.inherits(MPzxD, _Component);
 
-    function ELjLU() {
-      babelHelpers.classCallCheck(this, ELjLU);
-      return babelHelpers.possibleConstructorReturn(this, (ELjLU.__proto__ || Object.getPrototypeOf(ELjLU)).apply(this, arguments));
+    function MPzxD() {
+      babelHelpers.classCallCheck(this, MPzxD);
+      return babelHelpers.possibleConstructorReturn(this, (MPzxD.__proto__ || Object.getPrototypeOf(MPzxD)).apply(this, arguments));
     }
 
-    return ELjLU;
+    return MPzxD;
   }(Component);
 
   ;
 
-  Soy.register(ELjLU, templates);
+  Soy.register(MPzxD, templates);
 
-  this['metal']['ELjLU'] = ELjLU;
+  this['metal']['MPzxD'] = MPzxD;
 }).call(this);
 'use strict';
 
@@ -30217,15 +30791,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from saving-data.soy.
+    // This file was automatically generated from searching-data.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace PEgtI.
+     * @fileoverview Templates in namespace Qynrj.
      * @public
      */
 
-    goog.module('PEgtI.incrementaldom');
+    goog.module('Qynrj.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -30258,93 +30832,98 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param943 = function param943() {
+      var param996 = function param996() {
         ie_open('h1');
-        var dyn58 = opt_data.page.title;
-        if (typeof dyn58 == 'function') dyn58();else if (dyn58 != null) itext(dyn58);
+        var dyn60 = opt_data.page.title;
+        if (typeof dyn60 == 'function') dyn60();else if (dyn60 != null) itext(dyn60);
         ie_close('h1');
         ie_open('h6');
-        var dyn59 = opt_data.page.description;
-        if (typeof dyn59 == 'function') dyn59();else if (dyn59 != null) itext(dyn59);
+        var dyn61 = opt_data.page.description;
+        if (typeof dyn61 == 'function') dyn61();else if (dyn61 != null) itext(dyn61);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
-        itext('Inserting new data');
-        ie_close('h2');
-        ie_open('aside');
-        ie_open('p');
-        itext('By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see configuring rules section.');
-        ie_close('p');
-        ie_close('aside');
-        ie_open('p');
-        itext('Writing new data is as simple as sending a JSON.');
-        ie_close('p');
-        $templateAlias2({ code: 'var data = WeDeploy.data(\'http://datademo.wedeploy.io\');\n\ndata.create(\'movies\', {\n  "title": "Star Wars IV",\n  "year": 1977,\n  "rating": 8.7\n}).then(function(movie) {\n  console.log(movie);\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('As you can see, the data api uses Promises to help you to make async requests.');
-        ie_close('p');
-        ie_open('p');
-        itext('This operation will return the newly created document, with the following generated ID:');
-        ie_close('p');
-        $templateAlias2({ code: '{\n  "id":" "115992383516607958",\n  "title": "Star Wars IV",\n  "year": 1977,\n  "rating": 8.7\n}', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('Generated ID is a string and it\'s structure may vary. It is also possible to define custom app-specific value for the ID, by simply passing the ');
-        ie_open('code');
-        itext('id');
-        ie_close('code');
-        itext(' field as part of the new document.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Inserting multiple data');
+        itext('Search data');
         ie_close('h2');
         ie_open('p');
-        itext('With the same method you\'re able to create multiple data instead using the method ');
-        ie_open('code');
-        itext('.create');
-        ie_close('code');
-        itext(' multiple times. You just need to use an array instead an object as the second param.');
+        itext('We did some great stuff with basic data methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with where, sort, and pagination. What if we need more powerful queries with our documents? In WeDeploy you can do a text search, handle user misspellings, and show the number of documents by category with your data, and much more.');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy.data(\'http://datademo.wedeploy.io\').create(\'movies\', [\n  {\n    "title": "Star Wars III",\n    "year": 2005,\n    "rating": 8.0\n  },\n  {\n    "title": "Star Wars II",\n    "year": 2002,\n    "rating": 8.6\n  }\n]).then(function(movies) {\n  console.log(movies);\n});', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
-        itext('This operation will return the newly created array of documents, with the following generated IDs:');
+        itext('First take a look at the text search. It\'s a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let\'s search for a Star Wars movie by the episode title, like "Revenge of the Sith". We are not interested if the letter is in upper or lower case, since we are using English connectors like "of" and "the". We want something flexible enough that it will also work for texts like "The revenge of the Sith", or "Sith\'s revenge". Our match operator is flexible enough for both.');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {\n    "id":" 115992383516607959",\n    "title": "Star Wars III",\n    "year": 2005,\n    "rating": 8.0\n  },\n  {\n    "id":" 115992383516607954",\n    "title": "Star Wars II",\n    "year": 2002,\n    "rating": 8.6\n  }\n]', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '3');
-        ie_open('h2');
-        itext('Inserting new fields in an existing collection');
-        ie_close('h2');
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .match(\'title\', "Sith\'s revenge")\n    .get(\'movies\')\n    .then(function(movies) {\n        console.log(movies);\n    });', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
-        itext('WeDeploy Data service is really flexible in therms of data structure. You\'re able to insert new fiels in a collection by adding the new key in the object param.');
+        itext('The result of the match operator query is the following entry:');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy.data(\'http://datademo.wedeploy.io\').create(\'movies\', [\n  {\n    "title": "Star Wars I",\n    "obs": "First in ABC order",\n    "year": 1999,\n    "rating": 9.0\n  }\n]).then(function(movie) {\n  console.log(movie);\n});', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: '[{"id":"star_wars_iii","title":"Star Wars: Episode III - Revenge of the Sith","year":2005,"rating":7.7}]', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
-        itext('This operation will return the newly created document, with the following generated ID:');
+        itext('We can also use simple text operators in our match:');
         ie_close('p');
-        $templateAlias2({ code: '{\n  "id":" 115992383516607954",\n  "title": "Star Wars I",\n  "obs": "First in ABC order",\n  "year": 1999,\n  "rating": 9.0\n}', mode: 'javascript' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '4');
-        ie_open('h2');
-        itext('URL scope structure');
-        ie_close('h2');
+        $templateAlias2({ code: '// we can run this\nWeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .match(\'title\', \'(jedi | force) -return\')\n    .get(\'movies\')\n    .then(function(movies) {\n        console.log(movies);\n    });\n\n// or this\nWeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .match(\'title\', \'awake*\')\n    .get(\'movies\')\n    .then(function(movies) {\n        console.log(movies);\n    });\n\n// or even this\nWeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .match(\'title\', \'wakens~\')\n    .get(\'movies\')\n    .then(function(movies) {\n        console.log(movies);\n    });', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
-        itext('The URL we just created stored a new document in our app\'s service inside the "movies" collection. More information on how to set up this datastore URL can be seen in the section Building APIs. For now, we only need to know that within the path where the data is mounted. The URL will be interpreted as a key that points to a stored resource like the one below:');
+        itext('Any search in the previous example results in the following match:');
         ie_close('p');
-        $templateAlias2({ code: '/collectionName/documentId/documentProperty/documentInnerProperty', mode: 'text' }, null, opt_ijData);
+        $templateAlias2({ code: '[{"id":"star_wars_vii","title":"Star Wars: Episode VII - The Force Awakens","year":2015}]', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
-        itext('For example, to reference the newly created Star Wars rating, we can use the path:');
+        itext('What we did with * can also be done with the prefix operator Filter.prefix(\'title\', \'awake\'). The fuzziness we added to \'wakens\' using ~, can also be done explicitly with the fuzzy operator Filter.fuzzy(\'title\', \'wakens\').');
         ie_close('p');
-        $templateAlias2({ code: 'http://data.datademo.wedeploy.me/movies/115992383516607958/rating', mode: 'text' }, null, opt_ijData);
+        ie_open('p');
+        itext('So far we are still just filtering data with filters. We can do so much more than that! If we use \'query search\' instead of \'filter\' to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .similar(\'title\', \'The attack an awaken Jedi uses to strike a Sith is pure force!\')\n    .search(\'movies\')\n    .then(function(movies) {\n        console.log(movies);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('We receive not only the documents that match the filter, but also search metadata:');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "total": 5,\n    "documents": [\n        {\n            "title": "Star Wars: Episode VII - The Force Awakens",\n            "id": "star_wars_vii"\n        },\n        {\n            "title": "Star Wars: Episode V - The Empire Strikes Back",\n            "id": "star_wars_v"\n        },\n        {\n            "title": "Star Wars: Episode VI - Return of the Jedi",\n            "id": "star_wars_vi"\n        },\n        {\n            "title": "Star Wars: Episode III - Revenge of the Sith",\n            "id": "star_wars_iii"\n        },\n        {\n            "title": "Star Wars: Episode II - Attack of the Clones",\n            "id": "staw_wars_ii"\n        }\n    ],\n    "scores": {\n        "star_wars_ii": 0.13102644681930542,\n        "star_wars_iii": 0.13102644681930542,\n        "star_wars_v": 0.13102644681930542,\n        "star_wars_vi": 0.13102644681930542,\n        "star_wars_vii": 0.5241057872772217\n    },\n    "queryTime": 1\n}', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('Notice that the score of the star_wars_vii document is bigger than the other matches, indicating its title is more similar to the given filter than the others. The documents in the result are now ordered by the relevance of the document, expressed as a number in the scores metadata, rather than the document\'s ID. Now we can show not only filtered results, but also order our results by relevance!');
+        ie_close('p');
+        ie_open('p');
+        itext('Want more? Well, let\'s make things even easier for the user! Adding one entry to the search query, we can automatically highlight the words that matched our query, showing not only how relevant the document is to the search, but also where it matches our criteria. We can do this with small changes in our previous search, using the following code:');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .similar(\'title\', \'The attack an awakened Jedi uses to strike a Sith is pure force!\')\n    .highlight(\'title\')\n    .search(\'movies\')\n    .then(function(movies) {\n        console.log(movies);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('As you can see in the code below, our keywords are highlighted in the results:');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "total": 5,\n    "documents": [\n        {\n            "title": "Star Wars: Episode VII - The <em>Force</em> <em>Awakens</em>",\n            "id": "star_wars_vii"\n        },\n        {\n            "title": "Star Wars: Episode V - The Empire <em>Strikes</em> Back",\n            "id": "star_wars_v"\n        },\n        {\n            "title": "Star Wars: Episode VI - Return of the <em>Jedi</em>",\n            "id": "star_wars_vi"\n        },\n        {\n            "title": "Star Wars: Episode III - Revenge of the <em>Sith</em>",\n            "id": "star_wars_iii"\n        },\n        {\n            "title": "Star Wars: Episode II - <em>Attack</em> of the Clones",\n            "id": "star_wars_ii"\n        }\n    ],\n    "scores": {\n        "star_wars_ii": 0.13102644681930542,\n        "star_wars_iii": 0.13102644681930542,\n        "star_wars_v": 0.13102644681930542,\n        "star_wars_vi": 0.13102644681930542,\n        "star_wars_vii": 0.5241057872772217\n    },\n    "queryTime": 1\n}', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? We can do that with aggregations, using the following code:');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .lt(\'year\', 1990)\n    .aggregate(\'Old Movies\', \'rating\', \'avg\')\n    .count()\n    .get(\'movies\')\n    .then(function(aggregation) {\n        console.log(aggregation);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('The count we added to the query informed the server that we are not interested in the documents themselves, but rather the number of matches and search metadata. The result, in this case, will be the following data:');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "total": 3,\n    "queryTime": 13,\n    "aggregations": {\n        "Old Movies": 8.633333333333333\n    }\n}', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('Cool, right? Simply run another query for the newest movies, and then you\'ll have the data you need to compare them. There are some additional operators that you might find useful: min, max, sum, histogram, and even a generic stats that returns several statistics over the field. Take a look at the example below to see results using the additional operators:');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "total": 3,\n    "queryTime": 8,\n    "aggregations": {\n        "Old Movies": {\n            "average": 8.633333333333333,\n            "count": 3,\n            "max": 8.8,\n            "min": 8.4,\n            "name": "Old Movies",\n            "standardDeviation": null,\n            "sum": 25.9,\n            "sumOfSquares": null,\n            "variance": null\n        }\n    }\n}', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('Notice that in order to read and write your service\'s root path you need to map it with an API endpoint and data flag active. If we want to inform the server of the data type of a collection field before it receives its first document, we can POST/PATCH the data root with the mapping information:');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .url(\'http://datademo.wedeploy.io\')\n    .post({\n        "places": {\n            "location": "geo_point"\n        }\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: date, geo_point, and geo_shape. We will focus on geo_point for this next feature.');
+        ie_close('p');
+        ie_open('p');
+        itext('So, we mapped a field called location, in the collection places, as representing a geolocation point. This means we can operate, filter, and aggregate the places we put in that collection, using geo filters over this field! Let\'s try something simple: find cinemas close to London\'s Waterloo Station. To run the search criteria, we\'ll use the following code:');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .any(\'category\', \'cinema\')\n    .distance(\'location\', \'51.5031653,-0.1123051\', \'1mi\')\n    .get(\'places\')\n    .then(function(places) {\n        console.log(places);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('Our result is the following matches:');
+        ie_close('p');
+        $templateAlias2({ code: '[\n    {\n        "name": "BFI IMAX",\n        "location": "51.5126928,-0.12052",\n        "id": "116686224946770924",\n        "category": [\n            "cinema"\n        ]\n    },\n    {\n        "name": "Cinema Museum",\n        "location": "51.501661,-0.1177734",\n        "id": "116686224946770925",\n        "category": [\n            "cinema",\n            "museum"\n        ]\n    },\n    {\n        "name": "Roxy Bar and Screen",\n        "location": "51.5012603,-0.1146835",\n        "id": "116686224946770926",\n        "category": [\n            "cinema",\n            "bar",\n            "restaurant"\n        ]\n    }\n]', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('Now we can plug a map to our app, and let users see and filter places, with just a few lines of code.');
+        ie_close('p');
         ie_close('article');
         ie_open('h2');
         itext('What\'s next?');
         ie_close('h2');
         ie_open('p');
-        itext('Now that you have learned how to create data, you can interact ');
-        ie_open('a', null, null, 'href', '/docs/data/updating-data.html');
-        itext('updating data');
+        itext('Now that you have learned how to retrieve data, you can interact with ');
+        ie_open('a', null, null, 'href', '/docs/data/real-time-feeds.html');
+        itext('real-time feeds');
         ie_close('a');
         itext('.');
         ie_close('p');
@@ -30353,11 +30932,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param943 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param996 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'PEgtI.render';
+      $render.soyTemplateName = 'Qynrj.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -30366,22 +30945,22 @@ babelHelpers;
     return exports;
   });
 
-  var PEgtI = function (_Component) {
-    babelHelpers.inherits(PEgtI, _Component);
+  var Qynrj = function (_Component) {
+    babelHelpers.inherits(Qynrj, _Component);
 
-    function PEgtI() {
-      babelHelpers.classCallCheck(this, PEgtI);
-      return babelHelpers.possibleConstructorReturn(this, (PEgtI.__proto__ || Object.getPrototypeOf(PEgtI)).apply(this, arguments));
+    function Qynrj() {
+      babelHelpers.classCallCheck(this, Qynrj);
+      return babelHelpers.possibleConstructorReturn(this, (Qynrj.__proto__ || Object.getPrototypeOf(Qynrj)).apply(this, arguments));
     }
 
-    return PEgtI;
+    return Qynrj;
   }(Component);
 
-  Soy.register(PEgtI, templates);
-  this['metalNamed']['saving-data'] = this['metalNamed']['saving-data'] || {};
-  this['metalNamed']['saving-data']['PEgtI'] = PEgtI;
-  this['metalNamed']['saving-data']['templates'] = templates;
-  this['metal']['saving-data'] = templates;
+  Soy.register(Qynrj, templates);
+  this['metalNamed']['searching-data'] = this['metalNamed']['searching-data'] || {};
+  this['metalNamed']['searching-data']['Qynrj'] = Qynrj;
+  this['metalNamed']['searching-data']['templates'] = templates;
+  this['metal']['searching-data'] = templates;
   /* jshint ignore:end */
 }).call(this);
 'use strict';
@@ -30389,24 +30968,24 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['saving-data'];
+  var templates = this['metal']['searching-data'];
 
-  var PEgtI = function (_Component) {
-    babelHelpers.inherits(PEgtI, _Component);
+  var Qynrj = function (_Component) {
+    babelHelpers.inherits(Qynrj, _Component);
 
-    function PEgtI() {
-      babelHelpers.classCallCheck(this, PEgtI);
-      return babelHelpers.possibleConstructorReturn(this, (PEgtI.__proto__ || Object.getPrototypeOf(PEgtI)).apply(this, arguments));
+    function Qynrj() {
+      babelHelpers.classCallCheck(this, Qynrj);
+      return babelHelpers.possibleConstructorReturn(this, (Qynrj.__proto__ || Object.getPrototypeOf(Qynrj)).apply(this, arguments));
     }
 
-    return PEgtI;
+    return Qynrj;
   }(Component);
 
   ;
 
-  Soy.register(PEgtI, templates);
+  Soy.register(Qynrj, templates);
 
-  this['metal']['PEgtI'] = PEgtI;
+  this['metal']['Qynrj'] = Qynrj;
 }).call(this);
 'use strict';
 
@@ -30422,11 +31001,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace SDVDO.
+     * @fileoverview Templates in namespace XXCQO.
      * @public
      */
 
-    goog.module('SDVDO.incrementaldom');
+    goog.module('XXCQO.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -30616,7 +31195,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'SDVDO.render';
+      $render.soyTemplateName = 'XXCQO.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -30625,20 +31204,20 @@ babelHelpers;
     return exports;
   });
 
-  var SDVDO = function (_Component) {
-    babelHelpers.inherits(SDVDO, _Component);
+  var XXCQO = function (_Component) {
+    babelHelpers.inherits(XXCQO, _Component);
 
-    function SDVDO() {
-      babelHelpers.classCallCheck(this, SDVDO);
-      return babelHelpers.possibleConstructorReturn(this, (SDVDO.__proto__ || Object.getPrototypeOf(SDVDO)).apply(this, arguments));
+    function XXCQO() {
+      babelHelpers.classCallCheck(this, XXCQO);
+      return babelHelpers.possibleConstructorReturn(this, (XXCQO.__proto__ || Object.getPrototypeOf(XXCQO)).apply(this, arguments));
     }
 
-    return SDVDO;
+    return XXCQO;
   }(Component);
 
-  Soy.register(SDVDO, templates);
+  Soy.register(XXCQO, templates);
   this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['SDVDO'] = SDVDO;
+  this['metalNamed']['getting-started']['XXCQO'] = XXCQO;
   this['metalNamed']['getting-started']['templates'] = templates;
   this['metal']['getting-started'] = templates;
   /* jshint ignore:end */
@@ -30650,228 +31229,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['getting-started'];
 
-  var SDVDO = function (_Component) {
-    babelHelpers.inherits(SDVDO, _Component);
+  var XXCQO = function (_Component) {
+    babelHelpers.inherits(XXCQO, _Component);
 
-    function SDVDO() {
-      babelHelpers.classCallCheck(this, SDVDO);
-      return babelHelpers.possibleConstructorReturn(this, (SDVDO.__proto__ || Object.getPrototypeOf(SDVDO)).apply(this, arguments));
+    function XXCQO() {
+      babelHelpers.classCallCheck(this, XXCQO);
+      return babelHelpers.possibleConstructorReturn(this, (XXCQO.__proto__ || Object.getPrototypeOf(XXCQO)).apply(this, arguments));
     }
 
-    return SDVDO;
+    return XXCQO;
   }(Component);
 
   ;
 
-  Soy.register(SDVDO, templates);
+  Soy.register(XXCQO, templates);
 
-  this['metal']['SDVDO'] = SDVDO;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from searching-data.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace cVzfq.
-     * @public
-     */
-
-    goog.module('cVzfq.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param996 = function param996() {
-        ie_open('h1');
-        var dyn60 = opt_data.page.title;
-        if (typeof dyn60 == 'function') dyn60();else if (dyn60 != null) itext(dyn60);
-        ie_close('h1');
-        ie_open('h6');
-        var dyn61 = opt_data.page.description;
-        if (typeof dyn61 == 'function') dyn61();else if (dyn61 != null) itext(dyn61);
-        ie_close('h6');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Search data');
-        ie_close('h2');
-        ie_open('p');
-        itext('We did some great stuff with basic data methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with where, sort, and pagination. What if we need more powerful queries with our documents? In WeDeploy you can do a text search, handle user misspellings, and show the number of documents by category with your data, and much more.');
-        ie_close('p');
-        ie_open('p');
-        itext('First take a look at the text search. It\'s a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let\'s search for a Star Wars movie by the episode title, like "Revenge of the Sith". We are not interested if the letter is in upper or lower case, since we are using English connectors like "of" and "the". We want something flexible enough that it will also work for texts like "The revenge of the Sith", or "Sith\'s revenge". Our match operator is flexible enough for both.');
-        ie_close('p');
-        $templateAlias2({ code: 'var data = WeDeploy.data(\'http://datademo.wedeploy.io\');\n\ndata.match(\'title\', "Sith\'s revenge")\n.get(\'movies\')\n.then(function(movies) {\n  console.log(movies);\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('The result of the match operator query is the following entry:');
-        ie_close('p');
-        $templateAlias2({ code: '[{"id":"star_wars_iii","title":"Star Wars: Episode III - Revenge of the Sith","year":2005,"rating":7.7}]', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('We can also use simple text operators in our match:');
-        ie_close('p');
-        $templateAlias2({ code: '// we can run this\nWeDeploy\n.data()\n.match(\'title\', \'(jedi | force) -return\')\n.get(\'movies\')\n.then(function(movies) {\n  console.log(movies);\n});\n\n// or this\nWeDeploy\n.data()\n.match(\'title\', \'awake*\')\n.get(\'movies\')\n.then(function(movies) {\n  console.log(movies);\n});\n\n// or even this\nWeDeploy\n.data()\n.match(\'title\', \'wakens~\')\n.get(\'movies\')\n.then(function(movies) {\n  console.log(movies);\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('Any search in the previous example results in the following match:');
-        ie_close('p');
-        $templateAlias2({ code: '[{"id":"star_wars_vii","title":"Star Wars: Episode VII - The Force Awakens","year":2015}]', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('What we did with * can also be done with the prefix operator Filter.prefix(\'title\', \'awake\'). The fuzziness we added to \'wakens\' using ~, can also be done explicitly with the fuzzy operator Filter.fuzzy(\'title\', \'wakens\').');
-        ie_close('p');
-        ie_open('p');
-        itext('So far we are still just filtering data with filters. We can do so much more than that! If we use \'query search\' instead of \'filter\' to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:');
-        ie_close('p');
-        $templateAlias2({ code: 'WeDeploy\n.data()\n.similar(\'title\', \'The attack an awaken Jedi uses to strike a Sith is pure force!\')\n.search(\'movies\')\n.then(function(movies) {\n  console.log(movies);\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('We receive not only the documents that match the filter, but also search metadata:');
-        ie_close('p');
-        $templateAlias2({ code: '{\n  "total": 5,\n  "documents": [\n    {\n      "title": "Star Wars: Episode VII - The Force Awakens",\n      "id": "star_wars_vii"\n    },\n    {\n      "title": "Star Wars: Episode V - The Empire Strikes Back",\n      "id": "star_wars_v"\n    },\n    {\n      "title": "Star Wars: Episode VI - Return of the Jedi",\n      "id": "star_wars_vi"\n    },\n    {\n      "title": "Star Wars: Episode III - Revenge of the Sith",\n      "id": "star_wars_iii"\n    },\n    {\n      "title": "Star Wars: Episode II - Attack of the Clones",\n      "id": "staw_wars_ii"\n    }\n  ],\n  "scores": {\n    "star_wars_ii": 0.13102644681930542,\n    "star_wars_iii": 0.13102644681930542,\n    "star_wars_v": 0.13102644681930542,\n    "star_wars_vi": 0.13102644681930542,\n    "star_wars_vii": 0.5241057872772217\n  },\n  "queryTime": 1\n}', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('Notice that the score of the star_wars_vii document is bigger than the other matches, indicating its title is more similar to the given filter than the others. The documents in the result are now ordered by the relevance of the document, expressed as a number in the scores metadata, rather than the document\'s ID. Now we can show not only filtered results, but also order our results by relevance!');
-        ie_close('p');
-        ie_open('p');
-        itext('Want more? Well, let\'s make things even easier for the user! Adding one entry to the search query, we can automatically highlight the words that matched our query, showing not only how relevant the document is to the search, but also where it matches our criteria. We can do this with small changes in our previous search, using the following code:');
-        ie_close('p');
-        $templateAlias2({ code: 'WeDeploy.data()\n.similar(\'title\', \'The attack an awakened Jedi uses to strike a Sith is pure force!\')\n.highlight(\'title\')\n.search(\'movies\')\n.then(function(movies) {\n  console.log(movies);\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('As you can see in the code below, our keywords are highlighted in the results:');
-        ie_close('p');
-        $templateAlias2({ code: '{\n  "total": 5,\n  "documents": [\n    {\n      "title": "Star Wars: Episode VII - The <em>Force</em> <em>Awakens</em>",\n      "id": "star_wars_vii"\n    },\n    {\n      "title": "Star Wars: Episode V - The Empire <em>Strikes</em> Back",\n      "id": "star_wars_v"\n    },\n    {\n      "title": "Star Wars: Episode VI - Return of the <em>Jedi</em>",\n      "id": "star_wars_vi"\n    },\n    {\n      "title": "Star Wars: Episode III - Revenge of the <em>Sith</em>",\n      "id": "star_wars_iii"\n    },\n    {\n      "title": "Star Wars: Episode II - <em>Attack</em> of the Clones",\n      "id": "star_wars_ii"\n    }\n  ],\n  "scores": {\n    "star_wars_ii": 0.13102644681930542,\n    "star_wars_iii": 0.13102644681930542,\n    "star_wars_v": 0.13102644681930542,\n    "star_wars_vi": 0.13102644681930542,\n    "star_wars_vii": 0.5241057872772217\n  },\n  "queryTime": 1\n}', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? We can do that with aggregations, using the following code:');
-        ie_close('p');
-        $templateAlias2({ code: 'WeDeploy\n.data()\n.lt(\'year\', 1990)\n.aggregate(\'Old Movies\', \'rating\', \'avg\')\n.count()\n.get(\'movies\')\n.then(function(aggregation) {\n  console.log(aggregation);\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('The count we added to the query informed the server that we are not interested in the documents themselves, but rather the number of matches and search metadata. The result, in this case, will be the following data:');
-        ie_close('p');
-        $templateAlias2({ code: '{\n  "total": 3,\n  "queryTime": 13,\n  "aggregations": {\n    "Old Movies": 8.633333333333333\n  }\n}', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('Cool, right? Simply run another query for the newest movies, and then you\'ll have the data you need to compare them. There are some additional operators that you might find useful: min, max, sum, histogram, and even a generic stats that returns several statistics over the field. Take a look at the example below to see results using the additional operators:');
-        ie_close('p');
-        $templateAlias2({ code: '{\n  "total": 3,\n  "queryTime": 8,\n  "aggregations": {\n    "Old Movies": {\n      "average": 8.633333333333333,\n      "count": 3,\n      "max": 8.8,\n      "min": 8.4,\n      "name": "Old Movies",\n      "standardDeviation": null,\n      "sum": 25.9,\n      "sumOfSquares": null,\n      "variance": null\n    }\n  }\n}', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('Notice that in order to read and write your service\'s root path you need to map it with an API endpoint and data flag active. If we want to inform the server of the data type of a collection field before it receives its first document, we can POST/PATCH the data root with the mapping information:');
-        ie_close('p');
-        $templateAlias2({ code: 'WeDeploy\n.url(\'http://data.datademo.wedeploy.me/\')\n.post({\n   "places": {\n     "location": "geo_point"\n   }\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: date, geo_point, and geo_shape. We will focus on geo_point for this next feature.');
-        ie_close('p');
-        ie_open('p');
-        itext('So, we mapped a field called location, in the collection places, as representing a geolocation point. This means we can operate, filter, and aggregate the places we put in that collection, using geo filters over this field! Let\'s try something simple: find cinemas close to London\'s Waterloo Station. To run the search criteria, we\'ll use the following code:');
-        ie_close('p');
-        $templateAlias2({ code: 'WeDeploy\n.data()\n.any(\'category\', \'cinema\')\n.distance(\'location\', \'51.5031653,-0.1123051\', \'1mi\')\n.get(\'places\')\n.then(function(places) {\n  console.log(places);\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('Our result is the following matches:');
-        ie_close('p');
-        $templateAlias2({ code: '[\n  {\n    "name": "BFI IMAX",\n    "location": "51.5126928,-0.12052",\n    "id": "116686224946770924",\n    "category": [\n      "cinema"\n    ]\n  },\n  {\n    "name": "Cinema Museum",\n    "location": "51.501661,-0.1177734",\n    "id": "116686224946770925",\n    "category": [\n      "cinema",\n      "museum"\n    ]\n  },\n  {\n    "name": "Roxy Bar and Screen",\n    "location": "51.5012603,-0.1146835",\n    "id": "116686224946770926",\n    "category": [\n      "cinema",\n      "bar",\n      "restaurant"\n    ]\n  }\n]', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('Now we can plug a map to our app, and let users see and filter places, with just a few lines of code.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('h2');
-        itext('What\'s next?');
-        ie_close('h2');
-        ie_open('p');
-        itext('Now that you have learned how to retrieve data, you can interact with ');
-        ie_open('a', null, null, 'href', '/docs/data/real-time-feeds.html');
-        itext('real-time feeds');
-        ie_close('a');
-        itext('.');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param996 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'cVzfq.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var cVzfq = function (_Component) {
-    babelHelpers.inherits(cVzfq, _Component);
-
-    function cVzfq() {
-      babelHelpers.classCallCheck(this, cVzfq);
-      return babelHelpers.possibleConstructorReturn(this, (cVzfq.__proto__ || Object.getPrototypeOf(cVzfq)).apply(this, arguments));
-    }
-
-    return cVzfq;
-  }(Component);
-
-  Soy.register(cVzfq, templates);
-  this['metalNamed']['searching-data'] = this['metalNamed']['searching-data'] || {};
-  this['metalNamed']['searching-data']['cVzfq'] = cVzfq;
-  this['metalNamed']['searching-data']['templates'] = templates;
-  this['metal']['searching-data'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['searching-data'];
-
-  var cVzfq = function (_Component) {
-    babelHelpers.inherits(cVzfq, _Component);
-
-    function cVzfq() {
-      babelHelpers.classCallCheck(this, cVzfq);
-      return babelHelpers.possibleConstructorReturn(this, (cVzfq.__proto__ || Object.getPrototypeOf(cVzfq)).apply(this, arguments));
-    }
-
-    return cVzfq;
-  }(Component);
-
-  ;
-
-  Soy.register(cVzfq, templates);
-
-  this['metal']['cVzfq'] = cVzfq;
+  this['metal']['XXCQO'] = XXCQO;
 }).call(this);
 'use strict';
 
@@ -30887,11 +31260,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace jUYxn.
+     * @fileoverview Templates in namespace YqipD.
      * @public
      */
 
-    goog.module('jUYxn.incrementaldom');
+    goog.module('YqipD.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -30970,7 +31343,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'jUYxn.render';
+      $render.soyTemplateName = 'YqipD.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -30979,23 +31352,47 @@ babelHelpers;
     return exports;
   });
 
-  var jUYxn = function (_Component) {
-    babelHelpers.inherits(jUYxn, _Component);
+  var YqipD = function (_Component) {
+    babelHelpers.inherits(YqipD, _Component);
 
-    function jUYxn() {
-      babelHelpers.classCallCheck(this, jUYxn);
-      return babelHelpers.possibleConstructorReturn(this, (jUYxn.__proto__ || Object.getPrototypeOf(jUYxn)).apply(this, arguments));
+    function YqipD() {
+      babelHelpers.classCallCheck(this, YqipD);
+      return babelHelpers.possibleConstructorReturn(this, (YqipD.__proto__ || Object.getPrototypeOf(YqipD)).apply(this, arguments));
     }
 
-    return jUYxn;
+    return YqipD;
   }(Component);
 
-  Soy.register(jUYxn, templates);
+  Soy.register(YqipD, templates);
   this['metalNamed']['deleting-data'] = this['metalNamed']['deleting-data'] || {};
-  this['metalNamed']['deleting-data']['jUYxn'] = jUYxn;
+  this['metalNamed']['deleting-data']['YqipD'] = YqipD;
   this['metalNamed']['deleting-data']['templates'] = templates;
   this['metal']['deleting-data'] = templates;
   /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['deleting-data'];
+
+  var YqipD = function (_Component) {
+    babelHelpers.inherits(YqipD, _Component);
+
+    function YqipD() {
+      babelHelpers.classCallCheck(this, YqipD);
+      return babelHelpers.possibleConstructorReturn(this, (YqipD.__proto__ || Object.getPrototypeOf(YqipD)).apply(this, arguments));
+    }
+
+    return YqipD;
+  }(Component);
+
+  ;
+
+  Soy.register(YqipD, templates);
+
+  this['metal']['YqipD'] = YqipD;
 }).call(this);
 'use strict';
 
@@ -31011,11 +31408,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace ebYso.
+     * @fileoverview Templates in namespace gjfMN.
      * @public
      */
 
-    goog.module('ebYso.incrementaldom');
+    goog.module('gjfMN.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -31073,14 +31470,14 @@ babelHelpers;
         ie_open('p');
         itext('Updating existing data is as simple as sending a JSON.');
         ie_close('p');
-        $templateAlias2({ code: 'var client = WeDeploy.data(\'http://datademo.wedeploy.io\');\n\nclient.update(\'movies/115992383516607958\', {\n  "rating": 9.1\n}).then(function(movie) {\n  console.log(movie);\n});', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .update(\'movies/115992383516607958\', {\n        "rating": 9.1\n    }).then(function(movie) {\n        console.log(movie);\n    });', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
         itext('As you can see, the data api uses Promises to help you to make async requests.');
         ie_close('p');
         ie_open('p');
         itext('This operation will return the updated document with the new rating:');
         ie_close('p');
-        $templateAlias2({ code: '{\n  "id":" 115992383516607958",\n  "title": "Star Wars IV",\n  "year": 1977,\n  "rating": 9.1\n}', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: '{\n    "id":" 115992383516607958",\n    "title": "Star Wars IV",\n    "year": 1977,\n    "rating": 9.1\n}', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
         ie_open('h2');
         itext('What\'s next?');
@@ -31101,7 +31498,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'ebYso.render';
+      $render.soyTemplateName = 'gjfMN.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -31110,20 +31507,20 @@ babelHelpers;
     return exports;
   });
 
-  var ebYso = function (_Component) {
-    babelHelpers.inherits(ebYso, _Component);
+  var gjfMN = function (_Component) {
+    babelHelpers.inherits(gjfMN, _Component);
 
-    function ebYso() {
-      babelHelpers.classCallCheck(this, ebYso);
-      return babelHelpers.possibleConstructorReturn(this, (ebYso.__proto__ || Object.getPrototypeOf(ebYso)).apply(this, arguments));
+    function gjfMN() {
+      babelHelpers.classCallCheck(this, gjfMN);
+      return babelHelpers.possibleConstructorReturn(this, (gjfMN.__proto__ || Object.getPrototypeOf(gjfMN)).apply(this, arguments));
     }
 
-    return ebYso;
+    return gjfMN;
   }(Component);
 
-  Soy.register(ebYso, templates);
+  Soy.register(gjfMN, templates);
   this['metalNamed']['updating-data'] = this['metalNamed']['updating-data'] || {};
-  this['metalNamed']['updating-data']['ebYso'] = ebYso;
+  this['metalNamed']['updating-data']['gjfMN'] = gjfMN;
   this['metalNamed']['updating-data']['templates'] = templates;
   this['metal']['updating-data'] = templates;
   /* jshint ignore:end */
@@ -31135,22 +31532,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['updating-data'];
 
-  var ebYso = function (_Component) {
-    babelHelpers.inherits(ebYso, _Component);
+  var gjfMN = function (_Component) {
+    babelHelpers.inherits(gjfMN, _Component);
 
-    function ebYso() {
-      babelHelpers.classCallCheck(this, ebYso);
-      return babelHelpers.possibleConstructorReturn(this, (ebYso.__proto__ || Object.getPrototypeOf(ebYso)).apply(this, arguments));
+    function gjfMN() {
+      babelHelpers.classCallCheck(this, gjfMN);
+      return babelHelpers.possibleConstructorReturn(this, (gjfMN.__proto__ || Object.getPrototypeOf(gjfMN)).apply(this, arguments));
     }
 
-    return ebYso;
+    return gjfMN;
   }(Component);
 
   ;
 
-  Soy.register(ebYso, templates);
+  Soy.register(gjfMN, templates);
 
-  this['metal']['ebYso'] = ebYso;
+  this['metal']['gjfMN'] = gjfMN;
 }).call(this);
 'use strict';
 
@@ -31256,30 +31653,6 @@ babelHelpers;
 'use strict';
 
 (function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['deleting-data'];
-
-  var jUYxn = function (_Component) {
-    babelHelpers.inherits(jUYxn, _Component);
-
-    function jUYxn() {
-      babelHelpers.classCallCheck(this, jUYxn);
-      return babelHelpers.possibleConstructorReturn(this, (jUYxn.__proto__ || Object.getPrototypeOf(jUYxn)).apply(this, arguments));
-    }
-
-    return jUYxn;
-  }(Component);
-
-  ;
-
-  Soy.register(jUYxn, templates);
-
-  this['metal']['jUYxn'] = jUYxn;
-}).call(this);
-'use strict';
-
-(function () {
   /* jshint ignore:start */
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
@@ -31287,15 +31660,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from real-time-feeds.soy.
+    // This file was automatically generated from saving-data.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace mIdtv.
+     * @fileoverview Templates in namespace loIiq.
      * @public
      */
 
-    goog.module('mIdtv.incrementaldom');
+    goog.module('loIiq.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -31328,95 +31701,106 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param852 = function param852() {
+      var param943 = function param943() {
         ie_open('h1');
-        var dyn54 = opt_data.page.title;
-        if (typeof dyn54 == 'function') dyn54();else if (dyn54 != null) itext(dyn54);
+        var dyn58 = opt_data.page.title;
+        if (typeof dyn58 == 'function') dyn58();else if (dyn58 != null) itext(dyn58);
         ie_close('h1');
         ie_open('h6');
-        var dyn55 = opt_data.page.description;
-        if (typeof dyn55 == 'function') dyn55();else if (dyn55 != null) itext(dyn55);
+        var dyn59 = opt_data.page.description;
+        if (typeof dyn59 == 'function') dyn59();else if (dyn59 != null) itext(dyn59);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
-        itext('Watching data changes');
+        itext('Inserting new data');
         ie_close('h2');
+        ie_open('aside');
         ie_open('p');
-        itext('We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it\'s throughout the features we just presented to you. To access our data in real-time, all we need to do is change the ');
-        ie_open('em');
-        itext('WeDeploy\u2122');
-        ie_close('em');
-        itext(' API  ');
-        ie_open('code');
-        itext('get');
-        ie_close('code');
-        itext(' method to use to the ');
-        ie_open('code');
-        itext('watch');
-        ie_close('code');
-        itext(' method:');
+        itext('By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see configuring rules section.');
         ie_close('p');
-        $templateAlias2({ code: 'var data = WeDeploy.data(\'http://datademo.wedeploy.io\');\n\ndata.watch(\'movies\')\n.on(\'changes\', function(data){\n   console.log(data);\n})\n.on(\'fail\', function(error){\n   console.log(error);\n});', mode: 'javascript' }, null, opt_ijData);
+        ie_close('aside');
         ie_open('p');
-        itext('Now every time the storage detects changes that affect the query you\'re watching, you will receive a changes notification with the response body you\'d receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you\'ll receive the error object in a fail notification on the client.');
+        itext('Writing new data is as simple as sending a JSON.');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .create(\'movies\', {\n        "title": "Star Wars IV",\n        "year": 1977,\n        "rating": 8.7\n    }).then(function(movie) {\n        console.log(movie);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('As you can see, the data api uses Promises to help you to make async requests.');
+        ie_close('p');
+        ie_open('p');
+        itext('This operation will return the newly created document, with the following generated ID:');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "id":" "115992383516607958",\n    "title": "Star Wars IV",\n    "year": 1977,\n    "rating": 8.7\n}', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('Generated ID is a string and it\'s structure may vary. It is also possible to define custom app-specific value for the ID, by simply passing the ');
+        ie_open('code');
+        itext('id');
+        ie_close('code');
+        itext(' field as part of the new document.');
         ie_close('p');
         ie_close('article');
         ie_open('article', null, null, 'id', '2');
         ie_open('h2');
-        itext('Watching with advanced filters');
+        itext('Inserting multiple data');
         ie_close('h2');
         ie_open('p');
-        itext('To present data using advanced search is simple as performing normal queries. You just would need to keep using the ');
+        itext('With the same method you\'re able to create multiple data instead using the method ');
         ie_open('code');
-        itext('watch');
+        itext('.create');
         ie_close('code');
-        itext(' method and apply any filter you desire.');
+        itext(' multiple times. You just need to use an array instead an object as the second param.');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy.data(\'http://datademo.wedeploy.io\')\n.where(\'category\', \'cinema\')\n.or(\'category\', \'cartoon\')\n.watch(\'movies\')\n.on(\'changes\', function(data){\n   console.log(data);\n})\n.on(\'fail\', function(error){\n   console.log(error);\n});', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .create(\'movies\', [\n        {\n            "title": "Star Wars III",\n            "year": 2005,\n            "rating": 8.0\n        },\n        {\n            "title": "Star Wars II",\n            "year": 2002,\n            "rating": 8.6\n        }\n    ]).then(function(movies) {\n        console.log(movies);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('This operation will return the newly created array of documents, with the following generated IDs:');
+        ie_close('p');
+        $templateAlias2({ code: '[\n    {\n        "id":" 115992383516607959",\n        "title": "Star Wars III",\n        "year": 2005,\n        "rating": 8.0\n    },\n    {\n        "id":" 115992383516607954",\n        "title": "Star Wars II",\n        "year": 2002,\n        "rating": 8.6\n    }\n]', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
         ie_open('article', null, null, 'id', '3');
         ie_open('h2');
-        itext('Getting the latest changes');
+        itext('Inserting new fields in an existing collection');
         ie_close('h2');
         ie_open('p');
-        itext('The data service uses a query limit ');
-        ie_open('code');
-        itext('500');
-        ie_close('code');
-        itext(' by default. In order to always get the latest new record, you would need to limit the query by ');
-        ie_open('code');
-        itext('1');
-        ie_close('code');
-        itext(' and order by ');
-        ie_open('code');
-        itext('id');
-        ie_close('code');
-        itext(' ');
-        ie_open('code');
-        itext('desc');
-        ie_close('code');
-        itext('.');
+        itext('WeDeploy Data service is really flexible in therms of data structure. You\'re able to insert new fiels in a collection by adding the new key in the object param.');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy.data(\'http://datademo.wedeploy.io\')\n.limit(1)\n.orderBy(\'id\', \'desc\')\n.watch(\'movies\')\n.on(\'changes\', function(data){\n   console.log(data);\n})\n.on(\'fail\', function(error){\n   console.log(error);\n});', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .create(\'movies\', [\n        {\n            "title": "Star Wars I",\n            "obs": "First in ABC order",\n            "year": 1999,\n            "rating": 9.0\n        }\n    ]).then(function(movie) {\n        console.log(movie);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('This operation will return the newly created document, with the following generated ID:');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "id":" 115992383516607954",\n    "title": "Star Wars I",\n    "obs": "First in ABC order",\n    "year": 1999,\n    "rating": 9.0\n}', mode: 'javascript' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '4');
+        ie_open('h2');
+        itext('URL scope structure');
+        ie_close('h2');
+        ie_open('p');
+        itext('The URL we just created stored a new document in our app\'s service inside the "movies" collection. More information on how to set up this datastore URL can be seen in the section Building APIs. For now, we only need to know that within the path where the data is mounted. The URL will be interpreted as a key that points to a stored resource like the one below:');
+        ie_close('p');
+        $templateAlias2({ code: '/collectionName/documentId/documentProperty/documentInnerProperty', mode: 'text' }, null, opt_ijData);
+        ie_open('p');
+        itext('For example, to reference the newly created Star Wars rating, we can use the path:');
+        ie_close('p');
+        $templateAlias2({ code: 'http://data.datademo.wedeploy.me/movies/115992383516607958/rating', mode: 'text' }, null, opt_ijData);
         ie_close('article');
         ie_open('h2');
         itext('What\'s next?');
         ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('Now we\'re ready to save and retrieve data in real-time.');
-        ie_close('li');
-        ie_close('ul');
+        ie_open('p');
+        itext('Now that you have learned how to create data, you can interact ');
+        ie_open('a', null, null, 'href', '/docs/data/updating-data.html');
+        itext('updating data');
+        ie_close('a');
+        itext('.');
+        ie_close('p');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
         ie_close('input');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param852 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param943 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'mIdtv.render';
+      $render.soyTemplateName = 'loIiq.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -31425,22 +31809,22 @@ babelHelpers;
     return exports;
   });
 
-  var mIdtv = function (_Component) {
-    babelHelpers.inherits(mIdtv, _Component);
+  var loIiq = function (_Component) {
+    babelHelpers.inherits(loIiq, _Component);
 
-    function mIdtv() {
-      babelHelpers.classCallCheck(this, mIdtv);
-      return babelHelpers.possibleConstructorReturn(this, (mIdtv.__proto__ || Object.getPrototypeOf(mIdtv)).apply(this, arguments));
+    function loIiq() {
+      babelHelpers.classCallCheck(this, loIiq);
+      return babelHelpers.possibleConstructorReturn(this, (loIiq.__proto__ || Object.getPrototypeOf(loIiq)).apply(this, arguments));
     }
 
-    return mIdtv;
+    return loIiq;
   }(Component);
 
-  Soy.register(mIdtv, templates);
-  this['metalNamed']['real-time-feeds'] = this['metalNamed']['real-time-feeds'] || {};
-  this['metalNamed']['real-time-feeds']['mIdtv'] = mIdtv;
-  this['metalNamed']['real-time-feeds']['templates'] = templates;
-  this['metal']['real-time-feeds'] = templates;
+  Soy.register(loIiq, templates);
+  this['metalNamed']['saving-data'] = this['metalNamed']['saving-data'] || {};
+  this['metalNamed']['saving-data']['loIiq'] = loIiq;
+  this['metalNamed']['saving-data']['templates'] = templates;
+  this['metal']['saving-data'] = templates;
   /* jshint ignore:end */
 }).call(this);
 'use strict';
@@ -31448,24 +31832,24 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['real-time-feeds'];
+  var templates = this['metal']['saving-data'];
 
-  var mIdtv = function (_Component) {
-    babelHelpers.inherits(mIdtv, _Component);
+  var loIiq = function (_Component) {
+    babelHelpers.inherits(loIiq, _Component);
 
-    function mIdtv() {
-      babelHelpers.classCallCheck(this, mIdtv);
-      return babelHelpers.possibleConstructorReturn(this, (mIdtv.__proto__ || Object.getPrototypeOf(mIdtv)).apply(this, arguments));
+    function loIiq() {
+      babelHelpers.classCallCheck(this, loIiq);
+      return babelHelpers.possibleConstructorReturn(this, (loIiq.__proto__ || Object.getPrototypeOf(loIiq)).apply(this, arguments));
     }
 
-    return mIdtv;
+    return loIiq;
   }(Component);
 
   ;
 
-  Soy.register(mIdtv, templates);
+  Soy.register(loIiq, templates);
 
-  this['metal']['mIdtv'] = mIdtv;
+  this['metal']['loIiq'] = loIiq;
 }).call(this);
 'use strict';
 
@@ -31505,11 +31889,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace zQKAi.
+     * @fileoverview Templates in namespace sAQPQ.
      * @public
      */
 
-    goog.module('zQKAi.incrementaldom');
+    goog.module('sAQPQ.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -31558,22 +31942,22 @@ babelHelpers;
         ie_open('p');
         itext('Reading data from our storage takes only 3 lines of code.');
         ie_close('p');
-        $templateAlias2({ code: 'var data = WeDeploy.data(\'http://datademo.wedeploy.io\');\n\ndata.get(\'movies/star_wars_v\')\n.then(function(movie) {\n  console.log(movie);\n});', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .get(\'movies/star_wars_v\')\n    .then(function(movie) {\n        console.log(movie);\n    });', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
         itext('The response body is the stored JSON document:');
         ie_close('p');
-        $templateAlias2({ code: '{\n  "id": "star_wars_v",\n  "title": "Star Wars: Episode V - The Empire Strikes Back",\n  "year": 1980,\n  "rating": 8.8\n}', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: '{\n    "id": "star_wars_v",\n    "title": "Star Wars: Episode V - The Empire Strikes Back",\n    "year": 1980,\n    "rating": 8.8\n}', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
         itext('We can also get any field value using the full path:');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy\n.data(\'http://datademo.wedeploy.io\')\n.get(\'movies/star_wars_v/title\')\n.then(function(title) {\n  console.log(title);\n});', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .get(\'movies/star_wars_v/title\')\n    .then(function(title) {\n        console.log(title);\n    });', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
         itext('The full path returns the raw content in the response body:');
         ie_close('p');
         ie_open('p');
         itext('Star Wars: Episode V - The Empire Strikes Back Requesting the entire movies collection using curl -X "GET" "http://datademo.wedeploy.io/movies" results in the first 10 documents stored:');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {"id":"star_wars_i", "title":"Star Wars: Episode I - The Phantom Menace", "year":1999, "rating":6.5},\n  {"id":"star_wars_ii", "title":"Star Wars: Episode II - Attack of the Clones", "year":2002, "rating":6.7},\n  {"id":"star_wars_iii", "title":"Star Wars: Episode III - Revenge of the Sith", "year":2005, "rating":7.7},\n  {"id":"star_wars_iv", "title":"Star Wars: Episode IV - A New Hope", "year":1977, "rating":8.7},\n  {"id":"star_wars_v", "title":"Star Wars: Episode V - The Empire Strikes Back", "year":1980, "rating":8.8},\n  {"id":"star_wars_vi", "title":"Star Wars: Episode VI - Return of the Jedi", "year":1983, "rating":8.4},\n  {"id":"star_wars_vii", "title":"Star Wars: Episode VII - The Force Awakens", "year":2015}\n]', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {"id":"star_wars_i", "title":"Star Wars: Episode I - The Phantom Menace", "year":1999, "rating":6.5},\n    {"id":"star_wars_ii", "title":"Star Wars: Episode II - Attack of the Clones", "year":2002, "rating":6.7},\n    {"id":"star_wars_iii", "title":"Star Wars: Episode III - Revenge of the Sith", "year":2005, "rating":7.7},\n    {"id":"star_wars_iv", "title":"Star Wars: Episode IV - A New Hope", "year":1977, "rating":8.7},\n    {"id":"star_wars_v", "title":"Star Wars: Episode V - The Empire Strikes Back", "year":1980, "rating":8.8},\n    {"id":"star_wars_vi", "title":"Star Wars: Episode VI - Return of the Jedi", "year":1983, "rating":8.4},\n    {"id":"star_wars_vii", "title":"Star Wars: Episode VII - The Force Awakens", "year":2015}\n]', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
         ie_open('article', null, null, 'id', '2');
         ie_open('h2');
@@ -31582,11 +31966,11 @@ babelHelpers;
         ie_open('p');
         itext('The result is ordered by document id, as we can see in the list above. We can select the order of the results by passing a sort parameter, using the following code:');
         ie_close('p');
-        $templateAlias2({ code: 'var client = WeDeploy.data(\'http://datademo.wedeploy.io\');\n\nclient.orderBy(\'rating\', \'desc\')\n.get(\'movies\')\n.then(function(movies) {\n  console.log(movies);\n});', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .orderBy(\'rating\', \'desc\')\n    .get(\'movies\')\n    .then(function(movies) {\n        console.log(movies);\n    });', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
         itext('As expected, the result would be the following list:');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {"id":"star_wars_v","title":"Star Wars: Episode V - The Empire Strikes Back","year":1980,"rating":8.8},\n  {"id":"star_wars_iv","title":"Star Wars: Episode IV - A New Hope","year":1977,"rating":8.7},\n  {"id":"star_wars_vi","title":"Star Wars: Episode VI - Return of the Jedi","year":1983,"rating":8.4},\n  {"id":"star_wars_iii","title":"Star Wars: Episode III - Revenge of the Sith","year":2005,"rating":7.7},\n  {"id":"star_wars_ii","title":"Star Wars: Episode II - Attack of the Clones","year":2002,"rating":6.7},\n  {"id":"star_wars_i","title":"Star Wars: Episode I - The Phantom Menace","year":1999,"rating":6.5},\n  {"id":"star_wars_vii","title":"Star Wars: Episode VII - The Force Awakens","year":2015}\n]', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {"id":"star_wars_v","title":"Star Wars: Episode V - The Empire Strikes Back","year":1980,"rating":8.8},\n    {"id":"star_wars_iv","title":"Star Wars: Episode IV - A New Hope","year":1977,"rating":8.7},\n    {"id":"star_wars_vi","title":"Star Wars: Episode VI - Return of the Jedi","year":1983,"rating":8.4},\n    {"id":"star_wars_iii","title":"Star Wars: Episode III - Revenge of the Sith","year":2005,"rating":7.7},\n    {"id":"star_wars_ii","title":"Star Wars: Episode II - Attack of the Clones","year":2002,"rating":6.7},\n    {"id":"star_wars_i","title":"Star Wars: Episode I - The Phantom Menace","year":1999,"rating":6.5},\n    {"id":"star_wars_vii","title":"Star Wars: Episode VII - The Force Awakens","year":2015}\n]', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
         itext('Notice that because Episode VII has no rating (as it was not released yet), it\'s sorted as the last document.');
         ie_close('p');
@@ -31598,11 +31982,11 @@ babelHelpers;
         ie_open('p');
         itext('In addition to sorting the results, we can also apply filters using the following code:');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy.data(\'http://datademo.wedeploy.io\')\n.where(\'year\', \'<\', 2000)\n.or(\'rating\', \'>\', 8.5)\n.get(\'movies\')\n.then(function(movies) {\n  console.log(movies);\n});', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .where(\'year\', \'<\', 2000)\n    .or(\'rating\', \'>\', 8.5)\n    .get(\'movies\')\n    .then(function(movies) {\n        console.log(movies);\n    });', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
         itext('The following entries are the result of the above filters:');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {"id":"star_wars_iv","title":"Star Wars: Episode IV - A New Hope","year":1977,"rating":8.7},\n  {"id":"star_wars_v","title":"Star Wars: Episode V - The Empire Strikes Back","year":1980,"rating":8.8}\n]', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {"id":"star_wars_iv","title":"Star Wars: Episode IV - A New Hope","year":1977,"rating":8.7},\n    {"id":"star_wars_v","title":"Star Wars: Episode V - The Empire Strikes Back","year":1980,"rating":8.8}\n]', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
         ie_open('article', null, null, 'id', '4');
         ie_open('h2');
@@ -31611,11 +31995,11 @@ babelHelpers;
         ie_open('p');
         itext('We can also paginate the result using the \'limit\' and \'offset\' properties. Combining all the tools we\'ve learned so far, we can run a detailed query on our data:');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy.data(\'http://datademo.wedeploy.io\')\n.where(\'year\', \'>\', 2000)\n.orderBy(\'rating\')\n.limit(2)\n.offset(1)\n.get(\'movies\')\n.then(function(movies) {\n  console.log(movies);\n});', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy\n    .data(\'http://datademo.wedeploy.io\')\n    .where(\'year\', \'>\', 2000)\n    .orderBy(\'rating\')\n    .limit(2)\n    .offset(1)\n    .get(\'movies\')\n    .then(function(movies) {\n        console.log(movies);\n    });', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
         itext('Notice that filtering by year only returns episodes I, II, III, and VII. Applying the \'rating\' sort will give us this same order. We also limited the result to show only two documents and skip the first one. The final result is the following entries:');
         ie_close('p');
-        $templateAlias2({ code: '[\n  {"id":"star_wars_ii","title":"Star Wars: Episode II - Attack of the Clones","year":2002,"rating":6.7},\n  {"id":"star_wars_iii","title":"Star Wars: Episode III - Revenge of the Sith","year":2005,"rating":7.7}\n]', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: '[\n    {"id":"star_wars_ii","title":"Star Wars: Episode II - Attack of the Clones","year":2002,"rating":6.7},\n    {"id":"star_wars_iii","title":"Star Wars: Episode III - Revenge of the Sith","year":2005,"rating":7.7}\n]', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
         itext('We support all basic SQL-like operators (=, !=, >, >=, <, <=, ~), as well as \'any\' and \'none\' to filter elements in a list. We also give support for search operators, which we will see in more detail in the section Search Data.');
         ie_close('p');
@@ -31639,7 +32023,7 @@ babelHelpers;
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'zQKAi.render';
+      $render.soyTemplateName = 'sAQPQ.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -31648,20 +32032,20 @@ babelHelpers;
     return exports;
   });
 
-  var zQKAi = function (_Component) {
-    babelHelpers.inherits(zQKAi, _Component);
+  var sAQPQ = function (_Component) {
+    babelHelpers.inherits(sAQPQ, _Component);
 
-    function zQKAi() {
-      babelHelpers.classCallCheck(this, zQKAi);
-      return babelHelpers.possibleConstructorReturn(this, (zQKAi.__proto__ || Object.getPrototypeOf(zQKAi)).apply(this, arguments));
+    function sAQPQ() {
+      babelHelpers.classCallCheck(this, sAQPQ);
+      return babelHelpers.possibleConstructorReturn(this, (sAQPQ.__proto__ || Object.getPrototypeOf(sAQPQ)).apply(this, arguments));
     }
 
-    return zQKAi;
+    return sAQPQ;
   }(Component);
 
-  Soy.register(zQKAi, templates);
+  Soy.register(sAQPQ, templates);
   this['metalNamed']['retrieving-data'] = this['metalNamed']['retrieving-data'] || {};
-  this['metalNamed']['retrieving-data']['zQKAi'] = zQKAi;
+  this['metalNamed']['retrieving-data']['sAQPQ'] = sAQPQ;
   this['metalNamed']['retrieving-data']['templates'] = templates;
   this['metal']['retrieving-data'] = templates;
   /* jshint ignore:end */
@@ -31673,22 +32057,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['retrieving-data'];
 
-  var zQKAi = function (_Component) {
-    babelHelpers.inherits(zQKAi, _Component);
+  var sAQPQ = function (_Component) {
+    babelHelpers.inherits(sAQPQ, _Component);
 
-    function zQKAi() {
-      babelHelpers.classCallCheck(this, zQKAi);
-      return babelHelpers.possibleConstructorReturn(this, (zQKAi.__proto__ || Object.getPrototypeOf(zQKAi)).apply(this, arguments));
+    function sAQPQ() {
+      babelHelpers.classCallCheck(this, sAQPQ);
+      return babelHelpers.possibleConstructorReturn(this, (sAQPQ.__proto__ || Object.getPrototypeOf(sAQPQ)).apply(this, arguments));
     }
 
-    return zQKAi;
+    return sAQPQ;
   }(Component);
 
   ;
 
-  Soy.register(zQKAi, templates);
+  Soy.register(sAQPQ, templates);
 
-  this['metal']['zQKAi'] = zQKAi;
+  this['metal']['sAQPQ'] = sAQPQ;
 }).call(this);
 'use strict';
 
@@ -31704,11 +32088,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace SRvwZ.
+     * @fileoverview Templates in namespace Oesus.
      * @public
      */
 
-    goog.module('SRvwZ.incrementaldom');
+    goog.module('Oesus.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -31741,13 +32125,13 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1102 = function param1102() {
+      var param1172 = function param1172() {
         ie_open('h1');
         itext('Email');
         ie_close('h1');
         ie_open('h6');
-        var dyn64 = opt_data.page.description;
-        if (typeof dyn64 == 'function') dyn64();else if (dyn64 != null) itext(dyn64);
+        var dyn67 = opt_data.page.description;
+        if (typeof dyn67 == 'function') dyn67();else if (dyn67 != null) itext(dyn67);
         ie_close('h6');
         ie_open('div', null, null, 'class', 'guide-btn-cta');
         ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-email.wedeploy.io', 'target', '_blank');
@@ -31874,11 +32258,149 @@ babelHelpers;
         ie_close('li');
         $templateAlias2({ code: 'http://emaildemo.wedeploy.io', mode: 'xml' }, null, opt_ijData);
         ie_close('ol');
+        ie_close('article');
         ie_open('h2');
-        itext('Sending an email');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('That\'s it! Now we\'re ready to start ');
+        ie_open('a', null, null, 'href', '/docs/email/sending-email.html');
+        itext('sending emails to our users');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1172 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'Oesus.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var Oesus = function (_Component) {
+    babelHelpers.inherits(Oesus, _Component);
+
+    function Oesus() {
+      babelHelpers.classCallCheck(this, Oesus);
+      return babelHelpers.possibleConstructorReturn(this, (Oesus.__proto__ || Object.getPrototypeOf(Oesus)).apply(this, arguments));
+    }
+
+    return Oesus;
+  }(Component);
+
+  Soy.register(Oesus, templates);
+  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
+  this['metalNamed']['getting-started']['Oesus'] = Oesus;
+  this['metalNamed']['getting-started']['templates'] = templates;
+  this['metal']['getting-started'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['getting-started'];
+
+  var Oesus = function (_Component) {
+    babelHelpers.inherits(Oesus, _Component);
+
+    function Oesus() {
+      babelHelpers.classCallCheck(this, Oesus);
+      return babelHelpers.possibleConstructorReturn(this, (Oesus.__proto__ || Object.getPrototypeOf(Oesus)).apply(this, arguments));
+    }
+
+    return Oesus;
+  }(Component);
+
+  ;
+
+  Soy.register(Oesus, templates);
+
+  this['metal']['Oesus'] = Oesus;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from sending-email.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace OsDrq.
+     * @public
+     */
+
+    goog.module('OsDrq.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1224 = function param1224() {
+        ie_open('h1');
+        var dyn68 = opt_data.page.title;
+        if (typeof dyn68 == 'function') dyn68();else if (dyn68 != null) itext(dyn68);
+        ie_close('h1');
+        ie_open('h6');
+        var dyn69 = opt_data.page.description;
+        if (typeof dyn69 == 'function') dyn69();else if (dyn69 != null) itext(dyn69);
+        ie_close('h6');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Sending email');
         ie_close('h2');
         ie_open('p');
-        itext('Now that we have our container up and running, it\'s time to start sending some emails. We can use the API Client to facilitate the process of sending requests to WeDeploy.');
+        itext('We can use the ');
+        ie_open('a', null, null, 'href', 'docs/intro/using-the-api-client.html');
+        itext('API Client');
+        ie_close('a');
+        itext(' to facilitate the process of sending requests to WeDeploy.');
         ie_close('p');
         ie_open('p');
         itext('In order to send emails, we have to make a ');
@@ -31903,24 +32425,266 @@ babelHelpers;
         ie_close('code');
         itext(':');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy\n.url(\'http://<containerID>.<projectID>.wedeploy.io/emails\')\n.form(\'from\', \'from@domain.com\')\n.form(\'to\', \'to@domain.com\')\n.form(\'subject\', \'Hi there!\')\n.post()\n.then(function(response) {\n  console.log(\'Email ID:\', response.body());\n})\n.catch(function(error) {\n  // Some error has happened\n});', mode: 'javascript' }, null, opt_ijData);
-        ie_open('aside');
+        $templateAlias2({ code: 'WeDeploy\n    .url(\'http://<serviceID>.<projectID>.wedeploy.io/emails\')\n    .form(\'from\', \'from@domain.com\')\n    .form(\'to\', \'to@domain.com\')\n    .form(\'subject\', \'Hi there!\')\n    .post()\n    .then(function(response) {\n        console.log(\'Email ID:\', response.body());\n    })\n    .catch(function(error) {\n        // Some error has happened\n    });', mode: 'javascript' }, null, opt_ijData);
         ie_open('p');
-        itext('For the full list of parameters, check this container\'s README in the ');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.io/');
-        itext('Dashboard');
+        itext('As a result, we\'ll receive an email ID. This doesn\'t indicate that the email has already sent, it actually just means that it was added to the email queue. See ');
+        ie_open('a', null, null, 'href', '/docs/email/checking-status.html');
+        itext('"checking the email status"');
         ie_close('a');
-        itext('.');
+        itext(' to learn more about email status.');
         ie_close('p');
-        ie_close('aside');
-        ie_open('p');
-        itext('As a result, we\'ll receive an email ID. This doesn\'t indicate that the email was already sent, it actually says that it was added to the email queue. That\'s why we have another API to check the email status.');
-        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
         ie_open('h2');
-        itext('Checking an email status');
+        itext('Parameters');
         ie_close('h2');
         ie_open('p');
-        itext('In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. ');
+        itext('Here is a list of all the email parameters you can pass.');
+        ie_close('p');
+        ie_open('table');
+        ie_open('thead');
+        ie_open('tr');
+        ie_open('th');
+        itext('Parameter');
+        ie_close('th');
+        ie_open('th');
+        itext('Type');
+        ie_close('th');
+        ie_open('th');
+        itext('Description');
+        ie_close('th');
+        ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+        ie_open('tr');
+        ie_open('td');
+        itext('bcc');
+        ie_close('td');
+        ie_open('td');
+        itext('string');
+        ie_close('td');
+        ie_open('td');
+        itext('Bcc recipient email address. Multiple addresses should be defined in multiple parameters.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('cc');
+        ie_close('td');
+        ie_open('td');
+        itext('string');
+        ie_close('td');
+        ie_open('td');
+        itext('Cc recipient email address. Multiple addresses should be defined in multiple parameters.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('from');
+        ie_close('td');
+        ie_open('td');
+        itext('string');
+        ie_close('td');
+        ie_open('td');
+        itext('Sender email address.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('message');
+        ie_close('td');
+        ie_open('td');
+        itext('string');
+        ie_close('td');
+        ie_open('td');
+        itext('HTML content of your email message. Up to 5MB.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('priority');
+        ie_close('td');
+        ie_open('td');
+        itext('number');
+        ie_close('td');
+        ie_open('td');
+        itext('Used by email clients to define a message\'s importance. From 1 to 5 where \'1\' is highest and \'5\' is the lowest priority.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('replyTo');
+        ie_close('td');
+        ie_open('td');
+        itext('string');
+        ie_close('td');
+        ie_open('td');
+        itext('Append a reply-to address to your email message.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('subject');
+        ie_close('td');
+        ie_open('td');
+        itext('string');
+        ie_close('td');
+        ie_open('td');
+        itext('Subject of your email. Up to 1MB.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('to');
+        ie_close('td');
+        ie_open('td');
+        itext('string');
+        ie_close('td');
+        ie_open('td');
+        itext('Recipient email address. Multiple addresses should be defined in multiple parameters.');
+        ie_close('td');
+        ie_close('tr');
+        ie_close('tbody');
+        ie_close('table');
+        ie_close('article');
+        ie_open('h2');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('Now that you sent an email, you can learn ');
+        ie_open('a', null, null, 'href', '/docs/email/checking-status.html');
+        itext('how to check on it\'s status');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1224 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'OsDrq.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var OsDrq = function (_Component) {
+    babelHelpers.inherits(OsDrq, _Component);
+
+    function OsDrq() {
+      babelHelpers.classCallCheck(this, OsDrq);
+      return babelHelpers.possibleConstructorReturn(this, (OsDrq.__proto__ || Object.getPrototypeOf(OsDrq)).apply(this, arguments));
+    }
+
+    return OsDrq;
+  }(Component);
+
+  Soy.register(OsDrq, templates);
+  this['metalNamed']['sending-email'] = this['metalNamed']['sending-email'] || {};
+  this['metalNamed']['sending-email']['OsDrq'] = OsDrq;
+  this['metalNamed']['sending-email']['templates'] = templates;
+  this['metal']['sending-email'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['sending-email'];
+
+  var OsDrq = function (_Component) {
+    babelHelpers.inherits(OsDrq, _Component);
+
+    function OsDrq() {
+      babelHelpers.classCallCheck(this, OsDrq);
+      return babelHelpers.possibleConstructorReturn(this, (OsDrq.__proto__ || Object.getPrototypeOf(OsDrq)).apply(this, arguments));
+    }
+
+    return OsDrq;
+  }(Component);
+
+  ;
+
+  Soy.register(OsDrq, templates);
+
+  this['metal']['OsDrq'] = OsDrq;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from checking-status.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace PIbGM.
+     * @public
+     */
+
+    goog.module('PIbGM.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1154 = function param1154() {
+        ie_open('h1');
+        var dyn65 = opt_data.page.title;
+        if (typeof dyn65 == 'function') dyn65();else if (dyn65 != null) itext(dyn65);
+        ie_close('h1');
+        ie_open('h6');
+        var dyn66 = opt_data.page.description;
+        if (typeof dyn66 == 'function') dyn66();else if (dyn66 != null) itext(dyn66);
+        ie_close('h6');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Checking Status');
+        ie_close('h2');
+        ie_open('p');
+        itext('In order to check if an email was sent or not, we can use the email ID, e.g. ');
         ie_open('code');
         itext('123');
         ie_close('code');
@@ -31934,26 +32698,18 @@ babelHelpers;
         ie_close('code');
         itext('.');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy\n.url(\'http://<containerID>.<projectID>.wedeploy.io/emails/<emailID>/status\')\n.get()\n.then(function(response) {\n  console.log(\'Email status:\', response.body());\n})\n.catch(function(error) {\n  // Some error has happened\n});', mode: 'javascript' }, null, opt_ijData);
+        $templateAlias2({ code: 'WeDeploy\n    .url(\'http://<serviceID>.<projectID>.wedeploy.io/emails/<emailID>/status\')\n    .get()\n    .then(function(response) {\n        console.log(\'Email status:\', response.body());\n    })\n    .catch(function(error) {\n        // Some error has happened\n    });', mode: 'javascript' }, null, opt_ijData);
         ie_close('article');
-        ie_open('h2');
-        itext('What\'s next?');
-        ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('That\'s it! Now we\'re ready to start sending emails to our users.');
-        ie_close('li');
-        ie_close('ul');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
         ie_close('input');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1102 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1154 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'SRvwZ.render';
+      $render.soyTemplateName = 'PIbGM.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -31962,22 +32718,22 @@ babelHelpers;
     return exports;
   });
 
-  var SRvwZ = function (_Component) {
-    babelHelpers.inherits(SRvwZ, _Component);
+  var PIbGM = function (_Component) {
+    babelHelpers.inherits(PIbGM, _Component);
 
-    function SRvwZ() {
-      babelHelpers.classCallCheck(this, SRvwZ);
-      return babelHelpers.possibleConstructorReturn(this, (SRvwZ.__proto__ || Object.getPrototypeOf(SRvwZ)).apply(this, arguments));
+    function PIbGM() {
+      babelHelpers.classCallCheck(this, PIbGM);
+      return babelHelpers.possibleConstructorReturn(this, (PIbGM.__proto__ || Object.getPrototypeOf(PIbGM)).apply(this, arguments));
     }
 
-    return SRvwZ;
+    return PIbGM;
   }(Component);
 
-  Soy.register(SRvwZ, templates);
-  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['SRvwZ'] = SRvwZ;
-  this['metalNamed']['getting-started']['templates'] = templates;
-  this['metal']['getting-started'] = templates;
+  Soy.register(PIbGM, templates);
+  this['metalNamed']['checking-status'] = this['metalNamed']['checking-status'] || {};
+  this['metalNamed']['checking-status']['PIbGM'] = PIbGM;
+  this['metalNamed']['checking-status']['templates'] = templates;
+  this['metal']['checking-status'] = templates;
   /* jshint ignore:end */
 }).call(this);
 'use strict';
@@ -31985,24 +32741,24 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['getting-started'];
+  var templates = this['metal']['checking-status'];
 
-  var SRvwZ = function (_Component) {
-    babelHelpers.inherits(SRvwZ, _Component);
+  var PIbGM = function (_Component) {
+    babelHelpers.inherits(PIbGM, _Component);
 
-    function SRvwZ() {
-      babelHelpers.classCallCheck(this, SRvwZ);
-      return babelHelpers.possibleConstructorReturn(this, (SRvwZ.__proto__ || Object.getPrototypeOf(SRvwZ)).apply(this, arguments));
+    function PIbGM() {
+      babelHelpers.classCallCheck(this, PIbGM);
+      return babelHelpers.possibleConstructorReturn(this, (PIbGM.__proto__ || Object.getPrototypeOf(PIbGM)).apply(this, arguments));
     }
 
-    return SRvwZ;
+    return PIbGM;
   }(Component);
 
   ;
 
-  Soy.register(SRvwZ, templates);
+  Soy.register(PIbGM, templates);
 
-  this['metal']['SRvwZ'] = SRvwZ;
+  this['metal']['PIbGM'] = PIbGM;
 }).call(this);
 'use strict';
 
@@ -32139,15 +32895,189 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from getting-started.soy.
+    // This file was automatically generated from what-why-and-how.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace QGdBC.
+     * @fileoverview Templates in namespace AHqel.
      * @public
      */
 
-    goog.module('QGdBC.incrementaldom');
+    goog.module('AHqel.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1444 = function param1444() {
+        ie_open('h1');
+        var dyn84 = opt_data.page.title;
+        if (typeof dyn84 == 'function') dyn84();else if (dyn84 != null) itext(dyn84);
+        ie_close('h1');
+        ie_open('h6');
+        var dyn85 = opt_data.page.description;
+        if (typeof dyn85 == 'function') dyn85();else if (dyn85 != null) itext(dyn85);
+        ie_close('h6');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('What\'s WeDeploy?');
+        ie_close('h2');
+        ie_open('p');
+        ie_open('em');
+        itext('WeDeploy');
+        ie_close('em');
+        itext(' gives you access to intuitive APIs that can help you create modern apps faster.');
+        ie_close('p');
+        ie_open('p');
+        itext('From simple applications to a full micro service architecture, choose between dozens of languages, frameworks, or entire application stacks and launch production-ready environments in a matter of minutes.');
+        ie_close('p');
+        ie_open('p');
+        itext('With WeDeploy, you are able to quickly and efficiently respond to user demands:');
+        ie_close('p');
+        ie_open('ul');
+        ie_open('li');
+        itext('Deploy your applications quickly.');
+        ie_close('li');
+        ie_open('li');
+        itext('Automatically distribute incoming traffic across multiple instances.');
+        ie_close('li');
+        ie_open('li');
+        itext('Authenticate users with only a few lines of code.');
+        ie_close('li');
+        ie_open('li');
+        itext('Store data securely and consume information in real-time.');
+        ie_close('li');
+        ie_open('li');
+        itext('Release applications with zero downtime.');
+        ie_close('li');
+        ie_open('li');
+        itext('Build and deploy micro services.');
+        ie_close('li');
+        ie_close('ul');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Why should I use WeDeploy?');
+        ie_close('h2');
+        ie_open('p');
+        itext('When building highly scalable applications there are many things you need to consider: performance bottlenecks, database resiliency and scalability, authentication, authorization, and static hosting to name a few. WeDeploy is a new dynamic Liferay initiative, allowing you to handle all of your back-end challenges in one place. Focus on creating amazing user experiences and WeDeploy will take care of the rest.');
+        ie_close('p');
+        ie_open('p');
+        itext('This is why WeDeploy was also designed to serve as a platform for building a manageable ecosystem of components and tools to make it easier to deploy and scale any application.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '3');
+        ie_open('h2');
+        itext('How will WeDeploy help me to deploy from simple to advanced applications?');
+        ie_close('h2');
+        ie_open('p');
+        itext('From a simple application to an advanced group of microservices, WeDeploy will provide the tools to manage the visibility, scale, and DNS for your application. WeDeploy provides an infrastructure to deploy micro-services in a managed cloud infrastructure.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1444 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'AHqel.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var AHqel = function (_Component) {
+    babelHelpers.inherits(AHqel, _Component);
+
+    function AHqel() {
+      babelHelpers.classCallCheck(this, AHqel);
+      return babelHelpers.possibleConstructorReturn(this, (AHqel.__proto__ || Object.getPrototypeOf(AHqel)).apply(this, arguments));
+    }
+
+    return AHqel;
+  }(Component);
+
+  Soy.register(AHqel, templates);
+  this['metalNamed']['what-why-and-how'] = this['metalNamed']['what-why-and-how'] || {};
+  this['metalNamed']['what-why-and-how']['AHqel'] = AHqel;
+  this['metalNamed']['what-why-and-how']['templates'] = templates;
+  this['metal']['what-why-and-how'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['what-why-and-how'];
+
+  var AHqel = function (_Component) {
+    babelHelpers.inherits(AHqel, _Component);
+
+    function AHqel() {
+      babelHelpers.classCallCheck(this, AHqel);
+      return babelHelpers.possibleConstructorReturn(this, (AHqel.__proto__ || Object.getPrototypeOf(AHqel)).apply(this, arguments));
+    }
+
+    return AHqel;
+  }(Component);
+
+  ;
+
+  Soy.register(AHqel, templates);
+
+  this['metal']['AHqel'] = AHqel;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from configuration-files.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace FicTO.
+     * @public
+     */
+
+    goog.module('FicTO.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -32180,175 +33110,224 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1164 = function param1164() {
+      var param1242 = function param1242() {
         ie_open('h1');
-        itext('Hosting');
+        var dyn70 = opt_data.page.title;
+        if (typeof dyn70 == 'function') dyn70();else if (dyn70 != null) itext(dyn70);
         ie_close('h1');
         ie_open('h6');
-        var dyn65 = opt_data.page.description;
-        if (typeof dyn65 == 'function') dyn65();else if (dyn65 != null) itext(dyn65);
+        var dyn71 = opt_data.page.description;
+        if (typeof dyn71 == 'function') dyn71();else if (dyn71 != null) itext(dyn71);
         ie_close('h6');
-        ie_open('div', null, null, 'class', 'guide-btn-cta');
-        ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-hosting.wedeploy.io', 'target', '_blank');
-        ie_void('span', null, null, 'class', 'icon-16-external');
-        itext('See Live Demo');
-        ie_close('a');
-        ie_close('div');
-        ie_open('div', null, null, 'class', 'guide-aux-cta');
-        itext('or read the ');
-        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-hosting', 'target', '_blank');
-        itext('source code');
-        ie_close('a');
-        itext('.');
-        ie_close('div');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
-        itext('Install dependencies');
+        itext('Project file reference');
         ie_close('h2');
         ie_open('p');
-        itext('This section assumes that you already have the ');
-        ie_open('strong');
-        itext('WeDeploy CLI');
-        ie_close('strong');
-        itext(' installed and ');
-        ie_open('strong');
-        itext('Docker');
-        ie_close('strong');
-        itext(' running. Make sure to ');
-        ie_open('a', null, null, 'href', '/docs/intro/using-the-command-line.html');
-        itext('visit the installation guide');
-        ie_close('a');
-        itext(' if you need help setting that up.');
+        itext('The ');
+        ie_open('code');
+        itext('project.json');
+        ie_close('code');
+        itext(' file is a JSON file defining the project attributes. The default path for a ');
+        ie_open('code');
+        itext('project.json');
+        ie_close('code');
+        itext(' is ');
+        ie_open('code');
+        itext('./project.json');
+        ie_close('code');
+        itext('.');
         ie_close('p');
+        ie_open('p');
+        itext('WeDeploy uses this json file to reference to project in case it\'s already created. If the project does not exist, it creates a new project for you.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('Supported fields:');
+        ie_close('strong');
+        ie_close('p');
+        ie_open('table');
+        ie_open('thead');
+        ie_open('tr');
+        ie_open('th');
+        itext('Field');
+        ie_close('th');
+        ie_open('th');
+        itext('Description');
+        ie_close('th');
+        ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+        ie_open('tr');
+        ie_open('td');
+        itext('id');
+        ie_close('td');
+        ie_open('td');
+        itext('Project unique id.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('name');
+        ie_close('td');
+        ie_open('td');
+        itext('Project name.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('homeContainer');
+        ie_close('td');
+        ie_open('td');
+        itext('Service that will be receiving the requests in the base custom domain.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('customDomains');
+        ie_close('td');
+        ie_open('td');
+        itext('Custom domains used instead the domain generated by wedeploy.');
+        ie_close('td');
+        ie_close('tr');
+        ie_close('tbody');
+        ie_close('table');
+        ie_open('p');
+        ie_open('strong');
+        itext('Validations:');
+        ie_close('strong');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('id');
+        ie_close('strong');
+        itext(': The id must be unique, and you may get an error message in case someone else is already using this project id.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('customDomains');
+        ie_close('strong');
+        itext(': The custom domain must be unique, and you may get an error message in case someone else is already using this custom domain.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('Usage:');
+        ie_close('strong');
+        ie_close('p');
+        ie_open('p');
+        ie_open('code');
+        itext('project.json');
+        ie_close('code');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "id": "projectexample",\n    "homeContainer": "ui",\n    "customDomains": ["projectexample.wedeploy.com"]\n}', mode: 'application/json' }, null, opt_ijData);
         ie_close('article');
         ie_open('article', null, null, 'id', '2');
         ie_open('h2');
-        itext('Running locally');
+        itext('Service file reference');
         ie_close('h2');
         ie_open('p');
-        itext('WeDeploy\u2122 provides a way to run your project locally using a sandbox system.');
-        ie_close('p');
-        ie_open('ol');
-        ie_open('li');
-        itext('Start local infrastructure:');
-        ie_close('li');
-        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Clone this repository:');
-        ie_close('li');
-        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-hosting.git\ncd boilerplate-hosting', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Link this container with the local infrastructure:');
-        ie_close('li');
-        $templateAlias2({ code: 'we link', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Now your container is ready to be used:');
-        ie_close('li');
-        $templateAlias2({ code: 'http://hosting.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
-        ie_close('ol');
-        ie_open('p');
-        itext('Inside this project folder, you can find a ');
+        itext('The ');
         ie_open('code');
         itext('container.json');
         ie_close('code');
-        itext(' with the container ID used in this case: ');
+        itext(' file is a JSON file defining the service attributes and configurations. The default path for a ');
         ie_open('code');
-        itext('hosting');
+        itext('container.json');
+        ie_close('code');
+        itext(' is ');
+        ie_open('code');
+        itext('./<service_folder>/container.json');
         ie_close('code');
         itext('.');
         ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '3');
-        ie_open('h2');
-        itext('Deploying to the cloud');
-        ie_close('h2');
-        ie_open('ol');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-hosting/fork');
-        itext('Fork this repository');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Go to the ');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
-        itext('Dashboard');
-        ie_close('a');
-        itext(' and create a project.');
-        ie_close('li');
-        ie_open('li');
-        itext('In the sidebar, click on ');
-        ie_open('strong');
-        itext('Deployment');
-        ie_close('strong');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Using your local machine, clone your Github fork:');
-        ie_close('li');
-        $templateAlias2({ code: 'git clone https://github.com/<username>/boilerplate-hosting', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Get into the folder: ');
-        ie_open('code');
-        itext('cd boilerplate-hosting');
-        ie_close('code');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Using the content on ');
-        ie_open('strong');
-        itext('Deployment');
-        ie_close('strong');
-        itext(' page. Add the WeDeploy remote url:');
-        ie_close('li');
-        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<projectID>.git', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Push your data to wedeploy git server: ');
-        ie_open('code');
-        itext('git push wedeploy master');
-        ie_close('code');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Once you see it in the Dashboard, your container will be ready to be used.');
-        ie_close('li');
-        $templateAlias2({ code: 'http://hosting.<projectID>.wedeploy.io', mode: 'xml' }, null, opt_ijData);
-        ie_close('ol');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '4');
-        ie_open('h2');
-        itext('Error pages');
-        ie_close('h2');
         ie_open('p');
-        itext('Files put into the special directory ');
+        itext('WeDeploy uses this json file to reference to service in case it\'s already created. If the service does not exist, it creates a new service for you.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('Supported fields:');
+        ie_close('strong');
+        ie_close('p');
+        ie_open('table');
+        ie_open('thead');
+        ie_open('tr');
+        ie_open('th');
+        itext('Field');
+        ie_close('th');
+        ie_open('th');
+        itext('Description');
+        ie_close('th');
+        ie_close('tr');
+        ie_close('thead');
+        ie_open('tbody');
+        ie_open('tr');
+        ie_open('td');
+        itext('id');
+        ie_close('td');
+        ie_open('td');
+        itext('Service unique id.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('type');
+        ie_close('td');
+        ie_open('td');
+        itext('Service stack/image type.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('hooks');
+        ie_close('td');
+        ie_open('td');
+        itext('Callbacks that should be executed in the service lifecycle. Currently allowed: ');
         ie_open('code');
-        itext('/_error');
-        ie_close('code');
-        itext(' are mapped as the error files to be served in case of an error. They must take the form of ');
-        ie_open('code');
-        itext('<error code>.html');
+        itext('build');
         ie_close('code');
         itext('.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('env');
+        ie_close('td');
+        ie_open('td');
+        itext('Environment variables to be exported in the service lifecycle.');
+        ie_close('td');
+        ie_close('tr');
+        ie_open('tr');
+        ie_open('td');
+        itext('description');
+        ie_close('td');
+        ie_open('td');
+        itext('Short information about the service.');
+        ie_close('td');
+        ie_close('tr');
+        ie_close('tbody');
+        ie_close('table');
+        ie_open('p');
+        ie_open('strong');
+        itext('Usage:');
+        ie_close('strong');
         ie_close('p');
+        ie_open('p');
+        ie_open('code');
+        itext('container.json');
+        ie_close('code');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "id": "conqueror",\n    "type": "wedeploy/java",\n    "description": "WeDeploy Service Example",\n    "hooks": {\n        "build": "./gradlew clean build installDist -x test"\n    },\n    "env": {\n        "WEDEPLOY_USER": "user"\n    }\n}', mode: 'application/json' }, null, opt_ijData);
         ie_close('article');
-        ie_open('h2');
-        itext('What\'s next?');
-        ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('Now you can start adding new static files and grow your application.');
-        ie_close('li');
-        ie_close('ul');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
         ie_close('input');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1164 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1242 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'QGdBC.render';
+      $render.soyTemplateName = 'FicTO.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -32357,22 +33336,22 @@ babelHelpers;
     return exports;
   });
 
-  var QGdBC = function (_Component) {
-    babelHelpers.inherits(QGdBC, _Component);
+  var FicTO = function (_Component) {
+    babelHelpers.inherits(FicTO, _Component);
 
-    function QGdBC() {
-      babelHelpers.classCallCheck(this, QGdBC);
-      return babelHelpers.possibleConstructorReturn(this, (QGdBC.__proto__ || Object.getPrototypeOf(QGdBC)).apply(this, arguments));
+    function FicTO() {
+      babelHelpers.classCallCheck(this, FicTO);
+      return babelHelpers.possibleConstructorReturn(this, (FicTO.__proto__ || Object.getPrototypeOf(FicTO)).apply(this, arguments));
     }
 
-    return QGdBC;
+    return FicTO;
   }(Component);
 
-  Soy.register(QGdBC, templates);
-  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['QGdBC'] = QGdBC;
-  this['metalNamed']['getting-started']['templates'] = templates;
-  this['metal']['getting-started'] = templates;
+  Soy.register(FicTO, templates);
+  this['metalNamed']['configuration-files'] = this['metalNamed']['configuration-files'] || {};
+  this['metalNamed']['configuration-files']['FicTO'] = FicTO;
+  this['metalNamed']['configuration-files']['templates'] = templates;
+  this['metal']['configuration-files'] = templates;
   /* jshint ignore:end */
 }).call(this);
 'use strict';
@@ -32380,24 +33359,24 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['getting-started'];
+  var templates = this['metal']['configuration-files'];
 
-  var QGdBC = function (_Component) {
-    babelHelpers.inherits(QGdBC, _Component);
+  var FicTO = function (_Component) {
+    babelHelpers.inherits(FicTO, _Component);
 
-    function QGdBC() {
-      babelHelpers.classCallCheck(this, QGdBC);
-      return babelHelpers.possibleConstructorReturn(this, (QGdBC.__proto__ || Object.getPrototypeOf(QGdBC)).apply(this, arguments));
+    function FicTO() {
+      babelHelpers.classCallCheck(this, FicTO);
+      return babelHelpers.possibleConstructorReturn(this, (FicTO.__proto__ || Object.getPrototypeOf(FicTO)).apply(this, arguments));
     }
 
-    return QGdBC;
+    return FicTO;
   }(Component);
 
   ;
 
-  Soy.register(QGdBC, templates);
+  Soy.register(FicTO, templates);
 
-  this['metal']['QGdBC'] = QGdBC;
+  this['metal']['FicTO'] = FicTO;
 }).call(this);
 'use strict';
 
@@ -32409,15 +33388,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from index.soy.
+    // This file was automatically generated from using-the-command-line.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace pageDocsHostingIndex.
+     * @fileoverview Templates in namespace GLVAM.
      * @public
      */
 
-    goog.module('pageDocsHostingIndex.incrementaldom');
+    goog.module('GLVAM.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -32438,6 +33417,10 @@ babelHelpers;
     var itext = IncrementalDom.text;
     var iattr = IncrementalDom.attr;
 
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
     /**
      * @param {Object<string, *>=} opt_data
      * @param {(null|undefined)=} opt_ignored
@@ -32445,59 +33428,303 @@ babelHelpers;
      * @return {void}
      * @suppress {checkTypes}
      */
-    function $render(opt_data, opt_ignored, opt_ijData) {}
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1328 = function param1328() {
+        ie_open('h1');
+        var dyn80 = opt_data.page.title;
+        if (typeof dyn80 == 'function') dyn80();else if (dyn80 != null) itext(dyn80);
+        ie_close('h1');
+        ie_open('h6');
+        var dyn81 = opt_data.page.description;
+        if (typeof dyn81 == 'function') dyn81();else if (dyn81 != null) itext(dyn81);
+        ie_close('h6');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Dependencies');
+        ie_close('h2');
+        ie_open('p');
+        itext('The following external software dependencies are necessary to correctly run some commands:');
+        ie_close('p');
+        ie_open('p');
+        itext('a) ');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/');
+        itext('Git');
+        ie_close('a');
+        itext(' (download for ');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/download/linux');
+        itext('Linux');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/download/mac');
+        itext('macOS');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/download/win');
+        itext('Windows');
+        ie_close('a');
+        itext(')');
+        ie_close('p');
+        ie_open('p');
+        itext('b) ');
+        ie_open('a', null, null, 'href', 'https://www.docker.com/');
+        itext('Docker');
+        ie_close('a');
+        itext(' (download for ');
+        ie_open('a', null, null, 'href', 'https://docs.docker.com/engine/installation/linux/');
+        itext('Linux');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'https://download.docker.com/mac/stable/Docker.dmg');
+        itext('macOS');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'https://download.docker.com/win/stable/InstallDocker.msi');
+        itext('Windows');
+        ie_close('a');
+        itext(')');
+        ie_close('p');
+        ie_open('p');
+        itext('Docker version 1.12.0 or later is required. If you use macOS, install the Docker for Mac. If you use Windows, please install Docker for Windows. Docker Toolbox, still available for earlier Mac and Windows systems is not supported.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Installing');
+        ie_close('h2');
+        ie_open('p');
+        itext('If you use a Unix-like system such as macOS or Linux open your Terminal and run:');
+        ie_close('p');
+        $templateAlias2({ code: 'curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('If you use Windows, you probably want the ');
+        ie_open('a', null, null, 'href', 'https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.msi');
+        itext('Windows amd64 installer');
+        ie_close('a');
+        itext('. For other systems, check a list of ');
+        ie_open('a', null, null, 'href', 'https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.zip');
+        itext('all builds available');
+        ie_close('a');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        ie_open('strong');
+        itext('Check your docker configuration:');
+        ie_close('strong');
+        itext(' docker comes with a 2.0GB maximum memory limit by default on macOS and Windows. You should increase this limit to at least 4.0GB.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '3');
+        ie_open('h2');
+        itext('Creating projects locally');
+        ie_close('h2');
+        ie_open('p');
+        itext('You are able to organize your services by project. Inside each project you can create services (called containers here), like static hosting, data API, Auth service, etc.');
+        ie_close('p');
+        ie_open('p');
+        itext('Use ');
+        ie_open('code');
+        itext('we create');
+        ie_close('code');
+        itext(' to create projects and containers. You can create a project anywhere on your machine. Containers might be created one directory above a project for your convenience.');
+        ie_close('p');
+        $templateAlias2({ code: 'Usage:\n    we create --project <projectID> --container <serviceID>', mode: 'xml' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '4');
+        ie_open('h2');
+        itext('Running projects locally');
+        ie_close('h2');
+        ie_open('p');
+        itext('For this demo we are going to use the hosting boilerplate.');
+        ie_close('p');
+        ie_open('ol');
+        ie_open('li');
+        itext('Start local infrastructure:');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
+        ie_open('ol', null, null, 'start', '2');
+        ie_open('li');
+        itext('Clone this repository:');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-hosting.git\ncd boilerplate-hosting', mode: 'xml' }, null, opt_ijData);
+        ie_open('ol', null, null, 'start', '3');
+        ie_open('li');
+        itext('Link this container to a new project named demo:');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: 'we link --project demo', mode: 'xml' }, null, opt_ijData);
+        ie_open('ol', null, null, 'start', '4');
+        ie_open('li');
+        itext('Now your container should be accessible from ');
+        ie_open('a', null, null, 'href', 'http://hosting.demo.wedeploy.me');
+        itext('http://hosting.demo.wedeploy.me');
+        ie_close('a');
+        ie_close('li');
+        ie_close('ol');
+        ie_open('p');
+        ie_open('em');
+        itext('On the first first time it might take a few minutes while downloading the hosting image on the background.');
+        ie_close('em');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '5');
+        ie_open('h2');
+        itext('Remotes and friendly host style');
+        ie_close('h2');
+        ie_open('p');
+        itext('Many commands requires ');
+        ie_open('code');
+        itext('--project');
+        ie_close('code');
+        itext(', ');
+        ie_open('code');
+        itext('--container');
+        ie_close('code');
+        itext(', or ');
+        ie_open('code');
+        itext('--remote');
+        ie_close('code');
+        itext(' flags. You can use the following patterns for passing these values:');
+        ie_close('p');
+        $templateAlias2({ code: 'we <command> --project <projectID> --container <serviceID>', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('and the friendly host style:');
+        ie_close('p');
+        $templateAlias2({ code: 'we <command> <serviceID>.<projectID>.<remote address>', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('or even');
+        ie_close('p');
+        $templateAlias2({ code: 'we <command> <serviceID>.<projectID> --remote <remote>', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('For the local cloud, just don\'t add a ');
+        ie_open('code');
+        itext('--remote');
+        ie_close('code');
+        itext(' or ');
+        ie_open('code');
+        itext('<remote address>');
+        ie_close('code');
+        itext(' value like in:');
+        ie_close('p');
+        $templateAlias2({ code: 'we log public.chat', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('or to list all logs by containers on the project "chat":');
+        ie_close('p');
+        $templateAlias2({ code: 'we log chat', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('Remotes can be managed in a similar fashion as git\'s remote command:');
+        ie_close('p');
+        $templateAlias2({ code: '$ we remote -v\nwedeploy        wedeploy.io', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('If you know how to use ');
+        ie_open('code');
+        itext('git remote');
+        ie_close('code');
+        itext(' you already know how to use ');
+        ie_open('code');
+        itext('we remote');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        itext('For your convenience we include the wedeploy cloud remote by default once you log in on the CLI app with ');
+        ie_open('code');
+        itext('we login');
+        ie_close('code');
+        itext(' (requested when necessary).');
+        ie_close('p');
+        ie_open('p');
+        itext('All commands that support ');
+        ie_open('code');
+        itext('--project');
+        ie_close('code');
+        itext(', ');
+        ie_open('code');
+        itext('--container');
+        ie_close('code');
+        itext(', and / or ');
+        ie_open('code');
+        itext('--remote');
+        ie_close('code');
+        itext(' support this host style as well.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '6');
+        ie_open('h2');
+        itext('Fetching project and container logs');
+        ie_close('h2');
+        ie_open('p');
+        itext('You can fetch projects and container logs with');
+        ie_close('p');
+        $templateAlias2({ code: 'we log --project <projectID> --container <serviceID>', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('or with a friendly host style like');
+        ie_close('p');
+        $templateAlias2({ code: 'we log <serviceID>.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
+        ie_open('h3');
+        itext('Examples:');
+        ie_close('h3');
+        ie_open('p');
+        itext('See the logs for the last 20min for the data container on the wechat project:');
+        ie_close('p');
+        $templateAlias2({ code: 'we log --project wechat --container data --since 20min', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('Watch for logs on the hosting container on the demo project:');
+        ie_close('p');
+        $templateAlias2({ code: 'we log hosting.demo.wedeploy.me --watch', mode: 'xml' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('article', null, null, 'id', '7');
+        ie_open('h2');
+        itext('Listing projects and containers');
+        ie_close('h2');
+        ie_open('p');
+        itext('Watch the listing of all projects running locally:');
+        ie_close('p');
+        $templateAlias2({ code: 'we list --watch', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('List all your projects running on the WeDeploy cloud:');
+        ie_close('p');
+        $templateAlias2({ code: 'we list wedeploy.io', mode: 'xml' }, null, opt_ijData);
+        ie_open('p');
+        itext('or');
+        ie_close('p');
+        $templateAlias2({ code: 'we list --remote wedeploy', mode: 'xml' }, null, opt_ijData);
+        ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1328 }, opt_data), null, opt_ijData);
+    }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageDocsHostingIndex.render';
+      $render.soyTemplateName = 'GLVAM.render';
     }
 
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $soyweb(opt_data, opt_ignored, opt_ijData) {
-      ie_open('!DOCTYPE', null, null, 'html', '');
-      ie_open('html', null, null, 'lang', 'en');
-      ie_open('head');
-      ie_open('meta', null, null, 'charset', 'UTF-8');
-      ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
-      ie_close('meta');
-      ie_close('head');
-      ie_close('html');
-    }
-    exports.soyweb = $soyweb;
-    if (goog.DEBUG) {
-      $soyweb.soyTemplateName = 'pageDocsHostingIndex.soyweb';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.soyweb.params = ["page"];
-    exports.soyweb.types = { "page": "any" };
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
     templates = exports;
     return exports;
   });
 
-  var pageDocsHostingIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsHostingIndex, _Component);
+  var GLVAM = function (_Component) {
+    babelHelpers.inherits(GLVAM, _Component);
 
-    function pageDocsHostingIndex() {
-      babelHelpers.classCallCheck(this, pageDocsHostingIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsHostingIndex.__proto__ || Object.getPrototypeOf(pageDocsHostingIndex)).apply(this, arguments));
+    function GLVAM() {
+      babelHelpers.classCallCheck(this, GLVAM);
+      return babelHelpers.possibleConstructorReturn(this, (GLVAM.__proto__ || Object.getPrototypeOf(GLVAM)).apply(this, arguments));
     }
 
-    return pageDocsHostingIndex;
+    return GLVAM;
   }(Component);
 
-  Soy.register(pageDocsHostingIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageDocsHostingIndex'] = pageDocsHostingIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
+  Soy.register(GLVAM, templates);
+  this['metalNamed']['using-the-command-line'] = this['metalNamed']['using-the-command-line'] || {};
+  this['metalNamed']['using-the-command-line']['GLVAM'] = GLVAM;
+  this['metalNamed']['using-the-command-line']['templates'] = templates;
+  this['metal']['using-the-command-line'] = templates;
   /* jshint ignore:end */
 }).call(this);
 'use strict';
@@ -32505,24 +33732,24 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['index'];
+  var templates = this['metal']['using-the-command-line'];
 
-  var pageDocsHostingIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsHostingIndex, _Component);
+  var GLVAM = function (_Component) {
+    babelHelpers.inherits(GLVAM, _Component);
 
-    function pageDocsHostingIndex() {
-      babelHelpers.classCallCheck(this, pageDocsHostingIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsHostingIndex.__proto__ || Object.getPrototypeOf(pageDocsHostingIndex)).apply(this, arguments));
+    function GLVAM() {
+      babelHelpers.classCallCheck(this, GLVAM);
+      return babelHelpers.possibleConstructorReturn(this, (GLVAM.__proto__ || Object.getPrototypeOf(GLVAM)).apply(this, arguments));
     }
 
-    return pageDocsHostingIndex;
+    return GLVAM;
   }(Component);
 
   ;
 
-  Soy.register(pageDocsHostingIndex, templates);
+  Soy.register(GLVAM, templates);
 
-  this['metal']['pageDocsHostingIndex'] = pageDocsHostingIndex;
+  this['metal']['GLVAM'] = GLVAM;
 }).call(this);
 'use strict';
 
@@ -32534,15 +33761,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from custom-domains.soy.
+    // This file was automatically generated from feature-overview.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace BOgnd.
+     * @fileoverview Templates in namespace JzLCG.
      * @public
      */
 
-    goog.module('BOgnd.incrementaldom');
+    goog.module('JzLCG.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -32573,14 +33800,209 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1239 = function param1239() {
+      var param1291 = function param1291() {
         ie_open('h1');
-        var dyn68 = opt_data.page.title;
-        if (typeof dyn68 == 'function') dyn68();else if (dyn68 != null) itext(dyn68);
+        var dyn76 = opt_data.page.title;
+        if (typeof dyn76 == 'function') dyn76();else if (dyn76 != null) itext(dyn76);
         ie_close('h1');
         ie_open('h6');
-        var dyn69 = opt_data.page.description;
-        if (typeof dyn69 == 'function') dyn69();else if (dyn69 != null) itext(dyn69);
+        var dyn77 = opt_data.page.description;
+        if (typeof dyn77 == 'function') dyn77();else if (dyn77 != null) itext(dyn77);
+        ie_close('h6');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Zero downtime upgrades');
+        ie_close('h2');
+        ie_open('p');
+        itext('WeDeploy provides automation for updating services and the systems with zero downtime.');
+        ie_close('p');
+        ie_open('p');
+        itext('WeDeploy services can all be updated with rolling, blue-green, or canary deployment patterns. If the update fails, roll it back with a single click. These powerful tools are critical for minimizing downtime and user interruption.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Service discovery and load balancing');
+        ie_close('h2');
+        ie_open('p');
+        itext('WeDeploy includes several options for automating service discovery and load balancing.');
+        ie_close('p');
+        ie_open('p');
+        itext('Distributed services create distributed problems, but you don\u2019t have to solve them all yourself. WeDeploy includes automatic DNS endpoint generation, an API for service lookup, transport layer (L4) virtual IP proxying for high speed internal communication, and application layer (L7) load balancing for external-facing services.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '3');
+        ie_open('h2');
+        itext('Service visibility');
+        ie_close('h2');
+        ie_open('p');
+        itext('WeDeploy provides an option for you to specify whether your service is going to be public or private for public access.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '4');
+        ie_open('h2');
+        itext('High availability');
+        ie_close('h2');
+        ie_open('p');
+        itext('WeDeploy is highly available and makes it easy for your services to be highly available too.');
+        ie_close('p');
+        ie_open('p');
+        itext('Mission-critical services require health monitoring, self-healing, and fault tolerance both for themselves and the platform and infrastructure they run on. WeDeploy gives you multiple layers of protection.');
+        ie_close('p');
+        ie_open('p');
+        itext('To achieve self-healing, WeDeploy services are monitored and restarted when they fail. Even legacy services that don\u2019t support distribution or replication can be automatically restarted to maximize uptime and reduce service interruption.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '5');
+        ie_open('h2');
+        itext('Elastic scalability');
+        ie_close('h2');
+        ie_open('p');
+        itext('WeDeploy gives you the power to easily scale your services up and down with the turn of a dial.');
+        ie_close('p');
+        ie_open('p');
+        itext('Horizontal scaling is trivial in Docker Swarm, as long as your service supports it. You can change the number of service instances at any time. WeDeploy even lets you autoscale the number of instances based on session count, using the WeDeploy Load Balancer.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '6');
+        ie_open('h2');
+        itext('User interfaces');
+        ie_close('h2');
+        ie_open('p');
+        itext('WeDeploy offers two interfaces to make it easy to monitor and manage the projects and its services.');
+        ie_close('p');
+        ie_open('p');
+        itext('The ');
+        ie_open('strong');
+        itext('WeDeploy Dashboard');
+        ie_close('strong');
+        itext(' lets you monitor resource allocation, running services health, and more with intuitive browser-based navigation, real-time graphs, and interactive debugging tools.');
+        ie_close('p');
+        ie_open('p');
+        itext('The ');
+        ie_open('strong');
+        itext('WeDeploy Command-line Interface (CLI)');
+        ie_close('strong');
+        itext(' provides you control from the comfort of a terminal. It\u2019s powerful, yet easily scriptable, with handy plugins to interact with installed projects.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1291 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'JzLCG.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var JzLCG = function (_Component) {
+    babelHelpers.inherits(JzLCG, _Component);
+
+    function JzLCG() {
+      babelHelpers.classCallCheck(this, JzLCG);
+      return babelHelpers.possibleConstructorReturn(this, (JzLCG.__proto__ || Object.getPrototypeOf(JzLCG)).apply(this, arguments));
+    }
+
+    return JzLCG;
+  }(Component);
+
+  Soy.register(JzLCG, templates);
+  this['metalNamed']['feature-overview'] = this['metalNamed']['feature-overview'] || {};
+  this['metalNamed']['feature-overview']['JzLCG'] = JzLCG;
+  this['metalNamed']['feature-overview']['templates'] = templates;
+  this['metal']['feature-overview'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['feature-overview'];
+
+  var JzLCG = function (_Component) {
+    babelHelpers.inherits(JzLCG, _Component);
+
+    function JzLCG() {
+      babelHelpers.classCallCheck(this, JzLCG);
+      return babelHelpers.possibleConstructorReturn(this, (JzLCG.__proto__ || Object.getPrototypeOf(JzLCG)).apply(this, arguments));
+    }
+
+    return JzLCG;
+  }(Component);
+
+  ;
+
+  Soy.register(JzLCG, templates);
+
+  this['metal']['JzLCG'] = JzLCG;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from custom-domains.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace xZLEn.
+     * @public
+     */
+
+    goog.module('xZLEn.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1265 = function param1265() {
+        ie_open('h1');
+        var dyn72 = opt_data.page.title;
+        if (typeof dyn72 == 'function') dyn72();else if (dyn72 != null) itext(dyn72);
+        ie_close('h1');
+        ie_open('h6');
+        var dyn73 = opt_data.page.description;
+        if (typeof dyn73 == 'function') dyn73();else if (dyn73 != null) itext(dyn73);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -32877,753 +34299,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1239 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'BOgnd.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var BOgnd = function (_Component) {
-    babelHelpers.inherits(BOgnd, _Component);
-
-    function BOgnd() {
-      babelHelpers.classCallCheck(this, BOgnd);
-      return babelHelpers.possibleConstructorReturn(this, (BOgnd.__proto__ || Object.getPrototypeOf(BOgnd)).apply(this, arguments));
-    }
-
-    return BOgnd;
-  }(Component);
-
-  Soy.register(BOgnd, templates);
-  this['metalNamed']['custom-domains'] = this['metalNamed']['custom-domains'] || {};
-  this['metalNamed']['custom-domains']['BOgnd'] = BOgnd;
-  this['metalNamed']['custom-domains']['templates'] = templates;
-  this['metal']['custom-domains'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['custom-domains'];
-
-  var BOgnd = function (_Component) {
-    babelHelpers.inherits(BOgnd, _Component);
-
-    function BOgnd() {
-      babelHelpers.classCallCheck(this, BOgnd);
-      return babelHelpers.possibleConstructorReturn(this, (BOgnd.__proto__ || Object.getPrototypeOf(BOgnd)).apply(this, arguments));
-    }
-
-    return BOgnd;
-  }(Component);
-
-  ;
-
-  Soy.register(BOgnd, templates);
-
-  this['metal']['BOgnd'] = BOgnd;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from what-why-and-how.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace CteHp.
-     * @public
-     */
-
-    goog.module('CteHp.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1418 = function param1418() {
-        ie_open('h1');
-        var dyn80 = opt_data.page.title;
-        if (typeof dyn80 == 'function') dyn80();else if (dyn80 != null) itext(dyn80);
-        ie_close('h1');
-        ie_open('h6');
-        var dyn81 = opt_data.page.description;
-        if (typeof dyn81 == 'function') dyn81();else if (dyn81 != null) itext(dyn81);
-        ie_close('h6');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('What\'s WeDeploy?');
-        ie_close('h2');
-        ie_open('p');
-        ie_open('em');
-        itext('WeDeploy');
-        ie_close('em');
-        itext(' gives you access to intuitive APIs that can help you create modern apps faster.');
-        ie_close('p');
-        ie_open('p');
-        itext('From simple applications to a full micro service architecture, choose between dozens of languages, frameworks, or entire application stacks and launch production-ready environments in a matter of minutes.');
-        ie_close('p');
-        ie_open('p');
-        itext('With WeDeploy, you are able to quickly and efficiently respond to user demands:');
-        ie_close('p');
-        ie_open('ul');
-        ie_open('li');
-        itext('Deploy your applications quickly.');
-        ie_close('li');
-        ie_open('li');
-        itext('Automatically distribute incoming traffic across multiple instances.');
-        ie_close('li');
-        ie_open('li');
-        itext('Authenticate users with only a few lines of code.');
-        ie_close('li');
-        ie_open('li');
-        itext('Store data securely and consume information in real-time.');
-        ie_close('li');
-        ie_open('li');
-        itext('Release applications with zero downtime.');
-        ie_close('li');
-        ie_open('li');
-        itext('Build and deploy micro services.');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Why should I use WeDeploy?');
-        ie_close('h2');
-        ie_open('p');
-        itext('When building highly scalable applications there are many things you need to consider: performance bottlenecks, database resiliency and scalability, authentication, authorization, and static hosting to name a few. WeDeploy is a new dynamic Liferay initiative, allowing you to handle all of your back-end challenges in one place. Focus on creating amazing user experiences and WeDeploy will take care of the rest.');
-        ie_close('p');
-        ie_open('p');
-        itext('This is why WeDeploy was also designed to serve as a platform for building a manageable ecosystem of components and tools to make it easier to deploy and scale any application.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '3');
-        ie_open('h2');
-        itext('How will WeDeploy help me to deploy from simple to advanced applications?');
-        ie_close('h2');
-        ie_open('p');
-        itext('From a simple application to an advanced group of microservices, WeDeploy will provide the tools to manage the visibility, scale, and DNS for your application. WeDeploy provides an infrastructure to deploy micro-services in a managed cloud infrastructure.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1418 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'CteHp.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var CteHp = function (_Component) {
-    babelHelpers.inherits(CteHp, _Component);
-
-    function CteHp() {
-      babelHelpers.classCallCheck(this, CteHp);
-      return babelHelpers.possibleConstructorReturn(this, (CteHp.__proto__ || Object.getPrototypeOf(CteHp)).apply(this, arguments));
-    }
-
-    return CteHp;
-  }(Component);
-
-  Soy.register(CteHp, templates);
-  this['metalNamed']['what-why-and-how'] = this['metalNamed']['what-why-and-how'] || {};
-  this['metalNamed']['what-why-and-how']['CteHp'] = CteHp;
-  this['metalNamed']['what-why-and-how']['templates'] = templates;
-  this['metal']['what-why-and-how'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['what-why-and-how'];
-
-  var CteHp = function (_Component) {
-    babelHelpers.inherits(CteHp, _Component);
-
-    function CteHp() {
-      babelHelpers.classCallCheck(this, CteHp);
-      return babelHelpers.possibleConstructorReturn(this, (CteHp.__proto__ || Object.getPrototypeOf(CteHp)).apply(this, arguments));
-    }
-
-    return CteHp;
-  }(Component);
-
-  ;
-
-  Soy.register(CteHp, templates);
-
-  this['metal']['CteHp'] = CteHp;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from using-the-command-line.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace EVdnY.
-     * @public
-     */
-
-    goog.module('EVdnY.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1302 = function param1302() {
-        ie_open('h1');
-        var dyn76 = opt_data.page.title;
-        if (typeof dyn76 == 'function') dyn76();else if (dyn76 != null) itext(dyn76);
-        ie_close('h1');
-        ie_open('h6');
-        var dyn77 = opt_data.page.description;
-        if (typeof dyn77 == 'function') dyn77();else if (dyn77 != null) itext(dyn77);
-        ie_close('h6');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Dependencies');
-        ie_close('h2');
-        ie_open('p');
-        itext('The following external software dependencies are necessary to correctly run some commands:');
-        ie_close('p');
-        ie_open('p');
-        itext('a) ');
-        ie_open('a', null, null, 'href', 'https://git-scm.com/');
-        itext('Git');
-        ie_close('a');
-        itext(' (download for ');
-        ie_open('a', null, null, 'href', 'https://git-scm.com/download/linux');
-        itext('Linux');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null, 'href', 'https://git-scm.com/download/mac');
-        itext('macOS');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null, 'href', 'https://git-scm.com/download/win');
-        itext('Windows');
-        ie_close('a');
-        itext(')');
-        ie_close('p');
-        ie_open('p');
-        itext('b) ');
-        ie_open('a', null, null, 'href', 'https://www.docker.com/');
-        itext('Docker');
-        ie_close('a');
-        itext(' (download for ');
-        ie_open('a', null, null, 'href', 'https://docs.docker.com/engine/installation/linux/');
-        itext('Linux');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null, 'href', 'https://download.docker.com/mac/stable/Docker.dmg');
-        itext('macOS');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null, 'href', 'https://download.docker.com/win/stable/InstallDocker.msi');
-        itext('Windows');
-        ie_close('a');
-        itext(')');
-        ie_close('p');
-        ie_open('p');
-        itext('Docker version 1.12.0 or later is required. If you use macOS, install the Docker for Mac. If you use Windows, please install Docker for Windows. Docker Toolbox, still available for earlier Mac and Windows systems is not supported.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Installing');
-        ie_close('h2');
-        ie_open('p');
-        itext('If you use a Unix-like system such as macOS or Linux open your Terminal and run:');
-        ie_close('p');
-        $templateAlias2({ code: 'curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('If you use Windows, you probably want the ');
-        ie_open('a', null, null, 'href', 'https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.msi');
-        itext('Windows amd64 installer');
-        ie_close('a');
-        itext('. For other systems, check a list of ');
-        ie_open('a', null, null, 'href', 'https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.zip');
-        itext('all builds available');
-        ie_close('a');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('Check your docker configuration:');
-        ie_close('strong');
-        itext(' docker comes with a 2.0GB maximum memory limit by default on macOS and Windows. You should increase this limit to at least 4.0GB.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '3');
-        ie_open('h2');
-        itext('Creating projects locally');
-        ie_close('h2');
-        ie_open('p');
-        itext('You are able to organize your services by project. Inside each project you can create services (called containers here), like static hosting, data API, Auth service, etc.');
-        ie_close('p');
-        ie_open('p');
-        itext('Use ');
-        ie_open('code');
-        itext('we create');
-        ie_close('code');
-        itext(' to create projects and containers. You can create a project anywhere on your machine. Containers might be created one directory above a project for your convenience.');
-        ie_close('p');
-        $templateAlias2({ code: 'Usage:\n  we create --project <project> --container <container>', mode: 'xml' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '4');
-        ie_open('h2');
-        itext('Running projects locally');
-        ie_close('h2');
-        ie_open('p');
-        itext('For this demo we are going to use the hosting boilerplate.');
-        ie_close('p');
-        ie_open('ol');
-        ie_open('li');
-        itext('Start local infrastructure:');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
-        ie_open('ol', null, null, 'start', '2');
-        ie_open('li');
-        itext('Clone this repository:');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-hosting.git\ncd boilerplate-hosting', mode: 'xml' }, null, opt_ijData);
-        ie_open('ol', null, null, 'start', '3');
-        ie_open('li');
-        itext('Link this container to a new project named demo:');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: 'we link --project demo', mode: 'xml' }, null, opt_ijData);
-        ie_open('ol', null, null, 'start', '4');
-        ie_open('li');
-        itext('Now your container should be accessible from ');
-        ie_open('a', null, null, 'href', 'http://hosting.demo.wedeploy.me');
-        itext('http://hosting.demo.wedeploy.me');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ol');
-        ie_open('p');
-        ie_open('em');
-        itext('On the first first time it might take a few minutes while downloading the hosting image on the background.');
-        ie_close('em');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '5');
-        ie_open('h2');
-        itext('Remotes and friendly host style');
-        ie_close('h2');
-        ie_open('p');
-        itext('Many commands requires ');
-        ie_open('code');
-        itext('--project');
-        ie_close('code');
-        itext(', ');
-        ie_open('code');
-        itext('--container');
-        ie_close('code');
-        itext(', or ');
-        ie_open('code');
-        itext('--remote');
-        ie_close('code');
-        itext(' flags. You can use the following patterns for passing these values:');
-        ie_close('p');
-        $templateAlias2({ code: 'we <command> --project <project> --container <container>', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('and the friendly host style:');
-        ie_close('p');
-        $templateAlias2({ code: 'we <command> <container>.<project>.<remote address>', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('or even');
-        ie_close('p');
-        $templateAlias2({ code: 'we <command> <container>.<project> --remote <remote>', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('For the local cloud, just don\'t add a ');
-        ie_open('code');
-        itext('--remote');
-        ie_close('code');
-        itext(' or ');
-        ie_open('code');
-        itext('<remote address>');
-        ie_close('code');
-        itext(' value like in:');
-        ie_close('p');
-        $templateAlias2({ code: 'we log public.chat', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('or to list all logs by containers on the project "chat":');
-        ie_close('p');
-        $templateAlias2({ code: 'we log chat', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('Remotes can be managed in a similar fashion as git\'s remote command:');
-        ie_close('p');
-        $templateAlias2({ code: '$ we remote -v\nwedeploy        wedeploy.io', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('If you know how to use ');
-        ie_open('code');
-        itext('git remote');
-        ie_close('code');
-        itext(' you already know how to use ');
-        ie_open('code');
-        itext('we remote');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('For your convenience we include the wedeploy cloud remote by default once you log in on the CLI app with ');
-        ie_open('code');
-        itext('we login');
-        ie_close('code');
-        itext(' (requested when necessary).');
-        ie_close('p');
-        ie_open('p');
-        itext('All commands that support ');
-        ie_open('code');
-        itext('--project');
-        ie_close('code');
-        itext(', ');
-        ie_open('code');
-        itext('--container');
-        ie_close('code');
-        itext(', and / or ');
-        ie_open('code');
-        itext('--remote');
-        ie_close('code');
-        itext(' support this host style as well.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '6');
-        ie_open('h2');
-        itext('Fetching project and container logs');
-        ie_close('h2');
-        ie_open('p');
-        itext('You can fetch projects and container logs with');
-        ie_close('p');
-        $templateAlias2({ code: 'we log --project <project> --container <container>', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('or with a friendly host style like');
-        ie_close('p');
-        $templateAlias2({ code: 'we log <container>.<project>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
-        ie_open('h3');
-        itext('Examples:');
-        ie_close('h3');
-        ie_open('p');
-        itext('See the logs for the last 20min for the data container on the wechat project:');
-        ie_close('p');
-        $templateAlias2({ code: 'we log --project wechat --container data --since 20min', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('Watch for logs on the hosting container on the demo project:');
-        ie_close('p');
-        $templateAlias2({ code: 'we log hosting.demo.wedeploy.me --watch', mode: 'xml' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '7');
-        ie_open('h2');
-        itext('Listing projects and containers');
-        ie_close('h2');
-        ie_open('p');
-        itext('Watch the listing of all projects running locally:');
-        ie_close('p');
-        $templateAlias2({ code: 'we list --watch', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('List all your projects running on the WeDeploy cloud:');
-        ie_close('p');
-        $templateAlias2({ code: 'we list wedeploy.io', mode: 'xml' }, null, opt_ijData);
-        ie_open('p');
-        itext('or');
-        ie_close('p');
-        $templateAlias2({ code: 'we list --remote wedeploy', mode: 'xml' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1302 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'EVdnY.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var EVdnY = function (_Component) {
-    babelHelpers.inherits(EVdnY, _Component);
-
-    function EVdnY() {
-      babelHelpers.classCallCheck(this, EVdnY);
-      return babelHelpers.possibleConstructorReturn(this, (EVdnY.__proto__ || Object.getPrototypeOf(EVdnY)).apply(this, arguments));
-    }
-
-    return EVdnY;
-  }(Component);
-
-  Soy.register(EVdnY, templates);
-  this['metalNamed']['using-the-command-line'] = this['metalNamed']['using-the-command-line'] || {};
-  this['metalNamed']['using-the-command-line']['EVdnY'] = EVdnY;
-  this['metalNamed']['using-the-command-line']['templates'] = templates;
-  this['metal']['using-the-command-line'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['using-the-command-line'];
-
-  var EVdnY = function (_Component) {
-    babelHelpers.inherits(EVdnY, _Component);
-
-    function EVdnY() {
-      babelHelpers.classCallCheck(this, EVdnY);
-      return babelHelpers.possibleConstructorReturn(this, (EVdnY.__proto__ || Object.getPrototypeOf(EVdnY)).apply(this, arguments));
-    }
-
-    return EVdnY;
-  }(Component);
-
-  ;
-
-  Soy.register(EVdnY, templates);
-
-  this['metal']['EVdnY'] = EVdnY;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from feature-overview.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace LbVDd.
-     * @public
-     */
-
-    goog.module('LbVDd.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1265 = function param1265() {
-        ie_open('h1');
-        var dyn72 = opt_data.page.title;
-        if (typeof dyn72 == 'function') dyn72();else if (dyn72 != null) itext(dyn72);
-        ie_close('h1');
-        ie_open('h6');
-        var dyn73 = opt_data.page.description;
-        if (typeof dyn73 == 'function') dyn73();else if (dyn73 != null) itext(dyn73);
-        ie_close('h6');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Zero downtime upgrades');
-        ie_close('h2');
-        ie_open('p');
-        itext('WeDeploy provides automation for updating services and the systems with zero downtime.');
-        ie_close('p');
-        ie_open('p');
-        itext('WeDeploy services can all be updated with rolling, blue-green, or canary deployment patterns. If the update fails, roll it back with a single click. These powerful tools are critical for minimizing downtime and user interruption.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Service discovery and load balancing');
-        ie_close('h2');
-        ie_open('p');
-        itext('WeDeploy includes several options for automating service discovery and load balancing.');
-        ie_close('p');
-        ie_open('p');
-        itext('Distributed services create distributed problems, but you don\u2019t have to solve them all yourself. WeDeploy includes automatic DNS endpoint generation, an API for service lookup, transport layer (L4) virtual IP proxying for high speed internal communication, and application layer (L7) load balancing for external-facing services.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '3');
-        ie_open('h2');
-        itext('Service visibility');
-        ie_close('h2');
-        ie_open('p');
-        itext('WeDeploy provides an option for you to specify whether your service is going to be public or private for public access.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '4');
-        ie_open('h2');
-        itext('High availability');
-        ie_close('h2');
-        ie_open('p');
-        itext('WeDeploy is highly available and makes it easy for your services to be highly available too.');
-        ie_close('p');
-        ie_open('p');
-        itext('Mission-critical services require health monitoring, self-healing, and fault tolerance both for themselves and the platform and infrastructure they run on. WeDeploy gives you multiple layers of protection.');
-        ie_close('p');
-        ie_open('p');
-        itext('To achieve self-healing, WeDeploy services are monitored and restarted when they fail. Even legacy services that don\u2019t support distribution or replication can be automatically restarted to maximize uptime and reduce service interruption.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '5');
-        ie_open('h2');
-        itext('Elastic scalability');
-        ie_close('h2');
-        ie_open('p');
-        itext('WeDeploy gives you the power to easily scale your services up and down with the turn of a dial.');
-        ie_close('p');
-        ie_open('p');
-        itext('Horizontal scaling is trivial in Docker Swarm, as long as your service supports it. You can change the number of service instances at any time. WeDeploy even lets you autoscale the number of instances based on session count, using the WeDeploy Load Balancer.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '6');
-        ie_open('h2');
-        itext('User interfaces');
-        ie_close('h2');
-        ie_open('p');
-        itext('WeDeploy offers two interfaces to make it easy to monitor and manage the projects and its services.');
-        ie_close('p');
-        ie_open('p');
-        itext('The ');
-        ie_open('strong');
-        itext('WeDeploy Dashboard');
-        ie_close('strong');
-        itext(' lets you monitor resource allocation, running services health, and more with intuitive browser-based navigation, real-time graphs, and interactive debugging tools.');
-        ie_close('p');
-        ie_open('p');
-        itext('The ');
-        ie_open('strong');
-        itext('WeDeploy Command-line Interface (CLI)');
-        ie_close('strong');
-        itext(' provides you control from the comfort of a terminal. It\u2019s powerful, yet easily scriptable, with handy plugins to interact with installed projects.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
       $templateAlias1(soy.$$assignDefaults({ content: param1265 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'LbVDd.render';
+      $render.soyTemplateName = 'xZLEn.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -33632,504 +34312,22 @@ babelHelpers;
     return exports;
   });
 
-  var LbVDd = function (_Component) {
-    babelHelpers.inherits(LbVDd, _Component);
+  var xZLEn = function (_Component) {
+    babelHelpers.inherits(xZLEn, _Component);
 
-    function LbVDd() {
-      babelHelpers.classCallCheck(this, LbVDd);
-      return babelHelpers.possibleConstructorReturn(this, (LbVDd.__proto__ || Object.getPrototypeOf(LbVDd)).apply(this, arguments));
+    function xZLEn() {
+      babelHelpers.classCallCheck(this, xZLEn);
+      return babelHelpers.possibleConstructorReturn(this, (xZLEn.__proto__ || Object.getPrototypeOf(xZLEn)).apply(this, arguments));
     }
 
-    return LbVDd;
+    return xZLEn;
   }(Component);
 
-  Soy.register(LbVDd, templates);
-  this['metalNamed']['feature-overview'] = this['metalNamed']['feature-overview'] || {};
-  this['metalNamed']['feature-overview']['LbVDd'] = LbVDd;
-  this['metalNamed']['feature-overview']['templates'] = templates;
-  this['metal']['feature-overview'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['feature-overview'];
-
-  var LbVDd = function (_Component) {
-    babelHelpers.inherits(LbVDd, _Component);
-
-    function LbVDd() {
-      babelHelpers.classCallCheck(this, LbVDd);
-      return babelHelpers.possibleConstructorReturn(this, (LbVDd.__proto__ || Object.getPrototypeOf(LbVDd)).apply(this, arguments));
-    }
-
-    return LbVDd;
-  }(Component);
-
-  ;
-
-  Soy.register(LbVDd, templates);
-
-  this['metal']['LbVDd'] = LbVDd;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from environment-variables.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace PoJOE.
-     * @public
-     */
-
-    goog.module('PoJOE.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1252 = function param1252() {
-        ie_open('h1');
-        var dyn70 = opt_data.page.title;
-        if (typeof dyn70 == 'function') dyn70();else if (dyn70 != null) itext(dyn70);
-        ie_close('h1');
-        ie_open('h6');
-        var dyn71 = opt_data.page.description;
-        if (typeof dyn71 == 'function') dyn71();else if (dyn71 != null) itext(dyn71);
-        ie_close('h6');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Introduction');
-        ie_close('h2');
-        ie_open('p');
-        itext('A project may have numerous environments: a production app, a staging app, and any number of test and local environments maintained by many different developers. However, the code is the same. In order to make it happen, each environment would have specific configurations.');
-        ie_close('p');
-        ie_open('p');
-        itext('A good example would be credentials for the database, where each environment has its own credentials. The ideal scenario for handling this scenario, would be using Environment variables, in order to set up different configurations for different environment using the same code. In a traditional development proccess, you would speciffy the configurations in different files. On WeDeploy you can take advantage of Environment Variables using the dashboard.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Configuring environment variables');
-        ie_close('h2');
-        ie_open('p');
-        itext('WeDeploy can help you to configure environment variables for your services. Each service can have its own group of environment variables and can be configured follwing these steps:');
-        ie_close('p');
-        ie_open('ol');
-        ie_open('li');
-        itext('After create a project and installing a service on the ');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
-        itext('dashboard');
-        ie_close('a');
-        itext('. Go to the service page.');
-        ie_close('li');
-        ie_open('li');
-        itext('Click on Environment Vars.');
-        ie_close('li');
-        ie_open('li');
-        itext('Click on Update Service.');
-        ie_close('li');
-        ie_close('ol');
-        ie_open('p');
-        ie_open('img', null, null, 'src', 'https://cloud.githubusercontent.com/assets/301291/19909475/27d9d6f0-a045-11e6-9483-54d76a164384.png', 'alt', 'envvar');
-        ie_close('img');
-        ie_close('p');
-        ie_open('p');
-        itext('Any environment variable provided using dashboard overwrites the environment variables provided in ');
-        ie_open('code');
-        itext('container.json');
-        ie_close('code');
-        itext(' of your service.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1252 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'PoJOE.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var PoJOE = function (_Component) {
-    babelHelpers.inherits(PoJOE, _Component);
-
-    function PoJOE() {
-      babelHelpers.classCallCheck(this, PoJOE);
-      return babelHelpers.possibleConstructorReturn(this, (PoJOE.__proto__ || Object.getPrototypeOf(PoJOE)).apply(this, arguments));
-    }
-
-    return PoJOE;
-  }(Component);
-
-  Soy.register(PoJOE, templates);
-  this['metalNamed']['environment-variables'] = this['metalNamed']['environment-variables'] || {};
-  this['metalNamed']['environment-variables']['PoJOE'] = PoJOE;
-  this['metalNamed']['environment-variables']['templates'] = templates;
-  this['metal']['environment-variables'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['environment-variables'];
-
-  var PoJOE = function (_Component) {
-    babelHelpers.inherits(PoJOE, _Component);
-
-    function PoJOE() {
-      babelHelpers.classCallCheck(this, PoJOE);
-      return babelHelpers.possibleConstructorReturn(this, (PoJOE.__proto__ || Object.getPrototypeOf(PoJOE)).apply(this, arguments));
-    }
-
-    return PoJOE;
-  }(Component);
-
-  ;
-
-  Soy.register(PoJOE, templates);
-
-  this['metal']['PoJOE'] = PoJOE;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from configuration-files.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace jfDdf.
-     * @public
-     */
-
-    goog.module('jfDdf.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1216 = function param1216() {
-        ie_open('h1');
-        var dyn66 = opt_data.page.title;
-        if (typeof dyn66 == 'function') dyn66();else if (dyn66 != null) itext(dyn66);
-        ie_close('h1');
-        ie_open('h6');
-        var dyn67 = opt_data.page.description;
-        if (typeof dyn67 == 'function') dyn67();else if (dyn67 != null) itext(dyn67);
-        ie_close('h6');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Project file reference');
-        ie_close('h2');
-        ie_open('p');
-        itext('The ');
-        ie_open('code');
-        itext('project.json');
-        ie_close('code');
-        itext(' file is a JSON file defining the project attributes. The default path for a ');
-        ie_open('code');
-        itext('project.json');
-        ie_close('code');
-        itext(' is ');
-        ie_open('code');
-        itext('./project.json');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('WeDeploy uses this json file to reference to project in case it\'s already created. If the project does not exist, it creates a new project for you.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('Supported fields:');
-        ie_close('strong');
-        ie_close('p');
-        ie_open('table');
-        ie_open('thead');
-        ie_open('tr');
-        ie_open('th');
-        itext('Field');
-        ie_close('th');
-        ie_open('th');
-        itext('Description');
-        ie_close('th');
-        ie_close('tr');
-        ie_close('thead');
-        ie_open('tbody');
-        ie_open('tr');
-        ie_open('td');
-        itext('id');
-        ie_close('td');
-        ie_open('td');
-        itext('Project unique id.');
-        ie_close('td');
-        ie_close('tr');
-        ie_open('tr');
-        ie_open('td');
-        itext('name');
-        ie_close('td');
-        ie_open('td');
-        itext('Project name.');
-        ie_close('td');
-        ie_close('tr');
-        ie_open('tr');
-        ie_open('td');
-        itext('homeContainer');
-        ie_close('td');
-        ie_open('td');
-        itext('Service that will be receiving the requests in the base custom domain.');
-        ie_close('td');
-        ie_close('tr');
-        ie_open('tr');
-        ie_open('td');
-        itext('customDomains');
-        ie_close('td');
-        ie_open('td');
-        itext('Custom domains used instead the domain generated by wedeploy.');
-        ie_close('td');
-        ie_close('tr');
-        ie_close('tbody');
-        ie_close('table');
-        ie_open('p');
-        ie_open('strong');
-        itext('Validations:');
-        ie_close('strong');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('id');
-        ie_close('strong');
-        itext(': The id must be unique, and you may get an error message in case someone else is already using this project id.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('customDomains');
-        ie_close('strong');
-        itext(': The custom domain must be unique, and you may get an error message in case someone else is already using this custom domain.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('Usage:');
-        ie_close('strong');
-        ie_close('p');
-        ie_open('p');
-        ie_open('code');
-        itext('project.json');
-        ie_close('code');
-        ie_close('p');
-        $templateAlias2({ code: '{\n  "id": "projectexample",\n  "homeContainer": "ui",\n  "customDomains": ["projectexample.wedeploy.com"]\n}', mode: 'application/json' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Service file reference');
-        ie_close('h2');
-        ie_open('p');
-        itext('The ');
-        ie_open('code');
-        itext('container.json');
-        ie_close('code');
-        itext(' file is a JSON file defining the service attributes and configurations. The default path for a ');
-        ie_open('code');
-        itext('container.json');
-        ie_close('code');
-        itext(' is ');
-        ie_open('code');
-        itext('./<service_folder>/container.json');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('WeDeploy uses this json file to reference to service in case it\'s already created. If the service does not exist, it creates a new service for you.');
-        ie_close('p');
-        ie_open('p');
-        ie_open('strong');
-        itext('Supported fields:');
-        ie_close('strong');
-        ie_close('p');
-        ie_open('table');
-        ie_open('thead');
-        ie_open('tr');
-        ie_open('th');
-        itext('Field');
-        ie_close('th');
-        ie_open('th');
-        itext('Description');
-        ie_close('th');
-        ie_close('tr');
-        ie_close('thead');
-        ie_open('tbody');
-        ie_open('tr');
-        ie_open('td');
-        itext('id');
-        ie_close('td');
-        ie_open('td');
-        itext('Service unique id.');
-        ie_close('td');
-        ie_close('tr');
-        ie_open('tr');
-        ie_open('td');
-        itext('type');
-        ie_close('td');
-        ie_open('td');
-        itext('Service stack/image type.');
-        ie_close('td');
-        ie_close('tr');
-        ie_open('tr');
-        ie_open('td');
-        itext('hooks');
-        ie_close('td');
-        ie_open('td');
-        itext('Callbacks that should be executed in the service lifecycle. Currently allowed: ');
-        ie_open('code');
-        itext('build');
-        ie_close('code');
-        itext('.');
-        ie_close('td');
-        ie_close('tr');
-        ie_open('tr');
-        ie_open('td');
-        itext('env');
-        ie_close('td');
-        ie_open('td');
-        itext('Environment variables to be exported in the service lifecycle.');
-        ie_close('td');
-        ie_close('tr');
-        ie_open('tr');
-        ie_open('td');
-        itext('description');
-        ie_close('td');
-        ie_open('td');
-        itext('Short information about the service.');
-        ie_close('td');
-        ie_close('tr');
-        ie_close('tbody');
-        ie_close('table');
-        ie_open('p');
-        ie_open('strong');
-        itext('Usage:');
-        ie_close('strong');
-        ie_close('p');
-        ie_open('p');
-        ie_open('code');
-        itext('container.json');
-        ie_close('code');
-        ie_close('p');
-        $templateAlias2({ code: '{\n  "id": "conqueror",\n  "type": "wedeploy/java",\n  "description": "WeDeploy Service Example",\n  "hooks": {\n    "build": "./gradlew clean build installDist -x test"\n  },\n  "env": {\n    "WEDEPLOY_USER": "user"\n  }\n}', mode: 'application/json' }, null, opt_ijData);
-        ie_close('article');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1216 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'jfDdf.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var jfDdf = function (_Component) {
-    babelHelpers.inherits(jfDdf, _Component);
-
-    function jfDdf() {
-      babelHelpers.classCallCheck(this, jfDdf);
-      return babelHelpers.possibleConstructorReturn(this, (jfDdf.__proto__ || Object.getPrototypeOf(jfDdf)).apply(this, arguments));
-    }
-
-    return jfDdf;
-  }(Component);
-
-  Soy.register(jfDdf, templates);
-  this['metalNamed']['configuration-files'] = this['metalNamed']['configuration-files'] || {};
-  this['metalNamed']['configuration-files']['jfDdf'] = jfDdf;
-  this['metalNamed']['configuration-files']['templates'] = templates;
-  this['metal']['configuration-files'] = templates;
+  Soy.register(xZLEn, templates);
+  this['metalNamed']['custom-domains'] = this['metalNamed']['custom-domains'] || {};
+  this['metalNamed']['custom-domains']['xZLEn'] = xZLEn;
+  this['metalNamed']['custom-domains']['templates'] = templates;
+  this['metal']['custom-domains'] = templates;
   /* jshint ignore:end */
 }).call(this);
 'use strict';
@@ -34146,11 +34344,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace dcgrF.
+     * @fileoverview Templates in namespace dwMmy.
      * @public
      */
 
-    goog.module('dcgrF.incrementaldom');
+    goog.module('dwMmy.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -34181,14 +34379,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1405 = function param1405() {
+      var param1431 = function param1431() {
         ie_open('h1');
-        var dyn78 = opt_data.page.title;
-        if (typeof dyn78 == 'function') dyn78();else if (dyn78 != null) itext(dyn78);
+        var dyn82 = opt_data.page.title;
+        if (typeof dyn82 == 'function') dyn82();else if (dyn82 != null) itext(dyn82);
         ie_close('h1');
         ie_open('h6');
-        var dyn79 = opt_data.page.description;
-        if (typeof dyn79 == 'function') dyn79();else if (dyn79 != null) itext(dyn79);
+        var dyn83 = opt_data.page.description;
+        if (typeof dyn83 == 'function') dyn83();else if (dyn83 != null) itext(dyn83);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -34313,11 +34511,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1405 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1431 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'dcgrF.render';
+      $render.soyTemplateName = 'dwMmy.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -34326,20 +34524,20 @@ babelHelpers;
     return exports;
   });
 
-  var dcgrF = function (_Component) {
-    babelHelpers.inherits(dcgrF, _Component);
+  var dwMmy = function (_Component) {
+    babelHelpers.inherits(dwMmy, _Component);
 
-    function dcgrF() {
-      babelHelpers.classCallCheck(this, dcgrF);
-      return babelHelpers.possibleConstructorReturn(this, (dcgrF.__proto__ || Object.getPrototypeOf(dcgrF)).apply(this, arguments));
+    function dwMmy() {
+      babelHelpers.classCallCheck(this, dwMmy);
+      return babelHelpers.possibleConstructorReturn(this, (dwMmy.__proto__ || Object.getPrototypeOf(dwMmy)).apply(this, arguments));
     }
 
-    return dcgrF;
+    return dwMmy;
   }(Component);
 
-  Soy.register(dcgrF, templates);
+  Soy.register(dwMmy, templates);
   this['metalNamed']['using-the-dashboard'] = this['metalNamed']['using-the-dashboard'] || {};
-  this['metalNamed']['using-the-dashboard']['dcgrF'] = dcgrF;
+  this['metalNamed']['using-the-dashboard']['dwMmy'] = dwMmy;
   this['metalNamed']['using-the-dashboard']['templates'] = templates;
   this['metal']['using-the-dashboard'] = templates;
   /* jshint ignore:end */
@@ -34351,22 +34549,161 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['using-the-dashboard'];
 
-  var dcgrF = function (_Component) {
-    babelHelpers.inherits(dcgrF, _Component);
+  var dwMmy = function (_Component) {
+    babelHelpers.inherits(dwMmy, _Component);
 
-    function dcgrF() {
-      babelHelpers.classCallCheck(this, dcgrF);
-      return babelHelpers.possibleConstructorReturn(this, (dcgrF.__proto__ || Object.getPrototypeOf(dcgrF)).apply(this, arguments));
+    function dwMmy() {
+      babelHelpers.classCallCheck(this, dwMmy);
+      return babelHelpers.possibleConstructorReturn(this, (dwMmy.__proto__ || Object.getPrototypeOf(dwMmy)).apply(this, arguments));
     }
 
-    return dcgrF;
+    return dwMmy;
   }(Component);
 
   ;
 
-  Soy.register(dcgrF, templates);
+  Soy.register(dwMmy, templates);
 
-  this['metal']['dcgrF'] = dcgrF;
+  this['metal']['dwMmy'] = dwMmy;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from environment-variables.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace mWxwB.
+     * @public
+     */
+
+    goog.module('mWxwB.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1278 = function param1278() {
+        ie_open('h1');
+        var dyn74 = opt_data.page.title;
+        if (typeof dyn74 == 'function') dyn74();else if (dyn74 != null) itext(dyn74);
+        ie_close('h1');
+        ie_open('h6');
+        var dyn75 = opt_data.page.description;
+        if (typeof dyn75 == 'function') dyn75();else if (dyn75 != null) itext(dyn75);
+        ie_close('h6');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Introduction');
+        ie_close('h2');
+        ie_open('p');
+        itext('A project may have numerous environments: a production app, a staging app, and any number of test and local environments maintained by many different developers. However, the code is the same. In order to make it happen, each environment would have specific configurations.');
+        ie_close('p');
+        ie_open('p');
+        itext('A good example would be credentials for the database, where each environment has its own credentials. The ideal scenario for handling this scenario, would be using Environment variables, in order to set up different configurations for different environment using the same code. In a traditional development proccess, you would speciffy the configurations in different files. On WeDeploy you can take advantage of Environment Variables using the dashboard.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Configuring environment variables');
+        ie_close('h2');
+        ie_open('p');
+        itext('WeDeploy can help you to configure environment variables for your services. Each service can have its own group of environment variables and can be configured follwing these steps:');
+        ie_close('p');
+        ie_open('ol');
+        ie_open('li');
+        itext('After create a project and installing a service on the ');
+        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
+        itext('dashboard');
+        ie_close('a');
+        itext('. Go to the service page.');
+        ie_close('li');
+        ie_open('li');
+        itext('Click on Environment Vars.');
+        ie_close('li');
+        ie_open('li');
+        itext('Click on Update Service.');
+        ie_close('li');
+        ie_close('ol');
+        ie_open('p');
+        ie_open('img', null, null, 'src', 'https://cloud.githubusercontent.com/assets/301291/19909475/27d9d6f0-a045-11e6-9483-54d76a164384.png', 'alt', 'envvar');
+        ie_close('img');
+        ie_close('p');
+        ie_open('p');
+        itext('Any environment variable provided using dashboard overwrites the environment variables provided in ');
+        ie_open('code');
+        itext('container.json');
+        ie_close('code');
+        itext(' of your service.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1278 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'mWxwB.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var mWxwB = function (_Component) {
+    babelHelpers.inherits(mWxwB, _Component);
+
+    function mWxwB() {
+      babelHelpers.classCallCheck(this, mWxwB);
+      return babelHelpers.possibleConstructorReturn(this, (mWxwB.__proto__ || Object.getPrototypeOf(mWxwB)).apply(this, arguments));
+    }
+
+    return mWxwB;
+  }(Component);
+
+  Soy.register(mWxwB, templates);
+  this['metalNamed']['environment-variables'] = this['metalNamed']['environment-variables'] || {};
+  this['metalNamed']['environment-variables']['mWxwB'] = mWxwB;
+  this['metalNamed']['environment-variables']['templates'] = templates;
+  this['metal']['environment-variables'] = templates;
+  /* jshint ignore:end */
 }).call(this);
 'use strict';
 
@@ -34474,24 +34811,24 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['configuration-files'];
+  var templates = this['metal']['environment-variables'];
 
-  var jfDdf = function (_Component) {
-    babelHelpers.inherits(jfDdf, _Component);
+  var mWxwB = function (_Component) {
+    babelHelpers.inherits(mWxwB, _Component);
 
-    function jfDdf() {
-      babelHelpers.classCallCheck(this, jfDdf);
-      return babelHelpers.possibleConstructorReturn(this, (jfDdf.__proto__ || Object.getPrototypeOf(jfDdf)).apply(this, arguments));
+    function mWxwB() {
+      babelHelpers.classCallCheck(this, mWxwB);
+      return babelHelpers.possibleConstructorReturn(this, (mWxwB.__proto__ || Object.getPrototypeOf(mWxwB)).apply(this, arguments));
     }
 
-    return jfDdf;
+    return mWxwB;
   }(Component);
 
   ;
 
-  Soy.register(jfDdf, templates);
+  Soy.register(mWxwB, templates);
 
-  this['metal']['jfDdf'] = jfDdf;
+  this['metal']['mWxwB'] = mWxwB;
 }).call(this);
 'use strict';
 
@@ -34531,11 +34868,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace wtrRT.
+     * @fileoverview Templates in namespace wzDOZ.
      * @public
      */
 
-    goog.module('wtrRT.incrementaldom');
+    goog.module('wzDOZ.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -34568,14 +34905,14 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1284 = function param1284() {
+      var param1310 = function param1310() {
         ie_open('h1');
-        var dyn74 = opt_data.page.title;
-        if (typeof dyn74 == 'function') dyn74();else if (dyn74 != null) itext(dyn74);
+        var dyn78 = opt_data.page.title;
+        if (typeof dyn78 == 'function') dyn78();else if (dyn78 != null) itext(dyn78);
         ie_close('h1');
         ie_open('h6');
-        var dyn75 = opt_data.page.description;
-        if (typeof dyn75 == 'function') dyn75();else if (dyn75 != null) itext(dyn75);
+        var dyn79 = opt_data.page.description;
+        if (typeof dyn79 == 'function') dyn79();else if (dyn79 != null) itext(dyn79);
         ie_close('h6');
         ie_open('article', null, null, 'id', '1');
         ie_open('h2');
@@ -34591,11 +34928,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1284 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1310 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'wtrRT.render';
+      $render.soyTemplateName = 'wzDOZ.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -34604,20 +34941,20 @@ babelHelpers;
     return exports;
   });
 
-  var wtrRT = function (_Component) {
-    babelHelpers.inherits(wtrRT, _Component);
+  var wzDOZ = function (_Component) {
+    babelHelpers.inherits(wzDOZ, _Component);
 
-    function wtrRT() {
-      babelHelpers.classCallCheck(this, wtrRT);
-      return babelHelpers.possibleConstructorReturn(this, (wtrRT.__proto__ || Object.getPrototypeOf(wtrRT)).apply(this, arguments));
+    function wzDOZ() {
+      babelHelpers.classCallCheck(this, wzDOZ);
+      return babelHelpers.possibleConstructorReturn(this, (wzDOZ.__proto__ || Object.getPrototypeOf(wzDOZ)).apply(this, arguments));
     }
 
-    return wtrRT;
+    return wzDOZ;
   }(Component);
 
-  Soy.register(wtrRT, templates);
+  Soy.register(wzDOZ, templates);
   this['metalNamed']['using-the-api-client'] = this['metalNamed']['using-the-api-client'] || {};
-  this['metalNamed']['using-the-api-client']['wtrRT'] = wtrRT;
+  this['metalNamed']['using-the-api-client']['wzDOZ'] = wzDOZ;
   this['metalNamed']['using-the-api-client']['templates'] = templates;
   this['metal']['using-the-api-client'] = templates;
   /* jshint ignore:end */
@@ -34629,518 +34966,46 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['using-the-api-client'];
 
-  var wtrRT = function (_Component) {
-    babelHelpers.inherits(wtrRT, _Component);
+  var wzDOZ = function (_Component) {
+    babelHelpers.inherits(wzDOZ, _Component);
 
-    function wtrRT() {
-      babelHelpers.classCallCheck(this, wtrRT);
-      return babelHelpers.possibleConstructorReturn(this, (wtrRT.__proto__ || Object.getPrototypeOf(wtrRT)).apply(this, arguments));
+    function wzDOZ() {
+      babelHelpers.classCallCheck(this, wzDOZ);
+      return babelHelpers.possibleConstructorReturn(this, (wzDOZ.__proto__ || Object.getPrototypeOf(wzDOZ)).apply(this, arguments));
     }
 
-    return wtrRT;
+    return wzDOZ;
   }(Component);
 
   ;
 
-  Soy.register(wtrRT, templates);
+  Soy.register(wzDOZ, templates);
 
-  this['metal']['wtrRT'] = wtrRT;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from liferay.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace IkvvX.
-     * @public
-     */
-
-    goog.module('IkvvX.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1488 = function param1488() {
-        ie_open('h1');
-        itext('Liferay');
-        ie_close('h1');
-        ie_open('h6');
-        var dyn83 = opt_data.page.description;
-        if (typeof dyn83 == 'function') dyn83();else if (dyn83 != null) itext(dyn83);
-        ie_close('h6');
-        ie_open('div', null, null, 'class', 'guide-btn-cta');
-        ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-liferay.wedeploy.io', 'target', '_blank');
-        ie_void('span', null, null, 'class', 'icon-16-external');
-        itext('See Live Demo');
-        ie_close('a');
-        ie_close('div');
-        ie_open('div', null, null, 'class', 'guide-aux-cta');
-        itext('or read the ');
-        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-liferay/', 'target', '_blank');
-        itext('source code');
-        ie_close('a');
-        itext('.');
-        ie_close('div');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Install dependencies');
-        ie_close('h2');
-        ie_open('p');
-        itext('This section assumes that you already have the ');
-        ie_open('strong');
-        itext('WeDeploy CLI');
-        ie_close('strong');
-        itext(' installed and ');
-        ie_open('strong');
-        itext('Docker');
-        ie_close('strong');
-        itext(' running. Make sure to ');
-        ie_open('a', null, null, 'href', '/docs/intro/using-the-command-line.html');
-        itext('visit the installation guide');
-        ie_close('a');
-        itext(' if you need help setting that up.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Running locally');
-        ie_close('h2');
-        ie_open('ol');
-        ie_open('li');
-        itext('Start local infrastructure:');
-        ie_close('li');
-        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Clone this repository:');
-        ie_close('li');
-        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-liferay.git\ncd boilerplate-liferay', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Link this container with the local infrastructure:');
-        ie_close('li');
-        $templateAlias2({ code: 'we link --project <projectID>', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Now your container is ready to be used:');
-        ie_close('li');
-        $templateAlias2({ code: 'http://liferay.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
-        ie_close('ol');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '3');
-        ie_open('h2');
-        itext('Deploying to the cloud');
-        ie_close('h2');
-        ie_open('ol');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-liferay/fork');
-        itext('Fork this repository');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Go to the ');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
-        itext('Dashboard');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com/projects/create');
-        itext('Create a project');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('In the sidebar, click on ');
-        ie_open('strong');
-        itext('Deployment');
-        ie_close('strong');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Using your local machine, clone your Github fork:');
-        ie_close('li');
-        $templateAlias2({ code: 'git clone https://github.com/<username>/boilerplate-liferay', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Get into the folder: ');
-        ie_open('code');
-        itext('cd boilerplate-liferay');
-        ie_close('code');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Using the content on ');
-        ie_open('strong');
-        itext('Deployment');
-        ie_close('strong');
-        itext(' page. Add the WeDeploy remote url:');
-        ie_close('li');
-        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<projectID>.git', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Push your data to wedeploy git server: ');
-        ie_open('code');
-        itext('git push wedeploy master');
-        ie_close('code');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Once you see it in the Dashboard, your container will be ready to be used.');
-        ie_close('li');
-        $templateAlias2({ code: 'http://liferay.<projectID>.wedeploy.io', mode: 'xml' }, null, opt_ijData);
-        ie_close('ol');
-        ie_close('article');
-        ie_open('h2');
-        itext('What\'s next?');
-        ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('Now you can start building your liferay based application.');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1488 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'IkvvX.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var IkvvX = function (_Component) {
-    babelHelpers.inherits(IkvvX, _Component);
-
-    function IkvvX() {
-      babelHelpers.classCallCheck(this, IkvvX);
-      return babelHelpers.possibleConstructorReturn(this, (IkvvX.__proto__ || Object.getPrototypeOf(IkvvX)).apply(this, arguments));
-    }
-
-    return IkvvX;
-  }(Component);
-
-  Soy.register(IkvvX, templates);
-  this['metalNamed']['liferay'] = this['metalNamed']['liferay'] || {};
-  this['metalNamed']['liferay']['IkvvX'] = IkvvX;
-  this['metalNamed']['liferay']['templates'] = templates;
-  this['metal']['liferay'] = templates;
-  /* jshint ignore:end */
+  this['metal']['wzDOZ'] = wzDOZ;
 }).call(this);
 'use strict';
 
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['liferay'];
+  var templates = this['metal']['custom-domains'];
 
-  var IkvvX = function (_Component) {
-    babelHelpers.inherits(IkvvX, _Component);
+  var xZLEn = function (_Component) {
+    babelHelpers.inherits(xZLEn, _Component);
 
-    function IkvvX() {
-      babelHelpers.classCallCheck(this, IkvvX);
-      return babelHelpers.possibleConstructorReturn(this, (IkvvX.__proto__ || Object.getPrototypeOf(IkvvX)).apply(this, arguments));
+    function xZLEn() {
+      babelHelpers.classCallCheck(this, xZLEn);
+      return babelHelpers.possibleConstructorReturn(this, (xZLEn.__proto__ || Object.getPrototypeOf(xZLEn)).apply(this, arguments));
     }
 
-    return IkvvX;
+    return xZLEn;
   }(Component);
 
   ;
 
-  Soy.register(IkvvX, templates);
+  Soy.register(xZLEn, templates);
 
-  this['metal']['IkvvX'] = IkvvX;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from ruby.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace PrztR.
-     * @public
-     */
-
-    goog.module('PrztR.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1585 = function param1585() {
-        ie_open('h1');
-        itext('Ruby');
-        ie_close('h1');
-        ie_open('h6');
-        var dyn85 = opt_data.page.description;
-        if (typeof dyn85 == 'function') dyn85();else if (dyn85 != null) itext(dyn85);
-        ie_close('h6');
-        ie_open('div', null, null, 'class', 'guide-btn-cta');
-        ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-ruby.wedeploy.io', 'target', '_blank');
-        ie_void('span', null, null, 'class', 'icon-16-external');
-        itext('See Live Demo');
-        ie_close('a');
-        ie_close('div');
-        ie_open('div', null, null, 'class', 'guide-aux-cta');
-        itext('or read the ');
-        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-ruby/', 'target', '_blank');
-        itext('source code');
-        ie_close('a');
-        itext('.');
-        ie_close('div');
-        ie_open('article', null, null, 'id', '1');
-        ie_open('h2');
-        itext('Install dependencies');
-        ie_close('h2');
-        ie_open('p');
-        itext('This section assumes that you already have the ');
-        ie_open('strong');
-        itext('WeDeploy CLI');
-        ie_close('strong');
-        itext(' installed and ');
-        ie_open('strong');
-        itext('Docker');
-        ie_close('strong');
-        itext(' running. Make sure to ');
-        ie_open('a', null, null, 'href', '/docs/intro/using-the-command-line.html');
-        itext('visit the installation guide');
-        ie_close('a');
-        itext(' if you need help setting that up.');
-        ie_close('p');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '2');
-        ie_open('h2');
-        itext('Running locally');
-        ie_close('h2');
-        ie_open('ol');
-        ie_open('li');
-        itext('Start local infrastructure:');
-        ie_close('li');
-        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Clone this repository:');
-        ie_close('li');
-        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-ruby.git\ncd boilerplate-ruby', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Build the container:');
-        ie_close('li');
-        $templateAlias2({ code: 'we build', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Link this container with the local infrastructure:');
-        ie_close('li');
-        $templateAlias2({ code: 'we link --project <projectID>', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Now your container is ready to be used:');
-        ie_close('li');
-        $templateAlias2({ code: 'http://ruby.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
-        ie_close('ol');
-        ie_close('article');
-        ie_open('article', null, null, 'id', '3');
-        ie_open('h2');
-        itext('Deploying to the cloud');
-        ie_close('h2');
-        ie_open('ol');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-ruby/fork');
-        itext('Fork this repository');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Go to the ');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
-        itext('Dashboard');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com/projects/create');
-        itext('Create a project');
-        ie_close('a');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('In the sidebar, click on ');
-        ie_open('strong');
-        itext('Deployment');
-        ie_close('strong');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Using your local machine, clone your Github fork:');
-        ie_close('li');
-        $templateAlias2({ code: 'git clone https://github.com/<username>/boilerplate-ruby', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Get into the folder: ');
-        ie_open('code');
-        itext('cd boilerplate-ruby');
-        ie_close('code');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Using the content on ');
-        ie_open('strong');
-        itext('Deployment');
-        ie_close('strong');
-        itext(' page. Add the WeDeploy remote url:');
-        ie_close('li');
-        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<projectID>.git', mode: 'xml' }, null, opt_ijData);
-        ie_open('li');
-        itext('Push your data to wedeploy git server: ');
-        ie_open('code');
-        itext('git push wedeploy master');
-        ie_close('code');
-        itext('.');
-        ie_close('li');
-        ie_open('li');
-        itext('Once you see it in the Dashboard, your container will be ready to be used.');
-        ie_close('li');
-        $templateAlias2({ code: 'http://ruby.<projectID>.wedeploy.io', mode: 'xml' }, null, opt_ijData);
-        ie_close('ol');
-        ie_close('article');
-        ie_open('h2');
-        itext('What\'s next?');
-        ie_close('h2');
-        ie_open('ul');
-        ie_open('li');
-        itext('Now you can start building your ruby based application.');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1585 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'PrztR.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var PrztR = function (_Component) {
-    babelHelpers.inherits(PrztR, _Component);
-
-    function PrztR() {
-      babelHelpers.classCallCheck(this, PrztR);
-      return babelHelpers.possibleConstructorReturn(this, (PrztR.__proto__ || Object.getPrototypeOf(PrztR)).apply(this, arguments));
-    }
-
-    return PrztR;
-  }(Component);
-
-  Soy.register(PrztR, templates);
-  this['metalNamed']['ruby'] = this['metalNamed']['ruby'] || {};
-  this['metalNamed']['ruby']['PrztR'] = PrztR;
-  this['metalNamed']['ruby']['templates'] = templates;
-  this['metal']['ruby'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['ruby'];
-
-  var PrztR = function (_Component) {
-    babelHelpers.inherits(PrztR, _Component);
-
-    function PrztR() {
-      babelHelpers.classCallCheck(this, PrztR);
-      return babelHelpers.possibleConstructorReturn(this, (PrztR.__proto__ || Object.getPrototypeOf(PrztR)).apply(this, arguments));
-    }
-
-    return PrztR;
-  }(Component);
-
-  ;
-
-  Soy.register(PrztR, templates);
-
-  this['metal']['PrztR'] = PrztR;
+  this['metal']['xZLEn'] = xZLEn;
 }).call(this);
 'use strict';
 
@@ -35156,11 +35021,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace UNpHk.
+     * @fileoverview Templates in namespace BNoVN.
      * @public
      */
 
-    goog.module('UNpHk.incrementaldom');
+    goog.module('BNoVN.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -35193,13 +35058,13 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1437 = function param1437() {
+      var param1463 = function param1463() {
         ie_open('h1');
         itext('Java');
         ie_close('h1');
         ie_open('h6');
-        var dyn82 = opt_data.page.description;
-        if (typeof dyn82 == 'function') dyn82();else if (dyn82 != null) itext(dyn82);
+        var dyn86 = opt_data.page.description;
+        if (typeof dyn86 == 'function') dyn86();else if (dyn86 != null) itext(dyn86);
         ie_close('h6');
         ie_open('div', null, null, 'class', 'guide-btn-cta');
         ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-java.wedeploy.io', 'target', '_blank');
@@ -35337,11 +35202,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1437 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1463 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'UNpHk.render';
+      $render.soyTemplateName = 'BNoVN.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -35350,20 +35215,20 @@ babelHelpers;
     return exports;
   });
 
-  var UNpHk = function (_Component) {
-    babelHelpers.inherits(UNpHk, _Component);
+  var BNoVN = function (_Component) {
+    babelHelpers.inherits(BNoVN, _Component);
 
-    function UNpHk() {
-      babelHelpers.classCallCheck(this, UNpHk);
-      return babelHelpers.possibleConstructorReturn(this, (UNpHk.__proto__ || Object.getPrototypeOf(UNpHk)).apply(this, arguments));
+    function BNoVN() {
+      babelHelpers.classCallCheck(this, BNoVN);
+      return babelHelpers.possibleConstructorReturn(this, (BNoVN.__proto__ || Object.getPrototypeOf(BNoVN)).apply(this, arguments));
     }
 
-    return UNpHk;
+    return BNoVN;
   }(Component);
 
-  Soy.register(UNpHk, templates);
+  Soy.register(BNoVN, templates);
   this['metalNamed']['java'] = this['metalNamed']['java'] || {};
-  this['metalNamed']['java']['UNpHk'] = UNpHk;
+  this['metalNamed']['java']['BNoVN'] = BNoVN;
   this['metalNamed']['java']['templates'] = templates;
   this['metal']['java'] = templates;
   /* jshint ignore:end */
@@ -35375,22 +35240,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['java'];
 
-  var UNpHk = function (_Component) {
-    babelHelpers.inherits(UNpHk, _Component);
+  var BNoVN = function (_Component) {
+    babelHelpers.inherits(BNoVN, _Component);
 
-    function UNpHk() {
-      babelHelpers.classCallCheck(this, UNpHk);
-      return babelHelpers.possibleConstructorReturn(this, (UNpHk.__proto__ || Object.getPrototypeOf(UNpHk)).apply(this, arguments));
+    function BNoVN() {
+      babelHelpers.classCallCheck(this, BNoVN);
+      return babelHelpers.possibleConstructorReturn(this, (BNoVN.__proto__ || Object.getPrototypeOf(BNoVN)).apply(this, arguments));
     }
 
-    return UNpHk;
+    return BNoVN;
   }(Component);
 
   ;
 
-  Soy.register(UNpHk, templates);
+  Soy.register(BNoVN, templates);
 
-  this['metal']['UNpHk'] = UNpHk;
+  this['metal']['BNoVN'] = BNoVN;
 }).call(this);
 'use strict';
 
@@ -35402,116 +35267,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from index.soy.
+    // This file was automatically generated from ruby.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace pageDocsOtherIndex.
+     * @fileoverview Templates in namespace HErfn.
      * @public
      */
 
-    goog.module('pageDocsOtherIndex.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {}
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'pageDocsOtherIndex.render';
-    }
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $soyweb(opt_data, opt_ignored, opt_ijData) {
-      ie_open('!DOCTYPE', null, null, 'html', '');
-      ie_open('html', null, null, 'lang', 'en');
-      ie_open('head');
-      ie_open('meta', null, null, 'charset', 'UTF-8');
-      ie_close('meta');
-      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
-      ie_close('meta');
-      ie_close('head');
-      ie_close('html');
-    }
-    exports.soyweb = $soyweb;
-    if (goog.DEBUG) {
-      $soyweb.soyTemplateName = 'pageDocsOtherIndex.soyweb';
-    }
-
-    exports.render.params = [];
-    exports.render.types = {};
-    exports.soyweb.params = ["page"];
-    exports.soyweb.types = { "page": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var pageDocsOtherIndex = function (_Component) {
-    babelHelpers.inherits(pageDocsOtherIndex, _Component);
-
-    function pageDocsOtherIndex() {
-      babelHelpers.classCallCheck(this, pageDocsOtherIndex);
-      return babelHelpers.possibleConstructorReturn(this, (pageDocsOtherIndex.__proto__ || Object.getPrototypeOf(pageDocsOtherIndex)).apply(this, arguments));
-    }
-
-    return pageDocsOtherIndex;
-  }(Component);
-
-  Soy.register(pageDocsOtherIndex, templates);
-  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
-  this['metalNamed']['index']['pageDocsOtherIndex'] = pageDocsOtherIndex;
-  this['metalNamed']['index']['templates'] = templates;
-  this['metal']['index'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from nodejs.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace qbVYF.
-     * @public
-     */
-
-    goog.module('qbVYF.incrementaldom');
+    goog.module('HErfn.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -35544,13 +35308,263 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1534 = function param1534() {
+      var param1611 = function param1611() {
+        ie_open('h1');
+        itext('Ruby');
+        ie_close('h1');
+        ie_open('h6');
+        var dyn89 = opt_data.page.description;
+        if (typeof dyn89 == 'function') dyn89();else if (dyn89 != null) itext(dyn89);
+        ie_close('h6');
+        ie_open('div', null, null, 'class', 'guide-btn-cta');
+        ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-ruby.wedeploy.io', 'target', '_blank');
+        ie_void('span', null, null, 'class', 'icon-16-external');
+        itext('See Live Demo');
+        ie_close('a');
+        ie_close('div');
+        ie_open('div', null, null, 'class', 'guide-aux-cta');
+        itext('or read the ');
+        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-ruby/', 'target', '_blank');
+        itext('source code');
+        ie_close('a');
+        itext('.');
+        ie_close('div');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Install dependencies');
+        ie_close('h2');
+        ie_open('p');
+        itext('This section assumes that you already have the ');
+        ie_open('strong');
+        itext('WeDeploy CLI');
+        ie_close('strong');
+        itext(' installed and ');
+        ie_open('strong');
+        itext('Docker');
+        ie_close('strong');
+        itext(' running. Make sure to ');
+        ie_open('a', null, null, 'href', '/docs/intro/using-the-command-line.html');
+        itext('visit the installation guide');
+        ie_close('a');
+        itext(' if you need help setting that up.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Running locally');
+        ie_close('h2');
+        ie_open('ol');
+        ie_open('li');
+        itext('Start local infrastructure:');
+        ie_close('li');
+        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Clone this repository:');
+        ie_close('li');
+        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-ruby.git\ncd boilerplate-ruby', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Build the container:');
+        ie_close('li');
+        $templateAlias2({ code: 'we build', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Link this container with the local infrastructure:');
+        ie_close('li');
+        $templateAlias2({ code: 'we link --project <projectID>', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Now your container is ready to be used:');
+        ie_close('li');
+        $templateAlias2({ code: 'http://ruby.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
+        ie_close('ol');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '3');
+        ie_open('h2');
+        itext('Deploying to the cloud');
+        ie_close('h2');
+        ie_open('ol');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-ruby/fork');
+        itext('Fork this repository');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Go to the ');
+        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
+        itext('Dashboard');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com/projects/create');
+        itext('Create a project');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('In the sidebar, click on ');
+        ie_open('strong');
+        itext('Deployment');
+        ie_close('strong');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Using your local machine, clone your Github fork:');
+        ie_close('li');
+        $templateAlias2({ code: 'git clone https://github.com/<username>/boilerplate-ruby', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Get into the folder: ');
+        ie_open('code');
+        itext('cd boilerplate-ruby');
+        ie_close('code');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Using the content on ');
+        ie_open('strong');
+        itext('Deployment');
+        ie_close('strong');
+        itext(' page. Add the WeDeploy remote url:');
+        ie_close('li');
+        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<projectID>.git', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Push your data to wedeploy git server: ');
+        ie_open('code');
+        itext('git push wedeploy master');
+        ie_close('code');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Once you see it in the Dashboard, your container will be ready to be used.');
+        ie_close('li');
+        $templateAlias2({ code: 'http://ruby.<projectID>.wedeploy.io', mode: 'xml' }, null, opt_ijData);
+        ie_close('ol');
+        ie_close('article');
+        ie_open('h2');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('Now you can start building your ruby based application.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1611 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'HErfn.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var HErfn = function (_Component) {
+    babelHelpers.inherits(HErfn, _Component);
+
+    function HErfn() {
+      babelHelpers.classCallCheck(this, HErfn);
+      return babelHelpers.possibleConstructorReturn(this, (HErfn.__proto__ || Object.getPrototypeOf(HErfn)).apply(this, arguments));
+    }
+
+    return HErfn;
+  }(Component);
+
+  Soy.register(HErfn, templates);
+  this['metalNamed']['ruby'] = this['metalNamed']['ruby'] || {};
+  this['metalNamed']['ruby']['HErfn'] = HErfn;
+  this['metalNamed']['ruby']['templates'] = templates;
+  this['metal']['ruby'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['ruby'];
+
+  var HErfn = function (_Component) {
+    babelHelpers.inherits(HErfn, _Component);
+
+    function HErfn() {
+      babelHelpers.classCallCheck(this, HErfn);
+      return babelHelpers.possibleConstructorReturn(this, (HErfn.__proto__ || Object.getPrototypeOf(HErfn)).apply(this, arguments));
+    }
+
+    return HErfn;
+  }(Component);
+
+  ;
+
+  Soy.register(HErfn, templates);
+
+  this['metal']['HErfn'] = HErfn;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from nodejs.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace SuMjj.
+     * @public
+     */
+
+    goog.module('SuMjj.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1560 = function param1560() {
         ie_open('h1');
         itext('Node.js');
         ie_close('h1');
         ie_open('h6');
-        var dyn84 = opt_data.page.description;
-        if (typeof dyn84 == 'function') dyn84();else if (dyn84 != null) itext(dyn84);
+        var dyn88 = opt_data.page.description;
+        if (typeof dyn88 == 'function') dyn88();else if (dyn88 != null) itext(dyn88);
         ie_close('h6');
         ie_open('div', null, null, 'class', 'guide-btn-cta');
         ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-nodejs.wedeploy.io', 'target', '_blank');
@@ -35688,11 +35702,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1534 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1560 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'qbVYF.render';
+      $render.soyTemplateName = 'SuMjj.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -35701,22 +35715,369 @@ babelHelpers;
     return exports;
   });
 
-  var qbVYF = function (_Component) {
-    babelHelpers.inherits(qbVYF, _Component);
+  var SuMjj = function (_Component) {
+    babelHelpers.inherits(SuMjj, _Component);
 
-    function qbVYF() {
-      babelHelpers.classCallCheck(this, qbVYF);
-      return babelHelpers.possibleConstructorReturn(this, (qbVYF.__proto__ || Object.getPrototypeOf(qbVYF)).apply(this, arguments));
+    function SuMjj() {
+      babelHelpers.classCallCheck(this, SuMjj);
+      return babelHelpers.possibleConstructorReturn(this, (SuMjj.__proto__ || Object.getPrototypeOf(SuMjj)).apply(this, arguments));
     }
 
-    return qbVYF;
+    return SuMjj;
   }(Component);
 
-  Soy.register(qbVYF, templates);
+  Soy.register(SuMjj, templates);
   this['metalNamed']['nodejs'] = this['metalNamed']['nodejs'] || {};
-  this['metalNamed']['nodejs']['qbVYF'] = qbVYF;
+  this['metalNamed']['nodejs']['SuMjj'] = SuMjj;
   this['metalNamed']['nodejs']['templates'] = templates;
   this['metal']['nodejs'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['nodejs'];
+
+  var SuMjj = function (_Component) {
+    babelHelpers.inherits(SuMjj, _Component);
+
+    function SuMjj() {
+      babelHelpers.classCallCheck(this, SuMjj);
+      return babelHelpers.possibleConstructorReturn(this, (SuMjj.__proto__ || Object.getPrototypeOf(SuMjj)).apply(this, arguments));
+    }
+
+    return SuMjj;
+  }(Component);
+
+  ;
+
+  Soy.register(SuMjj, templates);
+
+  this['metal']['SuMjj'] = SuMjj;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from index.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace pageDocsOtherIndex.
+     * @public
+     */
+
+    goog.module('pageDocsOtherIndex.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {}
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'pageDocsOtherIndex.render';
+    }
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $soyweb(opt_data, opt_ignored, opt_ijData) {
+      ie_open('!DOCTYPE', null, null, 'html', '');
+      ie_open('html', null, null, 'lang', 'en');
+      ie_open('head');
+      ie_open('meta', null, null, 'charset', 'UTF-8');
+      ie_close('meta');
+      ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
+      ie_close('meta');
+      ie_close('head');
+      ie_close('html');
+    }
+    exports.soyweb = $soyweb;
+    if (goog.DEBUG) {
+      $soyweb.soyTemplateName = 'pageDocsOtherIndex.soyweb';
+    }
+
+    exports.render.params = [];
+    exports.render.types = {};
+    exports.soyweb.params = ["page"];
+    exports.soyweb.types = { "page": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var pageDocsOtherIndex = function (_Component) {
+    babelHelpers.inherits(pageDocsOtherIndex, _Component);
+
+    function pageDocsOtherIndex() {
+      babelHelpers.classCallCheck(this, pageDocsOtherIndex);
+      return babelHelpers.possibleConstructorReturn(this, (pageDocsOtherIndex.__proto__ || Object.getPrototypeOf(pageDocsOtherIndex)).apply(this, arguments));
+    }
+
+    return pageDocsOtherIndex;
+  }(Component);
+
+  Soy.register(pageDocsOtherIndex, templates);
+  this['metalNamed']['index'] = this['metalNamed']['index'] || {};
+  this['metalNamed']['index']['pageDocsOtherIndex'] = pageDocsOtherIndex;
+  this['metalNamed']['index']['templates'] = templates;
+  this['metal']['index'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from liferay.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace qCXRM.
+     * @public
+     */
+
+    goog.module('qCXRM.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('guide.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1514 = function param1514() {
+        ie_open('h1');
+        itext('Liferay');
+        ie_close('h1');
+        ie_open('h6');
+        var dyn87 = opt_data.page.description;
+        if (typeof dyn87 == 'function') dyn87();else if (dyn87 != null) itext(dyn87);
+        ie_close('h6');
+        ie_open('div', null, null, 'class', 'guide-btn-cta');
+        ie_open('a', null, null, 'class', 'btn btn-accent btn-sm', 'href', 'http://boilerplate-liferay.wedeploy.io', 'target', '_blank');
+        ie_void('span', null, null, 'class', 'icon-16-external');
+        itext('See Live Demo');
+        ie_close('a');
+        ie_close('div');
+        ie_open('div', null, null, 'class', 'guide-aux-cta');
+        itext('or read the ');
+        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-liferay/', 'target', '_blank');
+        itext('source code');
+        ie_close('a');
+        itext('.');
+        ie_close('div');
+        ie_open('article', null, null, 'id', '1');
+        ie_open('h2');
+        itext('Install dependencies');
+        ie_close('h2');
+        ie_open('p');
+        itext('This section assumes that you already have the ');
+        ie_open('strong');
+        itext('WeDeploy CLI');
+        ie_close('strong');
+        itext(' installed and ');
+        ie_open('strong');
+        itext('Docker');
+        ie_close('strong');
+        itext(' running. Make sure to ');
+        ie_open('a', null, null, 'href', '/docs/intro/using-the-command-line.html');
+        itext('visit the installation guide');
+        ie_close('a');
+        itext(' if you need help setting that up.');
+        ie_close('p');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '2');
+        ie_open('h2');
+        itext('Running locally');
+        ie_close('h2');
+        ie_open('ol');
+        ie_open('li');
+        itext('Start local infrastructure:');
+        ie_close('li');
+        $templateAlias2({ code: 'we run', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Clone this repository:');
+        ie_close('li');
+        $templateAlias2({ code: 'git clone https://github.com/wedeploy/boilerplate-liferay.git\ncd boilerplate-liferay', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Link this container with the local infrastructure:');
+        ie_close('li');
+        $templateAlias2({ code: 'we link --project <projectID>', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Now your container is ready to be used:');
+        ie_close('li');
+        $templateAlias2({ code: 'http://liferay.<projectID>.wedeploy.me', mode: 'xml' }, null, opt_ijData);
+        ie_close('ol');
+        ie_close('article');
+        ie_open('article', null, null, 'id', '3');
+        ie_open('h2');
+        itext('Deploying to the cloud');
+        ie_close('h2');
+        ie_open('ol');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'https://github.com/wedeploy/boilerplate-liferay/fork');
+        itext('Fork this repository');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Go to the ');
+        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com');
+        itext('Dashboard');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'http://dashboard.wedeploy.com/projects/create');
+        itext('Create a project');
+        ie_close('a');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('In the sidebar, click on ');
+        ie_open('strong');
+        itext('Deployment');
+        ie_close('strong');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Using your local machine, clone your Github fork:');
+        ie_close('li');
+        $templateAlias2({ code: 'git clone https://github.com/<username>/boilerplate-liferay', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Get into the folder: ');
+        ie_open('code');
+        itext('cd boilerplate-liferay');
+        ie_close('code');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Using the content on ');
+        ie_open('strong');
+        itext('Deployment');
+        ie_close('strong');
+        itext(' page. Add the WeDeploy remote url:');
+        ie_close('li');
+        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<projectID>.git', mode: 'xml' }, null, opt_ijData);
+        ie_open('li');
+        itext('Push your data to wedeploy git server: ');
+        ie_open('code');
+        itext('git push wedeploy master');
+        ie_close('code');
+        itext('.');
+        ie_close('li');
+        ie_open('li');
+        itext('Once you see it in the Dashboard, your container will be ready to be used.');
+        ie_close('li');
+        $templateAlias2({ code: 'http://liferay.<projectID>.wedeploy.io', mode: 'xml' }, null, opt_ijData);
+        ie_close('ol');
+        ie_close('article');
+        ie_open('h2');
+        itext('What\'s next?');
+        ie_close('h2');
+        ie_open('ul');
+        ie_open('li');
+        itext('Now you can start building your liferay based application.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1514 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'qCXRM.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var qCXRM = function (_Component) {
+    babelHelpers.inherits(qCXRM, _Component);
+
+    function qCXRM() {
+      babelHelpers.classCallCheck(this, qCXRM);
+      return babelHelpers.possibleConstructorReturn(this, (qCXRM.__proto__ || Object.getPrototypeOf(qCXRM)).apply(this, arguments));
+    }
+
+    return qCXRM;
+  }(Component);
+
+  Soy.register(qCXRM, templates);
+  this['metalNamed']['liferay'] = this['metalNamed']['liferay'] || {};
+  this['metalNamed']['liferay']['qCXRM'] = qCXRM;
+  this['metalNamed']['liferay']['templates'] = templates;
+  this['metal']['liferay'] = templates;
   /* jshint ignore:end */
 }).call(this);
 'use strict';
@@ -35748,309 +36109,24 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['nodejs'];
+  var templates = this['metal']['liferay'];
 
-  var qbVYF = function (_Component) {
-    babelHelpers.inherits(qbVYF, _Component);
+  var qCXRM = function (_Component) {
+    babelHelpers.inherits(qCXRM, _Component);
 
-    function qbVYF() {
-      babelHelpers.classCallCheck(this, qbVYF);
-      return babelHelpers.possibleConstructorReturn(this, (qbVYF.__proto__ || Object.getPrototypeOf(qbVYF)).apply(this, arguments));
+    function qCXRM() {
+      babelHelpers.classCallCheck(this, qCXRM);
+      return babelHelpers.possibleConstructorReturn(this, (qCXRM.__proto__ || Object.getPrototypeOf(qCXRM)).apply(this, arguments));
     }
 
-    return qbVYF;
+    return qCXRM;
   }(Component);
 
   ;
 
-  Soy.register(qbVYF, templates);
+  Soy.register(qCXRM, templates);
 
-  this['metal']['qbVYF'] = qbVYF;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from deploy.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace DNRyW.
-     * @public
-     */
-
-    goog.module('DNRyW.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1650 = function param1650() {
-        ie_open('h5');
-        itext('Deploying your project');
-        ie_close('h5');
-        ie_open('p');
-        itext('Now its time to push these local files to your WeDeploy project.');
-        ie_close('p');
-        ie_open('p');
-        itext('First, add a git remote. Within ');
-        ie_open('code');
-        itext('tutorial-auth-js');
-        ie_close('code');
-        itext(' on your command line, run ');
-        ie_open('code');
-        itext('git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('Then make a first commit.');
-        ie_close('p');
-        ie_open('ol');
-        ie_open('li');
-        ie_open('code');
-        itext('git add .');
-        ie_close('code');
-        ie_close('li');
-        ie_open('li');
-        ie_open('code');
-        itext('git commit -m "Awesome commit"');
-        ie_close('code');
-        ie_close('li');
-        ie_open('li');
-        ie_open('code');
-        itext('git push wedeploy master');
-        ie_close('code');
-        ie_close('li');
-        ie_close('ol');
-        ie_open('p');
-        itext('Go to the WeDeploy dashboard and select your project. On the right you should see the build log of your recent commit.');
-        ie_close('p');
-        ie_open('p');
-        itext('Once it says "Deploy was successful" go to <project-name>.wedeploy.io.');
-        ie_close('p');
-        ie_open('p');
-        itext('Voil\xE0! Your page is live!');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1650 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'DNRyW.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var DNRyW = function (_Component) {
-    babelHelpers.inherits(DNRyW, _Component);
-
-    function DNRyW() {
-      babelHelpers.classCallCheck(this, DNRyW);
-      return babelHelpers.possibleConstructorReturn(this, (DNRyW.__proto__ || Object.getPrototypeOf(DNRyW)).apply(this, arguments));
-    }
-
-    return DNRyW;
-  }(Component);
-
-  Soy.register(DNRyW, templates);
-  this['metalNamed']['deploy'] = this['metalNamed']['deploy'] || {};
-  this['metalNamed']['deploy']['DNRyW'] = DNRyW;
-  this['metalNamed']['deploy']['templates'] = templates;
-  this['metal']['deploy'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['deploy'];
-
-  var DNRyW = function (_Component) {
-    babelHelpers.inherits(DNRyW, _Component);
-
-    function DNRyW() {
-      babelHelpers.classCallCheck(this, DNRyW);
-      return babelHelpers.possibleConstructorReturn(this, (DNRyW.__proto__ || Object.getPrototypeOf(DNRyW)).apply(this, arguments));
-    }
-
-    return DNRyW;
-  }(Component);
-
-  ;
-
-  Soy.register(DNRyW, templates);
-
-  this['metal']['DNRyW'] = DNRyW;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from email-and-password.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace DhuHW.
-     * @public
-     */
-
-    goog.module('DhuHW.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1659 = function param1659() {
-        ie_open('h5');
-        itext('Adding Email and Password');
-        ie_close('h5');
-        ie_open('p');
-        itext('Now that we have Auth initialized on our project, we need to add a script for our email and password login. Underneath the previous script in ');
-        ie_open('code');
-        itext('main.js');
-        ie_close('code');
-        itext(', paste:');
-        ie_close('p');
-        $templateAlias2({ code: 'function signInWithEmailAndPassword() {\n    auth.signInWithEmailAndPassword(signIn.email.value, signIn.password.value)\n    .then(function() {\n        alert(\'Sign-in successfully.\');\n        signIn.reset();\n    })\n    .catch(function() {\n        alert(\'Sign-in failed.\');\n        signIn.reset();\n    });\n}', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        ie_open('code');
-        itext('signInWithEmailAndPassword');
-        ie_close('code');
-        itext(' is part of the WeDeploy Auth API that allows you to set form inputs as the email and password values of the authentication.');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1659 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'DhuHW.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var DhuHW = function (_Component) {
-    babelHelpers.inherits(DhuHW, _Component);
-
-    function DhuHW() {
-      babelHelpers.classCallCheck(this, DhuHW);
-      return babelHelpers.possibleConstructorReturn(this, (DhuHW.__proto__ || Object.getPrototypeOf(DhuHW)).apply(this, arguments));
-    }
-
-    return DhuHW;
-  }(Component);
-
-  Soy.register(DhuHW, templates);
-  this['metalNamed']['email-and-password'] = this['metalNamed']['email-and-password'] || {};
-  this['metalNamed']['email-and-password']['DhuHW'] = DhuHW;
-  this['metalNamed']['email-and-password']['templates'] = templates;
-  this['metal']['email-and-password'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['email-and-password'];
-
-  var DhuHW = function (_Component) {
-    babelHelpers.inherits(DhuHW, _Component);
-
-    function DhuHW() {
-      babelHelpers.classCallCheck(this, DhuHW);
-      return babelHelpers.possibleConstructorReturn(this, (DhuHW.__proto__ || Object.getPrototypeOf(DhuHW)).apply(this, arguments));
-    }
-
-    return DhuHW;
-  }(Component);
-
-  ;
-
-  Soy.register(DhuHW, templates);
-
-  this['metal']['DhuHW'] = DhuHW;
+  this['metal']['qCXRM'] = qCXRM;
 }).call(this);
 'use strict';
 
@@ -36066,11 +36142,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace ITKzH.
+     * @fileoverview Templates in namespace AIqBK.
      * @public
      */
 
-    goog.module('ITKzH.incrementaldom');
+    goog.module('AIqBK.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36103,7 +36179,7 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1701 = function param1701() {
+      var param1727 = function param1727() {
         ie_open('h5');
         itext('Adding Google');
         ie_close('h5');
@@ -36127,11 +36203,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1701 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1727 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'ITKzH.render';
+      $render.soyTemplateName = 'AIqBK.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36140,20 +36216,20 @@ babelHelpers;
     return exports;
   });
 
-  var ITKzH = function (_Component) {
-    babelHelpers.inherits(ITKzH, _Component);
+  var AIqBK = function (_Component) {
+    babelHelpers.inherits(AIqBK, _Component);
 
-    function ITKzH() {
-      babelHelpers.classCallCheck(this, ITKzH);
-      return babelHelpers.possibleConstructorReturn(this, (ITKzH.__proto__ || Object.getPrototypeOf(ITKzH)).apply(this, arguments));
+    function AIqBK() {
+      babelHelpers.classCallCheck(this, AIqBK);
+      return babelHelpers.possibleConstructorReturn(this, (AIqBK.__proto__ || Object.getPrototypeOf(AIqBK)).apply(this, arguments));
     }
 
-    return ITKzH;
+    return AIqBK;
   }(Component);
 
-  Soy.register(ITKzH, templates);
+  Soy.register(AIqBK, templates);
   this['metalNamed']['google'] = this['metalNamed']['google'] || {};
-  this['metalNamed']['google']['ITKzH'] = ITKzH;
+  this['metalNamed']['google']['AIqBK'] = AIqBK;
   this['metalNamed']['google']['templates'] = templates;
   this['metal']['google'] = templates;
   /* jshint ignore:end */
@@ -36165,22 +36241,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['google'];
 
-  var ITKzH = function (_Component) {
-    babelHelpers.inherits(ITKzH, _Component);
+  var AIqBK = function (_Component) {
+    babelHelpers.inherits(AIqBK, _Component);
 
-    function ITKzH() {
-      babelHelpers.classCallCheck(this, ITKzH);
-      return babelHelpers.possibleConstructorReturn(this, (ITKzH.__proto__ || Object.getPrototypeOf(ITKzH)).apply(this, arguments));
+    function AIqBK() {
+      babelHelpers.classCallCheck(this, AIqBK);
+      return babelHelpers.possibleConstructorReturn(this, (AIqBK.__proto__ || Object.getPrototypeOf(AIqBK)).apply(this, arguments));
     }
 
-    return ITKzH;
+    return AIqBK;
   }(Component);
 
   ;
 
-  Soy.register(ITKzH, templates);
+  Soy.register(AIqBK, templates);
 
-  this['metal']['ITKzH'] = ITKzH;
+  this['metal']['AIqBK'] = AIqBK;
 }).call(this);
 'use strict';
 
@@ -36192,15 +36268,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from test.soy.
+    // This file was automatically generated from clone-sample.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace YewDA.
+     * @fileoverview Templates in namespace DUHIZ.
      * @public
      */
 
-    goog.module('YewDA.incrementaldom');
+    goog.module('DUHIZ.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36233,7 +36309,726 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1742 = function param1742() {
+      var param1662 = function param1662() {
+        ie_open('h5');
+        itext('Cloning the sample repo');
+        ie_close('h5');
+        ie_open('p');
+        itext('To start, you need to create a new project on your WeDeploy dashboard, if you have not already (trying to migrate this tutorial with other tutorials will result in file conflict).');
+        ie_close('p');
+        ie_open('p');
+        itext('Next we will download a sample repo with the necessary files to get us started.');
+        ie_close('p');
+        ie_open('p');
+        itext('To download, run this command in your terminal:');
+        ie_close('p');
+        $templateAlias2({ code: 'git clone https://github.com/jonnilundy/tutorial-auth-js.git', mode: 'text' }, null, opt_ijData);
+        ie_open('p');
+        itext('**After the tutorial, you are free to push your own files or start from scratch with a new project.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1662 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'DUHIZ.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var DUHIZ = function (_Component) {
+    babelHelpers.inherits(DUHIZ, _Component);
+
+    function DUHIZ() {
+      babelHelpers.classCallCheck(this, DUHIZ);
+      return babelHelpers.possibleConstructorReturn(this, (DUHIZ.__proto__ || Object.getPrototypeOf(DUHIZ)).apply(this, arguments));
+    }
+
+    return DUHIZ;
+  }(Component);
+
+  Soy.register(DUHIZ, templates);
+  this['metalNamed']['clone-sample'] = this['metalNamed']['clone-sample'] || {};
+  this['metalNamed']['clone-sample']['DUHIZ'] = DUHIZ;
+  this['metalNamed']['clone-sample']['templates'] = templates;
+  this['metal']['clone-sample'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['clone-sample'];
+
+  var DUHIZ = function (_Component) {
+    babelHelpers.inherits(DUHIZ, _Component);
+
+    function DUHIZ() {
+      babelHelpers.classCallCheck(this, DUHIZ);
+      return babelHelpers.possibleConstructorReturn(this, (DUHIZ.__proto__ || Object.getPrototypeOf(DUHIZ)).apply(this, arguments));
+    }
+
+    return DUHIZ;
+  }(Component);
+
+  ;
+
+  Soy.register(DUHIZ, templates);
+
+  this['metal']['DUHIZ'] = DUHIZ;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from getting-started.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace HrsyH.
+     * @public
+     */
+
+    goog.module('HrsyH.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1699 = function param1699() {
+        ie_open('h5');
+        itext('Getting Started');
+        ie_close('h5');
+        ie_open('p');
+        itext('You are here because you just finished installing the Auth service on your project. In this tutorial you will learn how to setup a test environment for your project using our sample files and how to deploy the Auth service using Javascript.');
+        ie_close('p');
+        ie_open('h6');
+        itext('What to expect');
+        ie_close('h6');
+        ie_open('ul', null, null, 'class', 'checklist');
+        ie_open('li');
+        itext('How to setup your machine as a local dev environment');
+        ie_close('li');
+        ie_open('li');
+        itext('How to create the necessary files for your Auth container');
+        ie_close('li');
+        ie_open('li');
+        itext('How to setup email/password authentication');
+        ie_close('li');
+        ie_open('li');
+        itext('How to push your service into deployment');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('h6');
+        itext('What you\'ll need');
+        ie_close('h6');
+        ie_open('ul');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/');
+        itext('Git');
+        ie_close('a');
+        itext(' (download for ');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/download/linux');
+        itext('Linux');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/download/mac');
+        itext('macOS');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'https://git-scm.com/download/win');
+        itext('Windows');
+        ie_close('a');
+        itext(')');
+        ie_close('li');
+        ie_open('li');
+        ie_open('a', null, null, 'href', 'https://www.docker.com/');
+        itext('Docker');
+        ie_close('a');
+        itext(' (download for ');
+        ie_open('a', null, null, 'href', 'https://docs.docker.com/engine/installation/linux/');
+        itext('Linux');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'macOS');
+        itext('macOS');
+        ie_close('a');
+        itext(', ');
+        ie_open('a', null, null, 'href', 'https://download.docker.com/win/stable/InstallDocker.msi');
+        itext('Windows');
+        ie_close('a');
+        itext(')');
+        ie_close('li');
+        ie_open('li');
+        itext('WeDeploy CLI');
+        ie_open('ul');
+        ie_open('li');
+        itext('For linux systems, open your Terminal and run:');
+        ie_close('li');
+        ie_close('ul');
+        $templateAlias2({ code: 'curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash', mode: 'text' }, null, opt_ijData);
+        ie_open('ul');
+        ie_open('li');
+        itext('For Windows, you probably want the ');
+        ie_open('a', null, null, 'href', 'https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.msi');
+        itext('Windows amd64 installer');
+        ie_close('a');
+        ie_close('li');
+        ie_open('li');
+        itext('For other systems, cehck the list of ');
+        ie_open('a', null, null, 'href', 'https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.zip');
+        itext('all builds available');
+        ie_close('a');
+        ie_close('li');
+        ie_close('ul');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1699 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'HrsyH.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var HrsyH = function (_Component) {
+    babelHelpers.inherits(HrsyH, _Component);
+
+    function HrsyH() {
+      babelHelpers.classCallCheck(this, HrsyH);
+      return babelHelpers.possibleConstructorReturn(this, (HrsyH.__proto__ || Object.getPrototypeOf(HrsyH)).apply(this, arguments));
+    }
+
+    return HrsyH;
+  }(Component);
+
+  Soy.register(HrsyH, templates);
+  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
+  this['metalNamed']['getting-started']['HrsyH'] = HrsyH;
+  this['metalNamed']['getting-started']['templates'] = templates;
+  this['metal']['getting-started'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['getting-started'];
+
+  var HrsyH = function (_Component) {
+    babelHelpers.inherits(HrsyH, _Component);
+
+    function HrsyH() {
+      babelHelpers.classCallCheck(this, HrsyH);
+      return babelHelpers.possibleConstructorReturn(this, (HrsyH.__proto__ || Object.getPrototypeOf(HrsyH)).apply(this, arguments));
+    }
+
+    return HrsyH;
+  }(Component);
+
+  ;
+
+  Soy.register(HrsyH, templates);
+
+  this['metal']['HrsyH'] = HrsyH;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from email-and-password.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace JDWrU.
+     * @public
+     */
+
+    goog.module('JDWrU.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1685 = function param1685() {
+        ie_open('h5');
+        itext('Adding Email and Password');
+        ie_close('h5');
+        ie_open('p');
+        itext('Now that we have Auth initialized on our project, we need to add a script for our email and password login. Underneath the previous script in ');
+        ie_open('code');
+        itext('main.js');
+        ie_close('code');
+        itext(', paste:');
+        ie_close('p');
+        $templateAlias2({ code: 'function signInWithEmailAndPassword() {\n    auth.signInWithEmailAndPassword(signIn.email.value, signIn.password.value)\n    .then(function() {\n        alert(\'Sign-in successfully.\');\n        signIn.reset();\n    })\n    .catch(function() {\n        alert(\'Sign-in failed.\');\n        signIn.reset();\n    });\n}', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        ie_open('code');
+        itext('signInWithEmailAndPassword');
+        ie_close('code');
+        itext(' is part of the WeDeploy Auth API that allows you to set form inputs as the email and password values of the authentication.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1685 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'JDWrU.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var JDWrU = function (_Component) {
+    babelHelpers.inherits(JDWrU, _Component);
+
+    function JDWrU() {
+      babelHelpers.classCallCheck(this, JDWrU);
+      return babelHelpers.possibleConstructorReturn(this, (JDWrU.__proto__ || Object.getPrototypeOf(JDWrU)).apply(this, arguments));
+    }
+
+    return JDWrU;
+  }(Component);
+
+  Soy.register(JDWrU, templates);
+  this['metalNamed']['email-and-password'] = this['metalNamed']['email-and-password'] || {};
+  this['metalNamed']['email-and-password']['JDWrU'] = JDWrU;
+  this['metalNamed']['email-and-password']['templates'] = templates;
+  this['metal']['email-and-password'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['email-and-password'];
+
+  var JDWrU = function (_Component) {
+    babelHelpers.inherits(JDWrU, _Component);
+
+    function JDWrU() {
+      babelHelpers.classCallCheck(this, JDWrU);
+      return babelHelpers.possibleConstructorReturn(this, (JDWrU.__proto__ || Object.getPrototypeOf(JDWrU)).apply(this, arguments));
+    }
+
+    return JDWrU;
+  }(Component);
+
+  ;
+
+  Soy.register(JDWrU, templates);
+
+  this['metal']['JDWrU'] = JDWrU;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from github.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace JKHWV.
+     * @public
+     */
+
+    goog.module('JKHWV.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1713 = function param1713() {
+        ie_open('h5');
+        itext('Adding GitHub');
+        ie_close('h5');
+        ie_open('p');
+        itext('You added email and password authentication but what if you want to give your users the option of logging in with their GitHub credentials? Underneath the email and password script in ');
+        ie_open('code');
+        itext('main.js');
+        ie_close('code');
+        itext(', paste:');
+        ie_close('p');
+        $templateAlias2({ code: 'function signInWithGithub() {\n    var githubProvider = new auth.provider.Github();\n    githubProvider.setProviderScope(\'user:email\');\n    auth.signInWithRedirect(githubProvider);\n}', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        ie_open('code');
+        itext('signInWithRedirect');
+        ie_close('code');
+        itext(' allows the user to be redirected to GitHub in order to verify their login information and then redirected back to your app\'s authentication.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1713 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'JKHWV.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var JKHWV = function (_Component) {
+    babelHelpers.inherits(JKHWV, _Component);
+
+    function JKHWV() {
+      babelHelpers.classCallCheck(this, JKHWV);
+      return babelHelpers.possibleConstructorReturn(this, (JKHWV.__proto__ || Object.getPrototypeOf(JKHWV)).apply(this, arguments));
+    }
+
+    return JKHWV;
+  }(Component);
+
+  Soy.register(JKHWV, templates);
+  this['metalNamed']['github'] = this['metalNamed']['github'] || {};
+  this['metalNamed']['github']['JKHWV'] = JKHWV;
+  this['metalNamed']['github']['templates'] = templates;
+  this['metal']['github'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['github'];
+
+  var JKHWV = function (_Component) {
+    babelHelpers.inherits(JKHWV, _Component);
+
+    function JKHWV() {
+      babelHelpers.classCallCheck(this, JKHWV);
+      return babelHelpers.possibleConstructorReturn(this, (JKHWV.__proto__ || Object.getPrototypeOf(JKHWV)).apply(this, arguments));
+    }
+
+    return JKHWV;
+  }(Component);
+
+  ;
+
+  Soy.register(JKHWV, templates);
+
+  this['metal']['JKHWV'] = JKHWV;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from initialize-auth.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace RNFwl.
+     * @public
+     */
+
+    goog.module('RNFwl.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1745 = function param1745() {
+        ie_open('h5');
+        itext('Initializing the Auth Service');
+        ie_close('h5');
+        ie_open('p');
+        itext('Now that we have the sample files cloned and the local environemnt running, we can initialize our Authentication.');
+        ie_close('p');
+        ie_open('p');
+        itext('First go to the ');
+        ie_open('code');
+        itext('tutorial-auth-js');
+        ie_close('code');
+        itext(' directory that we cloned and create a file named ');
+        ie_open('code');
+        itext('main.js');
+        ie_close('code');
+        itext('. This file will contain our Authentication scripts. Inside of ');
+        ie_open('code');
+        itext('main.js');
+        ie_close('code');
+        itext(', add:');
+        ie_close('p');
+        $templateAlias2({ code: 'WeDeploy.auth(\'auth.tutorial-auth-js.wedeploy.io\')', mode: 'javascript' }, null, opt_ijData);
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1745 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'RNFwl.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var RNFwl = function (_Component) {
+    babelHelpers.inherits(RNFwl, _Component);
+
+    function RNFwl() {
+      babelHelpers.classCallCheck(this, RNFwl);
+      return babelHelpers.possibleConstructorReturn(this, (RNFwl.__proto__ || Object.getPrototypeOf(RNFwl)).apply(this, arguments));
+    }
+
+    return RNFwl;
+  }(Component);
+
+  Soy.register(RNFwl, templates);
+  this['metalNamed']['initialize-auth'] = this['metalNamed']['initialize-auth'] || {};
+  this['metalNamed']['initialize-auth']['RNFwl'] = RNFwl;
+  this['metalNamed']['initialize-auth']['templates'] = templates;
+  this['metal']['initialize-auth'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['initialize-auth'];
+
+  var RNFwl = function (_Component) {
+    babelHelpers.inherits(RNFwl, _Component);
+
+    function RNFwl() {
+      babelHelpers.classCallCheck(this, RNFwl);
+      return babelHelpers.possibleConstructorReturn(this, (RNFwl.__proto__ || Object.getPrototypeOf(RNFwl)).apply(this, arguments));
+    }
+
+    return RNFwl;
+  }(Component);
+
+  ;
+
+  Soy.register(RNFwl, templates);
+
+  this['metal']['RNFwl'] = RNFwl;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from test.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace ZOVYF.
+     * @public
+     */
+
+    goog.module('ZOVYF.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1768 = function param1768() {
         ie_open('h5');
         itext('Testing the Auth');
         ie_close('h5');
@@ -36261,11 +37056,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1742 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1768 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'YewDA.render';
+      $render.soyTemplateName = 'ZOVYF.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36274,20 +37069,20 @@ babelHelpers;
     return exports;
   });
 
-  var YewDA = function (_Component) {
-    babelHelpers.inherits(YewDA, _Component);
+  var ZOVYF = function (_Component) {
+    babelHelpers.inherits(ZOVYF, _Component);
 
-    function YewDA() {
-      babelHelpers.classCallCheck(this, YewDA);
-      return babelHelpers.possibleConstructorReturn(this, (YewDA.__proto__ || Object.getPrototypeOf(YewDA)).apply(this, arguments));
+    function ZOVYF() {
+      babelHelpers.classCallCheck(this, ZOVYF);
+      return babelHelpers.possibleConstructorReturn(this, (ZOVYF.__proto__ || Object.getPrototypeOf(ZOVYF)).apply(this, arguments));
     }
 
-    return YewDA;
+    return ZOVYF;
   }(Component);
 
-  Soy.register(YewDA, templates);
+  Soy.register(ZOVYF, templates);
   this['metalNamed']['test'] = this['metalNamed']['test'] || {};
-  this['metalNamed']['test']['YewDA'] = YewDA;
+  this['metalNamed']['test']['ZOVYF'] = ZOVYF;
   this['metalNamed']['test']['templates'] = templates;
   this['metal']['test'] = templates;
   /* jshint ignore:end */
@@ -36299,22 +37094,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['test'];
 
-  var YewDA = function (_Component) {
-    babelHelpers.inherits(YewDA, _Component);
+  var ZOVYF = function (_Component) {
+    babelHelpers.inherits(ZOVYF, _Component);
 
-    function YewDA() {
-      babelHelpers.classCallCheck(this, YewDA);
-      return babelHelpers.possibleConstructorReturn(this, (YewDA.__proto__ || Object.getPrototypeOf(YewDA)).apply(this, arguments));
+    function ZOVYF() {
+      babelHelpers.classCallCheck(this, ZOVYF);
+      return babelHelpers.possibleConstructorReturn(this, (ZOVYF.__proto__ || Object.getPrototypeOf(ZOVYF)).apply(this, arguments));
     }
 
-    return YewDA;
+    return ZOVYF;
   }(Component);
 
   ;
 
-  Soy.register(YewDA, templates);
+  Soy.register(ZOVYF, templates);
 
-  this['metal']['YewDA'] = YewDA;
+  this['metal']['ZOVYF'] = ZOVYF;
 }).call(this);
 'use strict';
 
@@ -36451,15 +37246,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from clone-sample.soy.
+    // This file was automatically generated from deploy.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace uOcFc.
+     * @fileoverview Templates in namespace tyGga.
      * @public
      */
 
-    goog.module('uOcFc.incrementaldom');
+    goog.module('tyGga.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -36480,8 +37275,6 @@ babelHelpers;
     var itext = IncrementalDom.text;
     var iattr = IncrementalDom.attr;
 
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
     var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
 
     /**
@@ -36492,423 +37285,63 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1636 = function param1636() {
+      var param1676 = function param1676() {
         ie_open('h5');
-        itext('Cloning the sample repo');
+        itext('Deploying your project');
         ie_close('h5');
         ie_open('p');
-        itext('To start, you need to create a new project on your WeDeploy dashboard, if you have not already (trying to migrate this tutorial with other tutorials will result in file conflict).');
+        itext('Now its time to push these local files to your WeDeploy project.');
         ie_close('p');
         ie_open('p');
-        itext('Next we will download a sample repo with the necessary files to get us started.');
-        ie_close('p');
-        ie_open('p');
-        itext('To download, run this command in your terminal:');
-        ie_close('p');
-        $templateAlias2({ code: 'git clone https://github.com/jonnilundy/tutorial-auth-js.git', mode: 'text' }, null, opt_ijData);
-        ie_open('p');
-        itext('**After the tutorial, you are free to push your own files or start from scratch with a new project.');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1636 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'uOcFc.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var uOcFc = function (_Component) {
-    babelHelpers.inherits(uOcFc, _Component);
-
-    function uOcFc() {
-      babelHelpers.classCallCheck(this, uOcFc);
-      return babelHelpers.possibleConstructorReturn(this, (uOcFc.__proto__ || Object.getPrototypeOf(uOcFc)).apply(this, arguments));
-    }
-
-    return uOcFc;
-  }(Component);
-
-  Soy.register(uOcFc, templates);
-  this['metalNamed']['clone-sample'] = this['metalNamed']['clone-sample'] || {};
-  this['metalNamed']['clone-sample']['uOcFc'] = uOcFc;
-  this['metalNamed']['clone-sample']['templates'] = templates;
-  this['metal']['clone-sample'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from getting-started.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace ooaQV.
-     * @public
-     */
-
-    goog.module('ooaQV.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1673 = function param1673() {
-        ie_open('h5');
-        itext('Getting Started');
-        ie_close('h5');
-        ie_open('p');
-        itext('You are here because you just finished installing the Auth service on your project. In this tutorial you will learn how to setup a test environment for your project using our sample files and how to deploy the Auth service using Javascript.');
-        ie_close('p');
-        ie_open('h6');
-        itext('What to expect');
-        ie_close('h6');
-        ie_open('ul', null, null, 'class', 'checklist');
-        ie_open('li');
-        itext('How to setup your machine as a local dev environment');
-        ie_close('li');
-        ie_open('li');
-        itext('How to create the necessary files for your Auth container');
-        ie_close('li');
-        ie_open('li');
-        itext('How to setup email/password authentication');
-        ie_close('li');
-        ie_open('li');
-        itext('How to push your service into deployment');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('h6');
-        itext('What you\'ll need');
-        ie_close('h6');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://git-scm.com/');
-        itext('Git');
-        ie_close('a');
-        itext(' (download for ');
-        ie_open('a', null, null, 'href', 'https://git-scm.com/download/linux');
-        itext('Linux');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null, 'href', 'https://git-scm.com/download/mac');
-        itext('macOS');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null, 'href', 'https://git-scm.com/download/win');
-        itext('Windows');
-        ie_close('a');
-        itext(')');
-        ie_close('li');
-        ie_open('li');
-        ie_open('a', null, null, 'href', 'https://www.docker.com/');
-        itext('Docker');
-        ie_close('a');
-        itext(' (download for ');
-        ie_open('a', null, null, 'href', 'https://docs.docker.com/engine/installation/linux/');
-        itext('Linux');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null, 'href', 'macOS');
-        itext('macOS');
-        ie_close('a');
-        itext(', ');
-        ie_open('a', null, null, 'href', 'https://download.docker.com/win/stable/InstallDocker.msi');
-        itext('Windows');
-        ie_close('a');
-        itext(')');
-        ie_close('li');
-        ie_open('li');
-        itext('WeDeploy CLI');
-        ie_open('ul');
-        ie_open('li');
-        itext('For linux systems, open your Terminal and run:');
-        ie_close('li');
-        ie_close('ul');
-        $templateAlias2({ code: 'curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash', mode: 'text' }, null, opt_ijData);
-        ie_open('ul');
-        ie_open('li');
-        itext('For Windows, you probably want the ');
-        ie_open('a', null, null, 'href', 'https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.msi');
-        itext('Windows amd64 installer');
-        ie_close('a');
-        ie_close('li');
-        ie_open('li');
-        itext('For other systems, cehck the list of ');
-        ie_open('a', null, null, 'href', 'https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.zip');
-        itext('all builds available');
-        ie_close('a');
-        ie_close('li');
-        ie_close('ul');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1673 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'ooaQV.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var ooaQV = function (_Component) {
-    babelHelpers.inherits(ooaQV, _Component);
-
-    function ooaQV() {
-      babelHelpers.classCallCheck(this, ooaQV);
-      return babelHelpers.possibleConstructorReturn(this, (ooaQV.__proto__ || Object.getPrototypeOf(ooaQV)).apply(this, arguments));
-    }
-
-    return ooaQV;
-  }(Component);
-
-  Soy.register(ooaQV, templates);
-  this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['ooaQV'] = ooaQV;
-  this['metalNamed']['getting-started']['templates'] = templates;
-  this['metal']['getting-started'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from github.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace jtDkU.
-     * @public
-     */
-
-    goog.module('jtDkU.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1687 = function param1687() {
-        ie_open('h5');
-        itext('Adding GitHub');
-        ie_close('h5');
-        ie_open('p');
-        itext('You added email and password authentication but what if you want to give your users the option of logging in with their GitHub credentials? Underneath the email and password script in ');
-        ie_open('code');
-        itext('main.js');
-        ie_close('code');
-        itext(', paste:');
-        ie_close('p');
-        $templateAlias2({ code: 'function signInWithGithub() {\n    var githubProvider = new auth.provider.Github();\n    githubProvider.setProviderScope(\'user:email\');\n    auth.signInWithRedirect(githubProvider);\n}', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        ie_open('code');
-        itext('signInWithRedirect');
-        ie_close('code');
-        itext(' allows the user to be redirected to GitHub in order to verify their login information and then redirected back to your app\'s authentication.');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1687 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'jtDkU.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var jtDkU = function (_Component) {
-    babelHelpers.inherits(jtDkU, _Component);
-
-    function jtDkU() {
-      babelHelpers.classCallCheck(this, jtDkU);
-      return babelHelpers.possibleConstructorReturn(this, (jtDkU.__proto__ || Object.getPrototypeOf(jtDkU)).apply(this, arguments));
-    }
-
-    return jtDkU;
-  }(Component);
-
-  Soy.register(jtDkU, templates);
-  this['metalNamed']['github'] = this['metalNamed']['github'] || {};
-  this['metalNamed']['github']['jtDkU'] = jtDkU;
-  this['metalNamed']['github']['templates'] = templates;
-  this['metal']['github'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from initialize-auth.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace hFzTx.
-     * @public
-     */
-
-    goog.module('hFzTx.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1719 = function param1719() {
-        ie_open('h5');
-        itext('Initializing the Auth Service');
-        ie_close('h5');
-        ie_open('p');
-        itext('Now that we have the sample files cloned and the local environemnt running, we can initialize our Authentication.');
-        ie_close('p');
-        ie_open('p');
-        itext('First go to the ');
+        itext('First, add a git remote. Within ');
         ie_open('code');
         itext('tutorial-auth-js');
         ie_close('code');
-        itext(' directory that we cloned and create a file named ');
+        itext(' on your command line, run ');
         ie_open('code');
-        itext('main.js');
+        itext('git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git');
         ie_close('code');
-        itext('. This file will contain our Authentication scripts. Inside of ');
-        ie_open('code');
-        itext('main.js');
-        ie_close('code');
-        itext(', add:');
+        itext('.');
         ie_close('p');
-        $templateAlias2({ code: 'WeDeploy.auth(\'auth.tutorial-auth-js.wedeploy.io\')', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('Then make a first commit.');
+        ie_close('p');
+        ie_open('ol');
+        ie_open('li');
+        ie_open('code');
+        itext('git add .');
+        ie_close('code');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('git commit -m "Awesome commit"');
+        ie_close('code');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('git push wedeploy master');
+        ie_close('code');
+        ie_close('li');
+        ie_close('ol');
+        ie_open('p');
+        itext('Go to the WeDeploy dashboard and select your project. On the right you should see the build log of your recent commit.');
+        ie_close('p');
+        ie_open('p');
+        itext('Once it says "Deploy was successful" go to <project-name>.wedeploy.io.');
+        ie_close('p');
+        ie_open('p');
+        itext('Voil\xE0! Your page is live!');
+        ie_close('p');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
         ie_close('input');
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1719 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1676 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'hFzTx.render';
+      $render.soyTemplateName = 'tyGga.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -36917,71 +37350,23 @@ babelHelpers;
     return exports;
   });
 
-  var hFzTx = function (_Component) {
-    babelHelpers.inherits(hFzTx, _Component);
+  var tyGga = function (_Component) {
+    babelHelpers.inherits(tyGga, _Component);
 
-    function hFzTx() {
-      babelHelpers.classCallCheck(this, hFzTx);
-      return babelHelpers.possibleConstructorReturn(this, (hFzTx.__proto__ || Object.getPrototypeOf(hFzTx)).apply(this, arguments));
+    function tyGga() {
+      babelHelpers.classCallCheck(this, tyGga);
+      return babelHelpers.possibleConstructorReturn(this, (tyGga.__proto__ || Object.getPrototypeOf(tyGga)).apply(this, arguments));
     }
 
-    return hFzTx;
+    return tyGga;
   }(Component);
 
-  Soy.register(hFzTx, templates);
-  this['metalNamed']['initialize-auth'] = this['metalNamed']['initialize-auth'] || {};
-  this['metalNamed']['initialize-auth']['hFzTx'] = hFzTx;
-  this['metalNamed']['initialize-auth']['templates'] = templates;
-  this['metal']['initialize-auth'] = templates;
+  Soy.register(tyGga, templates);
+  this['metalNamed']['deploy'] = this['metalNamed']['deploy'] || {};
+  this['metalNamed']['deploy']['tyGga'] = tyGga;
+  this['metalNamed']['deploy']['templates'] = templates;
+  this['metal']['deploy'] = templates;
   /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['initialize-auth'];
-
-  var hFzTx = function (_Component) {
-    babelHelpers.inherits(hFzTx, _Component);
-
-    function hFzTx() {
-      babelHelpers.classCallCheck(this, hFzTx);
-      return babelHelpers.possibleConstructorReturn(this, (hFzTx.__proto__ || Object.getPrototypeOf(hFzTx)).apply(this, arguments));
-    }
-
-    return hFzTx;
-  }(Component);
-
-  ;
-
-  Soy.register(hFzTx, templates);
-
-  this['metal']['hFzTx'] = hFzTx;
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['github'];
-
-  var jtDkU = function (_Component) {
-    babelHelpers.inherits(jtDkU, _Component);
-
-    function jtDkU() {
-      babelHelpers.classCallCheck(this, jtDkU);
-      return babelHelpers.possibleConstructorReturn(this, (jtDkU.__proto__ || Object.getPrototypeOf(jtDkU)).apply(this, arguments));
-    }
-
-    return jtDkU;
-  }(Component);
-
-  ;
-
-  Soy.register(jtDkU, templates);
-
-  this['metal']['jtDkU'] = jtDkU;
 }).call(this);
 'use strict';
 
@@ -36997,11 +37382,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace lIrjH.
+     * @fileoverview Templates in namespace zBdVU.
      * @public
      */
 
-    goog.module('lIrjH.incrementaldom');
+    goog.module('zBdVU.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37032,7 +37417,7 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1733 = function param1733() {
+      var param1759 = function param1759() {
         ie_open('h5');
         itext('Running locally');
         ie_close('h5');
@@ -37062,11 +37447,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1733 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1759 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'lIrjH.render';
+      $render.soyTemplateName = 'zBdVU.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37075,20 +37460,20 @@ babelHelpers;
     return exports;
   });
 
-  var lIrjH = function (_Component) {
-    babelHelpers.inherits(lIrjH, _Component);
+  var zBdVU = function (_Component) {
+    babelHelpers.inherits(zBdVU, _Component);
 
-    function lIrjH() {
-      babelHelpers.classCallCheck(this, lIrjH);
-      return babelHelpers.possibleConstructorReturn(this, (lIrjH.__proto__ || Object.getPrototypeOf(lIrjH)).apply(this, arguments));
+    function zBdVU() {
+      babelHelpers.classCallCheck(this, zBdVU);
+      return babelHelpers.possibleConstructorReturn(this, (zBdVU.__proto__ || Object.getPrototypeOf(zBdVU)).apply(this, arguments));
     }
 
-    return lIrjH;
+    return zBdVU;
   }(Component);
 
-  Soy.register(lIrjH, templates);
+  Soy.register(zBdVU, templates);
   this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
-  this['metalNamed']['running-locally']['lIrjH'] = lIrjH;
+  this['metalNamed']['running-locally']['zBdVU'] = zBdVU;
   this['metalNamed']['running-locally']['templates'] = templates;
   this['metal']['running-locally'] = templates;
   /* jshint ignore:end */
@@ -37098,72 +37483,48 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
+  var templates = this['metal']['deploy'];
+
+  var tyGga = function (_Component) {
+    babelHelpers.inherits(tyGga, _Component);
+
+    function tyGga() {
+      babelHelpers.classCallCheck(this, tyGga);
+      return babelHelpers.possibleConstructorReturn(this, (tyGga.__proto__ || Object.getPrototypeOf(tyGga)).apply(this, arguments));
+    }
+
+    return tyGga;
+  }(Component);
+
+  ;
+
+  Soy.register(tyGga, templates);
+
+  this['metal']['tyGga'] = tyGga;
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
   var templates = this['metal']['running-locally'];
 
-  var lIrjH = function (_Component) {
-    babelHelpers.inherits(lIrjH, _Component);
+  var zBdVU = function (_Component) {
+    babelHelpers.inherits(zBdVU, _Component);
 
-    function lIrjH() {
-      babelHelpers.classCallCheck(this, lIrjH);
-      return babelHelpers.possibleConstructorReturn(this, (lIrjH.__proto__ || Object.getPrototypeOf(lIrjH)).apply(this, arguments));
+    function zBdVU() {
+      babelHelpers.classCallCheck(this, zBdVU);
+      return babelHelpers.possibleConstructorReturn(this, (zBdVU.__proto__ || Object.getPrototypeOf(zBdVU)).apply(this, arguments));
     }
 
-    return lIrjH;
+    return zBdVU;
   }(Component);
 
   ;
 
-  Soy.register(lIrjH, templates);
+  Soy.register(zBdVU, templates);
 
-  this['metal']['lIrjH'] = lIrjH;
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['getting-started'];
-
-  var ooaQV = function (_Component) {
-    babelHelpers.inherits(ooaQV, _Component);
-
-    function ooaQV() {
-      babelHelpers.classCallCheck(this, ooaQV);
-      return babelHelpers.possibleConstructorReturn(this, (ooaQV.__proto__ || Object.getPrototypeOf(ooaQV)).apply(this, arguments));
-    }
-
-    return ooaQV;
-  }(Component);
-
-  ;
-
-  Soy.register(ooaQV, templates);
-
-  this['metal']['ooaQV'] = ooaQV;
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['clone-sample'];
-
-  var uOcFc = function (_Component) {
-    babelHelpers.inherits(uOcFc, _Component);
-
-    function uOcFc() {
-      babelHelpers.classCallCheck(this, uOcFc);
-      return babelHelpers.possibleConstructorReturn(this, (uOcFc.__proto__ || Object.getPrototypeOf(uOcFc)).apply(this, arguments));
-    }
-
-    return uOcFc;
-  }(Component);
-
-  ;
-
-  Soy.register(uOcFc, templates);
-
-  this['metal']['uOcFc'] = uOcFc;
+  this['metal']['zBdVU'] = zBdVU;
 }).call(this);
 'use strict';
 
@@ -37175,15 +37536,171 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from add-files.soy.
+    // This file was automatically generated from deploying.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace Bmnxh.
+     * @fileoverview Templates in namespace OTvmv.
      * @public
      */
 
-    goog.module('Bmnxh.incrementaldom');
+    goog.module('OTvmv.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1898 = function param1898() {
+        ie_open('h5');
+        itext('Deploying your project');
+        ie_close('h5');
+        ie_open('p');
+        itext('Now its time to push these local files to your WeDeploy project.');
+        ie_close('p');
+        ie_open('p');
+        itext('First, add a git remote. Within ');
+        ie_open('code');
+        itext('tutorial-data-js');
+        ie_close('code');
+        itext(' on your command line, run ');
+        ie_open('code');
+        itext('git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        itext('Then make a first commit.');
+        ie_close('p');
+        ie_open('ol');
+        ie_open('li');
+        ie_open('code');
+        itext('git add .');
+        ie_close('code');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('git commit -m "Awesome commit"');
+        ie_close('code');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('git push wedeploy master');
+        ie_close('code');
+        ie_close('li');
+        ie_close('ol');
+        ie_open('p');
+        itext('Go to the WeDeploy dashboard and select your project. On the right you should see the build log of your recent commit.');
+        ie_close('p');
+        ie_open('p');
+        itext('Once it says "Deploy was successful" go to <project-name>.wedeploy.io.');
+        ie_close('p');
+        ie_open('p');
+        itext('Voil\xE0! Your page is live!');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1898 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'OTvmv.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var OTvmv = function (_Component) {
+    babelHelpers.inherits(OTvmv, _Component);
+
+    function OTvmv() {
+      babelHelpers.classCallCheck(this, OTvmv);
+      return babelHelpers.possibleConstructorReturn(this, (OTvmv.__proto__ || Object.getPrototypeOf(OTvmv)).apply(this, arguments));
+    }
+
+    return OTvmv;
+  }(Component);
+
+  Soy.register(OTvmv, templates);
+  this['metalNamed']['deploying'] = this['metalNamed']['deploying'] || {};
+  this['metalNamed']['deploying']['OTvmv'] = OTvmv;
+  this['metalNamed']['deploying']['templates'] = templates;
+  this['metal']['deploying'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['deploying'];
+
+  var OTvmv = function (_Component) {
+    babelHelpers.inherits(OTvmv, _Component);
+
+    function OTvmv() {
+      babelHelpers.classCallCheck(this, OTvmv);
+      return babelHelpers.possibleConstructorReturn(this, (OTvmv.__proto__ || Object.getPrototypeOf(OTvmv)).apply(this, arguments));
+    }
+
+    return OTvmv;
+  }(Component);
+
+  ;
+
+  Soy.register(OTvmv, templates);
+
+  this['metal']['OTvmv'] = OTvmv;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from clone-sample.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace VupwW.
+     * @public
+     */
+
+    goog.module('VupwW.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37216,7 +37733,135 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1756 = function param1756() {
+      var param1884 = function param1884() {
+        ie_open('h5');
+        itext('Cloning the sample repo');
+        ie_close('h5');
+        ie_open('p');
+        itext('To start, you need to create a new project on your WeDeploy dashboard, if you have not already (trying to migrate this tutorial with other tutorials will result in file conflict).');
+        ie_close('p');
+        ie_open('p');
+        itext('Next we will download a sample repo with the necessary files to get us started.');
+        ie_close('p');
+        ie_open('p');
+        itext('To download, run this command in your terminal:');
+        ie_close('p');
+        $templateAlias2({ code: 'git clone https://github.com/jonnilundy/tutorial-data-js.git', mode: 'text' }, null, opt_ijData);
+        ie_open('p');
+        itext('After the tutorial, you are free to push your own files or start from scratch with a new project.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1884 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'VupwW.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var VupwW = function (_Component) {
+    babelHelpers.inherits(VupwW, _Component);
+
+    function VupwW() {
+      babelHelpers.classCallCheck(this, VupwW);
+      return babelHelpers.possibleConstructorReturn(this, (VupwW.__proto__ || Object.getPrototypeOf(VupwW)).apply(this, arguments));
+    }
+
+    return VupwW;
+  }(Component);
+
+  Soy.register(VupwW, templates);
+  this['metalNamed']['clone-sample'] = this['metalNamed']['clone-sample'] || {};
+  this['metalNamed']['clone-sample']['VupwW'] = VupwW;
+  this['metalNamed']['clone-sample']['templates'] = templates;
+  this['metal']['clone-sample'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['clone-sample'];
+
+  var VupwW = function (_Component) {
+    babelHelpers.inherits(VupwW, _Component);
+
+    function VupwW() {
+      babelHelpers.classCallCheck(this, VupwW);
+      return babelHelpers.possibleConstructorReturn(this, (VupwW.__proto__ || Object.getPrototypeOf(VupwW)).apply(this, arguments));
+    }
+
+    return VupwW;
+  }(Component);
+
+  ;
+
+  Soy.register(VupwW, templates);
+
+  this['metal']['VupwW'] = VupwW;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from add-files.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace zFSpk.
+     * @public
+     */
+
+    goog.module('zFSpk.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1865 = function param1865() {
         ie_open('h5');
         itext('Create files');
         ie_close('h5');
@@ -37296,11 +37941,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1756 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1865 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'Bmnxh.render';
+      $render.soyTemplateName = 'zFSpk.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -37309,175 +37954,23 @@ babelHelpers;
     return exports;
   });
 
-  var Bmnxh = function (_Component) {
-    babelHelpers.inherits(Bmnxh, _Component);
+  var zFSpk = function (_Component) {
+    babelHelpers.inherits(zFSpk, _Component);
 
-    function Bmnxh() {
-      babelHelpers.classCallCheck(this, Bmnxh);
-      return babelHelpers.possibleConstructorReturn(this, (Bmnxh.__proto__ || Object.getPrototypeOf(Bmnxh)).apply(this, arguments));
+    function zFSpk() {
+      babelHelpers.classCallCheck(this, zFSpk);
+      return babelHelpers.possibleConstructorReturn(this, (zFSpk.__proto__ || Object.getPrototypeOf(zFSpk)).apply(this, arguments));
     }
 
-    return Bmnxh;
+    return zFSpk;
   }(Component);
 
-  Soy.register(Bmnxh, templates);
+  Soy.register(zFSpk, templates);
   this['metalNamed']['add-files'] = this['metalNamed']['add-files'] || {};
-  this['metalNamed']['add-files']['Bmnxh'] = Bmnxh;
+  this['metalNamed']['add-files']['zFSpk'] = zFSpk;
   this['metalNamed']['add-files']['templates'] = templates;
   this['metal']['add-files'] = templates;
   /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['add-files'];
-
-  var Bmnxh = function (_Component) {
-    babelHelpers.inherits(Bmnxh, _Component);
-
-    function Bmnxh() {
-      babelHelpers.classCallCheck(this, Bmnxh);
-      return babelHelpers.possibleConstructorReturn(this, (Bmnxh.__proto__ || Object.getPrototypeOf(Bmnxh)).apply(this, arguments));
-    }
-
-    return Bmnxh;
-  }(Component);
-
-  ;
-
-  Soy.register(Bmnxh, templates);
-
-  this['metal']['Bmnxh'] = Bmnxh;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from clone-sample.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace amrqy.
-     * @public
-     */
-
-    goog.module('amrqy.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1775 = function param1775() {
-        ie_open('h5');
-        itext('Cloning the sample repo');
-        ie_close('h5');
-        ie_open('p');
-        itext('To start, you need to create a new project on your WeDeploy dashboard, if you have not already (trying to migrate this tutorial with other tutorials will result in file conflict).');
-        ie_close('p');
-        ie_open('p');
-        itext('Next we will download a sample repo with the necessary files to get us started.');
-        ie_close('p');
-        ie_open('p');
-        itext('To download, run this command in your terminal:');
-        ie_close('p');
-        $templateAlias2({ code: 'git clone https://github.com/jonnilundy/tutorial-data-js.git', mode: 'text' }, null, opt_ijData);
-        ie_open('p');
-        itext('After the tutorial, you are free to push your own files or start from scratch with a new project.');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1775 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'amrqy.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var amrqy = function (_Component) {
-    babelHelpers.inherits(amrqy, _Component);
-
-    function amrqy() {
-      babelHelpers.classCallCheck(this, amrqy);
-      return babelHelpers.possibleConstructorReturn(this, (amrqy.__proto__ || Object.getPrototypeOf(amrqy)).apply(this, arguments));
-    }
-
-    return amrqy;
-  }(Component);
-
-  Soy.register(amrqy, templates);
-  this['metalNamed']['clone-sample'] = this['metalNamed']['clone-sample'] || {};
-  this['metalNamed']['clone-sample']['amrqy'] = amrqy;
-  this['metalNamed']['clone-sample']['templates'] = templates;
-  this['metal']['clone-sample'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['clone-sample'];
-
-  var amrqy = function (_Component) {
-    babelHelpers.inherits(amrqy, _Component);
-
-    function amrqy() {
-      babelHelpers.classCallCheck(this, amrqy);
-      return babelHelpers.possibleConstructorReturn(this, (amrqy.__proto__ || Object.getPrototypeOf(amrqy)).apply(this, arguments));
-    }
-
-    return amrqy;
-  }(Component);
-
-  ;
-
-  Soy.register(amrqy, templates);
-
-  this['metal']['amrqy'] = amrqy;
 }).call(this);
 'use strict';
 
@@ -37614,283 +38107,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from deploying.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace hEUeo.
-     * @public
-     */
-
-    goog.module('hEUeo.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1789 = function param1789() {
-        ie_open('h5');
-        itext('Deploying your project');
-        ie_close('h5');
-        ie_open('p');
-        itext('Now its time to push these local files to your WeDeploy project.');
-        ie_close('p');
-        ie_open('p');
-        itext('First, add a git remote. Within ');
-        ie_open('code');
-        itext('tutorial-data-js');
-        ie_close('code');
-        itext(' on your command line, run ');
-        ie_open('code');
-        itext('git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('Then make a first commit.');
-        ie_close('p');
-        ie_open('ol');
-        ie_open('li');
-        ie_open('code');
-        itext('git add .');
-        ie_close('code');
-        ie_close('li');
-        ie_open('li');
-        ie_open('code');
-        itext('git commit -m "Awesome commit"');
-        ie_close('code');
-        ie_close('li');
-        ie_open('li');
-        ie_open('code');
-        itext('git push wedeploy master');
-        ie_close('code');
-        ie_close('li');
-        ie_close('ol');
-        ie_open('p');
-        itext('Go to the WeDeploy dashboard and select your project. On the right you should see the build log of your recent commit.');
-        ie_close('p');
-        ie_open('p');
-        itext('Once it says "Deploy was successful" go to <project-name>.wedeploy.io.');
-        ie_close('p');
-        ie_open('p');
-        itext('Voil\xE0! Your page is live!');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1789 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'hEUeo.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var hEUeo = function (_Component) {
-    babelHelpers.inherits(hEUeo, _Component);
-
-    function hEUeo() {
-      babelHelpers.classCallCheck(this, hEUeo);
-      return babelHelpers.possibleConstructorReturn(this, (hEUeo.__proto__ || Object.getPrototypeOf(hEUeo)).apply(this, arguments));
-    }
-
-    return hEUeo;
-  }(Component);
-
-  Soy.register(hEUeo, templates);
-  this['metalNamed']['deploying'] = this['metalNamed']['deploying'] || {};
-  this['metalNamed']['deploying']['hEUeo'] = hEUeo;
-  this['metalNamed']['deploying']['templates'] = templates;
-  this['metal']['deploying'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from get-data.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace dkBMw.
-     * @public
-     */
-
-    goog.module('dkBMw.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1798 = function param1798() {
-        ie_open('h5');
-        itext('Get Data');
-        ie_close('h5');
-        ie_open('p');
-        itext('We fixed the submit button so that it saved the item descriptions, but our list still is not working. Let\'s fix that!');
-        ie_close('p');
-        ie_open('p');
-        itext('Open ');
-        ie_open('code');
-        itext('tutorial-data-js/hosting/list.js');
-        ie_close('code');
-        itext(' in your text editor. Right bellow ');
-        ie_open('code');
-        itext('WeDeploy');
-        ie_close('code');
-        itext(' on line 5, input this code that will get the inputted tasks and append them to the list.');
-        ie_close('p');
-        $templateAlias2({ code: '    .data(\'http://data.tutorial-data-js.wedeploy.io\')\n    .orderBy(\'id\', \'desc\')\n    .limit(5)\n    .get(\'tasks\')\n    .then(function(response) {\n        appendTasks(response);\n    })\n    .catch(function(error) {\n        console.error(error);\n    });', mode: 'javascript' }, null, opt_ijData);
-        ie_open('p');
-        itext('Now revisit the "Go to item listing" page in your browser and refresh. You should now see the list of items, including your previous entry.');
-        ie_close('p');
-        ie_open('p');
-        itext('To see the power of real-time data, open the list and homepage in seperate windows side-by-side so you can watch both. Add a new item to the homepage and see it automatically update the list in real-time.');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1798 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'dkBMw.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var dkBMw = function (_Component) {
-    babelHelpers.inherits(dkBMw, _Component);
-
-    function dkBMw() {
-      babelHelpers.classCallCheck(this, dkBMw);
-      return babelHelpers.possibleConstructorReturn(this, (dkBMw.__proto__ || Object.getPrototypeOf(dkBMw)).apply(this, arguments));
-    }
-
-    return dkBMw;
-  }(Component);
-
-  Soy.register(dkBMw, templates);
-  this['metalNamed']['get-data'] = this['metalNamed']['get-data'] || {};
-  this['metalNamed']['get-data']['dkBMw'] = dkBMw;
-  this['metalNamed']['get-data']['templates'] = templates;
-  this['metal']['get-data'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['get-data'];
-
-  var dkBMw = function (_Component) {
-    babelHelpers.inherits(dkBMw, _Component);
-
-    function dkBMw() {
-      babelHelpers.classCallCheck(this, dkBMw);
-      return babelHelpers.possibleConstructorReturn(this, (dkBMw.__proto__ || Object.getPrototypeOf(dkBMw)).apply(this, arguments));
-    }
-
-    return dkBMw;
-  }(Component);
-
-  ;
-
-  Soy.register(dkBMw, templates);
-
-  this['metal']['dkBMw'] = dkBMw;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
     // This file was automatically generated from getting-started.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace sgauu.
+     * @fileoverview Templates in namespace fuTyA.
      * @public
      */
 
-    goog.module('sgauu.incrementaldom');
+    goog.module('fuTyA.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -37923,7 +38148,7 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1812 = function param1812() {
+      var param1921 = function param1921() {
         ie_open('h5');
         itext('Getting Started');
         ie_close('h5');
@@ -38016,11 +38241,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1812 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1921 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'sgauu.render';
+      $render.soyTemplateName = 'fuTyA.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -38029,20 +38254,20 @@ babelHelpers;
     return exports;
   });
 
-  var sgauu = function (_Component) {
-    babelHelpers.inherits(sgauu, _Component);
+  var fuTyA = function (_Component) {
+    babelHelpers.inherits(fuTyA, _Component);
 
-    function sgauu() {
-      babelHelpers.classCallCheck(this, sgauu);
-      return babelHelpers.possibleConstructorReturn(this, (sgauu.__proto__ || Object.getPrototypeOf(sgauu)).apply(this, arguments));
+    function fuTyA() {
+      babelHelpers.classCallCheck(this, fuTyA);
+      return babelHelpers.possibleConstructorReturn(this, (fuTyA.__proto__ || Object.getPrototypeOf(fuTyA)).apply(this, arguments));
     }
 
-    return sgauu;
+    return fuTyA;
   }(Component);
 
-  Soy.register(sgauu, templates);
+  Soy.register(fuTyA, templates);
   this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['sgauu'] = sgauu;
+  this['metalNamed']['getting-started']['fuTyA'] = fuTyA;
   this['metalNamed']['getting-started']['templates'] = templates;
   this['metal']['getting-started'] = templates;
   /* jshint ignore:end */
@@ -38052,24 +38277,24 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['deploying'];
+  var templates = this['metal']['getting-started'];
 
-  var hEUeo = function (_Component) {
-    babelHelpers.inherits(hEUeo, _Component);
+  var fuTyA = function (_Component) {
+    babelHelpers.inherits(fuTyA, _Component);
 
-    function hEUeo() {
-      babelHelpers.classCallCheck(this, hEUeo);
-      return babelHelpers.possibleConstructorReturn(this, (hEUeo.__proto__ || Object.getPrototypeOf(hEUeo)).apply(this, arguments));
+    function fuTyA() {
+      babelHelpers.classCallCheck(this, fuTyA);
+      return babelHelpers.possibleConstructorReturn(this, (fuTyA.__proto__ || Object.getPrototypeOf(fuTyA)).apply(this, arguments));
     }
 
-    return hEUeo;
+    return fuTyA;
   }(Component);
 
   ;
 
-  Soy.register(hEUeo, templates);
+  Soy.register(fuTyA, templates);
 
-  this['metal']['hEUeo'] = hEUeo;
+  this['metal']['fuTyA'] = fuTyA;
 }).call(this);
 'use strict';
 
@@ -38081,15 +38306,15 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from save-data.soy.
+    // This file was automatically generated from get-data.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace hkrms.
+     * @fileoverview Templates in namespace iJLdL.
      * @public
      */
 
-    goog.module('hkrms.incrementaldom');
+    goog.module('iJLdL.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -38122,7 +38347,253 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1839 = function param1839() {
+      var param1907 = function param1907() {
+        ie_open('h5');
+        itext('Get Data');
+        ie_close('h5');
+        ie_open('p');
+        itext('We fixed the submit button so that it saved the item descriptions, but our list still is not working. Let\'s fix that!');
+        ie_close('p');
+        ie_open('p');
+        itext('Open ');
+        ie_open('code');
+        itext('tutorial-data-js/hosting/list.js');
+        ie_close('code');
+        itext(' in your text editor. Right bellow ');
+        ie_open('code');
+        itext('WeDeploy');
+        ie_close('code');
+        itext(' on line 5, input this code that will get the inputted tasks and append them to the list.');
+        ie_close('p');
+        $templateAlias2({ code: '    .data(\'http://data.tutorial-data-js.wedeploy.io\')\n    .orderBy(\'id\', \'desc\')\n    .limit(5)\n    .get(\'tasks\')\n    .then(function(response) {\n        appendTasks(response);\n    })\n    .catch(function(error) {\n        console.error(error);\n    });', mode: 'javascript' }, null, opt_ijData);
+        ie_open('p');
+        itext('Now revisit the "Go to item listing" page in your browser and refresh. You should now see the list of items, including your previous entry.');
+        ie_close('p');
+        ie_open('p');
+        itext('To see the power of real-time data, open the list and homepage in seperate windows side-by-side so you can watch both. Add a new item to the homepage and see it automatically update the list in real-time.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1907 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'iJLdL.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var iJLdL = function (_Component) {
+    babelHelpers.inherits(iJLdL, _Component);
+
+    function iJLdL() {
+      babelHelpers.classCallCheck(this, iJLdL);
+      return babelHelpers.possibleConstructorReturn(this, (iJLdL.__proto__ || Object.getPrototypeOf(iJLdL)).apply(this, arguments));
+    }
+
+    return iJLdL;
+  }(Component);
+
+  Soy.register(iJLdL, templates);
+  this['metalNamed']['get-data'] = this['metalNamed']['get-data'] || {};
+  this['metalNamed']['get-data']['iJLdL'] = iJLdL;
+  this['metalNamed']['get-data']['templates'] = templates;
+  this['metal']['get-data'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['get-data'];
+
+  var iJLdL = function (_Component) {
+    babelHelpers.inherits(iJLdL, _Component);
+
+    function iJLdL() {
+      babelHelpers.classCallCheck(this, iJLdL);
+      return babelHelpers.possibleConstructorReturn(this, (iJLdL.__proto__ || Object.getPrototypeOf(iJLdL)).apply(this, arguments));
+    }
+
+    return iJLdL;
+  }(Component);
+
+  ;
+
+  Soy.register(iJLdL, templates);
+
+  this['metal']['iJLdL'] = iJLdL;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from running-locally.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace wxkCu.
+     * @public
+     */
+
+    goog.module('wxkCu.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1939 = function param1939() {
+        ie_open('h5');
+        itext('Running locally');
+        ie_close('h5');
+        ie_open('p');
+        itext('WeDeploy provides a dev environment for you to run and test your app before pushing it to production. Lets get that running for this project!');
+        ie_close('p');
+        ie_open('p');
+        itext('In your terminal, go to ');
+        ie_open('code');
+        itext('tutorial-data-js');
+        ie_close('code');
+        itext(' and run ');
+        ie_open('code');
+        itext('we dev');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        itext('You can now go to ');
+        ie_open('code');
+        itext('http://tutorial-data-js.wedeploy.me');
+        ie_close('code');
+        itext(' in your browser and see the local deployment of your project. Any changes you make to your project folder now will automatically be deployed to this local server.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1939 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'wxkCu.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var wxkCu = function (_Component) {
+    babelHelpers.inherits(wxkCu, _Component);
+
+    function wxkCu() {
+      babelHelpers.classCallCheck(this, wxkCu);
+      return babelHelpers.possibleConstructorReturn(this, (wxkCu.__proto__ || Object.getPrototypeOf(wxkCu)).apply(this, arguments));
+    }
+
+    return wxkCu;
+  }(Component);
+
+  Soy.register(wxkCu, templates);
+  this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
+  this['metalNamed']['running-locally']['wxkCu'] = wxkCu;
+  this['metalNamed']['running-locally']['templates'] = templates;
+  this['metal']['running-locally'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from save-data.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace usdiQ.
+     * @public
+     */
+
+    goog.module('usdiQ.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1948 = function param1948() {
         ie_open('h5');
         itext('Save Data');
         ie_close('h5');
@@ -38172,11 +38643,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1839 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1948 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'hkrms.render';
+      $render.soyTemplateName = 'usdiQ.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -38185,20 +38656,20 @@ babelHelpers;
     return exports;
   });
 
-  var hkrms = function (_Component) {
-    babelHelpers.inherits(hkrms, _Component);
+  var usdiQ = function (_Component) {
+    babelHelpers.inherits(usdiQ, _Component);
 
-    function hkrms() {
-      babelHelpers.classCallCheck(this, hkrms);
-      return babelHelpers.possibleConstructorReturn(this, (hkrms.__proto__ || Object.getPrototypeOf(hkrms)).apply(this, arguments));
+    function usdiQ() {
+      babelHelpers.classCallCheck(this, usdiQ);
+      return babelHelpers.possibleConstructorReturn(this, (usdiQ.__proto__ || Object.getPrototypeOf(usdiQ)).apply(this, arguments));
     }
 
-    return hkrms;
+    return usdiQ;
   }(Component);
 
-  Soy.register(hkrms, templates);
+  Soy.register(usdiQ, templates);
   this['metalNamed']['save-data'] = this['metalNamed']['save-data'] || {};
-  this['metalNamed']['save-data']['hkrms'] = hkrms;
+  this['metalNamed']['save-data']['usdiQ'] = usdiQ;
   this['metalNamed']['save-data']['templates'] = templates;
   this['metal']['save-data'] = templates;
   /* jshint ignore:end */
@@ -38210,132 +38681,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['save-data'];
 
-  var hkrms = function (_Component) {
-    babelHelpers.inherits(hkrms, _Component);
+  var usdiQ = function (_Component) {
+    babelHelpers.inherits(usdiQ, _Component);
 
-    function hkrms() {
-      babelHelpers.classCallCheck(this, hkrms);
-      return babelHelpers.possibleConstructorReturn(this, (hkrms.__proto__ || Object.getPrototypeOf(hkrms)).apply(this, arguments));
+    function usdiQ() {
+      babelHelpers.classCallCheck(this, usdiQ);
+      return babelHelpers.possibleConstructorReturn(this, (usdiQ.__proto__ || Object.getPrototypeOf(usdiQ)).apply(this, arguments));
     }
 
-    return hkrms;
+    return usdiQ;
   }(Component);
 
   ;
 
-  Soy.register(hkrms, templates);
+  Soy.register(usdiQ, templates);
 
-  this['metal']['hkrms'] = hkrms;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from running-locally.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace jOzPD.
-     * @public
-     */
-
-    goog.module('jOzPD.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1830 = function param1830() {
-        ie_open('h5');
-        itext('Running locally');
-        ie_close('h5');
-        ie_open('p');
-        itext('WeDeploy provides a dev environment for you to run and test your app before pushing it to production. Lets get that running for this project!');
-        ie_close('p');
-        ie_open('p');
-        itext('In your terminal, go to ');
-        ie_open('code');
-        itext('tutorial-data-js');
-        ie_close('code');
-        itext(' and run ');
-        ie_open('code');
-        itext('we dev');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('You can now go to ');
-        ie_open('code');
-        itext('http://tutorial-data-js.wedeploy.me');
-        ie_close('code');
-        itext(' in your browser and see the local deployment of your project. Any changes you make to your project folder now will automatically be deployed to this local server.');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1830 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'jOzPD.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var jOzPD = function (_Component) {
-    babelHelpers.inherits(jOzPD, _Component);
-
-    function jOzPD() {
-      babelHelpers.classCallCheck(this, jOzPD);
-      return babelHelpers.possibleConstructorReturn(this, (jOzPD.__proto__ || Object.getPrototypeOf(jOzPD)).apply(this, arguments));
-    }
-
-    return jOzPD;
-  }(Component);
-
-  Soy.register(jOzPD, templates);
-  this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
-  this['metalNamed']['running-locally']['jOzPD'] = jOzPD;
-  this['metalNamed']['running-locally']['templates'] = templates;
-  this['metal']['running-locally'] = templates;
-  /* jshint ignore:end */
+  this['metal']['usdiQ'] = usdiQ;
 }).call(this);
 'use strict';
 
@@ -38344,46 +38705,46 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['running-locally'];
 
-  var jOzPD = function (_Component) {
-    babelHelpers.inherits(jOzPD, _Component);
+  var wxkCu = function (_Component) {
+    babelHelpers.inherits(wxkCu, _Component);
 
-    function jOzPD() {
-      babelHelpers.classCallCheck(this, jOzPD);
-      return babelHelpers.possibleConstructorReturn(this, (jOzPD.__proto__ || Object.getPrototypeOf(jOzPD)).apply(this, arguments));
+    function wxkCu() {
+      babelHelpers.classCallCheck(this, wxkCu);
+      return babelHelpers.possibleConstructorReturn(this, (wxkCu.__proto__ || Object.getPrototypeOf(wxkCu)).apply(this, arguments));
     }
 
-    return jOzPD;
+    return wxkCu;
   }(Component);
 
   ;
 
-  Soy.register(jOzPD, templates);
+  Soy.register(wxkCu, templates);
 
-  this['metal']['jOzPD'] = jOzPD;
+  this['metal']['wxkCu'] = wxkCu;
 }).call(this);
 'use strict';
 
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['getting-started'];
+  var templates = this['metal']['add-files'];
 
-  var sgauu = function (_Component) {
-    babelHelpers.inherits(sgauu, _Component);
+  var zFSpk = function (_Component) {
+    babelHelpers.inherits(zFSpk, _Component);
 
-    function sgauu() {
-      babelHelpers.classCallCheck(this, sgauu);
-      return babelHelpers.possibleConstructorReturn(this, (sgauu.__proto__ || Object.getPrototypeOf(sgauu)).apply(this, arguments));
+    function zFSpk() {
+      babelHelpers.classCallCheck(this, zFSpk);
+      return babelHelpers.possibleConstructorReturn(this, (zFSpk.__proto__ || Object.getPrototypeOf(zFSpk)).apply(this, arguments));
     }
 
-    return sgauu;
+    return zFSpk;
   }(Component);
 
   ;
 
-  Soy.register(sgauu, templates);
+  Soy.register(zFSpk, templates);
 
-  this['metal']['sgauu'] = sgauu;
+  this['metal']['zFSpk'] = zFSpk;
 }).call(this);
 'use strict';
 
@@ -38399,11 +38760,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace JGbbs.
+     * @fileoverview Templates in namespace CJFSU.
      * @public
      */
 
-    goog.module('JGbbs.incrementaldom');
+    goog.module('CJFSU.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -38436,7 +38797,7 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1909 = function param1909() {
+      var param1838 = function param1838() {
         ie_open('h5');
         itext('Getting Started');
         ie_close('h5');
@@ -38529,11 +38890,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1909 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1838 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'JGbbs.render';
+      $render.soyTemplateName = 'CJFSU.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -38542,20 +38903,20 @@ babelHelpers;
     return exports;
   });
 
-  var JGbbs = function (_Component) {
-    babelHelpers.inherits(JGbbs, _Component);
+  var CJFSU = function (_Component) {
+    babelHelpers.inherits(CJFSU, _Component);
 
-    function JGbbs() {
-      babelHelpers.classCallCheck(this, JGbbs);
-      return babelHelpers.possibleConstructorReturn(this, (JGbbs.__proto__ || Object.getPrototypeOf(JGbbs)).apply(this, arguments));
+    function CJFSU() {
+      babelHelpers.classCallCheck(this, CJFSU);
+      return babelHelpers.possibleConstructorReturn(this, (CJFSU.__proto__ || Object.getPrototypeOf(CJFSU)).apply(this, arguments));
     }
 
-    return JGbbs;
+    return CJFSU;
   }(Component);
 
-  Soy.register(JGbbs, templates);
+  Soy.register(CJFSU, templates);
   this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['JGbbs'] = JGbbs;
+  this['metalNamed']['getting-started']['CJFSU'] = CJFSU;
   this['metalNamed']['getting-started']['templates'] = templates;
   this['metal']['getting-started'] = templates;
   /* jshint ignore:end */
@@ -38567,149 +38928,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['getting-started'];
 
-  var JGbbs = function (_Component) {
-    babelHelpers.inherits(JGbbs, _Component);
+  var CJFSU = function (_Component) {
+    babelHelpers.inherits(CJFSU, _Component);
 
-    function JGbbs() {
-      babelHelpers.classCallCheck(this, JGbbs);
-      return babelHelpers.possibleConstructorReturn(this, (JGbbs.__proto__ || Object.getPrototypeOf(JGbbs)).apply(this, arguments));
+    function CJFSU() {
+      babelHelpers.classCallCheck(this, CJFSU);
+      return babelHelpers.possibleConstructorReturn(this, (CJFSU.__proto__ || Object.getPrototypeOf(CJFSU)).apply(this, arguments));
     }
 
-    return JGbbs;
+    return CJFSU;
   }(Component);
 
   ;
 
-  Soy.register(JGbbs, templates);
+  Soy.register(CJFSU, templates);
 
-  this['metal']['JGbbs'] = JGbbs;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from add-files.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace yDiFd.
-     * @public
-     */
-
-    goog.module('yDiFd.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1853 = function param1853() {
-        ie_open('h5');
-        itext('Create files');
-        ie_close('h5');
-        ie_open('p');
-        itext('Now that we have the sample files, we can setup our email container.');
-        ie_close('p');
-        ie_open('p');
-        itext('First go to ');
-        ie_open('code');
-        itext('tutorial-email-js');
-        ie_close('code');
-        itext(' and create a directory named ');
-        ie_open('code');
-        itext('email');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('Within that directory, create a new file named ');
-        ie_open('code');
-        itext('container.json');
-        ie_close('code');
-        itext('. This file will designate the id and type of service you are using. Inside of that file, add:');
-        ie_close('p');
-        $templateAlias2({ code: '{\n    "id": "email",\n    "type": "wedeploy/email"\n}', mode: 'application/json' }, null, opt_ijData);
-        ie_open('ul');
-        ie_open('li');
-        ie_open('code');
-        itext('id');
-        ie_close('code');
-        itext(' is the custom name designated for this service. In future projects, feel free to change this value to whatever best describes your service.');
-        ie_close('li');
-        ie_open('li');
-        ie_open('code');
-        itext('type');
-        ie_close('code');
-        itext(' tells WeDeploy what service to use.');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1853 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'yDiFd.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var yDiFd = function (_Component) {
-    babelHelpers.inherits(yDiFd, _Component);
-
-    function yDiFd() {
-      babelHelpers.classCallCheck(this, yDiFd);
-      return babelHelpers.possibleConstructorReturn(this, (yDiFd.__proto__ || Object.getPrototypeOf(yDiFd)).apply(this, arguments));
-    }
-
-    return yDiFd;
-  }(Component);
-
-  Soy.register(yDiFd, templates);
-  this['metalNamed']['add-files'] = this['metalNamed']['add-files'] || {};
-  this['metalNamed']['add-files']['yDiFd'] = yDiFd;
-  this['metalNamed']['add-files']['templates'] = templates;
-  this['metal']['add-files'] = templates;
-  /* jshint ignore:end */
+  this['metal']['CJFSU'] = CJFSU;
 }).call(this);
 'use strict';
 
@@ -38725,11 +38959,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace mspNR.
+     * @fileoverview Templates in namespace EXXNk.
      * @public
      */
 
-    goog.module('mspNR.incrementaldom');
+    goog.module('EXXNk.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -38762,7 +38996,7 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1867 = function param1867() {
+      var param1796 = function param1796() {
         ie_open('h5');
         itext('Cloning the sample repo');
         ie_close('h5');
@@ -38781,11 +39015,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1867 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1796 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'mspNR.render';
+      $render.soyTemplateName = 'EXXNk.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -38794,23 +39028,47 @@ babelHelpers;
     return exports;
   });
 
-  var mspNR = function (_Component) {
-    babelHelpers.inherits(mspNR, _Component);
+  var EXXNk = function (_Component) {
+    babelHelpers.inherits(EXXNk, _Component);
 
-    function mspNR() {
-      babelHelpers.classCallCheck(this, mspNR);
-      return babelHelpers.possibleConstructorReturn(this, (mspNR.__proto__ || Object.getPrototypeOf(mspNR)).apply(this, arguments));
+    function EXXNk() {
+      babelHelpers.classCallCheck(this, EXXNk);
+      return babelHelpers.possibleConstructorReturn(this, (EXXNk.__proto__ || Object.getPrototypeOf(EXXNk)).apply(this, arguments));
     }
 
-    return mspNR;
+    return EXXNk;
   }(Component);
 
-  Soy.register(mspNR, templates);
+  Soy.register(EXXNk, templates);
   this['metalNamed']['clone-sample'] = this['metalNamed']['clone-sample'] || {};
-  this['metalNamed']['clone-sample']['mspNR'] = mspNR;
+  this['metalNamed']['clone-sample']['EXXNk'] = EXXNk;
   this['metalNamed']['clone-sample']['templates'] = templates;
   this['metal']['clone-sample'] = templates;
   /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['clone-sample'];
+
+  var EXXNk = function (_Component) {
+    babelHelpers.inherits(EXXNk, _Component);
+
+    function EXXNk() {
+      babelHelpers.classCallCheck(this, EXXNk);
+      return babelHelpers.possibleConstructorReturn(this, (EXXNk.__proto__ || Object.getPrototypeOf(EXXNk)).apply(this, arguments));
+    }
+
+    return EXXNk;
+  }(Component);
+
+  ;
+
+  Soy.register(EXXNk, templates);
+
+  this['metal']['EXXNk'] = EXXNk;
 }).call(this);
 'use strict';
 
@@ -38826,11 +39084,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace yKBgw.
+     * @fileoverview Templates in namespace SgTjd.
      * @public
      */
 
-    goog.module('yKBgw.incrementaldom');
+    goog.module('SgTjd.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -38861,7 +39119,7 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1881 = function param1881() {
+      var param1810 = function param1810() {
         ie_open('h5');
         itext('Deploying your project');
         ie_close('h5');
@@ -38917,11 +39175,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1881 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1810 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'yKBgw.render';
+      $render.soyTemplateName = 'SgTjd.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -38930,23 +39188,47 @@ babelHelpers;
     return exports;
   });
 
-  var yKBgw = function (_Component) {
-    babelHelpers.inherits(yKBgw, _Component);
+  var SgTjd = function (_Component) {
+    babelHelpers.inherits(SgTjd, _Component);
 
-    function yKBgw() {
-      babelHelpers.classCallCheck(this, yKBgw);
-      return babelHelpers.possibleConstructorReturn(this, (yKBgw.__proto__ || Object.getPrototypeOf(yKBgw)).apply(this, arguments));
+    function SgTjd() {
+      babelHelpers.classCallCheck(this, SgTjd);
+      return babelHelpers.possibleConstructorReturn(this, (SgTjd.__proto__ || Object.getPrototypeOf(SgTjd)).apply(this, arguments));
     }
 
-    return yKBgw;
+    return SgTjd;
   }(Component);
 
-  Soy.register(yKBgw, templates);
+  Soy.register(SgTjd, templates);
   this['metalNamed']['deploying'] = this['metalNamed']['deploying'] || {};
-  this['metalNamed']['deploying']['yKBgw'] = yKBgw;
+  this['metalNamed']['deploying']['SgTjd'] = SgTjd;
   this['metalNamed']['deploying']['templates'] = templates;
   this['metal']['deploying'] = templates;
   /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['deploying'];
+
+  var SgTjd = function (_Component) {
+    babelHelpers.inherits(SgTjd, _Component);
+
+    function SgTjd() {
+      babelHelpers.classCallCheck(this, SgTjd);
+      return babelHelpers.possibleConstructorReturn(this, (SgTjd.__proto__ || Object.getPrototypeOf(SgTjd)).apply(this, arguments));
+    }
+
+    return SgTjd;
+  }(Component);
+
+  ;
+
+  Soy.register(SgTjd, templates);
+
+  this['metal']['SgTjd'] = SgTjd;
 }).call(this);
 'use strict';
 
@@ -38958,15 +39240,149 @@ babelHelpers;
   var templates;
   goog.loadModule(function (exports) {
 
-    // This file was automatically generated from email-parameters.soy.
+    // This file was automatically generated from running-locally.soy.
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace xmRnL.
+     * @fileoverview Templates in namespace VUaQO.
      * @public
      */
 
-    goog.module('xmRnL.incrementaldom');
+    goog.module('VUaQO.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1856 = function param1856() {
+        ie_open('h5');
+        itext('Running locally');
+        ie_close('h5');
+        ie_open('p');
+        itext('WeDeploy provides a dev environment for you to run and test your app before pushing it to production. Lets get that running for this project!');
+        ie_close('p');
+        ie_open('p');
+        itext('In your terminal, go to ');
+        ie_open('code');
+        itext('tutorial-email-js');
+        ie_close('code');
+        itext(' and run ');
+        ie_open('code');
+        itext('we dev');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        itext('You can now go to ');
+        ie_open('code');
+        itext('http://tutorial-email-js.wedeploy.me');
+        ie_close('code');
+        itext(' in your browser and see the local deployment of your project. Any changes you make to your project folder now will automatically be deployed to this local server.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1856 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'VUaQO.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var VUaQO = function (_Component) {
+    babelHelpers.inherits(VUaQO, _Component);
+
+    function VUaQO() {
+      babelHelpers.classCallCheck(this, VUaQO);
+      return babelHelpers.possibleConstructorReturn(this, (VUaQO.__proto__ || Object.getPrototypeOf(VUaQO)).apply(this, arguments));
+    }
+
+    return VUaQO;
+  }(Component);
+
+  Soy.register(VUaQO, templates);
+  this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
+  this['metalNamed']['running-locally']['VUaQO'] = VUaQO;
+  this['metalNamed']['running-locally']['templates'] = templates;
+  this['metal']['running-locally'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['running-locally'];
+
+  var VUaQO = function (_Component) {
+    babelHelpers.inherits(VUaQO, _Component);
+
+    function VUaQO() {
+      babelHelpers.classCallCheck(this, VUaQO);
+      return babelHelpers.possibleConstructorReturn(this, (VUaQO.__proto__ || Object.getPrototypeOf(VUaQO)).apply(this, arguments));
+    }
+
+    return VUaQO;
+  }(Component);
+
+  ;
+
+  Soy.register(VUaQO, templates);
+
+  this['metal']['VUaQO'] = VUaQO;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from add-files.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace idLHO.
+     * @public
+     */
+
+    goog.module('idLHO.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -38999,7 +39415,134 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1890 = function param1890() {
+      var param1782 = function param1782() {
+        ie_open('h5');
+        itext('Create files');
+        ie_close('h5');
+        ie_open('p');
+        itext('Now that we have the sample files, we can setup our email container.');
+        ie_close('p');
+        ie_open('p');
+        itext('First go to ');
+        ie_open('code');
+        itext('tutorial-email-js');
+        ie_close('code');
+        itext(' and create a directory named ');
+        ie_open('code');
+        itext('email');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        itext('Within that directory, create a new file named ');
+        ie_open('code');
+        itext('container.json');
+        ie_close('code');
+        itext('. This file will designate the id and type of service you are using. Inside of that file, add:');
+        ie_close('p');
+        $templateAlias2({ code: '{\n    "id": "email",\n    "type": "wedeploy/email"\n}', mode: 'application/json' }, null, opt_ijData);
+        ie_open('ul');
+        ie_open('li');
+        ie_open('code');
+        itext('id');
+        ie_close('code');
+        itext(' is the custom name designated for this service. In future projects, feel free to change this value to whatever best describes your service.');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('type');
+        ie_close('code');
+        itext(' tells WeDeploy what service to use.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1782 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'idLHO.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var idLHO = function (_Component) {
+    babelHelpers.inherits(idLHO, _Component);
+
+    function idLHO() {
+      babelHelpers.classCallCheck(this, idLHO);
+      return babelHelpers.possibleConstructorReturn(this, (idLHO.__proto__ || Object.getPrototypeOf(idLHO)).apply(this, arguments));
+    }
+
+    return idLHO;
+  }(Component);
+
+  Soy.register(idLHO, templates);
+  this['metalNamed']['add-files'] = this['metalNamed']['add-files'] || {};
+  this['metalNamed']['add-files']['idLHO'] = idLHO;
+  this['metalNamed']['add-files']['templates'] = templates;
+  this['metal']['add-files'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from email-parameters.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace nutAm.
+     * @public
+     */
+
+    goog.module('nutAm.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1819 = function param1819() {
         ie_open('h5');
         itext('Setup Email Parameters');
         ie_close('h5');
@@ -39102,11 +39645,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1890 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1819 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'xmRnL.render';
+      $render.soyTemplateName = 'nutAm.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -39115,20 +39658,20 @@ babelHelpers;
     return exports;
   });
 
-  var xmRnL = function (_Component) {
-    babelHelpers.inherits(xmRnL, _Component);
+  var nutAm = function (_Component) {
+    babelHelpers.inherits(nutAm, _Component);
 
-    function xmRnL() {
-      babelHelpers.classCallCheck(this, xmRnL);
-      return babelHelpers.possibleConstructorReturn(this, (xmRnL.__proto__ || Object.getPrototypeOf(xmRnL)).apply(this, arguments));
+    function nutAm() {
+      babelHelpers.classCallCheck(this, nutAm);
+      return babelHelpers.possibleConstructorReturn(this, (nutAm.__proto__ || Object.getPrototypeOf(nutAm)).apply(this, arguments));
     }
 
-    return xmRnL;
+    return nutAm;
   }(Component);
 
-  Soy.register(xmRnL, templates);
+  Soy.register(nutAm, templates);
   this['metalNamed']['email-parameters'] = this['metalNamed']['email-parameters'] || {};
-  this['metalNamed']['email-parameters']['xmRnL'] = xmRnL;
+  this['metalNamed']['email-parameters']['nutAm'] = nutAm;
   this['metalNamed']['email-parameters']['templates'] = templates;
   this['metal']['email-parameters'] = templates;
   /* jshint ignore:end */
@@ -39261,160 +39804,26 @@ babelHelpers;
 'use strict';
 
 (function () {
-  /* jshint ignore:start */
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
+  var templates = this['metal']['add-files'];
 
-  var templates;
-  goog.loadModule(function (exports) {
+  var idLHO = function (_Component) {
+    babelHelpers.inherits(idLHO, _Component);
 
-    // This file was automatically generated from running-locally.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace fXgRj.
-     * @public
-     */
-
-    goog.module('fXgRj.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1927 = function param1927() {
-        ie_open('h5');
-        itext('Running locally');
-        ie_close('h5');
-        ie_open('p');
-        itext('WeDeploy provides a dev environment for you to run and test your app before pushing it to production. Lets get that running for this project!');
-        ie_close('p');
-        ie_open('p');
-        itext('In your terminal, go to ');
-        ie_open('code');
-        itext('tutorial-email-js');
-        ie_close('code');
-        itext(' and run ');
-        ie_open('code');
-        itext('we dev');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('You can now go to ');
-        ie_open('code');
-        itext('http://tutorial-email-js.wedeploy.me');
-        ie_close('code');
-        itext(' in your browser and see the local deployment of your project. Any changes you make to your project folder now will automatically be deployed to this local server.');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1927 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'fXgRj.render';
+    function idLHO() {
+      babelHelpers.classCallCheck(this, idLHO);
+      return babelHelpers.possibleConstructorReturn(this, (idLHO.__proto__ || Object.getPrototypeOf(idLHO)).apply(this, arguments));
     }
 
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var fXgRj = function (_Component) {
-    babelHelpers.inherits(fXgRj, _Component);
-
-    function fXgRj() {
-      babelHelpers.classCallCheck(this, fXgRj);
-      return babelHelpers.possibleConstructorReturn(this, (fXgRj.__proto__ || Object.getPrototypeOf(fXgRj)).apply(this, arguments));
-    }
-
-    return fXgRj;
-  }(Component);
-
-  Soy.register(fXgRj, templates);
-  this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
-  this['metalNamed']['running-locally']['fXgRj'] = fXgRj;
-  this['metalNamed']['running-locally']['templates'] = templates;
-  this['metal']['running-locally'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['running-locally'];
-
-  var fXgRj = function (_Component) {
-    babelHelpers.inherits(fXgRj, _Component);
-
-    function fXgRj() {
-      babelHelpers.classCallCheck(this, fXgRj);
-      return babelHelpers.possibleConstructorReturn(this, (fXgRj.__proto__ || Object.getPrototypeOf(fXgRj)).apply(this, arguments));
-    }
-
-    return fXgRj;
+    return idLHO;
   }(Component);
 
   ;
 
-  Soy.register(fXgRj, templates);
+  Soy.register(idLHO, templates);
 
-  this['metal']['fXgRj'] = fXgRj;
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['clone-sample'];
-
-  var mspNR = function (_Component) {
-    babelHelpers.inherits(mspNR, _Component);
-
-    function mspNR() {
-      babelHelpers.classCallCheck(this, mspNR);
-      return babelHelpers.possibleConstructorReturn(this, (mspNR.__proto__ || Object.getPrototypeOf(mspNR)).apply(this, arguments));
-    }
-
-    return mspNR;
-  }(Component);
-
-  ;
-
-  Soy.register(mspNR, templates);
-
-  this['metal']['mspNR'] = mspNR;
+  this['metal']['idLHO'] = idLHO;
 }).call(this);
 'use strict';
 
@@ -39423,492 +39832,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['email-parameters'];
 
-  var xmRnL = function (_Component) {
-    babelHelpers.inherits(xmRnL, _Component);
+  var nutAm = function (_Component) {
+    babelHelpers.inherits(nutAm, _Component);
 
-    function xmRnL() {
-      babelHelpers.classCallCheck(this, xmRnL);
-      return babelHelpers.possibleConstructorReturn(this, (xmRnL.__proto__ || Object.getPrototypeOf(xmRnL)).apply(this, arguments));
+    function nutAm() {
+      babelHelpers.classCallCheck(this, nutAm);
+      return babelHelpers.possibleConstructorReturn(this, (nutAm.__proto__ || Object.getPrototypeOf(nutAm)).apply(this, arguments));
     }
 
-    return xmRnL;
+    return nutAm;
   }(Component);
 
   ;
 
-  Soy.register(xmRnL, templates);
+  Soy.register(nutAm, templates);
 
-  this['metal']['xmRnL'] = xmRnL;
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['add-files'];
-
-  var yDiFd = function (_Component) {
-    babelHelpers.inherits(yDiFd, _Component);
-
-    function yDiFd() {
-      babelHelpers.classCallCheck(this, yDiFd);
-      return babelHelpers.possibleConstructorReturn(this, (yDiFd.__proto__ || Object.getPrototypeOf(yDiFd)).apply(this, arguments));
-    }
-
-    return yDiFd;
-  }(Component);
-
-  ;
-
-  Soy.register(yDiFd, templates);
-
-  this['metal']['yDiFd'] = yDiFd;
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['deploying'];
-
-  var yKBgw = function (_Component) {
-    babelHelpers.inherits(yKBgw, _Component);
-
-    function yKBgw() {
-      babelHelpers.classCallCheck(this, yKBgw);
-      return babelHelpers.possibleConstructorReturn(this, (yKBgw.__proto__ || Object.getPrototypeOf(yKBgw)).apply(this, arguments));
-    }
-
-    return yKBgw;
-  }(Component);
-
-  ;
-
-  Soy.register(yKBgw, templates);
-
-  this['metal']['yKBgw'] = yKBgw;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from container-json.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace WBpUN.
-     * @public
-     */
-
-    goog.module('WBpUN.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1936 = function param1936() {
-        ie_open('h5');
-        itext('Adding the container.json');
-        ie_close('h5');
-        ie_open('p');
-        itext('Every WeDeploy container needs a container.json file to specify the id and type of service you are using. Let\'s create one for hosting.');
-        ie_close('p');
-        ie_open('ol');
-        ie_open('li');
-        itext('Go to the ');
-        ie_open('code');
-        itext('tutorial-hosting');
-        ie_close('code');
-        itext(' directory');
-        ie_close('li');
-        ie_open('li');
-        itext('Create a file called ');
-        ie_open('code');
-        itext('container.json');
-        ie_close('code');
-        ie_close('li');
-        ie_open('li');
-        itext('Open it in your text editor');
-        ie_close('li');
-        ie_open('li');
-        itext('Paste the follow code');
-        ie_close('li');
-        ie_close('ol');
-        $templateAlias2({ code: '{\n    "id": "hosting",\n    "type": "wedeploy/hosting"\n}', mode: 'application/json' }, null, opt_ijData);
-        ie_open('ul');
-        ie_open('li');
-        ie_open('code');
-        itext('id');
-        ie_close('code');
-        itext(' is the custom name designated for this service. If you named your service something other than "hosting", change the value of the ');
-        ie_open('code');
-        itext('id');
-        ie_close('code');
-        itext(' to the name of the hosting service you created on the dashboard.');
-        ie_close('li');
-        ie_open('li');
-        ie_open('code');
-        itext('type');
-        ie_close('code');
-        itext(' tells WeDeploy what service to use.');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1936 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'WBpUN.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var WBpUN = function (_Component) {
-    babelHelpers.inherits(WBpUN, _Component);
-
-    function WBpUN() {
-      babelHelpers.classCallCheck(this, WBpUN);
-      return babelHelpers.possibleConstructorReturn(this, (WBpUN.__proto__ || Object.getPrototypeOf(WBpUN)).apply(this, arguments));
-    }
-
-    return WBpUN;
-  }(Component);
-
-  Soy.register(WBpUN, templates);
-  this['metalNamed']['container-json'] = this['metalNamed']['container-json'] || {};
-  this['metalNamed']['container-json']['WBpUN'] = WBpUN;
-  this['metalNamed']['container-json']['templates'] = templates;
-  this['metal']['container-json'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['container-json'];
-
-  var WBpUN = function (_Component) {
-    babelHelpers.inherits(WBpUN, _Component);
-
-    function WBpUN() {
-      babelHelpers.classCallCheck(this, WBpUN);
-      return babelHelpers.possibleConstructorReturn(this, (WBpUN.__proto__ || Object.getPrototypeOf(WBpUN)).apply(this, arguments));
-    }
-
-    return WBpUN;
-  }(Component);
-
-  ;
-
-  Soy.register(WBpUN, templates);
-
-  this['metal']['WBpUN'] = WBpUN;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from sample-files.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace YvQys.
-     * @public
-     */
-
-    goog.module('YvQys.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1991 = function param1991() {
-        ie_open('h5');
-        itext('Clone the sample repo');
-        ie_close('h5');
-        ie_open('p');
-        itext('To start, you will clone our sample files so you can get to know the deployment process. After the tutorial, you are free to add your own files to the folder or start from scratch with a new service.');
-        ie_close('p');
-        ie_open('p');
-        itext('First, run this command in your terminal:');
-        ie_close('p');
-        $templateAlias2({ code: 'git clone https://github.com/jonnilundy/tutorial-hosting.git', mode: 'text' }, null, opt_ijData);
-        ie_open('p');
-        itext('You now have a folder called ');
-        ie_open('code');
-        itext('tutorial-hosting');
-        ie_close('code');
-        itext(' that contains almost all the files necessary to get your static site of the ground- besides one.');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1991 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'YvQys.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var YvQys = function (_Component) {
-    babelHelpers.inherits(YvQys, _Component);
-
-    function YvQys() {
-      babelHelpers.classCallCheck(this, YvQys);
-      return babelHelpers.possibleConstructorReturn(this, (YvQys.__proto__ || Object.getPrototypeOf(YvQys)).apply(this, arguments));
-    }
-
-    return YvQys;
-  }(Component);
-
-  Soy.register(YvQys, templates);
-  this['metalNamed']['sample-files'] = this['metalNamed']['sample-files'] || {};
-  this['metalNamed']['sample-files']['YvQys'] = YvQys;
-  this['metalNamed']['sample-files']['templates'] = templates;
-  this['metal']['sample-files'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['sample-files'];
-
-  var YvQys = function (_Component) {
-    babelHelpers.inherits(YvQys, _Component);
-
-    function YvQys() {
-      babelHelpers.classCallCheck(this, YvQys);
-      return babelHelpers.possibleConstructorReturn(this, (YvQys.__proto__ || Object.getPrototypeOf(YvQys)).apply(this, arguments));
-    }
-
-    return YvQys;
-  }(Component);
-
-  ;
-
-  Soy.register(YvQys, templates);
-
-  this['metal']['YvQys'] = YvQys;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from deploying.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace gfGMF.
-     * @public
-     */
-
-    goog.module('gfGMF.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1950 = function param1950() {
-        ie_open('h5');
-        itext('Deploying your project');
-        ie_close('h5');
-        ie_open('p');
-        itext('Now its time to push your local files to your WeDeploy project.');
-        ie_close('p');
-        ie_open('p');
-        itext('First, add a git remote. Within ');
-        ie_open('code');
-        itext('tutorial-hosting');
-        ie_close('code');
-        itext(' on your command line, run:');
-        ie_close('p');
-        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git', mode: 'text' }, null, opt_ijData);
-        ie_open('p');
-        itext('Then make a first commit');
-        ie_close('p');
-        ie_open('ul');
-        ie_open('li');
-        ie_open('code');
-        itext('git add .');
-        ie_close('code');
-        ie_close('li');
-        ie_open('li');
-        ie_open('code');
-        itext('git commit -m "Awesome change"');
-        ie_close('code');
-        ie_close('li');
-        ie_open('li');
-        ie_open('code');
-        itext('git push wedeploy master');
-        ie_close('code');
-        ie_close('li');
-        ie_close('ul');
-        ie_open('p');
-        itext('Go to the WeDeploy dashboard and select your project. On the right you should see the build log of your recent commit.');
-        ie_close('p');
-        ie_open('p');
-        itext('Once you see "Deploy was successful" go to ');
-        ie_open('code');
-        itext('<service-name>.<project-name>.wedeploy.io');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('Voil\xE0! Your page is live!');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1950 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'gfGMF.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var gfGMF = function (_Component) {
-    babelHelpers.inherits(gfGMF, _Component);
-
-    function gfGMF() {
-      babelHelpers.classCallCheck(this, gfGMF);
-      return babelHelpers.possibleConstructorReturn(this, (gfGMF.__proto__ || Object.getPrototypeOf(gfGMF)).apply(this, arguments));
-    }
-
-    return gfGMF;
-  }(Component);
-
-  Soy.register(gfGMF, templates);
-  this['metalNamed']['deploying'] = this['metalNamed']['deploying'] || {};
-  this['metalNamed']['deploying']['gfGMF'] = gfGMF;
-  this['metalNamed']['deploying']['templates'] = templates;
-  this['metal']['deploying'] = templates;
-  /* jshint ignore:end */
+  this['metal']['nutAm'] = nutAm;
 }).call(this);
 'use strict';
 
@@ -39924,11 +39863,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace uXwmi.
+     * @fileoverview Templates in namespace EWVwx.
      * @public
      */
 
-    goog.module('uXwmi.incrementaldom');
+    goog.module('EWVwx.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -39961,7 +39900,7 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1964 = function param1964() {
+      var param1990 = function param1990() {
         ie_open('h5');
         itext('Getting Started');
         ie_close('h5');
@@ -40051,11 +39990,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param1964 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param1990 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'uXwmi.render';
+      $render.soyTemplateName = 'EWVwx.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -40064,20 +40003,20 @@ babelHelpers;
     return exports;
   });
 
-  var uXwmi = function (_Component) {
-    babelHelpers.inherits(uXwmi, _Component);
+  var EWVwx = function (_Component) {
+    babelHelpers.inherits(EWVwx, _Component);
 
-    function uXwmi() {
-      babelHelpers.classCallCheck(this, uXwmi);
-      return babelHelpers.possibleConstructorReturn(this, (uXwmi.__proto__ || Object.getPrototypeOf(uXwmi)).apply(this, arguments));
+    function EWVwx() {
+      babelHelpers.classCallCheck(this, EWVwx);
+      return babelHelpers.possibleConstructorReturn(this, (EWVwx.__proto__ || Object.getPrototypeOf(EWVwx)).apply(this, arguments));
     }
 
-    return uXwmi;
+    return EWVwx;
   }(Component);
 
-  Soy.register(uXwmi, templates);
+  Soy.register(EWVwx, templates);
   this['metalNamed']['getting-started'] = this['metalNamed']['getting-started'] || {};
-  this['metalNamed']['getting-started']['uXwmi'] = uXwmi;
+  this['metalNamed']['getting-started']['EWVwx'] = EWVwx;
   this['metalNamed']['getting-started']['templates'] = templates;
   this['metal']['getting-started'] = templates;
   /* jshint ignore:end */
@@ -40087,24 +40026,600 @@ babelHelpers;
 (function () {
   var Component = this['metal']['component'];
   var Soy = this['metal']['Soy'];
-  var templates = this['metal']['deploying'];
+  var templates = this['metal']['getting-started'];
 
-  var gfGMF = function (_Component) {
-    babelHelpers.inherits(gfGMF, _Component);
+  var EWVwx = function (_Component) {
+    babelHelpers.inherits(EWVwx, _Component);
 
-    function gfGMF() {
-      babelHelpers.classCallCheck(this, gfGMF);
-      return babelHelpers.possibleConstructorReturn(this, (gfGMF.__proto__ || Object.getPrototypeOf(gfGMF)).apply(this, arguments));
+    function EWVwx() {
+      babelHelpers.classCallCheck(this, EWVwx);
+      return babelHelpers.possibleConstructorReturn(this, (EWVwx.__proto__ || Object.getPrototypeOf(EWVwx)).apply(this, arguments));
     }
 
-    return gfGMF;
+    return EWVwx;
   }(Component);
 
   ;
 
-  Soy.register(gfGMF, templates);
+  Soy.register(EWVwx, templates);
 
-  this['metal']['gfGMF'] = gfGMF;
+  this['metal']['EWVwx'] = EWVwx;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from sample-files.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace NNzxk.
+     * @public
+     */
+
+    goog.module('NNzxk.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param2017 = function param2017() {
+        ie_open('h5');
+        itext('Clone the sample repo');
+        ie_close('h5');
+        ie_open('p');
+        itext('To start, you will clone our sample files so you can get to know the deployment process. After the tutorial, you are free to add your own files to the folder or start from scratch with a new service.');
+        ie_close('p');
+        ie_open('p');
+        itext('First, run this command in your terminal:');
+        ie_close('p');
+        $templateAlias2({ code: 'git clone https://github.com/jonnilundy/tutorial-hosting.git', mode: 'text' }, null, opt_ijData);
+        ie_open('p');
+        itext('You now have a folder called ');
+        ie_open('code');
+        itext('tutorial-hosting');
+        ie_close('code');
+        itext(' that contains almost all the files necessary to get your static site of the ground- besides one.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param2017 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'NNzxk.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var NNzxk = function (_Component) {
+    babelHelpers.inherits(NNzxk, _Component);
+
+    function NNzxk() {
+      babelHelpers.classCallCheck(this, NNzxk);
+      return babelHelpers.possibleConstructorReturn(this, (NNzxk.__proto__ || Object.getPrototypeOf(NNzxk)).apply(this, arguments));
+    }
+
+    return NNzxk;
+  }(Component);
+
+  Soy.register(NNzxk, templates);
+  this['metalNamed']['sample-files'] = this['metalNamed']['sample-files'] || {};
+  this['metalNamed']['sample-files']['NNzxk'] = NNzxk;
+  this['metalNamed']['sample-files']['templates'] = templates;
+  this['metal']['sample-files'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['sample-files'];
+
+  var NNzxk = function (_Component) {
+    babelHelpers.inherits(NNzxk, _Component);
+
+    function NNzxk() {
+      babelHelpers.classCallCheck(this, NNzxk);
+      return babelHelpers.possibleConstructorReturn(this, (NNzxk.__proto__ || Object.getPrototypeOf(NNzxk)).apply(this, arguments));
+    }
+
+    return NNzxk;
+  }(Component);
+
+  ;
+
+  Soy.register(NNzxk, templates);
+
+  this['metal']['NNzxk'] = NNzxk;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from running-locally.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace Ncgjz.
+     * @public
+     */
+
+    goog.module('Ncgjz.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param2008 = function param2008() {
+        ie_open('h5');
+        itext('Running locally');
+        ie_close('h5');
+        ie_open('p');
+        itext('WeDeploy provides a dev environment for you to run and test your apps before pushing them to production. Let\'s set that up!');
+        ie_close('p');
+        ie_open('p');
+        itext('In your terminal, go to your project directory and run ');
+        ie_open('code');
+        itext('we dev');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        itext('You can go to ');
+        ie_open('code');
+        itext('http://<hosting-service-id>.tutorial-hosting.wedeploy.me');
+        ie_close('code');
+        itext(' in your browser and see the local deployment of the sample static site. Any changes you make to your project folder now will automatically be deployed to this local server.');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param2008 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'Ncgjz.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var Ncgjz = function (_Component) {
+    babelHelpers.inherits(Ncgjz, _Component);
+
+    function Ncgjz() {
+      babelHelpers.classCallCheck(this, Ncgjz);
+      return babelHelpers.possibleConstructorReturn(this, (Ncgjz.__proto__ || Object.getPrototypeOf(Ncgjz)).apply(this, arguments));
+    }
+
+    return Ncgjz;
+  }(Component);
+
+  Soy.register(Ncgjz, templates);
+  this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
+  this['metalNamed']['running-locally']['Ncgjz'] = Ncgjz;
+  this['metalNamed']['running-locally']['templates'] = templates;
+  this['metal']['running-locally'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['running-locally'];
+
+  var Ncgjz = function (_Component) {
+    babelHelpers.inherits(Ncgjz, _Component);
+
+    function Ncgjz() {
+      babelHelpers.classCallCheck(this, Ncgjz);
+      return babelHelpers.possibleConstructorReturn(this, (Ncgjz.__proto__ || Object.getPrototypeOf(Ncgjz)).apply(this, arguments));
+    }
+
+    return Ncgjz;
+  }(Component);
+
+  ;
+
+  Soy.register(Ncgjz, templates);
+
+  this['metal']['Ncgjz'] = Ncgjz;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from container-json.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace aFEdu.
+     * @public
+     */
+
+    goog.module('aFEdu.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1962 = function param1962() {
+        ie_open('h5');
+        itext('Adding the container.json');
+        ie_close('h5');
+        ie_open('p');
+        itext('Every WeDeploy container needs a container.json file to specify the id and type of service you are using. Let\'s create one for hosting.');
+        ie_close('p');
+        ie_open('ol');
+        ie_open('li');
+        itext('Go to the ');
+        ie_open('code');
+        itext('tutorial-hosting');
+        ie_close('code');
+        itext(' directory');
+        ie_close('li');
+        ie_open('li');
+        itext('Create a file called ');
+        ie_open('code');
+        itext('container.json');
+        ie_close('code');
+        ie_close('li');
+        ie_open('li');
+        itext('Open it in your text editor');
+        ie_close('li');
+        ie_open('li');
+        itext('Paste the follow code');
+        ie_close('li');
+        ie_close('ol');
+        $templateAlias2({ code: '{\n    "id": "hosting",\n    "type": "wedeploy/hosting"\n}', mode: 'application/json' }, null, opt_ijData);
+        ie_open('ul');
+        ie_open('li');
+        ie_open('code');
+        itext('id');
+        ie_close('code');
+        itext(' is the custom name designated for this service. If you named your service something other than "hosting", change the value of the ');
+        ie_open('code');
+        itext('id');
+        ie_close('code');
+        itext(' to the name of the hosting service you created on the dashboard.');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('type');
+        ie_close('code');
+        itext(' tells WeDeploy what service to use.');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1962 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'aFEdu.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var aFEdu = function (_Component) {
+    babelHelpers.inherits(aFEdu, _Component);
+
+    function aFEdu() {
+      babelHelpers.classCallCheck(this, aFEdu);
+      return babelHelpers.possibleConstructorReturn(this, (aFEdu.__proto__ || Object.getPrototypeOf(aFEdu)).apply(this, arguments));
+    }
+
+    return aFEdu;
+  }(Component);
+
+  Soy.register(aFEdu, templates);
+  this['metalNamed']['container-json'] = this['metalNamed']['container-json'] || {};
+  this['metalNamed']['container-json']['aFEdu'] = aFEdu;
+  this['metalNamed']['container-json']['templates'] = templates;
+  this['metal']['container-json'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['container-json'];
+
+  var aFEdu = function (_Component) {
+    babelHelpers.inherits(aFEdu, _Component);
+
+    function aFEdu() {
+      babelHelpers.classCallCheck(this, aFEdu);
+      return babelHelpers.possibleConstructorReturn(this, (aFEdu.__proto__ || Object.getPrototypeOf(aFEdu)).apply(this, arguments));
+    }
+
+    return aFEdu;
+  }(Component);
+
+  ;
+
+  Soy.register(aFEdu, templates);
+
+  this['metal']['aFEdu'] = aFEdu;
+}).call(this);
+'use strict';
+
+(function () {
+  /* jshint ignore:start */
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+
+  var templates;
+  goog.loadModule(function (exports) {
+
+    // This file was automatically generated from deploying.soy.
+    // Please don't edit this file by hand.
+
+    /**
+     * @fileoverview Templates in namespace cNRle.
+     * @public
+     */
+
+    goog.module('cNRle.incrementaldom');
+
+    /** @suppress {extraRequire} */
+    var soy = goog.require('soy');
+    /** @suppress {extraRequire} */
+    var soydata = goog.require('soydata');
+    /** @suppress {extraRequire} */
+    goog.require('goog.i18n.bidi');
+    /** @suppress {extraRequire} */
+    goog.require('goog.asserts');
+    /** @suppress {extraRequire} */
+    goog.require('goog.string');
+    var IncrementalDom = goog.require('incrementaldom');
+    var ie_open = IncrementalDom.elementOpen;
+    var ie_close = IncrementalDom.elementClose;
+    var ie_void = IncrementalDom.elementVoid;
+    var ie_open_start = IncrementalDom.elementOpenStart;
+    var ie_open_end = IncrementalDom.elementOpenEnd;
+    var itext = IncrementalDom.text;
+    var iattr = IncrementalDom.attr;
+
+    var $templateAlias2 = Soy.getTemplate('ElectricCode.incrementaldom', 'render');
+
+    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
+
+    /**
+     * @param {Object<string, *>=} opt_data
+     * @param {(null|undefined)=} opt_ignored
+     * @param {Object<string, *>=} opt_ijData
+     * @return {void}
+     * @suppress {checkTypes}
+     */
+    function $render(opt_data, opt_ignored, opt_ijData) {
+      var param1976 = function param1976() {
+        ie_open('h5');
+        itext('Deploying your project');
+        ie_close('h5');
+        ie_open('p');
+        itext('Now its time to push your local files to your WeDeploy project.');
+        ie_close('p');
+        ie_open('p');
+        itext('First, add a git remote. Within ');
+        ie_open('code');
+        itext('tutorial-hosting');
+        ie_close('code');
+        itext(' on your command line, run:');
+        ie_close('p');
+        $templateAlias2({ code: 'git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git', mode: 'text' }, null, opt_ijData);
+        ie_open('p');
+        itext('Then make a first commit');
+        ie_close('p');
+        ie_open('ul');
+        ie_open('li');
+        ie_open('code');
+        itext('git add .');
+        ie_close('code');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('git commit -m "Awesome change"');
+        ie_close('code');
+        ie_close('li');
+        ie_open('li');
+        ie_open('code');
+        itext('git push wedeploy master');
+        ie_close('code');
+        ie_close('li');
+        ie_close('ul');
+        ie_open('p');
+        itext('Go to the WeDeploy dashboard and select your project. On the right you should see the build log of your recent commit.');
+        ie_close('p');
+        ie_open('p');
+        itext('Once you see "Deploy was successful" go to ');
+        ie_open('code');
+        itext('<service-name>.<project-name>.wedeploy.io');
+        ie_close('code');
+        itext('.');
+        ie_close('p');
+        ie_open('p');
+        itext('Voil\xE0! Your page is live!');
+        ie_close('p');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+        ie_close('input');
+        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+        ie_close('input');
+      };
+      $templateAlias1(soy.$$assignDefaults({ content: param1976 }, opt_data), null, opt_ijData);
+    }
+    exports.render = $render;
+    if (goog.DEBUG) {
+      $render.soyTemplateName = 'cNRle.render';
+    }
+
+    exports.render.params = ["page", "site"];
+    exports.render.types = { "page": "any", "site": "any" };
+    templates = exports;
+    return exports;
+  });
+
+  var cNRle = function (_Component) {
+    babelHelpers.inherits(cNRle, _Component);
+
+    function cNRle() {
+      babelHelpers.classCallCheck(this, cNRle);
+      return babelHelpers.possibleConstructorReturn(this, (cNRle.__proto__ || Object.getPrototypeOf(cNRle)).apply(this, arguments));
+    }
+
+    return cNRle;
+  }(Component);
+
+  Soy.register(cNRle, templates);
+  this['metalNamed']['deploying'] = this['metalNamed']['deploying'] || {};
+  this['metalNamed']['deploying']['cNRle'] = cNRle;
+  this['metalNamed']['deploying']['templates'] = templates;
+  this['metal']['deploying'] = templates;
+  /* jshint ignore:end */
+}).call(this);
+'use strict';
+
+(function () {
+  var Component = this['metal']['component'];
+  var Soy = this['metal']['Soy'];
+  var templates = this['metal']['deploying'];
+
+  var cNRle = function (_Component) {
+    babelHelpers.inherits(cNRle, _Component);
+
+    function cNRle() {
+      babelHelpers.classCallCheck(this, cNRle);
+      return babelHelpers.possibleConstructorReturn(this, (cNRle.__proto__ || Object.getPrototypeOf(cNRle)).apply(this, arguments));
+    }
+
+    return cNRle;
+  }(Component);
+
+  ;
+
+  Soy.register(cNRle, templates);
+
+  this['metal']['cNRle'] = cNRle;
 }).call(this);
 'use strict';
 
@@ -40245,11 +40760,11 @@ babelHelpers;
     // Please don't edit this file by hand.
 
     /**
-     * @fileoverview Templates in namespace iVUEw.
+     * @fileoverview Templates in namespace wkSfe.
      * @public
      */
 
-    goog.module('iVUEw.incrementaldom');
+    goog.module('wkSfe.incrementaldom');
 
     /** @suppress {extraRequire} */
     var soy = goog.require('soy');
@@ -40280,7 +40795,7 @@ babelHelpers;
      * @suppress {checkTypes}
      */
     function $render(opt_data, opt_ignored, opt_ijData) {
-      var param2005 = function param2005() {
+      var param2031 = function param2031() {
         ie_open('h5');
         itext('Testing locally');
         ie_close('h5');
@@ -40318,11 +40833,11 @@ babelHelpers;
         ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
         ie_close('input');
       };
-      $templateAlias1(soy.$$assignDefaults({ content: param2005 }, opt_data), null, opt_ijData);
+      $templateAlias1(soy.$$assignDefaults({ content: param2031 }, opt_data), null, opt_ijData);
     }
     exports.render = $render;
     if (goog.DEBUG) {
-      $render.soyTemplateName = 'iVUEw.render';
+      $render.soyTemplateName = 'wkSfe.render';
     }
 
     exports.render.params = ["page", "site"];
@@ -40331,20 +40846,20 @@ babelHelpers;
     return exports;
   });
 
-  var iVUEw = function (_Component) {
-    babelHelpers.inherits(iVUEw, _Component);
+  var wkSfe = function (_Component) {
+    babelHelpers.inherits(wkSfe, _Component);
 
-    function iVUEw() {
-      babelHelpers.classCallCheck(this, iVUEw);
-      return babelHelpers.possibleConstructorReturn(this, (iVUEw.__proto__ || Object.getPrototypeOf(iVUEw)).apply(this, arguments));
+    function wkSfe() {
+      babelHelpers.classCallCheck(this, wkSfe);
+      return babelHelpers.possibleConstructorReturn(this, (wkSfe.__proto__ || Object.getPrototypeOf(wkSfe)).apply(this, arguments));
     }
 
-    return iVUEw;
+    return wkSfe;
   }(Component);
 
-  Soy.register(iVUEw, templates);
+  Soy.register(wkSfe, templates);
   this['metalNamed']['testing-locally'] = this['metalNamed']['testing-locally'] || {};
-  this['metalNamed']['testing-locally']['iVUEw'] = iVUEw;
+  this['metalNamed']['testing-locally']['wkSfe'] = wkSfe;
   this['metalNamed']['testing-locally']['templates'] = templates;
   this['metal']['testing-locally'] = templates;
   /* jshint ignore:end */
@@ -40356,176 +40871,22 @@ babelHelpers;
   var Soy = this['metal']['Soy'];
   var templates = this['metal']['testing-locally'];
 
-  var iVUEw = function (_Component) {
-    babelHelpers.inherits(iVUEw, _Component);
+  var wkSfe = function (_Component) {
+    babelHelpers.inherits(wkSfe, _Component);
 
-    function iVUEw() {
-      babelHelpers.classCallCheck(this, iVUEw);
-      return babelHelpers.possibleConstructorReturn(this, (iVUEw.__proto__ || Object.getPrototypeOf(iVUEw)).apply(this, arguments));
+    function wkSfe() {
+      babelHelpers.classCallCheck(this, wkSfe);
+      return babelHelpers.possibleConstructorReturn(this, (wkSfe.__proto__ || Object.getPrototypeOf(wkSfe)).apply(this, arguments));
     }
 
-    return iVUEw;
+    return wkSfe;
   }(Component);
 
   ;
 
-  Soy.register(iVUEw, templates);
+  Soy.register(wkSfe, templates);
 
-  this['metal']['iVUEw'] = iVUEw;
-}).call(this);
-'use strict';
-
-(function () {
-  /* jshint ignore:start */
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-
-  var templates;
-  goog.loadModule(function (exports) {
-
-    // This file was automatically generated from running-locally.soy.
-    // Please don't edit this file by hand.
-
-    /**
-     * @fileoverview Templates in namespace phUNs.
-     * @public
-     */
-
-    goog.module('phUNs.incrementaldom');
-
-    /** @suppress {extraRequire} */
-    var soy = goog.require('soy');
-    /** @suppress {extraRequire} */
-    var soydata = goog.require('soydata');
-    /** @suppress {extraRequire} */
-    goog.require('goog.i18n.bidi');
-    /** @suppress {extraRequire} */
-    goog.require('goog.asserts');
-    /** @suppress {extraRequire} */
-    goog.require('goog.string');
-    var IncrementalDom = goog.require('incrementaldom');
-    var ie_open = IncrementalDom.elementOpen;
-    var ie_close = IncrementalDom.elementClose;
-    var ie_void = IncrementalDom.elementVoid;
-    var ie_open_start = IncrementalDom.elementOpenStart;
-    var ie_open_end = IncrementalDom.elementOpenEnd;
-    var itext = IncrementalDom.text;
-    var iattr = IncrementalDom.attr;
-
-    var $templateAlias1 = Soy.getTemplate('tutorial.incrementaldom', 'render');
-
-    /**
-     * @param {Object<string, *>=} opt_data
-     * @param {(null|undefined)=} opt_ignored
-     * @param {Object<string, *>=} opt_ijData
-     * @return {void}
-     * @suppress {checkTypes}
-     */
-    function $render(opt_data, opt_ignored, opt_ijData) {
-      var param1982 = function param1982() {
-        ie_open('h5');
-        itext('Running locally');
-        ie_close('h5');
-        ie_open('p');
-        itext('WeDeploy provides a dev environment for you to run and test your apps before pushing them to production. Let\'s set that up!');
-        ie_close('p');
-        ie_open('p');
-        itext('In your terminal, go to your project directory and run ');
-        ie_open('code');
-        itext('we dev');
-        ie_close('code');
-        itext('.');
-        ie_close('p');
-        ie_open('p');
-        itext('You can go to ');
-        ie_open('code');
-        itext('http://<hosting-service-id>.tutorial-hosting.wedeploy.me');
-        ie_close('code');
-        itext(' in your browser and see the local deployment of the sample static site. Any changes you make to your project folder now will automatically be deployed to this local server.');
-        ie_close('p');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
-        ie_close('input');
-        ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
-        ie_close('input');
-      };
-      $templateAlias1(soy.$$assignDefaults({ content: param1982 }, opt_data), null, opt_ijData);
-    }
-    exports.render = $render;
-    if (goog.DEBUG) {
-      $render.soyTemplateName = 'phUNs.render';
-    }
-
-    exports.render.params = ["page", "site"];
-    exports.render.types = { "page": "any", "site": "any" };
-    templates = exports;
-    return exports;
-  });
-
-  var phUNs = function (_Component) {
-    babelHelpers.inherits(phUNs, _Component);
-
-    function phUNs() {
-      babelHelpers.classCallCheck(this, phUNs);
-      return babelHelpers.possibleConstructorReturn(this, (phUNs.__proto__ || Object.getPrototypeOf(phUNs)).apply(this, arguments));
-    }
-
-    return phUNs;
-  }(Component);
-
-  Soy.register(phUNs, templates);
-  this['metalNamed']['running-locally'] = this['metalNamed']['running-locally'] || {};
-  this['metalNamed']['running-locally']['phUNs'] = phUNs;
-  this['metalNamed']['running-locally']['templates'] = templates;
-  this['metal']['running-locally'] = templates;
-  /* jshint ignore:end */
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['running-locally'];
-
-  var phUNs = function (_Component) {
-    babelHelpers.inherits(phUNs, _Component);
-
-    function phUNs() {
-      babelHelpers.classCallCheck(this, phUNs);
-      return babelHelpers.possibleConstructorReturn(this, (phUNs.__proto__ || Object.getPrototypeOf(phUNs)).apply(this, arguments));
-    }
-
-    return phUNs;
-  }(Component);
-
-  ;
-
-  Soy.register(phUNs, templates);
-
-  this['metal']['phUNs'] = phUNs;
-}).call(this);
-'use strict';
-
-(function () {
-  var Component = this['metal']['component'];
-  var Soy = this['metal']['Soy'];
-  var templates = this['metal']['getting-started'];
-
-  var uXwmi = function (_Component) {
-    babelHelpers.inherits(uXwmi, _Component);
-
-    function uXwmi() {
-      babelHelpers.classCallCheck(this, uXwmi);
-      return babelHelpers.possibleConstructorReturn(this, (uXwmi.__proto__ || Object.getPrototypeOf(uXwmi)).apply(this, arguments));
-    }
-
-    return uXwmi;
-  }(Component);
-
-  ;
-
-  Soy.register(uXwmi, templates);
-
-  this['metal']['uXwmi'] = uXwmi;
+  this['metal']['wkSfe'] = wkSfe;
 }).call(this);
 }).call(this);
 //# sourceMappingURL=bundle.js.map
