@@ -97,53 +97,8 @@ http://emaildemo.wedeploy.io
 
 </ol>
 
-## Sending an email
-
-Now that we have our container up and running, it's time to start sending some emails. We can use the API Client to facilitate the process of sending requests to WeDeploy.
-
-In order to send emails, we have to make a `POST` request to `/emails` passing some required parameters like `from`, `to`, and `subject`:
-
-```javascript
-WeDeploy
-.url('http://<serviceID>.<projectID>.wedeploy.io/emails')
-.form('from', 'from@domain.com')
-.form('to', 'to@domain.com')
-.form('subject', 'Hi there!')
-.post()
-.then(function(response) {
-	console.log('Email ID:', response.body());
-})
-.catch(function(error) {
-	// Some error has happened
-});
-```
-
-<aside>
-
-For the full list of parameters, check this container's README in the [Dashboard](http://dashboard.wedeploy.io/).
-
-</aside>
-
-As a result, we'll receive an email ID. This doesn't indicate that the email was already sent, it actually says that it was added to the email queue. That's why we have another API to check the email status.
-
-## Checking an email status
-
-In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. `123`, and send a `GET` request to `/emails/123/status`.
-
-```javascript
-WeDeploy
-.url('http://<serviceID>.<projectID>.wedeploy.io/emails/<emailID>/status')
-.get()
-.then(function(response) {
-	console.log('Email status:', response.body());
-})
-.catch(function(error) {
-	// Some error has happened
-});
-```
-
 </article>
 
 ## What's next?
 
-* That's it! Now we're ready to start sending emails to our users.
+* That's it! Now we're ready to start [sending emails to our users](/docs/email/sending-email.html).

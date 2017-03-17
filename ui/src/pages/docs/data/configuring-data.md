@@ -101,7 +101,7 @@ Specifies the HTTP method used for the request. In the example bellow, it allows
 ```application/json
 [
 	{
-		"path": "/moives/:movieId",
+		"path": "/movies/:movieId",
 		"data": true,
 		"method": "GET"
 	}
