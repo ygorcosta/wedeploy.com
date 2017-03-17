@@ -10530,7 +10530,7 @@ li a:not([class]) {
   vertical-align: top;
   height: calc(2rem * 1.5); }
 
-.blog .container .content .btn {
+.blog .container .content > .btn {
   -webkit-transition: none 0.3s ease-in-out;
   -o-transition: none 0.3s ease-in-out;
   transition: none 0.3s ease-in-out;
@@ -10540,16 +10540,16 @@ li a:not([class]) {
   margin-right: 1rem;
   height: calc(2rem * 1.5);
   line-height: calc(1rem * 1.5); }
-  .blog .container .content .btn:last-child {
+  .blog .container .content > .btn:last-child {
     margin-right: 0; }
   @media (min-width: 600px) {
-    .blog .container .content .btn {
+    .blog .container .content > .btn {
       margin-bottom: 0; } }
 
-.blog .container .content .btn.btn-inverse-accent {
+.blog .container .content > .btn.btn-inverse-accent {
   background: rgba(14, 20, 26, 0.1);
   color: rgba(14, 20, 26, 0.8); }
-  .blog .container .content .btn.btn-inverse-accent:focus, .blog .container .content .btn.btn-inverse-accent:hover {
+  .blog .container .content > .btn.btn-inverse-accent:focus, .blog .container .content > .btn.btn-inverse-accent:hover {
     background: rgba(14, 20, 26, 0.2); }
 
 .blog .container {
@@ -11154,7 +11154,7 @@ li a:not([class]) {
   vertical-align: top;
   height: calc(2rem * 1.5); }
 
-.tutorial .container .content .btn {
+.tutorial .container .content > .btn {
   -webkit-transition: none 0.3s ease-in-out;
   -o-transition: none 0.3s ease-in-out;
   transition: none 0.3s ease-in-out;
@@ -11164,16 +11164,16 @@ li a:not([class]) {
   margin-right: 1rem;
   height: calc(2rem * 1.5);
   line-height: calc(1rem * 1.5); }
-  .tutorial .container .content .btn:last-child {
+  .tutorial .container .content > .btn:last-child {
     margin-right: 0; }
   @media (min-width: 600px) {
-    .tutorial .container .content .btn {
+    .tutorial .container .content > .btn {
       margin-bottom: 0; } }
 
-.tutorial .container .content .btn.btn-inverse-accent {
+.tutorial .container .content > .btn.btn-inverse-accent {
   background: rgba(14, 20, 26, 0.1);
   color: rgba(14, 20, 26, 0.8); }
-  .tutorial .container .content .btn.btn-inverse-accent:focus, .tutorial .container .content .btn.btn-inverse-accent:hover {
+  .tutorial .container .content > .btn.btn-inverse-accent:focus, .tutorial .container .content > .btn.btn-inverse-accent:hover {
     background: rgba(14, 20, 26, 0.2); }
 
 .tutorial .sidebar-offset {
