@@ -50,7 +50,7 @@ Use `we create` to create projects and containers. You can create a project anyw
 
 ```xml
 Usage:
-  we create --project <project> --container <container>
+	we create --project <projectID> --container <serviceID>
 ```
 
 </article>
@@ -92,19 +92,19 @@ we link --project demo
 Many commands requires `--project`, `--container`, or `--remote` flags. You can use the following patterns for passing these values:
 
 ```xml
-we <command> --project <project> --container <container>
+we <command> --project <projectID> --container <serviceID>
 ```
 
 and the friendly host style:
 
 ```xml
-we <command> <container>.<project>.<remote address>
+we <command> <serviceID>.<projectID>.<remote address>
 ```
 
 or even
 
 ```xml
-we <command> <container>.<project> --remote <remote>
+we <command> <serviceID>.<projectID> --remote <remote>
 ```
 
 For the local cloud, just don't add a `--remote` or `<remote address>` value like in:
@@ -141,13 +141,13 @@ All commands that support `--project`, `--container`, and / or `--remote` suppor
 You can fetch projects and container logs with
 
 ```xml
-we log --project <project> --container <container>
+we log --project <projectID> --container <serviceID>
 ```
 
 or with a friendly host style like
 
 ```xml
-we log <container>.<project>.wedeploy.me
+we log <serviceID>.<projectID>.wedeploy.me
 ```
 
 ### Examples:

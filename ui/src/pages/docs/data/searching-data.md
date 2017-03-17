@@ -19,13 +19,13 @@ We did some great stuff with basic data methods, like create, update, and delete
 First take a look at the text search. It's a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let's search for a Star Wars movie by the episode title, like "Revenge of the Sith". We are not interested if the letter is in upper or lower case, since we are using English connectors like "of" and "the". We want something flexible enough that it will also work for texts like "The revenge of the Sith", or "Sith's revenge". Our match operator is flexible enough for both.
 
 ```javascript
-var data = WeDeploy.data('http://datademo.wedeploy.io');
-
-data.match('title', "Sith's revenge")
-.get('movies')
-.then(function(movies) {
-  console.log(movies);
-});
+WeDeploy
+	.data('http://datademo.wedeploy.io')
+	.match('title', "Sith's revenge")
+	.get('movies')
+	.then(function(movies) {
+		console.log(movies);
+	});
 ```
 
 The result of the match operator query is the following entry:
@@ -39,30 +39,30 @@ We can also use simple text operators in our match:
 ```javascript
 // we can run this
 WeDeploy
-.data()
-.match('title', '(jedi | force) -return')
-.get('movies')
-.then(function(movies) {
-  console.log(movies);
-});
+	.data('http://datademo.wedeploy.io')
+	.match('title', '(jedi | force) -return')
+	.get('movies')
+	.then(function(movies) {
+		console.log(movies);
+	});
 
 // or this
 WeDeploy
-.data()
-.match('title', 'awake*')
-.get('movies')
-.then(function(movies) {
-  console.log(movies);
-});
+	.data('http://datademo.wedeploy.io')
+	.match('title', 'awake*')
+	.get('movies')
+	.then(function(movies) {
+		console.log(movies);
+	});
 
 // or even this
 WeDeploy
-.data()
-.match('title', 'wakens~')
-.get('movies')
-.then(function(movies) {
-  console.log(movies);
-});
+	.data('http://datademo.wedeploy.io')
+	.match('title', 'wakens~')
+	.get('movies')
+	.then(function(movies) {
+		console.log(movies);
+	});
 ```
 
 Any search in the previous example results in the following match:
@@ -77,49 +77,49 @@ So far we are still just filtering data with filters. We can do so much more tha
 
 ```javascript
 WeDeploy
-.data()
-.similar('title', 'The attack an awaken Jedi uses to strike a Sith is pure force!')
-.search('movies')
-.then(function(movies) {
-  console.log(movies);
-});
+	.data('http://datademo.wedeploy.io')
+	.similar('title', 'The attack an awaken Jedi uses to strike a Sith is pure force!')
+	.search('movies')
+	.then(function(movies) {
+		console.log(movies);
+	});
 ```
 
 We receive not only the documents that match the filter, but also search metadata:
 
 ```javascript
 {
-  "total": 5,
-  "documents": [
-    {
-      "title": "Star Wars: Episode VII - The Force Awakens",
-      "id": "star_wars_vii"
-    },
-    {
-      "title": "Star Wars: Episode V - The Empire Strikes Back",
-      "id": "star_wars_v"
-    },
-    {
-      "title": "Star Wars: Episode VI - Return of the Jedi",
-      "id": "star_wars_vi"
-    },
-    {
-      "title": "Star Wars: Episode III - Revenge of the Sith",
-      "id": "star_wars_iii"
-    },
-    {
-      "title": "Star Wars: Episode II - Attack of the Clones",
-      "id": "staw_wars_ii"
-    }
-  ],
-  "scores": {
-    "star_wars_ii": 0.13102644681930542,
-    "star_wars_iii": 0.13102644681930542,
-    "star_wars_v": 0.13102644681930542,
-    "star_wars_vi": 0.13102644681930542,
-    "star_wars_vii": 0.5241057872772217
-  },
-  "queryTime": 1
+	"total": 5,
+	"documents": [
+		{
+			"title": "Star Wars: Episode VII - The Force Awakens",
+			"id": "star_wars_vii"
+		},
+		{
+			"title": "Star Wars: Episode V - The Empire Strikes Back",
+			"id": "star_wars_v"
+		},
+		{
+			"title": "Star Wars: Episode VI - Return of the Jedi",
+			"id": "star_wars_vi"
+		},
+		{
+			"title": "Star Wars: Episode III - Revenge of the Sith",
+			"id": "star_wars_iii"
+		},
+		{
+			"title": "Star Wars: Episode II - Attack of the Clones",
+			"id": "staw_wars_ii"
+		}
+	],
+	"scores": {
+		"star_wars_ii": 0.13102644681930542,
+		"star_wars_iii": 0.13102644681930542,
+		"star_wars_v": 0.13102644681930542,
+		"star_wars_vi": 0.13102644681930542,
+		"star_wars_vii": 0.5241057872772217
+	},
+	"queryTime": 1
 }
 ```
 
@@ -128,50 +128,51 @@ Notice that the score of the star_wars_vii document is bigger than the other mat
 Want more? Well, let's make things even easier for the user! Adding one entry to the search query, we can automatically highlight the words that matched our query, showing not only how relevant the document is to the search, but also where it matches our criteria. We can do this with small changes in our previous search, using the following code:
 
 ```javascript
-WeDeploy.data()
-.similar('title', 'The attack an awakened Jedi uses to strike a Sith is pure force!')
-.highlight('title')
-.search('movies')
-.then(function(movies) {
-  console.log(movies);
-});
+WeDeploy
+	.data('http://datademo.wedeploy.io')
+	.similar('title', 'The attack an awakened Jedi uses to strike a Sith is pure force!')
+	.highlight('title')
+	.search('movies')
+	.then(function(movies) {
+		console.log(movies);
+	});
 ```
 
 As you can see in the code below, our keywords are highlighted in the results:
 
 ```javascript
 {
-  "total": 5,
-  "documents": [
-    {
-      "title": "Star Wars: Episode VII - The <em>Force</em> <em>Awakens</em>",
-      "id": "star_wars_vii"
-    },
-    {
-      "title": "Star Wars: Episode V - The Empire <em>Strikes</em> Back",
-      "id": "star_wars_v"
-    },
-    {
-      "title": "Star Wars: Episode VI - Return of the <em>Jedi</em>",
-      "id": "star_wars_vi"
-    },
-    {
-      "title": "Star Wars: Episode III - Revenge of the <em>Sith</em>",
-      "id": "star_wars_iii"
-    },
-    {
-      "title": "Star Wars: Episode II - <em>Attack</em> of the Clones",
-      "id": "star_wars_ii"
-    }
-  ],
-  "scores": {
-    "star_wars_ii": 0.13102644681930542,
-    "star_wars_iii": 0.13102644681930542,
-    "star_wars_v": 0.13102644681930542,
-    "star_wars_vi": 0.13102644681930542,
-    "star_wars_vii": 0.5241057872772217
-  },
-  "queryTime": 1
+	"total": 5,
+	"documents": [
+		{
+			"title": "Star Wars: Episode VII - The <em>Force</em> <em>Awakens</em>",
+			"id": "star_wars_vii"
+		},
+		{
+			"title": "Star Wars: Episode V - The Empire <em>Strikes</em> Back",
+			"id": "star_wars_v"
+		},
+		{
+			"title": "Star Wars: Episode VI - Return of the <em>Jedi</em>",
+			"id": "star_wars_vi"
+		},
+		{
+			"title": "Star Wars: Episode III - Revenge of the <em>Sith</em>",
+			"id": "star_wars_iii"
+		},
+		{
+			"title": "Star Wars: Episode II - <em>Attack</em> of the Clones",
+			"id": "star_wars_ii"
+		}
+	],
+	"scores": {
+		"star_wars_ii": 0.13102644681930542,
+		"star_wars_iii": 0.13102644681930542,
+		"star_wars_v": 0.13102644681930542,
+		"star_wars_vi": 0.13102644681930542,
+		"star_wars_vii": 0.5241057872772217
+	},
+	"queryTime": 1
 }
 ```
 
@@ -179,25 +180,25 @@ The third search feature is also quite simple, but can be applied to generate me
 
 ```javascript
 WeDeploy
-.data()
-.lt('year', 1990)
-.aggregate('Old Movies', 'rating', 'avg')
-.count()
-.get('movies')
-.then(function(aggregation) {
-  console.log(aggregation);
-});
+	.data('http://datademo.wedeploy.io')
+	.lt('year', 1990)
+	.aggregate('Old Movies', 'rating', 'avg')
+	.count()
+	.get('movies')
+	.then(function(aggregation) {
+		console.log(aggregation);
+	});
 ```
 
 The count we added to the query informed the server that we are not interested in the documents themselves, but rather the number of matches and search metadata. The result, in this case, will be the following data:
 
 ```javascript
 {
-  "total": 3,
-  "queryTime": 13,
-  "aggregations": {
-    "Old Movies": 8.633333333333333
-  }
+	"total": 3,
+	"queryTime": 13,
+	"aggregations": {
+		"Old Movies": 8.633333333333333
+	}
 }
 ```
 
@@ -205,21 +206,21 @@ Cool, right? Simply run another query for the newest movies, and then you'll hav
 
 ```javascript
 {
-  "total": 3,
-  "queryTime": 8,
-  "aggregations": {
-    "Old Movies": {
-      "average": 8.633333333333333,
-      "count": 3,
-      "max": 8.8,
-      "min": 8.4,
-      "name": "Old Movies",
-      "standardDeviation": null,
-      "sum": 25.9,
-      "sumOfSquares": null,
-      "variance": null
-    }
-  }
+	"total": 3,
+	"queryTime": 8,
+	"aggregations": {
+		"Old Movies": {
+			"average": 8.633333333333333,
+			"count": 3,
+			"max": 8.8,
+			"min": 8.4,
+			"name": "Old Movies",
+			"standardDeviation": null,
+			"sum": 25.9,
+			"sumOfSquares": null,
+			"variance": null
+		}
+	}
 }
 ```
 
@@ -228,12 +229,12 @@ If we want to inform the server of the data type of a collection field before it
 
 ```javascript
 WeDeploy
-.url('http://data.datademo.wedeploy.me/')
-.post({
-   "places": {
-     "location": "geo_point"
-   }
-});
+	.url('http://datademo.wedeploy.io')
+	.post({
+		"places": {
+			"location": "geo_point"
+		}
+	});
 ```
 
 We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: date, geo_point, and geo_shape. We will focus on geo_point for this next feature.
@@ -242,46 +243,46 @@ So, we mapped a field called location, in the collection places, as representing
 
 ```javascript
 WeDeploy
-.data()
-.any('category', 'cinema')
-.distance('location', '51.5031653,-0.1123051', '1mi')
-.get('places')
-.then(function(places) {
-  console.log(places);
-});
+	.data('http://datademo.wedeploy.io')
+	.any('category', 'cinema')
+	.distance('location', '51.5031653,-0.1123051', '1mi')
+	.get('places')
+	.then(function(places) {
+		console.log(places);
+	});
 ```
 
 Our result is the following matches:
 
 ```javascript
 [
-  {
-    "name": "BFI IMAX",
-    "location": "51.5126928,-0.12052",
-    "id": "116686224946770924",
-    "category": [
-      "cinema"
-    ]
-  },
-  {
-    "name": "Cinema Museum",
-    "location": "51.501661,-0.1177734",
-    "id": "116686224946770925",
-    "category": [
-      "cinema",
-      "museum"
-    ]
-  },
-  {
-    "name": "Roxy Bar and Screen",
-    "location": "51.5012603,-0.1146835",
-    "id": "116686224946770926",
-    "category": [
-      "cinema",
-      "bar",
-      "restaurant"
-    ]
-  }
+	{
+		"name": "BFI IMAX",
+		"location": "51.5126928,-0.12052",
+		"id": "116686224946770924",
+		"category": [
+			"cinema"
+		]
+	},
+	{
+		"name": "Cinema Museum",
+		"location": "51.501661,-0.1177734",
+		"id": "116686224946770925",
+		"category": [
+			"cinema",
+			"museum"
+		]
+	},
+	{
+		"name": "Roxy Bar and Screen",
+		"location": "51.5012603,-0.1146835",
+		"id": "116686224946770926",
+		"category": [
+			"cinema",
+			"bar",
+			"restaurant"
+		]
+	}
 ]
 ```
 

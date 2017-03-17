@@ -11,13 +11,13 @@ weight: 1
 ###### {$page.description}
 
 <div class="guide-btn-cta">
-  <a class="btn btn-accent btn-sm" href="http://boilerplate-auth.wedeploy.io" target="_blank">
-    <span class="icon-16-external"></span>See Live Demo
-  </a>
+	<a class="btn btn-accent btn-sm" href="http://boilerplate-auth.wedeploy.io" target="_blank">
+		<span class="icon-16-external"></span>See Live Demo
+	</a>
 </div>
 
 <div class="guide-aux-cta">
-  or read the <a href="https://github.com/wedeploy/boilerplate-auth/tree/js" target="_blank">source code</a>.
+	or read the <a href="https://github.com/wedeploy/boilerplate-auth/tree/js" target="_blank">source code</a>.
 </div>
 
 <article id="1">
@@ -138,7 +138,7 @@ Create, delete or update users with a simple API.
 By using WeDeploy API client you can initialize the authentication service by referencing its URL, like in the example below.
 
 ```javascript
-WeDeploy.auth('http://<containerID>.<projectID>.wedeploy.me');
+WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
 ```
 
 After initializing the authentication service URL, WeDeploy client stores its information for future calls.
@@ -146,7 +146,7 @@ After initializing the authentication service URL, WeDeploy client stores its in
 Note that if you are initializing an auth service pointing to the Cloud you should use the proper domain:
 
 ```javascript
-WeDeploy.auth('http://<containerID>.<projectID>.wedeploy.io');
+WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
 ```
 
 </article>

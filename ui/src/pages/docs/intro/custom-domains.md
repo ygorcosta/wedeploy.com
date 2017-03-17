@@ -25,7 +25,6 @@ To make your app accessible right away, WeDeploy makes any project accessible vi
 WeDeploy can help you to configure your own custom domain, like `http://mydomain.com` or `http://www.mydomain.com`.
 To make a project accessible via one or more non-WeDeploy domain names, you must add custom domain(s) to your project configuration as described below:
 
-
 1. After create a project on the [dashboard](http://dashboard.wedeploy.com). Go to the project settings page.
 2. On custom domain session, add the custom domains related to the project.
 3. Click in Update Project.
@@ -34,7 +33,6 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 ![settings](https://cloud.githubusercontent.com/assets/301291/19607402/73aca3b6-977e-11e6-82d6-e3374d3aa6ed.png)
 
 </article>
-
 
 <article id="3">
 

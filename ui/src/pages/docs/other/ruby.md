@@ -11,13 +11,13 @@ weight: 3
 ###### {$page.description}
 
 <div class="guide-btn-cta">
-  <a class="btn btn-accent btn-sm" href="http://boilerplate-ruby.wedeploy.io" target="_blank">
-    <span class="icon-16-external"></span>See Live Demo
-  </a>
+	<a class="btn btn-accent btn-sm" href="http://boilerplate-ruby.wedeploy.io" target="_blank">
+		<span class="icon-16-external"></span>See Live Demo
+	</a>
 </div>
 
 <div class="guide-aux-cta">
-  or read the <a href="https://github.com/wedeploy/boilerplate-ruby/" target="_blank">source code</a>.
+	or read the <a href="https://github.com/wedeploy/boilerplate-ruby/" target="_blank">source code</a>.
 </div>
 
 <article id="1">

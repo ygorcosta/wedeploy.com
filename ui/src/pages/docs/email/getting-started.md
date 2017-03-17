@@ -11,13 +11,13 @@ weight: 1
 ###### {$page.description}
 
 <div class="guide-btn-cta">
-  <a class="btn btn-accent btn-sm" href="http://boilerplate-email.wedeploy.io" target="_blank">
-    <span class="icon-16-external"></span>See Live Demo
-  </a>
+	<a class="btn btn-accent btn-sm" href="http://boilerplate-email.wedeploy.io" target="_blank">
+		<span class="icon-16-external"></span>See Live Demo
+	</a>
 </div>
 
 <div class="guide-aux-cta">
-  or read the <a href="https://github.com/wedeploy/boilerplate-email/tree/js" target="_blank">source code</a>.
+	or read the <a href="https://github.com/wedeploy/boilerplate-email/tree/js" target="_blank">source code</a>.
 </div>
 
 <article id="1">
@@ -105,16 +105,16 @@ In order to send emails, we have to make a `POST` request to `/emails` passing s
 
 ```javascript
 WeDeploy
-.url('http://<containerID>.<projectID>.wedeploy.io/emails')
+.url('http://<serviceID>.<projectID>.wedeploy.io/emails')
 .form('from', 'from@domain.com')
 .form('to', 'to@domain.com')
 .form('subject', 'Hi there!')
 .post()
 .then(function(response) {
-  console.log('Email ID:', response.body());
+	console.log('Email ID:', response.body());
 })
 .catch(function(error) {
-  // Some error has happened
+	// Some error has happened
 });
 ```
 
@@ -132,13 +132,13 @@ In order to check if an email was sent or not, we can use the email ID from the 
 
 ```javascript
 WeDeploy
-.url('http://<containerID>.<projectID>.wedeploy.io/emails/<emailID>/status')
+.url('http://<serviceID>.<projectID>.wedeploy.io/emails/<emailID>/status')
 .get()
 .then(function(response) {
-  console.log('Email status:', response.body());
+	console.log('Email status:', response.body());
 })
 .catch(function(error) {
-  // Some error has happened
+	// Some error has happened
 });
 ```
 

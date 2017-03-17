@@ -37,19 +37,18 @@ After understanding how the api configuration files work, it's time to learn wha
 | method | HTTP method allowed for the request. |
 | parameters | Parameters and validation rules for the collection. |
 
-
 ##### path
 
 A path represents the resource used to store your project data.
 
 ```application/json
 [
-  {
-    "path": "/movies/:movieId"
-  },
-  {
-    "path": "/fruits/*"
-  }
+	{
+		"path": "/movies/:movieId"
+	},
+	{
+		"path": "/fruits/*"
+	}
 ]
 ```
 
@@ -59,10 +58,10 @@ You can create endpoints just for validation, in this case, data is used to fini
 
 ```application/json
 [
-  {
-    "path": "/fruits/*",
-    "data": true
-  }
+	{
+		"path": "/fruits/*",
+		"data": true
+	}
 ]
 ```
 
@@ -72,11 +71,11 @@ Used to describe the behavior of an endpoint.
 
 ```application/json
 [
-  {
-    "description": "Returns actors of a movie",
-    "path": "/movies/:movieId/actors",
-    "method": "GET"
-  }
+	{
+		"description": "Returns actors of a movie",
+		"path": "/movies/:movieId/actors",
+		"method": "GET"
+	}
 ]
 ```
 
@@ -86,12 +85,12 @@ You can unauthorized applications and users to access any endpoint by using the 
 
 ```application/json
 [
-  {
-    "path": "/movies/*",
-    "auth": {
-      "validator": "$auth != null"
-    }
-  }
+	{
+		"path": "/movies/*",
+		"auth": {
+			"validator": "$auth != null"
+		}
+	}
 ]
 ```
 
@@ -101,11 +100,11 @@ Specifies the HTTP method used for the request. In the example bellow, it allows
 
 ```application/json
 [
-  {
-    "path": "/moives/:movieId",
-    "data": true,
-    "method": "GET"
-  }
+	{
+		"path": "/moives/:movieId",
+		"data": true,
+		"method": "GET"
+	}
 ]
 ```
 
@@ -115,17 +114,17 @@ You generally would use `parameters` to force validation in order to make sure t
 
 ```application/json
 [
-  {
-    "description": "Creates a new movie",
-    "path": "/movies",
-    "method": "POST",
-    "parameters": {
-      "title": {
-        "type": "string"
-      }
-    },
-    "data": true
-  }
+	{
+		"description": "Creates a new movie",
+		"path": "/movies",
+		"method": "POST",
+		"parameters": {
+			"title": {
+				"type": "string"
+			}
+		},
+		"data": true
+	}
 ]
 ```
 
@@ -139,10 +138,10 @@ In order to freely use any collection with any kind of operation, you just need 
 
 ```application/json
 [
-  {
-    "path": "/*",
-    "data": true
-  }
+	{
+		"path": "/*",
+		"data": true
+	}
 ]
 ```
 
@@ -160,10 +159,10 @@ The validator can be used as an integration with the Auth service:
 
 ```application/json
 {
-  "path": "/movies/*",
-  "auth": {
-    "validator": "$auth != null"
-  }
+	"path": "/movies/*",
+	"auth": {
+		"validator": "$auth != null"
+	}
 }
 ```
 
@@ -193,7 +192,7 @@ $auth !== null
 <li>Mixed with dynamic values:</li>
 
 ```xml
-<li>$auth.id === $params.id</li>
+$auth.id === $params.id
 ```
 
 <li>Validate new data value agains old one:</li>

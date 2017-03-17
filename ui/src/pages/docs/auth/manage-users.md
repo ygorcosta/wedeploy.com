@@ -17,18 +17,18 @@ weight: 2
 You create a new user in your WeDeploy project by calling the `createUser` method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.
 
 ```javascript
-var auth = WeDeploy.auth();
-
-auth.createUser({
-	email: 'user@domain.com',
-	password: 'abc'
-})
-.then(function(user) {
-	// Successfully created.
-})
-.catch(function(err) {
-  // Not created.
-});
+WeDeploy
+	.auth()
+	.createUser({
+		email: 'user@domain.com',
+		password: 'abc'
+	})
+	.then(function(user) {
+		// Successfully created.
+	})
+	.catch(function(err) {
+		// Not created.
+	});
 ```
 
 </article>
@@ -55,14 +55,14 @@ if (currentUser) {
 
 ```javascript
 WeDeploy
-.auth()
-.getUser(userId)
-.then(function(user) {
-	// User found.
-})
-.catch(function(err) {
-	// User does not exist.
-});
+	.auth()
+	.getUser(userId)
+	.then(function(user) {
+		// User found.
+	})
+	.catch(function(err) {
+		// User does not exist.
+	});
 ```
 
 </article>
@@ -76,13 +76,14 @@ You can delete a user account with the delete method. For example:
 ```javascript
 var currentUser = WeDeploy.auth().currentUser;
 
-currentUser.deleteUser()
-.then(function() {
-	// Successfully deleted.
-})
-.catch(function(err) {
-  // Not deleted.
-});
+currentUser
+	.deleteUser()
+	.then(function() {
+		// Successfully deleted.
+	})
+	.catch(function(err) {
+		// Not deleted.
+	});
 ```
 
 </article>
@@ -96,18 +97,19 @@ You can update a user's basic information. For example:
 ```javascript
 var currentUser = WeDeploy.auth().currentUser;
 
-currentUser.updateUser({
-	password: "password",
-	email: "eleven@hawkinslabs.com",
-	name: "Eleven",
-	photoUrl: "https://hawkinslabs.com/011/profile.jpg"
-})
-.then(function() {
-	// Successfully updated.
-})
-.catch(function(err) {
-  // Not updated.
-});
+currentUser
+	.updateUser({
+		password: "password",
+		email: "eleven@hawkinslabs.com",
+		name: "Eleven",
+		photoUrl: "https://hawkinslabs.com/011/profile.jpg"
+	})
+	.then(function() {
+		// Successfully updated.
+	})
+	.catch(function(err) {
+		// Not updated.
+	});
 ```
 
 </article>
@@ -120,14 +122,14 @@ You can send a password reset email to a user with the sendPasswordResetEmail me
 
 ```javascript
 WeDeploy
-.auth()
-.sendPasswordResetEmail("user@domain.com")
-.then(function() {
-	// Email sent.
-})
-.catch(function(err) {
-  // An error happened.
-});
+	.auth()
+	.sendPasswordResetEmail("user@domain.com")
+	.then(function() {
+		// Email sent.
+	})
+	.catch(function(err) {
+		// An error happened.
+	});
 ```
 
 </article>
@@ -138,14 +140,14 @@ WeDeploy
 
 ```javascript
 WeDeploy
-.auth()
-.signOut()
-.then(function() {
-	// User is signed out.
-})
-.catch(function(err) {
-  // User was signed out.
-});
+	.auth()
+	.signOut()
+	.then(function() {
+		// User is signed out.
+	})
+	.catch(function(err) {
+		// User was signed out.
+	});
 ```
 
 </article>

@@ -30,7 +30,6 @@ data.delete('movies/star_wars_v/title');
 data.delete('movies/star_wars_v');
 
 data.delete('movies');
-
 ```
 
 </article>

@@ -23,16 +23,15 @@ By default, all the operation access to your database are restricted so only aut
 Writing new data is as simple as sending a JSON.
 
 ```javascript
-var data = WeDeploy.data('http://datademo.wedeploy.io');
-
-data.create('movies', {
-  "title": "Star Wars IV",
-  "year": 1977,
-  "rating": 8.7
-}).then(function(movie) {
-  console.log(movie);
-});
-
+WeDeploy
+	.data('http://datademo.wedeploy.io')
+	.create('movies', {
+		"title": "Star Wars IV",
+		"year": 1977,
+		"rating": 8.7
+	}).then(function(movie) {
+		console.log(movie);
+	});
 ```
 As you can see, the data api uses Promises to help you to make async requests.
 
@@ -40,10 +39,10 @@ This operation will return the newly created document, with the following genera
 
 ```javascript
 {
-  "id":" "115992383516607958",
-  "title": "Star Wars IV",
-  "year": 1977,
-  "rating": 8.7
+	"id":" "115992383516607958",
+	"title": "Star Wars IV",
+	"year": 1977,
+	"rating": 8.7
 }
 ```
 
@@ -59,39 +58,40 @@ With the same method you're able to create multiple data instead using the metho
 You just need to use an array instead an object as the second param.
 
 ```javascript
-WeDeploy.data('http://datademo.wedeploy.io').create('movies', [
-  {
-    "title": "Star Wars III",
-    "year": 2005,
-    "rating": 8.0
-  },
-  {
-    "title": "Star Wars II",
-    "year": 2002,
-    "rating": 8.6
-  }
-]).then(function(movies) {
-  console.log(movies);
-});
-
+WeDeploy
+	.data('http://datademo.wedeploy.io')
+	.create('movies', [
+		{
+			"title": "Star Wars III",
+			"year": 2005,
+			"rating": 8.0
+		},
+		{
+			"title": "Star Wars II",
+			"year": 2002,
+			"rating": 8.6
+		}
+	]).then(function(movies) {
+		console.log(movies);
+	});
 ```
 
 This operation will return the newly created array of documents, with the following generated IDs:
 
 ```javascript
 [
-  {
-    "id":" 115992383516607959",
-    "title": "Star Wars III",
-    "year": 2005,
-    "rating": 8.0
-  },
-  {
-    "id":" 115992383516607954",
-    "title": "Star Wars II",
-    "year": 2002,
-    "rating": 8.6
-  }
+	{
+		"id":" 115992383516607959",
+		"title": "Star Wars III",
+		"year": 2005,
+		"rating": 8.0
+	},
+	{
+		"id":" 115992383516607954",
+		"title": "Star Wars II",
+		"year": 2002,
+		"rating": 8.6
+	}
 ]
 ```
 
@@ -104,28 +104,29 @@ This operation will return the newly created array of documents, with the follow
 WeDeploy Data service is really flexible in therms of data structure. You're able to insert new fiels in a collection by adding the new key in the object param.
 
 ```javascript
-WeDeploy.data('http://datademo.wedeploy.io').create('movies', [
-  {
-    "title": "Star Wars I",
-    "obs": "First in ABC order",
-    "year": 1999,
-    "rating": 9.0
-  }
-]).then(function(movie) {
-  console.log(movie);
-});
-
+WeDeploy
+	.data('http://datademo.wedeploy.io')
+	.create('movies', [
+		{
+			"title": "Star Wars I",
+			"obs": "First in ABC order",
+			"year": 1999,
+			"rating": 9.0
+		}
+	]).then(function(movie) {
+		console.log(movie);
+	});
 ```
 
 This operation will return the newly created document, with the following generated ID:
 
 ```javascript
 {
-  "id":" 115992383516607954",
-  "title": "Star Wars I",
-  "obs": "First in ABC order",
-  "year": 1999,
-  "rating": 9.0
+	"id":" 115992383516607954",
+	"title": "Star Wars I",
+	"obs": "First in ABC order",
+	"year": 1999,
+	"rating": 9.0
 }
 ```
 

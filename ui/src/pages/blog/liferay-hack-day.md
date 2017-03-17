@@ -24,8 +24,9 @@ On the final day of the retreat, we put on a hack day (because how could we brin
 > Every year we are amazed at the creativity of the projects, and this year did not disappoint.
 
 There are only two requirements for their projects:
-  * The code needs to be new
-  * It has to be pushed to Github
+
+* The code needs to be new
+* It has to be pushed to Github
 
 On top of that, this year we encouraged the teams to use WeDeploy to host their projects. Four teams did, and these were there projects.
 

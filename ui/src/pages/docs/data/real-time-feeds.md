@@ -17,15 +17,15 @@ weight: 8
 We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in real-time, all we need to do is change the *WeDeploy™* API  `get` method to use to the `watch` method:
 
 ```javascript
-var data = WeDeploy.data('http://datademo.wedeploy.io');
-
-data.watch('movies')
-.on('changes', function(data){
-   console.log(data);
-})
-.on('fail', function(error){
-   console.log(error);
-});
+WeDeploy
+	.data('http://datademo.wedeploy.io')
+	.watch('movies')
+	.on('changes', function(data) {
+		console.log(data);
+	})
+	.on('fail', function(error) {
+		console.log(error);
+	});
 ```
 
 Now every time the storage detects changes that affect the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.
@@ -39,16 +39,17 @@ Now every time the storage detects changes that affect the query you're watching
 To present data using advanced search is simple as performing normal queries. You just would need to keep using the `watch` method and apply any filter you desire.
 
 ```javascript
-WeDeploy.data('http://datademo.wedeploy.io')
-.where('category', 'cinema')
-.or('category', 'cartoon')
-.watch('movies')
-.on('changes', function(data){
-   console.log(data);
-})
-.on('fail', function(error){
-   console.log(error);
-});
+WeDeploy
+	.data('http://datademo.wedeploy.io')
+	.where('category', 'cinema')
+	.or('category', 'cartoon')
+	.watch('movies')
+	.on('changes', function(data) {
+		console.log(data);
+	})
+	.on('fail', function(error) {
+		console.log(error);
+	});
 ```
 
 </article>
@@ -60,16 +61,17 @@ WeDeploy.data('http://datademo.wedeploy.io')
 The data service uses a query limit `500` by default. In order to always get the latest new record, you would need to limit the query by `1` and order by `id` `desc`.
 
 ```javascript
-WeDeploy.data('http://datademo.wedeploy.io')
-.limit(1)
-.orderBy('id', 'desc')
-.watch('movies')
-.on('changes', function(data){
-   console.log(data);
-})
-.on('fail', function(error){
-   console.log(error);
-});
+WeDeploy
+	.data('http://datademo.wedeploy.io')
+	.limit(1)
+	.orderBy('id', 'desc')
+	.watch('movies')
+	.on('changes', function(data) {
+		console.log(data);
+	})
+	.on('fail', function(error) {
+		console.log(error);
+	});
 ```
 
 </article>
