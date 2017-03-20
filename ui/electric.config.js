@@ -7,6 +7,6 @@ module.exports = {
 	sassOptions: {
 		includePaths: ['node_modules', marble.src]
 	},
-	codeMirrorLanguages: ['xml', 'css', 'javascript', 'clike', 'swift'],
+	codeMirrorLanguages: ['xml', 'css', 'javascript', 'clike', 'swift', 'groovy'],
 	vendorSrc: ['node_modules/marble/build/fonts/**']
 };
