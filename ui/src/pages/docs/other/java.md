@@ -6,7 +6,7 @@ layout: "guide"
 weight: 4
 ---
 
-# Java
+### Java
 
 ###### {$page.description}
 

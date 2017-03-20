@@ -1,2 +1,7 @@
 @import "docs/feedback";
 @import "docs/newsletter";
+
+.docs .guide-content h2 {
+	font-size: $font-h4;
+	line-height: calc(2rem * #{$lineHeight});
+}

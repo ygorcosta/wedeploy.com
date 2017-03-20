@@ -6,7 +6,7 @@ layout: "guide"
 weight: 1
 ---
 
-# Hosting
+### Hosting
 
 ###### {$page.description}
 

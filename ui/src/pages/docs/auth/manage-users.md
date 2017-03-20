@@ -6,7 +6,7 @@ layout: "guide"
 weight: 2
 ---
 
-# {$page.title}
+### {$page.title}
 
 ###### {$page.description}
 

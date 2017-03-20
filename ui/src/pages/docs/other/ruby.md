@@ -6,7 +6,7 @@ layout: "guide"
 weight: 3
 ---
 
-# Ruby
+### Ruby
 
 ###### {$page.description}
 

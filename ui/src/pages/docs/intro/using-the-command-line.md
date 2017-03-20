@@ -6,7 +6,7 @@ layout: "guide"
 weight: 7
 ---
 
-# {$page.title}
+### {$page.title}
 
 ###### {$page.description}
 
@@ -150,7 +150,7 @@ or with a friendly host style like
 we log <serviceID>.<projectID>.wedeploy.me
 ```
 
-### Examples:
+##### Examples:
 
 See the logs for the last 20min for the data container on the wechat project:
 
