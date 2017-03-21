@@ -3,7 +3,7 @@ title: "Starting an IoT platform with WeDeploy"
 description: "In this blog post I will guide you through the steps to create a minimal IoT platform which accepts metrics from remote devices. To build this multi-service project, I will use the WeDeploy Java, Hosting, and Data services."
 date: "Mar 17, 2017"
 author: "Manuel de la Peña"
-image: "http://wedeploy.com/images/blog/post-5--0.png"
+image: "/images/blog/post-5--0.png"
 layout: "blog"
 ---
 
@@ -23,7 +23,7 @@ I realized that in the short period of time I had to accomplish this, I would ne
 
 > Why not use WeDeploy to host my app? It already provides all the infrastructure I need.
 
-With WeDeploy, you manage `git` repositories and wrap them into services that can be deployed into the platform. It also offers a set of useful, already-configured services such as [Data](http://wedeploy.com/docs/data), [Users and Auth](http://wedeploy.com/docs/auth), or even a [E-mail](http://wedeploy.com/docs/email). This allows any developer to streamline a project with minimal infrastructure configuration so they can just focus on coding the application they want to develop.
+With WeDeploy, you manage `git` repositories and wrap them into services that can be deployed into the platform. It also offers a set of useful, already-configured services such as [Data](/docs/data), [Users and Auth](/docs/auth), or even a [E-mail](/docs/email). This allows any developer to streamline a project with minimal infrastructure configuration so they can just focus on coding the application they want to develop.
 
 #### The Stack
 
@@ -37,19 +37,19 @@ The Android app is super easy to create, and has nothing to do with WeDeploy, ju
 
 #### Creating an API with WeDeploy
 
-In order to accept metrics from remote applications, I decided to create a REST API to handle the requests, and then it would store the metrics in a persistent storage. As WeDeploy offers a [Data](http://wedeploy.com/docs/data) service, I decided that my REST API should communicate to that service to store the metrics.
+In order to accept metrics from remote applications, I decided to create a REST API to handle the requests, and then it would store the metrics in a persistent storage. As WeDeploy offers a [Data](/docs/data) service, I decided that my REST API should communicate to that service to store the metrics.
 
 Then, I chose the framework to create the API. As I'm a Java developer, I chose [Spring Boot](https://projects.spring.io/spring-boot/) to build it, which lets you create tiny applications and define REST resources in an extremely easy manner.
 
-So I created a project on the WeDeploy dashboard, and added a [WeDeploy Java](http://wedeploy.com/docs/other/java.html) service named "api". I locally cloned [the boilerplate-java project from Github](https://github.com/wedeploy/boilerplate-java), and started coding my REST API's there.
+So I created a project on the WeDeploy dashboard, and added a [WeDeploy Java](/docs/other/java.html) service named "api". I locally cloned [the boilerplate-java project from Github](https://github.com/wedeploy/boilerplate-java), and started coding my REST API's there.
 
-Of course you can do this step with other technology you are more familiar with, and WeDeploy offers several server-side technologies to accomplish this including [NodeJS](http://wedeploy.com/docs/other/nodejs.html) and [Ruby](http://wedeploy.com/docs/other/ruby.html).
+Of course you can do this step with other technology you are more familiar with, and WeDeploy offers several server-side technologies to accomplish this including [NodeJS](/docs/other/nodejs.html) and [Ruby](/docs/other/ruby.html).
 
 ##### Implementing a service
 
 In order to implement a WeDeploy service, it's mandatory to create a `container.json` file in the root of your folder, where you specify the type of the service you would like to use and some other behaviors.
 
-In the case of the [WeDeploy Java](http://wedeploy.com/docs/other/java.html) service, you can set hooks to build the project once the service is created or updated.
+In the case of the [WeDeploy Java](/docs/other/java.html) service, you can set hooks to build the project once the service is created or updated.
 
 ```application/json
 {
@@ -101,7 +101,7 @@ public class SensorsRestController {
 
 ##### Defining the save service
 
-Our API service needs to store the metrics in the [WeDeploy Data](http://wedeploy.com/docs/data) service so I added a new service to the project on the WeDeploy dashboard, naming it `data`. Again, I cloned the [boilerplate-data Github repository](https://github.com/wedeploy/boilerplate-data) at the same level of my API service, and voilà! I have two services under my WeDeploy project.
+Our API service needs to store the metrics in the [WeDeploy Data](/docs/data) service so I added a new service to the project on the WeDeploy dashboard, naming it `data`. Again, I cloned the [boilerplate-data Github repository](https://github.com/wedeploy/boilerplate-data) at the same level of my API service, and voilà! I have two services under my WeDeploy project.
 
 Here it is the `container.json` file for this new data service:
 
@@ -123,7 +123,7 @@ But this data service must be configured to create a collection of elements. The
 
 And I also had to define how this collection of data is accessed, and which HTTP verbs are allowed.
 
-You can configure this in WeDeploy data service with the `api.json` [descriptor](http://wedeploy.com/docs/data/configuring-data.html). This block shows the three REST resources that are accepted by my data service, and their specific paths: two for retrieving data, and one for storing data.
+You can configure this in WeDeploy data service with the `api.json` [descriptor](/docs/data/configuring-data.html). This block shows the three REST resources that are accepted by my data service, and their specific paths: two for retrieving data, and one for storing data.
 
 ```application/json
 [
@@ -188,7 +188,7 @@ dependencies {
 }
 ```
 
-Added the dependencies, the communication with the [WeDeploy Data service](http://wedeploy.com/docs/data) is performed in this block of code:
+Added the dependencies, the communication with the [WeDeploy Data service](/docs/data) is performed in this block of code:
 
 ```text/x-java
 public class DataRepository {
@@ -238,7 +238,7 @@ Here the `WeDeploy` object hides the magic of communicating with other WeDeploy 
 
 ##### Displaying data
 
-At that point I had built two services: a Java REST API developed with `Spring Boot`, and a [WeDeploy Data service](http://wedeploy.com/docs/data) for persistence. Then I wanted to display the metrics in a web interface. So, I created a third WeDeploy service, [Hosting](http://wedeploy.com/docs/hosting), which allows uploading static files, such as HTML, CSS and JavaScript, and gave it the name `ui`. Bellow is the `container.json` file that I made to impliment the [Hosting Service](http://wedeploy.com/docs/hosting).
+At that point I had built two services: a Java REST API developed with `Spring Boot`, and a [WeDeploy Data service](/docs/data) for persistence. Then I wanted to display the metrics in a web interface. So, I created a third WeDeploy service, [Hosting](/docs/hosting), which allows uploading static files, such as HTML, CSS and JavaScript, and gave it the name `ui`. Bellow is the `container.json` file that I made to impliment the [Hosting Service](/docs/hosting).
 
 ```application/json
 {
@@ -290,5 +290,10 @@ Thanks to the WeDeploy team, a JS client is also available. Super cool! You only
 #### Summary
 
 With WeDeploy I could accomplish the task of creating a very basic stack to handle requests. I wrote a a service representing an API for accepting requests, a service to store data, and a service representing a UI for the metrics. And all of that has been accomplish just using a couple lines of code + git skills, with no infrastructure knowledge needed!
+
+If you're curious about the end result, see:
+
+* [**ui**.mdelapenya-sensors.wedeploy.io](http://ui.mdelapenya-sensors.wedeploy.io)
+* [**api**.mdelapenya-sensors.wedeploy.io](http://api.mdelapenya-sensors.wedeploy.io/sensors)
 
 </article>
