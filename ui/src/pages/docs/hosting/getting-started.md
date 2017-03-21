@@ -32,7 +32,7 @@ This section assumes that you already have the **WeDeploy CLI** installed and **
 
 ## Running locally
 
-WeDeploy™ provides a way to run your project locally using a sandbox system.
+WeDeploy provides a way to run your project locally using a sandbox system.
 
 <ol>
 

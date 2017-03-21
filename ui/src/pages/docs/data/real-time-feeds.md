@@ -14,7 +14,7 @@ weight: 8
 
 ## Watching data changes
 
-We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in real-time, all we need to do is change the *WeDeploy™* API  `get` method to use to the `watch` method:
+We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in real-time, all we need to do is change the *WeDeploy* API  `get` method to use to the `watch` method:
 
 ```javascript
 WeDeploy

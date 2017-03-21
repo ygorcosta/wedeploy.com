@@ -213,4 +213,4 @@ $auth !== null && $auth.id === $params.id
 
 ## What's next?
 
-Now that you have *WeDeploy™ Data* API settled up, you can interact [saving data](/docs/data/saving-data.html).
+Now that you have *WeDeploy Data* API settled up, you can interact [saving data](/docs/data/saving-data.html).
