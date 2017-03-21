@@ -1,5 +1,5 @@
 ---
-title: "Retrieving data"
+title: "Retrieving Data"
 description: "The get() function retrieve an existing field, document or collection in the database."
 headerTitle: "Data"
 layout: "guide"
