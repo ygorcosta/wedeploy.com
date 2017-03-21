@@ -238,7 +238,7 @@ Here the `WeDeploy` object hides the magic of communicating with other WeDeploy 
 
 ##### Displaying data
 
-At that point I had built two services: a Java REST API developed with `Spring Boot`, and a [WeDeploy Data service](http://wedeploy.com/docs/data) for persistence. Then I wanted to display the metrics in a web interface. So, I created a third WeDeploy service, [Hosting](http://wedeploy.com/docs/hosting), which allows uploading static files, such as HTML, CSS and Javascript, and gave it the name `ui`. Bellow is the `container.json` file that I made to impliment the [Hosting Service](http://wedeploy.com/docs/hosting).
+At that point I had built two services: a Java REST API developed with `Spring Boot`, and a [WeDeploy Data service](http://wedeploy.com/docs/data) for persistence. Then I wanted to display the metrics in a web interface. So, I created a third WeDeploy service, [Hosting](http://wedeploy.com/docs/hosting), which allows uploading static files, such as HTML, CSS and JavaScript, and gave it the name `ui`. Bellow is the `container.json` file that I made to impliment the [Hosting Service](http://wedeploy.com/docs/hosting).
 
 ```application/json
 {
@@ -247,7 +247,7 @@ At that point I had built two services: a Java REST API developed with `Spring B
 }
 ```
 
-I know that this is not related to WeDeploy, but I wanted to display the metrics in two different ways: a datagrid with all metrics, and a `Google Maps` interface with a pin where a metric was sent. With the following code, which **is not the WeDeploy Javascript client**, I can retrieve the JSON objects returned from the `Spring Boot` API with browser's native `fetch` capability, process the response, and draw the results in the screen. 
+I know that this is not related to WeDeploy, but I wanted to display the metrics in two different ways: a datagrid with all metrics, and a `Google Maps` interface with a pin where a metric was sent. With the following code, which **is not the WeDeploy JavaScript client**, I can retrieve the JSON objects returned from the `Spring Boot` API with browser's native `fetch` capability, process the response, and draw the results in the screen. 
 
 ```text/javascript
 function getSensors(mode) {
