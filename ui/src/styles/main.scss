@@ -34,3 +34,104 @@ $accent: #00d46a;
 
 // _Topbar
 @import "topbar";
+
+//overwrite tooltip layout from marble
+.tooltip.bottom .tooltip-inner {
+	background: $primary;
+	color: white;
+	font-family: $font-secondary;
+	font-size: 10px;
+	font-weight: 400;
+	padding: 0 12px;
+	line-height: 36px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 10px); // parent padding 5px 0
+		border-radius: 4px;
+		background: rgba($white, 0.1);
+		z-index: 1;
+	}
+}
+
+//overwrite templates/root/code from marble
+.code-container pre {
+	padding: 12px 4px;
+}
+
+.code-container .CodeMirror-gutter-wrapper {
+	left: -60px !important;
+}
+
+.code-container .CodeMirror-sizer {
+	margin-left: 60px !important;
+}
+
+.code-container .CodeMirror-gutter.CodeMirror-linenumbers {
+	width: 60px !important;
+}
+
+.code-container .CodeMirror-linenumber {
+	line-height: 24px;
+	text-align: left;
+	width: 36px !important;
+	left: 24px !important;
+	padding: 0;
+	font-size: 13px;
+	color: rgba($white, .40);
+}
+
+.code-container .CodeMirror-lines {
+	padding: 12px 0;
+}
+
+.code-container .CodeMirror pre {
+	font-size: 13px;
+	z-index: 6;
+}
+
+.code-container .CodeMirror-gutters {
+	left: 0 !important;
+}
+
+.code-container .btn-copy {
+	background: $primary;
+	color: white;
+
+	width: 36px;
+	height: 36px;
+	top: 6px;
+	right: 6px;
+	border-radius: 4px;
+
+	> span {
+		font-size: 12px;
+	}
+
+	&:before {
+		@include anim(background);
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 36px;
+		height: 36px;
+		border-radius: 4px;
+		background: rgba($white, 0.2);
+		z-index: 1;
+	}
+
+	&:hover {
+		background: $primary;
+
+		&:before {
+			background: rgba($white, 0.4);
+		}
+	}
+}
+
+
