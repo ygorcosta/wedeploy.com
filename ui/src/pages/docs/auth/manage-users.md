@@ -31,6 +31,18 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+let auth = WeDeploy
+	.auth("<auth-url>")
+	.createUser(email: "user@domain.com", password: "abc", name: "somename")
+	.then { user in
+   		// Successfully created.
+	}
+	.catch { err in
+   		// Not created.
+	}
+```
+
 </article>
 
 <article id="2">
@@ -45,6 +57,18 @@ if (currentUser) {
 } else {
 	// No user is signed in.
 }
+```
+
+```text/x-swift
+WeDeploy
+	.auth("<auth-url>")
+    .getCurrentUser()
+    .then { user in
+        // User found.
+    }
+    .catch { error in
+        // User does not exist.
+	}
 ```
 
 </article>
@@ -63,6 +87,18 @@ WeDeploy
 	.catch(function(err) {
 		// User does not exist.
 	});
+```
+
+```text/x-swift
+WeDeploy
+	.auth("<auth-url>")
+    .getUser(id: "userId")
+    .then { user in
+        // User found.
+    }
+    .catch { error in
+        // User does not exist.
+	}
 ```
 
 </article>
@@ -84,6 +120,18 @@ currentUser
 	.catch(function(err) {
 		// Not deleted.
 	});
+```
+
+```text/x-swift
+WeDeploy
+	.auth("<auth-url>")
+    .deleteUser(id: "userId")
+    .then { _ in
+        // Successfully deleted
+    }
+    .catch { err in
+        // Not deleted.
+    }
 ```
 
 </article>
@@ -112,6 +160,18 @@ currentUser
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.auth("<auth-url>")
+    .updateUser(id: "userId" , email: "eleven@hawkinslabs.com", password: "password", name: "Eleven")
+    .then { _ in
+        // Successfully updated
+    }
+    .catch { err in
+        // Not updated.
+    }
+```
+
 </article>
 
 <article id="6">
@@ -132,6 +192,18 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.auth("<auth-url>")
+	.sendPasswordReset(email: "user@domain.com")
+	.then { _ in
+     	// Successfully signed out.
+	}
+	.catch { err in
+    	// Not signed out.
+	}
+```
+
 </article>
 
 <article id="7">
@@ -148,6 +220,18 @@ WeDeploy
 	.catch(function(err) {
 		// User was signed out.
 	});
+```
+
+```text/x-swift
+WeDeploy
+	.auth("<auth-url>")
+	.signOut()
+	.then { _ in
+     	// Successfully signed out.
+	}
+	.catch { err in
+    	// Not signed out.
+	}	
 ```
 
 </article>

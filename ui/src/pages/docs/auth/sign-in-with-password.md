@@ -28,6 +28,19 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+let auth = WeDeploy
+	.auth("<auth-url>")
+	.signInWith(username: "user@domain.com", password: "password")
+    .then { auth in
+		// User is signed in.
+    }
+    .catch { err in
+		// User is not signed in.
+    }
+```
+
+
 </article>
 
 ## What's next?

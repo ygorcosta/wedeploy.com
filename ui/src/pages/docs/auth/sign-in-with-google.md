@@ -30,6 +30,19 @@ auth.onSignIn(function(user) {
 });
 ```
 
+```text/x-swift
+let auth = WeDeploy.auth("<auth-url>");
+let provider = AuthProvider(provider: .google, redirectUri: "my-app://")
+provider.providerScope = "email"
+
+auth.signInWithRedirect(provider: provider) { (user, error) in
+    // Fires when user is signed in after redirect.
+}
+
+//Add WeDeploy.auth("<auth-url>").handle(url: url) in AppDelegate's open url method	
+```
+
+
 </article>
 
 <article id="2">

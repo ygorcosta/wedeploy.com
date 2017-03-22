@@ -141,6 +141,10 @@ By using WeDeploy API client you can initialize the authentication service by re
 WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
 ```
 
+```text/x-swift
+let auth = WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
+```
+
 After initializing the authentication service URL, WeDeploy client stores its information for future calls.
 
 Note that if you are initializing an auth service pointing to the Cloud you should use the proper domain:
@@ -148,6 +152,11 @@ Note that if you are initializing an auth service pointing to the Cloud you shou
 ```javascript
 WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
 ```
+
+```text/x-swift
+let auth = WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
+```
+
 
 </article>
 
