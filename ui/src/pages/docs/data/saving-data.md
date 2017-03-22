@@ -33,6 +33,20 @@ WeDeploy
 		console.log(movie);
 	});
 ```
+
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.create(resource: "movies", object: [
+  		"title" : "Star Wars IV",
+  		"year" : 1977,
+  		"ratings" : 8.7
+	])
+	.then { movie in
+    	print(movie)
+	}
+```
+
 As you can see, the data api uses Promises to help you to make async requests.
 
 This operation will return the newly created document, with the following generated ID:
@@ -76,6 +90,26 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.create(resource: "movies", object: [
+	[
+  		"title" : "Star Wars III",
+  		"year" : 2005,
+  		"ratings" : 8.0
+	],
+	[
+     "title" : "Star Wars II",
+     "year" : 2002,
+     "ratings" : 8.6
+	]
+	])
+	.then { movie in
+    	print(movie)
+	}
+```
+
 This operation will return the newly created array of documents, with the following generated IDs:
 
 ```javascript
@@ -117,6 +151,22 @@ WeDeploy
 		console.log(movie);
 	});
 ```
+
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.create(resource: "movies", object: [
+        "title": "Star Wars I",
+        "obs": "First in ABC order",
+        "year": 1999,
+        "rating": 9.0
+	])
+	.then { movie in
+    	print(movie)
+	}
+```
+
+
 
 This operation will return the newly created document, with the following generated ID:
 

@@ -28,6 +28,25 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+
+// You have to hold a strong reference to the socket or it will be released
+socket = WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.watch(resourcePath: "movies")
+
+socket.on([.changes, .error]) { data in 
+		switch(data.type) {
+		case .changes:
+			print("changes \(data.document)")
+		case .error:
+			print("error \(data.document)")
+		default:
+			break
+		}
+	}
+```
+
 Now every time the storage detects changes that affect the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.
 
 </article>	
@@ -52,6 +71,27 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+
+// You have to hold a strong reference to the socket or it will be released
+socket = WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.where(field: "category", op: "=", value: "cinema")
+	.or(field: "category", op: "=", value: "cartoon")
+	.watch(resourcePath: "movies")
+
+socket.on([.changes, .error]) { data in 
+		switch(data.type) {
+		case .changes:
+			print("changes \(data.document)")
+		case .error:
+			print("error \(data.document)")
+		default:
+			break
+		}
+	}
+```
+
 </article>
 
 <article id="3">
@@ -72,6 +112,27 @@ WeDeploy
 	.on('fail', function(error) {
 		console.log(error);
 	});
+```
+
+```text/x-swift
+
+// You have to hold a strong reference to the socket or it will be released
+socket = WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.limit(1)
+	.orderBy(field: "id", order: .DESC)
+	.watch(resourcePath: "movies")
+
+socket.on([.changes, .error]) { data in 
+		switch(data.type) {
+		case .changes:
+			print("changes \(data.document)")
+		case .error:
+			print("error \(data.document)")
+		default:
+			break
+		}
+	}
 ```
 
 </article>

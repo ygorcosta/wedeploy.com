@@ -25,6 +25,15 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io");
+	.get(resourcePath: "movies/star_wars_v")
+	.then { movie in
+     	print(movie)
+	}
+```
+
 The response body is the stored JSON document:
 
 ```javascript
@@ -45,6 +54,15 @@ WeDeploy
 	.then(function(title) {
 		console.log(title);
 	});
+```
+
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io");
+	.get(resourcePath: "movies/star_wars_v/title")
+	.then { (movie: String) in // You have to specify the type here to allow compiler infer type
+     	print(movie)
+	}
 ```
 
 The full path returns the raw content in the response body:
@@ -82,6 +100,15 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io");
+	.orderBy(field: "rating", order: .DESC)
+	.then { movies in
+    	print(movies)
+	}
+```
+
 As expected, the result would be the following list:
 
 ```javascript
@@ -117,6 +144,17 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io");
+	.where(field: "year", op: "<", value: 2000)
+	.or(field: "rating", op: ">", value: 8.5)
+	.get(resourcePath: "movies")
+	.then { movies in
+    	print(movies)
+	}
+```
+
 The following entries are the result of the above filters:
 
 ```javascript
@@ -145,6 +183,19 @@ WeDeploy
 	.then(function(movies) {
 		console.log(movies);
 	});
+```
+
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io");
+	.where(field: "year", op: "<", value: 2000)
+	.orderBy(field: "rating", order: .ASC)
+	.limit(2)
+	.offset(1)
+	.get(resourcePath: "movies")
+	.then { movies in
+    	print(movies)
+	}
 ```
 
 Notice that filtering by year only returns episodes I, II, III, and VII. Applying the 'rating' sort will give us this same order. We also limited the result to show only two documents and skip the first one. The final result is the following entries:

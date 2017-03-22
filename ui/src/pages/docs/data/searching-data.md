@@ -28,6 +28,18 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.match(field: "title", pattern: "Sith's revenge")
+	.get(resourcePath: "movies")
+	.then { movies in
+        print(movies)
+	}
+```
+
+
+
 The result of the match operator query is the following entry:
 
 ```javascript
@@ -65,6 +77,36 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+// we can run this
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.match(field: "title", pattern: "(jedi | force) -return")
+	.get(resourcePath: "movies")
+	.then { movies in
+    	print(movies)
+	}
+
+// or this
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.match(field: "title", pattern: "awake*")
+	.get(resourcePath: "movies")
+	.then { movies in
+        print(movies)
+	}
+
+// or even this
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.match(field: "title", pattern: "wakens~")
+	.get(resourcePath: "movies")
+	.then { movies in
+        print(movies)
+	}	
+```
+
+
 Any search in the previous example results in the following match:
 
 ```javascript
@@ -83,6 +125,16 @@ WeDeploy
 	.then(function(movies) {
 		console.log(movies);
 	});
+```
+
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.similar(field: "title", query: "The attack an awaken Jedi uses to strike a Sith is pure force!")
+	.search(resourcePath: "movies")
+	.then { movies in
+    	print(movies)
+ 	}
 ```
 
 We receive not only the documents that match the filter, but also search metadata:
@@ -138,6 +190,17 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.similar(field: "title", query: "The attack an awaken Jedi uses to strike a Sith is pure force!")
+	.highlight(field: "title")
+	.search(resourcePath: "movies")
+	.then { movies in
+    	print(movies)
+ 	}
+```
+
 As you can see in the code below, our keywords are highlighted in the results:
 
 ```javascript
@@ -190,6 +253,18 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.lt(field: "year", value: 1990)
+	.aggregate(name: "Old movies", field: "rating", op: "avg")
+	.count()
+	.get(resourcePath: "movies")
+	.then { (aggregation: [String : Any]) in
+		print(aggregation)
+	}
+```
+
 The count we added to the query informed the server that we are not interested in the documents themselves, but rather the number of matches and search metadata. The result, in this case, will be the following data:
 
 ```javascript
@@ -235,6 +310,16 @@ WeDeploy
 			"location": "geo_point"
 		}
 	});
+```
+
+```text/x-swift
+WeDeploy
+	.url("http://datademo.wedeploy.io")
+	.post(body: [
+		"places" : [
+			"location" : "geo_point"
+		]
+	])
 ```
 
 We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: date, geo_point, and geo_shape. We will focus on geo_point for this next feature.

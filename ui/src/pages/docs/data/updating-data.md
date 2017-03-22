@@ -32,6 +32,18 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.update(resourcePath: "movies/115992383516607958", updatedAttributes: [
+      	"rating": 9.1
+	])
+	.then { movie in
+     	print(movie)
+	}
+```
+
+
 As you can see, the data api uses Promises to help you to make async requests.
 
 This operation will return the updated document with the new rating:
