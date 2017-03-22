@@ -28,4 +28,15 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy.email('http://<EmailserviceID>.<projectID>.wedeploy.io)
+	.checkEmailStatus(id: "202605176596079530")
+	.then { status in
+  		print("Email status: \(status)")
+	}
+	.catch { error in
+  		// Some error has happened
+	}
+```
+
 </article>

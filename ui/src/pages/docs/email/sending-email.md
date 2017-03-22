@@ -33,6 +33,18 @@ WeDeploy
 	});
 ```
 
+```text/x-swift
+WeDeploy
+	.email('http://<EmailserviceID>.<projectID>.wedeploy.io)
+	.sendEmail(from: self.username, to: self.username, subject: "subject", body: "body")
+	.then { id in
+   		print("Email ID: \(id)")
+	}
+	.catch {
+   		// Some error has happened
+	}
+```
+
 As a result, we'll receive an email ID. This doesn't indicate that the email has already sent, it actually just means that it was added to the email queue. See ["checking the email status"](/docs/email/checking-status.html) to learn more about email status.
 
 </article>
