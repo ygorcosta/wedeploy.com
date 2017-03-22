@@ -8868,7 +8868,7 @@ li a:not([class]) {
   z-index: 0; }
 
 .code-container .CodeMirror-sizer {
-  margin-left: 40px !important; }
+  margin-left: 60px !important; }
 
 .code-container .CodeMirror-gutter-wrapper {
   left: -60px !important; }
@@ -8924,6 +8924,7 @@ li a:not([class]) {
   transition: all 0.3s ease-in-out;
   background: #0e141a;
   border-radius: 4px;
+  color: #fff;
   height: 36px;
   line-height: 24px;
   padding: 0;
@@ -10760,6 +10761,7 @@ li a:not([class]) {
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
+    border-radius: 4px;
     padding: calc(0.5rem * 1.5);
     width: 100%;
     font-family: "Galano", sans-serif;
@@ -14507,62 +14509,3 @@ li.feature {
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.1);
     z-index: 1; }
-
-.code-container pre {
-  padding: 12px 4px; }
-
-.code-container .CodeMirror-gutter-wrapper {
-  left: -60px !important; }
-
-.code-container .CodeMirror-sizer {
-  margin-left: 60px !important; }
-
-.code-container .CodeMirror-gutter.CodeMirror-linenumbers {
-  width: 60px !important; }
-
-.code-container .CodeMirror-linenumber {
-  line-height: 24px;
-  text-align: left;
-  width: 36px !important;
-  left: 24px !important;
-  padding: 0;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.4); }
-
-.code-container .CodeMirror-lines {
-  padding: 12px 0; }
-
-.code-container .CodeMirror pre {
-  font-size: 13px;
-  z-index: 6; }
-
-.code-container .CodeMirror-gutters {
-  left: 0 !important; }
-
-.code-container .btn-copy {
-  background: #0e141a;
-  color: white;
-  width: 36px;
-  height: 36px;
-  top: 6px;
-  right: 6px;
-  border-radius: 4px; }
-  .code-container .btn-copy > span {
-    font-size: 12px; }
-  .code-container .btn-copy:before {
-    -webkit-transition: background 0.3s ease-in-out;
-    -o-transition: background 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.2);
-    z-index: 1; }
-  .code-container .btn-copy:hover {
-    background: #0e141a; }
-    .code-container .btn-copy:hover:before {
-      background: rgba(255, 255, 255, 0.4); }
