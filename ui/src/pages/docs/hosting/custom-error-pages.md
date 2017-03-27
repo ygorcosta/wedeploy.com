@@ -20,7 +20,7 @@ Files put into the special directory `/_error` are mapped as the error files to 
 
 <aside>
 
-Check the [boilerplate-hosting](https://github.com/wedeploy/boilerplate-hosting/tree/master/_error) for a practical example.
+**Check the [boilerplate-hosting](https://github.com/wedeploy/boilerplate-hosting/tree/master/_error) for a practical example.**
 
 </aside>
 
