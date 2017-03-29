@@ -42,15 +42,23 @@ A root domain is the highest level of hierarchy for the website you control, ex:
 
 If your DNS provider allows you to either use CNAME or ALIAS records for root domains, you just need to point the CNAME/ALIAS entry for your root domain as described below:
 
+<div class="table-container">
+
 | Record            | Name             | Project Target Domain |
 | ----------------- | ---------------- | --------------------- |
 | `ALIAS` or `CNAME`| `<empty>` or `@` | project1.wedeploy.io. |
 
+</div>
+
 In many DNS Providers, you are only allowed to use Address Records (A) for your root domain. In that case, you can use the static IP provided by WeDeploy as the target for the Address Record (A):
+
+<div class="table-container">
 
 | Record            | Name             | Project Target Domain |
 | ----------------- | ---------------- | --------------------- |
 | `A`               | `<empty>` or `@` | `173.196.61.238`      |
+
+</div>
 
 </article>
 
@@ -60,9 +68,13 @@ In many DNS Providers, you are only allowed to use Address Records (A) for your 
 
 After configuring the custom domains on the Project Settings, you must point your DNS record to the project WeDeploy domain. You can configure your subdomain as a new CNAME record with your DNS provider. If you're not sure about how to configure CNAME records for subdomains, visit your DNS provider's documentation page.
 
+<div class="table-container">
+
 | Record            | Subdomain            | Project Target Domain |
 | ----------------- | -------------------- | --------------------- |
 | `CNAME`           | **www**.mydomain.com | project1.wedeploy.io. |
+
+</div>
 
 </article>
 
@@ -72,11 +84,17 @@ After configuring the custom domains on the Project Settings, you must point you
 
 WeDeploy automatically creates a subdomain for each service. Since you typically will have multiple services inside a project, you will either need multiple records, or a single wildcard record. A wildcard record allows you to map all subdomains to your WeDeploy project with a single record.
 
+<div class="table-container">
+
 | Record            | Subdomain            | Project Target Domain |
 | ----------------- | -------------------- | --------------------- |
 | `CNAME`           | *.mydomain.com       | project1.wedeploy.io. |
 
+</div>
+
 Result:
+
+<div class="table-container">
 
 | WeDeploy Domain              | Custom Domain         |
 | ---------------------------- | --------------------- |
@@ -84,5 +102,7 @@ Result:
 | service2.project.wedeploy.io | service2.mydomain.com |
 | service3.project.wedeploy.io | service3.mydomain.com |
 | service4.project.wedeploy.io | service4.mydomain.com |
+
+</div>
 
 </article>

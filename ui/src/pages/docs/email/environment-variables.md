@@ -22,6 +22,8 @@ Note: If you are unfamiliar with how you can apply and manage your secret keys, 
 
 Here is a list of all the environment variable keys you can use with this service.
 
+<div class="table-container">
+
 | Key | Description |
 | - | - |
 | EMAIL_HOST | Custom SMTP server host |
@@ -30,5 +32,7 @@ Here is a list of all the environment variable keys you can use with this servic
 | EMAIL_PASSWORD | Custom SMTP server password |
 | EMAIL_PAUSE | Interval in milliseconds between each email sending |
 | EMAIL_SSL | Enables SSL/TLS |
+
+</div>
 
 </article>

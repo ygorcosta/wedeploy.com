@@ -28,6 +28,8 @@ The api JSON files are located at the same path of the `./container.json` and ar
 
 After understanding how the api configuration files work, it's time to learn what are the supported attributes:
 
+<div class="table-container">
+
 | Field | Description |
 | - | - |
 | path | The path that represents the collection used to handle the request data. |
@@ -36,6 +38,8 @@ After understanding how the api configuration files work, it's time to learn wha
 | auth | Used to define authentication rules for the endpoint. |
 | method | HTTP method allowed for the request. |
 | parameters | Parameters and validation rules for the collection. |
+
+</div>
 
 ##### path
 
@@ -168,6 +172,8 @@ The validator can be used as an integration with the Auth service:
 
 The global variables are:
 
+<div class="table-container">
+
 | Variable | Description |
 | - | - |
 | $auth | The authenticated user of this request. If the request was not authenticated, it will be null. |
@@ -178,6 +184,7 @@ The global variables are:
 | $body | The parsed request body, according to the request Content-Type. |
 | $data | The data view for this request, if a data path is mounted in the API path, and the request path represents a key to access any data resource (collection, document or inner field from a document). It will be null otherwise. |
 
+</div>
 
 Some common validators are:
 

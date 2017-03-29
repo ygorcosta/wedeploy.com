@@ -22,6 +22,8 @@ Note: If you are unfamiliar with how you can apply and manage your secret keys, 
 
 Here is a list of all the environment variable keys you can use with this service.
 
+<div class="table-container">
+
 | Key | Description |
 | - | - |
 | WEDEPLOY_AUTH_EMAIL_CONTENT | HTML code for password reset email |
@@ -38,6 +40,8 @@ Here is a list of all the environment variable keys you can use with this servic
 | WEDEPLOY_AUTH_GOOGLE_CLIENT_SECRET | Google OAuth password |
 | WEDEPLOY_AUTH_PASSWORD | Enable email and password Auth |
 | WEDEPLOY_AUTH_SECURE_FIELDS | Select which Auth fields are secured |
+
+</div>
 
 **Check the [boilerplate-auth](https://github.com/wedeploy/boilerplate-auth/blob/js/auth/container.json) for a practical example.**
 

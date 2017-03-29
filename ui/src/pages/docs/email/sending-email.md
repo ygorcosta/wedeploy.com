@@ -43,6 +43,8 @@ As a result, we'll receive an email ID. This doesn't indicate that the email has
 
 Here is a list of all the email parameters you can pass.
 
+<div class="table-container">
+
 Parameter    | Type    | Description
 ------------ | ------- | ------------
 bcc          | string  | Bcc recipient email address. Multiple addresses should be defined in multiple parameters.
@@ -53,6 +55,8 @@ priority     | number  | Used by email clients to define a message's importance.
 replyTo      | string  | Append a reply-to address to your email message.
 subject      | string  | Subject of your email. Up to 1MB.
 to           | string  | Recipient email address. Multiple addresses should be defined in multiple parameters.
+
+</div>
 
 </article>
 

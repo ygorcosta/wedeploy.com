@@ -22,9 +22,13 @@ Note: If you are unfamiliar with how you can apply and manage your secret keys, 
 
 Here is a list of all the environment variable keys you can use with this service.
 
+<div class="table-container">
+
 | Key | Default Value | Description |
 | - | - | - |
 | WEDEPLOY_WEB_PATH | `/` | Path to serve static files |
 | WEDEPLOY_WEB_ERROR_PATH | `/_error` | Path to serve [error pages](/docs/hosting/custom-error-pages.html) |
+
+</div>
 
 </article>
