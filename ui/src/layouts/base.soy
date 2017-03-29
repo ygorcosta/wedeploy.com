@@ -15,7 +15,7 @@
 		<meta content="minimum-scale=1.0, width=device-width" name="viewport">
 		<meta name="description" content="{$page.description ?: ''}">
 
-		<title>{$site.title} - {$page.title}</title>
+		<title>{if $page.title}{$page.title} - {/if}{if $page.headerTitle}{$page.headerTitle} - {/if}{$site.title}</title>
 
 		{if $page.image}
 			<meta property="og:image" content="{$page.image}">
