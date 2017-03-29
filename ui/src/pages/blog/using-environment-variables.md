@@ -17,25 +17,24 @@ Environments have been around for a while, mainly hiding in the deep code forest
 	<img src="../images/blog/post-7--0.gif" alt="Adding environment variables">
 </figure>
 
-Here are a couple easy ways they can improve your app!
-
+_Here are a couple easy ways they can improve your app!_
 ​
 #### 🚀 Change Hosting serve directory
-By default, WeDeploy Hosting looks to your service's root directory to know what files to serve, but what if you are using a Gulp or Grunt build task to compile your files? No problem, just add the WEDEPLOY_WEB_PATH key and use the build path as your value. 
+By default, WeDeploy Hosting looks to your service's root directory to know what files to serve, but what if you are using a Gulp or Grunt build task to compile your files? No problem, just add the `WEDEPLOY_WEB_PATH` key and use the build path as your value. 
 
-_See the full list at our [Hosting Environment Variable Docs](/docs/hosting/environment-variables.html)_.
+**See the full list at our [Hosting Environment Variable Docs](/docs/hosting/environment-variables.html)**.
 
 #### 🔐 Integrate OAuth into your app
 Want your users to log in with Facebook, Google, or Github accounts? Perfect, because that is super easy to do with WeDeploy Auth. Start by just adding a few environment variables for each provider.
 
-_See the full list at our [Auth Environment Variable Docs](/docs/auth/environment-variables.html)_.
+**See the full list at our [Auth Environment Variable Docs](/docs/auth/environment-variables.html)**.
 
 #### 📧 Change Email provider
 WeDeploy Email supplies you with an email service straight out of the box, but what if you want to use your own SMTP server? With Environment Variables, you can change the email host, username, port, and much more.
 
-_See the full list at our [Email Environment Variable Docs](/docs/email/environment-variables.html)_.
+**See the full list at our [Email Environment Variable Docs](/docs/email/environment-variables.html)**.
 
-That's it! If you have any question, just [shoot us an email](mailto:jonathan.lundy@liferay.com) or join us on [slack](http://chat.wedeploy.com/).
+That's it! If you have any question, just [shoot us an email](mailto:jonathan.lundy@liferay.com) or join the conversation on [slack](http://chat.wedeploy.com/).
 
 Happy coding! 💻
 
