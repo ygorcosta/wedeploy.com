@@ -20,6 +20,12 @@ $accent: #00d46a;
 // Blog
 @import "templates/blog";
 
+//ovewrite blog h1 from marble
+.blog .container header h1 {
+	font-size: $font-h3;
+	line-height: calc(2rem * #{$lineHeight});
+}
+
 // Tutorial
 @import "templates/tutorial";
 
