@@ -12,12 +12,74 @@ weight: 8
 
 <article id="1">
 
-## Installation
+## Javascript API Installation
 
 In order to send/receive requests to/from WeDeploy, we need to include the JavaScript API Client. This library provides a secure and reliable communication channel with WeDeploy. We can do that by simply adding a script tag in a HTML file:
 
 ```xml
 <script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 ```
+
+## Swift API Installation
+
+If you want to send/receive requests to/from WeDeploy from an iOS App, we also have a solution for that, the Swift API Client. In order to start using it you have to do:
+
+#### Cocoapods
+
+Add this to your Podfile
+
+```xml
+    pod 'WeDeploy'
+```
+
+#### Carthage
+
+Add this to your Cartfile
+
+```xml
+    github 'wedeploy/api-swift'
+```
+
+
+
+### Swift API nuances
+
+By default, all swift api requests returns a promise, for example:
+
+```text/x-swift
+WeDeploy
+	.data("http://datademo.wedeploy.io");
+	.get(resourcePath: "movies")
+	.then { movie in 
+     	print(movie)
+	}
+```
+
+But you will be able to return a callback or even an observable! You will have this two methods available:
+
+```text/x-swift
+// The method toCallback converts a promise into a callback
+WeDeploy
+	.data("http://datademo.wedeploy.io");
+	.get(resourcePath: "movies")
+	toCallback { movies, error in
+        // here you can check the error or the response
+    }
+
+// The method toObservable converts a promise into an observable
+WeDeploy
+	.data("http://datademo.wedeploy.io");
+	.get(resourcePath: "movies")
+	.toObservable()
+	.subscribe(
+		onNext: { movies in
+			// here you receive the movies
+		},
+		onError: { error in
+			// oops something went wrong
+		}
+	)
+```
+
 
 </article>
