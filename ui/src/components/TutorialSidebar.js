@@ -14,19 +14,17 @@ class TutorialSidebar extends Component {
 		this.navigationToggler = page.navigationToggler;
 	}
 
-	rendered(firstRender) {
-
-		if(!firstRender) {
-			this.calculateTimeRemaining();
-		}
+	attached() {
+		this.calculateTimeRemaining();
 	}
 
 	calculateTimeRemaining() {
-		var timeRead = 0;
-		var totalTime = 0;
-		var indexSelected = -1;
+		let timeRead = 0;
+		let totalTime = 0;
+		let indexSelected = -1;
 
-		var sidebarLinks = document.querySelectorAll('.sidebar-link');
+		let sidebar = document.querySelector('.sidebar');
+		let sidebarLinks = sidebar.querySelectorAll('.sidebar-link');
 
 		sidebarLinks.forEach((item, i) => {
 			totalTime += parseInt(item.dataset.time);
@@ -42,8 +40,8 @@ class TutorialSidebar extends Component {
 			}
 		});
 
-		var milliseconds = (totalTime - timeRead);
-		var eventDuration = moment.duration(milliseconds, 'seconds');
+		let milliseconds = (totalTime - timeRead);
+		let eventDuration = moment.duration(milliseconds, 'seconds');
 		page.timeRemaining = this.humanizeDuration(eventDuration);
 		dispatchGlobalState();
 	}
