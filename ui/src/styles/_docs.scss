@@ -2,11 +2,9 @@
 @import "docs/newsletter";
 
 .docs .guide-content h1 {
-	font-size: $font-h3;
-	line-height: calc(2rem * #{$lineHeight});
+	@include h3;
 }
 
 .docs .guide-content h2 {
-	font-size: $font-h4;
-	line-height: calc(2rem * #{$lineHeight});
+	@include h4;
 }
