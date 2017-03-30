@@ -20,12 +20,6 @@ $accent: #00d46a;
 // Blog
 @import "templates/blog";
 
-//ovewrite blog h1 from marble
-.blog .container header h1 {
-	font-size: $font-h3;
-	line-height: calc(2rem * #{$lineHeight});
-}
-
 // Tutorial
 @import "templates/tutorial";
 
@@ -40,6 +34,11 @@ $accent: #00d46a;
 
 // _Topbar
 @import "topbar";
+
+//ovewrite blog h1 from marble
+.blog .container header h1 {
+	@include h3;
+}
 
 //overwrite tooltip layout from marble
 .tooltip.bottom .tooltip-inner {
