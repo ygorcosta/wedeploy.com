@@ -14,13 +14,21 @@ class TutorialSidebar extends Component {
 		this.navigationToggler = page.navigationToggler;
 	}
 
-	attached() {
+	rendered(firstRender) {
 
+		if(!firstRender) {
+			this.calculateTimeRemaining();
+		}
+	}
+
+	calculateTimeRemaining() {
 		var timeRead = 0;
 		var totalTime = 0;
 		var indexSelected = -1;
 
-		document.querySelectorAll('.sidebar-link').forEach((item, i) => {
+		var sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+		sidebarLinks.forEach((item, i) => {
 			totalTime += parseInt(item.dataset.time);
 
 			if (hasClass(item, 'sidebar-link-selected')) {
@@ -37,6 +45,7 @@ class TutorialSidebar extends Component {
 		var milliseconds = (totalTime - timeRead);
 		var eventDuration = moment.duration(milliseconds, 'seconds');
 		page.timeRemaining = this.humanizeDuration(eventDuration);
+		dispatchGlobalState();
 	}
 
 	closeNavigationMenu(e) {
@@ -52,15 +61,15 @@ class TutorialSidebar extends Component {
 		}
 
 		if (eventDuration.hours() > 0) {
-			eventDurationString += ' ' + moment.duration(eventDuration.hours(), 'hours').asHours() + 'h';
+			eventDurationString += ' ' + moment.duration(eventDuration.hours(), 'hours').asHours() + ' h';
 		}
 
 		if (eventDuration.minutes() > 0) {
-			eventDurationString += ' ' + moment.duration(eventDuration.minutes(), 'minutes').asMinutes() + 'min';
+			eventDurationString += ' ' + moment.duration(eventDuration.minutes(), 'minutes').asMinutes() + ' min';
 		}
 
 		if (eventDuration.seconds() > 0) {
-			eventDurationString += ' ' + moment.duration(eventDuration.seconds(), 'seconds').asSeconds() + 'sec';
+			eventDurationString += ' ' + moment.duration(eventDuration.seconds(), 'seconds').asSeconds() + ' sec';
 		}
 
 		return eventDurationString.trim();
