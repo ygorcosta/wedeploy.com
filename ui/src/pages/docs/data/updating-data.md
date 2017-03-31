@@ -36,10 +36,10 @@ WeDeploy
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.update(resourcePath: "movies/115992383516607958", updatedAttributes: [
-      	"rating": 9.1
+		"rating": 9.1
 	])
 	.then { movie in
-     	print(movie)
+		print(movie)
 	}
 ```
 

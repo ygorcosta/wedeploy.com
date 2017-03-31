@@ -38,10 +38,10 @@ WeDeploy
 	.email('http://<EmailserviceID>.<projectID>.wedeploy.io)
 	.sendEmail(from: self.username, to: self.username, subject: "subject", body: "body")
 	.then { id in
-   		print("Email ID: \(id)")
+		print("Email ID: \(id)")
 	}
 	.catch {
-   		// Some error has happened
+		// Some error has happened
 	}
 ```
 

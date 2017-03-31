@@ -38,12 +38,12 @@ WeDeploy
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.create(resource: "movies", object: [
-  		"title" : "Star Wars IV",
-  		"year" : 1977,
-  		"ratings" : 8.7
+		"title" : "Star Wars IV",
+		"year" : 1977,
+		"ratings" : 8.7
 	])
 	.then { movie in
-    	print(movie)
+		print(movie)
 	}
 ```
 
@@ -95,18 +95,18 @@ WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.create(resource: "movies", object: [
 	[
-  		"title" : "Star Wars III",
-  		"year" : 2005,
-  		"ratings" : 8.0
+		"title" : "Star Wars III",
+		"year" : 2005,
+		"ratings" : 8.0
 	],
 	[
-     "title" : "Star Wars II",
-     "year" : 2002,
-     "ratings" : 8.6
+		"title" : "Star Wars II",
+		"year" : 2002,
+		"ratings" : 8.6
 	]
 	])
 	.then { movie in
-    	print(movie)
+		print(movie)
 	}
 ```
 
@@ -156,13 +156,13 @@ WeDeploy
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.create(resource: "movies", object: [
-        "title": "Star Wars I",
-        "obs": "First in ABC order",
-        "year": 1999,
-        "rating": 9.0
+		"title": "Star Wars I",
+		"obs": "First in ABC order",
+		"year": 1999,
+		"rating": 9.0
 	])
 	.then { movie in
-    	print(movie)
+		print(movie)
 	}
 ```
 

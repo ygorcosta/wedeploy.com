@@ -32,12 +32,12 @@ WeDeploy
 let auth = WeDeploy
 	.auth("<auth-url>")
 	.signInWith(username: "user@domain.com", password: "password")
-    .then { auth in
+	.then { auth in
 		// User is signed in.
-    }
-    .catch { err in
+	}
+	.catch { err in
 		// User is not signed in.
-    }
+	}
 ```
 
 

@@ -30,7 +30,7 @@ WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.get(resourcePath: "movies/star_wars_v")
 	.then { movie in
-     	print(movie)
+		print(movie)
 	}
 ```
 
@@ -61,7 +61,7 @@ WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.get(resourcePath: "movies/star_wars_v/title")
 	.then { (movie: String) in // You have to specify the type here to allow compiler infer type
-     	print(movie)
+		print(movie)
 	}
 ```
 
@@ -105,7 +105,7 @@ WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.orderBy(field: "rating", order: .DESC)
 	.then { movies in
-    	print(movies)
+		print(movies)
 	}
 ```
 
@@ -151,7 +151,7 @@ WeDeploy
 	.or(field: "rating", op: ">", value: 8.5)
 	.get(resourcePath: "movies")
 	.then { movies in
-    	print(movies)
+		print(movies)
 	}
 ```
 
@@ -194,7 +194,7 @@ WeDeploy
 	.offset(1)
 	.get(resourcePath: "movies")
 	.then { movies in
-    	print(movies)
+		print(movies)
 	}
 ```
 

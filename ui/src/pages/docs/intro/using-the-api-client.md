@@ -29,7 +29,7 @@ If you want to send/receive requests to/from WeDeploy from an iOS App, we also h
 Add this to your Podfile
 
 ```xml
-    pod 'WeDeploy'
+	pod 'WeDeploy'
 ```
 
 #### Carthage
@@ -37,7 +37,7 @@ Add this to your Podfile
 Add this to your Cartfile
 
 ```xml
-    github 'wedeploy/api-swift'
+	github 'wedeploy/api-swift'
 ```
 
 
@@ -51,7 +51,7 @@ WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.get(resourcePath: "movies")
 	.then { movie in 
-     	print(movie)
+		print(movie)
 	}
 ```
 
@@ -63,8 +63,8 @@ WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.get(resourcePath: "movies")
 	toCallback { movies, error in
-        // here you can check the error or the response
-    }
+		// here you can check the error or the response
+	}
 
 // The method toObservable converts a promise into an observable
 WeDeploy

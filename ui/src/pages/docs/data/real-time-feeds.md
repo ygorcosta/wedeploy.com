@@ -36,15 +36,15 @@ socket = WeDeploy
 	.watch(resourcePath: "movies")
 
 socket.on([.changes, .error]) { data in 
-		switch(data.type) {
-		case .changes:
-			print("changes \(data.document)")
-		case .error:
-			print("error \(data.document)")
-		default:
-			break
-		}
+	switch(data.type) {
+	case .changes:
+		print("changes \(data.document)")
+	case .error:
+		print("error \(data.document)")
+	default:
+		break
 	}
+}
 ```
 
 Now every time the storage detects changes that affect the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.
@@ -81,15 +81,15 @@ socket = WeDeploy
 	.watch(resourcePath: "movies")
 
 socket.on([.changes, .error]) { data in 
-		switch(data.type) {
-		case .changes:
-			print("changes \(data.document)")
-		case .error:
-			print("error \(data.document)")
-		default:
-			break
-		}
+	switch(data.type) {
+	case .changes:
+		print("changes \(data.document)")
+	case .error:
+		print("error \(data.document)")
+	default:
+		break
 	}
+}
 ```
 
 </article>
@@ -124,15 +124,15 @@ socket = WeDeploy
 	.watch(resourcePath: "movies")
 
 socket.on([.changes, .error]) { data in 
-		switch(data.type) {
-		case .changes:
-			print("changes \(data.document)")
-		case .error:
-			print("error \(data.document)")
-		default:
-			break
-		}
+	switch(data.type) {
+	case .changes:
+		print("changes \(data.document)")
+	case .error:
+		print("error \(data.document)")
+	default:
+		break
 	}
+}
 ```
 
 </article>

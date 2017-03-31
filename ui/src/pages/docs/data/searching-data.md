@@ -34,7 +34,7 @@ WeDeploy
 	.match(field: "title", pattern: "Sith's revenge")
 	.get(resourcePath: "movies")
 	.then { movies in
-        print(movies)
+		print(movies)
 	}
 ```
 
@@ -84,7 +84,7 @@ WeDeploy
 	.match(field: "title", pattern: "(jedi | force) -return")
 	.get(resourcePath: "movies")
 	.then { movies in
-    	print(movies)
+		print(movies)
 	}
 
 // or this
@@ -93,7 +93,7 @@ WeDeploy
 	.match(field: "title", pattern: "awake*")
 	.get(resourcePath: "movies")
 	.then { movies in
-        print(movies)
+		print(movies)
 	}
 
 // or even this
@@ -102,8 +102,8 @@ WeDeploy
 	.match(field: "title", pattern: "wakens~")
 	.get(resourcePath: "movies")
 	.then { movies in
-        print(movies)
-	}	
+		print(movies)
+	}
 ```
 
 
@@ -133,8 +133,8 @@ WeDeploy
 	.similar(field: "title", query: "The attack an awaken Jedi uses to strike a Sith is pure force!")
 	.search(resourcePath: "movies")
 	.then { movies in
-    	print(movies)
- 	}
+		print(movies)
+	}
 ```
 
 We receive not only the documents that match the filter, but also search metadata:
@@ -197,8 +197,8 @@ WeDeploy
 	.highlight(field: "title")
 	.search(resourcePath: "movies")
 	.then { movies in
-    	print(movies)
- 	}
+		print(movies)
+	}
 ```
 
 As you can see in the code below, our keywords are highlighted in the results:

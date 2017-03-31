@@ -36,7 +36,7 @@ let provider = AuthProvider(provider: .github, redirectUri: "my-app://")
 provider.providerScope = "user:email"
 
 auth.signInWithRedirect(provider: provider) { (user, error) in
-    // Fires when user is signed in after redirect.
+	// Fires when user is signed in after redirect.
 }
 
 //Add WeDeploy.auth("<auth-url>").handle(url: url) in AppDelegate's open url method	

@@ -32,14 +32,14 @@ WeDeploy
 ```
 
 ```text/x-swift
-let auth = WeDeploy
+WeDeploy
 	.auth("<auth-url>")
 	.createUser(email: "user@domain.com", password: "abc", name: "somename")
 	.then { user in
-   		// Successfully created.
+		// Successfully created.
 	}
 	.catch { err in
-   		// Not created.
+		// Not created.
 	}
 ```
 
@@ -62,12 +62,12 @@ if (currentUser) {
 ```text/x-swift
 WeDeploy
 	.auth("<auth-url>")
-    .getCurrentUser()
-    .then { user in
-        // User found.
-    }
-    .catch { error in
-        // User does not exist.
+	.getCurrentUser()
+	.then { user in
+		// User found.
+	}
+	.catch { error in
+		// User does not exist.
 	}
 ```
 
@@ -92,12 +92,12 @@ WeDeploy
 ```text/x-swift
 WeDeploy
 	.auth("<auth-url>")
-    .getUser(id: "userId")
-    .then { user in
-        // User found.
-    }
-    .catch { error in
-        // User does not exist.
+	.getUser(id: "userId")
+	.then { user in
+		// User found.
+	}
+	.catch { error in
+		// User does not exist.
 	}
 ```
 
@@ -125,13 +125,13 @@ currentUser
 ```text/x-swift
 WeDeploy
 	.auth("<auth-url>")
-    .deleteUser(id: "userId")
-    .then { _ in
-        // Successfully deleted
-    }
-    .catch { err in
-        // Not deleted.
-    }
+	.deleteUser(id: "userId")
+	.then { _ in
+		// Successfully deleted
+	}
+	.catch { err in
+		// Not deleted.
+	}
 ```
 
 </article>
@@ -163,13 +163,13 @@ currentUser
 ```text/x-swift
 WeDeploy
 	.auth("<auth-url>")
-    .updateUser(id: "userId" , email: "eleven@hawkinslabs.com", password: "password", name: "Eleven")
-    .then { _ in
-        // Successfully updated
-    }
-    .catch { err in
-        // Not updated.
-    }
+	.updateUser(id: "userId" , email: "eleven@hawkinslabs.com", password: "password", name: "Eleven")
+	.then { _ in
+		// Successfully updated
+	}
+	.catch { err in
+		// Not updated.
+	}
 ```
 
 </article>
@@ -197,10 +197,10 @@ WeDeploy
 	.auth("<auth-url>")
 	.sendPasswordReset(email: "user@domain.com")
 	.then { _ in
-     	// Successfully signed out.
+		// Successfully signed out.
 	}
 	.catch { err in
-    	// Not signed out.
+		// Not signed out.
 	}
 ```
 
@@ -227,11 +227,11 @@ WeDeploy
 	.auth("<auth-url>")
 	.signOut()
 	.then { _ in
-     	// Successfully signed out.
+		// Successfully signed out.
 	}
 	.catch { err in
-    	// Not signed out.
-	}	
+		// Not signed out.
+	}
 ```
 
 </article>
