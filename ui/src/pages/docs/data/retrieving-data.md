@@ -24,8 +24,7 @@ WeDeploy
 		console.log(movie);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.get(resourcePath: "movies/star_wars_v")
@@ -55,8 +54,7 @@ WeDeploy
 		console.log(title);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.get(resourcePath: "movies/star_wars_v/title")
@@ -99,8 +97,7 @@ WeDeploy
 		console.log(movies);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.orderBy(field: "rating", order: .DESC)
@@ -143,8 +140,7 @@ WeDeploy
 		console.log(movies);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.where(field: "year", op: "<", value: 2000)
@@ -184,8 +180,7 @@ WeDeploy
 		console.log(movies);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.where(field: "year", op: "<", value: 2000)

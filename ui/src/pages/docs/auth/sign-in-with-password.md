@@ -27,9 +27,8 @@ WeDeploy
 		// User is not signed in.
 	});
 ```
-
-```text/x-swift
-let auth = WeDeploy
+```swift
+WeDeploy
 	.auth("<auth-url>")
 	.signInWith(username: "user@domain.com", password: "password")
 	.then { auth in
@@ -39,7 +38,6 @@ let auth = WeDeploy
 		// User is not signed in.
 	}
 ```
-
 
 </article>
 

@@ -30,8 +30,7 @@ WeDeploy
 		// Not created.
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.auth("<auth-url>")
 	.createUser(email: "user@domain.com", password: "abc", name: "somename")
@@ -58,8 +57,7 @@ if (currentUser) {
 	// No user is signed in.
 }
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.auth("<auth-url>")
 	.getCurrentUser()
@@ -88,8 +86,7 @@ WeDeploy
 		// User does not exist.
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.auth("<auth-url>")
 	.getUser(id: "userId")
@@ -121,8 +118,7 @@ currentUser
 		// Not deleted.
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.auth("<auth-url>")
 	.deleteUser(id: "userId")
@@ -159,8 +155,7 @@ currentUser
 		// Not updated.
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.auth("<auth-url>")
 	.updateUser(id: "userId" , email: "eleven@hawkinslabs.com", password: "password", name: "Eleven")
@@ -191,8 +186,7 @@ WeDeploy
 		// An error happened.
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.auth("<auth-url>")
 	.sendPasswordReset(email: "user@domain.com")
@@ -221,8 +215,7 @@ WeDeploy
 		// User was signed out.
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.auth("<auth-url>")
 	.signOut()

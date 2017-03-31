@@ -27,8 +27,7 @@ WeDeploy
 		console.log(movies);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.match(field: "title", pattern: "Sith's revenge")
@@ -37,8 +36,6 @@ WeDeploy
 		print(movies)
 	}
 ```
-
-
 
 The result of the match operator query is the following entry:
 
@@ -76,8 +73,7 @@ WeDeploy
 		console.log(movies);
 	});
 ```
-
-```text/x-swift
+```swift
 // we can run this
 WeDeploy
 	.data("http://datademo.wedeploy.io")
@@ -106,7 +102,6 @@ WeDeploy
 	}
 ```
 
-
 Any search in the previous example results in the following match:
 
 ```javascript
@@ -126,8 +121,7 @@ WeDeploy
 		console.log(movies);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.similar(field: "title", query: "The attack an awaken Jedi uses to strike a Sith is pure force!")
@@ -189,8 +183,7 @@ WeDeploy
 		console.log(movies);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.similar(field: "title", query: "The attack an awaken Jedi uses to strike a Sith is pure force!")
@@ -252,8 +245,7 @@ WeDeploy
 		console.log(aggregation);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.lt(field: "year", value: 1990)
@@ -311,8 +303,7 @@ WeDeploy
 		}
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.url("http://datademo.wedeploy.io")
 	.post(body: [

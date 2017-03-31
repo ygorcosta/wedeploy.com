@@ -31,8 +31,7 @@ WeDeploy
 		console.log(movie);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.update(resourcePath: "movies/115992383516607958", updatedAttributes: [
@@ -42,7 +41,6 @@ WeDeploy
 		print(movie)
 	}
 ```
-
 
 As you can see, the data api uses Promises to help you to make async requests.
 

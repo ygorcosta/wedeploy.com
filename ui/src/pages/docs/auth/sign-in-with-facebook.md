@@ -29,8 +29,7 @@ auth.onSignIn(function(user) {
 	// Fires when user is signed in after redirect.
 });
 ```
-
-```text/x-swift
+```swift
 let auth = WeDeploy.auth("<auth-url>");
 let provider = AuthProvider(provider: .facebook, redirectUri: "my-app://")
 provider.providerScope = "email"

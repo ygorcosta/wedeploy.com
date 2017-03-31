@@ -20,6 +20,10 @@ In order to send/receive requests to/from WeDeploy, we need to include the JavaS
 <script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 ```
 
+</article>
+
+<article id="2">
+
 ## Swift API Installation
 
 If you want to send/receive requests to/from WeDeploy from an iOS App, we also have a solution for that, the Swift API Client. In order to start using it you have to do:
@@ -28,25 +32,23 @@ If you want to send/receive requests to/from WeDeploy from an iOS App, we also h
 
 Add this to your Podfile
 
-```xml
-	pod 'WeDeploy'
+```swift
+pod 'WeDeploy'
 ```
 
 #### Carthage
 
 Add this to your Cartfile
 
-```xml
-	github 'wedeploy/api-swift'
+```swift
+github 'wedeploy/api-swift'
 ```
 
-
-
-### Swift API nuances
+#### API nuances
 
 By default, all swift api requests returns a promise, for example:
 
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io");
 	.get(resourcePath: "movies")
@@ -57,7 +59,7 @@ WeDeploy
 
 But you will be able to return a callback or even an observable! You will have this two methods available:
 
-```text/x-swift
+```swift
 // The method toCallback converts a promise into a callback
 WeDeploy
 	.data("http://datademo.wedeploy.io");
@@ -80,6 +82,5 @@ WeDeploy
 		}
 	)
 ```
-
 
 </article>

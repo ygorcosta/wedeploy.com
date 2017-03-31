@@ -27,9 +27,7 @@ WeDeploy
 		console.log(error);
 	});
 ```
-
-```text/x-swift
-
+```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
 	.data("http://datademo.wedeploy.io")
@@ -70,9 +68,7 @@ WeDeploy
 		console.log(error);
 	});
 ```
-
-```text/x-swift
-
+```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
 	.data("http://datademo.wedeploy.io")
@@ -113,9 +109,7 @@ WeDeploy
 		console.log(error);
 	});
 ```
-
-```text/x-swift
-
+```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
 	.data("http://datademo.wedeploy.io")

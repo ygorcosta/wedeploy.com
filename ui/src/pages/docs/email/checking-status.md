@@ -27,8 +27,7 @@ WeDeploy
 		// Some error has happened
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy.email('http://<EmailserviceID>.<projectID>.wedeploy.io)
 	.checkEmailStatus(id: "202605176596079530")
 	.then { status in

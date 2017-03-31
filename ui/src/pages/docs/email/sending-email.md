@@ -32,8 +32,7 @@ WeDeploy
 		// Some error has happened
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.email('http://<EmailserviceID>.<projectID>.wedeploy.io)
 	.sendEmail(from: self.username, to: self.username, subject: "subject", body: "body")

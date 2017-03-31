@@ -33,8 +33,7 @@ WeDeploy
 		console.log(movie);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.create(resource: "movies", object: [
@@ -89,8 +88,7 @@ WeDeploy
 		console.log(movies);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.create(resource: "movies", object: [
@@ -151,8 +149,7 @@ WeDeploy
 		console.log(movie);
 	});
 ```
-
-```text/x-swift
+```swift
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.create(resource: "movies", object: [
@@ -165,8 +162,6 @@ WeDeploy
 		print(movie)
 	}
 ```
-
-
 
 This operation will return the newly created document, with the following generated ID:
 

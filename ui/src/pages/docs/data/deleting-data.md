@@ -31,8 +31,7 @@ data.delete('movies/star_wars_v');
 
 data.delete('movies');
 ```
-
-```text/x-swift
+```swift
 let data = WeDeploy.data("http://datademo.wedeploy.io");
 
 data.delete(collectionOrResourcePath: "movies/star_wars_v/title");

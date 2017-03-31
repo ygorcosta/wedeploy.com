@@ -29,8 +29,7 @@ auth.onSignIn(function(user) {
 	// Fires when user is signed in after redirect.
 });
 ```
-
-```text/x-swift
+```swift
 let auth = WeDeploy.auth("<auth-url>");
 let provider = AuthProvider(provider: .github, redirectUri: "my-app://")
 provider.providerScope = "user:email"
@@ -41,7 +40,6 @@ auth.signInWithRedirect(provider: provider) { (user, error) in
 
 //Add WeDeploy.auth("<auth-url>").handle(url: url) in AppDelegate's open url method	
 ```
-
 
 </article>
 
