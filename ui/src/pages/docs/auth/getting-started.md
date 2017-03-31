@@ -142,7 +142,7 @@ WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
 ```
 
 ```text/x-swift
-let auth = WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
+WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
 ```
 
 After initializing the authentication service URL, WeDeploy client stores its information for future calls.
@@ -154,7 +154,7 @@ WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
 ```
 
 ```text/x-swift
-let auth = WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
+WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
 ```
 
 
