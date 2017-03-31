@@ -1,6 +1,6 @@
 ---
 title: "Using the API Client"
-description: "Make requests to WeDeploy using a standardize interface."
+description: "Make requests to WeDeploy using a standardized interface."
 headerTitle: "Intro"
 layout: "guide"
 weight: 8
