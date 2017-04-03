@@ -327,6 +327,16 @@ WeDeploy
 		console.log(places);
 	});
 ```
+```swift
+WeDeploy
+	.data("http://datademo.wedeploy.io")
+	.any(field: "category", value: ["cinema"])
+	.distance(field: "location", latitude: 51.5031653, longitude: -0.1123051, distance: .mile(1))
+	.get(resourcePath: "places")
+	.then { places
+		print(places)
+	}
+```
 
 Our result is the following matches:
 
