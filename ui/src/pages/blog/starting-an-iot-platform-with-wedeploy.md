@@ -5,6 +5,7 @@ date: "Mar 17, 2017"
 author: "Manuel de la Peña"
 image: "/images/blog/post-6--0.png"
 layout: "blog"
+directory: "email-js"
 ---
 
 <article>
@@ -12,6 +13,12 @@ layout: "blog"
 {$page.description}
 
 I'm currently studying *Research in Software Engineering and Computer Science* for my master's degree and decided to build this platform to complete some requirements for a class about *Ubiquitous Computing*. 
+
+```
+{$page.directory}
+```
+
+{$page.directory}
 
 In this class I've learned the basic concepts of [IoT](https://en.wikipedia.org/wiki/Internet_of_things), starting with the initial intent to simulate the real world with smart devices. I believe the IoT train is passing and if we don't get on, we will miss out. That's why I decided to explore more.
 
