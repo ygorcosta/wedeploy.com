@@ -20,5 +20,6 @@ Then make a first commit.
 2. `git commit -m "Awesome commit"`
 3. `git push wedeploy master`
 
+Once you push, WeDeploy will immediately start building and deploying your project.
 
 
