@@ -16,13 +16,13 @@ Sending emails with WeDeploy is super easy. It is as simple as adding our API cl
 
 ###### What to expect
 
-In this tutorial, we will walk you through how to:
+In this tutorial you will:
 
 <ul class="checklist">
-	<li>Clone our sample repo</li>
-	<li>Add our API client</li>
-	<li>Deploy your project</li>
-	<li>Send an email using WeDeploy</li>
+	<li>Clone the sample repo</li>
+	<li>Link the API client</li>
+	<li>Deploy a project</li>
+	<li>Send an email</li>
 </ul>
 
 ###### What you'll need

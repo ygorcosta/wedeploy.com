@@ -1,19 +1,28 @@
 ---
-buttonTitle: "My local environment is running!"
 description: "In this section, you'll learn how to enable WeDeploy Email on your application."
 layout: "tutorial"
 parentId: "email-js"
-time: 5
-title: "Running locally"
+time: 15
+title: "Send an email"
 tutorialTitle: "Getting started with WeDeploy Email using Javascript"
 weight: 5
 ---
 
-##### Running locally
+#### Send an email
 
-WeDeploy provides a dev environment for you to run and test your app before pushing it to production. Lets get that running for this project!
+Great work, your app is now live! 🚀 Now let's send an email.
 
-In your terminal, go to `tutorial-email-js` and run `we dev`.
+1. Go to `hosting.<your-project>.wedeploy.io` in your browser.
+2. Fill in the form (make sure you put your email in the "to" field)
+3. Click submit and check your email inbox because you've got mail! 📬
 
-You can now go to `http://tutorial-email-js.wedeploy.me` in your browser and see the local deployment of your project. Any changes you make to your project folder now will automatically be deployed to this local server.   
+Awesome! You just deployed an app and sent an email, all within a few minutes! We can't wait to see what else you create with WeDeploy! 
 
+
+<aside>
+
+###### <span class="icon-16-bullhorn"></span> Pro Tip
+
+Do you have a primary UI service that you would like to be served by your project's main URL (`<your-project.wedeploy.io`)? Perfect, that is extremely easy to do by going to the settings tab of your project's dashboard and selecting a _Home Service_.
+
+</aside>
