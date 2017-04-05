@@ -11,7 +11,7 @@ weight: 4
 
 #### Deploying your project
 
-With our API request ready and our CDN linked, we now just need to deploy our project so we can send an email.
+With the API request ready and the CDN linked, we now just need to deploy the project so we can send an email.
 
 Within `tutorial-email-js` on your command line, add a git remote by running `git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git`.
 
