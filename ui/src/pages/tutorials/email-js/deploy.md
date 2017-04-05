@@ -20,10 +20,5 @@ Then make a first commit.
 2. `git commit -m "Awesome commit"`
 3. `git push wedeploy master`
 
-Go to the WeDeploy dashboard and select your project. On the right you should see the build log of your recent commit. 
-
-Once it says "Deploy was successful" go to `<project-name>.wedeploy.io`.
-
-Voilà! Your page is live!
 
 
