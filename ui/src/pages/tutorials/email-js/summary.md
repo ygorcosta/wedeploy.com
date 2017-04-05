@@ -12,7 +12,7 @@ weight: 1
 
 #### Getting Started
 
-Sending emails with WeDeploy is super easy. It is as simple as adding our API client and running a short script.
+Sending emails with WeDeploy is super easy. This tutorial will walk you through how to send an email in your app using the API Client and how to deploy your project - all under 3 minutes.
 
 ###### What to expect
 
