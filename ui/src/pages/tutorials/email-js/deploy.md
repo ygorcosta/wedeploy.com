@@ -6,7 +6,7 @@ parentId: "email-js"
 time: 30
 title: "Deploying your project"
 tutorialTitle: "Getting started with WeDeploy Email using Javascript"
-weight: 4
+weight: 5
 ---
 
 #### Deploying your project

@@ -5,7 +5,7 @@ parentId: "email-js"
 time: 15
 title: "Send an email"
 tutorialTitle: "Getting started with WeDeploy Email using Javascript"
-weight: 5
+weight: 6
 ---
 
 #### Send an email
@@ -16,7 +16,7 @@ Great work, your app is now live! 🚀 Now let's send an email.
 2. Fill in the form (make sure you put your email in the "to" field)
 3. Click submit and check your email inbox because you've got mail! 📬
 
-Awesome! You just deployed an app and sent an email, all within a few minutes! We can't wait to see what else you create with WeDeploy! 
+Awesome! You just deployed an app and sent an email within a few minutes! We can't wait to see what else you create with WeDeploy! 
 
 
 <aside>

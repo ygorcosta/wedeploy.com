@@ -12,7 +12,7 @@ weight: 3
 
 #### Linking the CDN
 
-Right now, our script in `tutorial-email-js/hosting/main.js` is ready to make to the request to send an email, but there is one problem - we haven't connected the API client yet.
+Before we can make any requests to send an email, we must connect the WeDeploy API Client.
 
 To do this, go to `index.html` in that `hosting` directory and include this script link at the bottom of the `<body>` element:
 
