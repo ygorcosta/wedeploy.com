@@ -1,11 +1,11 @@
 ---
 buttonTitle: "I cloned the repo"
-description: "In this section, you'll learn how to save and get data using JavaScript and the WeDeploy API Client."
+description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
 layout: "tutorial"
-parentId: "data-js"
+parentId: "data-web"
 time: 30
 title: "Clone the repo"
-tutorialTitle: "Getting started with WeDeploy Data using Javascript"
+tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 2
 ---
 
@@ -16,7 +16,7 @@ Clone the sample repo that contains the necessary files to get you started.
 Run this command in your terminal: 
 
 ```
-git clone https://github.com/wedeploy/tutorial-data-js.git
+git clone https://github.com/wedeploy/tutorial-data-web.git
 ```
 
 <aside>

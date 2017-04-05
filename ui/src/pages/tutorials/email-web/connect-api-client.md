@@ -1,12 +1,11 @@
 ---
 buttonTitle: "I included the API Client"
-description: "In this section, you'll learn how to send an email using JavaScript and the WeDeploy Email Service."
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 layout: "tutorial"
-parentId: "email-js"
+parentId: "email-web"
 time: 30
 title: "Include the API Client"
-
-tutorialTitle: "Getting started with WeDeploy Email using Javascript"
+tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 3
 ---
 
@@ -16,7 +15,7 @@ Before we can make any requests to send an email, we must connect the WeDeploy A
 
 To do this, go to `index.html` in that `hosting` directory and include this script link at the bottom of the `<body>` element:
 
-```html
+```xml
 <script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 ```
 

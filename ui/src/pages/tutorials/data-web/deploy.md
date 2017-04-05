@@ -1,11 +1,11 @@
 ---
 buttonTitle: "I deployed the project"
-description: "In this section, you'll learn how to save and get data using JavaScript and the WeDeploy API Client."
+description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
 layout: "tutorial"
-parentId: "data-js"
+parentId: "data-web"
 time: 30
 title: "Deploy the project"
-tutorialTitle: "Getting started with WeDeploy Data using Javascript"
+tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 5
 ---
 
@@ -13,7 +13,7 @@ weight: 5
 
 With the API Client connected and our methods added, we now just need to deploy the project so we can start saving and fetching data.
 
-Within `tutorial-data-js` on your command line, add a git remote by running `git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git`.
+Within `tutorial-data-web` on your command line, add a git remote by running `git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git`.
 
 Then make a first commit. 
 1. `git add .`

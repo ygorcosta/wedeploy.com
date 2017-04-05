@@ -1,11 +1,11 @@
 ---
 buttonTitle: "I added the API methods"
-description: "In this section, you'll learn how to save and get data using JavaScript and the WeDeploy API Client."
+description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
 layout: "tutorial"
-parentId: "data-js"
+parentId: "data-web"
 time: 60
 title: "Add API Methods"
-tutorialTitle: "Getting started with WeDeploy Data using Javascript"
+tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 4
 ---
 
@@ -13,7 +13,7 @@ weight: 4
 
 Now we want to add a script that will save data to a collection. 
 
-To do this, go to `tutorial-data-js/hosting/index.js` and paste this code:
+To do this, go to `tutorial-data-web/hosting/index.js` and paste this code:
 
 ```javascript
 WeDeploy

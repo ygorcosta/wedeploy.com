@@ -1,10 +1,10 @@
 ---
-description: "In this section, you'll learn how to enable WeDeploy Email on your application."
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 layout: "tutorial"
-parentId: "email-js"
+parentId: "email-web"
 time: 15
 title: "Send an email"
-tutorialTitle: "Getting started with WeDeploy Email using Javascript"
+tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 6
 ---
 

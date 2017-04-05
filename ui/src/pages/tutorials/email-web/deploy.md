@@ -1,11 +1,11 @@
 ---
 buttonTitle: "I deployed my project"
-description: "In this section, you'll learn how to send an email using JavaScript and the WeDeploy Email Service."
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 layout: "tutorial"
-parentId: "email-js"
+parentId: "email-web"
 time: 30
 title: "Deploying your project"
-tutorialTitle: "Getting started with WeDeploy Email using Javascript"
+tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 5
 ---
 
@@ -13,7 +13,7 @@ weight: 5
 
 With the API request ready and the CDN linked, we now just need to deploy the project so we can send an email.
 
-Within `tutorial-email-js` on your command line, add a git remote by running `git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git`.
+Within `tutorial-email-web` on your command line, add a git remote by running `git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git`.
 
 Then make a first commit. 
 1. `git add .`

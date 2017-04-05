@@ -1,11 +1,11 @@
 ---
 buttonTitle: "I cloned the repo"
-description: "In this section, you'll learn how to send an email using JavaScript and the WeDeploy Email Service."
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 layout: "tutorial"
-parentId: "email-js"
+parentId: "email-web"
 time: 20
 title: "Clone the sample repo"
-tutorialTitle: "Getting started with WeDeploy Email using Javascript"
+tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 2
 ---
 
@@ -16,7 +16,7 @@ Clone the sample repo that contains the necessary files to get you started.
 Run this command in your terminal: 
 
 ```
-git clone https://github.com/wedeploy/tutorial-email-js.git
+git clone https://github.com/wedeploy/tutorial-email-web.git
 ```
 
 <aside>

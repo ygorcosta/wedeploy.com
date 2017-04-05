@@ -1,18 +1,17 @@
 ---
 buttonTitle: "I'm ready to start!"
-description: "In this section, you'll learn how to send an email using JavaScript and the WeDeploy Email Service."
+description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
 layout: "tutorial"
-parentId: "email-js"
+parentId: "data-web"
 time: 20
 title: "Summary"
-serviceName: "Email"
-tutorialTitle: "Getting started with WeDeploy Email using Javascript"
+tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 1
 ---
 
 #### Getting Started
 
-Sending emails with WeDeploy is super easy. This tutorial will walk you through how to send an email in your app using the API Client and how to deploy your project using git - all under 3 minutes.
+Saving and fetching data with WeDeploy is super easy. This tutorial will walk you through how to use data in your app using the API Client and how to deploy your project using git - all under 3 minutes.
 
 ###### What to expect
 
@@ -20,9 +19,9 @@ In this tutorial you will:
 
 <ul class="checklist">
 	<li>Clone the sample repo</li>
-	<li>Link the API client</li>
+	<li>Include the API Client</li>
 	<li>Deploy a project</li>
-	<li>Send an email</li>
+	<li>Save and fetch data</li>
 </ul>
 
 ###### What you'll need
