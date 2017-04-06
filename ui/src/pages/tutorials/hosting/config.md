@@ -14,7 +14,7 @@ weight: 3
 Every project folder must have a `container.json` file that configures the service. Lets add one to the repo we just cloned. 
 
 1. Open the project folder in a text editor
-2. Create a new file and name it `container.json`
+2. Create a new file inside of the `hosting` folder and name it `container.json`
 3. Inside the file, paste this code
 
 ```application/json
@@ -41,6 +41,6 @@ Another thing you can do in your `container.json` file is add environment variab
 }
 ```
 
-See the full list of [Environment Variables for Hosting](/docs/hosting/environment-variables.html).
+See the full list of <a href="http://wedeploy.com/docs/hosting/environment-variables.html" target="_blank">Environment Variables for Hosting</a>.
 
 </aside>
