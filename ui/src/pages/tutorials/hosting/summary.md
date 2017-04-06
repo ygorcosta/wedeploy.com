@@ -4,12 +4,12 @@ description: "In this section, you'll learn how to deploy an application using W
 layout: "tutorial"
 parentId: "hosting"
 time: 20
-title: "Summary"
+title: "Get Started"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 weight: 1
 ---
 
-#### Getting Started
+#### Get Started
 
 Hosting static files with WeDeploy is super easy. This tutorial will walk you through how to setup your project's file structure and how to deploy with git.
 

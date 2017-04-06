@@ -9,7 +9,7 @@ tutorialTitle: "Getting started with WeDeploy Hosting"
 weight: 3
 ---
 
-#### Create container.json
+#### Add config file
 
 Every project folder must have a `container.json` file that configures the service. Lets add one to the repo we just cloned. 
 

@@ -9,7 +9,7 @@ tutorialTitle: "Getting started with WeDeploy Hosting"
 weight: 2
 ---
 
-#### Clone
+#### Clone sample repo
 
 First, you must clone the sample repo that contains the necessary files to get started. 
 
