@@ -6,7 +6,7 @@ parentId: "email-web"
 time: 20
 title: "Clone sample repo"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
-weight: 2
+weight: 3
 ---
 
 #### Clone 

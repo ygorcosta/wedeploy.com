@@ -6,7 +6,7 @@ parentId: "email-web"
 time: 30
 title: "Include API Client"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
-weight: 3
+weight: 4
 ---
 
 #### Include API Client

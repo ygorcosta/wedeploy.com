@@ -6,7 +6,7 @@ parentId: "hosting"
 time: 60
 title: "Deploy your app"
 tutorialTitle: "Getting started with WeDeploy Hosting"
-weight: 4
+weight: 5
 ---
 
 #### Deploy your app

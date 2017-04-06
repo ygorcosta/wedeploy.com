@@ -6,7 +6,7 @@ parentId: "hosting"
 time: 10
 title: "Clone sample repo"
 tutorialTitle: "Getting started with WeDeploy Hosting"
-weight: 2
+weight: 3
 ---
 
 #### Clone sample repo

@@ -6,7 +6,7 @@ parentId: "data-web"
 time: 20
 title: "Connect API Client"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
-weight: 3
+weight: 4
 ---
 
 #### Connect API Client
