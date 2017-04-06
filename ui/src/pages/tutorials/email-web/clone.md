@@ -4,12 +4,12 @@ description: "In this section, you'll learn how to send an email on the web usin
 layout: "tutorial"
 parentId: "email-web"
 time: 20
-title: "Clone the sample repo"
+title: "Clone sample repo"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 2
 ---
 
-#### Cloning
+#### Clone 
 
 Clone the sample repo that contains the necessary files to get you started.
 

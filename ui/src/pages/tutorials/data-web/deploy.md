@@ -9,7 +9,7 @@ tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 5
 ---
 
-#### Deploying your project
+#### Deploy your project
 
 With the API Client connected and our methods added, we now just need to deploy the project so we can start saving and fetching data.
 

@@ -3,12 +3,12 @@ description: "In this section, you'll learn how to deploy an application using W
 layout: "tutorial"
 parentId: "hosting"
 time: 40
-title: "Develop your app"
+title: "Make a change"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 weight: 5
 ---
 
-#### Develop your app
+#### Make a change
 
 Our project is now live, but what's next? Lets try deploying a new change to our app!
 

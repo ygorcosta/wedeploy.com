@@ -4,12 +4,12 @@ description: "In this section, you'll learn how to deploy an application using W
 layout: "tutorial"
 parentId: "hosting"
 time: 60
-title: "Deploy"
+title: "Deploy your app"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 weight: 4
 ---
 
-#### Deploy
+#### Deploy your app
 
 Now the moment you have be waiting for - deployment! 🚀
 

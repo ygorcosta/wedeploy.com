@@ -4,12 +4,12 @@ description: "In this section, you'll learn how to save and get data on the web 
 layout: "tutorial"
 parentId: "data-web"
 time: 30
-title: "Clone the repo"
+title: "Clone sample repo"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 2
 ---
 
-#### Cloning
+#### Clone
 
 Clone the sample repo that contains the necessary files to get you started.
 

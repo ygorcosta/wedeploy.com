@@ -8,7 +8,7 @@ tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 6
 ---
 
-#### It works
+#### It works!
 
 Great work, your app is now live! 🚀 Now let's start playing with some data.
 

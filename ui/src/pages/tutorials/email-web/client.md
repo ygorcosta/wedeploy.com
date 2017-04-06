@@ -4,7 +4,7 @@ description: "In this section, you'll learn how to send an email on the web usin
 layout: "tutorial"
 parentId: "email-web"
 time: 30
-title: "Include the API Client"
+title: "Include API Client"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 3
 ---

@@ -4,12 +4,12 @@ description: "In this section, you'll learn how to send an email on the web usin
 layout: "tutorial"
 parentId: "email-web"
 time: 30
-title: "Deploying your project"
+title: "Deploy the project"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 5
 ---
 
-#### Deploying your project
+#### Deploy the project
 
 With the API request ready and the CDN linked, we now just need to deploy the project so we can send an email.
 
