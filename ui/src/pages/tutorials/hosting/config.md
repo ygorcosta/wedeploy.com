@@ -13,9 +13,9 @@ weight: 3
 
 Every project folder must have a `container.json` file that configures the service. Lets add one to the repo we just cloned. 
 
-1. Open the `tutorial-hosting` folder in a text editor
+1. Open the `tutorial-hosting` folder in a code editor
 2. Create a new file inside of the `hosting` folder and name it `container.json`
-3. Inside the file, paste this code
+3. Inside of that file, paste this code
 
 ```application/json
 {
