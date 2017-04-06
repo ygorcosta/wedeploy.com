@@ -9,9 +9,9 @@ tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 1
 ---
 
-#### Getting Started
+#### Get Started
 
-Saving and fetching data with WeDeploy is super easy. This tutorial will walk you through how to use data in your app using the API Client and how to deploy your project using git - all under 3 minutes.
+Saving and fetching data with WeDeploy is super easy. This tutorial will walk you through how to use data in your app using the API Client and how to deploy your project with git.
 
 ###### What to expect
 
@@ -26,6 +26,6 @@ In this tutorial you will:
 
 ###### What you'll need
 
-* [A WeDeploy Account](http://dashboard.wedeploy.com/login)
+* [Git](https://git-scm.com/downloads)
+* [WeDeploy account](http://dashboard.wedeploy.com/signup)
 * [A new WeDeploy project](http://dashboard.wedeploy.com)
-* [Git](https://git-scm.com/) (download for [Linux](https://git-scm.com/download/linux), [macOS](https://git-scm.com/download/mac), [Windows](https://git-scm.com/download/win))

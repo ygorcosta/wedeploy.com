@@ -21,7 +21,7 @@ git clone https://github.com/wedeploy/tutorial-email-web.git
 
 <aside>
 
-###### <span class="icon-16-bullhorn"></span> Pro Tip
+###### <span class="icon-16-star"></span> Pro Tip
 
 Every WeDeploy project follows a similar file structure by using JSON files to managing your project and service-level configurations.
 

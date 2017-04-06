@@ -49,7 +49,7 @@ In order for your email request to be authorized, you must add your project's un
 
 <aside>
 
-###### <span class="icon-16-bullhorn"></span> Pro Tip
+###### <span class="icon-16-star"></span> Pro Tip
 
 As you can see, the input values from the form are being used as email parameters (from, to, subject, etc). We have a bunch of parameters so you can fully configure your email posts.
 

@@ -21,7 +21,7 @@ To do this, go to `index.html` in that `hosting` directory and include this scri
 
 <aside>
 
-###### <span class="icon-16-bullhorn"></span> Pro Tip
+###### <span class="icon-16-star"></span> Pro Tip
 
 If you go to `main.js` in that same `hosting` directory, you can see some of the Email API logic inside. One call you will use a lot is `post()`, which send a request to the API server to send an email with the information you have chosen. 
 

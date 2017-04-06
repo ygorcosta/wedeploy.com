@@ -51,7 +51,7 @@ WeDeploy
 
 <aside>
 
-###### <span class="icon-16-bullhorn"></span> Pro Tip
+###### <span class="icon-16-star"></span> Pro Tip
 
 Bellow the code you added to `list.js`, there is another API method with a `watch()` task. This sends a request to the server to immediately fetch any new data that is added to the specific collection, creating a real-time feed. 
 
