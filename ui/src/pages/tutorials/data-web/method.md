@@ -9,7 +9,9 @@ tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 4
 ---
 
-#### Save Data
+#### Add API Methods
+
+###### Save Data
 
 Now we want to add a script that will save data to a collection. 
 
@@ -29,7 +31,7 @@ WeDeploy
 		});
 ```
 
-#### Fetch Data
+###### Fetch Data
 
 Next, we want to add a script that will fetch data from the collection. 
 
@@ -55,7 +57,7 @@ WeDeploy
 
 Bellow the code you added to `list.js`, there is another API method with a `watch()` task. This sends a request to the server to immediately fetch any new data that is added to the specific collection, creating a real-time feed. 
 
-Learn more about ([Real-Time Feeds](/docs/data/real-time-feeds.html)).
+Learn more about <a href="http://wedeploy.com/docs/data/real-time-feeds.html" target="_blank">Real-Time Feeds</a>.
 
 </aside>
 

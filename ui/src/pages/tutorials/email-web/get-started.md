@@ -4,19 +4,25 @@ description: "In this section, you'll learn how to send an email on the web usin
 layout: "tutorial"
 parentId: "email-web"
 time: 20
-title: "Summary"
+title: "Get Started"
 serviceName: "Email"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 1
 ---
 
-#### Getting Started
+#### Get Started
 
 Sending emails with WeDeploy is super easy. This tutorial will walk you through how to send an email in your app using the API Client and how to deploy your project with git.
 
-###### What to expect
+###### What you'll need
 
-In this tutorial you will:
+<ul class="checklist">
+	<li><a href="https://git-scm.com/downloads" target="_blank">Git</a></li>
+	<li><a href="http://dashboard.wedeploy.com/signup" target="_blank">A WeDeploy account</a></li>
+	<li><a href="http://dashboard.wedeploy.com/new" target="_blank">A new WeDeploy project</a></li>
+</ul>
+
+###### What you'll do
 
 <ul class="checklist">
 	<li>Clone the sample repo</li>
@@ -25,8 +31,3 @@ In this tutorial you will:
 	<li>Send an email</li>
 </ul>
 
-###### What you'll need
-
-* [Git](https://git-scm.com/downloads)
-* [WeDeploy account](http://dashboard.wedeploy.com/signup)
-* [A new WeDeploy project](http://dashboard.wedeploy.com)

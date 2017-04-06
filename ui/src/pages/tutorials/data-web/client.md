@@ -9,7 +9,7 @@ tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 3
 ---
 
-#### Connecting the API Client
+#### Connect API Client
 
 Before we can make any requests to save or fetch data, we must connect the WeDeploy API Client.
 

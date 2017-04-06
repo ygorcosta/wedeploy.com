@@ -9,7 +9,7 @@ tutorialTitle: "Getting started with WeDeploy Hosting"
 weight: 2
 ---
 
-#### Clone
+#### Clone sample repo
 
 First, you must clone the sample repo that contains the necessary files to get started. 
 
@@ -35,6 +35,6 @@ your-project
 └── project.json
 ```
 
-Since we are only using one service in this tutorial, the repo you cloned will not have the `project.json` or service folder. If you are interested in adding more projects once your done, learn more about [configuration files](/docs/intro/configuration-files.html)?
+Since we are only using one service in this tutorial, the repo you cloned will not have the `project.json` or service folder. If you are interested in adding more projects once your done, learn more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>?
 
 </aside>

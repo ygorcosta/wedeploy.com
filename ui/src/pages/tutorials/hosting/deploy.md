@@ -38,6 +38,6 @@ Give it a few moments and then go to `hosting.<your-project>.wedeploy.io` to see
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-You can always check the status of your deployment by going to the _overview_ section of your project's [dashboard](http://dashboard.wedeploy.com).
+You can always check the status of your deployment by going to the _overview_ section of your project's <a href="http://dashboard.wedeploy.com" target="_blank">dashboard</a>.
 
 </aside>

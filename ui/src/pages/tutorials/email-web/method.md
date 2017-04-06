@@ -9,7 +9,7 @@ tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 4
 ---
 
-#### Add post() method
+#### Add API method
 
 Now we want to add a script that will send an email. To do this, go to `tutorial-email-web/hosting/main.js` and paste this code:
 
@@ -53,7 +53,7 @@ In order for your email request to be authorized, you must add your project's un
 
 As you can see, the input values from the form are being used as email parameters (from, to, subject, etc). We have a bunch of parameters so you can fully configure your email posts.
 
-Want to see the full list of [Email Parameters](/docs/email/sending-email.html)?
+Want to see the full list of <a href="http://wedeploy.com/docs/email/sending-email.html" target="_blank">Email Parameters</a>?
 
 </aside>
 
