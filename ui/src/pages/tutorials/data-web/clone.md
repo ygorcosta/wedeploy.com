@@ -9,7 +9,7 @@ tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 2
 ---
 
-#### Clone
+#### Clone sample repo
 
 Clone the sample repo that contains the necessary files to get you started.
 
@@ -36,6 +36,6 @@ your-project
 └── project.json
 ```
 
-You can see a similar file structure in the repo you just cloned. Want to know more about [configuration files](/docs/intro/configuration-files.html)?
+You can see a similar file structure in the repo you just cloned. Want to know more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>?
 
 </aside>
