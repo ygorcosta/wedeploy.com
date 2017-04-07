@@ -18,7 +18,7 @@ Now the moment you have be waiting for - deployment! 🚀
 Open up your terminal and go the `tutorial-hosting` folder. Then, add a git remote by running:
 
 ```xml
-git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git
+git remote add wedeploy http://git.wedeploy.com/<your-project-id>.git
 ```
 
 ###### Push first commit
@@ -32,7 +32,7 @@ Our remote is now set and we are ready to make our first commit!
 ###### See it live
 Once you push, WeDeploy will immediately start deploying your project.
 
-Give it a few moments and then go to `hosting.<your-project>.wedeploy.io` to see what you deployed! Pretty cool, right? 😎
+Give it a few moments and then go to `hosting.<your-project-id>.wedeploy.io` to see what you deployed! Pretty cool, right? 😎
 
 <aside>
 

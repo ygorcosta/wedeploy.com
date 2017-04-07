@@ -4,12 +4,12 @@ description: "In this section, you'll learn how to save and get data on the web 
 layout: "tutorial"
 parentId: "data-web"
 time: 20
-title: "Connect API Client"
+title: "Include API Client"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
-weight: 4
+weight: 5
 ---
 
-#### Connect API Client
+#### Include API Client
 
 Before we can make any requests to save or fetch data, we must connect the WeDeploy API Client.
 
