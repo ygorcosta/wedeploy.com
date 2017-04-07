@@ -23,6 +23,6 @@ Awesome! You just deployed an app and sent an email within a few minutes! We can
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-Do you have a primary UI service that you would like to be served by your project's main URL (`<your-project.wedeploy.io`)? Perfect, that is extremely easy to do by going to the settings tab of your project's dashboard and selecting a _Home Service_.
+Do you have a primary UI service that you would like to be served by your project's main URL (`<your-project>.wedeploy.io`)? Perfect, that is extremely easy to do by going to the settings tab of your project's dashboard and selecting a _Home Service_.
 
 </aside>

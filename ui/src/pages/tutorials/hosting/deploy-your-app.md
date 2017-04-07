@@ -3,7 +3,7 @@ buttonTitle: "I deployed the app"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
 layout: "tutorial"
 parentId: "hosting"
-time: 60
+time: 40
 title: "Deploy your app"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 weight: 5
