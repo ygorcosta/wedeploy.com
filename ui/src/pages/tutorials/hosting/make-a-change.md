@@ -21,7 +21,7 @@ Go back to your project in your text editor and open up the `index.html`. Change
 
 Now make another commit and push your changes to the WeDeploy remote!
 
-1. `git add index.html`
+1. `git add .`
 2. `git commit -m "update header"`
 3. `git push wedeploy master`
 

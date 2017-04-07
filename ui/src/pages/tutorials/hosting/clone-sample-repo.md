@@ -35,6 +35,6 @@ your-project
 └── project.json
 ```
 
-If you are interested in adding more services to your project once you are done, learn more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>.
+If you are interested in growing your project once you are done, learn more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>.
 
 </aside>
