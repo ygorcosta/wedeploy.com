@@ -28,6 +28,8 @@ Our remote is now set and we are ready to make our first commit!
 2. `git commit -m "Awesome commit"`
 3. `git push wedeploy master`
 
+If it is your first time pushing to WeDeploy's git, you will need to enter the email and password for your WeDeploy account.
+
 
 ###### See it live
 Once you push, WeDeploy will immediately start deploying your project.
