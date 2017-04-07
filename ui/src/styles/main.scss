@@ -35,6 +35,9 @@ $accent: #00d46a;
 // _Topbar
 @import "topbar";
 
+// _Tutorials
+@import "tutorials";
+
 //ovewrite blog h1 from marble
 .blog .container header h1 {
 	@include h3;
