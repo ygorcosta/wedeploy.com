@@ -3,7 +3,7 @@ buttonTitle: "I created a new project"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
 layout: "tutorial"
 parentId: "hosting"
-time: 30
+time: 20
 title: "Create new project"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 weight: 2

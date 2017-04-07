@@ -35,6 +35,6 @@ your-project
 └── project.json
 ```
 
-Since we are only using one service in this tutorial, the repo you cloned will not have the `project.json` or service folder. If you are interested in adding more projects once your done, learn more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>?
+Since we are only using one service in this tutorial, the repo you cloned will not have the `project.json` or service folder. If you are interested in adding more projects once you are done, learn more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>?
 
 </aside>
