@@ -24,7 +24,9 @@ Saving and fetching data with WeDeploy is super easy. This tutorial will walk yo
 
 <ul class="checklist">
 	<li>Clone the sample repo</li>
+	<li>Add config files</li>
 	<li>Include the API Client</li>
+	<li>Add the API methods</li>
 	<li>Deploy a project</li>
 	<li>Save and fetch data</li>
 </ul>

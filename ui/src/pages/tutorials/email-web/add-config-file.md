@@ -4,12 +4,12 @@ description: "In this section, you'll learn how to send an email on the web usin
 layout: "tutorial"
 parentId: "email-web"
 time: 30
-title: "Add container.json"
+title: "Add config file"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 4
 ---
 
-#### Add container.json
+#### Add config file
 
 Every service folder must have a `container.json` file that configures the service. Lets add one to our Email Service in the repo we just cloned. 
 

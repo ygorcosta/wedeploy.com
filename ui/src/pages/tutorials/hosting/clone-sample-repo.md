@@ -13,7 +13,7 @@ weight: 3
 
 First, you must clone the sample repo that contains the necessary files to get started. 
 
-To do this, run the bellow command in your terminal: 
+To do this, run the command below in your terminal: 
 
 ```xml
 git clone https://github.com/wedeploy/tutorial-hosting.git
