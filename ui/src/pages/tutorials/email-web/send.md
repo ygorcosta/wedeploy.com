@@ -5,7 +5,7 @@ parentId: "email-web"
 time: 15
 title: "Send an email"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
-weight: 6
+weight: 7
 ---
 
 #### Send an email

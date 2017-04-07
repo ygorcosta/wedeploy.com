@@ -6,7 +6,7 @@ parentId: "data-web"
 time: 60
 title: "Add API Methods"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
-weight: 4
+weight: 5
 ---
 
 #### Add API Methods

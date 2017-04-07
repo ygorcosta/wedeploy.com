@@ -4,12 +4,12 @@ description: "In this section, you'll learn how to deploy an application using W
 layout: "tutorial"
 parentId: "hosting"
 time: 30
-title: "Add config file"
+title: "Add container.json"
 tutorialTitle: "Getting started with WeDeploy Hosting"
-weight: 3
+weight: 4
 ---
 
-#### Add config file
+#### Add container.json
 
 Every project folder must have a `container.json` file that configures the service. Lets add one to the repo we just cloned. 
 

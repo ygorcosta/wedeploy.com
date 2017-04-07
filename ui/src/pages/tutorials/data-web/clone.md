@@ -6,7 +6,7 @@ parentId: "data-web"
 time: 30
 title: "Clone sample repo"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
-weight: 2
+weight: 3
 ---
 
 #### Clone sample repo

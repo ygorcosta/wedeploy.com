@@ -5,7 +5,7 @@ parentId: "hosting"
 time: 40
 title: "Make a change"
 tutorialTitle: "Getting started with WeDeploy Hosting"
-weight: 5
+weight: 6
 ---
 
 #### Make a change

@@ -5,7 +5,7 @@ parentId: "data-web"
 time: 30
 title: "It works!"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
-weight: 6
+weight: 7
 ---
 
 #### It works!
