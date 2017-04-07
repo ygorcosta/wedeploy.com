@@ -18,7 +18,6 @@ Saving and fetching data with WeDeploy is super easy. This tutorial will walk yo
 <ul class="checklist">
 	<li><a href="https://git-scm.com/downloads" target="_blank">Git</a></li>
 	<li><a href="http://dashboard.wedeploy.com/signup" target="_blank">A WeDeploy account</a></li>
-	<li><a href="http://dashboard.wedeploy.com/new" target="_blank">A new WeDeploy project</a></li>
 </ul>
 
 ###### What you'll do
