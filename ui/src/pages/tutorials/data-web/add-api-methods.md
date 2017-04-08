@@ -6,7 +6,7 @@ parentId: "data-web"
 time: 60
 title: "Add API Methods"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
-weight: 5
+weight: 6
 ---
 
 #### Add API Methods
@@ -19,17 +19,19 @@ To do this, go to `tutorial-data-web/hosting/index.js` and paste this code:
 
 ```javascript
 WeDeploy
-	.data(`data.${DOMAIN}`)
+	.data('data.<your-project-id>.wedeploy.io')
 	.create('tasks', {name: form.item.value })
-		.then(function(response) {
-			form.reset();
-			form.item.focus();
-			console.info('Saved:', response);
-		})
-		.catch(function(error) {
-			console.error(error);
-		});
+	.then(function(response) {
+		form.reset();
+		form.item.focus();
+		console.info('Saved:', response);
+	})
+	.catch(function(error) {
+		console.error(error);
+	});
 ```
+
+**Note:** make sure to replace `<your-project-id>` with the id of your project.
 
 ###### Fetch Data
 
@@ -39,17 +41,19 @@ To do this, go to `list.js` inside of the same folder and paste this code:
 
 ```javascript
 WeDeploy
-	.data(`ata.${DOMAIN}`)
+	.data('data.<your-project-id>.wedeploy.io')
 	.orderBy('id', 'desc')
 	.limit(5)
 	.get('tasks')
-		.then(function(response) {
-			appendTasks(response);
-		})
-		.catch(function(error) {
-			console.error(error);
-		});
+	.then(function(response) {
+		appendTasks(response);
+	})
+	.catch(function(error) {
+		console.error(error);
+	});
 ```
+
+**Note:** make sure to replace `<your-project-id>` with the id of your project.
 
 <aside>
 

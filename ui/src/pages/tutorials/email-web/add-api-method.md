@@ -6,7 +6,7 @@ parentId: "email-web"
 time: 45
 title: "Add API Method"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
-weight: 5
+weight: 6
 ---
 
 #### Add API method
@@ -15,7 +15,7 @@ Now we want to add a script that will send an email. To do this, go to `tutorial
 
 ```javascript
 WeDeploy
-	.url(`email.${DOMAIN}`)
+	.url(`email.<your-project-id>.wedeploy.io`)
 	.auth('0000000-0000-000-0000-0000000')
 	.form('from', form.from.value)
 	.form('to', form.to.value)
@@ -36,6 +36,8 @@ WeDeploy
 		alert('Oops, some error has happened.');
 	});
 ```
+
+**Note:** make sure to replace `<your-project-id>` with the id of your project.
 
 #### Add master token
 

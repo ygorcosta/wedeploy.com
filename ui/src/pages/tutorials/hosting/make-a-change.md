@@ -21,7 +21,7 @@ Go back to your project in your text editor and open up the `index.html`. Change
 
 Now make another commit and push your changes to the WeDeploy remote!
 
-1. `git add index.html`
+1. `git add .`
 2. `git commit -m "update header"`
 3. `git push wedeploy master`
 
@@ -33,6 +33,6 @@ Go check your project's URL again and you should see the text change to "You Roc
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-Want to make your Hosting Service the primary service so that it is served to your project's root url (`<your-project>.wedeploy.io`)? Perfect, that is extremely easy to do by going to the settings tab of your project's dashboard and selecting a _Home Service_.
+Want to make your Hosting Service the primary service so that it is served to your project's root url (`<your-project-id>.wedeploy.io`)? Perfect, that is extremely easy to do by going to the settings tab of your project's dashboard and selecting a _Home Service_.
 
 </aside>

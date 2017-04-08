@@ -6,14 +6,18 @@ parentId: "data-web"
 time: 30
 title: "Deploy the project"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
-weight: 6
+weight: 7
 ---
 
 #### Deploy the project
 
 With the API Client connected and our methods added, we now just need to deploy the project so we can start saving and fetching data.
 
-Within `tutorial-data-web` on your command line, add a git remote by running `git remote add wedeploy http://git.wedeploy.com/<your-project-name>.git`.
+Within `tutorial-data-web` on your command line, add a git remote by running:
+
+```xml
+git remote add wedeploy http://git.wedeploy.com/<your-project-id>.git
+```
 
 Then make a first commit. 
 1. `git add .`

@@ -13,7 +13,7 @@ weight: 3
 
 First, you must clone the sample repo that contains the necessary files to get started. 
 
-To do this, run the bellow command in your terminal: 
+To do this, run the command below in your terminal: 
 
 ```xml
 git clone https://github.com/wedeploy/tutorial-hosting.git
@@ -35,6 +35,6 @@ your-project
 └── project.json
 ```
 
-Since we are only using one service in this tutorial, the repo you cloned will not have the `project.json` or service folder. If you are interested in adding more projects once you are done, learn more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>.
+If you are interested in growing your project once you are done, learn more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>.
 
 </aside>

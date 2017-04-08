@@ -11,7 +11,7 @@ weight: 4
 
 #### Add container.json
 
-Every project folder must have a `container.json` file that configures the service. Lets add one to the repo we just cloned. 
+Every service folder must have a `container.json` file that configures the service. Lets add one to the repo we just cloned. 
 
 1. Open the `tutorial-hosting` folder in a code editor
 2. Create a new file inside of the `hosting` folder and name it `container.json`
@@ -22,7 +22,6 @@ Every project folder must have a `container.json` file that configures the servi
 	"id": "hosting",
 	"type": "wedeploy/hosting:latest"
 }
-
 ```
 
 <aside>
