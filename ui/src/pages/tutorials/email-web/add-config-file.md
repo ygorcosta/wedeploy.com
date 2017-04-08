@@ -13,9 +13,9 @@ weight: 4
 
 Every service folder must have a `container.json` file that configures the service. Lets add one to our Email Service in the repo we just cloned. 
 
-1. Open the `tutorial-email-web` folder in a code editor
-2. Create a new file inside of the `email` folder and name it `container.json`
-3. Inside of that file, paste this code
+1. Open the `tutorial-email-web` folder in a code editor.
+2. Create a new file inside of the `email` folder and name it `container.json`.
+3. Inside of that file, paste this code.
 
 ```application/json
 {

@@ -15,7 +15,7 @@ weight: 9
 	<p class="notfound-text">You made it!</p>
 	<p>Now discover what else you can do with WeDeploy.</p>
 	<ul class="checklist">
-		<li><a href="/tutorials/data-web/">WeDeploy Data</a></li>
-		<li><a href="/tutorials/email-web/">WeDeploy Email</a></li>
+		<li><a href="/tutorials/hosting/get-started.html">WeDeploy Hosting</a></li>
+		<li><a href="/tutorials/data-web/get-started.html">WeDeploy Data</a></li>
 	</ul>
 </div>

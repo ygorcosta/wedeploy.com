@@ -19,7 +19,7 @@ To do this, go to `tutorial-data-web/hosting/index.js` and paste this code:
 
 ```javascript
 WeDeploy
-	.data(`email.<your-project-id>.wedeploy.io`)
+	.data('data.<your-project-id>.wedeploy.io')
 	.create('tasks', {name: form.item.value })
 	.then(function(response) {
 		form.reset();
@@ -41,7 +41,7 @@ To do this, go to `list.js` inside of the same folder and paste this code:
 
 ```javascript
 WeDeploy
-	.data(`email.<your-project-id>.wedeploy.io`)
+	.data('data.<your-project-id>.wedeploy.io')
 	.orderBy('id', 'desc')
 	.limit(5)
 	.get('tasks')

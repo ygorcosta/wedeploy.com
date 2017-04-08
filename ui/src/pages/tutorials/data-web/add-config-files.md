@@ -15,9 +15,9 @@ weight: 4
 
 Every service folder must have a `container.json` file that configures the service. Lets add one to our Data Service in the repo we just cloned. 
 
-1. Open the `tutorial-data-web` folder in a code editor
-2. Create a new file inside of the `data` folder and name it `container.json`
-3. Inside of that file, paste this code
+1. Open the `tutorial-data-web` folder in a code editor.
+2. Create a new file inside of the `data` folder and name it `container.json`.
+3. Inside of that file, paste this code.
 
 ```application/json
 {
@@ -30,9 +30,9 @@ Every service folder must have a `container.json` file that configures the servi
 
 Along with the container.json, each Data service must have an `api.json` file to configure your database (eg. set path, allow certain methods, and require authentication).
 
-1. Go back to `tutorial-data-web` in your code editor
-2. Create another file inside of the `data` folder and name it `api.json`
-3. Inside of that file, paste this code
+1. Go back to `tutorial-data-web` in your code editor.
+2. Create another file inside of the `data` folder and name it `api.json`.
+3. Inside of that file, paste this code.
 
 ```application/json
 [

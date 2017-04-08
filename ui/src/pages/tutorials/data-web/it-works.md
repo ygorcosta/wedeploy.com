@@ -14,9 +14,9 @@ weight: 8
 Great work, your app is now live! 🚀 Now let's start playing with some data.
 
 1. Go to `hosting.<your-project-id>.wedeploy.io` in your browser.
-2. Type an item into the input and click _Add Item_
-3. Click _Go to item listing_ and see how your data is already populated
-4. To see the real-time data in action, open up both pages side-by-side and then add an item
+2. Type an item into the input and click _Add Item_.
+3. Click _Go to item listing_ and see how your data is already populated.
+4. To see the real-time data in action, open up both pages side-by-side and then add an item.
 
 Awesome! You just deployed an app and saved data within a few minutes! We can't wait to see what else you create with WeDeploy! 
 
