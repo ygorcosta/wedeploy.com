@@ -26,5 +26,5 @@ Then make a first commit.
 
 Once you push, WeDeploy will immediately start building and deploying your project.
 
-Give it a few moments and then go to `hosting.<your-project-id>.wedeploy.io` to see what you deployed! Pretty cool, right? 😎
+Give it a few moments and then go to `hosting.<your-project-id>.wedeploy.io` to see what you deployed! Pretty cool, right?
 
