@@ -1,9 +1,9 @@
 ---
-description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "email-web"
 title: "You made it!"
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 tutorialTitle: "Getting started with WeDeploy Email on the web"
+parentId: "email-web"
+layout: "tutorial"
 weight: 9
 ---
 

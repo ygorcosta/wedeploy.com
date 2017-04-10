@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I'm ready to start!"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
-layout: "tutorial"
-parentId: "hosting"
-time: 20
 title: "Get Started"
+description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
+buttonTitle: "I'm ready to start!"
 tutorialTitle: "Getting started with WeDeploy Hosting"
+parentId: "hosting"
+layout: "tutorial"
+time: 20
 weight: 1
 ---
 

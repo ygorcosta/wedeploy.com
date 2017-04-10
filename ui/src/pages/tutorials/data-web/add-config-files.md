@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I added the config files"
-description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "data-web"
-time: 40
 title: "Add config files"
+description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
+buttonTitle: "I added the config files"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
+parentId: "data-web"
+layout: "tutorial"
+time: 40
 weight: 4
 ---
 

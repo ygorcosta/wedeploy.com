@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I sent an email"
-description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "email-web"
-time: 15
 title: "Send an email"
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
+buttonTitle: "I sent an email"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
+parentId: "email-web"
+layout: "tutorial"
+time: 15
 weight: 8
 ---
 

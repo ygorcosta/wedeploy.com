@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I cloned the repo"
-description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "email-web"
-time: 20
 title: "Clone sample repo"
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
+buttonTitle: "I cloned the repo"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
+parentId: "email-web"
+layout: "tutorial"
+time: 20
 weight: 3
 ---
 

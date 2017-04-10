@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I added the API methods"
-description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "data-web"
-time: 60
 title: "Add API Methods"
+description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
+buttonTitle: "I added the API methods"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
+parentId: "data-web"
+layout: "tutorial"
+time: 60
 weight: 6
 ---
 

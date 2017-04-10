@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I cloned the repo"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
-layout: "tutorial"
-parentId: "hosting"
-time: 10
 title: "Clone sample repo"
+description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
+buttonTitle: "I cloned the repo"
 tutorialTitle: "Getting started with WeDeploy Hosting"
+parentId: "hosting"
+layout: "tutorial"
+time: 10
 weight: 3
 ---
 

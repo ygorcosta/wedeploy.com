@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I deployed the project"
-description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "data-web"
-time: 30
 title: "Deploy the project"
+description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
+buttonTitle: "I deployed the project"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
+parentId: "data-web"
+layout: "tutorial"
+time: 30
 weight: 7
 ---
 

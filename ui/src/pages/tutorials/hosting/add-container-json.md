@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I created the container.json"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
-layout: "tutorial"
-parentId: "hosting"
-time: 30
 title: "Add container.json"
+description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
+buttonTitle: "I created the container.json"
 tutorialTitle: "Getting started with WeDeploy Hosting"
+parentId: "hosting"
+layout: "tutorial"
+time: 30
 weight: 4
 ---
 

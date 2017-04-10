@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I cloned the repo"
-description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "data-web"
-time: 30
 title: "Clone sample repo"
+description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
+buttonTitle: "I cloned the repo"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
+parentId: "data-web"
+layout: "tutorial"
+time: 30
 weight: 3
 ---
 
