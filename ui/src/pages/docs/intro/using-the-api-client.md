@@ -16,28 +16,30 @@ weight: 8
 
 In order to send/receive requests to/from WeDeploy, we need to include the JavaScript API Client. This library provides a secure and reliable communication channel with WeDeploy. We can do that by adding a script element in a HTML file or to load the library using NPM:
 
-### Adding WeDeploy JavaScript API from the CDN
-```html
+#### CDN
+
+```xml
 <script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 ```
 
-### Installing WeDeploy using NPM
+#### NPM
 ```shell
 $ npm install --save wedeploy
 ```
 
 After installing WeDeploy using NPM, it might be loaded like this:
 
-```js
+```javascript
 const WeDeploy = require('wedeploy');
 
 // in React Native environment it might be loaded using 'import' statement
 import WeDeploy from 'wedeploy';
 ```
 
-### Supported environments
+#### Supported environments
 
 WeDeploy has been tested on the following environments:
+
 1. Web browser - Chrome, Firefox, Safari, Edge, IE10+
 2. [Node.js](https://nodejs.org/en/)
 3. [React Native](https://facebook.github.io/react-native/)
@@ -55,7 +57,7 @@ If you want to send/receive requests to/from WeDeploy from an iOS App, we also h
 
 #### Cocoapods
 
-Add this to your Podfile
+Add this to your Podfile:
 
 ```swift
 pod 'WeDeploy'
@@ -63,7 +65,7 @@ pod 'WeDeploy'
 
 #### Carthage
 
-Add this to your Cartfile
+Add this to your Cartfile:
 
 ```swift
 github 'wedeploy/api-swift'

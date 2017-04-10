@@ -41,6 +41,14 @@ auth.signInWithRedirect(provider: provider) { (user, error) in
 //Add WeDeploy.auth("http://<serviceID>.<projectID>.wedeploy.io").handle(url: url) in AppDelegate's open url method	
 ```
 
+<aside>
+
+###### <span class="icon-16-alert"></span> Attention
+
+Sign-in with GitHub provider is currently not available in Node.js and React Native environments.
+
+</aside>
+
 </article>
 
 <article id="2">
@@ -76,9 +84,6 @@ Or you can add those environment variables using the dashboard.
 ![Project Container Environment](https://cloud.githubusercontent.com/assets/1435318/20008146/296d8a62-a27e-11e6-9e5a-f54bac5a5a85.png)
 
 </article>
-
-### API nuances
-Sign-in with GitHub provider is currently not available in Node.js and React Native environments.
 
 ## What's next?
 
