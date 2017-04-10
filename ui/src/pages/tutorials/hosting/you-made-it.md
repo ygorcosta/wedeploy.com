@@ -2,7 +2,7 @@
 description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
 layout: "tutorial"
 parentId: "hosting"
-time: 40
+time: 0
 title: "You made it!"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 weight: 7
