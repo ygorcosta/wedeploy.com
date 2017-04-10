@@ -64,16 +64,18 @@
 {template .footerButtons}
 	<div class="tutorial-page-nav">
 		{let $tutorialObject: $site.index.children['tutorials'].children[$page.parentId] /}
-		{if $page.buttonTitle and $page.weight < length($tutorialObject.childIds)}
+		{if $page.weight < length($tutorialObject.childIds)}
 			{let $nextPageUrl: $tutorialObject.children[$tutorialObject.childIds[$page.weight]].url /}
 			{if $site.githubRepo}
 				<a href="https://github.com/{$site.githubRepo}/issues/new?title=Tutorial+Problem&body=%3E+URL%3A+{$page.url}" class="btn btn-default btn-sm">
 					Report a problem
 				</a>
 			{/if}
-			<a href="{$nextPageUrl}" class="btn btn-accent btn-sm">
-				{$page.buttonTitle}
-			</a>
+			{if $page.buttonTitle}
+				<a href="{$nextPageUrl}" class="btn btn-accent btn-sm">
+					{$page.buttonTitle}
+				</a>
+			{/if}
 		{/if}
 	</div>
 {/template}

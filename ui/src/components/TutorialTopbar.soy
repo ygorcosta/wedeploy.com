@@ -18,8 +18,10 @@
 		<h3 class="topbar-logo-text">{$page.tutorialTitle ?: ''}</h3>
 
 		<div class="time-remaining">
-			<span class="icon icon-16-clock"></span>
-			<span class="name">{$page.timeRemaining ?: ''}</span>
+			{if $page.time != 0}
+				<span class="icon icon-16-clock"></span>
+				<span class="name">{$page.timeRemaining ?: ''}</span>
+			{/if}
 		</div>
 	</nav>
 {/template}
