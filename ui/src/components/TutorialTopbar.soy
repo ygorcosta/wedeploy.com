@@ -18,7 +18,7 @@
 		<h3 class="topbar-logo-text">{$page.tutorialTitle ?: ''}</h3>
 
 		<div class="time-remaining">
-			{if $page.time != 0}
+			{if $page.timeRemaining}
 				<span class="icon icon-16-clock"></span>
 				<span class="name">{$page.timeRemaining ?: ''}</span>
 			{/if}
