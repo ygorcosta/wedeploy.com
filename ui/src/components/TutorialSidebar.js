@@ -27,7 +27,9 @@ class TutorialSidebar extends Component {
 		let sidebarLinks = sidebar.querySelectorAll('.sidebar-link');
 
 		sidebarLinks.forEach((item, i) => {
-			totalTime += parseInt(item.dataset.time);
+			let time = parseInt(item.dataset.time || 0);
+
+			totalTime += time;
 
 			if (hasClass(item, 'sidebar-link-selected')) {
 				indexSelected = i;
@@ -35,7 +37,8 @@ class TutorialSidebar extends Component {
 
 			if (indexSelected === -1) {
 				addClasses(item, 'sidebar-link-read');
-				timeRead += parseInt(item.dataset.time);
+				timeRead += time;
+
 				return;
 			}
 		});
