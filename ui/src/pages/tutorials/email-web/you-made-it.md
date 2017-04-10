@@ -2,7 +2,6 @@
 description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 layout: "tutorial"
 parentId: "email-web"
-time: 0
 title: "You made it!"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 weight: 9
