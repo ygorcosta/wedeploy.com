@@ -32,7 +32,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.auth("<auth-url>")
+	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.createUser(email: "user@domain.com", password: "abc", name: "somename")
 	.then { user in
 		// Successfully created.
@@ -59,7 +59,7 @@ if (currentUser) {
 ```
 ```swift
 WeDeploy
-	.auth("<auth-url>")
+	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.getCurrentUser()
 	.then { user in
 		// User found.
@@ -88,7 +88,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.auth("<auth-url>")
+	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.getUser(id: "userId")
 	.then { user in
 		// User found.
@@ -120,7 +120,7 @@ currentUser
 ```
 ```swift
 WeDeploy
-	.auth("<auth-url>")
+	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.deleteUser(id: "userId")
 	.then { _ in
 		// Successfully deleted
@@ -157,7 +157,7 @@ currentUser
 ```
 ```swift
 WeDeploy
-	.auth("<auth-url>")
+	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.updateUser(id: "userId" , email: "eleven@hawkinslabs.com", password: "password", name: "Eleven")
 	.then { _ in
 		// Successfully updated
@@ -188,7 +188,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.auth("<auth-url>")
+	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.sendPasswordReset(email: "user@domain.com")
 	.then { _ in
 		// Successfully signed out.
@@ -217,7 +217,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.auth("<auth-url>")
+	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.signOut()
 	.then { _ in
 		// Successfully signed out.

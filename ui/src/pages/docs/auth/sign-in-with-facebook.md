@@ -30,7 +30,7 @@ auth.onSignIn(function(user) {
 });
 ```
 ```swift
-let auth = WeDeploy.auth("<auth-url>");
+let auth = WeDeploy.auth("http://<serviceID>.<projectID>.wedeploy.io");
 let provider = AuthProvider(provider: .facebook, redirectUri: "my-app://")
 provider.providerScope = "email"
 
@@ -38,7 +38,7 @@ auth.signInWithRedirect(provider: provider) { (user, error) in
 	// Fires when user is signed in after redirect.
 }
 
-//Add WeDeploy.auth("<auth-url>").handle(url: url) in AppDelegate's open url method	
+//Add WeDeploy.auth("http://<serviceID>.<projectID>.wedeploy.io").handle(url: url) in AppDelegate's open url method	
 ```
 
 </article>

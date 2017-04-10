@@ -29,7 +29,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.auth("<auth-url>")
+	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.signInWith(username: "user@domain.com", password: "password")
 	.then { auth in
 		// User is signed in.
