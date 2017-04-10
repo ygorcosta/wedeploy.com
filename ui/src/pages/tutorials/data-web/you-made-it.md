@@ -2,7 +2,6 @@
 description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
 layout: "tutorial"
 parentId: "data-web"
-time: 0
 title: "You made it!"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
 weight: 9

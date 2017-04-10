@@ -11,7 +11,7 @@ weight: 5
 
 #### Deploy your app
 
-Now the moment you have be waiting for - deployment! 🚀
+Now the moment you have be waiting for - deployment!
 
 ###### Add remote
 
@@ -34,7 +34,7 @@ If it is your first time pushing to WeDeploy's git, you will need to enter the e
 ###### See it live
 Once you push, WeDeploy will immediately start deploying your project.
 
-Give it a few moments and then go to `hosting.<your-project-id>.wedeploy.io` to see what you deployed! Pretty cool, right? 😎
+Give it a few moments and then go to `hosting.<your-project-id>.wedeploy.io` to see what you deployed! Pretty cool, right?
 
 <aside>
 
