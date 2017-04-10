@@ -18,7 +18,7 @@ We presented a lot of features for data filtering and search. You may be wonderi
 
 ```javascript
 WeDeploy
-	.data('http://datademo.wedeploy.io')
+	.data('http://<serviceID>.<projectID>.wedeploy.io')
 	.watch('movies')
 	.on('changes', function(data) {
 		console.log(data);
@@ -30,7 +30,7 @@ WeDeploy
 ```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
-	.data("http://datademo.wedeploy.io")
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.watch(resourcePath: "movies")
 
 socket.on([.changes, .error]) { data in 
@@ -57,7 +57,7 @@ To present data using advanced search is simple as performing normal queries. Yo
 
 ```javascript
 WeDeploy
-	.data('http://datademo.wedeploy.io')
+	.data('http://<serviceID>.<projectID>.wedeploy.io')
 	.where('category', 'cinema')
 	.or('category', 'cartoon')
 	.watch('movies')
@@ -71,7 +71,7 @@ WeDeploy
 ```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
-	.data("http://datademo.wedeploy.io")
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.where(field: "category", op: "=", value: "cinema")
 	.or(field: "category", op: "=", value: "cartoon")
 	.watch(resourcePath: "movies")
@@ -98,7 +98,7 @@ The data service uses a query limit `500` by default. In order to always get the
 
 ```javascript
 WeDeploy
-	.data('http://datademo.wedeploy.io')
+	.data('http://<serviceID>.<projectID>.wedeploy.io')
 	.limit(1)
 	.orderBy('id', 'desc')
 	.watch('movies')
@@ -112,7 +112,7 @@ WeDeploy
 ```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
-	.data("http://datademo.wedeploy.io")
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.limit(1)
 	.orderBy(field: "id", order: .DESC)
 	.watch(resourcePath: "movies")

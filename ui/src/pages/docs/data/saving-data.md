@@ -24,7 +24,7 @@ Writing new data is as simple as sending a JSON.
 
 ```javascript
 WeDeploy
-	.data('http://datademo.wedeploy.io')
+	.data('http://<serviceID>.<projectID>.wedeploy.io')
 	.create('movies', {
 		"title": "Star Wars IV",
 		"year": 1977,
@@ -35,7 +35,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.data("http://datademo.wedeploy.io")
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.create(resource: "movies", object: [
 		"title" : "Star Wars IV",
 		"year" : 1977,
@@ -72,7 +72,7 @@ You just need to use an array instead an object as the second param.
 
 ```javascript
 WeDeploy
-	.data('http://datademo.wedeploy.io')
+	.data('http://<serviceID>.<projectID>.wedeploy.io')
 	.create('movies', [
 		{
 			"title": "Star Wars III",
@@ -90,7 +90,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.data("http://datademo.wedeploy.io")
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.create(resource: "movies", object: [
 	[
 		"title" : "Star Wars III",
@@ -137,7 +137,7 @@ WeDeploy Data service is really flexible in therms of data structure. You're abl
 
 ```javascript
 WeDeploy
-	.data('http://datademo.wedeploy.io')
+	.data('http://<serviceID>.<projectID>.wedeploy.io')
 	.create('movies', [
 		{
 			"title": "Star Wars I",
@@ -151,7 +151,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.data("http://datademo.wedeploy.io")
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.create(resource: "movies", object: [
 		"title": "Star Wars I",
 		"obs": "First in ABC order",
