@@ -8,3 +8,7 @@
 .docs .guide-content h2 {
 	@include h4;
 }
+
+.guide-btn-cta .btn span[class*="icon-16-external"] {
+	top: 7px;
+}
