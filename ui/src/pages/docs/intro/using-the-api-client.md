@@ -50,7 +50,7 @@ By default, all swift api requests returns a promise, for example:
 
 ```swift
 WeDeploy
-	.data("http://datademo.wedeploy.io");
+	.data("http://<serviceID>.<projectID>.wedeploy.io");
 	.get(resourcePath: "movies")
 	.then { movie in 
 		print(movie)
@@ -62,7 +62,7 @@ But you will be able to return a callback or even an observable! You will have t
 ```swift
 // The method toCallback converts a promise into a callback
 WeDeploy
-	.data("http://datademo.wedeploy.io");
+	.data("http://<serviceID>.<projectID>.wedeploy.io");
 	.get(resourcePath: "movies")
 	toCallback { movies, error in
 		// here you can check the error or the response
@@ -70,7 +70,7 @@ WeDeploy
 
 // The method toObservable converts a promise into an observable
 WeDeploy
-	.data("http://datademo.wedeploy.io");
+	.data("http://<serviceID>.<projectID>.wedeploy.io");
 	.get(resourcePath: "movies")
 	.toObservable()
 	.subscribe(

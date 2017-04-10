@@ -190,7 +190,7 @@ The URL we just created stored a new document in our app's service inside the "m
 For example, to reference the newly created Star Wars rating, we can use the path:
 
 ```text
-http://data.datademo.wedeploy.me/movies/115992383516607958/rating
+http://<serviceID>.<projectID>.wedeploy.io/movies/115992383516607958/rating
 ```
 
 </article>
