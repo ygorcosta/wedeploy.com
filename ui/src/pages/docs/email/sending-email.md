@@ -34,7 +34,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.email('http://<EmailserviceID>.<projectID>.wedeploy.io)
+	.email('http://<serviceID>.<projectID>.wedeploy.io)
 	.sendEmail(from: self.username, to: self.username, subject: "subject", body: "body")
 	.then { id in
 		print("Email ID: \(id)")

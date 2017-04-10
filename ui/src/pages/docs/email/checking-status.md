@@ -28,7 +28,7 @@ WeDeploy
 	});
 ```
 ```swift
-WeDeploy.email('http://<EmailserviceID>.<projectID>.wedeploy.io)
+WeDeploy.email('http://<serviceID>.<projectID>.wedeploy.io)
 	.checkEmailStatus(id: "202605176596079530")
 	.then { status in
 		print("Email status: \(status)")
