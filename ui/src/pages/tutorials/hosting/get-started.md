@@ -11,7 +11,7 @@ weight: 1
 
 #### Get Started
 
-Hosting static files with WeDeploy is super easy. This tutorial will walk you through how to setup your project's file structure and how to deploy with git.
+Hosting static files with WeDeploy is super easy. This tutorial will walk you through how to set up your project's file structure and how to deploy with git.
 
 ###### What you'll need
 

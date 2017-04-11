@@ -36,6 +36,10 @@ Once you push, WeDeploy will immediately start deploying your project.
 
 Give it a few moments and then go to `hosting.<your-project-id>.wedeploy.io` to see what you deployed! Pretty cool, right?
 
+<figure>
+	<img src="/images/tutorials/it-works.png" alt="It works!">
+</figure>
+
 <aside>
 
 ###### <span class="icon-16-star"></span> Pro Tip
