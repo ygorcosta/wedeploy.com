@@ -59,9 +59,9 @@ WeDeploy
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-Bellow the code you added to `list.js`, there is another API method with a `watch()` task. This sends a request to the server to immediately fetch any new data that is added to the specific collection, creating a real-time feed. 
+In this tutorial we teach you how to use the `.get()` method which fetches the data from your collection everytime you refresh the page or make a new request. We also have a `.watch()` task which retrieves new data automatically when new data is created, giving you the power of real-time data!
 
-Learn more about <a href="http://wedeploy.com/docs/data/real-time-feeds.html" target="_blank">Real-Time Feeds</a>.
+Want to learn more about <a href="http://wedeploy.com/docs/data/real-time-feeds.html" target="_blank">Real-Time Feeds</a>?
 
 </aside>
 
