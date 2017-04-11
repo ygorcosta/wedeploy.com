@@ -5,7 +5,7 @@ buttonTitle: "I created a project"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
 parentId: "data-web"
 layout: "tutorial"
-time: 20
+time: 30
 weight: 2
 ---
 

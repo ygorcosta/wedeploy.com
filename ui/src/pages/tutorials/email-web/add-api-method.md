@@ -5,7 +5,7 @@ buttonTitle: "I included the API Client"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 parentId: "email-web"
 layout: "tutorial"
-time: 45
+time: 90
 weight: 6
 ---
 

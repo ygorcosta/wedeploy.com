@@ -5,7 +5,7 @@ buttonTitle: "I created the container.json"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 parentId: "hosting"
 layout: "tutorial"
-time: 30
+time: 40
 weight: 4
 ---
 

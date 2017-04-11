@@ -5,7 +5,7 @@ buttonTitle: "I created a new project"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 parentId: "hosting"
 layout: "tutorial"
-time: 20
+time: 30
 weight: 2
 ---
 

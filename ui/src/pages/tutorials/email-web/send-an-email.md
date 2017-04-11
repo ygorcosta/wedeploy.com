@@ -5,7 +5,7 @@ buttonTitle: "I sent an email"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 parentId: "email-web"
 layout: "tutorial"
-time: 15
+time: 20
 weight: 8
 ---
 

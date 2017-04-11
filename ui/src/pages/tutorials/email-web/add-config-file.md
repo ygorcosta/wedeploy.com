@@ -5,7 +5,7 @@ buttonTitle: "I created the container.json"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 parentId: "email-web"
 layout: "tutorial"
-time: 30
+time: 45
 weight: 4
 ---
 

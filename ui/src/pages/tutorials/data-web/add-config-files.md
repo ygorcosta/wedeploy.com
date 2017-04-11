@@ -5,7 +5,7 @@ buttonTitle: "I added the config files"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
 parentId: "data-web"
 layout: "tutorial"
-time: 40
+time: 60
 weight: 4
 ---
 

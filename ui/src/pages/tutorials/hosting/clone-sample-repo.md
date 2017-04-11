@@ -5,7 +5,7 @@ buttonTitle: "I cloned the repo"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 parentId: "hosting"
 layout: "tutorial"
-time: 10
+time: 20
 weight: 3
 ---
 
