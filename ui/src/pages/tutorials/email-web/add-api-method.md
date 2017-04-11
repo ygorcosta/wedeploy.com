@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I included the API Client"
-description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "email-web"
-time: 45
 title: "Add API Method"
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
+buttonTitle: "I added the API method"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
+parentId: "email-web"
+layout: "tutorial"
+time: 90
 weight: 6
 ---
 
@@ -15,7 +15,7 @@ Now we want to add a script that will send an email. To do this, go to `tutorial
 
 ```javascript
 WeDeploy
-	.url(`email.<your-project-id>.wedeploy.io`)
+	.url('email.<your-project-id>.wedeploy.io/emails')
 	.auth('0000000-0000-000-0000-0000000')
 	.form('from', form.from.value)
 	.form('to', form.to.value)

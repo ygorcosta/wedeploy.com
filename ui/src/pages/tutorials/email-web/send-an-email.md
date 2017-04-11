@@ -1,17 +1,17 @@
 ---
-buttonTitle: "I sent an email"
-description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "email-web"
-time: 15
 title: "Send an email"
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
+buttonTitle: "I sent an email"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
+parentId: "email-web"
+layout: "tutorial"
+time: 20
 weight: 8
 ---
 
 #### Send an email
 
-Great work, your app is now live! 🚀 Now let's send an email.
+Great work, your app is now live! Now let's send an email.
 
 1. Go to `hosting.<your-project-id>.wedeploy.io` in your browser.
 2. Fill in the form (make sure you put your email in the "to" field).

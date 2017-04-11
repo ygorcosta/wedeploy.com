@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I deployed the app"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
-layout: "tutorial"
-parentId: "hosting"
-time: 40
 title: "Deploy your app"
+description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
+buttonTitle: "I deployed the app"
 tutorialTitle: "Getting started with WeDeploy Hosting"
+parentId: "hosting"
+layout: "tutorial"
+time: 90
 weight: 5
 ---
 
@@ -35,6 +35,10 @@ If it is your first time pushing to WeDeploy's git, you will need to enter the e
 Once you push, WeDeploy will immediately start deploying your project.
 
 Give it a few moments and then go to `hosting.<your-project-id>.wedeploy.io` to see what you deployed! Pretty cool, right?
+
+<figure>
+	<img src="/images/tutorials/it-works.png" alt="It works!">
+</figure>
 
 <aside>
 

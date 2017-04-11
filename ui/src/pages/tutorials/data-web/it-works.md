@@ -1,22 +1,21 @@
 ---
-buttonTitle: "I saved a to-do task"
-description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "data-web"
-time: 30
 title: "It works"
+description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
+buttonTitle: "I saved a to-do task"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
+parentId: "data-web"
+layout: "tutorial"
+time: 10
 weight: 8
 ---
 
 #### It works
 
-Great work, your app is now live! 🚀 Now let's start playing with some data.
+Great work, your app is now live! Now let's start playing with some data.
 
 1. Go to `hosting.<your-project-id>.wedeploy.io` in your browser.
 2. Type an item into the input and click _Add Item_.
 3. Click _Go to item listing_ and see how your data is already populated.
-4. To see the real-time data in action, open up both pages side-by-side and then add an item.
 
 Awesome! You just deployed an app and saved data within a few minutes! We can't wait to see what else you create with WeDeploy! 
 

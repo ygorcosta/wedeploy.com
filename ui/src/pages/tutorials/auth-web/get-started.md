@@ -1,9 +1,9 @@
 ---
 title: "Get Started"
-description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
+description: "In this section, you'll learn how to authenticate users on the web using the WeDeploy API Client."
 buttonTitle: "I'm ready to start!"
-tutorialTitle: "Getting started with WeDeploy Data on the web"
-parentId: "data-web"
+tutorialTitle: "Getting started with WeDeploy Auth on the web"
+parentId: "auth-web"
 layout: "tutorial"
 time: 20
 weight: 1
@@ -11,7 +11,7 @@ weight: 1
 
 #### Get Started
 
-Saving and fetching data with WeDeploy is super easy. This tutorial will walk you through how to use data in your app using the API Client and how to deploy your project with git.
+Authenticating users with WeDeploy is super easy. This tutorial will walk you through how to create, sign in, and sign out users in your app using the API Client and how to deploy your project with git.
 
 ###### What you'll need
 
@@ -28,6 +28,6 @@ Saving and fetching data with WeDeploy is super easy. This tutorial will walk yo
 	<li>Include the API Client</li>
 	<li>Add the API methods</li>
 	<li>Deploy a project</li>
-	<li>Save and fetch data</li>
+	<li>Authenticate a user</li>
 </ul>
 

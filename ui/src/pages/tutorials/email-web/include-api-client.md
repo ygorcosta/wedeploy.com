@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I included the API Client"
-description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
-layout: "tutorial"
-parentId: "email-web"
-time: 30
 title: "Include API Client"
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
+buttonTitle: "I included the API Client"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
+parentId: "email-web"
+layout: "tutorial"
+time: 30
 weight: 5
 ---
 
@@ -18,16 +18,6 @@ To do this, go to `index.html` in that `hosting` directory and include this scri
 ```xml
 <script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 ```
-
-<aside>
-
-###### <span class="icon-16-star"></span> Pro Tip
-
-If you go to `main.js` in that same `hosting` directory, you can see some of the Email API logic inside. One call you will use a lot is `post()`, which send a request to the API server to send an email with the information you have chosen. 
-
-Want to learn more about <a href="http://wedeploy.com/docs/email/sending-email.html" target="_blank">Email Parameters</a>?
-
-</aside>
 
 
 

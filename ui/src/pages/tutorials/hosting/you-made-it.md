@@ -1,9 +1,9 @@
 ---
-description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
-layout: "tutorial"
-parentId: "hosting"
 title: "You made it!"
+description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
 tutorialTitle: "Getting started with WeDeploy Hosting"
+parentId: "hosting"
+layout: "tutorial"
 weight: 7
 ---
 

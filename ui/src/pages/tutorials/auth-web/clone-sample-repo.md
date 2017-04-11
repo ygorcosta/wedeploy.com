@@ -1,9 +1,9 @@
 ---
 title: "Clone sample repo"
-description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
+description: "In this section, you'll learn how to authenticate users on the web using the WeDeploy API Client."
 buttonTitle: "I cloned the repo"
-tutorialTitle: "Getting started with WeDeploy Data on the web"
-parentId: "data-web"
+tutorialTitle: "Getting started with WeDeploy Auth on the web"
+parentId: "auth-web"
 layout: "tutorial"
 time: 30
 weight: 3
@@ -16,7 +16,7 @@ Clone the sample repo that contains the necessary files to get you started.
 Run this command in your terminal: 
 
 ```
-git clone https://github.com/wedeploy/tutorial-data-web.git
+git clone https://github.com/wedeploy/tutorial-auth-web.git
 ```
 
 <aside>
@@ -29,6 +29,8 @@ Every WeDeploy project follows a similar file structure by using JSON files to m
 your-project
 ├── data
 │   ├── api.json
+│   └── container.json
+├── auth
 │   └── container.json
 ├── hosting
 │   ├── container.json

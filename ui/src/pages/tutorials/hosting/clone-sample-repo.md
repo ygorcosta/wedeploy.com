@@ -1,11 +1,11 @@
 ---
-buttonTitle: "I cloned the repo"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
-layout: "tutorial"
-parentId: "hosting"
-time: 10
 title: "Clone sample repo"
+description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
+buttonTitle: "I cloned the repo"
 tutorialTitle: "Getting started with WeDeploy Hosting"
+parentId: "hosting"
+layout: "tutorial"
+time: 20
 weight: 3
 ---
 
@@ -35,6 +35,6 @@ your-project
 └── project.json
 ```
 
-If you are interested in growing your project once you are done, learn more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>.
+Want to know more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>?
 
 </aside>
