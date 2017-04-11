@@ -66,7 +66,7 @@ WeDeploy
 The full path returns the raw content in the response body:
 
 Star Wars: Episode V - The Empire Strikes Back
-Requesting the entire movies collection using curl -X "GET" "http://<serviceID>.<projectID>.wedeploy.io/movies" results in the first 10 documents stored:
+Requesting the entire movies collection using `curl -X "GET" "http://<serviceID>.<projectID>.wedeploy.io/movies"` results in the first 10 documents stored:
 
 ```javascript
 [
