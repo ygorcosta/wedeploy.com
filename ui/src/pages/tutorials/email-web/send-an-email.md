@@ -11,7 +11,7 @@ weight: 8
 
 #### Send an email
 
-Great work, your app is now live! 🚀 Now let's send an email.
+Great work, your app is now live! Now let's send an email.
 
 1. Go to `hosting.<your-project-id>.wedeploy.io` in your browser.
 2. Fill in the form (make sure you put your email in the "to" field).

@@ -11,7 +11,7 @@ weight: 8
 
 #### It works
 
-Great work, your app is now live! 🚀 Now let's start playing with some data.
+Great work, your app is now live! Now let's start playing with some data.
 
 1. Go to `hosting.<your-project-id>.wedeploy.io` in your browser.
 2. Type an item into the input and click _Add Item_.

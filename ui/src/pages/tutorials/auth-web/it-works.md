@@ -11,7 +11,7 @@ weight: 8
 
 #### It works
 
-Great work, your app is now live! 🚀 Now let's start playing with user sing-in.
+Great work, your app is now live! Now let's start playing with user sing-in.
 
 1. Go to `hosting.<your-project-id>.wedeploy.io` in your browser.
 2. Click "Create an account" and fill in the form.
