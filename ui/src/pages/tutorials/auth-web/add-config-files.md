@@ -15,9 +15,9 @@ Every service folder must have a `container.json` file that configures the servi
 
 ###### Auth 
 
-1. Open the `tutorial-email-web/auth` folder in a code editor.
-2. Create a new file and name it `container.json`.
-3. Inside of that file, paste this code.
+1. Open the `tutorial-email-web` folder in a code editor.
+2. Create a new file named `container.json` inside the `hosting` folder.
+3. In that file, paste this code:
 
 ```application/json
 {
@@ -32,9 +32,8 @@ Every service folder must have a `container.json` file that configures the servi
 
 ###### Hosting 
 
-1. Change to the `hosting` folder inside your project.
-2. Create a new file and name it `container.json`.
-3. Inside of that file, paste this code.
+1. Change to the `hosting` folder and create another `container.json` file
+3. In that file, paste this code:
 
 ```application/json
 {

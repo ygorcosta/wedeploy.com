@@ -15,7 +15,7 @@ weight: 6
 
 First, let's add add a script that will allow users to create an account. 
 
-To do this, go to `tutorial-auth-web/hosting/singup.js` inside of the same folder and paste this code:
+To do this, go to `tutorial-auth-web/hosting/signup.js` inside of the same folder and paste this code:
 
 ```javascript
 var auth = WeDeploy.auth('auth.<your-project-id>.wedeploy.io');
@@ -69,7 +69,7 @@ auth.onSignIn(function(user) {
 **Note:** make sure to replace `<your-project-id>` with the id of your project.
 
 
-###### Sing-out
+###### Sign-out
 
 Lastly, let's add a script that will allow users to sign-out of their account. 
 
