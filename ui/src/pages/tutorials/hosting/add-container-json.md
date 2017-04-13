@@ -20,7 +20,7 @@ Every service folder must have a `container.json` file that configures the servi
 ```application/json
 {
 	"id": "hosting",
-	"type": "wedeploy/hosting:latest"
+	"type": "wedeploy/hosting"
 }
 ```
 

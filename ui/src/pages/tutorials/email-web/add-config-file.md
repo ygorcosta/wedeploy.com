@@ -20,7 +20,7 @@ Every service folder must have a `container.json` file that configures the servi
 ```application/json
 {
 	"id": "email",
-	"type": "wedeploy/email:latest"
+	"type": "wedeploy/email"
 }
 ```
 
