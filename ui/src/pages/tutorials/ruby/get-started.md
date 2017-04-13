@@ -26,6 +26,6 @@ Using Ruby with WeDeploy is super easy. This tutorial will walk you through how 
 	<li>Clone the sample repo</li>
 	<li>Add configuration files</li>
 	<li>Push to deployment</li>
-	<li>Update the&nbsp;<code>index.html</code></li>
+	<li>Update the&nbsp;<code>home.erb</code></li>
 </ul>
 
