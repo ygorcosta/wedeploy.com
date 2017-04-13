@@ -32,6 +32,6 @@ Every service folder must have a `container.json` file that configures the servi
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-As you can see above, we added a `hook` in our `container.json` file. Whatever tasks you put as a hook will be completed during the build cycle prior to each deployment. 
+As you can see above, we added a `hook` in our `container.json` file. Whatever task you put as a `hook` will be completed during the build cycle prior to each deployment. 
 
 </aside>
