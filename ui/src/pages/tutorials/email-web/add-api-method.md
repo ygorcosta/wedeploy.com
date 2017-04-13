@@ -20,7 +20,7 @@ WeDeploy
 	.form('from', form.from.value)
 	.form('to', form.to.value)
 	.form('subject', form.subject.value)
-	.form('message', form.subject.value)
+	.form('message', form.message.value)
 	.post()
 	.then(function(response) {
 		if (response.succeeded()) {
