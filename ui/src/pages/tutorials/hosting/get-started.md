@@ -25,7 +25,7 @@ Hosting static files with WeDeploy is super easy. This tutorial will walk you th
 <ul class="checklist">
 	<li>Clone the sample repo</li>
 	<li>Add configuration files</li>
-	<li>Update the&nbsp;<code>index.html</code></li>
 	<li>Push to deployment</li>
+	<li>Update the&nbsp;<code>index.html</code></li>
 </ul>
 
