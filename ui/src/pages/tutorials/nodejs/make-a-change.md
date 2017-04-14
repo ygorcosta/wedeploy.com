@@ -11,11 +11,11 @@ weight: 6
 
 #### Make a change
 
-Our project is now live, but what's next? Lets try deploying a new change to our app!
+Our project is now live, but what's next? Let's try deploying a new change to our app!
 
 ###### Develop
 
-Go back to your project in your text editor and open `public/index.html`. Change the text in the `<h1>` element (try putting "You Rock!").
+Go back to your project and open up the `public/index.html` in your code editor. Change the text in the `<h1>` element (try putting "You Rock!").
 
 ###### Push
 
@@ -27,12 +27,12 @@ Now make another commit and push your changes to the WeDeploy remote!
 
 ###### See it live
 
-Go check your project's URL again and you should see the text change to "You Rock!" because let's be honest, you do!
+Give it a few moments and then go check your project's URL again. Tou should see the text change to "You Rock!" because let's be honest, you do!
 
 <aside>
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-Want to make your Node.js Service the primary service so that it is served to your project's root url (`<your-project-id>.wedeploy.io`)? Perfect, that is extremely easy to do by going to the settings tab of your project's dashboard and selecting a _Home Service_.
+Want to make your Node.js Service the primary service so that it is served to your project's root url (`<your-project-id>.wedeploy.io`)? Perfect, that is extremely easy to do. Go to the settings tab of your project's dashboard and select a _Home Service_.
 
 </aside>

@@ -23,6 +23,6 @@ Awesome! You just deployed an app and started authenticating users within a few 
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-Do you have a primary UI service that you would like to be served by your project's main URL (`<your-project-id>.wedeploy.io`)? Perfect, that is extremely easy to do by going to the settings tab of your project's dashboard and selecting a _Home Service_.
+Do you have a primary UI (in this case, your Hosting Service) that you would like to be served by your project's main URL (`<your-project-id>.wedeploy.io`)? Perfect, that is extremely easy to do. Go to the settings tab of your project's dashboard and select a _Home Service_.
 
 </aside>

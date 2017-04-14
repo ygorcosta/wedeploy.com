@@ -11,7 +11,7 @@ weight: 3
 
 #### Clone sample repo
 
-Clone the sample repo that contains the necessary files to get you started.
+First, you'll clone a sample repo that contains the necessary files and directories for deploying a site with Data.
 
 Run this command in your terminal: 
 

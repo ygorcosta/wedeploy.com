@@ -11,7 +11,7 @@ weight: 4
 
 #### Add container.json
 
-Every service folder must have a `container.json` file that configures the service. Lets add one to the repo we just cloned. 
+Every service folder must have a `container.json` file that configures the service. Let's add one to the repo we just cloned. 
 
 1. Open the `tutorial-ruby` folder in a code editor
 2. Create a new file named `container.json` inside the `ruby` folder.

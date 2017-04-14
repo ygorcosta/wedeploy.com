@@ -11,19 +11,20 @@ weight: 1
 
 #### Get Started
 
-Deploying a Liferay instance with WeDeploy is super easy. This tutorial will walk you through how to set up your project's file structure and how to deploy with git.
+Deploying a Liferay instance with WeDeploy is super easy. This tutorial will walk you through how to set up your project's file structure and how to deploy using Git.
 
 ###### What you'll need
 
 <ul class="checklist">
-	<li><a href="https://git-scm.com/downloads" target="_blank">Git</a></li>
+	<li>A <a href="https://git-scm.com/downloads" target="_blank">git</a> client</li>
 	<li><a href="http://dashboard.wedeploy.com/signup" target="_blank">A WeDeploy account</a></li>
+	<li>A code editor</li>
 </ul>
 
 ###### What you'll do
 
 <ul class="checklist">
-	<li>Clone the sample repo</li>
+	<li>Clone a sample Git repository</li>
 	<li>Add configuration files</li>
 	<li>Push to deployment</li>
 </ul>

@@ -11,23 +11,24 @@ weight: 1
 
 #### Get Started
 
-Saving and fetching data with WeDeploy is super easy. This tutorial will walk you through how to use data in your app using the API Client and how to deploy your project with git.
+Saving and fetching data with WeDeploy is super easy. This tutorial will walk you through how to use data in your app using the API Client and how to deploy your project using Git.
 
 ###### What you'll need
 
 <ul class="checklist">
-	<li><a href="https://git-scm.com/downloads" target="_blank">Git</a></li>
+	<li>A <a href="https://git-scm.com/downloads" target="_blank">git</a> client</li>
 	<li><a href="http://dashboard.wedeploy.com/signup" target="_blank">A WeDeploy account</a></li>
+	<li>A code editor</li>
 </ul>
 
 ###### What you'll do
 
 <ul class="checklist">
-	<li>Clone the sample repo</li>
-	<li>Add config files</li>
+	<li>Clone a sample Git repository</li>
+	<li>Add configuration files</li>
 	<li>Include the API Client</li>
 	<li>Add the API methods</li>
-	<li>Deploy a project</li>
-	<li>Save and fetch data</li>
+	<li>Deploy the project</li>
+	<li>Start saving and fetching data</li>
 </ul>
 

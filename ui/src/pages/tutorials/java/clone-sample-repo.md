@@ -11,7 +11,7 @@ weight: 3
 
 #### Clone sample repo
 
-First, you must clone the sample repo that contains the necessary files to get started. 
+First, you'll clone a sample repo that contains the necessary files and directories for deploying a site with Java.
 
 To do this, run the command below in your terminal: 
 

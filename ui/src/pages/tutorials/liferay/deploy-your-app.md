@@ -13,7 +13,7 @@ weight: 5
 
 Now the moment you have be waiting for - deployment!
 
-###### Add remote
+###### Add a Git remote
 
 Open up your terminal and go the `tutorial-liferay` folder. Then, add a git remote by running:
 
@@ -23,21 +23,22 @@ git remote add wedeploy http://git.wedeploy.com/<your-project-id>.git
 
 ###### Push first commit
 
-Our remote is now set and we are ready to make our first commit! 
+The remote is now set up and you are ready to make your first commit! 
+
 1. `git add .`
 2. `git commit -m "Awesome commit"`
 3. `git push wedeploy master`
 
 If it is your first time pushing to WeDeploy's git, you will need to enter the email and password for your WeDeploy account.
 
-
 ###### See it live
-Once you push, WeDeploy will immediately start deploying your project.
 
-Give it a few minutes after it deploys and then go to `liferay.<your-project-id>.wedeploy.io` to see your Liferay instance live! Pretty cool, right?
+Once you have pushed, WeDeploy will immediately start deploying your project.
+
+Give it a few moments and then go to `liferay.<your-project-id>.wedeploy.io` to see what you deployed! Pretty cool, right?
 
 <figure>
-	<img src="/images/tutorials/liferay-live.png" alt="It works!">
+	<img src="/images/tutorials/it-works.png" alt="It works!">
 </figure>
 
 <aside>
