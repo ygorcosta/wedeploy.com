@@ -124,7 +124,8 @@ You generally would use `parameters` to force validation in order to make sure t
 		"method": "POST",
 		"parameters": {
 			"title": {
-				"type": "string"
+				"type": "string",
+				"required": true
 			}
 		},
 		"data": true
