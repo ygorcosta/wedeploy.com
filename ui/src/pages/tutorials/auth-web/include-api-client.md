@@ -18,6 +18,7 @@ To do this, go to `tutorial-data-web/hosting/` and include this script link at t
 <ul class="checklist">
 	<li><code>index.html</code></li>
 	<li><code>signup.html</code></li>
+	<li><code>welcome.html</code></li>
 </ul>
 
 ```xml
