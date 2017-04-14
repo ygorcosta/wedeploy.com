@@ -16,7 +16,7 @@ Sending emails with WeDeploy is super easy. This tutorial will walk you through 
 ###### What you'll need
 
 <ul class="checklist">
-	<li>A <a href="https://git-scm.com/downloads" target="_blank">git</a> client</li>
+	<li>A <a href="https://git-scm.com/downloads" target="_blank">Git</a> client</li>
 	<li><a href="http://dashboard.wedeploy.com/signup" target="_blank">A WeDeploy account</a></li>
 	<li>A code editor</li>
 </ul>
