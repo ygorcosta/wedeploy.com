@@ -1,5 +1,5 @@
 ---
-title: "You made it!"
+title: "You Made It!"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
 tutorialTitle: "Getting started with WeDeploy Hosting"
 parentId: "hosting"

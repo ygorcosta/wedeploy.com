@@ -1,5 +1,5 @@
 ---
-title: "Add config files"
+title: "Add Config Files"
 description: "In this section, you'll learn how to authenticate users on the web using the WeDeploy API Client."
 buttonTitle: "I added the config files"
 tutorialTitle: "Getting started with WeDeploy Auth on the web"
@@ -9,7 +9,7 @@ time: 60
 weight: 4
 ---
 
-#### Add config files
+#### Add Config Files
 
 Every service folder must have a `container.json` file that configures the service. Let's add one to our Auth and Hosting Services in the repo we just cloned. 
 

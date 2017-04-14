@@ -1,5 +1,5 @@
 ---
-title: "Deploy the project"
+title: "Deploy the Project"
 description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 buttonTitle: "I deployed my project"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
@@ -9,7 +9,7 @@ time: 60
 weight: 7
 ---
 
-#### Deploy the project
+#### Deploy the Project
 
 Now the moment you have be waiting for - deployment!
 

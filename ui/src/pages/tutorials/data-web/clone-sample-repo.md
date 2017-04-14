@@ -1,5 +1,5 @@
 ---
-title: "Clone sample repo"
+title: "Clone Sample Repo"
 description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
 buttonTitle: "I cloned the repo"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
@@ -9,7 +9,7 @@ time: 30
 weight: 3
 ---
 
-#### Clone sample repo
+#### Clone Sample Repo
 
 First, you'll clone a sample repo that contains the necessary files and directories for deploying a site with Data.
 

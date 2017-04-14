@@ -1,5 +1,5 @@
 ---
-title: "You made it!"
+title: "You Made It!"
 description: "In this section, you'll learn how to authenticate users on the web using the WeDeploy API Client."
 layout: "tutorial"
 tutorialTitle: "Getting started with WeDeploy Auth on the web"

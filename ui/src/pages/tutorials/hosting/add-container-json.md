@@ -1,5 +1,5 @@
 ---
-title: "Add container.json"
+title: "Add Container.json"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
 buttonTitle: "I added the container.json"
 tutorialTitle: "Getting started with WeDeploy Hosting"
@@ -9,7 +9,7 @@ time: 40
 weight: 4
 ---
 
-#### Add container.json
+#### Add Container.json
 
 Every service folder must have a `container.json` file that configures the container. Let's add one to the repo we just cloned. 
 

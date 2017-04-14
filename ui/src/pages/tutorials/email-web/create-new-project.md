@@ -1,5 +1,5 @@
 ---
-title: "Create new project"
+title: "Create New Project"
 description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 buttonTitle: "I created a project"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
@@ -9,7 +9,7 @@ time: 30
 weight: 2
 ---
 
-#### Create new project
+#### Create New Project
 
 To begin, we will create a new WeDeploy project.
 

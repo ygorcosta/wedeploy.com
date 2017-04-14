@@ -1,5 +1,5 @@
 ---
-title: "Deploy your app"
+title: "Deploy Your App"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
 buttonTitle: "I deployed the app"
 tutorialTitle: "Getting started with WeDeploy Hosting"
@@ -9,7 +9,7 @@ time: 90
 weight: 5
 ---
 
-#### Deploy your app
+#### Deploy Your App
 
 Now the moment you have be waiting for - deployment!
 

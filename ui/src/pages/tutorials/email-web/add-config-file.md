@@ -1,5 +1,5 @@
 ---
-title: "Add config file"
+title: "Add Config File"
 description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 buttonTitle: "I created the container.json"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
@@ -9,7 +9,7 @@ time: 45
 weight: 4
 ---
 
-#### Add config file
+#### Add Config File
 
 Every service folder must have a `container.json` file that configures the service. Let's add one to our Email Service in the repo we just cloned. 
 

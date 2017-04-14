@@ -1,5 +1,5 @@
 ---
-title: "Deploy the project"
+title: "Deploy the Project"
 description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
 buttonTitle: "I deployed the project"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
@@ -9,7 +9,7 @@ time: 50
 weight: 7
 ---
 
-#### Deploy the project
+#### Deploy the Project
 
 Now the moment you have be waiting for - deployment!
 

@@ -1,5 +1,5 @@
 ---
-title: "It works"
+title: "It Works"
 description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
 buttonTitle: "I saved a to-do task"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
@@ -9,7 +9,7 @@ time: 10
 weight: 8
 ---
 
-#### It works
+#### It Works
 
 Great work, your app is now live! Now let's start playing with some data.
 

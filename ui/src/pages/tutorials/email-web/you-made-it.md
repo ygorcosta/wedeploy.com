@@ -1,5 +1,5 @@
 ---
-title: "You made it!"
+title: "You Made It!"
 description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 parentId: "email-web"

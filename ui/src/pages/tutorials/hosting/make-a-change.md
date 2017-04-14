@@ -1,5 +1,5 @@
 ---
-title: "Make a change"
+title: "Make a Change"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
 buttonTitle: "I made a change"
 tutorialTitle: "Getting started with WeDeploy Hosting"
@@ -9,7 +9,7 @@ time: 90
 weight: 6
 ---
 
-#### Make a change
+#### Make a Change
 
 Our project is now live, but what's next? Let's try deploying a new change to our app!
 

@@ -1,5 +1,5 @@
 ---
-title: "Send an email"
+title: "Send an Email"
 description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
 buttonTitle: "I sent an email"
 tutorialTitle: "Getting started with WeDeploy Email on the web"
@@ -9,7 +9,7 @@ time: 20
 weight: 8
 ---
 
-#### Send an email
+#### Send an Email
 
 Great work, your app is now live! Now let's send an email.
 

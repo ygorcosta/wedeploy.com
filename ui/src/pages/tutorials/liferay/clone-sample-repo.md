@@ -1,5 +1,5 @@
 ---
-title: "Clone sample repo"
+title: "Clone Sample Repo"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Liferay."
 buttonTitle: "I cloned the repo"
 tutorialTitle: "Getting started with WeDeploy Liferay"
@@ -9,7 +9,7 @@ time: 20
 weight: 3
 ---
 
-#### Clone sample repo
+#### Clone Sample Repo
 
 First, you'll clone a sample repo that contains the necessary files and directories for deploying a site with Liferay.
 
