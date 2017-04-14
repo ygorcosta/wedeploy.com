@@ -1,5 +1,5 @@
 ---
-title: "Clone sample repo"
+title: "Clone Sample Repo"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
 buttonTitle: "I cloned the repo"
 tutorialTitle: "Getting started with WeDeploy Hosting"
@@ -9,9 +9,9 @@ time: 20
 weight: 3
 ---
 
-#### Clone sample repo
+#### Clone Sample Repo
 
-First, you must clone the sample repo that contains the necessary files to get started. 
+First, you'll clone a sample repo that contains the necessary files and directories for hosting a static site. 
 
 To do this, run the command below in your terminal: 
 

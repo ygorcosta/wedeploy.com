@@ -9,7 +9,7 @@ time: 90
 weight: 6
 ---
 
-#### Add API method
+#### Add API Method
 
 Now we want to add a script that will send an email. To do this, go to `tutorial-email-web/hosting/main.js` and paste this code:
 

@@ -1,5 +1,5 @@
 ---
-title: "Add config files"
+title: "Add Config Files"
 description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
 buttonTitle: "I added the config files"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
@@ -9,11 +9,11 @@ time: 60
 weight: 4
 ---
 
-#### Add config files
+#### Add Config Files
 
 ###### container.json
 
-Every service folder must have a `container.json` file that configures the service. Lets add one to our Data Service in the repo we just cloned. 
+Every service folder must have a `container.json` file that configures the service. Let's add one to our Data Service in the repo we just cloned. 
 
 1. Open the `tutorial-data-web` folder in a code editor.
 2. Create a new file inside of the `data` folder and name it `container.json`.

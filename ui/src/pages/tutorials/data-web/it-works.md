@@ -1,5 +1,5 @@
 ---
-title: "It works"
+title: "It Works"
 description: "In this section, you'll learn how to save and get data on the web using the WeDeploy API Client."
 buttonTitle: "I saved a to-do task"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
@@ -9,7 +9,7 @@ time: 10
 weight: 8
 ---
 
-#### It works
+#### It Works
 
 Great work, your app is now live! Now let's start playing with some data.
 
@@ -24,6 +24,6 @@ Awesome! You just deployed an app and saved data within a few minutes! We can't 
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-Do you have a primary UI service that you would like to be served by your project's main URL (`<your-project-id>.wedeploy.io`)? Perfect, that is extremely easy to do by going to the settings tab of your project's dashboard and selecting a _Home Service_.
+Do you have a primary UI (in this case, your Hosting Service) that you would like to be served by your project's main URL (`<your-project-id>.wedeploy.io`)? Perfect, that is extremely easy to do. Go to the settings tab of your project's dashboard and select a _Home Service_.
 
 </aside>
