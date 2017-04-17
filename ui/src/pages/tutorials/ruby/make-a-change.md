@@ -27,7 +27,7 @@ Now make another commit and push your changes to the WeDeploy remote!
 
 ###### See it live
 
-Give it a few moments and then go check your project's URL again. Tou should see the text change to "You Rock!" because let's be honest, you do!
+Give it a few moments and then go check your project's URL again. You should see the text change to "You Rock!" because let's be honest, you do!
 
 <aside>
 
