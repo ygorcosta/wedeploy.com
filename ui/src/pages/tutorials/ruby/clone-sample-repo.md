@@ -11,13 +11,15 @@ weight: 3
 
 #### Clone Sample Repo
 
-First, you'll clone a sample repo that contains the necessary files and directories for deploying a site with Ruby.
+First, you'll clone a sample repo that contains the necessary files and directories for deploying a site.
 
 To do this, run the command below in your terminal: 
 
 ```xml
 git clone https://github.com/wedeploy/tutorial-ruby.git
 ```
+
+In this example, we'll use [Sinatra](http://www.sinatrarb.com/) as our web framework. Don't worry if you've never used this before, there's no need to learn or download anything.
 
 <aside>
 
