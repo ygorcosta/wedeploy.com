@@ -19,14 +19,14 @@ Since then, we have been exploring new ways to take the WeDeploy learning experi
 
 #### Which topics are covered?
 
-- **<a target="_blank" href="/tutorials/hosting/">Hosting</a>**: Deploy static files like HTML, CSS, and JS.
-- **<a target="_blank" href="/tutorials/data-web/">Data</a>**: Deploy a to-do list app using our Data Service and JS.
-- **<a target="_blank" href="/tutorials/auth-web/">Auth</a>**: Deploy an authentication app using our Auth Service and JS.
-- **<a target="_blank" href="/tutorials/email-web/">Email</a>**: Deploy an email-sending app using our Email Service and JS.
-- **<a target="_blank" href="/tutorials/java/">Java</a>**: Deploy an app using Java and Spring Boot.
-- **<a target="_blank" href="/tutorials/ruby/">Ruby</a>**: Deploy an app using Ruby and Sinatra.
-- **<a target="_blank" href="/tutorials/nodejs/">Node.js</a>**: Deploy an app using Node.js and Express.
-- **<a target="_blank" href="/tutorials/liferay/">Liferay</a>**: Deploy a Liferay Portal instance.
+- **<a target="_blank" href="/tutorials/hosting/get-started.html">Hosting</a>**: Deploy static files like HTML, CSS, and JS.
+- **<a target="_blank" href="/tutorials/data-web/get-started.html">Data</a>**: Deploy a to-do list app using our Data Service and JS.
+- **<a target="_blank" href="/tutorials/auth-web/get-started.html">Auth</a>**: Deploy an authentication app using our Auth Service and JS.
+- **<a target="_blank" href="/tutorials/email-web/get-started.html">Email</a>**: Deploy an email-sending app using our Email Service and JS.
+- **<a target="_blank" href="/tutorials/java/get-started.html">Java</a>**: Deploy an app using Java and Spring Boot.
+- **<a target="_blank" href="/tutorials/ruby/get-started.html">Ruby</a>**: Deploy an app using Ruby and Sinatra.
+- **<a target="_blank" href="/tutorials/nodejs/get-started.html">Node.js</a>**: Deploy an app using Node.js and Express.
+- **<a target="_blank" href="/tutorials/liferay/get-started.html">Liferay</a>**: Deploy a Liferay Portal instance.
 
 #### Why tutorials?
 
