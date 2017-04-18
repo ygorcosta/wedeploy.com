@@ -15,7 +15,7 @@ Our project is now live, but what's next? Let's try deploying a new change to ou
 
 ###### Develop
 
-Go back to your project and open up the `src/main/resources/templates/layout.html` in your code editor. Change the text in the `<h1>` element (try putting "You Rock!").
+Go back to your project and open up the `/src/main/resources/templates/layout.html` in your code editor. Change the text in the `<h1>` element (try putting "You Rock!").
 
 ###### Push
 
