@@ -11,7 +11,7 @@ weight: 7
 
 #### Deploy the Project
 
-Now the moment you have be waiting for - deployment!
+Now the moment you have been waiting for - deployment!
 
 ###### Add a Git remote
 
