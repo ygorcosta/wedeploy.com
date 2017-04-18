@@ -22,7 +22,7 @@ Every service folder must have a `container.json` file that configures the servi
   "id": "java",
   "type": "wedeploy/java",
   "hooks": {
-    "build": "mvn package"
+    "build": "gradle -Dorg.gradle.native=false clean build -x test"
   }
 }
 ```
@@ -31,14 +31,14 @@ Every service folder must have a `container.json` file that configures the servi
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-As you can see above, we added a `hook` in our `container.json` file. Whatever task you put as a `hook` will be completed during the build cycle prior to each deployment. This mean deploying an app with Gradle or Ant is as simple as adding a new build hook like this:
+As you can see above, we added a `hook` in our `container.json` file. Whatever task you put as a `hook` will be completed during the build cycle prior to each deployment. This mean deploying an app with Maven or Ant is as simple as adding a new build hook like this:
 
 ```application/json
 {
   "id": "java",
   "type": "wedeploy/java",
   "hooks": {
-    "build": "gradle -Dorg.gradle.native=false clean build -x test"
+    "build": "mvn package"
   }
 }
 ```
