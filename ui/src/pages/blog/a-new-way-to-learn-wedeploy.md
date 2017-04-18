@@ -19,14 +19,14 @@ Since then, we have been exploring new ways to take the WeDeploy learning experi
 
 #### Which topics are covered?
 
-- **[Hosting](http://wedeploy.com/tutorials/hosting/)**: Deploy static files like HTML, CSS, and JS.
-- **[Data](http://wedeploy.com/tutorials/data-web/)**: Deploy a to-do list app using our Data Service and JS.
-- **[Auth](http://wedeploy.com/tutorials/auth-web/)**: Deploy an authentication app using our Auth Service and JS.
-- **[Email](http://wedeploy.com/tutorials/email-web/)**: Deploy an email-sending app using our Email Service and JS.
-- **[Java](http://wedeploy.com/tutorials/java/)**: Deploy an app using Java and Spring Boot.
-- **[Ruby](http://wedeploy.com/tutorials/ruby/)**: Deploy an app using Ruby and Sinatra.
-- **[Node.js](http://wedeploy.com/tutorials/nodejs/)**: Deploy an app using Node.js and Express.
-- **[Liferay](http://wedeploy.com/tutorials/liferay/)**: Deploy a Liferay Portal instance.
+- **<a target="_blank" href="/tutorials/hosting/">Hosting</a>**: Deploy static files like HTML, CSS, and JS.
+- **<a target="_blank" href="/tutorials/data-web/">Data</a>**: Deploy a to-do list app using our Data Service and JS.
+- **<a target="_blank" href="/tutorials/auth-web/">Auth</a>**: Deploy an authentication app using our Auth Service and JS.
+- **<a target="_blank" href="/tutorials/email-web/">Email</a>**: Deploy an email-sending app using our Email Service and JS.
+- **<a target="_blank" href="/tutorials/java/">Java</a>**: Deploy an app using Java and Spring Boot.
+- **<a target="_blank" href="/tutorials/ruby/">Ruby</a>**: Deploy an app using Ruby and Sinatra.
+- **<a target="_blank" href="/tutorials/nodejs/">Node.js</a>**: Deploy an app using Node.js and Express.
+- **<a target="_blank" href="/tutorials/liferay/">Liferay</a>**: Deploy a Liferay Portal instance.
 
 #### Why tutorials?
 
