@@ -45,7 +45,7 @@ We felt like the first group was being well taken care of by our [extensive docu
 
 We had three goals for our tutorials:
 1. **Simple UX**: This started with the design and bled all the way through to the words and phrasings we used. It had to be something that reflected one of the most important parts of the WeDeploy product itself: ease of use.
-2. **Consistant Flow**: Most users come with a goal in mind of what they want to implement and what stack they want to implement it with. But what about after they build that first app? We wanted to create a consistent experience and content flow across all the tutorials so that users could easily learn about other services that were not already familiar to them.
+2. **Consistent Flow**: Most users come with a goal in mind of what they want to implement and what stack they want to implement it with. But what about after they build that first app? We wanted to create a consistent experience and content flow across all the tutorials so that users could easily learn about other services that were not already familiar to them.
 3. **Educational Content**: The end goal of each tutorial is deploying and interacting with a fully functional app, but we didn't want users to just get to the end, we wanted them to learn something. We spent hours, even days, coming up with the balance between the difficulty and educational takeaway of the tutorial, and we are very excited with the results.
 
 #### What's in it for you?
