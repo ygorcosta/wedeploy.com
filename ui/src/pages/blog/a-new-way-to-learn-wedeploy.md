@@ -23,9 +23,9 @@ Since then, we have been exploring new ways to take the WeDeploy learning experi
 - **[Data](/tutorials/data-web/)**: Deploy a to-do list app using our Data Service and JS.
 - **[Auth](/tutorials/auth-web/)**: Deploy an authentication app using our Auth Service and JS.
 - **[Email](/tutorials/email-web/)**: Deploy an email-sending app using our Email Service and JS.
-- **[Java](/tutorials/java/)**: Deploy an app using Java.
-- **[Ruby](/tutorials/ruby/)**: Deploy an app using Ruby.
-- **[Node.js](/tutorials/nodejs/)**: Deploy an app using Node.js.
+- **[Java](/tutorials/java/)**: Deploy an app using Java and Spring Boot.
+- **[Ruby](/tutorials/ruby/)**: Deploy an app using Ruby and Sinatra.
+- **[Node.js](/tutorials/nodejs/)**: Deploy an app using Node.js and Express.
 - **[Liferay](/tutorials/liferay/)**: Deploy a Liferay Portal instance.
 
 #### Why tutorials?
