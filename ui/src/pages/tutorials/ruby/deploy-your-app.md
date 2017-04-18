@@ -11,7 +11,7 @@ weight: 5
 
 #### Deploy Your App
 
-Now the moment you have be waiting for - deployment!
+Now the moment you have been waiting for - deployment!
 
 ###### Add a Git remote
 
