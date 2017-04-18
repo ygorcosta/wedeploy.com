@@ -19,14 +19,14 @@ Since then, we have been exploring new ways to take the WeDeploy learning experi
 
 #### Which topics are covered?
 
-- **[Hosting](/tutorials/hosting/)**: Deploy static files like HTML, CSS, and JS.
-- **[Data](/tutorials/data-web/)**: Deploy a to-do list app using our Data Service and JS.
-- **[Auth](/tutorials/auth-web/)**: Deploy an authentication app using our Auth Service and JS.
-- **[Email](/tutorials/email-web/)**: Deploy an email-sending app using our Email Service and JS.
-- **[Java](/tutorials/java/)**: Deploy an app using Java and Spring Boot.
-- **[Ruby](/tutorials/ruby/)**: Deploy an app using Ruby and Sinatra.
-- **[Node.js](/tutorials/nodejs/)**: Deploy an app using Node.js and Express.
-- **[Liferay](/tutorials/liferay/)**: Deploy a Liferay Portal instance.
+- **[Hosting](http://wedeploy.com/tutorials/hosting/)**: Deploy static files like HTML, CSS, and JS.
+- **[Data](http://wedeploy.com/tutorials/data-web/)**: Deploy a to-do list app using our Data Service and JS.
+- **[Auth](http://wedeploy.com/tutorials/auth-web/)**: Deploy an authentication app using our Auth Service and JS.
+- **[Email](http://wedeploy.com/tutorials/email-web/)**: Deploy an email-sending app using our Email Service and JS.
+- **[Java](http://wedeploy.com/tutorials/java/)**: Deploy an app using Java and Spring Boot.
+- **[Ruby](http://wedeploy.com/tutorials/ruby/)**: Deploy an app using Ruby and Sinatra.
+- **[Node.js](http://wedeploy.com/tutorials/nodejs/)**: Deploy an app using Node.js and Express.
+- **[Liferay](http://wedeploy.com/tutorials/liferay/)**: Deploy a Liferay Portal instance.
 
 #### Why tutorials?
 
