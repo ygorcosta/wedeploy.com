@@ -15,7 +15,7 @@ Now the moment you have be waiting for - deployment!
 
 ###### Add a Git remote
 
-Open up your terminal and go the `tutorial-nodejs` folder. Then, add a git remote by running:
+Open up your terminal and go to the `tutorial-nodejs` folder. Then, add a git remote by running:
 
 ```xml
 git remote add wedeploy http://git.wedeploy.com/<your-project-id>.git

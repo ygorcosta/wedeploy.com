@@ -27,12 +27,12 @@ Now make another commit and push your changes to the WeDeploy remote!
 
 ###### See it live
 
-Give it a few moments and then go check your project's URL again. Tou should see the text change to "You Rock!" because let's be honest, you do!
+Give it a few moments and then go check your project's URL again. You should see the text change to "You Rock!" because let's be honest, you do!
 
 <aside>
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-Want to make your Node.js Service the primary service so that it is served to your project's root url (`<your-project-id>.wedeploy.io`)? Perfect, that is extremely easy to do. Go to the settings tab of your project's dashboard and select a _Home Service_.
+Want to make your Node.js Service the primary service so that it is served to your project's root url (`<your-project-id>.wedeploy.io`)? Perfect, that is extremely easy to do. Go to the settings tab of your project's dashboard and select _nodejs_ as your _Home Service_.
 
 </aside>
