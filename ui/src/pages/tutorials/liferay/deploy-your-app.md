@@ -38,7 +38,7 @@ Once you have pushed, WeDeploy will immediately start deploying your project.
 Give it a few moments and then go to `liferay.<your-project-id>.wedeploy.io` to see what you deployed! Pretty cool, right?
 
 <figure>
-	<img src="/images/tutorials/it-works.png" alt="It works!">
+	<img src="/images/tutorials/liferay-live.png" alt="Liferay Live!">
 </figure>
 
 <aside>
