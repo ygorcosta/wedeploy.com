@@ -49,7 +49,7 @@
 		<div class="container">
 			{let $blogObject: $site.index.children['blog'] /}
 			{foreach $childId in $blogObject.childIds}
-				{if $page.url != $blogObject.children[$childId].url}
+				{if $page.url != $blogObject.children[$childId].url and index($childId) < 4}
 					<div class="post-item container-blog">
 						<a class="post-item__link" href="{$blogObject.children[$childId].url}">
 							<small>By {$blogObject.children[$childId].author} <span>| {$blogObject.children[$childId].date}</span></small>
