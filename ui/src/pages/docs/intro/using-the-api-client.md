@@ -63,14 +63,6 @@ Add this to your Podfile:
 pod 'WeDeploy'
 ```
 
-#### Carthage
-
-Add this to your Cartfile:
-
-```swift
-github 'wedeploy/api-swift'
-```
-
 #### API nuances
 
 By default, all swift api requests returns a promise, for example:
