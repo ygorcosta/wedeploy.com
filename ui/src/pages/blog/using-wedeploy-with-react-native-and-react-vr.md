@@ -11,7 +11,7 @@ layout: "blog"
 
 {$page.description}
 
-As a fundamental player in today's development around the world, JavaScript is a key member of that WeDeploy family, but until recently, our API Client support of it only covered Web and Node.js applications. That's why we are excited to announce that **[React Native](https://facebook.github.io/react-native/) and [React VR](https://facebook.github.io/react-vr/) are joining the list too**!
+As a fundamental player in today's development around the world, JavaScript is a key member of that WeDeploy family, but until recently, our API Client only supported Web and Node.js applications. That's why we are excited to announce that **[React Native](https://facebook.github.io/react-native/) and [React VR](https://facebook.github.io/react-vr/) are joining the list too**!
 
 <figure>
 	<a href="https://github.com/wedeploy/boilerplate-data/tree/react-native" target="_blank">
