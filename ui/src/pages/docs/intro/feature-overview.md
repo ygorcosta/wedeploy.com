@@ -66,8 +66,8 @@ Horizontal scaling is trivial in Docker Swarm, as long as your service supports 
 
 WeDeploy offers two interfaces to make it easy to monitor and manage the projects and its services.
 
-The **WeDeploy Dashboard** lets you monitor resource allocation, running services health, and more with intuitive browser-based navigation, real-time graphs, and interactive debugging tools.
+The **[WeDeploy Dashboard](/docs/intro/using-the-dashboard.html)** lets you monitor resource allocation, running services health, and more with intuitive browser-based navigation, real-time graphs, and interactive debugging tools.
 
-The **WeDeploy Command-line Interface (CLI)** provides you control from the comfort of a terminal. It’s powerful, yet easily scriptable, with handy plugins to interact with installed projects.
+The **[WeDeploy Command-line Interface (CLI)](/docs/intro/using-the-command-line.html)** provides you control from the comfort of a terminal. It’s powerful, yet easily scriptable, with handy plugins to interact with installed projects.
 
 </article>
