@@ -24,7 +24,7 @@ class TutorialSidebar extends Component {
 		let indexSelected = -1;
 
 		let sidebar = document.querySelector('.sidebar');
-		let sidebarLinks = sidebar.querySelectorAll('.sidebar-link');
+		let sidebarLinks = Array.prototype.slice.call(sidebar.querySelectorAll('.sidebar-link'));
 
 		sidebarLinks.forEach((item, i) => {
 			let time = parseInt(item.dataset.time || 0);
