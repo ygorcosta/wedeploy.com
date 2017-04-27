@@ -34,7 +34,7 @@ WeDeploy
 WeDeploy
 	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.createUser(email: "user@domain.com", password: "abc", name: "somename")
-	.then { user in
+	.then { user -> Void in
 		// Successfully created.
 	}
 	.catch { err in
@@ -61,7 +61,7 @@ if (currentUser) {
 WeDeploy
 	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.getCurrentUser()
-	.then { user in
+	.then { user -> Void in
 		// User found.
 	}
 	.catch { error in
@@ -90,7 +90,7 @@ WeDeploy
 WeDeploy
 	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.getUser(id: "userId")
-	.then { user in
+	.then { user -> Void in
 		// User found.
 	}
 	.catch { error in
@@ -122,7 +122,7 @@ currentUser
 WeDeploy
 	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.deleteUser(id: "userId")
-	.then { _ in
+	.then { _ -> Void in
 		// Successfully deleted
 	}
 	.catch { err in
@@ -159,7 +159,7 @@ currentUser
 WeDeploy
 	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.updateUser(id: "userId" , email: "eleven@hawkinslabs.com", password: "password", name: "Eleven")
-	.then { _ in
+	.then { _ -> Void in
 		// Successfully updated
 	}
 	.catch { err in
@@ -190,7 +190,7 @@ WeDeploy
 WeDeploy
 	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.sendPasswordReset(email: "user@domain.com")
-	.then { _ in
+	.then { _ -> Void in
 		// Successfully signed out.
 	}
 	.catch { err in
@@ -219,7 +219,7 @@ WeDeploy
 WeDeploy
 	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.signOut()
-	.then { _ in
+	.then { _ -> Void in
 		// Successfully signed out.
 	}
 	.catch { err in

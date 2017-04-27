@@ -26,7 +26,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.data("http://<serviceID>.<projectID>.wedeploy.io");
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.get(resourcePath: "movies/star_wars_v")
 	.then { movie in
 		print(movie)
@@ -56,7 +56,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.data("http://<serviceID>.<projectID>.wedeploy.io");
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.get(resourcePath: "movies/star_wars_v/title")
 	.then { (movie: String) in // You have to specify the type here to allow compiler infer type
 		print(movie)
@@ -99,8 +99,9 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.data("http://<serviceID>.<projectID>.wedeploy.io");
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.orderBy(field: "rating", order: .DESC)
+	.get(resourcePath: "movies")
 	.then { movies in
 		print(movies)
 	}
@@ -142,7 +143,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.data("http://<serviceID>.<projectID>.wedeploy.io");
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.where(field: "year", op: "<", value: 2000)
 	.or(field: "rating", op: ">", value: 8.5)
 	.get(resourcePath: "movies")
@@ -182,7 +183,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.data("http://<serviceID>.<projectID>.wedeploy.io");
+	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.where(field: "year", op: "<", value: 2000)
 	.orderBy(field: "rating", order: .ASC)
 	.limit(2)
