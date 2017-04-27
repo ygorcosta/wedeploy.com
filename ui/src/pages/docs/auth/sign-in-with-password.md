@@ -31,7 +31,7 @@ WeDeploy
 WeDeploy
 	.auth("http://<serviceID>.<projectID>.wedeploy.io")
 	.signInWith(username: "user@domain.com", password: "password")
-	.then { auth in
+	.then { auth -> Void in
 		// User is signed in.
 	}
 	.catch { err in
