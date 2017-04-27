@@ -187,7 +187,7 @@ WeDeploy
 WeDeploy
 	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.similar(field: "title", query: "The attack an awaken Jedi uses to strike a Sith is pure force!")
-	.highlight(field: "title")
+	.highlight("title")
 	.search(resourcePath: "movies")
 	.then { movies in
 		print(movies)
@@ -333,7 +333,7 @@ WeDeploy
 	.any(field: "category", value: ["cinema"])
 	.distance(field: "location", latitude: 51.5031653, longitude: -0.1123051, distance: .mile(1))
 	.get(resourcePath: "places")
-	.then { places
+	.then { places in
 		print(places)
 	}
 ```

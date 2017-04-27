@@ -32,13 +32,13 @@ data.delete('movies/star_wars_v');
 data.delete('movies');
 ```
 ```swift
-let data = WeDeploy.data("http://<serviceID>.<projectID>.wedeploy.io");
+let data = WeDeploy.data("http://<serviceID>.<projectID>.wedeploy.io")
 
-data.delete(collectionOrResourcePath: "movies/star_wars_v/title");
+data.delete(collectionOrResourcePath: "movies/star_wars_v/title")
 
-data.delete(collectionOrResourcePath: "movies/star_wars_v");
+data.delete(collectionOrResourcePath: "movies/star_wars_v")
 
-data.delete(collectionOrResourcePath: "movies");
+data.delete(collectionOrResourcePath: "movies")
 ```
 
 </article>
