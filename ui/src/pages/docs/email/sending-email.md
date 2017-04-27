@@ -34,12 +34,16 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.email('http://<serviceID>.<projectID>.wedeploy.io)
-	.sendEmail(from: self.username, to: self.username, subject: "subject", body: "body")
+	.email("http://<serviceID>.<projectID>.wedeploy.io")
+	.from(self.username)
+	.to(self.username)
+	.subject("subject")
+	.message("body")
+	.send()
 	.then { id in
 		print("Email ID: \(id)")
 	}
-	.catch {
+	.catch { error in
 		// Some error has happened
 	}
 ```
