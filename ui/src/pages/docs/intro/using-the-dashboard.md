@@ -3,7 +3,7 @@ title: "Using the Dashboard"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Dashboard."
 headerTitle: "Intro"
 layout: "guide"
-weight: 3
+weight: 5
 ---
 
 ### {$page.title}
@@ -15,8 +15,6 @@ weight: 3
 ## Create an account
 
 First you need to create a WeDeploy account by signing up through the dashboard [signup page](http://dashboard.wedeploy.com/signup).
-
-![SignUp](https://cloud.githubusercontent.com/assets/301291/18884345/e5bd302e-849b-11e6-9be7-552acda97a31.png)
 
 </article>
 
@@ -102,3 +100,7 @@ That's it! Using a sofisticated Loadbalancer system and service discovering, WeD
 ![URL Generated](https://cloud.githubusercontent.com/assets/301291/17796616/b2ca3fd4-6576-11e6-8e18-85423f206b94.jpg)
 
 </article>
+
+## What's next?
+
+* Learn more about using [the WeDeploy CLI](/docs/intro/using-the-command-line.html).

@@ -3,7 +3,7 @@ title: "Environment Variables"
 description: "This is an overview of how WeDeploy manages environment variables for your projects."
 headerTitle: "Intro"
 layout: "guide"
-weight: 4
+weight: 8
 ---
 
 ### {$page.title}
@@ -64,3 +64,7 @@ To see the lists of available variables, go to the Environment Variables page of
  * [**Hosting Environment Variables**](/docs/hosting/environment-variables.html) 
 
 </article>
+
+## What's next?
+
+* Learn more about using [custom domains](/docs/intro/custom-domains.html).

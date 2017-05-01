@@ -3,7 +3,7 @@ title: "Using the API Client"
 description: "Make requests to WeDeploy using a standardized interface."
 headerTitle: "Intro"
 layout: "guide"
-weight: 8
+weight: 7
 ---
 
 ### {$page.title}
@@ -103,3 +103,7 @@ WeDeploy
 ```
 
 </article>
+
+## What's next?
+
+* Learn more about using [Environment Variables](/docs/intro/environment-variables.html).
