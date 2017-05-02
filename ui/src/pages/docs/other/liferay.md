@@ -10,98 +10,53 @@ weight: 1
 
 ###### {$page.description}
 
-<div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="http://boilerplate-liferay.wedeploy.io" target="_blank">
-		<span class="icon-16-external"></span>See Live Demo
-	</a>
-</div>
-
-<div class="guide-aux-cta">
-	or read the <a href="https://github.com/wedeploy/boilerplate-liferay/" target="_blank">source code</a>.
-</div>
-
 <article id="1">
 
-## Install dependencies
+## Introduction
 
-This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-command-line.html) if you need help setting that up.
+Our email service enables you to send customized emails to your users and check on their status with just a few lines of code.
 
 </article>
 
 <article id="2">
 
-## Running locally
+## Try it yourself
 
-<ol>
+Want to see the whole process of deploying an app on WeDeploy with Liferay?
 
-<li>Start local infrastructure:</li>
+<div class="guide-btn-cta">
+	<a class="btn btn-accent btn-sm" href="http://wedeploy.com/tutorials/liferay" target="_blank">
+		<span class="icon-16-external"></span>Try the tutorial
+	</a>
+</div>
 
-```xml
-we run
-```
-
-<li>Clone this repository:</li>
-
-```xml
-git clone https://github.com/wedeploy/boilerplate-liferay.git
-cd boilerplate-liferay
-```
-
-<li>Link this container with the local infrastructure:</li>
-
-```xml
-we link --project <projectID>
-```
-
-<li>Now your container is ready to be used:</li>
-
-```xml
-http://liferay.<projectID>.wedeploy.me
-```
-</ol>
+<div class="guide-aux-cta">
+	or see a <a href="http://boilerplate-liferay.wedeploy.io" target="_blank">live demo</a>.
+</div>
 
 </article>
 
 <article id="3">
 
-## Deploying to the cloud
+## Configurating Liferay
 
-<ol>
+<aside>
+All WeDeploy projects use a consistant file structure and configuration files to deploy apps with Git or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
+</aside>
 
-<li><a href="https://github.com/wedeploy/boilerplate-liferay/fork">Fork this repository</a>.</li>
+Below is an example of a `container.json` for a Liferay container.
 
-<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a>.</li>
-
-<li><a href="http://dashboard.wedeploy.com/projects/create">Create a project</a>.</li>
-
-<li>In the sidebar, click on <strong>Deployment</strong>.</li>
-
-<li>Using your local machine, clone your Github fork:</li>
-
-```xml
-git clone https://github.com/<username>/boilerplate-liferay
+```application/json
+{
+	"id": "liferay",
+	"type": "wedeploy/liferay:latest"
+}
 ```
 
-<li>Get into the folder: <code>cd boilerplate-liferay</code>.</li>
-
-<li>Using the content on <strong>Deployment</strong> page. Add the WeDeploy remote url:</li>
-
-```xml
-git remote add wedeploy http://git.wedeploy.com/<projectID>.git
-```
-
-<li>Push your data to wedeploy git server: <code>git push wedeploy master</code>.</li>
-
-<li>Once you see it in the Dashboard, your container will be ready to be used.</li>
-
-```xml
-http://liferay.<projectID>.wedeploy.io
-```
-
-</ol>
+The `id` for your services are uniquely determined by you.
 
 </article>
 
 ## What's next?
 
-* Now you can start building your liferay based application.
+Now you can start building your liferay based application.
