@@ -71,3 +71,7 @@ The **[WeDeploy Dashboard](/docs/intro/using-the-dashboard.html)** lets you moni
 The **[WeDeploy Command-line Interface (CLI)](/docs/intro/using-the-command-line.html)** provides you control from the comfort of a terminal. It’s powerful, yet easily scriptable, with handy plugins to interact with installed projects.
 
 </article>
+
+## What's next?
+
+* Learn more about [how it works](/docs/intro/how-it-works.html).

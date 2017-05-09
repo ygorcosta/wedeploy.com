@@ -3,7 +3,7 @@ title: "Using the Command-line"
 description: "The WeDeploy Command-Line Interface is a tool for helping you to use the WeDeploy platform by providing support to things like creating, managing, and scaling applications."
 headerTitle: "Intro"
 layout: "guide"
-weight: 7
+weight: 6
 ---
 
 ### {$page.title}
@@ -184,3 +184,7 @@ or
 we list --remote wedeploy
 ```
 </article>
+
+## What's next?
+
+* Learn more about using [the WeDeploy API Client](/docs/intro/using-the-api-client.html).

@@ -3,7 +3,7 @@ title: "Custom Domains"
 description: "This is an overview of how WeDeploy manages custom domains for your projects."
 headerTitle: "Intro"
 layout: "guide"
-weight: 6
+weight: 9
 ---
 
 ### {$page.title}

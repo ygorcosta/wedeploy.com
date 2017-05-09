@@ -46,3 +46,7 @@ This is why WeDeploy was also designed to serve as a platform for building a man
 From a simple application to an advanced group of microservices, WeDeploy will provide the tools to manage the visibility, scale, and DNS for your application. WeDeploy provides an infrastructure to deploy micro-services in a managed cloud infrastructure.
 
 </article>
+
+## What's next?
+
+* Learn more about [all we offer](/docs/intro/feature-overview.html).

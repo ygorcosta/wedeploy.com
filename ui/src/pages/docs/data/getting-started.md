@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-description: "Leverage a NoSQL database with search and real-time capabilities using WeDeploy™ Data."
+description: "Leverage a NoSQL database with the power of our intuitive API."
 headerTitle: "Data"
 layout: "guide"
 weight: 1
@@ -10,93 +10,54 @@ weight: 1
 
 ###### {$page.description}
 
-<div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="http://boilerplate-data.wedeploy.io" target="_blank">
-		<span class="icon-16-external"></span>See Live Demo
-	</a>
-</div>
-
-<div class="guide-aux-cta">
-	or read the <a href="https://github.com/wedeploy/boilerplate-data/tree/js" target="_blank">source code</a>.
-</div>
-
 <article id="1">
 
-## Install dependencies
+## Introduction
 
-This section assumes you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-command-line.html) if you need help setting that up.
-
-We also feature code snippets using the API Client, [visit this guide](/docs/intro/using-the-api-client.html) in order to start using it.
+Our Data service enables you to store data securely to a cloud database, make complex queries instantly, and consume information in real-time.
 
 </article>
 
 <article id="2">
 
-## Running locally
+## Try it yourself
 
-<ol>
+Want to see the whole process of deploying an app with WeDeploy Data?
 
-<li>Start local infrastructure:</li>
+<div class="guide-btn-cta">
+	<a class="btn btn-accent btn-sm" href="http://wedeploy.com/tutorials/data-web" target="_blank">
+		<span class="icon-16-external"></span>Try the tutorial
+	</a>
+</div>
 
-```xml
-we run
-```
-
-<li>Clone this repository:</li>
-
-```xml
-git clone -b js https://github.com/wedeploy/boilerplate-data.git boilerplate-data-js
-cd boilerplate-data-js
-```
-
-<li>Link this container with the local infrastructure:</li>
-
-```xml
-we link
-```
-
-<li>Now your container is ready to be used:</li>
-
-```xml
-http://boilerplate-data.wedeploy.me
-```
-</ol>
+<div class="guide-aux-cta">
+	or see a <a href="http://boilerplate-data.wedeploy.io" target="_blank">live demo</a>.
+</div>
 
 </article>
 
 <article id="3">
 
-## Deploying to the cloud
+## Configurating Data
 
-<ol>
+<aside>
+All WeDeploy projects use a consistant file structure and configuration files to deploy apps with Git or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
+</aside>
 
-<li><a href="https://github.com/wedeploy/boilerplate-data/fork">Fork this repository</a>.</li>
-<li>Go to the <a href="http://dashboard.wedeploy.com">Dashboard</a>.</li>
-<li><a href="http://dashboard.wedeploy.com/projects/create">Create a project</a>.</li>
-<li>In the sidebar, click on <strong>Deployment</strong>.</li>
-<li>Using your local machine, clone your Github fork:</li>
+Below is an example of a `container.json` for a Data container.
 
-```xml
-git clone -b js https://github.com/<username>/boilerplate-data
+```application/json
+{
+	"id": "database",
+	"type": "wedeploy/data:latest"
+}
 ```
 
-<li>Get into the folder: <code>cd boilerplate-data</code>.</li>
-<li>Using the content on <strong>Deployment</strong> page. Add the WeDeploy remote url:</li>
+The `id` for your services are uniquely determined by you.
 
-```xml
-git remote add wedeploy http://git.wedeploy.com/<projectID>.git
-```
-<li>Push your data to wedeploy git server: <code>git push wedeploy js:master</code>.</li>
-<li>Once you see it in the Dashboard, your container will be ready to be used.</li>
-
-```xml
-http://boilerplate-data.wedeploy.io
-```
-
-</ol>
 
 </article>
 
 ## What's next?
 
-Now that you have *WeDeploy Data* API settled up, you can interact [configuring the data service](/docs/data/configuring-data.html).
+Now you can learn more about **[configuring your data service](/docs/data/configuring-data.html)**.
