@@ -30,7 +30,7 @@ WeDeploy can help you to configure environment variables for your services. Each
 **Using the Dashboard**
 
 1) Go to the specific Service page.
-2) Click on Environment Vars.
+2) Click on Environment.
 3) Add your keys and values.
 4) Click on Update Service.
 

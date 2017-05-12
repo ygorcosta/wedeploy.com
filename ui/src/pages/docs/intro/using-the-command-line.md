@@ -82,7 +82,7 @@ we link --project demo
 
 4. Now your container should be accessible from [http://hosting.demo.wedeploy.me](http://hosting.demo.wedeploy.me)
 
-*On the first first time it might take a few minutes while downloading the hosting image on the background.*
+*The first time you run the project it might take a few minutes while the hosting image is being downloaded in the background.*
 
 </article>
 
