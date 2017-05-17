@@ -13,7 +13,7 @@ weight: 8
 
 Great work, your app is now live! Now let's send an email.
 
-1. Run the app in the simulator.
+1. Run the app in the emulator.
 2. Fill in the form (make sure you put your email in the "to" field).
 3. Click submit and check your email inbox because you've got mail! 📬
 

@@ -19,6 +19,8 @@ Run this command in your terminal:
 git clone https://github.com/wedeploy/tutorial-email-android.git
 ```
 
+This project contains a folder named `app` which the application that we will use to learn how to use the WeDeploy API client. This folder is not used by the WeDeploy infraestructure but we have it here to make the example simpler and not using two different repos (one for WeDeploy project and one for the app).
+
 <aside>
 
 ###### <span class="icon-16-star"></span> Pro Tip

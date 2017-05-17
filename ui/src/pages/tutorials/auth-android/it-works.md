@@ -13,7 +13,7 @@ weight: 8
 
 Great work, your app is now live! Now let's start playing with user sign-in.
 
-1. Run the app in the simulator.
+1. Run the app in the emulator.
 2. Click "Create an account" and fill in the form.
 3. You are logged in!
 

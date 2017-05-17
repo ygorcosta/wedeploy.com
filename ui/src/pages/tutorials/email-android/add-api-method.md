@@ -11,7 +11,7 @@ weight: 7
 
 #### Add API Method
 
-Now we want to add a script that will send an email. To do this, go to `MainActivity.java` and paste this code into the "sendEmail" function:
+Now we want to add a script that will send an email. To do this, go to `MainActivity.java` and paste this code into the "sendEmail" method:
 
 ```java
 weDeploy = new WeDeploy.Builder()

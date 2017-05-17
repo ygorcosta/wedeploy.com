@@ -13,7 +13,7 @@ weight: 8
 
 Great work, your app is now live! Now let's start playing with some data.
 
-1. Run the app in the simulator.
+1. Run the app in the emulator.
 2. Type an item into the input and click _Add Item_.
 3. Click _Go to item listing_ and see how your data is already populated.
 

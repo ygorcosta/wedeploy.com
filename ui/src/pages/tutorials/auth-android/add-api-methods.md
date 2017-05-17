@@ -15,10 +15,10 @@ weight: 7
 
 First, let's add the code that will allow users to create an account. 
 
-To do this, go to `SignUpActivity.java` and paste this code in the "doSignUp" function:
+To do this, go to `SignUpActivity.java` and paste this code in the "doSignUp" method:
 
 ```java
-weDeploy.auth(AUTH_URL)
+weDeploy.auth("auth.<your-project-id>.wedeploy.io")
 	.createUser(email, password, name)
 	.execute(new Callback() {
 		@Override
@@ -28,7 +28,7 @@ weDeploy.auth(AUTH_URL)
 
 		@Override
 		public void onFailure(Exception e) {
-			Log.e("", e.toString());
+			Log.e("Error", "Sign up error", e);
 			showAlert("Error", "Sign up error");
 		}
 	});
@@ -42,7 +42,7 @@ Now you can run the app, click on create an account button, fill the fields and 
 
 Next, let's add the code that will allow users to sign-in. 
 
-First of all, go to `LoginActivity.java`, and paste this code in the "doLogin" function:
+First of all, go to `LoginActivity.java`, and paste this code in the "doLogin" method:
 
 ```java
 weDeploy.auth("auth.<your-project-id>.wedeploy.io")
@@ -65,19 +65,14 @@ If you run the app and fill the login fields you can login into WeDeploy!
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-In the examples above we use the toCallback method to handle the response with a callback, which is the most typical way of doing it in the Android ecosystem, 
-but we can also handle the result using a observable:
+In the examples above we use the execute(callback) method to handle the response with a callback, which is the most typical way of doing it in the Android ecosystem, 
+but we can also handle the result using a RxJava Single, which is similar to an Observable, but it either emits one value or an error notification:
 
 ```java
 weDeploy.auth("auth.<your-project-id>.wedeploy.io")
 	.signIn(email, password)
 	.asSingle()
-	.subscribe(new SingleObserver<Response>() {
-		@Override
-		public void onSubscribe(Disposable d) {
-
-		}
-
+	.subscribe(new DisposableSingleObserver<Response>() {
 		@Override
 		public void onSuccess(Response response) {
 			showAlert("Success", "Signed in");
