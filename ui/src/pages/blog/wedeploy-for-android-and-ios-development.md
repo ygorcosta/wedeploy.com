@@ -63,7 +63,7 @@ dependencies {
 
 #### How do I call the API?
 
-Super simple! The methods are quite similar to the Javascript client. You can check [documentation](/docs/) for more details, but as a snack preview, here are a couple of typical use cases:
+Super simple! The methods are quite similar to the Javascript client. You can check [documentation](/docs/) for more details, but as a snack preview, here are some typical use cases:
 
 ##### Creating users
 
@@ -163,11 +163,133 @@ new WeDeploy.Builder().build()
     });
 ```
 
+##### Real-time subscription
+
+```swift
+socket = WeDeploy
+    .data("http://<serviceID>.<projectID>.wedeploy.io")
+    .watch(resourcePath: "movies")
+
+socket.on([.changes, .error]) { data in 
+    switch(data.type) {
+    case .changes:
+        print("changes \(data.document)")
+    case .error:
+        print("error \(data.document)")
+    default:
+        break
+    }
+}
+```
+```java
+new WeDeploy.Builder().build()
+    .data("http://<serviceID>.<projectID>.wedeploy.io")
+    .watch("movies")
+    .on("changes", data -> System.out.println(data))
+    .on("fail", error -> System.out.println(error));
+```
+
 #### Reactive Programming FTW!
 
-Yes, we know that you're a cool guy, so you *have to* use cool things. Like Rx. In fact in provide three diferent flavours of APIs, depending on your platform. You can use the typical Promise pattern, good and old callbacks, or even receive a Rx's Observable object.
-Check the [documentation](/docs/intro/using-the-api-client.html) for more details on this.
+Yes, we know that you're a cool guy, so you *have to* use cool things. Like Rx. In fact in provide three diferent flavours of APIs, depending on your platform
 
+##### iOS
+
+###### Promise based
+
+You know, the typical `.then` in your chain:
+
+```swift
+WeDeploy
+    .data("http://<serviceID>.<projectID>.wedeploy.io")
+    .get(resourcePath: "movies")
+    .then { movie -> Void in 
+        print(movie)
+    }
+```
+
+###### Callback based
+
+Using the method `toCallback`, you can convert any promise into a callback
+
+```swift
+WeDeploy
+    .data("http://<serviceID>.<projectID>.wedeploy.io")
+    .get(resourcePath: "movies")
+    .toCallback { movies, error in
+        // here you can check the error or the response
+    }
+```
+
+###### RxSwift
+
+Super cool! You can convert any promise in an Observable, and then you can do cool things with it ([map](http://reactivex.io/documentation/operators/map.html) or [flatMap](http://reactivex.io/documentation/operators/flatmap.html) it, for instance)
+
+```swift
+WeDeploy
+    .data("http://<serviceID>.<projectID>.wedeploy.io")
+    .get(resourcePath: "movies")
+    .toObservable()
+    .subscribe(
+        onNext: { movies in
+            // here you receive the movies
+        },
+        onError: { error in
+            // oops something went wrong
+        }
+    )
+```
+##### Android
+
+###### Synchronous
+
+Typical blocking call. Be careful, you already know it's dangerous!
+
+```java
+new WeDeploy.Builder().build()
+    .data("http://<serviceID>.<projectID>.wedeploy.io")
+    .get("movies")
+    .execute();
+ ```
+
+###### Callback based
+
+You can pass a callback object to `execute` method
+
+```java
+new WeDeploy.Builder().build()
+    .data("http://<serviceID>.<projectID>.wedeploy.io")
+    .get("movies")
+    .execute(new Callback() {
+        public void onSuccess(Response response) {
+            // here you receive the movies
+        }
+ 
+        public void onFailure(Exception e) {
+            // oops something went wrong
+        }
+    });
+```
+
+###### RxJava
+
+Of course! You can convert the request into a Single RxJava object, which emits either a success or an error event.
+
+```java
+new WeDeploy.Builder().build()
+     .data("http://datademo.wedeploy.io")
+     .get("movies")
+     .asSingle()
+     .subscribeOn(Schedulers.io())
+     .observeOn(AndroidSchedulers.mainThread())
+     .subscribe(
+          response -> {
+ 
+          },
+          throwable -> {
+ 
+          });
+```
 ---
 
 So, the only thing left is to go to the [documentation](/docs/), and start deploying (your mobile app)!
