@@ -1,9 +1,9 @@
 ---
-title: "WeDeploy for Android and iOS development"
-description: "Are you an Android or iOS developer? Do you need to deploy services quickly and easily to the cloud and focus on your mobile apps? Did you miss mobile platforms in WeDeploy? Yes, today is a big date for you!"
+title: "Announcing new SDK's for Mobile Development"
+description: "Are you an Android or iOS developer? Do you need to deploy services quickly and easily to the cloud and focus on your mobile apps? Did you wish you could use WeDeploy on you mobile apps? Well today is a big day for you!"
 date: "May 10, 2017"
 author: "Jose M. Navarro"
-image: "http://wedeploy.com/images/blog/post-10--0.gif"
+image: "http://wedeploy.com/images/blog/post-11--0.gif"
 layout: "blog"
 ---
 
@@ -11,40 +11,39 @@ layout: "blog"
 
 {$page.description}
 
-Nowadays, we live in a world full of devices: you mobile phone is *always* with you, probably you watch movies in your Apple TV, Android TV or Chromecast, maybe you receive notifications in your smart watch or you read books or articles in your tablet, or likely you have a GPS device embedded in your card dashboard. More and more devices are appearing, and more and more services are being accesible from those "mobile" platforms. Because it's not "mobile development", anymore but multi-screen, multi-device and multi-channel development.
+Nowadays, we live in a world full of devices. From watching movies on your Apple TV, Receiving notifications on your smart watch, or reading books on your Kindle, we rarely go anywhere without our devices. It doesn't seem to be slowing down either; more and more devices are being built and more and more services are being created for them. 
 
-That's why WeDeploy was born with more than web development in mind. APIs are conquering the world, as devices consuming those APIs.
+> Now mobile and web development just isn't enough, we are entering an age of multi-device development.
 
-But instead of using raw HTTP requests, we provide clients to call easily and safely those APIs. You already know the [Javascript client](/docs/intro/using-the-api-client.html#1), but starting from today, we have new kids in town:
+That's why WeDeploy was born with more than web development in mind. We understood that as more and more devices consumed API's, this would be the future of development. 
 
-- **<a target="_blank" href="/docs/intro/using-the-api-client.html#2">iOS (Swift) client</a>**
-- **<a target="_blank" href="/docs/intro/using-the-api-client.html#3">Android (Java) client</a>**
+We didn't want to just use raw HTTP requests, so we built API clients that could be called easily and safely. You already know about our [Javascript client](/docs/intro/using-the-api-client.html#1), but starting today, there are two new kids on the block.
+
+**Introducing the new WeDeploy <a target="_blank" href="/docs/intro/using-the-api-client.html#2">iOS (Swift)</a> and <a target="_blank" href="/docs/intro/using-the-api-client.html#3">Andriod (Java)</a> API Client.**
 
 With them, you will be able to build apps for the following platforms:
 
-- **Apple**: iPhone, iPad, iPod Touch (iOS), AppleWatch (watchOS), AppleTV (tvOS), CarPlay and Desktop apps (macOS).
-- **Google**: Android phones and tablets, Android Wear, Android TV, Android Auto and... any platform that supports Java!
-
-Not to bad!
+* **Apple**: iOS (iPhone, iPad, iPod Touch), watchOS (AppleWatch), tvOS (AppleTV), macOS (CarPlay and Desktop apps).
+* **Google**: Android phones and tablets, Android Wear, Android TV, Android Auto and... any platform that supports Java!
 
 <figure>
-	<img src="../images/blog/post-10--0.gif" alt="Realtime communication across devices">
+	<img src="../images/blog/post-11--0.gif" alt="Realtime communication across devices">
 </figure>
 
 
-#### What can I do from those mobile platforms?
+#### What can you do on those mobile platforms?
 
-Whatever you want! Mainly, the clients provides you straight access to:
+Whatever you want! Mainly, the clients provides you access to:
 
-- **<a target="_blank" href="/docs/data/getting-started.html">Data service</a>**: search inside your schema-less database or communicate in realtime with other apps, not matter the platform, using WebSockets under the hood. Are you still tied to request/response cycle?
-- **<a target="_blank" href="/docs/auth/getting-started.html">Auth service</a>**: create or authenticate users, reset passwords or sign-in using Google, Facebook or Github's OAuth2.
-- **<a target="_blank" href="/docs/email/getting-started.html">Email service</a>**: send emails directly from your app or check their delivery status.
-- **<a target="_blank" href="/docs/hosting/getting-started.html">Raw HTTP Requests</a>**: and if you have [any](/docs/other/nodejs.html) [other](/docs/other/ruby.html) [webapp](/docs/other/java.html) [deployed](/docs/hosting/getting-started.html), you can build your own HTTP requests from the same client, using our nice fluent api.
+- **<a target="_blank" href="/docs/data/getting-started.html">Data service</a>**: Search inside your schema-less database or communicate in realtime with other apps, not matter the platform, using WebSockets under the hood. 
+- **<a target="_blank" href="/docs/auth/getting-started.html">Auth service</a>**: Create or authenticate users, reset passwords or sign-in using Google, Facebook or Github's OAuth2.
+- **<a target="_blank" href="/docs/email/getting-started.html">Email service</a>**: Send emails directly from your app and check their delivery status.
+- **<a target="_blank" href="/docs/hosting/getting-started.html">Raw HTTP Requests</a>**: and if you would like to build your own HTTP requests, you can using our fluent API.
 
 
 #### How do I start
 
-Quite easy! Just using the regular package managers for each platform: Cocoapods (for Apple/iOS) and Gradle (for Java/Android).
+Just use the regular package managers for each platform.
 
 ```Podfile
 target 'MyApp' do
@@ -61,238 +60,9 @@ dependencies {
 }
 ```
 
-#### How do I call the API?
+#### It's that easy!
 
-Super simple! The methods are quite similar to the Javascript client. You can check [documentation](/docs/) for more details, but as a snack preview, here are some typical use cases:
-
-##### Creating users
-
-```swift
-WeDeploy
-	.auth("http://<serviceID>.<projectID>.wedeploy.io")
-	.createUser(email: "user@domain.com", password: "abc", name: "somename")
-	.then { user -> Void in
-		// Successfully created.
-	}
-	.catch { err in
-		// Not created.
-	}
-```
-```java
-new WeDeploy.Builder().build()
-    .auth("http://<serviceID>.<projectID>.wedeploy.io")
-    .createUser("user@domain.com", "password", "somename")
-    .execute(new Callback() {
-        public void onSuccess(Response response) {
-            // here you receive the response
-        }
-
-        public void onFailure(Exception e) {
-            // oops something went wrong
-        }
-    });
-```
-
-##### Sending emails
-
-```swift
-WeDeploy
-	.email("http://<serviceID>.<projectID>.wedeploy.io")
-	.from("from@domain.com")
-	.to("to@domain.com")
-	.subject("Hi there!")
-	.message("The body.")
-	.send()
-	.then { id in
-		// here you receive the email id
-	}
-	.catch { error in
-		// Some error has happened
-	}
-```
-```java
-new WeDeploy.Builder().build()
-    .email("http://<serviceID>.<projectID>.wedeploy.io/emails")
-    .from("from@domain.com")
-    .to("to@domain.com")
-    .subject("Hi there!")
-    .message("The body.")
-    .send()
-    .execute(new Callback() {
-        public void onSuccess(Response response) {
-            // here you receive the response
-        }
-
-        public void onFailure(Exception e) {
-            // oops something went wrong
-        }
-    });
-```
-
-##### Saving data
-
-```swift
-WeDeploy
-    .data("http://<serviceID>.<projectID>.wedeploy.io")
-    .create(resource: "movies", object: [
-        "title" : "Star Wars IV",
-        "year" : 1977,
-        "ratings" : 8.7
-    ])
-    .then { movie in
-        // here you receive the movie created
-    }
-```
-```java
-JSONObject movieJsonObject = new JSONObject()
-    .put("title", "Star Wars IV")
-    .put("year", 1977)
-    .put("rating", 8.7);
-
-new WeDeploy.Builder().build()
-    .data("http://datademo.wedeploy.io")
-    .create("movies", movieJsonObject)
-    .execute(new Callback() {
-        public void onSuccess(Response response) {
-            // here you receive the movie created
-        }
-
-        public void onFailure(Exception e) {
-            // oops something went wrong
-        }
-    });
-```
-
-##### Real-time subscription
-
-```swift
-socket = WeDeploy
-    .data("http://<serviceID>.<projectID>.wedeploy.io")
-    .watch(resourcePath: "movies")
-
-socket.on([.changes, .error]) { data in 
-    switch(data.type) {
-    case .changes:
-        print("changes \(data.document)")
-    case .error:
-        print("error \(data.document)")
-    default:
-        break
-    }
-}
-```
-```java
-new WeDeploy.Builder().build()
-    .data("http://<serviceID>.<projectID>.wedeploy.io")
-    .watch("movies")
-    .on("changes", data -> System.out.println(data))
-    .on("fail", error -> System.out.println(error));
-```
-
-#### Reactive Programming FTW!
-
-Yes, we know that you're a cool guy, so you *have to* use cool things. Like Rx. In fact in provide three diferent flavours of APIs, depending on your platform
-
-##### iOS
-
-###### Promise based
-
-You know, the typical `.then` in your chain:
-
-```swift
-WeDeploy
-    .data("http://<serviceID>.<projectID>.wedeploy.io")
-    .get(resourcePath: "movies")
-    .then { movie -> Void in 
-        print(movie)
-    }
-```
-
-###### Callback based
-
-Using the method `toCallback`, you can convert any promise into a callback
-
-```swift
-WeDeploy
-    .data("http://<serviceID>.<projectID>.wedeploy.io")
-    .get(resourcePath: "movies")
-    .toCallback { movies, error in
-        // here you can check the error or the response
-    }
-```
-
-###### RxSwift
-
-Super cool! You can convert any promise in an Observable, and then you can do cool things with it ([map](http://reactivex.io/documentation/operators/map.html) or [flatMap](http://reactivex.io/documentation/operators/flatmap.html) it, for instance)
-
-```swift
-WeDeploy
-    .data("http://<serviceID>.<projectID>.wedeploy.io")
-    .get(resourcePath: "movies")
-    .toObservable()
-    .subscribe(
-        onNext: { movies in
-            // here you receive the movies
-        },
-        onError: { error in
-            // oops something went wrong
-        }
-    )
-```
-##### Android
-
-###### Synchronous
-
-Typical blocking call. Be careful, you already know it's dangerous!
-
-```java
-new WeDeploy.Builder().build()
-    .data("http://<serviceID>.<projectID>.wedeploy.io")
-    .get("movies")
-    .execute();
- ```
-
-###### Callback based
-
-You can pass a callback object to `execute` method
-
-```java
-new WeDeploy.Builder().build()
-    .data("http://<serviceID>.<projectID>.wedeploy.io")
-    .get("movies")
-    .execute(new Callback() {
-        public void onSuccess(Response response) {
-            // here you receive the movies
-        }
- 
-        public void onFailure(Exception e) {
-            // oops something went wrong
-        }
-    });
-```
-
-###### RxJava
-
-Of course! You can convert the request into a Single RxJava object, which emits either a success or an error event.
-
-```java
-new WeDeploy.Builder().build()
-     .data("http://datademo.wedeploy.io")
-     .get("movies")
-     .asSingle()
-     .subscribeOn(Schedulers.io())
-     .observeOn(AndroidSchedulers.mainThread())
-     .subscribe(
-          response -> {
- 
-          },
-          throwable -> {
- 
-          });
-```
----
-
-So, the only thing left is to go to the [documentation](/docs/), and start deploying (your mobile app)!
+So, the only thing left to do is to go to the [documentation](/docs/) and start deploying your mobile apps!
 
 Don't forget to let us know how it goes! You can connect with us on [Twitter](https://twitter.com/wedeploy) or join our community on [Slack](http://chat.wedeploy.com).
 
