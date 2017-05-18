@@ -15,7 +15,7 @@ Before we can make any requests to create or sign-in any users, we must connect 
 
 To do this, go to `tutorial-auth-android/app/tutorial-auth-android/app/build.gradle` and include this line inside the dependencies function of this file:
 
-```java
+```text/x-groovy
 compile 'com.wedeploy:com.wedeploy.android:beta-20170505'
 ```
 
