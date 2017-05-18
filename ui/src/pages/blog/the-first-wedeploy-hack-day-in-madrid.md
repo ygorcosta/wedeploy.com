@@ -1,7 +1,7 @@
 ---
 title: "The First WeDeploy Hack Day In Madrid"
 description: "With our Beta release approaching, we're looking for more and more developers to try out WeDeploy and give us feedback about how we can make it better."
-date: "May 18th, 2017"
+date: "May 18, 2017"
 author: "Jonni Lundy"
 image: "http://wedeploy.com/images/blog/post-10--0.jpg"
 layout: "blog"
