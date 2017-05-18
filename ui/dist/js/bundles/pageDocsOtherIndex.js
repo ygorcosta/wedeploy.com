@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([80,131,132,133,134,135,136,137],[
+webpackJsonppageComponent([83,132,133,134,135,136,137,138],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11838,6 +11838,1591 @@ exports.default = TutorialTopbar;
 
 /***/ }),
 /* 88 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Topbar", function() { return Topbar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
+
+
+var templates;
+goog.loadModule(function(exports) {
+
+// This file was automatically generated from Topbar.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace Topbar.
+ * @hassoydeltemplate {ElectricNavigation.anchor.idom}
+ * @public
+ */
+
+goog.module('Topbar.incrementaldom');
+
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricNavigation.incrementaldom', 'render');
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+  $templateAlias1({depth: 1, elementClasses: 'topbar-list', linkClasses: 'topbar-link', listItemClasses: 'topbar-item', anchorVariant: 'topbar', section: opt_data.section}, null, opt_ijData);
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'Topbar.render';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function __deltemplate_s52_99ee0d1f(opt_data, opt_ignored, opt_ijData) {
+  var $$temp;
+  if (opt_data.page.url == '//dashboard.wedeploy.com/signup') {
+    ie_open('a', null, null,
+        'class', 'btn btn-accent btn-sm get-started',
+        'href', opt_data.page.url);
+    } else if (opt_data.page.url == '//dashboard.wedeploy.com/login') {
+      ie_open('a', null, null,
+          'class', 'topbar-link login',
+          'href', opt_data.page.url);
+      } else if (opt_data.page.url == '//chat.wedeploy.com/') {
+        ie_open('a', null, null,
+            'class', 'topbar-link',
+            'target', '_blank',
+            'href', opt_data.page.url);
+        } else {
+          ie_open('a', null, null,
+              'class', 'topbar-link' + (opt_data.page.active ? ' active' : ''),
+              'href', ($$temp = opt_data.page.redirect) == null ? opt_data.page.url : $$temp);
+          }
+          var dyn1 = opt_data.page.title;
+          if (typeof dyn1 == 'function') dyn1(); else if (dyn1 != null) itext(dyn1);
+        ie_close('a');
+      }
+      exports.__deltemplate_s52_99ee0d1f = __deltemplate_s52_99ee0d1f;
+      if (goog.DEBUG) {
+        __deltemplate_s52_99ee0d1f.soyTemplateName = 'Topbar.__deltemplate_s52_99ee0d1f';
+      }
+      soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'topbar', 0, __deltemplate_s52_99ee0d1f);
+
+exports.render.params = ["section"];
+exports.render.types = {"section":"any"};
+templates = exports;
+return exports;
+
+});
+
+class Topbar extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Topbar, templates);
+
+/* harmony default export */ __webpack_exports__["default"] = (templates);
+/* jshint ignore:end */
+
+
+/***/ }),
+/* 89 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blog", function() { return blog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
+
+
+var templates;
+goog.loadModule(function(exports) {
+
+// This file was automatically generated from blog.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace blog.
+ * @public
+ */
+
+goog.module('blog.incrementaldom');
+
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+  opt_data = opt_data || {};
+  var param117 = function() {
+    ie_open('div', null, null,
+        'class', 'blog');
+      $mainPost(opt_data, null, opt_ijData);
+      $olderPosts(opt_data, null, opt_ijData);
+    ie_close('div');
+  };
+  $templateAlias1(soy.$$assignDefaults({elementClasses: 'blog', content: param117, currentPage: 'blog'}, opt_data), null, opt_ijData);
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'blog.render';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $mainPost(opt_data, opt_ignored, opt_ijData) {
+  ie_open('article', null, null,
+      'class', 'container');
+    ie_open('header');
+      ie_open('small');
+        itext('By ');
+        var dyn7 = opt_data.page.author;
+        if (typeof dyn7 == 'function') dyn7(); else if (dyn7 != null) itext(dyn7);
+        itext(' ');
+        ie_open('span');
+          itext('| ');
+          var dyn8 = opt_data.page.date;
+          if (typeof dyn8 == 'function') dyn8(); else if (dyn8 != null) itext(dyn8);
+        ie_close('span');
+      ie_close('small');
+      ie_open('h1');
+        var dyn9 = opt_data.page.title;
+        if (typeof dyn9 == 'function') dyn9(); else if (dyn9 != null) itext(dyn9);
+      ie_close('h1');
+    ie_close('header');
+    ie_open('div', null, null,
+        'class', 'content');
+      var dyn10 = opt_data.content;
+      if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
+      ie_open('div', null, null,
+          'class', 'we-container');
+        ie_open('span', null, null,
+            'class', 'we-circle');
+          ie_open('span', null, null,
+              'class', 'we');
+            itext('We');
+          ie_close('span');
+        ie_close('span');
+      ie_close('div');
+    ie_close('div');
+  ie_close('article');
+}
+exports.mainPost = $mainPost;
+if (goog.DEBUG) {
+  $mainPost.soyTemplateName = 'blog.mainPost';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $olderPosts(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'posts-list');
+    ie_open('div', null, null,
+        'class', 'container');
+      var blogObject__soy136 = opt_data.site.index.children['blog'];
+      var childIdList148 = blogObject__soy136.childIds;
+      var childIdListLen148 = childIdList148.length;
+      for (var childIdIndex148 = 0; childIdIndex148 < childIdListLen148; childIdIndex148++) {
+        var childIdData148 = childIdList148[childIdIndex148];
+        if (opt_data.page.url != blogObject__soy136.children[childIdData148].url && childIdIndex148 < 4) {
+          ie_open('div', null, null,
+              'class', 'post-item container-blog');
+            ie_open('a', null, null,
+                'class', 'post-item__link',
+                'href', blogObject__soy136.children[childIdData148].url);
+              ie_open('small');
+                itext('By ');
+                var dyn11 = blogObject__soy136.children[childIdData148].author;
+                if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+                itext(' ');
+                ie_open('span');
+                  itext('| ');
+                  var dyn12 = blogObject__soy136.children[childIdData148].date;
+                  if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+                ie_close('span');
+              ie_close('small');
+              ie_open('h4', null, null,
+                  'class', 'post-item__title');
+                var dyn13 = blogObject__soy136.children[childIdData148].title;
+                if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
+              ie_close('h4');
+            ie_close('a');
+          ie_close('div');
+        }
+      }
+    ie_close('div');
+  ie_close('div');
+}
+exports.olderPosts = $olderPosts;
+if (goog.DEBUG) {
+  $olderPosts.soyTemplateName = 'blog.olderPosts';
+}
+
+exports.render.params = [];
+exports.render.types = {};
+exports.mainPost.params = ["content","page"];
+exports.mainPost.types = {"content":"any","page":"any"};
+exports.olderPosts.params = ["page","site"];
+exports.olderPosts.types = {"page":"any","site":"any"};
+templates = exports;
+return exports;
+
+});
+
+class blog extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(blog, templates);
+
+/* harmony default export */ __webpack_exports__["default"] = (templates);
+/* jshint ignore:end */
+
+
+/***/ }),
+/* 90 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "docs", function() { return docs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
+
+
+var templates;
+goog.loadModule(function(exports) {
+
+// This file was automatically generated from docs.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace docs.
+ * @public
+ */
+
+goog.module('docs.incrementaldom');
+
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
+
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Newsletter.incrementaldom', 'render');
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Sidebar.incrementaldom', 'render');
+
+var $templateAlias3 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'main');
+    ie_open('main', null, null,
+        'class', 'content guide');
+      ie_open('div', null, null,
+          'class', 'docs');
+        $topbar(opt_data, null, opt_ijData);
+        $templateAlias1(opt_data, null, opt_ijData);
+        ie_open('div', null, null,
+            'class', 'sidebar-offset');
+          var dyn14 = opt_data.content;
+          if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+          $templateAlias2(null, null, opt_ijData);
+        ie_close('div');
+      ie_close('div');
+    ie_close('main');
+  ie_close('div');
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'docs.render';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $topbar(opt_data, opt_ignored, opt_ijData) {
+  opt_data = opt_data || {};
+  ie_open('nav', null, null,
+      'class', 'topbar topbar-docs topbar-light topbar-large');
+    $logo(opt_data, null, opt_ijData);
+    $menu(opt_data, null, opt_ijData);
+  ie_close('nav');
+}
+exports.topbar = $topbar;
+if (goog.DEBUG) {
+  $topbar.soyTemplateName = 'docs.topbar';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $logo(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'topbar-logo');
+    ie_open('a', null, null,
+        'class', 'topbar-logo-link',
+        'href', '/');
+      ie_open('span', null, null,
+          'class', 'wedeploy-logo');
+        ie_open('span', null, null,
+            'class', 'we-circle');
+          ie_open('span', null, null,
+              'class', 'we');
+            itext('We');
+          ie_close('span');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'deploy');
+          itext('Deploy\u2122');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'liferay');
+          itext('by Liferay');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'alpha-container');
+          ie_void('span', null, null,
+              'class', 'arrow-up');
+          ie_open('span', null, null,
+              'class', 'alpha');
+            itext('alpha');
+          ie_close('span');
+        ie_close('span');
+      ie_close('span');
+    ie_close('a');
+  ie_close('div');
+}
+exports.logo = $logo;
+if (goog.DEBUG) {
+  $logo.soyTemplateName = 'docs.logo';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $menu(opt_data, opt_ignored, opt_ijData) {
+  $templateAlias3({section: opt_data.site.index}, null, opt_ijData);
+}
+exports.menu = $menu;
+if (goog.DEBUG) {
+  $menu.soyTemplateName = 'docs.menu';
+}
+
+exports.render.params = ["content","page"];
+exports.render.types = {"content":"any","page":"any"};
+exports.topbar.params = [];
+exports.topbar.types = {};
+exports.logo.params = [];
+exports.logo.types = {};
+exports.menu.params = ["site"];
+exports.menu.types = {"site":"any"};
+templates = exports;
+return exports;
+
+});
+
+class docs extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(docs, templates);
+
+/* harmony default export */ __webpack_exports__["default"] = (templates);
+/* jshint ignore:end */
+
+
+/***/ }),
+/* 91 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "guide", function() { return guide; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
+
+
+var templates;
+goog.loadModule(function(exports) {
+
+// This file was automatically generated from guide.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace guide.
+ * @public
+ */
+
+goog.module('guide.incrementaldom');
+
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
+
+var $templateAlias3 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('AffixedReadingProgress.incrementaldom', 'render');
+
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Feedback.incrementaldom', 'render');
+
+var $templateAlias4 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Newsletter.incrementaldom', 'render');
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Sidebar.incrementaldom', 'render');
+
+var $templateAlias5 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'main guide');
+    ie_open('main', null, null,
+        'class', 'content');
+      ie_open('div', null, null,
+          'class', 'docs');
+        $topbar(opt_data, null, opt_ijData);
+        $templateAlias1({page: opt_data.site.index.children['docs']}, null, opt_ijData);
+        ie_open('div', null, null,
+            'class', 'sidebar-offset');
+          $guide(opt_data, null, opt_ijData);
+        ie_close('div');
+      ie_close('div');
+    ie_close('main');
+  ie_close('div');
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'guide.render';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $guide(opt_data, opt_ignored, opt_ijData) {
+  ie_open('header');
+    ie_open('div', null, null,
+        'class', 'container-hybrid');
+      ie_open('h1', null, null,
+          'class', 'title');
+        var dyn15 = opt_data.page.headerTitle;
+        if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+        itext(' Guide');
+      ie_close('h1');
+    ie_close('div');
+  ie_close('header');
+  ie_open('div', null, null,
+      'class', 'container-hybrid');
+    ie_open('div', null, null,
+        'class', 'docs-guide row');
+      ie_open('div', null, null,
+          'class', 'docs-content col-xs-16 col-md-10 col-lg-offset-1 col-lg-9');
+        ie_open('div', null, null,
+            'class', 'guide-content');
+          var dyn16 = opt_data.content;
+          if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+        ie_close('div');
+        $templateAlias2(opt_data, null, opt_ijData);
+      ie_close('div');
+      ie_open('nav', null, null,
+          'class', 'col-xs-16 col-md-offset-1 col-md-5 col-lg-4');
+        ie_open('div', null, null,
+            'class', 'docs-nav-container');
+          $templateAlias3({elementClasses: 'docs-nav topbar-is-fixed', offsetTop: 300, offsetBottom: 200}, null, opt_ijData);
+        ie_close('div');
+      ie_close('nav');
+    ie_close('div');
+  ie_close('div');
+  $templateAlias4(null, null, opt_ijData);
+}
+exports.guide = $guide;
+if (goog.DEBUG) {
+  $guide.soyTemplateName = 'guide.guide';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $topbar(opt_data, opt_ignored, opt_ijData) {
+  opt_data = opt_data || {};
+  ie_open('nav', null, null,
+      'class', 'topbar topbar-docs topbar-light topbar-large');
+    $logo(opt_data, null, opt_ijData);
+    $menu(opt_data, null, opt_ijData);
+  ie_close('nav');
+}
+exports.topbar = $topbar;
+if (goog.DEBUG) {
+  $topbar.soyTemplateName = 'guide.topbar';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $logo(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'topbar-logo');
+    ie_open('a', null, null,
+        'class', 'topbar-logo-link',
+        'href', '/');
+      ie_open('span', null, null,
+          'class', 'wedeploy-logo');
+        ie_open('span', null, null,
+            'class', 'we-circle');
+          ie_open('span', null, null,
+              'class', 'we');
+            itext('We');
+          ie_close('span');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'deploy');
+          itext('Deploy\u2122');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'liferay');
+          itext('by Liferay');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'alpha-container');
+          ie_void('span', null, null,
+              'class', 'arrow-up');
+          ie_open('span', null, null,
+              'class', 'alpha');
+            itext('alpha');
+          ie_close('span');
+        ie_close('span');
+      ie_close('span');
+    ie_close('a');
+  ie_close('div');
+}
+exports.logo = $logo;
+if (goog.DEBUG) {
+  $logo.soyTemplateName = 'guide.logo';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $menu(opt_data, opt_ignored, opt_ijData) {
+  $templateAlias5({section: opt_data.site.index}, null, opt_ijData);
+}
+exports.menu = $menu;
+if (goog.DEBUG) {
+  $menu.soyTemplateName = 'guide.menu';
+}
+
+exports.render.params = ["site"];
+exports.render.types = {"site":"any"};
+exports.guide.params = ["page","content"];
+exports.guide.types = {"page":"any","content":"any"};
+exports.topbar.params = [];
+exports.topbar.types = {};
+exports.logo.params = [];
+exports.logo.types = {};
+exports.menu.params = ["site"];
+exports.menu.types = {"site":"any"};
+templates = exports;
+return exports;
+
+});
+
+class guide extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(guide, templates);
+
+/* harmony default export */ __webpack_exports__["default"] = (templates);
+/* jshint ignore:end */
+
+
+/***/ }),
+/* 92 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "landing", function() { return landing; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
+
+
+var templates;
+goog.loadModule(function(exports) {
+
+// This file was automatically generated from landing.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace landing.
+ * @public
+ */
+
+goog.module('landing.incrementaldom');
+
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+  var $$temp;
+  ie_open('div', null, null,
+      'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
+    ie_open('main', null, null,
+        'class', 'content');
+      $topbar(opt_data, null, opt_ijData);
+      var dyn17 = opt_data.content;
+      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
+      $footer(opt_data, null, opt_ijData);
+      $modal(opt_data, null, opt_ijData);
+    ie_close('main');
+  ie_close('div');
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'landing.render';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $topbar(opt_data, opt_ignored, opt_ijData) {
+  opt_data = opt_data || {};
+  ie_open('div', null, null,
+      'id', 'topbar');
+    ie_open('div', null, null,
+        'class', 'col-xs-16 col-lg-14 col-lg-offset-1');
+      ie_open('div', null, null,
+          'class', 'row');
+        ie_open('nav', null, null,
+            'class', 'topbar topbar-large topbar-light');
+          $topbarLeftContent(opt_data, null, opt_ijData);
+          $topbarRightContent(opt_data, null, opt_ijData);
+        ie_close('nav');
+      ie_close('div');
+    ie_close('div');
+  ie_close('div');
+}
+exports.topbar = $topbar;
+if (goog.DEBUG) {
+  $topbar.soyTemplateName = 'landing.topbar';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $topbarLeftContent(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'topbar-logo');
+    ie_open('a', null, null,
+        'class', 'topbar-logo-link',
+        'href', '/');
+      ie_open('span', null, null,
+          'class', 'wedeploy-logo');
+        ie_open('span', null, null,
+            'class', 'we-circle');
+          ie_open('span', null, null,
+              'class', 'we');
+            itext('We');
+          ie_close('span');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'deploy');
+          itext('Deploy\u2122');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'liferay');
+          itext('by Liferay');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'alpha-container');
+          ie_void('span', null, null,
+              'class', 'arrow-up');
+          ie_open('span', null, null,
+              'class', 'alpha');
+            itext('alpha');
+          ie_close('span');
+        ie_close('span');
+      ie_close('span');
+    ie_close('a');
+  ie_close('div');
+}
+exports.topbarLeftContent = $topbarLeftContent;
+if (goog.DEBUG) {
+  $topbarLeftContent.soyTemplateName = 'landing.topbarLeftContent';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $topbarRightContent(opt_data, opt_ignored, opt_ijData) {
+  $templateAlias1({section: opt_data.site.index}, null, opt_ijData);
+}
+exports.topbarRightContent = $topbarRightContent;
+if (goog.DEBUG) {
+  $topbarRightContent.soyTemplateName = 'landing.topbarRightContent';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $footer(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'id', 'footer');
+    ie_open('div', null, null,
+        'class', 'container-wedeploy flex-left-center');
+      ie_open('div', null, null,
+          'class', 'col-xs-16 col-sm-8 info-container col-md-10 col-lg-10 col-lg-offset-1');
+        ie_open('div', null, null,
+            'class', 'footer__logo info');
+          ie_open('span');
+            itext('WeDeploy\u2122');
+          ie_close('span');
+        ie_close('div');
+        ie_open('div', null, null,
+            'class', 'footer__copy info');
+          ie_open('span');
+            itext('Copyright \u00A9 2017');
+            ie_open('br');
+            ie_close('br');
+            itext('Liferay, Inc.');
+          ie_close('span');
+        ie_close('div');
+        ie_open('div', null, null,
+            'class', 'footer__link info');
+          ie_open('a', null, null,
+              'href', 'http://status.wedeploy.com/',
+              'target', '_blank');
+            ie_open('span');
+              itext('Uptime status');
+            ie_close('span');
+          ie_close('a');
+        ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null,
+          'class', 'footer__media-kit col-xs-16 col-sm-8 col-md-6 col-lg-4');
+        ie_open('a', null, null,
+            'data-senna-off', '',
+            'href', 'images/WeDeploy-Media-Kit.zip',
+            'class', 'btn btn-inverse-accent btn-s',
+            'download', '');
+          itext('Media Kit');
+        ie_close('a');
+        ie_open('a', null, null,
+            'class', 'ic-github',
+            'href', 'http://github.com/wedeploy',
+            'target', '_blank');
+          ie_void('span', null, null,
+              'class', 'icon-16-github');
+        ie_close('a');
+        ie_open('a', null, null,
+            'class', 'ic-twitter',
+            'href', 'http://twitter.com/wedeploy',
+            'target', '_blank');
+          ie_void('span', null, null,
+              'class', 'icon-16-twitter');
+        ie_close('a');
+      ie_close('div');
+    ie_close('div');
+  ie_close('div');
+}
+exports.footer = $footer;
+if (goog.DEBUG) {
+  $footer.soyTemplateName = 'landing.footer';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $modal(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'modal');
+    ie_open('div', null, null,
+        'class', 'modal-container');
+      ie_open('a', null, null,
+          'class', 'modal__close flex-center-center',
+          'href', 'javascript:void(0);');
+        ie_void('span', null, null,
+            'class', 'close__icon icon-16-cancel');
+      ie_close('a');
+      ie_open('div', null, null,
+          'id', 'modal__form-container');
+        ie_open('div', null, null,
+            'class', 'form flex-center-top');
+          ie_open('div', null, null,
+              'class', 'logo flex-center-center');
+            ie_open('span');
+              itext('We');
+            ie_close('span');
+          ie_close('div');
+          ie_open('h2');
+            itext('Request an Invite for WeDeploy\u2122');
+          ie_close('h2');
+          ie_open('p');
+            itext('We can\'t wait to see what you\'re going to build.');
+          ie_close('p');
+          ie_open('form', null, null,
+              'id', 'form-modal',
+              'class', 'flex-center-top column form-signup');
+            ie_open('div', null, null,
+                'class', 'form-group');
+              ie_open('label');
+                itext('Email');
+              ie_close('label');
+              ie_open('input', null, null,
+                  'type', 'text',
+                  'class', 'form-control',
+                  'name', 'email',
+                  'placeholder', 'Enter your email address');
+              ie_close('input');
+            ie_close('div');
+            ie_void('p', null, null,
+                'id', 'form-modal__validation',
+                'class', 'form-validation');
+            ie_open('button', null, null,
+                'id', 'form-modal__submit',
+                'class', 'btn btn-accent');
+              ie_open('span');
+                itext('Get Started \u2013 It\u2019s FREE');
+              ie_close('span');
+            ie_close('button');
+            ie_open('div', null, null,
+                'class', 'small-container flex-center-top');
+              ie_open('small');
+                itext('By entering your email you agree to receive information about WeDeploy\u2122.');
+              ie_close('small');
+            ie_close('div');
+          ie_close('form');
+        ie_close('div');
+        ie_open('div', null, null,
+            'class', 'copy');
+          ie_open('p');
+            itext('Copyright \u00A9 2017 Liferay, Inc.');
+          ie_close('p');
+        ie_close('div');
+      ie_close('div');
+      ie_open('div', null, null,
+          'id', 'modal__response-container',
+          'class', 'flex-center-top');
+        ie_open('div', null, null,
+            'class', 'logo flex-center-center');
+          ie_open('span');
+            itext('We');
+          ie_close('span');
+        ie_close('div');
+        ie_open('h2');
+          itext('Thanks for requesting an invite!');
+        ie_close('h2');
+        ie_open('p');
+          itext('We\'ll drop you an email when Wedeploy\u2122 is ready. Stay tuned.');
+        ie_close('p');
+      ie_close('div');
+    ie_close('div');
+  ie_close('div');
+}
+exports.modal = $modal;
+if (goog.DEBUG) {
+  $modal.soyTemplateName = 'landing.modal';
+}
+
+exports.render.params = ["content","elementClasses"];
+exports.render.types = {"content":"any","elementClasses":"any"};
+exports.topbar.params = [];
+exports.topbar.types = {};
+exports.topbarLeftContent.params = [];
+exports.topbarLeftContent.types = {};
+exports.topbarRightContent.params = ["site"];
+exports.topbarRightContent.types = {"site":"any"};
+exports.footer.params = [];
+exports.footer.types = {};
+exports.modal.params = [];
+exports.modal.types = {};
+templates = exports;
+return exports;
+
+});
+
+class landing extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(landing, templates);
+
+/* harmony default export */ __webpack_exports__["default"] = (templates);
+/* jshint ignore:end */
+
+
+/***/ }),
+/* 93 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "main", function() { return main; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
+
+
+var templates;
+goog.loadModule(function(exports) {
+
+// This file was automatically generated from main.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace main.
+ * @public
+ */
+
+goog.module('main.incrementaldom');
+
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+  var $$temp;
+  ie_open('div', null, null,
+      'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
+    ie_open('main', null, null,
+        'class', 'content');
+      $topbar(opt_data, null, opt_ijData);
+      var dyn18 = opt_data.content;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
+    ie_close('main');
+  ie_close('div');
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'main.render';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $topbar(opt_data, opt_ignored, opt_ijData) {
+  opt_data = opt_data || {};
+  ie_open('div', null, null,
+      'id', 'topbar');
+    ie_open('div', null, null,
+        'class', 'col-xs-16 col-lg-14 col-lg-offset-1');
+      ie_open('div', null, null,
+          'class', 'row');
+        ie_open('nav', null, null,
+            'class', 'topbar topbar-large topbar-light');
+          $logo(opt_data, null, opt_ijData);
+          $menu(opt_data, null, opt_ijData);
+        ie_close('nav');
+      ie_close('div');
+    ie_close('div');
+  ie_close('div');
+}
+exports.topbar = $topbar;
+if (goog.DEBUG) {
+  $topbar.soyTemplateName = 'main.topbar';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $logo(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'topbar-logo');
+    ie_open('a', null, null,
+        'class', 'topbar-logo-link',
+        'href', '/');
+      ie_open('span', null, null,
+          'class', 'wedeploy-logo');
+        ie_open('span', null, null,
+            'class', 'we-circle');
+          ie_open('span', null, null,
+              'class', 'we');
+            itext('We');
+          ie_close('span');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'deploy');
+          itext('Deploy\u2122');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'liferay');
+          itext('by Liferay');
+        ie_close('span');
+        ie_open('span', null, null,
+            'class', 'alpha-container');
+          ie_void('span', null, null,
+              'class', 'arrow-up');
+          ie_open('span', null, null,
+              'class', 'alpha');
+            itext('alpha');
+          ie_close('span');
+        ie_close('span');
+      ie_close('span');
+    ie_close('a');
+  ie_close('div');
+}
+exports.logo = $logo;
+if (goog.DEBUG) {
+  $logo.soyTemplateName = 'main.logo';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $menu(opt_data, opt_ignored, opt_ijData) {
+  $templateAlias1({section: opt_data.site.index}, null, opt_ijData);
+}
+exports.menu = $menu;
+if (goog.DEBUG) {
+  $menu.soyTemplateName = 'main.menu';
+}
+
+exports.render.params = ["content","elementClasses"];
+exports.render.types = {"content":"any","elementClasses":"any"};
+exports.topbar.params = [];
+exports.topbar.types = {};
+exports.logo.params = [];
+exports.logo.types = {};
+exports.menu.params = ["site"];
+exports.menu.types = {"site":"any"};
+templates = exports;
+return exports;
+
+});
+
+class main extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(main, templates);
+
+/* harmony default export */ __webpack_exports__["default"] = (templates);
+/* jshint ignore:end */
+
+
+/***/ }),
+/* 94 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "termsPage", function() { return termsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
+
+
+var templates;
+goog.loadModule(function(exports) {
+
+// This file was automatically generated from terms.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace termsPage.
+ * @public
+ */
+
+goog.module('termsPage.incrementaldom');
+
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+  var param249 = function() {
+    ie_open('div', null, null,
+        'class', 'blog terms');
+      ie_open('div', null, null,
+          'class', 'container');
+        ie_open('div', null, null,
+            'class', 'content');
+          var dyn19 = opt_data.content;
+          if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
+          ie_open('article');
+            ie_open('div', null, null,
+                'class', 'we-container');
+              ie_open('span', null, null,
+                  'class', 'we-circle');
+                ie_open('span', null, null,
+                    'class', 'we');
+                  itext('We');
+                ie_close('span');
+              ie_close('span');
+            ie_close('div');
+          ie_close('article');
+        ie_close('div');
+      ie_close('div');
+    ie_close('div');
+  };
+  $templateAlias1(soy.$$assignDefaults({elementClasses: 'blog', content: param249}, opt_data), null, opt_ijData);
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'termsPage.render';
+}
+
+exports.render.params = ["content"];
+exports.render.types = {"content":"any"};
+templates = exports;
+return exports;
+
+});
+
+class termsPage extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(termsPage, templates);
+
+/* harmony default export */ __webpack_exports__["default"] = (templates);
+/* jshint ignore:end */
+
+
+/***/ }),
+/* 95 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tutorial", function() { return tutorial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
+
+
+var templates;
+goog.loadModule(function(exports) {
+
+// This file was automatically generated from tutorial.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace tutorial.
+ * @public
+ */
+
+goog.module('tutorial.incrementaldom');
+
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('TutorialSidebar.incrementaldom', 'render');
+
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('TutorialTopbar.incrementaldom', 'render');
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+  var $$temp;
+  ie_open('div', null, null,
+      'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
+    ie_open('main', null, null,
+        'class', 'content');
+      ie_open('div', null, null,
+          'class', 'tutorial');
+        if (opt_data.page) {
+          $templateAlias1({page: opt_data.site.index.children['tutorials'].children[opt_data.page.parentId]}, null, opt_ijData);
+          $tutorials(opt_data, null, opt_ijData);
+        }
+      ie_close('div');
+    ie_close('main');
+  ie_close('div');
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'tutorial.render';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $tutorials(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'sidebar-offset');
+    var param272 = function() {
+      ie_open('div', null, null,
+          'class', 'topbar-logo');
+        ie_open('span', null, null,
+            'class', 'wedeploy-logo dashboard-logo');
+          ie_open('span', null, null,
+              'class', 'we-circle');
+            ie_open('span', null, null,
+                'class', 'we');
+              itext('We');
+            ie_close('span');
+          ie_close('span');
+        ie_close('span');
+      ie_close('div');
+    };
+    $templateAlias2({elementClasses: 'topbar-light', page: opt_data.page, logo: param272}, null, opt_ijData);
+    ie_open('div', null, null,
+        'class', 'container');
+      ie_open('div', null, null,
+          'class', 'container-blog card');
+        var dyn20 = opt_data.content;
+        if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
+        $footerButtons(opt_data, null, opt_ijData);
+      ie_close('div');
+    ie_close('div');
+  ie_close('div');
+}
+exports.tutorials = $tutorials;
+if (goog.DEBUG) {
+  $tutorials.soyTemplateName = 'tutorial.tutorials';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $footerButtons(opt_data, opt_ignored, opt_ijData) {
+  ie_open('div', null, null,
+      'class', 'tutorial-page-nav');
+    var tutorialObject__soy283 = opt_data.site.index.children['tutorials'].children[opt_data.page.parentId];
+    if (opt_data.page.weight < tutorialObject__soy283.childIds.length) {
+      var nextPageUrl__soy286 = tutorialObject__soy283.children[tutorialObject__soy283.childIds[opt_data.page.weight]].url;
+      if (opt_data.site.githubRepo) {
+        ie_open('a', null, null,
+            'href', 'https://github.com/' + opt_data.site.githubRepo + '/issues/new?title=Tutorial+Problem&body=%3E+URL%3A+' + opt_data.page.url,
+            'target', '_blank',
+            'class', 'btn btn-default btn-sm');
+          itext('Report a problem');
+        ie_close('a');
+      }
+      if (opt_data.page.buttonTitle) {
+        ie_open('a', null, null,
+            'href', nextPageUrl__soy286,
+            'class', 'btn btn-accent btn-sm');
+          var dyn21 = opt_data.page.buttonTitle;
+          if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
+        ie_close('a');
+      }
+    }
+  ie_close('div');
+}
+exports.footerButtons = $footerButtons;
+if (goog.DEBUG) {
+  $footerButtons.soyTemplateName = 'tutorial.footerButtons';
+}
+
+exports.render.params = ["content","elementClasses","page","site"];
+exports.render.types = {"content":"any","elementClasses":"any","page":"any","site":"any"};
+exports.tutorials.params = ["content","page","site"];
+exports.tutorials.types = {"content":"any","page":"any","site":"any"};
+exports.footerButtons.params = ["page","site"];
+exports.footerButtons.types = {"page":"any","site":"any"};
+templates = exports;
+return exports;
+
+});
+
+class tutorial extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(tutorial, templates);
+
+/* harmony default export */ __webpack_exports__["default"] = (templates);
+/* jshint ignore:end */
+
+
+/***/ }),
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11886,1593 +13471,6 @@ exports.ElectricSearch = _ElectricSearch2.default;
 exports.ElectricSearchAutocomplete = _ElectricSearchAutocomplete2.default;
 exports.ElectricUpdates = _ElectricUpdates2.default;
 exports.default = _ElectricNavigation2.default;
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.templates = exports.Topbar = undefined;
-
-var _metalComponent = __webpack_require__(0);
-
-var _metalComponent2 = _interopRequireDefault(_metalComponent);
-
-var _metalSoy = __webpack_require__(1);
-
-var _metalSoy2 = _interopRequireDefault(_metalSoy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* jshint ignore:start */
-
-
-var templates;
-goog.loadModule(function (exports) {
-
-  // This file was automatically generated from Topbar.soy.
-  // Please don't edit this file by hand.
-
-  /**
-   * @fileoverview Templates in namespace Topbar.
-   * @hassoydeltemplate {ElectricNavigation.anchor.idom}
-   * @public
-   */
-
-  goog.module('Topbar.incrementaldom');
-
-  /** @suppress {extraRequire} */
-  var soy = goog.require('soy');
-  /** @suppress {extraRequire} */
-  var soydata = goog.require('soydata');
-  /** @suppress {extraRequire} */
-  goog.require('goog.i18n.bidi');
-  /** @suppress {extraRequire} */
-  goog.require('goog.asserts');
-  /** @suppress {extraRequire} */
-  goog.require('goog.string');
-  var IncrementalDom = goog.require('incrementaldom');
-  var ie_open = IncrementalDom.elementOpen;
-  var ie_close = IncrementalDom.elementClose;
-  var ie_void = IncrementalDom.elementVoid;
-  var ie_open_start = IncrementalDom.elementOpenStart;
-  var ie_open_end = IncrementalDom.elementOpenEnd;
-  var itext = IncrementalDom.text;
-  var iattr = IncrementalDom.attr;
-
-  var $templateAlias1 = _metalSoy2.default.getTemplate('ElectricNavigation.incrementaldom', 'render');
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $render(opt_data, opt_ignored, opt_ijData) {
-    $templateAlias1({ depth: 1, elementClasses: 'topbar-list', linkClasses: 'topbar-link', listItemClasses: 'topbar-item', anchorVariant: 'topbar', section: opt_data.section }, null, opt_ijData);
-  }
-  exports.render = $render;
-  if (goog.DEBUG) {
-    $render.soyTemplateName = 'Topbar.render';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function __deltemplate_s52_99ee0d1f(opt_data, opt_ignored, opt_ijData) {
-    var $$temp;
-    if (opt_data.page.url == '//dashboard.wedeploy.com/signup') {
-      ie_open('a', null, null, 'class', 'btn btn-accent btn-sm get-started', 'href', opt_data.page.url);
-    } else if (opt_data.page.url == '//dashboard.wedeploy.com/login') {
-      ie_open('a', null, null, 'class', 'topbar-link login', 'href', opt_data.page.url);
-    } else if (opt_data.page.url == '//chat.wedeploy.com/') {
-      ie_open('a', null, null, 'class', 'topbar-link', 'target', '_blank', 'href', opt_data.page.url);
-    } else {
-      ie_open('a', null, null, 'class', 'topbar-link' + (opt_data.page.active ? ' active' : ''), 'href', ($$temp = opt_data.page.redirect) == null ? opt_data.page.url : $$temp);
-    }
-    var dyn1 = opt_data.page.title;
-    if (typeof dyn1 == 'function') dyn1();else if (dyn1 != null) itext(dyn1);
-    ie_close('a');
-  }
-  exports.__deltemplate_s52_99ee0d1f = __deltemplate_s52_99ee0d1f;
-  if (goog.DEBUG) {
-    __deltemplate_s52_99ee0d1f.soyTemplateName = 'Topbar.__deltemplate_s52_99ee0d1f';
-  }
-  soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'topbar', 0, __deltemplate_s52_99ee0d1f);
-
-  exports.render.params = ["section"];
-  exports.render.types = { "section": "any" };
-  exports.templates = templates = exports;
-  return exports;
-});
-
-var Topbar = function (_Component) {
-  _inherits(Topbar, _Component);
-
-  function Topbar() {
-    _classCallCheck(this, Topbar);
-
-    return _possibleConstructorReturn(this, (Topbar.__proto__ || Object.getPrototypeOf(Topbar)).apply(this, arguments));
-  }
-
-  return Topbar;
-}(_metalComponent2.default);
-
-_metalSoy2.default.register(Topbar, templates);
-exports.Topbar = Topbar;
-exports.templates = templates;
-exports.default = templates;
-/* jshint ignore:end */
-
-/***/ }),
-/* 90 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.templates = exports.blog = undefined;
-
-var _metalComponent = __webpack_require__(0);
-
-var _metalComponent2 = _interopRequireDefault(_metalComponent);
-
-var _metalSoy = __webpack_require__(1);
-
-var _metalSoy2 = _interopRequireDefault(_metalSoy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* jshint ignore:start */
-
-
-var templates;
-goog.loadModule(function (exports) {
-
-  // This file was automatically generated from blog.soy.
-  // Please don't edit this file by hand.
-
-  /**
-   * @fileoverview Templates in namespace blog.
-   * @public
-   */
-
-  goog.module('blog.incrementaldom');
-
-  /** @suppress {extraRequire} */
-  var soy = goog.require('soy');
-  /** @suppress {extraRequire} */
-  var soydata = goog.require('soydata');
-  /** @suppress {extraRequire} */
-  goog.require('goog.i18n.bidi');
-  /** @suppress {extraRequire} */
-  goog.require('goog.asserts');
-  /** @suppress {extraRequire} */
-  goog.require('goog.string');
-  var IncrementalDom = goog.require('incrementaldom');
-  var ie_open = IncrementalDom.elementOpen;
-  var ie_close = IncrementalDom.elementClose;
-  var ie_void = IncrementalDom.elementVoid;
-  var ie_open_start = IncrementalDom.elementOpenStart;
-  var ie_open_end = IncrementalDom.elementOpenEnd;
-  var itext = IncrementalDom.text;
-  var iattr = IncrementalDom.attr;
-
-  var $templateAlias1 = _metalSoy2.default.getTemplate('main.incrementaldom', 'render');
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $render(opt_data, opt_ignored, opt_ijData) {
-    opt_data = opt_data || {};
-    var param117 = function param117() {
-      ie_open('div', null, null, 'class', 'blog');
-      $mainPost(opt_data, null, opt_ijData);
-      $olderPosts(opt_data, null, opt_ijData);
-      ie_close('div');
-    };
-    $templateAlias1(soy.$$assignDefaults({ elementClasses: 'blog', content: param117, currentPage: 'blog' }, opt_data), null, opt_ijData);
-  }
-  exports.render = $render;
-  if (goog.DEBUG) {
-    $render.soyTemplateName = 'blog.render';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $mainPost(opt_data, opt_ignored, opt_ijData) {
-    ie_open('article', null, null, 'class', 'container');
-    ie_open('header');
-    ie_open('small');
-    itext('By ');
-    var dyn7 = opt_data.page.author;
-    if (typeof dyn7 == 'function') dyn7();else if (dyn7 != null) itext(dyn7);
-    itext(' ');
-    ie_open('span');
-    itext('| ');
-    var dyn8 = opt_data.page.date;
-    if (typeof dyn8 == 'function') dyn8();else if (dyn8 != null) itext(dyn8);
-    ie_close('span');
-    ie_close('small');
-    ie_open('h1');
-    var dyn9 = opt_data.page.title;
-    if (typeof dyn9 == 'function') dyn9();else if (dyn9 != null) itext(dyn9);
-    ie_close('h1');
-    ie_close('header');
-    ie_open('div', null, null, 'class', 'content');
-    var dyn10 = opt_data.content;
-    if (typeof dyn10 == 'function') dyn10();else if (dyn10 != null) itext(dyn10);
-    ie_open('div', null, null, 'class', 'we-container');
-    ie_open('span', null, null, 'class', 'we-circle');
-    ie_open('span', null, null, 'class', 'we');
-    itext('We');
-    ie_close('span');
-    ie_close('span');
-    ie_close('div');
-    ie_close('div');
-    ie_close('article');
-  }
-  exports.mainPost = $mainPost;
-  if (goog.DEBUG) {
-    $mainPost.soyTemplateName = 'blog.mainPost';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $olderPosts(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'class', 'posts-list');
-    ie_open('div', null, null, 'class', 'container');
-    var blogObject__soy136 = opt_data.site.index.children['blog'];
-    var childIdList148 = blogObject__soy136.childIds;
-    var childIdListLen148 = childIdList148.length;
-    for (var childIdIndex148 = 0; childIdIndex148 < childIdListLen148; childIdIndex148++) {
-      var childIdData148 = childIdList148[childIdIndex148];
-      if (opt_data.page.url != blogObject__soy136.children[childIdData148].url && childIdIndex148 < 4) {
-        ie_open('div', null, null, 'class', 'post-item container-blog');
-        ie_open('a', null, null, 'class', 'post-item__link', 'href', blogObject__soy136.children[childIdData148].url);
-        ie_open('small');
-        itext('By ');
-        var dyn11 = blogObject__soy136.children[childIdData148].author;
-        if (typeof dyn11 == 'function') dyn11();else if (dyn11 != null) itext(dyn11);
-        itext(' ');
-        ie_open('span');
-        itext('| ');
-        var dyn12 = blogObject__soy136.children[childIdData148].date;
-        if (typeof dyn12 == 'function') dyn12();else if (dyn12 != null) itext(dyn12);
-        ie_close('span');
-        ie_close('small');
-        ie_open('h4', null, null, 'class', 'post-item__title');
-        var dyn13 = blogObject__soy136.children[childIdData148].title;
-        if (typeof dyn13 == 'function') dyn13();else if (dyn13 != null) itext(dyn13);
-        ie_close('h4');
-        ie_close('a');
-        ie_close('div');
-      }
-    }
-    ie_close('div');
-    ie_close('div');
-  }
-  exports.olderPosts = $olderPosts;
-  if (goog.DEBUG) {
-    $olderPosts.soyTemplateName = 'blog.olderPosts';
-  }
-
-  exports.render.params = [];
-  exports.render.types = {};
-  exports.mainPost.params = ["content", "page"];
-  exports.mainPost.types = { "content": "any", "page": "any" };
-  exports.olderPosts.params = ["page", "site"];
-  exports.olderPosts.types = { "page": "any", "site": "any" };
-  exports.templates = templates = exports;
-  return exports;
-});
-
-var blog = function (_Component) {
-  _inherits(blog, _Component);
-
-  function blog() {
-    _classCallCheck(this, blog);
-
-    return _possibleConstructorReturn(this, (blog.__proto__ || Object.getPrototypeOf(blog)).apply(this, arguments));
-  }
-
-  return blog;
-}(_metalComponent2.default);
-
-_metalSoy2.default.register(blog, templates);
-exports.blog = blog;
-exports.templates = templates;
-exports.default = templates;
-/* jshint ignore:end */
-
-/***/ }),
-/* 91 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.templates = exports.docs = undefined;
-
-var _metalComponent = __webpack_require__(0);
-
-var _metalComponent2 = _interopRequireDefault(_metalComponent);
-
-var _metalSoy = __webpack_require__(1);
-
-var _metalSoy2 = _interopRequireDefault(_metalSoy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* jshint ignore:start */
-
-
-var templates;
-goog.loadModule(function (exports) {
-
-  // This file was automatically generated from docs.soy.
-  // Please don't edit this file by hand.
-
-  /**
-   * @fileoverview Templates in namespace docs.
-   * @public
-   */
-
-  goog.module('docs.incrementaldom');
-
-  /** @suppress {extraRequire} */
-  var soy = goog.require('soy');
-  /** @suppress {extraRequire} */
-  var soydata = goog.require('soydata');
-  /** @suppress {extraRequire} */
-  goog.require('goog.i18n.bidi');
-  /** @suppress {extraRequire} */
-  goog.require('goog.asserts');
-  /** @suppress {extraRequire} */
-  goog.require('goog.string');
-  var IncrementalDom = goog.require('incrementaldom');
-  var ie_open = IncrementalDom.elementOpen;
-  var ie_close = IncrementalDom.elementClose;
-  var ie_void = IncrementalDom.elementVoid;
-  var ie_open_start = IncrementalDom.elementOpenStart;
-  var ie_open_end = IncrementalDom.elementOpenEnd;
-  var itext = IncrementalDom.text;
-  var iattr = IncrementalDom.attr;
-
-  var $templateAlias2 = _metalSoy2.default.getTemplate('Newsletter.incrementaldom', 'render');
-
-  var $templateAlias1 = _metalSoy2.default.getTemplate('Sidebar.incrementaldom', 'render');
-
-  var $templateAlias3 = _metalSoy2.default.getTemplate('Topbar.incrementaldom', 'render');
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $render(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'class', 'main');
-    ie_open('main', null, null, 'class', 'content guide');
-    ie_open('div', null, null, 'class', 'docs');
-    $topbar(opt_data, null, opt_ijData);
-    $templateAlias1(opt_data, null, opt_ijData);
-    ie_open('div', null, null, 'class', 'sidebar-offset');
-    var dyn14 = opt_data.content;
-    if (typeof dyn14 == 'function') dyn14();else if (dyn14 != null) itext(dyn14);
-    $templateAlias2(null, null, opt_ijData);
-    ie_close('div');
-    ie_close('div');
-    ie_close('main');
-    ie_close('div');
-  }
-  exports.render = $render;
-  if (goog.DEBUG) {
-    $render.soyTemplateName = 'docs.render';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $topbar(opt_data, opt_ignored, opt_ijData) {
-    opt_data = opt_data || {};
-    ie_open('nav', null, null, 'class', 'topbar topbar-docs topbar-light topbar-large');
-    $logo(opt_data, null, opt_ijData);
-    $menu(opt_data, null, opt_ijData);
-    ie_close('nav');
-  }
-  exports.topbar = $topbar;
-  if (goog.DEBUG) {
-    $topbar.soyTemplateName = 'docs.topbar';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $logo(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'class', 'topbar-logo');
-    ie_open('a', null, null, 'class', 'topbar-logo-link', 'href', '/');
-    ie_open('span', null, null, 'class', 'wedeploy-logo');
-    ie_open('span', null, null, 'class', 'we-circle');
-    ie_open('span', null, null, 'class', 'we');
-    itext('We');
-    ie_close('span');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'deploy');
-    itext('Deploy\u2122');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'liferay');
-    itext('by Liferay');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'alpha-container');
-    ie_void('span', null, null, 'class', 'arrow-up');
-    ie_open('span', null, null, 'class', 'alpha');
-    itext('alpha');
-    ie_close('span');
-    ie_close('span');
-    ie_close('span');
-    ie_close('a');
-    ie_close('div');
-  }
-  exports.logo = $logo;
-  if (goog.DEBUG) {
-    $logo.soyTemplateName = 'docs.logo';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $menu(opt_data, opt_ignored, opt_ijData) {
-    $templateAlias3({ section: opt_data.site.index }, null, opt_ijData);
-  }
-  exports.menu = $menu;
-  if (goog.DEBUG) {
-    $menu.soyTemplateName = 'docs.menu';
-  }
-
-  exports.render.params = ["content", "page"];
-  exports.render.types = { "content": "any", "page": "any" };
-  exports.topbar.params = [];
-  exports.topbar.types = {};
-  exports.logo.params = [];
-  exports.logo.types = {};
-  exports.menu.params = ["site"];
-  exports.menu.types = { "site": "any" };
-  exports.templates = templates = exports;
-  return exports;
-});
-
-var docs = function (_Component) {
-  _inherits(docs, _Component);
-
-  function docs() {
-    _classCallCheck(this, docs);
-
-    return _possibleConstructorReturn(this, (docs.__proto__ || Object.getPrototypeOf(docs)).apply(this, arguments));
-  }
-
-  return docs;
-}(_metalComponent2.default);
-
-_metalSoy2.default.register(docs, templates);
-exports.docs = docs;
-exports.templates = templates;
-exports.default = templates;
-/* jshint ignore:end */
-
-/***/ }),
-/* 92 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.templates = exports.guide = undefined;
-
-var _metalComponent = __webpack_require__(0);
-
-var _metalComponent2 = _interopRequireDefault(_metalComponent);
-
-var _metalSoy = __webpack_require__(1);
-
-var _metalSoy2 = _interopRequireDefault(_metalSoy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* jshint ignore:start */
-
-
-var templates;
-goog.loadModule(function (exports) {
-
-  // This file was automatically generated from guide.soy.
-  // Please don't edit this file by hand.
-
-  /**
-   * @fileoverview Templates in namespace guide.
-   * @public
-   */
-
-  goog.module('guide.incrementaldom');
-
-  /** @suppress {extraRequire} */
-  var soy = goog.require('soy');
-  /** @suppress {extraRequire} */
-  var soydata = goog.require('soydata');
-  /** @suppress {extraRequire} */
-  goog.require('goog.i18n.bidi');
-  /** @suppress {extraRequire} */
-  goog.require('goog.asserts');
-  /** @suppress {extraRequire} */
-  goog.require('goog.string');
-  var IncrementalDom = goog.require('incrementaldom');
-  var ie_open = IncrementalDom.elementOpen;
-  var ie_close = IncrementalDom.elementClose;
-  var ie_void = IncrementalDom.elementVoid;
-  var ie_open_start = IncrementalDom.elementOpenStart;
-  var ie_open_end = IncrementalDom.elementOpenEnd;
-  var itext = IncrementalDom.text;
-  var iattr = IncrementalDom.attr;
-
-  var $templateAlias3 = _metalSoy2.default.getTemplate('AffixedReadingProgress.incrementaldom', 'render');
-
-  var $templateAlias2 = _metalSoy2.default.getTemplate('Feedback.incrementaldom', 'render');
-
-  var $templateAlias4 = _metalSoy2.default.getTemplate('Newsletter.incrementaldom', 'render');
-
-  var $templateAlias1 = _metalSoy2.default.getTemplate('Sidebar.incrementaldom', 'render');
-
-  var $templateAlias5 = _metalSoy2.default.getTemplate('Topbar.incrementaldom', 'render');
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $render(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'class', 'main guide');
-    ie_open('main', null, null, 'class', 'content');
-    ie_open('div', null, null, 'class', 'docs');
-    $topbar(opt_data, null, opt_ijData);
-    $templateAlias1({ page: opt_data.site.index.children['docs'] }, null, opt_ijData);
-    ie_open('div', null, null, 'class', 'sidebar-offset');
-    $guide(opt_data, null, opt_ijData);
-    ie_close('div');
-    ie_close('div');
-    ie_close('main');
-    ie_close('div');
-  }
-  exports.render = $render;
-  if (goog.DEBUG) {
-    $render.soyTemplateName = 'guide.render';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $guide(opt_data, opt_ignored, opt_ijData) {
-    ie_open('header');
-    ie_open('div', null, null, 'class', 'container-hybrid');
-    ie_open('h1', null, null, 'class', 'title');
-    var dyn15 = opt_data.page.headerTitle;
-    if (typeof dyn15 == 'function') dyn15();else if (dyn15 != null) itext(dyn15);
-    itext(' Guide');
-    ie_close('h1');
-    ie_close('div');
-    ie_close('header');
-    ie_open('div', null, null, 'class', 'container-hybrid');
-    ie_open('div', null, null, 'class', 'docs-guide row');
-    ie_open('div', null, null, 'class', 'docs-content col-xs-16 col-md-10 col-lg-offset-1 col-lg-9');
-    ie_open('div', null, null, 'class', 'guide-content');
-    var dyn16 = opt_data.content;
-    if (typeof dyn16 == 'function') dyn16();else if (dyn16 != null) itext(dyn16);
-    ie_close('div');
-    $templateAlias2(opt_data, null, opt_ijData);
-    ie_close('div');
-    ie_open('nav', null, null, 'class', 'col-xs-16 col-md-offset-1 col-md-5 col-lg-4');
-    ie_open('div', null, null, 'class', 'docs-nav-container');
-    $templateAlias3({ elementClasses: 'docs-nav topbar-is-fixed', offsetTop: 300, offsetBottom: 200 }, null, opt_ijData);
-    ie_close('div');
-    ie_close('nav');
-    ie_close('div');
-    ie_close('div');
-    $templateAlias4(null, null, opt_ijData);
-  }
-  exports.guide = $guide;
-  if (goog.DEBUG) {
-    $guide.soyTemplateName = 'guide.guide';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $topbar(opt_data, opt_ignored, opt_ijData) {
-    opt_data = opt_data || {};
-    ie_open('nav', null, null, 'class', 'topbar topbar-docs topbar-light topbar-large');
-    $logo(opt_data, null, opt_ijData);
-    $menu(opt_data, null, opt_ijData);
-    ie_close('nav');
-  }
-  exports.topbar = $topbar;
-  if (goog.DEBUG) {
-    $topbar.soyTemplateName = 'guide.topbar';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $logo(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'class', 'topbar-logo');
-    ie_open('a', null, null, 'class', 'topbar-logo-link', 'href', '/');
-    ie_open('span', null, null, 'class', 'wedeploy-logo');
-    ie_open('span', null, null, 'class', 'we-circle');
-    ie_open('span', null, null, 'class', 'we');
-    itext('We');
-    ie_close('span');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'deploy');
-    itext('Deploy\u2122');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'liferay');
-    itext('by Liferay');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'alpha-container');
-    ie_void('span', null, null, 'class', 'arrow-up');
-    ie_open('span', null, null, 'class', 'alpha');
-    itext('alpha');
-    ie_close('span');
-    ie_close('span');
-    ie_close('span');
-    ie_close('a');
-    ie_close('div');
-  }
-  exports.logo = $logo;
-  if (goog.DEBUG) {
-    $logo.soyTemplateName = 'guide.logo';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $menu(opt_data, opt_ignored, opt_ijData) {
-    $templateAlias5({ section: opt_data.site.index }, null, opt_ijData);
-  }
-  exports.menu = $menu;
-  if (goog.DEBUG) {
-    $menu.soyTemplateName = 'guide.menu';
-  }
-
-  exports.render.params = ["site"];
-  exports.render.types = { "site": "any" };
-  exports.guide.params = ["page", "content"];
-  exports.guide.types = { "page": "any", "content": "any" };
-  exports.topbar.params = [];
-  exports.topbar.types = {};
-  exports.logo.params = [];
-  exports.logo.types = {};
-  exports.menu.params = ["site"];
-  exports.menu.types = { "site": "any" };
-  exports.templates = templates = exports;
-  return exports;
-});
-
-var guide = function (_Component) {
-  _inherits(guide, _Component);
-
-  function guide() {
-    _classCallCheck(this, guide);
-
-    return _possibleConstructorReturn(this, (guide.__proto__ || Object.getPrototypeOf(guide)).apply(this, arguments));
-  }
-
-  return guide;
-}(_metalComponent2.default);
-
-_metalSoy2.default.register(guide, templates);
-exports.guide = guide;
-exports.templates = templates;
-exports.default = templates;
-/* jshint ignore:end */
-
-/***/ }),
-/* 93 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.templates = exports.landing = undefined;
-
-var _metalComponent = __webpack_require__(0);
-
-var _metalComponent2 = _interopRequireDefault(_metalComponent);
-
-var _metalSoy = __webpack_require__(1);
-
-var _metalSoy2 = _interopRequireDefault(_metalSoy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* jshint ignore:start */
-
-
-var templates;
-goog.loadModule(function (exports) {
-
-  // This file was automatically generated from landing.soy.
-  // Please don't edit this file by hand.
-
-  /**
-   * @fileoverview Templates in namespace landing.
-   * @public
-   */
-
-  goog.module('landing.incrementaldom');
-
-  /** @suppress {extraRequire} */
-  var soy = goog.require('soy');
-  /** @suppress {extraRequire} */
-  var soydata = goog.require('soydata');
-  /** @suppress {extraRequire} */
-  goog.require('goog.i18n.bidi');
-  /** @suppress {extraRequire} */
-  goog.require('goog.asserts');
-  /** @suppress {extraRequire} */
-  goog.require('goog.string');
-  var IncrementalDom = goog.require('incrementaldom');
-  var ie_open = IncrementalDom.elementOpen;
-  var ie_close = IncrementalDom.elementClose;
-  var ie_void = IncrementalDom.elementVoid;
-  var ie_open_start = IncrementalDom.elementOpenStart;
-  var ie_open_end = IncrementalDom.elementOpenEnd;
-  var itext = IncrementalDom.text;
-  var iattr = IncrementalDom.attr;
-
-  var $templateAlias1 = _metalSoy2.default.getTemplate('Topbar.incrementaldom', 'render');
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $render(opt_data, opt_ignored, opt_ijData) {
-    var $$temp;
-    ie_open('div', null, null, 'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
-    ie_open('main', null, null, 'class', 'content');
-    $topbar(opt_data, null, opt_ijData);
-    var dyn17 = opt_data.content;
-    if (typeof dyn17 == 'function') dyn17();else if (dyn17 != null) itext(dyn17);
-    $footer(opt_data, null, opt_ijData);
-    $modal(opt_data, null, opt_ijData);
-    ie_close('main');
-    ie_close('div');
-  }
-  exports.render = $render;
-  if (goog.DEBUG) {
-    $render.soyTemplateName = 'landing.render';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $topbar(opt_data, opt_ignored, opt_ijData) {
-    opt_data = opt_data || {};
-    ie_open('div', null, null, 'id', 'topbar');
-    ie_open('div', null, null, 'class', 'col-xs-16 col-lg-14 col-lg-offset-1');
-    ie_open('div', null, null, 'class', 'row');
-    ie_open('nav', null, null, 'class', 'topbar topbar-large topbar-light');
-    $topbarLeftContent(opt_data, null, opt_ijData);
-    $topbarRightContent(opt_data, null, opt_ijData);
-    ie_close('nav');
-    ie_close('div');
-    ie_close('div');
-    ie_close('div');
-  }
-  exports.topbar = $topbar;
-  if (goog.DEBUG) {
-    $topbar.soyTemplateName = 'landing.topbar';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $topbarLeftContent(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'class', 'topbar-logo');
-    ie_open('a', null, null, 'class', 'topbar-logo-link', 'href', '/');
-    ie_open('span', null, null, 'class', 'wedeploy-logo');
-    ie_open('span', null, null, 'class', 'we-circle');
-    ie_open('span', null, null, 'class', 'we');
-    itext('We');
-    ie_close('span');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'deploy');
-    itext('Deploy\u2122');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'liferay');
-    itext('by Liferay');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'alpha-container');
-    ie_void('span', null, null, 'class', 'arrow-up');
-    ie_open('span', null, null, 'class', 'alpha');
-    itext('alpha');
-    ie_close('span');
-    ie_close('span');
-    ie_close('span');
-    ie_close('a');
-    ie_close('div');
-  }
-  exports.topbarLeftContent = $topbarLeftContent;
-  if (goog.DEBUG) {
-    $topbarLeftContent.soyTemplateName = 'landing.topbarLeftContent';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $topbarRightContent(opt_data, opt_ignored, opt_ijData) {
-    $templateAlias1({ section: opt_data.site.index }, null, opt_ijData);
-  }
-  exports.topbarRightContent = $topbarRightContent;
-  if (goog.DEBUG) {
-    $topbarRightContent.soyTemplateName = 'landing.topbarRightContent';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $footer(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'id', 'footer');
-    ie_open('div', null, null, 'class', 'container-wedeploy flex-left-center');
-    ie_open('div', null, null, 'class', 'col-xs-16 col-sm-8 info-container col-md-10 col-lg-10 col-lg-offset-1');
-    ie_open('div', null, null, 'class', 'footer__logo info');
-    ie_open('span');
-    itext('WeDeploy\u2122');
-    ie_close('span');
-    ie_close('div');
-    ie_open('div', null, null, 'class', 'footer__copy info');
-    ie_open('span');
-    itext('Copyright \xA9 2017');
-    ie_open('br');
-    ie_close('br');
-    itext('Liferay, Inc.');
-    ie_close('span');
-    ie_close('div');
-    ie_open('div', null, null, 'class', 'footer__link info');
-    ie_open('a', null, null, 'href', 'http://status.wedeploy.com/', 'target', '_blank');
-    ie_open('span');
-    itext('Uptime status');
-    ie_close('span');
-    ie_close('a');
-    ie_close('div');
-    ie_close('div');
-    ie_open('div', null, null, 'class', 'footer__media-kit col-xs-16 col-sm-8 col-md-6 col-lg-4');
-    ie_open('a', null, null, 'data-senna-off', '', 'href', 'images/WeDeploy-Media-Kit.zip', 'class', 'btn btn-inverse-accent btn-s', 'download', '');
-    itext('Media Kit');
-    ie_close('a');
-    ie_open('a', null, null, 'class', 'ic-github', 'href', 'http://github.com/wedeploy', 'target', '_blank');
-    ie_void('span', null, null, 'class', 'icon-16-github');
-    ie_close('a');
-    ie_open('a', null, null, 'class', 'ic-twitter', 'href', 'http://twitter.com/wedeploy', 'target', '_blank');
-    ie_void('span', null, null, 'class', 'icon-16-twitter');
-    ie_close('a');
-    ie_close('div');
-    ie_close('div');
-    ie_close('div');
-  }
-  exports.footer = $footer;
-  if (goog.DEBUG) {
-    $footer.soyTemplateName = 'landing.footer';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $modal(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'class', 'modal');
-    ie_open('div', null, null, 'class', 'modal-container');
-    ie_open('a', null, null, 'class', 'modal__close flex-center-center', 'href', 'javascript:void(0);');
-    ie_void('span', null, null, 'class', 'close__icon icon-16-cancel');
-    ie_close('a');
-    ie_open('div', null, null, 'id', 'modal__form-container');
-    ie_open('div', null, null, 'class', 'form flex-center-top');
-    ie_open('div', null, null, 'class', 'logo flex-center-center');
-    ie_open('span');
-    itext('We');
-    ie_close('span');
-    ie_close('div');
-    ie_open('h2');
-    itext('Request an Invite for WeDeploy\u2122');
-    ie_close('h2');
-    ie_open('p');
-    itext('We can\'t wait to see what you\'re going to build.');
-    ie_close('p');
-    ie_open('form', null, null, 'id', 'form-modal', 'class', 'flex-center-top column form-signup');
-    ie_open('div', null, null, 'class', 'form-group');
-    ie_open('label');
-    itext('Email');
-    ie_close('label');
-    ie_open('input', null, null, 'type', 'text', 'class', 'form-control', 'name', 'email', 'placeholder', 'Enter your email address');
-    ie_close('input');
-    ie_close('div');
-    ie_void('p', null, null, 'id', 'form-modal__validation', 'class', 'form-validation');
-    ie_open('button', null, null, 'id', 'form-modal__submit', 'class', 'btn btn-accent');
-    ie_open('span');
-    itext('Get Started \u2013 It\u2019s FREE');
-    ie_close('span');
-    ie_close('button');
-    ie_open('div', null, null, 'class', 'small-container flex-center-top');
-    ie_open('small');
-    itext('By entering your email you agree to receive information about WeDeploy\u2122.');
-    ie_close('small');
-    ie_close('div');
-    ie_close('form');
-    ie_close('div');
-    ie_open('div', null, null, 'class', 'copy');
-    ie_open('p');
-    itext('Copyright \xA9 2017 Liferay, Inc.');
-    ie_close('p');
-    ie_close('div');
-    ie_close('div');
-    ie_open('div', null, null, 'id', 'modal__response-container', 'class', 'flex-center-top');
-    ie_open('div', null, null, 'class', 'logo flex-center-center');
-    ie_open('span');
-    itext('We');
-    ie_close('span');
-    ie_close('div');
-    ie_open('h2');
-    itext('Thanks for requesting an invite!');
-    ie_close('h2');
-    ie_open('p');
-    itext('We\'ll drop you an email when Wedeploy\u2122 is ready. Stay tuned.');
-    ie_close('p');
-    ie_close('div');
-    ie_close('div');
-    ie_close('div');
-  }
-  exports.modal = $modal;
-  if (goog.DEBUG) {
-    $modal.soyTemplateName = 'landing.modal';
-  }
-
-  exports.render.params = ["content", "elementClasses"];
-  exports.render.types = { "content": "any", "elementClasses": "any" };
-  exports.topbar.params = [];
-  exports.topbar.types = {};
-  exports.topbarLeftContent.params = [];
-  exports.topbarLeftContent.types = {};
-  exports.topbarRightContent.params = ["site"];
-  exports.topbarRightContent.types = { "site": "any" };
-  exports.footer.params = [];
-  exports.footer.types = {};
-  exports.modal.params = [];
-  exports.modal.types = {};
-  exports.templates = templates = exports;
-  return exports;
-});
-
-var landing = function (_Component) {
-  _inherits(landing, _Component);
-
-  function landing() {
-    _classCallCheck(this, landing);
-
-    return _possibleConstructorReturn(this, (landing.__proto__ || Object.getPrototypeOf(landing)).apply(this, arguments));
-  }
-
-  return landing;
-}(_metalComponent2.default);
-
-_metalSoy2.default.register(landing, templates);
-exports.landing = landing;
-exports.templates = templates;
-exports.default = templates;
-/* jshint ignore:end */
-
-/***/ }),
-/* 94 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.templates = exports.main = undefined;
-
-var _metalComponent = __webpack_require__(0);
-
-var _metalComponent2 = _interopRequireDefault(_metalComponent);
-
-var _metalSoy = __webpack_require__(1);
-
-var _metalSoy2 = _interopRequireDefault(_metalSoy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* jshint ignore:start */
-
-
-var templates;
-goog.loadModule(function (exports) {
-
-  // This file was automatically generated from main.soy.
-  // Please don't edit this file by hand.
-
-  /**
-   * @fileoverview Templates in namespace main.
-   * @public
-   */
-
-  goog.module('main.incrementaldom');
-
-  /** @suppress {extraRequire} */
-  var soy = goog.require('soy');
-  /** @suppress {extraRequire} */
-  var soydata = goog.require('soydata');
-  /** @suppress {extraRequire} */
-  goog.require('goog.i18n.bidi');
-  /** @suppress {extraRequire} */
-  goog.require('goog.asserts');
-  /** @suppress {extraRequire} */
-  goog.require('goog.string');
-  var IncrementalDom = goog.require('incrementaldom');
-  var ie_open = IncrementalDom.elementOpen;
-  var ie_close = IncrementalDom.elementClose;
-  var ie_void = IncrementalDom.elementVoid;
-  var ie_open_start = IncrementalDom.elementOpenStart;
-  var ie_open_end = IncrementalDom.elementOpenEnd;
-  var itext = IncrementalDom.text;
-  var iattr = IncrementalDom.attr;
-
-  var $templateAlias1 = _metalSoy2.default.getTemplate('Topbar.incrementaldom', 'render');
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $render(opt_data, opt_ignored, opt_ijData) {
-    var $$temp;
-    ie_open('div', null, null, 'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
-    ie_open('main', null, null, 'class', 'content');
-    $topbar(opt_data, null, opt_ijData);
-    var dyn18 = opt_data.content;
-    if (typeof dyn18 == 'function') dyn18();else if (dyn18 != null) itext(dyn18);
-    ie_close('main');
-    ie_close('div');
-  }
-  exports.render = $render;
-  if (goog.DEBUG) {
-    $render.soyTemplateName = 'main.render';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $topbar(opt_data, opt_ignored, opt_ijData) {
-    opt_data = opt_data || {};
-    ie_open('div', null, null, 'id', 'topbar');
-    ie_open('div', null, null, 'class', 'col-xs-16 col-lg-14 col-lg-offset-1');
-    ie_open('div', null, null, 'class', 'row');
-    ie_open('nav', null, null, 'class', 'topbar topbar-large topbar-light');
-    $logo(opt_data, null, opt_ijData);
-    $menu(opt_data, null, opt_ijData);
-    ie_close('nav');
-    ie_close('div');
-    ie_close('div');
-    ie_close('div');
-  }
-  exports.topbar = $topbar;
-  if (goog.DEBUG) {
-    $topbar.soyTemplateName = 'main.topbar';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $logo(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'class', 'topbar-logo');
-    ie_open('a', null, null, 'class', 'topbar-logo-link', 'href', '/');
-    ie_open('span', null, null, 'class', 'wedeploy-logo');
-    ie_open('span', null, null, 'class', 'we-circle');
-    ie_open('span', null, null, 'class', 'we');
-    itext('We');
-    ie_close('span');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'deploy');
-    itext('Deploy\u2122');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'liferay');
-    itext('by Liferay');
-    ie_close('span');
-    ie_open('span', null, null, 'class', 'alpha-container');
-    ie_void('span', null, null, 'class', 'arrow-up');
-    ie_open('span', null, null, 'class', 'alpha');
-    itext('alpha');
-    ie_close('span');
-    ie_close('span');
-    ie_close('span');
-    ie_close('a');
-    ie_close('div');
-  }
-  exports.logo = $logo;
-  if (goog.DEBUG) {
-    $logo.soyTemplateName = 'main.logo';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $menu(opt_data, opt_ignored, opt_ijData) {
-    $templateAlias1({ section: opt_data.site.index }, null, opt_ijData);
-  }
-  exports.menu = $menu;
-  if (goog.DEBUG) {
-    $menu.soyTemplateName = 'main.menu';
-  }
-
-  exports.render.params = ["content", "elementClasses"];
-  exports.render.types = { "content": "any", "elementClasses": "any" };
-  exports.topbar.params = [];
-  exports.topbar.types = {};
-  exports.logo.params = [];
-  exports.logo.types = {};
-  exports.menu.params = ["site"];
-  exports.menu.types = { "site": "any" };
-  exports.templates = templates = exports;
-  return exports;
-});
-
-var main = function (_Component) {
-  _inherits(main, _Component);
-
-  function main() {
-    _classCallCheck(this, main);
-
-    return _possibleConstructorReturn(this, (main.__proto__ || Object.getPrototypeOf(main)).apply(this, arguments));
-  }
-
-  return main;
-}(_metalComponent2.default);
-
-_metalSoy2.default.register(main, templates);
-exports.main = main;
-exports.templates = templates;
-exports.default = templates;
-/* jshint ignore:end */
-
-/***/ }),
-/* 95 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.templates = exports.termsPage = undefined;
-
-var _metalComponent = __webpack_require__(0);
-
-var _metalComponent2 = _interopRequireDefault(_metalComponent);
-
-var _metalSoy = __webpack_require__(1);
-
-var _metalSoy2 = _interopRequireDefault(_metalSoy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* jshint ignore:start */
-
-
-var templates;
-goog.loadModule(function (exports) {
-
-  // This file was automatically generated from terms.soy.
-  // Please don't edit this file by hand.
-
-  /**
-   * @fileoverview Templates in namespace termsPage.
-   * @public
-   */
-
-  goog.module('termsPage.incrementaldom');
-
-  /** @suppress {extraRequire} */
-  var soy = goog.require('soy');
-  /** @suppress {extraRequire} */
-  var soydata = goog.require('soydata');
-  /** @suppress {extraRequire} */
-  goog.require('goog.i18n.bidi');
-  /** @suppress {extraRequire} */
-  goog.require('goog.asserts');
-  /** @suppress {extraRequire} */
-  goog.require('goog.string');
-  var IncrementalDom = goog.require('incrementaldom');
-  var ie_open = IncrementalDom.elementOpen;
-  var ie_close = IncrementalDom.elementClose;
-  var ie_void = IncrementalDom.elementVoid;
-  var ie_open_start = IncrementalDom.elementOpenStart;
-  var ie_open_end = IncrementalDom.elementOpenEnd;
-  var itext = IncrementalDom.text;
-  var iattr = IncrementalDom.attr;
-
-  var $templateAlias1 = _metalSoy2.default.getTemplate('main.incrementaldom', 'render');
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $render(opt_data, opt_ignored, opt_ijData) {
-    var param249 = function param249() {
-      ie_open('div', null, null, 'class', 'blog terms');
-      ie_open('div', null, null, 'class', 'container');
-      ie_open('div', null, null, 'class', 'content');
-      var dyn19 = opt_data.content;
-      if (typeof dyn19 == 'function') dyn19();else if (dyn19 != null) itext(dyn19);
-      ie_open('article');
-      ie_open('div', null, null, 'class', 'we-container');
-      ie_open('span', null, null, 'class', 'we-circle');
-      ie_open('span', null, null, 'class', 'we');
-      itext('We');
-      ie_close('span');
-      ie_close('span');
-      ie_close('div');
-      ie_close('article');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-    };
-    $templateAlias1(soy.$$assignDefaults({ elementClasses: 'blog', content: param249 }, opt_data), null, opt_ijData);
-  }
-  exports.render = $render;
-  if (goog.DEBUG) {
-    $render.soyTemplateName = 'termsPage.render';
-  }
-
-  exports.render.params = ["content"];
-  exports.render.types = { "content": "any" };
-  exports.templates = templates = exports;
-  return exports;
-});
-
-var termsPage = function (_Component) {
-  _inherits(termsPage, _Component);
-
-  function termsPage() {
-    _classCallCheck(this, termsPage);
-
-    return _possibleConstructorReturn(this, (termsPage.__proto__ || Object.getPrototypeOf(termsPage)).apply(this, arguments));
-  }
-
-  return termsPage;
-}(_metalComponent2.default);
-
-_metalSoy2.default.register(termsPage, templates);
-exports.termsPage = termsPage;
-exports.templates = templates;
-exports.default = templates;
-/* jshint ignore:end */
-
-/***/ }),
-/* 96 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.templates = exports.tutorial = undefined;
-
-var _metalComponent = __webpack_require__(0);
-
-var _metalComponent2 = _interopRequireDefault(_metalComponent);
-
-var _metalSoy = __webpack_require__(1);
-
-var _metalSoy2 = _interopRequireDefault(_metalSoy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* jshint ignore:start */
-
-
-var templates;
-goog.loadModule(function (exports) {
-
-  // This file was automatically generated from tutorial.soy.
-  // Please don't edit this file by hand.
-
-  /**
-   * @fileoverview Templates in namespace tutorial.
-   * @public
-   */
-
-  goog.module('tutorial.incrementaldom');
-
-  /** @suppress {extraRequire} */
-  var soy = goog.require('soy');
-  /** @suppress {extraRequire} */
-  var soydata = goog.require('soydata');
-  /** @suppress {extraRequire} */
-  goog.require('goog.i18n.bidi');
-  /** @suppress {extraRequire} */
-  goog.require('goog.asserts');
-  /** @suppress {extraRequire} */
-  goog.require('goog.string');
-  var IncrementalDom = goog.require('incrementaldom');
-  var ie_open = IncrementalDom.elementOpen;
-  var ie_close = IncrementalDom.elementClose;
-  var ie_void = IncrementalDom.elementVoid;
-  var ie_open_start = IncrementalDom.elementOpenStart;
-  var ie_open_end = IncrementalDom.elementOpenEnd;
-  var itext = IncrementalDom.text;
-  var iattr = IncrementalDom.attr;
-
-  var $templateAlias1 = _metalSoy2.default.getTemplate('TutorialSidebar.incrementaldom', 'render');
-
-  var $templateAlias2 = _metalSoy2.default.getTemplate('TutorialTopbar.incrementaldom', 'render');
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $render(opt_data, opt_ignored, opt_ijData) {
-    var $$temp;
-    ie_open('div', null, null, 'class', ($$temp = opt_data.elementClasses) == null ? 'main' : $$temp);
-    ie_open('main', null, null, 'class', 'content');
-    ie_open('div', null, null, 'class', 'tutorial');
-    if (opt_data.page) {
-      $templateAlias1({ page: opt_data.site.index.children['tutorials'].children[opt_data.page.parentId] }, null, opt_ijData);
-      $tutorials(opt_data, null, opt_ijData);
-    }
-    ie_close('div');
-    ie_close('main');
-    ie_close('div');
-  }
-  exports.render = $render;
-  if (goog.DEBUG) {
-    $render.soyTemplateName = 'tutorial.render';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $tutorials(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'class', 'sidebar-offset');
-    var param272 = function param272() {
-      ie_open('div', null, null, 'class', 'topbar-logo');
-      ie_open('span', null, null, 'class', 'wedeploy-logo dashboard-logo');
-      ie_open('span', null, null, 'class', 'we-circle');
-      ie_open('span', null, null, 'class', 'we');
-      itext('We');
-      ie_close('span');
-      ie_close('span');
-      ie_close('span');
-      ie_close('div');
-    };
-    $templateAlias2({ elementClasses: 'topbar-light', page: opt_data.page, logo: param272 }, null, opt_ijData);
-    ie_open('div', null, null, 'class', 'container');
-    ie_open('div', null, null, 'class', 'container-blog card');
-    var dyn20 = opt_data.content;
-    if (typeof dyn20 == 'function') dyn20();else if (dyn20 != null) itext(dyn20);
-    $footerButtons(opt_data, null, opt_ijData);
-    ie_close('div');
-    ie_close('div');
-    ie_close('div');
-  }
-  exports.tutorials = $tutorials;
-  if (goog.DEBUG) {
-    $tutorials.soyTemplateName = 'tutorial.tutorials';
-  }
-
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $footerButtons(opt_data, opt_ignored, opt_ijData) {
-    ie_open('div', null, null, 'class', 'tutorial-page-nav');
-    var tutorialObject__soy283 = opt_data.site.index.children['tutorials'].children[opt_data.page.parentId];
-    if (opt_data.page.weight < tutorialObject__soy283.childIds.length) {
-      var nextPageUrl__soy286 = tutorialObject__soy283.children[tutorialObject__soy283.childIds[opt_data.page.weight]].url;
-      if (opt_data.site.githubRepo) {
-        ie_open('a', null, null, 'href', 'https://github.com/' + opt_data.site.githubRepo + '/issues/new?title=Tutorial+Problem&body=%3E+URL%3A+' + opt_data.page.url, 'target', '_blank', 'class', 'btn btn-default btn-sm');
-        itext('Report a problem');
-        ie_close('a');
-      }
-      if (opt_data.page.buttonTitle) {
-        ie_open('a', null, null, 'href', nextPageUrl__soy286, 'class', 'btn btn-accent btn-sm');
-        var dyn21 = opt_data.page.buttonTitle;
-        if (typeof dyn21 == 'function') dyn21();else if (dyn21 != null) itext(dyn21);
-        ie_close('a');
-      }
-    }
-    ie_close('div');
-  }
-  exports.footerButtons = $footerButtons;
-  if (goog.DEBUG) {
-    $footerButtons.soyTemplateName = 'tutorial.footerButtons';
-  }
-
-  exports.render.params = ["content", "elementClasses", "page", "site"];
-  exports.render.types = { "content": "any", "elementClasses": "any", "page": "any", "site": "any" };
-  exports.tutorials.params = ["content", "page", "site"];
-  exports.tutorials.types = { "content": "any", "page": "any", "site": "any" };
-  exports.footerButtons.params = ["page", "site"];
-  exports.footerButtons.types = { "page": "any", "site": "any" };
-  exports.templates = templates = exports;
-  return exports;
-});
-
-var tutorial = function (_Component) {
-  _inherits(tutorial, _Component);
-
-  function tutorial() {
-    _classCallCheck(this, tutorial);
-
-    return _possibleConstructorReturn(this, (tutorial.__proto__ || Object.getPrototypeOf(tutorial)).apply(this, arguments));
-  }
-
-  return tutorial;
-}(_metalComponent2.default);
-
-_metalSoy2.default.register(tutorial, templates);
-exports.tutorial = tutorial;
-exports.templates = templates;
-exports.default = templates;
-/* jshint ignore:end */
 
 /***/ }),
 /* 97 */
@@ -35431,95 +35429,90 @@ exports.default = templates;
 /* 239 */,
 /* 240 */,
 /* 241 */,
-/* 242 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 242 */,
+/* 243 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.templates = exports.pageDocsOtherIndex = undefined;
-
-var _metalComponent = __webpack_require__(0);
-
-var _metalComponent2 = _interopRequireDefault(_metalComponent);
-
-var _metalSoy = __webpack_require__(1);
-
-var _metalSoy2 = _interopRequireDefault(_metalSoy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* jshint ignore:start */
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageDocsOtherIndex", function() { return pageDocsOtherIndex; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
 
 
 var templates;
-goog.loadModule(function (exports) {
+goog.loadModule(function(exports) {
 
-  // This file was automatically generated from index.soy.
-  // Please don't edit this file by hand.
+// This file was automatically generated from index.soy.
+// Please don't edit this file by hand.
 
-  /**
-   * @fileoverview Templates in namespace pageDocsOtherIndex.
-   * @public
-   */
+/**
+ * @fileoverview Templates in namespace pageDocsOtherIndex.
+ * @public
+ */
 
-  goog.module('pageDocsOtherIndex.incrementaldom');
+goog.module('pageDocsOtherIndex.incrementaldom');
 
-  /** @suppress {extraRequire} */
-  var soy = goog.require('soy');
-  /** @suppress {extraRequire} */
-  var soydata = goog.require('soydata');
-  /** @suppress {extraRequire} */
-  goog.require('goog.i18n.bidi');
-  /** @suppress {extraRequire} */
-  goog.require('goog.asserts');
-  /** @suppress {extraRequire} */
-  goog.require('goog.string');
-  var IncrementalDom = goog.require('incrementaldom');
-  var ie_open = IncrementalDom.elementOpen;
-  var ie_close = IncrementalDom.elementClose;
-  var ie_void = IncrementalDom.elementVoid;
-  var ie_open_start = IncrementalDom.elementOpenStart;
-  var ie_open_end = IncrementalDom.elementOpenEnd;
-  var itext = IncrementalDom.text;
-  var iattr = IncrementalDom.attr;
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
 
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $render(opt_data, opt_ignored, opt_ijData) {}
-  exports.render = $render;
-  if (goog.DEBUG) {
-    $render.soyTemplateName = 'pageDocsOtherIndex.render';
-  }
 
-  /**
-   * @param {Object<string, *>=} opt_data
-   * @param {(null|undefined)=} opt_ignored
-   * @param {Object<string, *>=} opt_ijData
-   * @return {void}
-   * @suppress {checkTypes}
-   */
-  function $soyweb(opt_data, opt_ignored, opt_ijData) {
-    ie_open('!DOCTYPE', null, null, 'html', '');
-    ie_open('html', null, null, 'lang', 'en');
-    ie_open('head');
-    ie_open('meta', null, null, 'charset', 'UTF-8');
-    ie_close('meta');
-    ie_open('meta', null, null, 'http-equiv', 'refresh', 'content', '0; URL=\'' + opt_data.page.url + '\'');
-    ie_close('meta');
-    ie_close('head');
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'pageDocsOtherIndex.render';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $soyweb(opt_data, opt_ignored, opt_ijData) {
+  ie_open('!DOCTYPE', null, null,
+      'html', '');
+    ie_open('html', null, null,
+        'lang', 'en');
+      ie_open('head');
+        ie_open('meta', null, null,
+            'charset', 'UTF-8');
+        ie_close('meta');
+        ie_open('meta', null, null,
+            'http-equiv', 'refresh',
+            'content', '0; URL=\'' + opt_data.page.url + '\'');
+        ie_close('meta');
+      ie_close('head');
     ie_close('html');
   }
   exports.soyweb = $soyweb;
@@ -35527,34 +35520,23 @@ goog.loadModule(function (exports) {
     $soyweb.soyTemplateName = 'pageDocsOtherIndex.soyweb';
   }
 
-  exports.render.params = [];
-  exports.render.types = {};
-  exports.soyweb.params = ["page"];
-  exports.soyweb.types = { "page": "any" };
-  exports.templates = templates = exports;
-  return exports;
+exports.render.params = [];
+exports.render.types = {};
+exports.soyweb.params = ["page"];
+exports.soyweb.types = {"page":"any"};
+templates = exports;
+return exports;
+
 });
 
-var pageDocsOtherIndex = function (_Component) {
-  _inherits(pageDocsOtherIndex, _Component);
+class pageDocsOtherIndex extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsOtherIndex, templates);
 
-  function pageDocsOtherIndex() {
-    _classCallCheck(this, pageDocsOtherIndex);
-
-    return _possibleConstructorReturn(this, (pageDocsOtherIndex.__proto__ || Object.getPrototypeOf(pageDocsOtherIndex)).apply(this, arguments));
-  }
-
-  return pageDocsOtherIndex;
-}(_metalComponent2.default);
-
-_metalSoy2.default.register(pageDocsOtherIndex, templates);
-exports.pageDocsOtherIndex = pageDocsOtherIndex;
-exports.templates = templates;
-exports.default = templates;
+/* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
+
 /***/ }),
-/* 243 */,
 /* 244 */,
 /* 245 */,
 /* 246 */,
@@ -35687,7 +35669,8 @@ exports.default = templates;
 /* 373 */,
 /* 374 */,
 /* 375 */,
-/* 376 */
+/* 376 */,
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35705,7 +35688,7 @@ var _metalSoy = __webpack_require__(1);
 
 var _metalSoy2 = _interopRequireDefault(_metalSoy);
 
-__webpack_require__(88);
+__webpack_require__(96);
 
 __webpack_require__(82);
 
@@ -35715,11 +35698,13 @@ __webpack_require__(84);
 
 __webpack_require__(85);
 
-__webpack_require__(89);
+__webpack_require__(88);
 
 __webpack_require__(86);
 
 __webpack_require__(87);
+
+__webpack_require__(89);
 
 __webpack_require__(90);
 
@@ -35733,9 +35718,7 @@ __webpack_require__(94);
 
 __webpack_require__(95);
 
-__webpack_require__(96);
-
-var _indexSoy = __webpack_require__(242);
+var _indexSoy = __webpack_require__(243);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -35766,4 +35749,4 @@ _metalSoy2.default.register(pageDocsOtherIndex, _indexSoy2.default);
 exports.default = pageDocsOtherIndex;
 
 /***/ })
-],[376]);
+],[377]);
