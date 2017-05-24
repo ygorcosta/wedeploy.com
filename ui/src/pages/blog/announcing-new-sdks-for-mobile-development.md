@@ -11,6 +11,10 @@ layout: "blog"
 
 {$page.description}
 
+<figure>
+	<img src="../images/blog/post-11--0.png" alt="New SDK's for mobile development">
+</figure>
+
 Nowadays, we live in a world full of devices. From watching movies on your Apple TV, Receiving notifications on your smart watch, or reading books on your Kindle, we rarely go anywhere without our devices. It doesn't seem to be slowing down either; more and more devices are being built and more and more services are being created for them. 
 
 > Mobile and web development just isn't enough, we are entering an age of multi-device development.
