@@ -1,9 +1,9 @@
 ---
 title: "Announcing new SDK's for Mobile Development"
-description: "Are you an Android or iOS developer? Do you need to deploy services quickly and easily to the cloud and focus on your mobile apps? Did you wish you could use WeDeploy on you mobile apps? Well today is a big day for you!"
+description: "Are you an Android or iOS developer? Do you need to deploy services quickly and easily to the cloud and focus on your mobile apps? Well today is a big day for you!"
 date: "May 10, 2017"
 author: "Jose M. Navarro"
-image: "http://wedeploy.com/images/blog/post-11--0.gif"
+image: "http://wedeploy.com/images/blog/post-11--0.png"
 layout: "blog"
 ---
 
@@ -13,7 +13,7 @@ layout: "blog"
 
 Nowadays, we live in a world full of devices. From watching movies on your Apple TV, Receiving notifications on your smart watch, or reading books on your Kindle, we rarely go anywhere without our devices. It doesn't seem to be slowing down either; more and more devices are being built and more and more services are being created for them. 
 
-> Now mobile and web development just isn't enough, we are entering an age of multi-device development.
+> Mobile and web development just isn't enough, we are entering an age of multi-device development.
 
 That's why WeDeploy was born with more than web development in mind. We understood that as more and more devices consumed API's, this would be the future of development. 
 
@@ -24,14 +24,14 @@ We didn't want to just use raw HTTP requests, so we built API clients that could
 With them, you will be able to build apps for the following platforms:
 
 * **Apple**: iOS (iPhone, iPad, iPod Touch), watchOS (AppleWatch), tvOS (AppleTV), macOS (CarPlay and Desktop apps).
-* **Google**: Android phones and tablets, Android Wear, Android TV, Android Auto and... any platform that supports Java!
+* **Google**: Android phones and tablets, Android Wear, Android TV, Android Auto and any platform that supports Java!
 
 <figure>
-	<img src="../images/blog/post-11--0.gif" alt="Realtime communication across devices">
+	<img src="../images/blog/post-11--1.gif" alt="Realtime communication across devices">
 </figure>
 
 
-#### What can you do on those mobile platforms?
+#### What can I do on those mobile platforms?
 
 Whatever you want! Mainly, the clients provides you access to:
 
