@@ -43,7 +43,7 @@ In order for your email request to be authorized, you must add your project's un
 2. Click on your project
 3. Go to the _Settings_ section
 4. Copy your Master Token
-5. Change the TokenAuth('000-000-000') initialization to TokenAuth('your-master-token') in the swift code
+5. Change the `TokenAuth('000-000-000')` initialization to `TokenAuth('your-master-token')` in the swift code
 
 <aside>
 
