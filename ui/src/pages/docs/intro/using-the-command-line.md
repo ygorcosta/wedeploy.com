@@ -61,26 +61,30 @@ Usage:
 
 For this demo we are going to use the hosting boilerplate.
 
-1. Start local infrastructure:
+<ol>
+
+<li>Start local infrastructure:</li>
 
 ```xml
 we run
 ```
 
-2. Clone this repository:
+<li>Clone this repository:</li>
 
 ```xml
 git clone https://github.com/wedeploy/boilerplate-hosting.git
 cd boilerplate-hosting
 ```
 
-3. Link this container to a new project named demo:
+<li>Link this container to a new project named demo:</li>
 
 ```xml
 we link --project demo
 ```
 
-4. Now your container should be accessible from [http://hosting.demo.wedeploy.me](http://hosting.demo.wedeploy.me)
+<li>Now your container should be accessible from <a href="http://hosting.demo.wedeploy.me">hosting.demo.wedeploy.me</a></li>
+
+</ol>
 
 *The first time you run the project it might take a few minutes while the hosting image is being downloaded in the background.*
 
