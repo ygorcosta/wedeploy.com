@@ -17,7 +17,7 @@ Now we want to add some code that will save data to a collection.
 
 To do this, go to `AddToDoActivity.java` and paste this code into the "addToDo" method:
 
-```java
+```text/x-java
 weDeploy.data("data.<your-project-id>.wedeploy.io")
 	.create("tasks", jsonObject)
 	.execute(new Callback() {
@@ -42,7 +42,7 @@ Next, we want to add the code that will fetch data from the collection.
 
 To do this, go to `ToDoListActivity.java` and paste this code into the "populateList" method:
 
-```java
+```text/x-java
 weDeploy.data("data.<your-project-id>.wedeploy.io")
 	.limit(5)
 	.orderBy("id", SortOrder.DESCENDING)

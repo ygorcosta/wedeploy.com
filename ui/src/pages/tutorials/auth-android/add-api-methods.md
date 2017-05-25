@@ -17,7 +17,7 @@ First, let's add the code that will allow users to create an account.
 
 To do this, go to `SignUpActivity.java` and paste this code in the "doSignUp" method:
 
-```java
+```text/x-java
 weDeploy.auth("auth.<your-project-id>.wedeploy.io")
 	.createUser(email, password, name)
 	.execute(new Callback() {
@@ -44,7 +44,7 @@ Next, let's add the code that will allow users to sign-in.
 
 First of all, go to `LoginActivity.java`, and paste this code in the "doLogin" method:
 
-```java
+```text/x-java
 weDeploy.auth("auth.<your-project-id>.wedeploy.io")
 	.signIn(email, password).execute(new Callback() {
 		@Override
@@ -68,7 +68,7 @@ If you run the app and fill the login fields you can login into WeDeploy!
 In the examples above we use the execute(callback) method to handle the response with a callback, which is the most typical way of doing it in the Android ecosystem, 
 but we can also handle the result using a RxJava Single, which is similar to an Observable, but it either emits one value or an error notification:
 
-```java
+```text/x-java
 weDeploy.auth("auth.<your-project-id>.wedeploy.io")
 	.signIn(email, password)
 	.asSingle()

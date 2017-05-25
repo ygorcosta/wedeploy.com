@@ -13,7 +13,7 @@ weight: 7
 
 Now we want to add a script that will send an email. To do this, go to `MainActivity.java` and paste this code into the "sendEmail" method:
 
-```java
+```text/x-java
 weDeploy = new WeDeploy.Builder()
 	.authorization(new TokenAuthorization("000-000-000"))
 	.build();
