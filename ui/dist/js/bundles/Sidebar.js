@@ -16024,41 +16024,40 @@ var Toggler = function (_State) {
 
 		/**
   * Manually collapse the content's visibility.
-  * @param {!Element} header
+  * @param {string|!Element} header
   */
 
 	}, {
 		key: 'collapse',
-		value: function collapse() {
-			var header = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.header;
-
-			var content = this.getContentElement_(header);
+		value: function collapse(header) {
+			var headerElements = this.getHeaderElements_(header);
+			var content = this.getContentElement_(headerElements);
 			_metalDom2.default.removeClasses(content, this.expandedClasses);
 			_metalDom2.default.addClasses(content, this.collapsedClasses);
-			_metalDom2.default.removeClasses(header, this.headerExpandedClasses);
-			_metalDom2.default.addClasses(header, this.headerCollapsedClasses);
+			_metalDom2.default.removeClasses(headerElements, this.headerExpandedClasses);
+			_metalDom2.default.addClasses(headerElements, this.headerCollapsedClasses);
 		}
 
 		/**
   * Manually expand the content's visibility.
-  * @param {!Element} header
+  * @param {string|!Element} header
   */
 
 	}, {
 		key: 'expand',
-		value: function expand() {
-			var header = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.header;
-
-			var content = this.getContentElement_(header);
+		value: function expand(header) {
+			var headerElements = this.getHeaderElements_(header);
+			var content = this.getContentElement_(headerElements);
 			_metalDom2.default.addClasses(content, this.expandedClasses);
 			_metalDom2.default.removeClasses(content, this.collapsedClasses);
-			_metalDom2.default.addClasses(header, this.headerExpandedClasses);
-			_metalDom2.default.removeClasses(header, this.headerCollapsedClasses);
+			_metalDom2.default.addClasses(headerElements, this.headerExpandedClasses);
+			_metalDom2.default.removeClasses(headerElements, this.headerCollapsedClasses);
 		}
 
 		/**
    * Gets the content to be toggled by the given header element.
    * @param {!Element} header
+   * @returns {!Element}
    * @protected
    */
 
@@ -16074,12 +16073,32 @@ var Toggler = function (_State) {
 				return content;
 			}
 
-			content = header.querySelector(this.content);
-			if (content) {
-				return content;
+			if (_metal2.default.isElement(header)) {
+				content = header.querySelector(this.content);
+				if (content) {
+					return content;
+				}
 			}
 
-			return this.container.querySelector(this.content);
+			return this.container.querySelectorAll(this.content);
+		}
+
+		/**
+   * Gets the header elements by giving a selector.
+   * @param {string} header
+   * @returns {!Nodelist}
+   * @protected
+   */
+
+	}, {
+		key: 'getHeaderElements_',
+		value: function getHeaderElements_() {
+			var header = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.header;
+
+			if (_metal2.default.isElement(header) || _metal2.default.isElement(header[0])) {
+				return header;
+			}
+			return this.container.querySelectorAll(header);
 		}
 
 		/**
@@ -16110,6 +16129,22 @@ var Toggler = function (_State) {
 		}
 
 		/**
+   * Checks if there is any expanded header in the component context.
+   * @param {string|!Element} event
+   * @param {boolean}
+   * @protected
+   */
+
+	}, {
+		key: 'hasExpanded_',
+		value: function hasExpanded_(header) {
+			if (_metal2.default.isElement(header)) {
+				return _metalDom2.default.hasClass(header, this.headerExpandedClasses);
+			}
+			return !!this.container.querySelectorAll('.' + this.headerExpandedClasses).length;
+		}
+
+		/**
    * Syncs the component according to the value of the `header` state,
    * attaching events to the new element and detaching from any previous one.
    */
@@ -16129,18 +16164,17 @@ var Toggler = function (_State) {
 
 		/**
    * Toggles the content's visibility.
-   * @param {!Element} header
+   * @param {string|!Element} header
    */
 
 	}, {
 		key: 'toggle',
-		value: function toggle() {
-			var header = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.header;
-
-			if (_metalDom2.default.hasClass(header, this.headerExpandedClasses)) {
-				this.collapse(header);
+		value: function toggle(header) {
+			var headerElements = this.getHeaderElements_(header);
+			if (this.hasExpanded_(headerElements)) {
+				this.collapse(headerElements);
 			} else {
-				this.expand(header);
+				this.expand(headerElements);
 			}
 		}
 	}]);
@@ -16325,24 +16359,24 @@ if (goog.DEBUG) {
  * @return {void}
  * @suppress {checkTypes}
  */
-function __deltemplate_s333_d34389eb(opt_data, opt_ignored, opt_ijData) {
-  var linkSelect__soy334 = opt_data.page.active && ('' + opt_data.page.url).indexOf('.html') != -1;
+function __deltemplate_s32_d34389eb(opt_data, opt_ignored, opt_ijData) {
+  var linkSelect__soy33 = opt_data.page.active && ('' + opt_data.page.url).indexOf('.html') != -1;
   ie_open('a', null, null,
-      'class', 'sidebar-link' + (linkSelect__soy334 ? ' sidebar-link-selected' : ''),
+      'class', 'sidebar-link' + (linkSelect__soy33 ? ' sidebar-link-selected' : ''),
       'href', opt_data.page.url);
     ie_void('span', null, null,
         'class', 'sidebar-icon icon-16-' + opt_data.page.icon);
     ie_open('span');
-      var dyn23 = opt_data.page.title;
-      if (typeof dyn23 == 'function') dyn23(); else if (dyn23 != null) itext(dyn23);
+      var dyn0 = opt_data.page.title;
+      if (typeof dyn0 == 'function') dyn0(); else if (dyn0 != null) itext(dyn0);
     ie_close('span');
   ie_close('a');
 }
-exports.__deltemplate_s333_d34389eb = __deltemplate_s333_d34389eb;
+exports.__deltemplate_s32_d34389eb = __deltemplate_s32_d34389eb;
 if (goog.DEBUG) {
-  __deltemplate_s333_d34389eb.soyTemplateName = 'Sidebar.__deltemplate_s333_d34389eb';
+  __deltemplate_s32_d34389eb.soyTemplateName = 'Sidebar.__deltemplate_s32_d34389eb';
 }
-soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'sidebar', 0, __deltemplate_s333_d34389eb);
+soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'sidebar', 0, __deltemplate_s32_d34389eb);
 
 exports.render.params = ["page"];
 exports.render.types = {"page":"any"};

@@ -2095,6 +2095,13 @@ var ElectricSearchBase = function (_Component) {
 			this.on('queryChanged', this.handleQueryChange_.bind(this));
 		}
 	}, {
+		key: 'matchesArrayField_',
+		value: function matchesArrayField_(value, query) {
+			return value.some(function (itemName) {
+				return itemName.indexOf(query) > -1;
+			});
+		}
+	}, {
 		key: 'matchesQuery_',
 		value: function matchesQuery_(data, query) {
 			var childrenOnly = this.childrenOnly,
@@ -2102,10 +2109,7 @@ var ElectricSearchBase = function (_Component) {
 
 			var path = this.path || location.pathname;
 
-			var content = data.content,
-			    description = data.description,
-			    hidden = data.hidden,
-			    title = data.title,
+			var hidden = data.hidden,
 			    url = data.url;
 
 
@@ -2114,16 +2118,45 @@ var ElectricSearchBase = function (_Component) {
 				return false;
 			}
 
-			content = content ? content.toLowerCase() : '';
-			description = description ? description.toLowerCase() : '';
-			title = title ? title.toLowerCase() : '';
+			return !hidden && this.matchesField_(data, query);
+		}
+	}, {
+		key: 'matchesField_',
+		value: function matchesField_(data, query) {
+			var _this2 = this;
 
-			return !hidden && (title.indexOf(query) > -1 || description.indexOf(query) > -1 || content.indexOf(query) > -1);
+			var fieldNames = this.fieldNames;
+
+
+			return fieldNames.some(function (fieldName) {
+				var value = data[fieldName];
+
+				var matches = false;
+
+				if (!value) {
+					return matches;
+				}
+
+				if (Array.isArray(value)) {
+					matches = _this2.matchesArrayField_(value, query);
+				} else if (typeof value === 'string') {
+					matches = _this2.matchesTextField_(value, query);
+				}
+
+				return matches;
+			});
+		}
+	}, {
+		key: 'matchesTextField_',
+		value: function matchesTextField_(value, query) {
+			value = value.toLowerCase();
+
+			return value.indexOf(query) > -1;
 		}
 	}, {
 		key: 'filterResults_',
 		value: function filterResults_(data, query) {
-			var _this2 = this;
+			var _this3 = this;
 
 			var children = data.children,
 			    childIds = data.childIds;
@@ -2139,7 +2172,7 @@ var ElectricSearchBase = function (_Component) {
 				childIds.forEach(function (childId) {
 					var child = children[childId];
 
-					results = results.concat(_this2.filterResults_(child, query));
+					results = results.concat(_this3.filterResults_(child, query));
 				});
 			}
 
@@ -2210,6 +2243,11 @@ ElectricSearchBase.STATE = {
 
 	excludePath: {
 		validator: _metal2.default.isString
+	},
+
+	fieldNames: {
+		validator: _metal2.default.isArray,
+		value: ['content', 'description', 'tags', 'title']
 	},
 
 	maxResults: {
@@ -24042,7 +24080,11 @@ var Uri = function () {
  */
 
 
-Uri.DEFAULT_PROTOCOL =  false ? window.location.protocol : 'http:';
+var isSecure = function isSecure() {
+	return typeof window !== 'undefined' && window.location && window.location.protocol && window.location.protocol.indexOf('https') === 0;
+};
+
+Uri.DEFAULT_PROTOCOL = isSecure() ? 'https:' : 'http:';
 
 /**
  * Hostname placeholder. Relevant to internal usage only.

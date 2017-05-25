@@ -9172,7 +9172,9 @@ var _metalDom = __webpack_require__(4);
 
 var _utils = __webpack_require__(32);
 
-__webpack_require__(3);
+var _moment = __webpack_require__(3);
+
+var _moment2 = _interopRequireDefault(_moment);
 
 var _TutorialSidebar = __webpack_require__(137);
 
@@ -9233,7 +9235,7 @@ var TutorialSidebar = function (_Component) {
 			});
 
 			var milliseconds = totalTime - timeRead;
-			var eventDuration = moment.duration(milliseconds, 'seconds');
+			var eventDuration = _moment2.default.duration(milliseconds, 'seconds');
 			page.timeRemaining = this.humanizeDuration(eventDuration);
 			(0, _utils.dispatchGlobalState)();
 		}
@@ -9246,22 +9248,22 @@ var TutorialSidebar = function (_Component) {
 	}, {
 		key: 'humanizeDuration',
 		value: function humanizeDuration(eventDuration) {
-			eventDurationString = '';
+			var eventDurationString = '';
 
 			if (eventDuration.days() > 0) {
-				eventDurationString += ' ' + moment.duration(eventDuration.days(), 'days').asDays() + 'd';
+				eventDurationString += ' ' + _moment2.default.duration(eventDuration.days(), 'days').asDays() + 'd';
 			}
 
 			if (eventDuration.hours() > 0) {
-				eventDurationString += ' ' + moment.duration(eventDuration.hours(), 'hours').asHours() + ' h';
+				eventDurationString += ' ' + _moment2.default.duration(eventDuration.hours(), 'hours').asHours() + ' h';
 			}
 
 			if (eventDuration.minutes() > 0) {
-				eventDurationString += ' ' + moment.duration(eventDuration.minutes(), 'minutes').asMinutes() + ' min';
+				eventDurationString += ' ' + _moment2.default.duration(eventDuration.minutes(), 'minutes').asMinutes() + ' min';
 			}
 
 			if (eventDuration.seconds() > 0) {
-				eventDurationString += ' ' + moment.duration(eventDuration.seconds(), 'seconds').asSeconds() + ' sec';
+				eventDurationString += ' ' + _moment2.default.duration(eventDuration.seconds(), 'seconds').asSeconds() + ' sec';
 			}
 
 			return eventDurationString.trim();
@@ -20511,7 +20513,7 @@ if (goog.DEBUG) {
  * @return {void}
  * @suppress {checkTypes}
  */
-function __deltemplate_s386_88c0813b(opt_data, opt_ignored, opt_ijData) {
+function __deltemplate_s85_88c0813b(opt_data, opt_ignored, opt_ijData) {
   ie_open('a', null, null,
       'class', 'sidebar-link' + (opt_data.page.active ? ' sidebar-link-selected' : ''),
       'href', opt_data.page.url,
@@ -20520,23 +20522,23 @@ function __deltemplate_s386_88c0813b(opt_data, opt_ignored, opt_ijData) {
         'class', 'before');
     ie_open('span', null, null,
         'class', 'tutorial-step');
-      var dyn25 = opt_data.page.weight;
-      if (typeof dyn25 == 'function') dyn25(); else if (dyn25 != null) itext(dyn25);
+      var dyn2 = opt_data.page.weight;
+      if (typeof dyn2 == 'function') dyn2(); else if (dyn2 != null) itext(dyn2);
     ie_close('span');
     ie_open('span', null, null,
         'class', 'section-title');
-      var dyn26 = opt_data.page.title;
-      if (typeof dyn26 == 'function') dyn26(); else if (dyn26 != null) itext(dyn26);
+      var dyn3 = opt_data.page.title;
+      if (typeof dyn3 == 'function') dyn3(); else if (dyn3 != null) itext(dyn3);
     ie_close('span');
     ie_void('span', null, null,
         'class', 'after');
   ie_close('a');
 }
-exports.__deltemplate_s386_88c0813b = __deltemplate_s386_88c0813b;
+exports.__deltemplate_s85_88c0813b = __deltemplate_s85_88c0813b;
 if (goog.DEBUG) {
-  __deltemplate_s386_88c0813b.soyTemplateName = 'TutorialSidebar.__deltemplate_s386_88c0813b';
+  __deltemplate_s85_88c0813b.soyTemplateName = 'TutorialSidebar.__deltemplate_s85_88c0813b';
 }
-soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'tutorial', 0, __deltemplate_s386_88c0813b);
+soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'tutorial', 0, __deltemplate_s85_88c0813b);
 
 exports.render.params = ["page","navigationToggler"];
 exports.render.types = {"page":"any","navigationToggler":"any"};
