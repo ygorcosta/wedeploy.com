@@ -4,7 +4,7 @@ import Component from 'metal-component';
 import Soy from 'metal-soy';
 import {addClasses,hasClass} from 'metal-dom';
 import {dispatchGlobalState} from './utils';
-import 'moment';
+import moment from 'moment';
 
 import templates from './TutorialSidebar.soy';
 
@@ -55,7 +55,7 @@ class TutorialSidebar extends Component {
 	}
 
 	humanizeDuration(eventDuration) {
-		eventDurationString = '';
+		var eventDurationString = '';
 
 		if (eventDuration.days() > 0) {
 			eventDurationString += ' ' + moment.duration(eventDuration.days(), 'days').asDays() + 'd';
