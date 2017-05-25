@@ -22,7 +22,7 @@ Every service folder must have a `container.json` file that configures the servi
 ```application/json
 {
 	"id": "auth",
-	"type": "wedeploy/auth",
+	"type": "wedeploy/auth:latest",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
 		"WEDEPLOY_AUTH_PASSWORD": "true"
@@ -39,7 +39,7 @@ One of the awesome things you can do in your `container.json` file is add enviro
 ```application/json
 {
 	"id": "auth",
-	"type": "wedeploy/auth",
+	"type": "wedeploy/auth:latest",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
 		"WEDEPLOY_AUTH_PASSWORD": "true",
