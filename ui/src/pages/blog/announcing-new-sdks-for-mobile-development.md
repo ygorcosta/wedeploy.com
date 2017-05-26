@@ -37,12 +37,12 @@ With them, you will be able to build apps for the following platforms:
 
 #### What can I do on those mobile platforms?
 
-Whatever you want! Mainly, the clients provides you access to:
+Mainly, the clients provides you access to:
 
-- **<a target="_blank" href="/docs/data/getting-started.html">Data service</a>**: Search inside your schema-less database or communicate in realtime with other apps, not matter the platform, using WebSockets under the hood.
-- **<a target="_blank" href="/docs/auth/getting-started.html">Auth service</a>**: Create or authenticate users, reset passwords or sign-in using Google, Facebook or Github's OAuth2.
-- **<a target="_blank" href="/docs/email/getting-started.html">Email service</a>**: Send emails directly from your app and check their delivery status.
-- **<a target="_blank" href="/docs/hosting/getting-started.html">Raw HTTP Requests</a>**: and if you would like to build your own HTTP requests, you can using our fluent API.
+- **Data service**: Search inside your schema-less database or communicate in realtime with other apps, not matter the platform, using WebSockets under the hood. <br><em>↳ See <a data-senna-off target="_blank" href="/tutorials/data-ios/">iOS (Swift)</a> and <a data-senna-off target="_blank" href="/tutorials/data-android/">Android (Java)</a> tutorials.</em><br><br>
+- **Auth service**: Create or authenticate users, reset passwords or sign-in using Google, Facebook or Github's OAuth2. <br><em>↳ See <a data-senna-off target="_blank" href="/tutorials/auth-ios/">iOS (Swift)</a> and <a data-senna-off target="_blank" href="/tutorials/auth-android/">Android (Java)</a> tutorials.</em><br><br>
+- **Email service**: Send emails directly from your app and check their delivery status. <br><em>↳ See <a data-senna-off target="_blank" href="/tutorials/email-ios/">iOS (Swift)</a> and <a data-senna-off target="_blank" href="/tutorials/email-android/">Android (Java)</a> tutorials.</em><br><br>
+- **Raw HTTP Requests**: and if you would like to build your own HTTP requests, you can using our fluent API.
 
 
 #### How do I start
