@@ -8,54 +8,54 @@ weight: 7
 
 ### {$page.title}
 
-###### {$page.description}
-
 <article id="1">
 
-## JavaScript API Installation
+## JavaScript
 
-In order to send/receive requests to/from WeDeploy, we need to include the JavaScript API Client. This library provides a secure and reliable communication channel with WeDeploy. We can do that by adding a script element in a HTML file or to load the library using NPM:
+###### In order to send/receive requests to/from WeDeploy, we need to include the JavaScript API Client. This library provides a secure and reliable communication channel with WeDeploy. We can do that by adding a script element in a HTML file or to load the library using NPM:
 
-#### CDN
+##### Installation
+
+**CDN**
 
 ```xml
+// Include this in your html
 <script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 ```
 
-#### NPM
+**NPM**
 ```shell
 $ npm install --save wedeploy
 ```
 
-After installing WeDeploy using NPM, it might be loaded like this:
+##### Nuances
+
+After installing WeDeploy using NPM, you can load the package like this:
 
 ```javascript
 const WeDeploy = require('wedeploy');
 
-// in React Native environment it might be loaded using 'import' statement
+// In React Native environment you might use 'import' 
 import WeDeploy from 'wedeploy';
 ```
 
-#### Supported environments
+WeDeploy is compatible with all major browsers (Chrome, Firefox, Safari, Edge, and IE10+) as well as [React Native](https://facebook.github.io/react-native/) and [React VR](https://facebook.github.io/react-vr/).
 
-WeDeploy has been tested on the following environments:
-
-1. Web browser - Chrome, Firefox, Safari, Edge, IE10+
-2. [Node.js](https://nodejs.org/en/)
-3. [React Native](https://facebook.github.io/react-native/)
-
-#### API nuances
-In all supported environments the API calls are the same. However, depending on the environment, some features might be not available. For example, signing in with OAuth2 providers is available in browser environment only.
+The API calls are the same in all JavaScript environments.
 
 </article>
 
 <article id="2">
 
-## Swift API Installation
+## Swift
 
-If you want to send/receive requests to/from WeDeploy from an iOS App, we also have a solution for that, the Swift API Client. In order to start using it you have to do:
+###### If you want to send/receive requests to/from WeDeploy on an iOS App, we also have a solution for that.
 
-#### Cocoapods
+##### Installation
+
+In order to start using our Swift API Client you have to do add WeDeploy as Cocoapod.
+
+**Cocoapods**
 
 Add this to your Podfile:
 
@@ -63,9 +63,9 @@ Add this to your Podfile:
 pod 'WeDeploy'
 ```
 
-#### API nuances
+##### Nuances
 
-By default, all swift api requests returns a promise, for example:
+By default, all swift api requests returns a promise like below.
 
 ```swift
 WeDeploy
@@ -76,10 +76,10 @@ WeDeploy
 	}
 ```
 
-But you will be able to return a callback or even an observable! You will have this two methods available:
+You are also able to return a callback or observable. These two methods are available:
 
 ```swift
-// The method toCallback converts a promise into a callback
+// toCallback converts a promise into a callback
 WeDeploy
 	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.get(resourcePath: "movies")
@@ -87,7 +87,7 @@ WeDeploy
 		// here you can check the error or the response
 	}
 
-// The method toObservable converts a promise into an observable
+// toObservable converts a promise into an observable
 WeDeploy
 	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.get(resourcePath: "movies")
@@ -100,6 +100,74 @@ WeDeploy
 			// oops something went wrong
 		}
 	)
+```
+
+</article>
+
+<article id="3">
+
+## Android
+
+###### For sending/receiving requests to/from WeDeploy from an Android App, you can use the Android API Client. 
+
+##### Installation
+
+In order to start using it, you just need to add the following line to your `build.gradle` file:
+
+```groovy
+compile 'com.wedeploy:com.wedeploy.android:beta-20170505'
+```
+
+##### Nuances
+
+Before calling any method from WeDeploy, you have to build it's instance:
+
+```text/x-java
+WeDeploy weDeploy = new WeDeploy.Builder().build();
+```
+
+Then, you are able to synchronously fire requests to WeDeploy by calling `execute()`:
+
+```text/x-java
+weDeploy
+	.data("http://datademo.wedeploy.io")
+	.get("movies")
+	.execute();
+```
+
+You can also fire asynchronous requests by specifying a Callback to the `execute()` method:
+
+```text/x-java
+weDeploy
+	.data("http://datademo.wedeploy.io")
+	.get("movies")
+	.execute(new Callback() {
+		public void onSuccess(Response response) {
+			// here you receive the movies
+		}
+
+		public void onFailure(Exception e) {
+			// oops something went wrong
+		}
+	});
+```
+
+The Wedeploy Android API is RxJava 2 compatible. This means that you can convert the request into a Single RxJava object, which emits either a success or an error event. You must add a dependency to RxAndroid in your project `build.gradle` in order to use it.
+
+```text/x-java
+weDeploy
+	.data("http://datademo.wedeploy.io")
+	.get("movies")
+	.asSingle()
+	.subscribeOn(Schedulers.io())
+	.observeOn(AndroidSchedulers.mainThread())
+	.subscribe(
+		response -> {
+
+		},
+		throwable -> {
+
+		});
 ```
 
 </article>

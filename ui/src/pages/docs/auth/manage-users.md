@@ -41,6 +41,12 @@ WeDeploy
 		// Not created.
 	}
 ```
+```text/x-java
+WeDeploy
+	.auth("<auth-url>")
+	.createUser("user@domain.com", "password", "somename")
+	.execute();
+```
 
 </article>
 
@@ -67,6 +73,12 @@ WeDeploy
 	.catch { error in
 		// User does not exist.
 	}
+```
+```text/x-java
+WeDeploy
+	.auth("<auth-url>")
+	.getCurrentUser()
+	.execute();
 ```
 
 </article>
@@ -96,6 +108,12 @@ WeDeploy
 	.catch { error in
 		// User does not exist.
 	}
+```
+```text/x-java
+WeDeploy
+	.auth("<auth-url>")
+	.getUser("userId")
+	.execute();
 ```
 
 </article>
@@ -128,6 +146,12 @@ WeDeploy
 	.catch { err in
 		// Not deleted.
 	}
+```
+```text/x-java
+WeDeploy
+	.auth("<auth-url>")
+	.deleteUser("userId")
+	.execute();
 ```
 
 </article>
@@ -166,7 +190,18 @@ WeDeploy
 		// Not updated.
 	}
 ```
+```text/x-java
+JSONObject fields = new JSONObject()
+	.put("email", "eleven@hawkinslabs.com")
+	.put("password", "newPassword")
+	.put("name", "Eleven");
 
+WeDeploy
+	.auth("<auth-url>")
+	.updateUser("userId", fields)
+	.execute();
+```
+	
 </article>
 
 <article id="6">
@@ -197,6 +232,12 @@ WeDeploy
 		// Not signed out.
 	}
 ```
+```text/x-java
+WeDeploy
+	.auth("<auth-url>")
+	.sendPasswordResetEmail("user@domain.com")
+	.execute();
+```
 
 </article>
 
@@ -225,6 +266,12 @@ WeDeploy
 	.catch { err in
 		// Not signed out.
 	}
+```
+```text/x-java
+WeDeploy
+	.auth("<auth-url>")
+	.signOut()
+	.execute();
 ```
 
 </article>

@@ -38,10 +38,12 @@ Want to see the whole process of deploying an app with WeDeploy Auth?
 
 <article id="3">
 
-## Configurating Auth
+## Configurating
 
 <aside>
+
 All WeDeploy projects use a consistant file structure and configuration files to deploy apps with Git or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
+
 </aside>
 
 Below is an example of a `container.json` for an Auth container.
@@ -55,6 +57,45 @@ Below is an example of a `container.json` for an Auth container.
 
 The `id` for your services are uniquely determined by you.
 
+</article>
+
+<article id="4">
+
+## Initializing
+
+You can start authenticating users by referencing the URL of your Auth service within your project.
+
+**Local Development (.me)**
+
+```javascript
+WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
+```
+```swift
+WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
+```
+```text/x-java
+WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
+```
+
+**Cloud Development (.io)**
+
+```javascript
+WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
+```
+```swift
+WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
+```
+```text/x-java
+WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
+```
+
+<aside>
+
+###### <span class="icon-16-alert"></span> Attention
+
+You can only point to your cloud url (`.io`) once you have initializing your Auth service in your WeDeploy project. To do this, you can either deploy a project with <a href="/docs/intro/how-it-works.html">the necessary files</a> to initialize an Auth container, or create one directly from your project's <a href="http://dashboard.wedeploy.com">dashboard</a>.
+
+</aside>
 
 </article>
 
