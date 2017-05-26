@@ -45,7 +45,7 @@ WeDeploy
 		print(movie)
 	}
 ```
-```java
+```text/x-java
 JSONObject movieJsonObject = new JSONObject()
 	.put("title", "Star Wars IV")
 	.put("year", 1977)
@@ -118,7 +118,7 @@ WeDeploy
 		print(movie)
 	}
 ```
-```java
+```text/x-java
 JSONObject movie1JsonObject = new JSONObject()
 	.put("title", "Star Wars III")
 	.put("year", 2005)
@@ -193,7 +193,7 @@ WeDeploy
 		print(movie)
 	}
 ```
-```java
+```text/x-java
 JSONObject movieJsonObject = new JSONObject()
 	.put("title", "Star Wars I")
 	.put("obs", "First in ABC order")

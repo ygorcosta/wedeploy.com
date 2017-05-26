@@ -38,7 +38,7 @@ WeDeploy
 		// User is not signed in.
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.auth("<auth-url>")
 	.signIn("user@domain.com", "password")

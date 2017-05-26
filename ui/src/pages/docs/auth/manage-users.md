@@ -41,7 +41,7 @@ WeDeploy
 		// Not created.
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.auth("<auth-url>")
 	.createUser("user@domain.com", "password", "somename")
@@ -74,7 +74,7 @@ WeDeploy
 		// User does not exist.
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.auth("<auth-url>")
 	.getCurrentUser()
@@ -109,7 +109,7 @@ WeDeploy
 		// User does not exist.
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.auth("<auth-url>")
 	.getUser("userId")
@@ -147,7 +147,7 @@ WeDeploy
 		// Not deleted.
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.auth("<auth-url>")
 	.deleteUser("userId")
@@ -190,7 +190,7 @@ WeDeploy
 		// Not updated.
 	}
 ```
-```java
+```text/x-java
 JSONObject fields = new JSONObject()
 	.put("email", "eleven@hawkinslabs.com")
 	.put("password", "newPassword")
@@ -232,7 +232,7 @@ WeDeploy
 		// Not signed out.
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.auth("<auth-url>")
 	.sendPasswordResetEmail("user@domain.com")
@@ -267,7 +267,7 @@ WeDeploy
 		// Not signed out.
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.auth("<auth-url>")
 	.signOut()

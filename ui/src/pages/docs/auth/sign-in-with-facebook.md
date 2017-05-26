@@ -40,7 +40,7 @@ auth.signInWithRedirect(provider: provider) { (user, error) in
 
 //Add WeDeploy.auth("http://<serviceID>.<projectID>.wedeploy.io").handle(url: url) in AppDelegate's open url method	
 ```
-```java
+```text/x-java
 // In AndroidManifest.xml, declare an intent filter for the Activity you want to receive the token.
 // Don't forget to replace [mypackagename] with you application package name.
 <intent-filter>

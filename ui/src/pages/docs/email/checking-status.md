@@ -37,7 +37,7 @@ WeDeploy.email("http://<serviceID>.<projectID>.wedeploy.io")
 		// Some error has happened
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.email("http://<serviceID>.<projectID>.wedeploy.io")
 	.checkEmailStatus("<emailID>")

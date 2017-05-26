@@ -36,7 +36,7 @@ WeDeploy
 		print(movies)
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.where(match("title", "Sith's revenge"))
@@ -108,7 +108,7 @@ WeDeploy
 		print(movies)
 	}
 ```
-```java
+```text/x-java
 // we can run this
 WeDeploy
 	.data("http://datademo.wedeploy.io")
@@ -159,7 +159,7 @@ WeDeploy
 		print(movies)
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.where(similar("title", "The attack an awaken Jedi uses to strike a Sith is pure force!"))
@@ -229,7 +229,7 @@ WeDeploy
 		print(movies)
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.where(similar("title", "The attack an awakened Jedi uses to strike a Sith is pure force!"))
@@ -300,7 +300,7 @@ WeDeploy
 		print(aggregation)
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.where(lt("year", 1990))
@@ -365,7 +365,7 @@ WeDeploy
 		]
 	])
 ```
-```java
+```text/x-java
 JSONObject locationJsonObject = new JSONObject()
 	.put("location", "geo_point");
 
@@ -401,7 +401,7 @@ WeDeploy
 		print(places)
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.where(any("category", "cinema").and(distance("location", "51.5031653,-0.1123051", "1mi")))

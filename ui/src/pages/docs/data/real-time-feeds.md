@@ -44,7 +44,7 @@ socket.on([.changes, .error]) { data in
 	}
 }
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.watch("movies")
@@ -94,7 +94,7 @@ socket.on([.changes, .error]) { data in
 	}
 }
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.where(equal("category", "cinema").or("category", "cartoon"))
@@ -143,7 +143,7 @@ socket.on([.changes, .error]) { data in
 	}
 }
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.limit(1)

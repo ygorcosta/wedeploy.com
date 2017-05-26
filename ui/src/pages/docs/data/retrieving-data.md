@@ -32,7 +32,7 @@ WeDeploy
 		print(movie)
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.get("movies/star_wars_v")
@@ -68,7 +68,7 @@ WeDeploy
 		print(movie)
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.get("movies/star_wars_v/title")
@@ -118,7 +118,7 @@ WeDeploy
 		print(movies)
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.orderBy("rating", SortOrder.DESCENDING)
@@ -170,7 +170,7 @@ WeDeploy
 		print(movies)
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.where(lt("year", 2000).or(gt("rating", 8.5)))
@@ -219,7 +219,7 @@ WeDeploy
 		print(movies)
 	}
 ```
-```java
+```text/x-java
 WeDeploy
 	.data("http://datademo.wedeploy.io")
 	.where(gt("year", 2000))

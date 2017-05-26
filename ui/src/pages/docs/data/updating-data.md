@@ -41,7 +41,7 @@ WeDeploy
 		print(movie)
 	}
 ```
-```java
+```text/x-java
 JSONObject movieJsonObject = new JSONObject()
 	.put("rating", 9.1);
 

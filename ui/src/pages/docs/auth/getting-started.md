@@ -75,7 +75,7 @@ WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
 ```swift
 WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
 ```
-```java
+```text/x-java
 WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.me');
 ```
 
@@ -89,7 +89,7 @@ WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
 ```swift
 WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
 ```
-```java
+```text/x-java
 WeDeploy.auth('http://<serviceID>.<projectID>.wedeploy.io');
 ```
 
