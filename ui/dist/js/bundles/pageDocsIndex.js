@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([94,132,133,134,135,136,137,138],[
+webpackJsonppageComponent([154,193,194,195,196,197,198,199],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12954,7 +12954,7 @@ function $modal(opt_data, opt_ignored, opt_ijData) {
           itext('Thanks for requesting an invite!');
         ie_close('h2');
         ie_open('p');
-          itext('We\'ll drop you an email when Wedeploy\u2122 is ready. Stay tuned.');
+          itext('We\'ll drop you an email when WeDeploy\u2122 is ready. Stay tuned.');
         ie_close('p');
       ie_close('div');
     ie_close('div');
@@ -35497,7 +35497,8 @@ exports.default = templates;
 /* 229 */,
 /* 230 */,
 /* 231 */,
-/* 232 */
+/* 232 */,
+/* 233 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35557,10 +35558,10 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
   opt_data = opt_data || {};
-  var param417 = function() {
+  var param601 = function() {
     $topics(opt_data, null, opt_ijData);
   };
-  $templateAlias1(soy.$$assignDefaults({content: param417}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param601}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -35589,8 +35590,8 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
         ie_open('p', null, null,
             'class', 'docs-home-top-description');
           itext('Start learning how to leverage the power of ');
-          var dyn30 = opt_data.site.title;
-          if (typeof dyn30 == 'function') dyn30(); else if (dyn30 != null) itext(dyn30);
+          var dyn40 = opt_data.site.title;
+          if (typeof dyn40 == 'function') dyn40(); else if (dyn40 != null) itext(dyn40);
           itext(' in your project.');
         ie_close('p');
       ie_close('div');
@@ -35639,25 +35640,25 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
             'class', 'col-md-12 col-md-offset-2 col-xs-16');
           ie_open('div', null, null,
               'class', 'row');
-            var childIdList438 = opt_data.page.childIds;
-            var childIdListLen438 = childIdList438.length;
-            for (var childIdIndex438 = 0; childIdIndex438 < childIdListLen438; childIdIndex438++) {
-              var childIdData438 = childIdList438[childIdIndex438];
-              if (! opt_data.page.children[childIdData438].hidden) {
+            var childIdList622 = opt_data.page.childIds;
+            var childIdListLen622 = childIdList622.length;
+            for (var childIdIndex622 = 0; childIdIndex622 < childIdListLen622; childIdIndex622++) {
+              var childIdData622 = childIdList622[childIdIndex622];
+              if (! opt_data.page.children[childIdData622].hidden) {
                 ie_open('div', null, null,
                     'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
                   ie_open('a', null, null,
                       'class', 'topic radial-out',
-                      'href', opt_data.page.children[childIdData438].url);
+                      'href', opt_data.page.children[childIdData622].url);
                     ie_open('div', null, null,
                         'class', 'topic-icon');
                       ie_void('span', null, null,
-                          'class', 'icon-16-' + opt_data.page.children[childIdData438].icon);
+                          'class', 'icon-16-' + opt_data.page.children[childIdData622].icon);
                     ie_close('div');
                     ie_open('h3', null, null,
                         'class', 'topic-title');
-                      var dyn31 = opt_data.page.children[childIdData438].title;
-                      if (typeof dyn31 == 'function') dyn31(); else if (dyn31 != null) itext(dyn31);
+                      var dyn41 = opt_data.page.children[childIdData622].title;
+                      if (typeof dyn41 == 'function') dyn41(); else if (dyn41 != null) itext(dyn41);
                     ie_close('h3');
                   ie_close('a');
                 ie_close('div');
@@ -35691,7 +35692,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndex, templa
 
 
 /***/ }),
-/* 233 */,
 /* 234 */,
 /* 235 */,
 /* 236 */,
@@ -35837,7 +35837,69 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndex, templa
 /* 376 */,
 /* 377 */,
 /* 378 */,
-/* 379 */
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */,
+/* 418 */,
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */,
+/* 431 */,
+/* 432 */,
+/* 433 */,
+/* 434 */,
+/* 435 */,
+/* 436 */,
+/* 437 */,
+/* 438 */,
+/* 439 */,
+/* 440 */,
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35885,7 +35947,7 @@ __webpack_require__(94);
 
 __webpack_require__(95);
 
-var _indexSoy = __webpack_require__(232);
+var _indexSoy = __webpack_require__(233);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -35916,4 +35978,4 @@ _metalSoy2.default.register(pageDocsIndex, _indexSoy2.default);
 exports.default = pageDocsIndex;
 
 /***/ })
-],[379]);
+],[441]);

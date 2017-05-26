@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([88,132,133,134,135,136,137,138],[
+webpackJsonppageComponent([148,193,194,195,196,197,198,199],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12954,7 +12954,7 @@ function $modal(opt_data, opt_ignored, opt_ijData) {
           itext('Thanks for requesting an invite!');
         ie_close('h2');
         ie_open('p');
-          itext('We\'ll drop you an email when Wedeploy\u2122 is ready. Stay tuned.');
+          itext('We\'ll drop you an email when WeDeploy\u2122 is ready. Stay tuned.');
         ie_close('p');
       ie_close('div');
     ie_close('div');
@@ -35503,7 +35503,8 @@ exports.default = templates;
 /* 235 */,
 /* 236 */,
 /* 237 */,
-/* 238 */
+/* 238 */,
+/* 239 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35610,7 +35611,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIntroIndex, t
 
 
 /***/ }),
-/* 239 */,
 /* 240 */,
 /* 241 */,
 /* 242 */,
@@ -35743,7 +35743,67 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIntroIndex, t
 /* 369 */,
 /* 370 */,
 /* 371 */,
-/* 372 */
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */,
+/* 418 */,
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */,
+/* 431 */,
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35791,7 +35851,7 @@ __webpack_require__(94);
 
 __webpack_require__(95);
 
-var _indexSoy = __webpack_require__(238);
+var _indexSoy = __webpack_require__(239);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -35822,4 +35882,4 @@ _metalSoy2.default.register(pageDocsIntroIndex, _indexSoy2.default);
 exports.default = pageDocsIntroIndex;
 
 /***/ })
-],[372]);
+],[432]);
