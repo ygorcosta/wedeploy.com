@@ -12,7 +12,7 @@ directory: "email-js"
 
 {$page.description}
 
-I'm currently studying *Research in Software Engineering and Computer Science* for my master's degree and decided to build this platform to complete some requirements for a class about *Ubiquitous Computing*. 
+I'm currently studying *Research in Software Engineering and Computer Science* for my master's degree and decided to build this platform to complete some requirements for a class about *Ubiquitous Computing*.
 
 In this class I've learned the basic concepts of [IoT](https://en.wikipedia.org/wiki/Internet_of_things), starting with the initial intent to simulate the real world with smart devices. I believe the IoT train is passing and if we don't get on, we will miss out. That's why I decided to explore more.
 
@@ -114,11 +114,11 @@ Here it is the `container.json` file for this new data service:
 ```
 
 But this data service must be configured to create a collection of elements. These are the pieces of data I wanted to gather about the sensor:
-* **Platform** (app-android, app-ios, app-console), 
+* **Platform** (app-android, app-ios, app-console),
 * **Unique identifier**
 * **Coordinates** (longitude, latitude)
-* **Value** 
-* **Name** (temperature, speed, pressure, etc.)  
+* **Value**
+* **Name** (temperature, speed, pressure, etc.)
 * **Unit of measure** (celsius degrees, kilometers per hour, atmospheres, etc.)
 * **Timestamp** (the moment of request)
 
@@ -248,7 +248,7 @@ At that point I had built two services: a Java REST API developed with `Spring B
 }
 ```
 
-I know that this is not related to WeDeploy, but I wanted to display the metrics in two different ways: a datagrid with all metrics, and a `Google Maps` interface with a pin where a metric was sent. With the following code, which **is not the WeDeploy JavaScript client**, I can retrieve the JSON objects returned from the `Spring Boot` API with browser's native `fetch` capability, process the response, and draw the results in the screen. 
+I know that this is not related to WeDeploy, but I wanted to display the metrics in two different ways: a datagrid with all metrics, and a `Google Maps` interface with a pin where a metric was sent. With the following code, which **is not the WeDeploy JavaScript client**, I can retrieve the JSON objects returned from the `Spring Boot` API with browser's native `fetch` capability, process the response, and draw the results in the screen.
 
 ```text/javascript
 function getSensors(mode) {

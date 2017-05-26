@@ -11,7 +11,7 @@ layout: "blog"
 
 {$page.description}
 
-**Every January, developers from all around the world gather at our Los Angeles office.** 
+**Every January, developers from all around the world gather at our Los Angeles office.**
 
 It's an exhilarating time together full of talks, catered meals, new friendships, and even spontaneous adventures to the Hollywood sign and the Santa Monica Pier.
 

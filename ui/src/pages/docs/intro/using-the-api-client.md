@@ -35,7 +35,7 @@ After installing WeDeploy using NPM, you can load the package like this:
 ```javascript
 const WeDeploy = require('wedeploy');
 
-// In React Native environment you might use 'import' 
+// In React Native environment you might use 'import'
 import WeDeploy from 'wedeploy';
 ```
 
@@ -71,7 +71,7 @@ By default, all swift api requests returns a promise like below.
 WeDeploy
 	.data("http://<serviceID>.<projectID>.wedeploy.io")
 	.get(resourcePath: "movies")
-	.then { movie -> Void in 
+	.then { movie -> Void in
 		print(movie)
 	}
 ```
@@ -108,7 +108,7 @@ WeDeploy
 
 ## Android
 
-###### For sending/receiving requests to/from WeDeploy from an Android App, you can use the Android API Client. 
+###### For sending/receiving requests to/from WeDeploy from an Android App, you can use the Android API Client.
 
 ##### Installation
 

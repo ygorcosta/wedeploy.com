@@ -30,7 +30,7 @@ Since then, we have been exploring new ways to take the WeDeploy learning experi
 
 #### Why tutorials?
 
-Everyone learns differently. Some simply want to grab snippets of code and implement them in their projects. Others want to see a walkthrough of how to use the code in a real-life situation. 
+Everyone learns differently. Some simply want to grab snippets of code and implement them in their projects. Others want to see a walkthrough of how to use the code in a real-life situation.
 
 > There is nothing like seeing the code in action, and that is exactly what tutorials provide!
 

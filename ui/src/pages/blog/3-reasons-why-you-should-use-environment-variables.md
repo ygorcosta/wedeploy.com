@@ -20,7 +20,7 @@ Environments have been around for a while, mainly hiding in the deep code forest
 _Here are a couple easy ways they can improve your app!_
 ​
 #### 🚀 Change Hosting serve directory
-By default, WeDeploy Hosting looks to your service's root directory to know what files to serve, but what if you are using a Gulp or Grunt build task to compile your files? No problem, just add the `WEDEPLOY_WEB_PATH` key and use the build path as your value. 
+By default, WeDeploy Hosting looks to your service's root directory to know what files to serve, but what if you are using a Gulp or Grunt build task to compile your files? No problem, just add the `WEDEPLOY_WEB_PATH` key and use the build path as your value.
 
 **See the full list at our [Hosting Environment Variable Docs](/docs/hosting/environment-variables.html)**.
 
