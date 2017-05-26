@@ -1,7 +1,7 @@
 ---
 title: "Announcing new SDK's for Mobile Development"
 description: "Are you an Android or iOS developer? Do you need to deploy services quickly and easily to the cloud and focus on your mobile apps? Well today is a big day for you!"
-date: "May 15, 2017"
+date: "May 26, 2017"
 author: "Jose M. Navarro"
 image: "http://wedeploy.com/images/blog/post-11--0.png"
 layout: "blog"
@@ -23,7 +23,7 @@ That's why WeDeploy was born with more than web development in mind. We understo
 
 We didn't want to just use raw HTTP requests, so we built API Clients that could be called easily and safely. You already know about our [Javascript client](/docs/intro/using-the-api-client.html#1), but starting today, there are two new kids on the block.
 
-**Introducing the new WeDeploy <a target="_blank" href="/docs/intro/using-the-api-client.html#2">iOS (Swift)</a> and <a target="_blank" href="/docs/intro/using-the-api-client.html#3">Andriod (Java)</a> API Client.**
+**Introducing the new WeDeploy <a data-senna-off target="_blank" href="/docs/intro/using-the-api-client.html#2">iOS (Swift)</a> and <a data-senna-off target="_blank" href="/docs/intro/using-the-api-client.html#3">Android (Java)</a> SDKs.**
 
 With them, you will be able to build apps for the following platforms:
 
