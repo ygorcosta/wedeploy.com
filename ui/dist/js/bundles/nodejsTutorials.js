@@ -35933,7 +35933,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nodejsTutorials, temp
 /* 559 */,
 /* 560 */,
 /* 561 */,
-/* 562 */
+/* 562 */,
+/* 563 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36012,4 +36013,4 @@ _metalSoy2.default.register(nodejsTutorials, _indexSoy2.default);
 exports.default = nodejsTutorials;
 
 /***/ })
-],[562]);
+],[563]);
