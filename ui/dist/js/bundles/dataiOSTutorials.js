@@ -35858,7 +35858,10 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dataiOSTutorials, tem
 /* 484 */,
 /* 485 */,
 /* 486 */,
-/* 487 */
+/* 487 */,
+/* 488 */,
+/* 489 */,
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35937,4 +35940,4 @@ _metalSoy2.default.register(dataiOSTutorials, _indexSoy2.default);
 exports.default = dataiOSTutorials;
 
 /***/ })
-],[487]);
+],[490]);
