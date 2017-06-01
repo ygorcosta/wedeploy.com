@@ -25,7 +25,7 @@ Our email service enables you to send customized emails to your users and check 
 Want to see the whole process of deploying an app on WeDeploy with Ruby?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="http://wedeploy.com/tutorials/ruby" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/ruby" target="_blank" data-senna-off>
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>

@@ -25,7 +25,7 @@ Our Auth service allows you to avoid the headache of operating your own user man
 Want to see the whole process of deploying an app with WeDeploy Auth?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="http://wedeploy.com/tutorials/auth-web" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/auth-web" target="_blank" data-senna-off>
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>

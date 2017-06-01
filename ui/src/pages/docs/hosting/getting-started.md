@@ -25,7 +25,7 @@ Our Hosting Service allows you to deliver HTML, CSS, JavaScript, or any other st
 Want to see the whole process of deploying an app with WeDeploy Hosting?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="http://wedeploy.com/tutorials/hosting" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/hosting" target="_blank" data-senna-off>
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
