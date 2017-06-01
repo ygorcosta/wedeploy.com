@@ -25,13 +25,13 @@ Our Data service enables you to store data securely to a cloud database, make co
 Want to see the whole process of deploying an app with WeDeploy Data?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="http://wedeploy.com/tutorials/data-web" target="_blank">
+	<a class="btn btn-accent btn-sm" href="http://wedeploy.com/tutorials/data-web" target="_blank" data-senna-off>
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="http://boilerplate-data.wedeploy.io" target="_blank">live demo</a>.
+	or see a <a href="http://boilerplate-data.wedeploy.io" target="_blank" data-senna-off>live demo</a>.
 </div>
 
 </article>

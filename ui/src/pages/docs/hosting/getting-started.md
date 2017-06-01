@@ -25,13 +25,13 @@ Our Hosting Service allows you to deliver HTML, CSS, JavaScript, or any other st
 Want to see the whole process of deploying an app with WeDeploy Hosting?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="http://wedeploy.com/tutorials/hosting" target="_blank">
+	<a class="btn btn-accent btn-sm" href="http://wedeploy.com/tutorials/hosting" target="_blank" data-senna-off>
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="http://boilerplate-hosting.wedeploy.io" target="_blank">live demo</a>.
+	or see a <a href="http://boilerplate-hosting.wedeploy.io" target="_blank" data-senna-off>live demo</a>.
 </div>
 
 </article>
