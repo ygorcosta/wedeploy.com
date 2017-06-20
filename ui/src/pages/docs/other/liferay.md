@@ -14,7 +14,7 @@ weight: 1
 
 ## Introduction
 
-Our email service enables you to send customized emails to your users and check on their status with just a few lines of code.
+Our Liferay service enables you to deploy a Liferay Portal with all its capabilities with just a few lines of code.
 
 </article>
 
