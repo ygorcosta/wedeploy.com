@@ -53,7 +53,9 @@ You can also do this locally by adding the variables to your `container.json` fi
 
 <aside>
 
-Note: Any environment variable provided using the dashboard overwrites the environment variables provided in `container.json` of your service.
+###### <span class="icon-16-alert"></span> Attention
+
+Any environment variable provided using the dashboard overwrites the environment variables in the `container.json` of your source code.
 
 </aside>
 

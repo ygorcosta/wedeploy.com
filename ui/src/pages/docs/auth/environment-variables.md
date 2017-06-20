@@ -12,7 +12,9 @@ weight: 7
 
 <aside>
 
-Note: If you are unfamiliar with how you can apply and manage your secret keys, please visit our [Environment Variables](/docs/intro/environment-variables.html) page.
+###### <span class="icon-16-alert"></span> Attention
+
+If you are unfamiliar with how you can apply and manage your secret keys, please visit our [Environment Variables](/docs/intro/environment-variables.html) page.
 
 </aside>
 
