@@ -1,6 +1,6 @@
 ---
 title: "Feature Overview"
-description: "This is an overview of the features that make WeDeploy easiest way to deploy and scale applications."
+description: "This is an overview of the features that make WeDeploy the easiest way to deploy and scale applications."
 headerTitle: "Intro"
 layout: "guide"
 weight: 2
