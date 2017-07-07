@@ -1,7 +1,7 @@
 ---
 title: "It Works"
 description: "In this section, you'll learn how to authenticate users on the web using the WeDeploy API Client."
-buttonTitle: "I saved a to-do task"
+buttonTitle: "I signed-in a user"
 tutorialTitle: "Getting started with WeDeploy Auth on the web"
 parentId: "auth-web"
 layout: "tutorial"
