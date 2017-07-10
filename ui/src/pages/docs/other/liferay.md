@@ -38,7 +38,7 @@ Want to see the whole process of deploying an app on WeDeploy with Liferay?
 
 <article id="3">
 
-## Configurating Liferay
+## Configuring
 
 <aside>
 

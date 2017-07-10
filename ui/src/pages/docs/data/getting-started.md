@@ -38,7 +38,7 @@ Want to see the whole process of deploying an app with WeDeploy Data?
 
 <article id="3">
 
-## Configurating
+## Configuring
 
 <aside>
 

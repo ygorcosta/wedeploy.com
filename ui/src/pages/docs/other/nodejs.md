@@ -38,7 +38,7 @@ Want to see the whole process of deploying an app on WeDeploy with Node.js?
 
 <article id="3">
 
-## Configurating Node.js
+## Configuring
 
 <aside>
 

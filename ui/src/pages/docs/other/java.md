@@ -38,7 +38,7 @@ Want to see the whole process of deploying an app on WeDeploy with Java?
 
 <article id="3">
 
-## Configurating Java
+## Configuring
 
 <aside>
 

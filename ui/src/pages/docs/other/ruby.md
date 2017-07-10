@@ -38,7 +38,7 @@ Want to see the whole process of deploying an app on WeDeploy with Ruby?
 
 <article id="3">
 
-## Configurating Ruby
+## Configuring
 
 <aside>
 

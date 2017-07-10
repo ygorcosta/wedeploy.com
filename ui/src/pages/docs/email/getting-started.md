@@ -38,7 +38,7 @@ Want to see the whole process of deploying an app with WeDeploy Email?
 
 <article id="3">
 
-## Configurating
+## Configuring
 
 <aside>
 
