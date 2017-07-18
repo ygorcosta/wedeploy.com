@@ -37,6 +37,6 @@ your-project
 └── project.json
 ```
 
-You can see a similar file structure in the repo you just cloned. Want to know more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>?
+You can see a similar file structure in the repo you just cloned. Want to know more about <a href="/docs/intro/configuration-files.html" target="_blank">configuration files</a>?
 
 </aside>

@@ -40,6 +40,6 @@ Another thing you can do in your `container.json` file is add environment variab
 }
 ```
 
-See the full list of <a href="http://wedeploy.com/docs/email/environment-variables.html" target="_blank">Environment Variables for Email</a>.
+See the full list of <a href="/docs/email/environment-variables.html" target="_blank">Environment Variables for Email</a>.
 
 </aside>

@@ -34,6 +34,6 @@ your-project
 └── project.json
 ```
 
-Want to know more about <a href="http://wedeploy.com/docs/intro/configuration-files.html" target="_blank">configuration files</a>?
+Want to know more about <a href="/docs/intro/configuration-files.html" target="_blank">configuration files</a>?
 
 </aside>

@@ -50,7 +50,7 @@ One of the awesome things you can do in your `container.json` file is add enviro
 }
 ```
 
-See the full list of <a href="http://wedeploy.com/docs/auth/environment-variables.html" target="_blank">Environment Variables for Auth</a>.
+See the full list of <a href="/docs/auth/environment-variables.html" target="_blank">Environment Variables for Auth</a>.
 
 
 </aside>

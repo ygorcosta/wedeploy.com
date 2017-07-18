@@ -64,6 +64,6 @@ Another thing you can do with your `api.json` file is add other parameters for t
 ]
 ```
 
-See the full list of possible <a href="http://wedeploy.com/docs/data/configuring-data.html" target="_blank">data configurations</a>.
+See the full list of possible <a href="/docs/data/configuring-data.html" target="_blank">data configurations</a>.
 
 </aside>
