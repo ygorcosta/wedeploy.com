@@ -20,7 +20,7 @@ weight: 7
 
 ```xml
 // Include this in your html
-<script src="http://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
+<script src="https://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 ```
 
 **NPM**

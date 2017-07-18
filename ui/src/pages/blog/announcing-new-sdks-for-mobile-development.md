@@ -68,6 +68,6 @@ dependencies {
 
 So, the only thing left to do is to go to the [documentation](/docs/) and start deploying your mobile apps!
 
-Don't forget to let us know how it goes! You can connect with us on [Twitter](https://twitter.com/wedeploy) or join our community on [Slack](http://chat.wedeploy.com).
+Don't forget to let us know how it goes! You can connect with us on [Twitter](https://twitter.com/wedeploy) or join our community on [Slack](https://chat.wedeploy.com).
 
 </article>

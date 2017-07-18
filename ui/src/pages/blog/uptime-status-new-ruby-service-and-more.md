@@ -19,7 +19,7 @@ Today, we would like to show you some of the things we're working on.
 
 #### Uptime Status
 
-Even though this is an alpha version and problems are somewhat expected, we recognize the importance of being transparent about outages. That's why we would like to share with you a new page where you can check [WeDeploy's uptime status](http://status.wedeploy.com/).
+Even though this is an alpha version and problems are somewhat expected, we recognize the importance of being transparent about outages. That's why we would like to share with you a new page where you can check [WeDeploy's uptime status](https://status.wedeploy.com/).
 
 <figure>
 	<img src="../images/blog/post-1--0.png" alt="Uptime Status">
@@ -35,6 +35,6 @@ Our mission is to create a platform for all kinds of developers. With that in mi
 
 > Our mission is to create a platform for all kinds of developers.
 
-If you have any questions, feel free to [contact us](http://chat.wedeploy.com/).
+If you have any questions, feel free to [contact us](https://chat.wedeploy.com/).
 
 </article>

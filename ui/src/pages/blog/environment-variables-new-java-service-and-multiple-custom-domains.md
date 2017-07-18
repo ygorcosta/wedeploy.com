@@ -37,7 +37,7 @@ In the past, you could only set one custom domain per project. Although that was
 	<img src="../images/blog/post-2--2.png" srcset="../images/blog/post-2--2.png 1x, ../images/blog/post-2--2-2x.png 2x" alt="New Java Service">
 </figure>
 
-If you have any questions, feel free to [contact us.](http://chat.wedeploy.com/)
+If you have any questions, feel free to [contact us.](https://chat.wedeploy.com/)
 
 Happy coding!
 

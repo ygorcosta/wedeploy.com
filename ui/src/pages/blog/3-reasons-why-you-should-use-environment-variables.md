@@ -34,7 +34,7 @@ WeDeploy Email supplies you with an email service straight out of the box, but w
 
 **See the full list at our [Email Environment Variable Docs](/docs/email/environment-variables.html)**.
 
-That's it! If you have any question, just [shoot us an email](mailto:team@wedeploy.com) or join the conversation on [Slack](http://chat.wedeploy.com/).
+That's it! If you have any question, just [shoot us an email](mailto:team@wedeploy.com) or join the conversation on [Slack](https://chat.wedeploy.com/).
 
 Happy coding! 💻
 
