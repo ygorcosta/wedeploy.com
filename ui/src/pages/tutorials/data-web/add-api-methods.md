@@ -13,7 +13,7 @@ weight: 6
 
 ###### Save Data
 
-Now we want to add a script that will save data to a collection. 
+Now we want to add a script that will save data to a collection.
 
 To do this, go to `tutorial-data-web/hosting/index.js` and paste this code:
 
@@ -35,7 +35,7 @@ WeDeploy
 
 ###### Fetch Data
 
-Next, we want to add a script that will fetch data from the collection. 
+Next, we want to add a script that will fetch data from the collection.
 
 To do this, go to `list.js` inside of the same folder and paste this code:
 

@@ -201,7 +201,7 @@ WeDeploy
 	.updateUser("userId", fields)
 	.execute();
 ```
-	
+
 </article>
 
 <article id="6">

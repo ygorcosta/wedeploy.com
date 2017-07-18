@@ -13,7 +13,7 @@ weight: 7
 
 ###### Save Data
 
-Now we want to add some code that will save data to a collection. 
+Now we want to add some code that will save data to a collection.
 
 To do this, go to `tutorial-data-ios/app/tutorial-data-ios/ToDoListViewController.swift` and paste this code into the "loadToDos" function:
 
@@ -35,7 +35,7 @@ WeDeploy.data("data.<your-project-id>.wedeploy.io")
 
 ###### Fetch Data
 
-Next, we want to add the code that will fetch data from the collection. 
+Next, we want to add the code that will fetch data from the collection.
 
 To do this, go to `tutorial-data-ios/app/tutorial-data-ios/AddToDoViewController.swift` and paste this cod into the "addToDoClic" function:
 

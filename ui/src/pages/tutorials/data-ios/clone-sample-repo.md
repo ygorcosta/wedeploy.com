@@ -13,7 +13,7 @@ weight: 3
 
 First, you'll clone a sample repo that contains the necessary files and directories for deploying a site with Data.
 
-Run this command in your terminal: 
+Run this command in your terminal:
 
 ```
 git clone https://github.com/wedeploy/tutorial-data-ios.git

@@ -23,7 +23,7 @@ git remote add wedeploy http://git.wedeploy.com/<your-project-id>.git
 
 ###### Push first commit
 
-The remote is now set up and you are ready to make your first commit! 
+The remote is now set up and you are ready to make your first commit!
 
 1. `git add .`
 2. `git commit -m "Awesome commit"`

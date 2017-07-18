@@ -59,7 +59,7 @@ AuthProvider provider = new AuthProvider.Builder()
 
 WeDeploy.auth(authUrl)
 	.signIn(this, provider);
-	
+
 // Use Auth auth = TokenAuth.getAuthFromIntent(intent); to get the token from the Intent
 ```
 

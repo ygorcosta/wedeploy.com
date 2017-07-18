@@ -11,7 +11,7 @@ weight: 4
 
 #### Add Config File
 
-Every service folder must have a `container.json` file that configures the service. Let's add one to our Email Service in the repo we just cloned. 
+Every service folder must have a `container.json` file that configures the service. Let's add one to our Email Service in the repo we just cloned.
 
 1. Open the `tutorial-email-ios` folder in a code editor.
 2. Create a new file inside of the `email` folder and name it `container.json`.

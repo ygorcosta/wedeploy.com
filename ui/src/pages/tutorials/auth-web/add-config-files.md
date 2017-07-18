@@ -11,9 +11,9 @@ weight: 4
 
 #### Add Config Files
 
-Every service folder must have a `container.json` file that configures the service. Let's add one to our Auth and Hosting Services in the repo we just cloned. 
+Every service folder must have a `container.json` file that configures the service. Let's add one to our Auth and Hosting Services in the repo we just cloned.
 
-##### Auth 
+##### Auth
 
 1. Open the `tutorial-email-web` folder in a code editor.
 2. Create a new file named `container.json` inside the `auth` folder.
@@ -30,7 +30,7 @@ Every service folder must have a `container.json` file that configures the servi
 }
 ```
 
-##### Hosting 
+##### Hosting
 
 1. Change to the `hosting` folder and create another `container.json` file
 3. In that file, paste this code:

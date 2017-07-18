@@ -59,7 +59,7 @@ AuthProvider provider = new AuthProvider.Builder()
 
 WeDeploy.auth(authUrl)
 	.signIn(this, provider);
-	
+
 // Use Auth auth = TokenAuth.getAuthFromIntent(intent); to get the token from the Intent
 ```
 
@@ -77,7 +77,7 @@ Sign-in with GitHub provider is currently not available in Node.js and React Nat
 
 ## Setup app client id and secret
 
-Create a client id and client secret by [registering your application](https://github.com/settings/applications/new) on GitHub. 
+Create a client id and client secret by [registering your application](https://github.com/settings/applications/new) on GitHub.
 
 <aside>
 
