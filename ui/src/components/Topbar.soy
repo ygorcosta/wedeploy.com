@@ -18,16 +18,15 @@
  * @param page
  */
 {deltemplate ElectricNavigation.anchor variant="'topbar'"}
-	{if $page.url == '//dashboard.wedeploy.com/signup'}
+	{if $page.url == '//console.wedeploy.com/signup'}
 		<a class="btn btn-accent btn-sm get-started" href="{$page.url}">
-	{elseif $page.url == '//dashboard.wedeploy.com/login'}
+	{elseif $page.url == '//console.wedeploy.com/login'}
 		<a class="topbar-link login"href="{$page.url}">
-		{elseif $page.url == '//chat.wedeploy.com/'}
+	{elseif $page.url == '//chat.wedeploy.com/'}
 		<a class="topbar-link" target="_blank" href="{$page.url}">
 	{else}
 		<a class="topbar-link{$page.active ? ' active' : ''}" href="{$page.redirect ?: $page.url}">
 	{/if}
 		{$page.title}
 	</a>
-
 {/deltemplate}
