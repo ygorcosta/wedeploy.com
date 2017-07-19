@@ -6,7 +6,7 @@
     "moment": "2.0.0"
   },
   "devDependencies": {
-    "electric-marble-components": "alpha",
+    "electric-marble-components": "^2.0.0",
     "marble": "^2.8.0",
     "metal-toast": "^2.0.0",
     "metal-toggler": "^2.0.0"
