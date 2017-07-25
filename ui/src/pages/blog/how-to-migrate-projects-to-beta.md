@@ -13,19 +13,21 @@ layout: "blog"
 	<img src="../images/blog/post-13--0.png" alt="Beta Migration">
 </figure>
 
-On July 31st, we announced [our new Beta version of WeDeploy](/blog/). With that release we introduced the new infrastructure on AWS that can be accessed by our [Console](https://console.wedeploy.com). Along with that big infrastructure change, we also introduced other things like custom Docker images and HTTPS, which lead to a big question that you might be asking yourself: will the projects I built on Alpha work on Beta? The answer is 'yes', but there are a few easy changes that need to be made. Below is a guide on how to seamlessly do that!
+On July 31st, we announced [our new Beta version of WeDeploy](/blog/wedeploy-beta-our-biggest-release-yet.html). With that release we introduced the new infrastructure on AWS that can be accessed by our [Console](https://console.wedeploy.com). Along with that big infrastructure change, we also introduced other things like custom Docker images and HTTPS, which lead to a big question that you might be asking yourself: will the projects I built on Alpha work on Beta? The answer is 'yes', but there are a few easy changes that need to be made. Below is a guide on how to seamlessly do that!
+
+If you have any trouble, feel free to tap on the green button in the bottom corner to talk to a WeDeploy human, we'd love to help.
 
 ---
 
 #### Migrating Projects
 
-We have made some fundamental changes to the way you setup your project source code and simplified the way you deploy your apps. Walk through these easy steps and your project will be ready for deployment. If you have any trouble, feel free to tap on the green button in the bottom corner to talk to a WeDeploy human, we'd love to help.
+We have made some fundamental changes to the way you setup your project source code and simplified the way you deploy your apps. Walk through these easy steps and your project will be ready for deployment.
 
-##### Step One: Config Files
+##### Step One: Configuration
 
-1. Delete `project.json`. We are no longer using these files.
-2. Rename all `conatiner.json` files to `wedeploy.json`.
-3. In `wedeploy.json`, change `type` to `image` and add `:beta` tag to end of image.
+1. Delete `project.json`. We no longer support these files.
+2. Rename all `container.json` files to `wedeploy.json`.
+3. In `wedeploy.json`, change `type` to `image` and add `:beta` tag.
 
 Here is an example of what the new `wedeploy.json` will look like.
 
@@ -36,9 +38,9 @@ Here is an example of what the new `wedeploy.json` will look like.
 }
 ```
 
-So what happened to the `project.json`? We wanted to simplify source configuration so you can deploy faster and easier. This meant moving all configuration to the `wedeploy.json` for simplicity and moving the things you could config in the `project.json` to the Console and the command line.
+So what happened to the `project.json`? We wanted to simplify source configuration so you can deploy faster and easier. This meant moving all configuration to the `wedeploy.json` and our CLI for simplicity.
 
-For example, now when you deploy with our CLI, you can easily choose the project ID (which was something you used to do in the `project.json`), by simply add `--project projectID` to your command.
+For example, now when you deploy with our CLI, you can easily choose the project ID (which was something you previously had to do in the `project.json`), by simply add `--project projectID` to your command.
 
 ```xml
 we deploy --project myapp
@@ -46,8 +48,9 @@ we deploy --project myapp
 
 ##### Step Two: API Client
 
-1. Add `https` to all CDN links to the API client (yes, just simply add the 's').
-2. For your API endpoints, change the url's to reflect the new url structure (serviceID.projectID.wedeploy.io > serviceID-projectID.wedeploy.io).
+1. Change your CDN links to the API to `https` (yes, just simply add the 's').
+2. Each service now has its own domain instead of being a subdomain of your project. This means you must update your API endpoints (serviceID.projectID.wedeploy.io > serviceID-projectID.wedeploy.io).
+3. Remove hardcoded protocals (`http://`) on API urls.
 3. The Email API for JavaScript has changes. See [the documentation](/docs/email/sending-email.html) for updates.
 
 ---
