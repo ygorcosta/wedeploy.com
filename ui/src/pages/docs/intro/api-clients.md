@@ -1,31 +1,33 @@
 ---
-title: "Using the API Client"
+title: "API Clients"
 description: "Make requests to WeDeploy using a standardized interface."
 headerTitle: "Intro"
 layout: "guide"
-weight: 7
+weight: 5
 ---
 
 ### {$page.title}
+
+###### {$page.description}
 
 <article id="1">
 
 ## JavaScript
 
-###### In order to send/receive requests to/from WeDeploy, we need to include the JavaScript API Client. This library provides a secure and reliable communication channel with WeDeploy. We can do that by adding a script element in a HTML file or to load the library using NPM:
+For sending/receiving requests to/from WeDeploy on the Web or Node.js, check this API Client. You can use by adding a script element in a HTML file or to load the library using NPM:
 
 ##### Installation
 
 **CDN**
 
 ```xml
-// Include this in your html
 <script src="https://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
 ```
 
 **NPM**
-```shell
-$ npm install --save wedeploy
+
+```
+npm install --save wedeploy
 ```
 
 ##### Nuances
@@ -49,7 +51,7 @@ The API calls are the same in all JavaScript environments.
 
 ## Swift
 
-###### If you want to send/receive requests to/from WeDeploy on an iOS App, we also have a solution for that.
+If you want to send/receive requests to/from WeDeploy on an iOS App, we also have a solution for that.
 
 ##### Installation
 
@@ -108,7 +110,7 @@ WeDeploy
 
 ## Android
 
-###### For sending/receiving requests to/from WeDeploy from an Android App, you can use the Android API Client.
+For sending/receiving requests to/from WeDeploy from an Android App, you can use this API Client.
 
 ##### Installation
 

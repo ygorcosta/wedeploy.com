@@ -33,13 +33,15 @@ After that first app was deployed, we got right back to work. Yes, we had achiev
 
 ##### 1. New Infrastructure on AWS
 
-One of the biggest changes was moving the WeDeploy infrastructure from our servers in the Liferay Headquarters to AWS. We knew that in order to continue to grow and expand globally, we had to start preparing now. This move has greatly impacted the stability of WeDeploy and even though we don't support multi-region deployments yet, we are excited that this change will make that possible in the near future.
+One of the biggest changes was moving the WeDeploy infrastructure from our servers in the Liferay Headquarters to AWS. We knew that in order to continue to grow and expand globally, we had to start preparing now.
+
+This move has greatly impacted the stability of WeDeploy and even though we don't support multi-region deployments yet, we are excited that this change will make that possible in the near future.
 
 ##### 2. Rewritten CLI, API, and Dashboard
 
-One of our goals the past nine months was not to just build on top of what we had, but to also rethink the way we built WeDeploy and be willing to rebuilt parts of it from the ground up if needed. We've spent hours and days refactoring the CLI, API, and Dashboard (which is now known as Console) and I can confidently say, it was worth it!
+One of our goals the past nine months was not to just build on top of what we had, but to also rethink the way we built WeDeploy and be willing to rebuilt parts of it from the ground up if needed.
 
-By refactoring, we gave ourselves the opportunity to not only clean up the code, but to also improve performance, usability, and the overall design. We can't wait for you to try them out!
+We've spent hours and days refactoring the CLI, API, and Dashboard (which is now known as Console) and I can confidently say, it was worth it! By refactoring, we gave ourselves the opportunity to not only clean up the code, but to also improve performance, usability, and the overall design.
 
 ##### 3. HTTPS Out of the Box
 
@@ -47,21 +49,39 @@ Yes, now every project you deploy and every service you install will automatical
 
 We also make sure that those HTTPS certificates are valid by renewing them from time to time. That way you can always trust that your application will be secured.
 
-##### 4. Auto Scaling
+##### 4. Custom Docker Services
 
-Description of the feature and how it will change your life!
+The container ecosystem has evolved a lot in the past years and [Docker](https://www.docker.com/) is probably the main responsible for such success.
 
-##### 5. Storage
+Today we want to bring the benefits of this technology to you and facilitate the Docker-based development workflow. That's why we're introducing `Dockerfile` support.
 
-Description of the feature and how it will change your life!
+During alpha you were limited by the services we provided, now your imagination is the limit. This opens up the possibility to deploy pretty much anything and we look forward to see what you're going to create.
 
-##### 6. Custom Docker Services
+*Read more on the [documentation](/docs/deploy/deploying-docker.html) or follow our [step-by-step tutorial](/tutorials/docker/get-started.html).*
 
-Description of the feature and how it will change your life!
+##### 5. Volume Support
 
-##### 7. Instant Deployment
+With the addition of custom Docker services, new challenges arrive. For example, let's say you deploy an app with PHP and MySQL, then you start adding entries to your database. What happens when you restart that project without a proper setup? Well, you're going to lose all the data that was saved.
 
-Deploying should be the least of your worries, which is why we created a new [Instant Deployment](/docs/deploy/instant-deployment.html) option! Using our simple [CLI](/docs/intro/using-the-command-line.html) and our code-recipe detector, you can type `we deploy` in any folder containing static files, a Node.js app, or a Dockerfile and we will take it from there.
+In order to be able to persist and share data between services, we're introducing the concept of volumes. Quite simply, volumes are specially-designated directories that live outside of the file system where your code runs. This way, even if your application becomes unavailable due to a failure or other causes, your data still persists.
+
+*Read more on the [documentation](#).*
+
+##### 6. Instant Deployment
+
+Before you had to Git, now it's `we deploy`
+
+Deploying should be the least of your worries, which is why we created a new Instant Deployment option! Using our simple [CLI](/docs/intro/using-the-command-line.html)
+
+*Read more on the [documentation](/docs/deploy/instant-deployment.html).*
+
+##### 7. Code Detector
+
+Before you always had to declare a container.json, now you can skip for certain situations.
+
+our code-recipe detector, you can type `we deploy` in any folder containing static files, a Node.js app, or a Dockerfile and we will take it from there.
+
+*Read more on the [documentation](/docs/deploy/instant-deployment.html).*
 
 ---
 

@@ -6,7 +6,7 @@ layout: "guide"
 weight: 1
 ---
 
-### {$page.title}
+### Hosting
 
 ###### {$page.description}
 
@@ -14,7 +14,7 @@ weight: 1
 
 ## Introduction
 
-Our Hosting Service allows you to deliver HTML, CSS, JavaScript, or any other static files using powerful static hosting. It's super fast and will save you a lot of time.
+Our Hosting service allows you to deliver HTML, CSS, JavaScript, or any other static files using powerful static hosting. It's super fast and will save you a lot of time.
 
 </article>
 
@@ -22,7 +22,7 @@ Our Hosting Service allows you to deliver HTML, CSS, JavaScript, or any other st
 
 ## Try it yourself
 
-Want to see the whole process of deploying an app with WeDeploy Hosting?
+Want to see the process of deploying WeDeploy Hosting step by step?
 
 <div class="guide-btn-cta">
 	<a class="btn btn-accent btn-sm" href="/tutorials/hosting" target="_blank" data-senna-off>
@@ -42,21 +42,20 @@ Want to see the whole process of deploying an app with WeDeploy Hosting?
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with Git or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
+All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
 
 </aside>
 
-Below is an example of a `container.json` for a Hosting container.
+Below is an example of a `wedeploy.json` for a Hosting container.
 
 ```application/json
 {
 	"id": "ui",
-	"type": "wedeploy/hosting:latest"
+	"image": "wedeploy/hosting:beta"
 }
 ```
 
 The `id` for your services are uniquely determined by you.
-
 
 </article>
 

@@ -1,9 +1,9 @@
 ---
-title: "Deploying Ruby apps"
-description: "Launch a Ruby application in few steps."
+title: "Deploying Ruby"
+description: "Launch a Ruby application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
-weight: 4
+weight: 5
 ---
 
 ### Ruby
@@ -14,7 +14,9 @@ weight: 4
 
 ## Introduction
 
-Our email service enables you to send customized emails to your users and check on their status with just a few lines of code.
+[Ruby](https://www.ruby-lang.org) is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+
+We currently support Ruby X.
 
 </article>
 
@@ -22,7 +24,7 @@ Our email service enables you to send customized emails to your users and check 
 
 ## Try it yourself
 
-Want to see the whole process of deploying an app on WeDeploy with Ruby?
+Want to see the process of deploying Ruby step by step?
 
 <div class="guide-btn-cta">
 	<a class="btn btn-accent btn-sm" href="/tutorials/ruby" target="_blank" data-senna-off>
@@ -42,16 +44,16 @@ Want to see the whole process of deploying an app on WeDeploy with Ruby?
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with Git or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
+All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/deploy/how-it-works.html">How It Works Page</a></strong>.
 
 </aside>
 
-Below is an example of a `container.json` for a Ruby container.
+Below is an example of a `wedeploy.json` for a Ruby container.
 
 ```application/json
 {
 	"id": "ruby",
-	"type": "wedeploy/ruby:latest",
+	"image": "wedeploy/ruby:beta",
 	"hooks": {
 		"build": "bundle install"
 	}

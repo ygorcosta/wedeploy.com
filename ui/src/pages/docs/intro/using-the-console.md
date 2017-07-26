@@ -3,7 +3,7 @@ title: "Using the Console"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Console."
 headerTitle: "Intro"
 layout: "guide"
-weight: 5
+weight: 3
 ---
 
 ### {$page.title}

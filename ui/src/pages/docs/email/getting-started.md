@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-description: "Send emails using our simple API."
+description: "Send emails to your users using WeDeploy Email."
 headerTitle: "Email"
 layout: "guide"
 weight: 1
@@ -14,7 +14,7 @@ weight: 1
 
 ## Introduction
 
-Our email service enables you to send customized emails to your users and check on their status with just a few lines of code.
+Our Email service enables you to send customized emails to your users and check on their status with just a few lines of code.
 
 </article>
 
@@ -22,7 +22,7 @@ Our email service enables you to send customized emails to your users and check 
 
 ## Try it yourself
 
-Want to see the whole process of deploying an app with WeDeploy Email?
+Want to see the process of deploying WeDeploy Email step by step?
 
 <div class="guide-btn-cta">
 	<a class="btn btn-accent btn-sm" href="/tutorials/email-web" target="_blank" data-senna-off>
@@ -42,60 +42,20 @@ Want to see the whole process of deploying an app with WeDeploy Email?
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with Git or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
+All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
 
 </aside>
 
-Below is an example of a `container.json` for an Email container.
+Below is an example of a `wedeploy.json` for an Email container.
 
 ```application/json
 {
 	"id": "mail",
-	"type": "wedeploy/email:latest"
+	"image": "wedeploy/email:beta"
 }
 ```
 
 The `id` for your services are uniquely determined by you.
-
-</article>
-
-<article id="4">
-
-## Initializing
-
-You can start sending emails by referencing the URL of your Email service within your project.
-
-**Local Development (.me)**
-
-```javascript
-WeDeploy.email('http://<serviceID>-<projectID>.wedeploy.me');
-```
-```swift
-WeDeploy.email('http://<serviceID>-<projectID>.wedeploy.me');
-```
-```text/x-java
-WeDeploy.email('http://<serviceID>-<projectID>.wedeploy.me');
-```
-
-**Cloud Development (.io)**
-
-```javascript
-WeDeploy.email('https://<serviceID>-<projectID>.wedeploy.io');
-```
-```swift
-WeDeploy.email('https://<serviceID>-<projectID>.wedeploy.io');
-```
-```text/x-java
-WeDeploy.email('https://<serviceID>-<projectID>.wedeploy.io');
-```
-
-<aside>
-
-###### <span class="icon-16-alert"></span> Attention
-
-You can only point to your cloud url (`.io`) once you have initializing your Email service in your WeDeploy project. To do this, you can either deploy a project with <a href="/docs/intro/how-it-works.html">the necessary files</a> to initialize an Email container, or create one directly from your project's <a href="https://console.wedeploy.com">console</a>.
-
-</aside>
 
 </article>
 

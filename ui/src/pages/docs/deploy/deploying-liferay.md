@@ -1,9 +1,9 @@
 ---
-title: "Deploying Liferay apps"
-description: "Launch a Liferay application in few steps."
+title: "Deploying Liferay"
+description: "Launch a Liferay application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
-weight: 6
+weight: 7
 ---
 
 ### Liferay
@@ -14,7 +14,9 @@ weight: 6
 
 ## Introduction
 
-Our Liferay service enables you to deploy a Liferay Portal with all its capabilities with just a few lines of code.
+[Liferay](https://www.liferay.com) is a portal, web content management and collaboration software package. It includes social collaboration features such as a doc library, off-line document sync, internal messaging, online presence, and more.
+
+We currently support Liferay X.
 
 </article>
 
@@ -22,7 +24,7 @@ Our Liferay service enables you to deploy a Liferay Portal with all its capabili
 
 ## Try it yourself
 
-Want to see the whole process of deploying an app on WeDeploy with Liferay?
+Want to see the process of deploying Liferay step by step?
 
 <div class="guide-btn-cta">
 	<a class="btn btn-accent btn-sm" href="/tutorials/liferay" target="_blank" data-senna-off>
@@ -42,16 +44,16 @@ Want to see the whole process of deploying an app on WeDeploy with Liferay?
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with Git or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
+All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/deploy/how-it-works.html">How It Works Page</a></strong>.
 
 </aside>
 
-Below is an example of a `container.json` for a Liferay container.
+Below is an example of a `wedeploy.json` for a Liferay container.
 
 ```application/json
 {
 	"id": "liferay",
-	"type": "wedeploy/liferay:latest"
+	"image": "wedeploy/liferay:beta"
 }
 ```
 

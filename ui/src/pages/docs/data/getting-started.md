@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-description: "Leverage a NoSQL database with the power of our intuitive API."
+description: "Leverage a NoSQL database with the power of WeDeploy Data."
 headerTitle: "Data"
 layout: "guide"
 weight: 1
@@ -10,19 +10,13 @@ weight: 1
 
 ###### {$page.description}
 
-<article id="1">
-
-## Introduction
-
 Our Data service enables you to store data securely to a cloud database, make complex queries instantly, and consume information in real-time.
 
-</article>
-
-<article id="2">
+<article id="1">
 
 ## Try it yourself
 
-Want to see the whole process of deploying an app with WeDeploy Data?
+Want to see the process of deploying WeDeploy Data step by step?
 
 <div class="guide-btn-cta">
 	<a class="btn btn-accent btn-sm" href="/tutorials/data-web" target="_blank" data-senna-off>
@@ -36,66 +30,26 @@ Want to see the whole process of deploying an app with WeDeploy Data?
 
 </article>
 
-<article id="3">
+<article id="2">
 
 ## Configuring
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with Git or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
+All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
 
 </aside>
 
-Below is an example of a `container.json` for a Data container.
+Below is an example of a `wedeploy.json` for a Data container.
 
 ```application/json
 {
 	"id": "database",
-	"type": "wedeploy/data:latest"
+	"image": "wedeploy/data:beta"
 }
 ```
 
 The `id` for your services are uniquely determined by you.
-
-</article>
-
-<article id="4">
-
-## Initializing
-
-You can start saving and fetching data by referencing the URL of your Data service within your project.
-
-**Local Development (.me)**
-
-```javascript
-WeDeploy.data('http://<serviceID>-<projectID>.wedeploy.me');
-```
-```swift
-WeDeploy.data('http://<serviceID>-<projectID>.wedeploy.me');
-```
-```text/x-java
-WeDeploy.data('http://<serviceID>-<projectID>.wedeploy.me');
-```
-
-**Cloud Development (.io)**
-
-```javascript
-WeDeploy.data('https://<serviceID>-<projectID>.wedeploy.io');
-```
-```swift
-WeDeploy.data('https://<serviceID>-<projectID>.wedeploy.io');
-```
-```text/x-java
-WeDeploy.data('https://<serviceID>-<projectID>.wedeploy.io');
-```
-
-<aside>
-
-###### <span class="icon-16-alert"></span> Attention
-
-You can only point to your cloud url (`.io`) once you have initializing your Data service in your WeDeploy project. To do this, you can either deploy a project with <a href="/docs/intro/how-it-works.html">the necessary files</a> to initialize an Data container, or create one directly from your project's <a href="https://console.wedeploy.com">console</a>.
-
-</aside>
 
 </article>
 

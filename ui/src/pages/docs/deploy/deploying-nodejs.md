@@ -1,9 +1,9 @@
 ---
-title: "Deploying Node.js apps"
-description: "Launch a Node.js application in few steps."
+title: "Deploying Node.js"
+description: "Launch a Node.js application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
-weight: 3
+weight: 4
 ---
 
 ### Node.js
@@ -14,7 +14,9 @@ weight: 3
 
 ## Introduction
 
-Our email service enables you to send customized emails to your users and check on their status with just a few lines of code.
+[Node.js](https://nodejs.org) is an open-source, cross-platform runtime for developing server-side web applications using JavaScript. It has an event-driven architecture capable of asynchronous I/O.
+
+We currently support Node.js 8 which comes with npm 5.
 
 </article>
 
@@ -22,7 +24,7 @@ Our email service enables you to send customized emails to your users and check 
 
 ## Try it yourself
 
-Want to see the whole process of deploying an app on WeDeploy with Node.js?
+Want to see the process of deploying Node.js step by step?
 
 <div class="guide-btn-cta">
 	<a class="btn btn-accent btn-sm" href="/tutorials/nodejs" target="_blank" data-senna-off>
@@ -42,19 +44,17 @@ Want to see the whole process of deploying an app on WeDeploy with Node.js?
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with Git or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.
+All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/deploy/how-it-works.html">How It Works Page</a></strong>.
 
 </aside>
 
-Below is an example of a `container.json` for a Node.js container.
+Below is an example of a `wedeploy.json` for a Node.js container.
 
 ```application/json
 {
 	"id": "nodejs",
-	"type": "wedeploy/nodejs:latest",
-	"hooks": {
-		"build": "npm install"
-	}
+	"image": "wedeploy/nodejs:beta",
+	"port": "8000"
 }
 ```
 

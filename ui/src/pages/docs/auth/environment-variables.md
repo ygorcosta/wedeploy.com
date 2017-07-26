@@ -45,6 +45,6 @@ Here is a list of all the environment variable keys you can use with this servic
 
 </div>
 
-**Check the [boilerplate-auth](https://github.com/wedeploy/boilerplate-auth/blob/js/auth/container.json) for a practical example.**
+**Check the [boilerplate-auth](https://github.com/wedeploy/boilerplate-auth/blob/js/auth/wedeploy.json) for a practical example.**
 
 </article>

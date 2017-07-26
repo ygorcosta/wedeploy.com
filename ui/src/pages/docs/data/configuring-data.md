@@ -18,7 +18,7 @@ By default WeDeploy Data service is going to use all the JSON files starting wit
 
 These files are used to help you manage features such as path validation, authentication, and params validation.
 
-The api JSON files are located at the same path of the `./container.json` and are used following the ordering filesystem.
+The api JSON files are located at the same path of the `./wedeploy.json` and are used following the ordering filesystem.
 
 </article>
 

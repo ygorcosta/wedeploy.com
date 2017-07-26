@@ -3,7 +3,7 @@ title: "Environment Variables"
 description: "This is an overview of how WeDeploy manages environment variables for your projects."
 headerTitle: "Intro"
 layout: "guide"
-weight: 8
+weight: 7
 ---
 
 ### {$page.title}
@@ -16,7 +16,7 @@ weight: 8
 
 A project may have numerous environments: a production app, a staging app, and any number of test and local environments maintained by many different developers. However, the code is the same. In order to make it happen, each environment would have specific configurations.
 
-A good example would be credentials for the database, where each environment has its own credentials. The ideal scenario for handling this scenario, would be using Environment variables, in order to set up different configurations for different environment using the same code. In a traditional development proccess, you would speciffy the 
+A good example would be credentials for the database, where each environment has its own credentials. The ideal scenario for handling this scenario, would be using Environment variables, in order to set up different configurations for different environment using the same code. In a traditional development proccess, you would speciffy the
 configurations in different files. On WeDeploy you can take advantage of Environment Variables using the Console.
 
 </article>
@@ -36,14 +36,14 @@ WeDeploy can help you to configure environment variables for your services. Each
 
 ![envvar](/images/docs/intro/environment-variables--env-var.png)
 
-**Using container.json**
+**Using wedeploy.json**
 
-You can also do this locally by adding the variables to your `container.json` files like this:
+You can also do this locally by adding the variables to your `wedeploy.json` files like this:
 
 ```application/json
 {
 	"id": "myapp",
-	"type": "wedeploy/nodejs",
+	"image": "wedeploy/nodejs",
 	"env": {
 		"DATABASE_USER": "test",
 		"DATABASE_NAME": "testdb"
@@ -55,7 +55,7 @@ You can also do this locally by adding the variables to your `container.json` fi
 
 ###### <span class="icon-16-alert"></span> Attention
 
-Any environment variable provided using the Console overwrites the environment variables in the `container.json` of your source code.
+Any environment variable provided using the Console overwrites the environment variables in the `wedeploy.json` of your source code.
 
 </aside>
 
@@ -63,7 +63,7 @@ To see the lists of available variables, go to the Environment Variables page of
 
  * [**Auth Environment Variables**](/docs/auth/environment-variables.html)
  * [**Email Environment Variables**](/docs/email/environment-variables.html)
- * [**Hosting Environment Variables**](/docs/hosting/environment-variables.html) 
+ * [**Hosting Environment Variables**](/docs/hosting/environment-variables.html)
 
 </article>
 

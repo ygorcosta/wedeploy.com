@@ -38,7 +38,7 @@ auth.signInWithRedirect(provider: provider) { (user, error) in
 	// Fires when user is signed in after redirect.
 }
 
-//Add WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').handle(url: url) in AppDelegate's open url method	
+//Add WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').handle(url: url) in AppDelegate's open url method
 ```
 ```text/x-java
 // In AndroidManifest.xml, declare an intent filter for the Activity you want to receive the token.
@@ -86,13 +86,12 @@ For local development, use `wedeploy.me` instead. To use with custom domains you
 
 </aside>
 
-After retrieving the client id and client secret you can configure them as environment variables of the authentication `container.json`.
+After retrieving the client id and client secret you can configure them as environment variables of the authentication `wedeploy.json`.
 
 ```application/json
 {
 	"id": "auth",
-	"name": "Auth",
-	"type": "wedeploy/auth",
+	"image": "wedeploy/auth",
 	"env": {
 		"WEDEPLOY_AUTH_GITHUB": "true",
 		"WEDEPLOY_AUTH_GITHUB_CLIENT_ID": "<your-github-client-id>",
