@@ -176,4 +176,4 @@ weDeploy
 
 ## What's next?
 
-* Learn more about using [Environment Variables](/docs/intro/environment-variables.html).
+* Learn more about using [Custom Domains](/docs/intro/custom-domains.html).
