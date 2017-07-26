@@ -11,7 +11,7 @@ weight: 4
 
 #### Clone Sample Repo
 
-First, you'll clone a sample repo that contains the necessary files and directories for deploying an app with Auth.
+First, you'll clone a sample repo that contains the necessary files and directories for deploying a site with Auth and for creating an app that make use of these services. 
 
 Run this command in your terminal:
 

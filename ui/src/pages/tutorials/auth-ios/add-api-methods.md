@@ -56,7 +56,7 @@ In the examples above we use the toCallback method to handle the response with a
 but we can also handle the result using a promise:
 
 ```swift
-WeDeploy.auth("auth-myapp.wedeploy.sh")
+WeDeploy.auth("auth-<projectID>.wedeploy.sh")
 	.signInWith(username: usernameText, password: passwordText)
 	.then { auth in
 		self.handleLoginResult(auth: auth, error: nil)
@@ -69,7 +69,7 @@ WeDeploy.auth("auth-myapp.wedeploy.sh")
 or even a observable!
 
 ```swift
-WeDeploy.auth("auth-myapp.wedeploy.sh")
+WeDeploy.auth("auth-<projectID>.wedeploy.sh")
 	.signInWith(username: usernameText, password: passwordText)
 	.toObservable()
 	.subscribe(onNext: { auth in
