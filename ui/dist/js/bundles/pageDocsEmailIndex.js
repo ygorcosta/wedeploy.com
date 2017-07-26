@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([157,198,199,200,201,202,203,204],[
+webpackJsonppageComponent([171,215,216,217,218,219,220,221],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5891,11 +5891,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.dispatchGlobalState = dispatchGlobalState;
 function dispatchGlobalState() {
 	if (window.electricPageComponent) {
-		window.electricPageComponent.setState({
-			element: '#pageComponent',
-			page: page,
-			site: data.site
-		});
+		try {
+			window.electricPageComponent.setState({
+				element: '#pageComponent',
+				page: page,
+				site: data.site
+			});
+		} catch (error) {}
 	}
 }
 
@@ -35891,7 +35893,10 @@ exports.default = templates;
 /* 233 */,
 /* 234 */,
 /* 235 */,
-/* 236 */
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35998,9 +36003,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsEmailIndex, t
 
 
 /***/ }),
-/* 237 */,
-/* 238 */,
-/* 239 */,
 /* 240 */,
 /* 241 */,
 /* 242 */,
@@ -36195,7 +36197,28 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsEmailIndex, t
 /* 431 */,
 /* 432 */,
 /* 433 */,
-/* 434 */
+/* 434 */,
+/* 435 */,
+/* 436 */,
+/* 437 */,
+/* 438 */,
+/* 439 */,
+/* 440 */,
+/* 441 */,
+/* 442 */,
+/* 443 */,
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */,
+/* 452 */,
+/* 453 */,
+/* 454 */,
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36243,7 +36266,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(236);
+var _indexSoy = __webpack_require__(239);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36274,4 +36297,4 @@ _metalSoy2.default.register(pageDocsEmailIndex, _indexSoy2.default);
 exports.default = pageDocsEmailIndex;
 
 /***/ })
-],[434]);
+],[455]);

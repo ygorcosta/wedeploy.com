@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([145,198,199,200,201,202,203,204],[
+webpackJsonppageComponent([160,215,216,217,218,219,220,221],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5891,11 +5891,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.dispatchGlobalState = dispatchGlobalState;
 function dispatchGlobalState() {
 	if (window.electricPageComponent) {
-		window.electricPageComponent.setState({
-			element: '#pageComponent',
-			page: page,
-			site: data.site
-		});
+		try {
+			window.electricPageComponent.setState({
+				element: '#pageComponent',
+				page: page,
+				site: data.site
+			});
+		} catch (error) {}
 	}
 }
 
@@ -35903,7 +35905,9 @@ exports.default = templates;
 /* 245 */,
 /* 246 */,
 /* 247 */,
-/* 248 */
+/* 248 */,
+/* 249 */,
+/* 250 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36010,8 +36014,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIntroIndex, t
 
 
 /***/ }),
-/* 249 */,
-/* 250 */,
 /* 251 */,
 /* 252 */,
 /* 253 */,
@@ -36206,7 +36208,25 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIntroIndex, t
 /* 442 */,
 /* 443 */,
 /* 444 */,
-/* 445 */
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */,
+/* 452 */,
+/* 453 */,
+/* 454 */,
+/* 455 */,
+/* 456 */,
+/* 457 */,
+/* 458 */,
+/* 459 */,
+/* 460 */,
+/* 461 */,
+/* 462 */,
+/* 463 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36254,7 +36274,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(248);
+var _indexSoy = __webpack_require__(250);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36285,4 +36305,4 @@ _metalSoy2.default.register(pageDocsIntroIndex, _indexSoy2.default);
 exports.default = pageDocsIntroIndex;
 
 /***/ })
-],[445]);
+],[463]);

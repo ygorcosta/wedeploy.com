@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([2,198,199,200,201,202,203,204],[
+webpackJsonppageComponent([2,215,216,217,218,219,220,221],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5891,11 +5891,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.dispatchGlobalState = dispatchGlobalState;
 function dispatchGlobalState() {
 	if (window.electricPageComponent) {
-		window.electricPageComponent.setState({
-			element: '#pageComponent',
-			page: page,
-			site: data.site
-		});
+		try {
+			window.electricPageComponent.setState({
+				element: '#pageComponent',
+				page: page,
+				site: data.site
+			});
+		} catch (error) {}
 	}
 }
 
@@ -36046,7 +36048,24 @@ exports.default = templates;
 /* 388 */,
 /* 389 */,
 /* 390 */,
-/* 391 */
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36153,23 +36172,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rubyTutorials, templa
 
 
 /***/ }),
-/* 392 */,
-/* 393 */,
-/* 394 */,
-/* 395 */,
-/* 396 */,
-/* 397 */,
-/* 398 */,
-/* 399 */,
-/* 400 */,
-/* 401 */,
-/* 402 */,
-/* 403 */,
-/* 404 */,
-/* 405 */,
-/* 406 */,
-/* 407 */,
-/* 408 */,
 /* 409 */,
 /* 410 */,
 /* 411 */,
@@ -36350,7 +36352,43 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rubyTutorials, templa
 /* 586 */,
 /* 587 */,
 /* 588 */,
-/* 589 */
+/* 589 */,
+/* 590 */,
+/* 591 */,
+/* 592 */,
+/* 593 */,
+/* 594 */,
+/* 595 */,
+/* 596 */,
+/* 597 */,
+/* 598 */,
+/* 599 */,
+/* 600 */,
+/* 601 */,
+/* 602 */,
+/* 603 */,
+/* 604 */,
+/* 605 */,
+/* 606 */,
+/* 607 */,
+/* 608 */,
+/* 609 */,
+/* 610 */,
+/* 611 */,
+/* 612 */,
+/* 613 */,
+/* 614 */,
+/* 615 */,
+/* 616 */,
+/* 617 */,
+/* 618 */,
+/* 619 */,
+/* 620 */,
+/* 621 */,
+/* 622 */,
+/* 623 */,
+/* 624 */,
+/* 625 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36398,7 +36436,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(391);
+var _indexSoy = __webpack_require__(408);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36429,4 +36467,4 @@ _metalSoy2.default.register(rubyTutorials, _indexSoy2.default);
 exports.default = rubyTutorials;
 
 /***/ })
-],[589]);
+],[625]);

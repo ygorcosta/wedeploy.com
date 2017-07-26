@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([24,198,199,200,201,202,203,204],[
+webpackJsonppageComponent([24,215,216,217,218,219,220,221],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5891,11 +5891,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.dispatchGlobalState = dispatchGlobalState;
 function dispatchGlobalState() {
 	if (window.electricPageComponent) {
-		window.electricPageComponent.setState({
-			element: '#pageComponent',
-			page: page,
-			site: data.site
-		});
+		try {
+			window.electricPageComponent.setState({
+				element: '#pageComponent',
+				page: page,
+				site: data.site
+			});
+		} catch (error) {}
 	}
 }
 
@@ -36024,7 +36026,24 @@ exports.default = templates;
 /* 366 */,
 /* 367 */,
 /* 368 */,
-/* 369 */
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36131,23 +36150,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(liferayTutorials, tem
 
 
 /***/ }),
-/* 370 */,
-/* 371 */,
-/* 372 */,
-/* 373 */,
-/* 374 */,
-/* 375 */,
-/* 376 */,
-/* 377 */,
-/* 378 */,
-/* 379 */,
-/* 380 */,
-/* 381 */,
-/* 382 */,
-/* 383 */,
-/* 384 */,
-/* 385 */,
-/* 386 */,
 /* 387 */,
 /* 388 */,
 /* 389 */,
@@ -36324,7 +36326,44 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(liferayTutorials, tem
 /* 560 */,
 /* 561 */,
 /* 562 */,
-/* 563 */
+/* 563 */,
+/* 564 */,
+/* 565 */,
+/* 566 */,
+/* 567 */,
+/* 568 */,
+/* 569 */,
+/* 570 */,
+/* 571 */,
+/* 572 */,
+/* 573 */,
+/* 574 */,
+/* 575 */,
+/* 576 */,
+/* 577 */,
+/* 578 */,
+/* 579 */,
+/* 580 */,
+/* 581 */,
+/* 582 */,
+/* 583 */,
+/* 584 */,
+/* 585 */,
+/* 586 */,
+/* 587 */,
+/* 588 */,
+/* 589 */,
+/* 590 */,
+/* 591 */,
+/* 592 */,
+/* 593 */,
+/* 594 */,
+/* 595 */,
+/* 596 */,
+/* 597 */,
+/* 598 */,
+/* 599 */,
+/* 600 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36372,7 +36411,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(369);
+var _indexSoy = __webpack_require__(386);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36403,4 +36442,4 @@ _metalSoy2.default.register(liferayTutorials, _indexSoy2.default);
 exports.default = liferayTutorials;
 
 /***/ })
-],[563]);
+],[600]);

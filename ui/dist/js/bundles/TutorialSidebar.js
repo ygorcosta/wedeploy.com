@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([199,204],[
+webpackJsonppageComponent([216,221],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4647,11 +4647,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.dispatchGlobalState = dispatchGlobalState;
 function dispatchGlobalState() {
 	if (window.electricPageComponent) {
-		window.electricPageComponent.setState({
-			element: '#pageComponent',
-			page: page,
-			site: data.site
-		});
+		try {
+			window.electricPageComponent.setState({
+				element: '#pageComponent',
+				page: page,
+				site: data.site
+			});
+		} catch (error) {}
 	}
 }
 

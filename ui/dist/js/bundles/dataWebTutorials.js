@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([81,198,199,200,201,202,203,204],[
+webpackJsonppageComponent([92,215,216,217,218,219,220,221],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5891,11 +5891,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.dispatchGlobalState = dispatchGlobalState;
 function dispatchGlobalState() {
 	if (window.electricPageComponent) {
-		window.electricPageComponent.setState({
-			element: '#pageComponent',
-			page: page,
-			site: data.site
-		});
+		try {
+			window.electricPageComponent.setState({
+				element: '#pageComponent',
+				page: page,
+				site: data.site
+			});
+		} catch (error) {}
 	}
 }
 
@@ -35967,7 +35969,13 @@ exports.default = templates;
 /* 309 */,
 /* 310 */,
 /* 311 */,
-/* 312 */
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36074,12 +36082,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dataWebTutorials, tem
 
 
 /***/ }),
-/* 313 */,
-/* 314 */,
-/* 315 */,
-/* 316 */,
-/* 317 */,
-/* 318 */,
 /* 319 */,
 /* 320 */,
 /* 321 */,
@@ -36268,7 +36270,28 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dataWebTutorials, tem
 /* 504 */,
 /* 505 */,
 /* 506 */,
-/* 507 */
+/* 507 */,
+/* 508 */,
+/* 509 */,
+/* 510 */,
+/* 511 */,
+/* 512 */,
+/* 513 */,
+/* 514 */,
+/* 515 */,
+/* 516 */,
+/* 517 */,
+/* 518 */,
+/* 519 */,
+/* 520 */,
+/* 521 */,
+/* 522 */,
+/* 523 */,
+/* 524 */,
+/* 525 */,
+/* 526 */,
+/* 527 */,
+/* 528 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36316,7 +36339,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(312);
+var _indexSoy = __webpack_require__(318);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36347,4 +36370,4 @@ _metalSoy2.default.register(dataWebTutorials, _indexSoy2.default);
 exports.default = dataWebTutorials;
 
 /***/ })
-],[507]);
+],[528]);
