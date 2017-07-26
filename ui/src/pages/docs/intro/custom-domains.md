@@ -3,7 +3,7 @@ title: "Custom Domains"
 description: "This is an overview of how WeDeploy manages custom domains for your projects."
 headerTitle: "Intro"
 layout: "guide"
-weight: 6
+weight: 9
 ---
 
 ### {$page.title}
@@ -14,7 +14,7 @@ weight: 6
 
 ## Introduction
 
-To make your app accessible right away, WeDeploy makes any project accessible via its project domain, which looks like `<serviceID>-<projectID>.wedeploy.io`. If you have a project named `project` with a service named `web`, the WeDeploy project domain would be `web-project.wedeploy.io`. Every project in WeDeploy supports one or more custom domains.
+To make your app live right away, WeDeploy makes every service accessible via its service domain, but when you want to make your project accessible by a non-WeDeploy domain name, you will need to connect a custom domain from a third-party DNS provider.
 
 </article>
 
@@ -22,13 +22,12 @@ To make your app accessible right away, WeDeploy makes any project accessible vi
 
 ## Configuring custom domains
 
-WeDeploy can help you to configure your own custom domain, like `https://mydomain.com` or `https://www.mydomain.com`.
-To make a project accessible via one or more non-WeDeploy domain names, you must add custom domain(s) to your project configuration as described below:
+When you configure a custom domain on your service, WeDeploy will check to see if that domain name is pointing to that service. This means you must always configure with your domain provider before adding the domain to your project.
 
-1. After create a project on the [Console](https://console.wedeploy.com). Go to the project settings page.
-2. On custom domain session, add the custom domains related to the project.
-3. Click in Update Project.
-4. Update the domain DNS to point to the project WeDeploy domain (`<projectID>.wedeploy.io`).
+1. Go to your domain provider and configure the DNS to point to your WeDeploy service URL.
+2. After you create a project on the [Console](https://console.wedeploy.com), go to the WeDeploy service you would like to add the domain to and select _"Custom Domains"_.
+3. Now type the domain(s) you would like to add.
+4. Click on _"Update Custom Domains"_.
 
 ![settings](/images/docs/intro/custom-domains--settings.png)
 
@@ -36,17 +35,17 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 
 <article id="3">
 
-## Configuring DNS for root domains
+## DNS for root domains
 
-A root domain is the highest level of hierarchy for the website you control, ex: `mydomain.com`. When you register a domain name, you are registering a root domain. This means you have the access to create subdomains and file structures all branching from that root domain.
+A root domain is the highest level of hierarchy for the website you control. When you register a domain name, you are registering a root domain which allows you to have the access to create subdomains and file structures all branching from that root domain.
 
-If your DNS provider allows you to either use CNAME or ALIAS records for root domains, you just need to point the CNAME/ALIAS entry for your root domain as described below:
+If your domain provider allows you to either use CNAME or ALIAS records for root domains, you just need to point the CNAME/ALIAS entry for your root domain as described below:
 
 <div class="table-container">
 
 | Record            | Name             | Project Target Domain |
 | ----------------- | ---------------- | --------------------- |
-| `ALIAS` or `CNAME`| `<empty>` or `@` | project1.wedeploy.io. |
+| ALIAS or CNAME    | '@' or empty     | ui-myapp.wedeploy.io. |
 
 </div>
 
@@ -56,7 +55,7 @@ In many DNS Providers, you are only allowed to use Address Records (A) for your 
 
 | Record            | Name             | Project Target Domain |
 | ----------------- | ---------------- | --------------------- |
-| `A`               | `<empty>` or `@` | `173.196.61.238`      |
+| A                 | '@' or empty     | 173.196.61.238        |
 
 </div>
 
@@ -64,44 +63,16 @@ In many DNS Providers, you are only allowed to use Address Records (A) for your 
 
 <article id="4">
 
-## Configuring DNS for subdomains
+## DNS for subdomains
 
-After configuring the custom domains on the Project Settings, you must point your DNS record to the project WeDeploy domain. You can configure your subdomain as a new CNAME record with your DNS provider. If you're not sure about how to configure CNAME records for subdomains, visit your DNS provider's documentation page.
-
-<div class="table-container">
-
-| Record            | Subdomain            | Project Target Domain |
-| ----------------- | -------------------- | --------------------- |
-| `CNAME`           | **www**.mydomain.com | project1.wedeploy.io. |
-
-</div>
-
-</article>
-
-<article id="5">
-
-## Configuring DNS for wildcard domain
-
-WeDeploy automatically creates a subdomain for each service. Since you typically will have multiple services inside a project, you will either need multiple records, or a single wildcard record. A wildcard record allows you to map all subdomains to your WeDeploy project with a single record.
+You can configure your subdomain as a new CNAME record with your DNS provider. If you're not sure about how to configure CNAME records for subdomains, visit your DNS provider's documentation page.
 
 <div class="table-container">
 
-| Record            | Subdomain            | Project Target Domain |
-| ----------------- | -------------------- | --------------------- |
-| `CNAME`           | *.mydomain.com       | project1.wedeploy.io. |
-
-</div>
-
-Result:
-
-<div class="table-container">
-
-| WeDeploy Domain              | Custom Domain         |
-| ---------------------------- | --------------------- |
-| service1.project.wedeploy.io | service1.mydomain.com |
-| service2.project.wedeploy.io | service2.mydomain.com |
-| service3.project.wedeploy.io | service3.mydomain.com |
-| service4.project.wedeploy.io | service4.mydomain.com |
+| Record            | Subdomain            | Project Target Domain    |
+| ----------------- | -------------------- | ------------------------ |
+| CNAME             | www.mydomain.com     | ui-myapp.wedeploy.io.    |
+| CNAME             | ui.mydomain.com      | ui-myapp.wedeploy.io.    |
 
 </div>
 
