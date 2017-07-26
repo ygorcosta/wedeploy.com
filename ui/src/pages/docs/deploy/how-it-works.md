@@ -16,7 +16,7 @@ weight: 1
 
 There are basically two ways to deploy an app. You can use the command line for [instant deployment](/docs/deploy/instant-deployment.html) or you can integrate with GitHub for [continuous deployment](/docs/deploy/continuous-deployment.html).
 
-Both options gives you a lot of power and flexibility, but there's another important concept that needs to be explained and that's our build step. When you send a bunch of files to WeDeploy we need to scan and detect what do you really want to do. Maybe you want to run them with Java or maybe you just want to serve them as a static hosting.
+Both options give you a lot of power and flexibility, but there's another important concept that needs to be explained and that's our build step. When you send a bunch of files to WeDeploy we need to scan and detect what you would like to build. Maybe you want to run them with Java or maybe you just want to serve them as a static hosting.
 
 </article>
 
@@ -24,7 +24,7 @@ Both options gives you a lot of power and flexibility, but there's another impor
 
 ## Automatic build detection
 
-The last thing any developer wants is to add a new tool that forces them to alter their workflow. This is why we've worked hard to build WeDeploy in a way that can fit right into your regular way of working and fill the gaps needed to take your development to the next level.
+The last thing any developer wants is to add a new tool that forces them to alter their workflow. This is why we've worked hard to build WeDeploy so it can fit right into your regular way of working and fill the gaps needed to take your development to the next level.
 
 Heroku tries to determine what language your project uses. It then takes the matching buildpack to install dependencies, compile the code and run the application. Heroku comes with a number of pre-configured buildpacks for languages like Java, Ruby, Node.js and so on.
 
@@ -36,7 +36,7 @@ On deploy, the platform will detect the programming language and build & run the
 
 ## Manually set a build
 
-When you push your local repo to your WeDeploy project, we scan it for `wedeploy.json` files, which specify the ID of your project and services as well as which service containers you are deciding to use. When we find a `wedeploy.json`, we serve that whole directory as a part of the service you defined within.
+When you push your local repo to your WeDeploy project, we scan it for `wedeploy.json` files, which specify the ID of your services as well as which service containers you are deciding to use. When we find a `wedeploy.json`, we serve that whole directory as a part of the service you defined within.
 
 For example, let's say you have a folder named `my-project` that uses the Hosting, Data, and Email services. This is what your project's file structure could look like:
 
@@ -55,7 +55,7 @@ my-project
 
 The `wedeploy.json` file is a JSON file defining the service attributes and configurations. The default path for a `wedeploy.json` is `./<service_folder>/wedeploy.json`.
 
-WeDeploy uses this json file to reference a service in case it's already created. If the service does not exist, it creates a new service for you.
+WeDeploy uses this json file to reference a service by ID in case it's already created. If a service with a matching ID does not exist, it creates a new service for you.
 
 **Reference:**
 
