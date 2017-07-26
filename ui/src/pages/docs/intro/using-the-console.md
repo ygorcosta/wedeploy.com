@@ -12,92 +12,69 @@ weight: 3
 
 <article id="1">
 
-## Create an account
+## Introduction
 
-First you need to create a WeDeploy account by signing up through the Console [signup page](https://console.wedeploy.com/signup).
+The WeDeploy Console is a home for you to create, install, manage, configure, view logs, and check the status of your projects.
 
-</article>
+To get started, you first need to create a WeDeploy account by signing up through the [Console Signup Page](https://console.wedeploy.com/signup).
 
-<article id="2">
-
-## Access your Console
-
-As the main page, the Console will list all your projects and status of availability in the server. In the Console, click in New Project .
+When you login to the Console, you will see a list of your WeDeploy projects. If you don't have any yet, don't worry, we will go over how to change that below.
 
 ![Console](/images/docs/intro/using-the-dashboard--dashboard.png)
 
 </article>
 
-<article id="3">
+<article id="2">
 
 ## Create a new project
 
-You are able to organize your services by project. Select a project ID and click in Create Project.
+To start, you must create new project by going to the button in the top right corner named _"New Project"_. Then you can type an ID for your project. Project names are permanent and cannot be changed later.
 
 ![New Project](/images/docs/intro/using-the-dashboard--new-project.png)
 
-</article>
-
-<article id="4">
-
-## Open your project
-
-Open your project by clicking on your project domain.
+Once your project is created, it will show up on your Console main page. To see the details of your project, click on the name of the project.
 
 ![Project Container List](/images/docs/intro/using-the-dashboard--project-container-list.png)
 
 </article>
 
-<article id="5">
+<article id="3">
 
-## Click on install service
+## Install a service
 
-Projects can have more than one service. In this example we're going to deploy a static website.
+By clicking on a project, you can start monitoring and configuring your project and its services.
+
+In each project, you can have up to five services installed. To install a new service, click on the _"Install Service"_ button in the top right corner of your project's Console screen.
 
 ![Install Container](/images/docs/intro/using-the-dashboard--install-container.png)
 
-</article>
+##### Select a service type
 
-<article id="6">
-
-## Select a service type
-In this tutorial we're going to use the WeDeploy Hosting in order to host a static project.
+You must choose the type of service you want to install.
 
 ![Select a Container Type](/images/docs/intro/using-the-dashboard--select-a-container-type.png)
 
-</article>
+##### Choose an ID for your service
 
-<article id="7">
-
-## Fill in the ID click on install service
+Similar to project ID's, service ID's are permanent and cannot be changed later. When you have chosen an ID, click _"Install Service"_.
 
 ![Install Container Form](/images/docs/intro/using-the-dashboard--install-container-form.png)
 
-</article>
+##### Deploy Service
 
-<article id="8">
-
-## The container is going to be up and running
+Now WeDeploy will start building and deploying your service automatically.
 
 ![Container Up and Running](/images/docs/intro/using-the-dashboard--container-up-and-running.png)
 
 </article>
 
-<article id="9">
+<article id="4">
 
-## Access the URL generated for your service
-Now that you installed the boilerplate, in the service screen is possible to see the status of the service and its URL. Click on the URL to copy to your clipboard and open that in a new tab in your browser.
+## View your project live
+
+Once your service is installed, we give you a specific URL for that service that is made up with the service and project ID's (_website-strawberry.wedeploy.io_). You can always find this URL by clicking on the service in the overview section.
 
 ![URL Generated](/images/docs/intro/using-the-dashboard--url-generated.png)
-
-</article>
-
-<article id="10">
-
-## It works!
-That's it! Using a sofisticated Loadbalancer system and service discovering, WeDeploy automatically creates a URL and points that to your container.
-
-![URL Generated](/images/docs/intro/using-the-dashboard--it-works.png)
 
 </article>
 
