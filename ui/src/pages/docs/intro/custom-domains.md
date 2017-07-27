@@ -1,6 +1,6 @@
 ---
 title: "Custom Domains"
-description: "This is an overview of how WeDeploy manages custom domains for your projects."
+description: "This is an overview of how WeDeploy manages custom domains for your services."
 headerTitle: "Intro"
 layout: "guide"
 weight: 6
@@ -14,58 +14,44 @@ weight: 6
 
 ## Introduction
 
-To make your app live right away, WeDeploy makes every service accessible via its service domain, but when you want to make your project accessible by a non-WeDeploy domain name, you will need to connect a custom domain from a third-party DNS provider.
+To make your app live right away, WeDeploy makes every service accessible via its service domain, but when your app is moves towards production, you will most likely want to add a custom domain to beautify your websites URL. Configuring custom domains can be tricky and complicated, which is why we wanted to make it simple and straitforward for you.
 
 </article>
 
 <article id="2">
 
-## Configuring custom domains
+## Simple Setup
 
-When you configure a custom domain on your service, WeDeploy will check to see if that domain name is pointing to that service. This means you must always configure with your domain provider before adding the domain to your project.
+The easiest way to configure your custom domain, is to add one of our WeDeploy name servers. Once you point to our name server from your domain provider, you can simply add the custom domain to your service and we will do all the configuration work for you.
 
-1. Go to your domain provider and configure the DNS to point to your WeDeploy service URL.
-2. After you create a project on the [Console](https://console.wedeploy.com), go to the WeDeploy service you would like to add the domain to and select _"Custom Domains"_.
-3. Now type the domain(s) you would like to add.
-4. Click on _"Update Custom Domains"_.
+1. Go to your domain provider and find where you can set a custom name server.
+2. Enter one of the regional WeDeploy name servers from below.
+3. Go to the service of your project, click on _"Custom Domains"_, and add the new domain.
 
-![settings](/images/docs/intro/custom-domains--settings.png)
+<div class="table-container">
+
+| Name Server                     | Region            |
+| ------------------------------- | ----------------- |
+| **sydney**.wedeploy.domains     | Syndey, AT        |
+| **frankfurt**.wedeploy.domains  | Frankfurt, DE     |
+| **paris**.wedeploy.domains      | Paris, FR         |
+| **amsterdam**.wedeploy.domains  | Amsterdam, NL     |
+| **signapore**.wedeploy.domains  | Signapore, SG     |
+| **london**.wedeploy.domains     | London, UK        |
+| **california**.wedeploy.domains | California, US    |
+| **iowa**.wedeploy.domains       | Iowa, US          |
+| **newyork**.wedeploy.domains    | New York, US      |
+| **texas**.wedeploy.domains      | Texas, US         |
+
+</div>
 
 </article>
 
 <article id="3">
 
-## DNS for root domains
+## Adding Subdomains
 
-A root domain is the highest level of hierarchy for the website you control. When you register a domain name, you are registering a root domain which allows you to have the access to create subdomains and file structures all branching from that root domain.
-
-If your domain provider allows you to either use CNAME or ALIAS records for root domains, you just need to point the CNAME/ALIAS entry for your root domain as described below:
-
-<div class="table-container">
-
-| Record            | Name             | Project Target Domain |
-| ----------------- | ---------------- | --------------------- |
-| ALIAS or CNAME    | '@' or empty     | ui-myapp.wedeploy.io. |
-
-</div>
-
-In many DNS Providers, you are only allowed to use Address Records (A) for your root domain. In that case, you can use the static IP provided by WeDeploy as the target for the Address Record (A):
-
-<div class="table-container">
-
-| Record            | Name             | Project Target Domain |
-| ----------------- | ---------------- | --------------------- |
-| A                 | '@' or empty     | 173.196.61.238        |
-
-</div>
-
-</article>
-
-<article id="4">
-
-## DNS for subdomains
-
-You can configure your subdomain as a new CNAME record with your DNS provider. If you're not sure about how to configure CNAME records for subdomains, visit your DNS provider's documentation page.
+Now that you have your root domain setup, you may want to add a subdomain like _www.myapp.com_. This is very simple and can by done by configuring the CNAME on your domain provider.
 
 <div class="table-container">
 
@@ -75,6 +61,30 @@ You can configure your subdomain as a new CNAME record with your DNS provider. I
 | CNAME             | ui.mydomain.com      | ui-myapp.wedeploy.io.    |
 
 </div>
+
+</article>
+
+<article id="4">
+
+## Advanced Configuration
+
+What if you want to configure the DNS yourself? No problem, that is a simple process as well. Instead of using a name server to route your project, you can simply add an apex domain as an CNAME.
+
+<div class="table-container">
+
+| NAME              | TYPE        | DATA                    |
+| ----------------- | ----------- | ----------------------- |
+| empty             | CNAME       | ui-myapp.wedeploy.io.   |
+
+</div>
+
+<aside>
+
+###### <span class="icon-16-alert"></span> Attention
+
+This method is only available for domain providers that allow CNAME configuration for root domains.
+
+</aside>
 
 </article>
 
