@@ -26,7 +26,7 @@ Both options give you a lot of power and flexibility, but there's another import
 
 The last thing any developer wants is to add a new tool that forces them to alter their workflow. This is why we've worked hard to build WeDeploy so it can fit right into your regular way of working and fill the gaps needed to take your development to the next level.
 
-Heroku tries to determine what language your project uses. It then takes the matching buildpack to install dependencies, compile the code and run the application. Heroku comes with a number of pre-configured buildpacks for languages like Java, Ruby, Node.js and so on.
+WeDeploy tries to determine what language your project uses. It then takes the matching buildpack to install dependencies, compile the code and run the application. WeDeploy comes with a number of pre-configured buildpacks for languages like Java, Ruby, Node.js and so on.
 
 On deploy, the platform will detect the programming language and build & run the application.
 

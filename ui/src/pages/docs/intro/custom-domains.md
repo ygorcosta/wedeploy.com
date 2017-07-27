@@ -3,7 +3,7 @@ title: "Custom Domains"
 description: "This is an overview of how WeDeploy manages custom domains for your projects."
 headerTitle: "Intro"
 layout: "guide"
-weight: 9
+weight: 6
 ---
 
 ### {$page.title}
@@ -77,3 +77,7 @@ You can configure your subdomain as a new CNAME record with your DNS provider. I
 </div>
 
 </article>
+
+## What's next?
+
+* Learn more about using [environment variables](/docs/intro/environment-variables.html).

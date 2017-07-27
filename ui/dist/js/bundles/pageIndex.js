@@ -36368,7 +36368,7 @@ function $browser(opt_data, opt_ignored, opt_ijData) {
             'class', 'bullet');
       ie_close('div');
       ie_open('h3');
-        itext('WeDeploy\u2122 Dashboard');
+        itext('WeDeploy\u2122 Console');
       ie_close('h3');
     ie_close('div');
     ie_open('div', null, null,
@@ -36627,33 +36627,33 @@ function $cli(opt_data, opt_ignored, opt_ijData) {
             'class', 'no-margin');
           ie_open('span', null, null,
               'class', 'one');
-            itext('create');
+            itext('log');
           ie_close('span');
           ie_open('span', null, null,
               'class', 'two');
-            itext('Creates a project or container;');
+            itext('Display logs of the services');
           ie_close('span');
         ie_close('p');
         ie_open('p', null, null,
             'class', 'no-margin');
           ie_open('span', null, null,
               'class', 'one');
-            itext('run');
+            itext('list');
           ie_close('span');
           ie_open('span', null, null,
               'class', 'two');
-            itext('Run the infrastructure for development locally;');
+            itext('Show list of projects and services');
           ie_close('span');
         ie_close('p');
         ie_open('p', null, null,
             'class', 'no-margin');
           ie_open('span', null, null,
               'class', 'one');
-            itext('link');
+            itext('restart');
           ie_close('span');
           ie_open('span', null, null,
               'class', 'two');
-            itext('Links the given project or service locally;');
+            itext('Restart project or services');
           ie_close('span');
         ie_close('p');
         ie_open('p');
@@ -36661,7 +36661,7 @@ function $cli(opt_data, opt_ignored, opt_ijData) {
           ie_open('strong');
             itext('we');
           ie_close('strong');
-          itext(' create |');
+          itext(' deploy |');
         ie_close('p');
       ie_close('div');
     ie_close('div');

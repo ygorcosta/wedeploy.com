@@ -12,9 +12,7 @@ weight: 4
 
 <aside>
 
-###### <span class="icon-16-alert"></span> Attention
-
-If you are unfamiliar with how you can apply and manage your secret keys, please visit our [Environment Variables](/docs/intro/environment-variables.html) page.
+If you are unfamiliar with how you can apply this concept, please visit our main [Environment Variables](/docs/intro/environment-variables.html) page.
 
 </aside>
 
@@ -22,7 +20,7 @@ If you are unfamiliar with how you can apply and manage your secret keys, please
 
 ## Reference
 
-Here is a list of all the environment variable keys you can use with this service.
+Here's a list of all the environment variables you can use with this service.
 
 <div class="table-container">
 
