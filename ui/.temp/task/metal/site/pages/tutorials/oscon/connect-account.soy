@@ -1,0 +1,33 @@
+
+{namespace ntygu}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Create an account on WeDeploy</h4>
+<p>Now go and <a href="#">create a WeDeploy account</a>, if you don't have one already.</p>
+<h4>Create a new project</h4>
+<p>On the <a href="https://console.wedeploy.com/projects">WeDeploy Console</a>, create a new project (name it whatever you want 👍).</p>
+<h4>Link your GitHub account</h4>
+<p>Inside of your new project on the Console:</p>
+<ol>
+<li>Go to <em>Deployment</em></li>
+<li>Select <em>GitHub</em></li>
+<li>Go to <em>Connect to GitHub</em></li>
+<li>Select <em>Authorize application</em></li>
+</ol>
+<figure>
+    <img src="/images/tutorials/oscon/3-link-github.gif" alt="Link GitHub Account">
+</figure>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}

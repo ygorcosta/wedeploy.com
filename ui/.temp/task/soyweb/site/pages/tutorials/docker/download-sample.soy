@@ -1,0 +1,46 @@
+---
+title: "Download Sample"
+description: "In this section, you'll learn how to deploy an application using WeDeploy Docker."
+buttonTitle: "I downloaded the sample files"
+tutorialTitle: "Getting started with WeDeploy Docker"
+parentId: "docker"
+layout: "tutorial"
+time: 20
+weight: 2
+srcFilePath: src/pages/tutorials/docker/download-sample.md
+---
+
+{namespace lQeLe}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Download Sample</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia incidunt tenetur cumque ducimus earum aliquid voluptate. Molestias tempora suscipit atque quidem excepturi, enim ducimus nobis dicta. Labore et maxime aspernatur.</p>
+<h6>Download a ZIP</h6>
+<p>You can <a href="https://github.com/wedeploy/tutorial-docker/archive/master.zip">download a ZIP file</a>.</p>
+<h6>Or Download using Git</h6>
+{call ElectricCode.render}{param code kind="text"}{literal}git clone https://github.com/wedeploy/tutorial-docker.git{/literal}{/param}{param mode: 'xml' /}{/call}
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}

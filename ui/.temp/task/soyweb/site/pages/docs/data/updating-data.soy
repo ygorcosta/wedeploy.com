@@ -1,0 +1,74 @@
+---
+title: "Updating Data"
+description: "Update an existing record in the database with certain attributes."
+headerTitle: "Data"
+layout: "guide"
+weight: 7
+srcFilePath: src/pages/docs/data/updating-data.md
+---
+
+{namespace mHXpI}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			
+<h3>{$page.title}</h3>
+<h6>{$page.description}</h6>
+<aside>
+<p>If you are unfamiliar with our API, please visit the <a href="/docs/intro/api-clients.html">API Clients</a> page first to learn how to install and configure it.</p>
+</aside>
+<article id="1">
+<h2>Updating existing data</h2>
+<p>Updating existing data is as simple as sending a JSON.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .data('https://<serviceID>-<projectID>.wedeploy.io')
+    .update('movies/115992383516607958', {
+        "rating": 9.1
+    }).then(function(movie) {
+        console.log(movie);
+    });{/literal}{/param}{param mode: 'javascript' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .data('https://<serviceID>-<projectID>.wedeploy.io')
+    .update(resourcePath: "movies/115992383516607958", updatedAttributes: [
+        "rating": 9.1
+    ])
+    .then { movie in
+        print(movie)
+    }{/literal}{/param}{param mode: 'swift' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}JSONObject movieJsonObject = new JSONObject()
+    .put("rating", 9.1);
+
+WeDeploy
+    .data('https://data-datademo.wedeploy.io')
+    .update("movies/115992383516607958", movieJsonObject)
+    .execute();{/literal}{/param}{param mode: 'text/x-java' /}{/call}<p>This operation will return the updated document with the new rating:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}{
+    "id":" 115992383516607958",
+    "title": "Star Wars IV",
+    "year": 1977,
+    "rating": 9.1
+}{/literal}{/param}{param mode: 'javascript' /}{/call}</article>
+<h2>What's next?</h2>
+<p>Now that you've learned how to update, you can start <a href="/docs/data/deleting-data.html">deleting data</a>.</p>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}

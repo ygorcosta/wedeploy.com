@@ -1,0 +1,213 @@
+---
+title: "Manage Users"
+description: "Create, delete or update users by using WeDeploy Auth."
+headerTitle: "Auth"
+layout: "guide"
+weight: 2
+srcFilePath: src/pages/docs/auth/manage-users.md
+---
+
+{namespace AbgUq}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			
+<h3>{$page.title}</h3>
+<h6>{$page.description}</h6>
+<aside>
+<p>If you are unfamiliar with our API, please visit the <a href="/docs/intro/api-clients.html">API Clients</a> page first to learn how to install and configure it.</p>
+</aside>
+<article id="1">
+<h2>Create user</h2>
+<p>You create a new user in your WeDeploy project by calling the <code>createUser</code> method or by signing in an user for the first time using an identity provider such as Google or Facebook.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .createUser({
+        email: 'user@domain.com',
+        password: 'abc'
+    })
+    .then(function(user) {
+        // Successfully created.
+    })
+    .catch(function(err) {
+        // Not created.
+    });{/literal}{/param}{param mode: 'javascript' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .createUser(email: "user@domain.com", password: "abc", name: "somename")
+    .then { user -> Void in
+        // Successfully created.
+    }
+    .catch { err in
+        // Not created.
+    }{/literal}{/param}{param mode: 'swift' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth("<auth-url>")
+    .createUser("user@domain.com", "password", "somename")
+    .execute();{/literal}{/param}{param mode: 'text/x-java' /}{/call}</article>
+<article id="2">
+<h2>Get current user</h2>
+{call ElectricCode.render}{param code kind="text"}{literal}var currentUser = WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').currentUser;
+
+if (currentUser) {
+    // User is signed in.
+} else {
+    // No user is signed in.
+}{/literal}{/param}{param mode: 'javascript' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .getCurrentUser()
+    .then { user -> Void in
+        // User found.
+    }
+    .catch { error in
+        // User does not exist.
+    }{/literal}{/param}{param mode: 'swift' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth("<auth-url>")
+    .getCurrentUser()
+    .execute();{/literal}{/param}{param mode: 'text/x-java' /}{/call}</article>
+<article id="3">
+<h2>Get user</h2>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .getUser(userId)
+    .then(function(user) {
+        // User found.
+    })
+    .catch(function(err) {
+        // User does not exist.
+    });{/literal}{/param}{param mode: 'javascript' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .getUser(id: "userId")
+    .then { user -> Void in
+        // User found.
+    }
+    .catch { error in
+        // User does not exist.
+    }{/literal}{/param}{param mode: 'swift' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth("<auth-url>")
+    .getUser("userId")
+    .execute();{/literal}{/param}{param mode: 'text/x-java' /}{/call}</article>
+<article id="4">
+<h2>Delete user</h2>
+{call ElectricCode.render}{param code kind="text"}{literal}var currentUser = WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').currentUser;
+
+currentUser
+    .deleteUser()
+    .then(function() {
+        // Successfully deleted.
+    })
+    .catch(function(err) {
+        // Not deleted.
+    });{/literal}{/param}{param mode: 'javascript' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .deleteUser(id: "userId")
+    .then { _ -> Void in
+        // Successfully deleted
+    }
+    .catch { err in
+        // Not deleted.
+    }{/literal}{/param}{param mode: 'swift' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth("<auth-url>")
+    .deleteUser("userId")
+    .execute();{/literal}{/param}{param mode: 'text/x-java' /}{/call}</article>
+<article id="5">
+<h2>Update user</h2>
+{call ElectricCode.render}{param code kind="text"}{literal}var currentUser = WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').currentUser;
+
+currentUser
+    .updateUser({
+        password: "password",
+        email: "eleven@hawkinslabs.com",
+        name: "Eleven",
+        photoUrl: "https://hawkinslabs.com/011/profile.jpg"
+    })
+    .then(function() {
+        // Successfully updated.
+    })
+    .catch(function(err) {
+        // Not updated.
+    });{/literal}{/param}{param mode: 'javascript' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .updateUser(id: "userId" , email: "eleven@hawkinslabs.com", password: "password", name: "Eleven")
+    .then { _ -> Void in
+        // Successfully updated
+    }
+    .catch { err in
+        // Not updated.
+    }{/literal}{/param}{param mode: 'swift' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}JSONObject fields = new JSONObject()
+    .put("email", "eleven@hawkinslabs.com")
+    .put("password", "newPassword")
+    .put("name", "Eleven");
+
+WeDeploy
+    .auth("<auth-url>")
+    .updateUser("userId", fields)
+    .execute();{/literal}{/param}{param mode: 'text/x-java' /}{/call}</article>
+<article id="6">
+<h2>Send a password reset email</h2>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .sendPasswordResetEmail("user@domain.com")
+    .then(function() {
+        // Email sent.
+    })
+    .catch(function(err) {
+        // An error happened.
+    });{/literal}{/param}{param mode: 'javascript' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .sendPasswordReset(email: "user@domain.com")
+    .then { _ -> Void in
+        // Successfully signed out.
+    }
+    .catch { err in
+        // Not signed out.
+    }{/literal}{/param}{param mode: 'swift' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth("<auth-url>")
+    .sendPasswordResetEmail("user@domain.com")
+    .execute();{/literal}{/param}{param mode: 'text/x-java' /}{/call}</article>
+<article id="7">
+<h2>Sign-out</h2>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .signOut()
+    .then(function() {
+        // User is signed out.
+    })
+    .catch(function(err) {
+        // User was signed out.
+    });{/literal}{/param}{param mode: 'javascript' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth('https://<serviceID>-<projectID>.wedeploy.io')
+    .signOut()
+    .then { _ -> Void in
+        // Successfully signed out.
+    }
+    .catch { err in
+        // Not signed out.
+    }{/literal}{/param}{param mode: 'swift' /}{/call}{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .auth("<auth-url>")
+    .signOut()
+    .execute();{/literal}{/param}{param mode: 'text/x-java' /}{/call}</article>
+<h2>What's next?</h2>
+<p>Learn how to sign-in users using their <a href="/docs/auth/sign-in-with-password.html">email and password</a>.</p>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}

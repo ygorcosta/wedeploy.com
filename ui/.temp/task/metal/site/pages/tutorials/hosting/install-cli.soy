@@ -1,0 +1,23 @@
+
+{namespace zpadG}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Install CLI</h4>
+<h5>Download</h5>
+<p>The WeDeploy CLI allows you to do many things with your projects like show logs, analyze metrics, manage domains, and most importantly, deploy.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}curl http://cdn.wedeploy.com/cli/beta/wedeploy.sh -sL | bash{/literal}{/param}{param mode: 'xml' /}{/call}<h5>Login</h5>
+<p>Now open your terminal and login to your WeDeploy account:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}we login{/literal}{/param}{param mode: 'xml' /}{/call}
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}

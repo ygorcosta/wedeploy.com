@@ -1,0 +1,62 @@
+---
+title: "Add Config File"
+description: "In this section, you'll learn how to send an email on the web using the WeDeploy API Client."
+buttonTitle: "I created the wedeploy.json"
+tutorialTitle: "Getting started with WeDeploy Email on the web"
+parentId: "email-web"
+layout: "tutorial"
+time: 45
+weight: 5
+srcFilePath: src/pages/tutorials/email-web/add-config-file.md
+---
+
+{namespace jbwLt}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Add Config File</h4>
+<p>Since every service folder must have a <code>wedeploy.json</code> file that configures the service, let's add one to our Email Service in the repo we just cloned.</p>
+<ol>
+<li>Open the <code>tutorial-email-web</code> folder in a code editor.</li>
+<li>Create a new file inside of the <code>email</code> folder and name it <code>wedeploy.json</code>.</li>
+<li>Inside of that file, paste this code.</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}{
+    "id": "email",
+    "image": "wedeploy/email:beta"
+}{/literal}{/param}{param mode: 'application/json' /}{/call}<aside>
+<h6><span class="icon-16-star"></span> Pro Tip</h6>
+<p>Another thing you can do in your <code>wedeploy.json</code> file is add environment variables. There are many ways to use these, one example is to change to a unique email provider.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}{
+    "id": "email",
+    "image": "wedeploy/email:beta",
+    "env" {
+        "EMAIL_HOST": "host294.mailrave.com"
+    }
+}{/literal}{/param}{param mode: 'application/json' /}{/call}<p>See the full list of <a href="/docs/email/environment-variables.html" target="_blank">Environment Variables for Email</a>.</p>
+</aside>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}

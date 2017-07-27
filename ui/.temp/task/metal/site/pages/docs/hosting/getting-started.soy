@@ -1,0 +1,49 @@
+
+{namespace eSQAT}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			
+<h3>Hosting</h3>
+<h6>{$page.description}</h6>
+<article id="1">
+<h2>Introduction</h2>
+<p>Our Hosting service allows you to deliver HTML, CSS, JavaScript, or any other static files using powerful static hosting. It's super fast and will save you a lot of time.</p>
+</article>
+<article id="2">
+<h2>Try it yourself</h2>
+<p>Want to see the process of deploying WeDeploy Hosting step by step?</p>
+<div class="guide-btn-cta">
+    <a class="btn btn-accent btn-sm" href="/tutorials/hosting" target="_blank" data-senna-off>
+        <span class="icon-16-external"></span>Try the tutorial
+    </a>
+</div>
+<div class="guide-aux-cta">
+    or see a <a href="http://boilerplate-hosting.wedeploy.io" target="_blank" data-senna-off>live demo</a>.
+</div>
+</article>
+<article id="3">
+<h2>Configuring</h2>
+<aside>
+<p>All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works.html">How It Works Page</a></strong>.</p>
+</aside>
+<p>Below is an example of a <code>wedeploy.json</code> for a Hosting container.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}{
+    "id": "ui",
+    "image": "wedeploy/hosting:beta"
+}{/literal}{/param}{param mode: 'application/json' /}{/call}<p>The <code>id</code> for your services are uniquely determined by you.</p>
+</article>
+<h2>What's next?</h2>
+<p>Now you can learn more about <strong><a href="/docs/hosting/custom-error-pages.html">custom error pages</a></strong>.</p>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}

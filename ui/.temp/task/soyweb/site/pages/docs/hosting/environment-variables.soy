@@ -1,0 +1,58 @@
+---
+title: "Environment Variables"
+description: "Use environment variables to control your app."
+headerTitle: "Hosting"
+layout: "guide"
+weight: 3
+srcFilePath: src/pages/docs/hosting/environment-variables.md
+---
+
+{namespace vOQWx}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			
+<h3>{$page.title}</h3>
+<h6>{$page.description}</h6>
+<aside>
+<p>If you are unfamiliar with how you can apply this concept, please visit our main <a href="/docs/intro/environment-variables.html">Environment Variables</a> page.</p>
+</aside>
+<article id="1">
+<h2>Reference</h2>
+<p>Here's a list of all the environment variables you can use with this service.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr><th>Key</th><th>Default Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>WEDEPLOY_WEB_PATH</td><td><code>/</code></td><td>Path to serve static files</td></tr>
+<tr><td>WEDEPLOY_WEB_ERROR_PATH</td><td><code>/_error</code></td><td>Path to serve <a href="/docs/hosting/custom-error-pages.html">error pages</a></td></tr>
+</tbody>
+</table>
+</div>
+</article>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}

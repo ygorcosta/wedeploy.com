@@ -1,0 +1,91 @@
+---
+title: "Add API Methods"
+description: "In this section, you'll learn how to authenticate users on an Android app using the WeDeploy API Client."
+buttonTitle: "I added the API methods"
+tutorialTitle: "Getting started with WeDeploy Auth on an Android app"
+parentId: "auth-android"
+layout: "tutorial"
+time: 90
+weight: 8
+srcFilePath: src/pages/tutorials/auth-android/add-api-methods.md
+---
+
+{namespace nRFbm}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Add API Methods</h4>
+<h6>Create User</h6>
+<p>First, let's add the code that will allow users to create an account.</p>
+<p>To do this, go to <code>SignUpActivity.java</code> and paste this code in the &quot;doSignUp&quot; method:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}weDeploy.auth("auth-<projectID>.wedeploy.sh")
+    .createUser(email, password, name)
+    .execute(new Callback() {
+        @Override
+        public void onSuccess(Response response) {
+            showAlert("Success", "Signed up successfully");
+        }
+
+        @Override
+        public void onFailure(Exception e) {
+            Log.e("Error", "Sign up error", e);
+            showAlert("Error", "Sign up error");
+        }
+    });{/literal}{/param}{param mode: 'text/x-java' /}{/call}<p><strong>Note:</strong> make sure to replace <code>&lt;projectID&gt;</code> with the id of your project.</p>
+<h6>Sign-in</h6>
+<p>Next, let's add the code that will allow users to sign-in.</p>
+<p>First of all, go to <code>LoginActivity.java</code>, and paste this code in the &quot;doLogin&quot; method:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}weDeploy.auth("auth-<projectID>.wedeploy.sh")
+    .signIn(email, password).execute(new Callback() {
+        @Override
+        public void onSuccess(Response response) {
+            showAlert("Success", "Signed in");
+        }
+
+        @Override
+        public void onFailure(Exception e) {
+            showAlert("Error", "Login error");
+        }
+    });{/literal}{/param}{param mode: 'text/x-java' /}{/call}<p><strong>Note:</strong> make sure to replace <code>&lt;projectID&gt;</code> with the id of your project.</p>
+<aside>
+<h6><span class="icon-16-star"></span> Pro Tip</h6>
+<p>In the examples above we use the execute(callback) method to handle the response with a callback, which is the most typical way of doing it in the Android ecosystem, but we can also handle the result using a RxJava Single, which is similar to an Observable, but it either emits one value or an error notification:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}weDeploy.auth("auth-<projectID>.wedeploy.sh")
+    .signIn(email, password)
+    .asSingle()
+    .subscribe(new DisposableSingleObserver<Response>() {
+        @Override
+        public void onSuccess(Response response) {
+            showAlert("Success", "Signed in");
+        }
+
+        @Override
+        public void onError(Throwable e) {
+            showAlert("Error", "Login error");
+        }
+    });{/literal}{/param}{param mode: 'text/x-java' /}{/call}</aside>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}

@@ -1,0 +1,35 @@
+
+{namespace wzDNJ}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Add wedeploy.json</h4>
+<p>Since every service folder must have a <code>wedeploy.json</code> file that configures the service, let's add one to the repo we just cloned.</p>
+<ol>
+<li>Open the <code>tutorial-nodejs</code> folder in a code editor</li>
+<li>Create a new file named <code>wedeploy.json</code> inside the <code>nodejs</code> folder.</li>
+<li>In that file, paste this code:</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}{
+    "id": "nodejs",
+    "image": "wedeploy/nodejs",
+    "hooks": {
+        "build": "npm install"
+    }
+}{/literal}{/param}{param mode: 'application/json' /}{/call}<aside>
+<h6><span class="icon-16-star"></span> Pro Tip</h6>
+<p>As you can see above, we added a <code>hook</code> in our <code>wedeploy.json</code> file. Whatever task you put as a <code>hook</code> will be completed during the build cycle prior to each deployment.</p>
+</aside>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}

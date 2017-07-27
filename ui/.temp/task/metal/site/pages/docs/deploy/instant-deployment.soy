@@ -1,0 +1,38 @@
+
+{namespace USZvY}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			
+<h3>{$page.title}</h3>
+<h6>{$page.description}</h6>
+<article id="1">
+<h2>Download the CLI</h2>
+<p>In your terminal, run this command:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}curl https://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash{/literal}{/param}{param mode: 'text' /}{/call}<p>This will install our command-line interface which is a tool that will help you use the WeDeploy platform.</p>
+<aside>
+<p>The command above will only work for Unix-like systems such as macOS or Linux. If you use Windows, you should download the <a href="https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.msi">Windows amd64 installer</a>.</p>
+</aside>
+</article>
+<article id="2">
+<h2>Deploy instantly</h2>
+<p>Assuming you already have a project locally, now you just need to run:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}we deploy{/literal}{/param}{param mode: 'text' /}{/call}<p>This will immediately start uploading your files. Once that's finished, WeDeploy will start building and deploying your application. In the end, you'll be able to see it online in any browser.</p>
+<aside>
+<p>If you don't have a project ready to deploy, you can download this <a href="https://github.com/wedeploy/boilerplate-hosting/archive/master.zip">simple project</a> and run the <code>we deploy</code> command inside that folder.</p>
+</aside>
+</article>
+<h2>What's next?</h2>
+<p>Being able to deploy instantaneously is great, but sometimes you want to trigger a deploy every time a push is made to GitHub. If that's your case, check the <a href="/docs/deploy/continuous-deployment.html">Continuous Deployment</a> section.</p>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}

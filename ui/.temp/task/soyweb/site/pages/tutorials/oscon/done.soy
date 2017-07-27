@@ -1,0 +1,53 @@
+---
+description: "In this tutorial, you'll learn how to deploy a game in 2 minutes."
+layout: "tutorial"
+parentId: "oscon"
+time: 5
+title: "You did it!"
+tutorialTitle: "OSCON 2017"
+weight: 6
+srcFilePath: src/pages/tutorials/oscon/done.md
+---
+
+{namespace tqbfn}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Time to grab your raygun</h4>
+<h6>Nice job!! You just deployed an awesome game at the speed of light. 💪🚀⚡️</h6>
+<figure>
+    <img src="/images/tutorials/oscon/lifebringer.png" alt="The Lifebring Game">
+</figure>
+<h4>Checkout what you built</h4>
+<p>Now you can go to your projects url (<code>&lt;your-projec&gt;.wedeploy.sh</code>) in the top left corner of the Console, and <strong>start playing</strong>!</p>
+<h4>What's next?</h4>
+<p><strong>Grab a sticker!</strong> Show the game you deployed to one of the members at the booth and they will give you an awesome WeDeploy hoodie!</p>
+<p><strong>Win the grand prize!</strong> Whats a game without a little competition? Start competing against others who built the app- <a href="/leaderboard">highest score</a> will <strong>win a handmade raygun</strong>!</p>
+<figure>
+    <img src="/images/tutorials/oscon/raygun.jpg" alt="Ray gun">
+</figure>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}

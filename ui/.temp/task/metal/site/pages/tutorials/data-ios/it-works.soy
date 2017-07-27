@@ -1,0 +1,26 @@
+
+{namespace upbSq}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>It Works</h4>
+<p>Great work, your app is now live! Now let's start playing with some data.</p>
+<ol>
+<li>Run the app in the simulator.</li>
+<li>Type an item into the input and click <em>Add Item</em>.</li>
+<li>Click <em>Go to item listing</em> and see how your data is already populated.</li>
+</ol>
+<p>Awesome! You just created an app and saved data within a few minutes! We can't wait to see what else you create with WeDeploy!</p>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}

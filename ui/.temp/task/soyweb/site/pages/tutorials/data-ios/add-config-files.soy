@@ -1,0 +1,80 @@
+---
+title: "Add Config Files"
+description: "In this section, you'll learn how to save and get data on iOS using the WeDeploy Swift API Client."
+buttonTitle: "I added the config files"
+tutorialTitle: "Getting started with WeDeploy Data on iOS"
+parentId: "data-ios"
+layout: "tutorial"
+time: 60
+weight: 5
+srcFilePath: src/pages/tutorials/data-ios/add-config-files.md
+---
+
+{namespace YHwQE}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Add Config Files</h4>
+<h6>wedeploy.json</h6>
+<p>Since every service folder must have a <code>wedeploy.json</code> file that configures the service, let's add one to our Data Service in the repo we just cloned.</p>
+<ol>
+<li>Open the <code>tutorial-data-ios</code> folder in a code editor.</li>
+<li>Create a new file inside of the <code>data</code> folder and name it <code>wedeploy.json</code>.</li>
+<li>Inside of that file, paste this code.</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}{
+    "id": "data",
+    "image": "wedeploy/data:beta"
+}{/literal}{/param}{param mode: 'application/json' /}{/call}<h6>api.json</h6>
+<p>Along with the wedeploy.json, each Data service must have an <code>api.json</code> file to configure your database (eg. set path, allow certain methods, and require authentication).</p>
+<ol>
+<li>Go back to <code>tutorial-data-ios</code> in your code editor.</li>
+<li>Create another file inside of the <code>data</code> folder and name it <code>api.json</code>.</li>
+<li>Inside of that file, paste this code.</li>
+</ol>
+{call ElectricCode.render}{param code kind="text"}{literal}[
+    {
+        "path": "/tasks/*",
+        "data": true
+    }
+]{/literal}{/param}{param mode: 'application/json' /}{/call}<aside>
+<h6><span class="icon-16-star"></span> Pro Tip</h6>
+<p>Another thing you can do with your <code>api.json</code> file is add other parameters for the collections in your database. One example is to set certain REST methods for each category like this:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}[
+    {
+        "path": "/movies/*",
+        "data": true,
+        "method": ["GET", "PATCH", "PUT", "DELETE"]
+    },
+    {
+        "path": "/shows/*",
+        "data": true,
+        "method": "POST"
+    }
+]{/literal}{/param}{param mode: 'application/json' /}{/call}<p>See the full list of possible <a href="/docs/data/configuring-data.html" target="_blank">data configurations</a>.</p>
+</aside>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}

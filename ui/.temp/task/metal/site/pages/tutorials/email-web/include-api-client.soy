@@ -1,0 +1,21 @@
+
+{namespace eGhbD}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Include API Client</h4>
+<p>Before we can make any requests to send an email, we must connect the WeDeploy API Client.</p>
+<p>To do this, go to <code>index.html</code> in that <code>hosting</code> directory and include this script link at the bottom of the <code>&lt;body&gt;</code> element:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}<script src="https://cdn.wedeploy.com/api/beta/wedeploy.js"></script>{/literal}{/param}{param mode: 'xml' /}{/call}
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}

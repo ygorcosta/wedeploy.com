@@ -1,0 +1,23 @@
+
+{namespace IqbBO}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Download Sample File</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia incidunt tenetur cumque ducimus earum aliquid voluptate. Molestias tempora suscipit atque quidem excepturi, enim ducimus nobis dicta. Labore et maxime aspernatur.</p>
+<h6>Download a ZIP</h6>
+<p>You can <a href="https://github.com/wedeploy/tutorial-nodejs/archive/master.zip">download a ZIP file</a>.</p>
+<h6>Or Download using Git</h6>
+{call ElectricCode.render}{param code kind="text"}{literal}git clone https://github.com/wedeploy/tutorial-hosting.git{/literal}{/param}{param mode: 'xml' /}{/call}
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}

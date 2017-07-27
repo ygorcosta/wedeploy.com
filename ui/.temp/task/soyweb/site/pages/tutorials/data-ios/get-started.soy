@@ -1,0 +1,59 @@
+---
+title: "Get Started"
+description: "In this section, you'll learn how to save and get data on iOS using the WeDeploy Swift API Client."
+buttonTitle: "I'm ready to start!"
+tutorialTitle: "Getting started with WeDeploy Data on iOS"
+parentId: "data-ios"
+layout: "tutorial"
+time: 20
+weight: 1
+srcFilePath: src/pages/tutorials/data-ios/get-started.md
+---
+
+{namespace kPsXn}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Get Started</h4>
+<p>Saving and fetching data with WeDeploy is super easy. This tutorial will walk you through how to use data in your app using the API Client and how to deploy your project with one terminal command.</p>
+<h6>What you'll need</h6>
+<ul class="checklist">
+    <li><a href="https://console.wedeploy.com/signup" target="_blank">A WeDeploy account</a></li>
+    <li><a href="https://developer.apple.com/xcode" target="_blank">Xcode</a></li>
+    <li><a href="https://cocoapods.org/" target="_blank">Cocoapods</a></li>
+</ul>
+<h6>What you'll do</h6>
+<ul class="checklist">
+    <li>Clone a sample Git repository</li>
+    <li>Add configuration files</li>
+    <li>Include the API Client</li>
+    <li>Deploy the project</li>
+    <li>Add the API methods</li>
+    <li>Run the App</li>
+    <li>Start saving and fetching data</li>
+</ul>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}

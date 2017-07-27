@@ -1,0 +1,27 @@
+
+{namespace bUqcK}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>Create New Project</h4>
+<p>To begin, we will create a new WeDeploy project.</p>
+<ol>
+<li>Go to the <a href="https://console.wedeploy.com" target="_blank">WeDeploy Console</a></li>
+<li>Click on the <em>New Project</em> button</li>
+<li>Enter a <em>Project ID</em></li>
+<li>Click on the <em>Create Project</em> button</li>
+</ol>
+<p>The Project ID you entered is the ID you will use in place of all future <code>&lt;projectID&gt;</code> elements in this tutorial.</p>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}

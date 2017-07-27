@@ -1,0 +1,134 @@
+---
+title: "API Clients"
+description: "Make requests to WeDeploy using a standardized interface."
+headerTitle: "Intro"
+layout: "guide"
+weight: 5
+srcFilePath: src/pages/docs/intro/api-clients.md
+---
+
+{namespace DLWpE}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call guide.render data="all"}
+		{param content kind="html"}
+			
+<h3>{$page.title}</h3>
+<h6>{$page.description}</h6>
+<article id="1">
+<h2>Introduction</h2>
+<p>You can use our API Clients for sending/receiving requests to/from WeDeploy services like <a href="/docs/auth/getting-started.html">Auth</a>, <a href="/docs/email/getting-started.html">Email</a>, and <a href="/docs/hosting/getting-started.html">Hosting</a>. We built those libraries to make your life easier and adapt to your current workflow.</p>
+<p>Below you can find a list that contains all of them, including instructions on how to install and details for each specific platform.</p>
+</article>
+<article id="2">
+<h2>JavaScript (Web &amp; Node.js)</h2>
+<p>You can use this by adding a script element in your HTML file or to load the library using NPM.</p>
+<h5>Installation</h5>
+<p><strong>CDN</strong></p>
+{call ElectricCode.render}{param code kind="text"}{literal}<script src="https://cdn.wedeploy.com/api/latest/wedeploy.js"></script>{/literal}{/param}{param mode: 'xml' /}{/call}<p><strong>NPM</strong></p>
+{call ElectricCode.render}{param code kind="text"}{literal}npm install --save wedeploy{/literal}{/param}{param mode: 'text' /}{/call}<h5>Nuances</h5>
+<p>After installing WeDeploy using NPM, you can load this package like this:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}var WeDeploy = require('wedeploy');
+
+// Or if you're using ES6
+import WeDeploy from 'wedeploy';{/literal}{/param}{param mode: 'javascript' /}{/call}<p>This library is compatible with all major browsers (Chrome, Firefox, Safari, Edge, and IE10+) as well as <a href="https://facebook.github.io/react-native/">React Native</a> and <a href="https://facebook.github.io/react-vr/">React VR</a>.</p>
+<p>The API calls are the same in all JavaScript environments.</p>
+</article>
+<article id="3">
+<h2>Swift (iOS)</h2>
+<p>In order to start using you have to add it as Cocoapod in your <code>Podfile</code>.</p>
+<h5>Installation</h5>
+<p><strong>Cocoapods</strong></p>
+{call ElectricCode.render}{param code kind="text"}{literal}pod 'WeDeploy'{/literal}{/param}{param mode: 'swift' /}{/call}<h5>Nuances</h5>
+<p>By default, all requests returns a promise like below.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy
+    .data('https://<serviceID>-<projectID>.wedeploy.io')
+    .get(resourcePath: "movies")
+    .then { movie -> Void in
+        print(movie)
+    }{/literal}{/param}{param mode: 'swift' /}{/call}<p>You are also able to return a callback or observable. These two methods are available:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}// toCallback converts a promise into a callback
+WeDeploy
+    .data('https://<serviceID>-<projectID>.wedeploy.io')
+    .get(resourcePath: "movies")
+    .toCallback { movies, error in
+        // here you can check the error or the response
+    }
+
+// toObservable converts a promise into an observable
+WeDeploy
+    .data('https://<serviceID>-<projectID>.wedeploy.io')
+    .get(resourcePath: "movies")
+    .toObservable()
+    .subscribe(
+        onNext: { movies in
+            // here you receive the movies
+        },
+        onError: { error in
+            // oops something went wrong
+        }
+    ){/literal}{/param}{param mode: 'swift' /}{/call}</article>
+<article id="4">
+<h2>Java (Android)</h2>
+<p>You just need to add the following line to your <code>build.gradle</code> file.</p>
+<h5>Installation</h5>
+<p><strong>Gradle</strong></p>
+{call ElectricCode.render}{param code kind="text"}{literal}compile 'com.wedeploy:com.wedeploy.android:beta-20170505'{/literal}{/param}{param mode: 'groovy' /}{/call}<h5>Nuances</h5>
+<p>Before calling any method from WeDeploy, you have to build an instance first:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}WeDeploy weDeploy = new WeDeploy.Builder().build();{/literal}{/param}{param mode: 'text/x-java' /}{/call}<p>Then, you are able to synchronously fire requests to WeDeploy by calling <code>execute()</code>:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}weDeploy
+    .data('https://data-datademo.wedeploy.io')
+    .get("movies")
+    .execute();{/literal}{/param}{param mode: 'text/x-java' /}{/call}<p>You can also fire asynchronous requests by specifying a Callback to the <code>execute()</code> method:</p>
+{call ElectricCode.render}{param code kind="text"}{literal}weDeploy
+    .data('https://data-datademo.wedeploy.io')
+    .get("movies")
+    .execute(new Callback() {
+        public void onSuccess(Response response) {
+            // here you receive the movies
+        }
+
+        public void onFailure(Exception e) {
+            // oops something went wrong
+        }
+    });{/literal}{/param}{param mode: 'text/x-java' /}{/call}<p>The WeDeploy Android API is RxJava 2 compatible. This means that you can convert the request into a Single RxJava object, which emits either a success or an error event. You must add a dependency to RxAndroid in your project <code>build.gradle</code> in order to use it.</p>
+{call ElectricCode.render}{param code kind="text"}{literal}weDeploy
+    .data('https://data-datademo.wedeploy.io')
+    .get("movies")
+    .asSingle()
+    .subscribeOn(Schedulers.io())
+    .observeOn(AndroidSchedulers.mainThread())
+    .subscribe(
+        response -> {
+
+        },
+        throwable -> {
+
+        });{/literal}{/param}{param mode: 'text/x-java' /}{/call}</article>
+<h2>What's next?</h2>
+<ul>
+<li>Learn more about using <a href="/docs/intro/custom-domains.html">Custom Domains</a>.</li>
+</ul>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}

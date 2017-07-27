@@ -1,0 +1,49 @@
+---
+title: "It Works"
+description: "In this section, you'll learn how to save and get data on Android using the WeDeploy API Client."
+buttonTitle: "I saved a to-do task"
+tutorialTitle: "Getting started with WeDeploy Data on Android"
+parentId: "data-android"
+layout: "tutorial"
+time: 10
+weight: 9
+srcFilePath: src/pages/tutorials/data-android/it-works.md
+---
+
+{namespace xBZFM}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call tutorial.render data="all"}
+		{param content kind="html"}
+			
+<h4>It Works</h4>
+<p>Great work, your app is now live! Now let's start playing with some data.</p>
+<ol>
+<li>Run the app in the emulator.</li>
+<li>Type an item into the input and click <em>Add Item</em>.</li>
+<li>Click <em>Go to item listing</em> and see how your data is already populated.</li>
+</ol>
+<p>Awesome! You just created an app and saved data within a few minutes! We can't wait to see what else you create with WeDeploy!</p>
+
+
+			<input type="hidden" value="{$page.title}">
+			<input type="hidden" value="{$site.title}">
+		{/param}
+	{/call}
+{/template}
+
+
+/**
+ *
+ */
+{template .soyweb}
+	{call base.render data="all"}
+		{param content kind="html"}
+			{call .render data="all" /}
+		{/param}
+	{/call}
+{/template}
