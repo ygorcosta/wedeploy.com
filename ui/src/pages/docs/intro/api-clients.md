@@ -1,6 +1,6 @@
 ---
 title: "API Clients"
-description: "Web API's are all over the internet and allow for our applications to send requests to a server. Unfortunately, many web API's are confusing and hard to use, which is why we built the WeDeploy API to be intuitive and simple to use."
+description: "Make requests to WeDeploy using a standardized interface."
 headerTitle: "Intro"
 layout: "guide"
 weight: 5
@@ -14,7 +14,7 @@ weight: 5
 
 ## JavaScript
 
-To start utilizing capabilities of the Auth, Data, and Email WeDeploy services on your Web or Node.js app, you must install our API Client. You can use it by adding a script element in your HTML or by loading the library using NPM.
+For sending/receiving requests to/from WeDeploy on the Web or Node.js, check this API Client. You can use by adding a script element in a HTML file or to load the library using NPM:
 
 ##### Installation
 
@@ -110,7 +110,7 @@ WeDeploy
 
 ## Android
 
-You can also use the API Client for sending/receiving requests to/from WeDeploy on an Android app.
+For sending/receiving requests to/from WeDeploy from an Android App, you can use this API Client.
 
 ##### Installation
 
