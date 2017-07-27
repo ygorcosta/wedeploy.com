@@ -10,6 +10,12 @@ weight: 2
 
 ###### {$page.description}
 
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
+
 <article id="1">
 
 ## Create user
