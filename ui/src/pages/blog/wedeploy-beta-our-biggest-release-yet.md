@@ -51,7 +51,7 @@ We also make sure that those HTTPS certificates are valid by renewing them from 
 
 ##### 4. Custom Docker Services
 
-The container ecosystem has evolved a lot in the past years and [Docker](https://www.docker.com/) is probably the main responsible for such success.
+The container ecosystem has evolved a lot in the past years and [Docker](https://www.docker.com/) is probably mainly responsible for such success.
 
 Today we want to bring the benefits of this technology to you and facilitate the Docker-based development workflow. That's why we're introducing `Dockerfile` support.
 
@@ -69,7 +69,7 @@ In order to be able to persist and share data between services, we're introducin
 
 ##### 6. Instant Deployment
 
-Before you had to Git, now it's `we deploy`
+Before you had to use Git, now it's `we deploy`
 
 Deploying should be the least of your worries, which is why we created a new Instant Deployment option! Using our simple [CLI](/docs/intro/using-the-command-line.html)
 
@@ -88,6 +88,8 @@ our code-recipe detector, you can type `we deploy` in any folder containing stat
 #### What's next?
 
 Some of these changes have implications on the way your current apps will deploy on the new infrastructure. But don't worry, we already have a **[Migration Guide](/blog/how-to-migrate-your-project-to-beta.html)** ready for you so you can get started right away.
+
+**What about my alpha projects?** Don't worry, they are still there, but we will be **destroying** the old infrastructure on August 31st so you have one month to migrate your projects over.
 
 We are so excited to be able to share this new release with you! Make sure to **[try it out for yourself](https://console.wedeploy.com)** and [join our community](https://chat.wedeploy.com) to ask questions or let us know what you are building!
 
