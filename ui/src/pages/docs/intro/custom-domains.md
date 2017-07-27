@@ -1,6 +1,6 @@
 ---
 title: "Custom Domains"
-description: "Often times in production apps, you will want to point your service URL's to a custom domain so its easier for users to find your site and more consistant with your message and branding. This process can be confusion and difficult, but we beleive it doesn't have to be."
+description: "Often times in production apps, you will want to point your service URL's to a custom domain so it's easier for users to find your site and more consistant with your message and branding."
 headerTitle: "Intro"
 layout: "guide"
 weight: 6
@@ -14,7 +14,7 @@ weight: 6
 
 ## Introduction
 
-To make your app live right away, WeDeploy makes every service accessible via its service domain, but when your app moves towards production, you will most likely want to add a custom domain to beautify your websites URL. Configuring custom domains can be a tricky and complicated process, which is why we wanted to make it simple and straitforward for you.
+To make your app live right away, WeDeploy makes every service accessible via its service domain, but when your app moves towards production, you will most likely want to add a custom domain to beautify your websites URL. Configuring custom domains can be a tricky and complicated process, which is why we wanted to make it simple and straightforward for you.
 
 </article>
 
@@ -32,18 +32,17 @@ The easiest way to configure your custom domain, is to add one of our WeDeploy n
 
 <div class="table-container">
 
-| Name Server                     | Region            |
-| ------------------------------- | ----------------- |
-| **sydney**.wedeploy.domains     | Syndey, AT        |
-| **frankfurt**.wedeploy.domains  | Frankfurt, DE     |
-| **paris**.wedeploy.domains      | Paris, FR         |
-| **amsterdam**.wedeploy.domains  | Amsterdam, NL     |
-| **signapore**.wedeploy.domains  | Signapore, SG     |
-| **london**.wedeploy.domains     | London, UK        |
-| **california**.wedeploy.domains | California, US    |
-| **iowa**.wedeploy.domains       | Iowa, US          |
-| **newyork**.wedeploy.domains    | New York, US      |
-| **texas**.wedeploy.domains      | Texas, US         |
+| Country           | Name Server                     |
+| ----------------- | ------------------------------- |
+| Australia         | **sydney**.wedeploy.domains     |
+| Germany           | **frankfurt**.wedeploy.domains  |
+| France            | **paris**.wedeploy.domains      |
+| Netherlands       | **amsterdam**.wedeploy.domains  |
+| Singapore         | **singapore**.wedeploy.domains  |
+| United Kingdom    | **london**.wedeploy.domains     |
+| United States     | **california**.wedeploy.domains |
+| United States     | **iowa**.wedeploy.domains       |
+| United States     | **newyork**.wedeploy.domains    |
 
 </div>
 
@@ -60,7 +59,7 @@ Now that you have your root domain setup, you may want to add a subdomain like _
 | Record            | Subdomain            | Project Target Domain    |
 | ----------------- | -------------------- | ------------------------ |
 | CNAME             | www.mydomain.com     | ui-myapp.wedeploy.io.    |
-| CNAME             | ui.mydomain.com      | ui-myapp.wedeploy.io.    |
+| CNAME             | api.mydomain.com     | db-myapp.wedeploy.io.    |
 
 </div>
 
