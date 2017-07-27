@@ -54,13 +54,13 @@ You must choose the type of service you want to install.
 
 ![Select a Container Type](/images/docs/intro/using-the-dashboard--select-a-container-type.png)
 
-##### Choose an ID for your service
+##### Choose an ID
 
 Similar to project ID's, service ID's are permanent and cannot be changed later. When you have chosen an ID, click _"Install Service"_.
 
 ![Install Container Form](/images/docs/intro/using-the-dashboard--install-container-form.png)
 
-##### Deploy Service
+##### Install service
 
 Now WeDeploy will start building and deploying your service automatically.
 
@@ -70,7 +70,7 @@ Now WeDeploy will start building and deploying your service automatically.
 
 <article id="4">
 
-## View your project live
+## View your service live
 
 Once your service is installed, we give you a specific URL for that service that is made up with the service and project ID's (_website-strawberry.wedeploy.io_). You can always find this URL by clicking on the service in the overview section.
 
