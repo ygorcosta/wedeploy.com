@@ -1,6 +1,6 @@
 ---
 title: "Custom Domains"
-description: "This is an overview of how WeDeploy manages custom domains for your services."
+description: "Often times in production apps, you will want to point your service URL's to a custom domain so its easier for users to find your site and more consistant with your message and branding. This process can be confusion and difficult, but we beleive it doesn't have to be."
 headerTitle: "Intro"
 layout: "guide"
 weight: 6
@@ -14,7 +14,7 @@ weight: 6
 
 ## Introduction
 
-To make your app live right away, WeDeploy makes every service accessible via its service domain, but when your app is moves towards production, you will most likely want to add a custom domain to beautify your websites URL. Configuring custom domains can be tricky and complicated, which is why we wanted to make it simple and straitforward for you.
+To make your app live right away, WeDeploy makes every service accessible via its service domain, but when your app moves towards production, you will most likely want to add a custom domain to beautify your websites URL. Configuring custom domains can be a tricky and complicated process, which is why we wanted to make it simple and straitforward for you.
 
 </article>
 
@@ -27,6 +27,8 @@ The easiest way to configure your custom domain, is to add one of our WeDeploy n
 1. Go to your domain provider and find where you can set a custom name server.
 2. Enter one of the regional WeDeploy name servers from below.
 3. Go to the service of your project, click on _"Custom Domains"_, and add the new domain.
+
+![Custom Domains](/images/docs/intro/custom-domains--settings.png)
 
 <div class="table-container">
 
