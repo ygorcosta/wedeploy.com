@@ -52,9 +52,7 @@ Below is an example of a `wedeploy.json` for a Node.js container.
 
 ```application/json
 {
-	"id": "nodejs",
-	"image": "wedeploy/nodejs:beta",
-	"port": "8000"
+	"id": "nodejs"
 }
 ```
 

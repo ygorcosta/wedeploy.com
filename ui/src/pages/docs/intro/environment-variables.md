@@ -73,7 +73,7 @@ All environment variables specified on `wedeploy.json` will be created or update
 
 ## What's next?
 
-Each WeDeploy service has a set of pre-defined environment variables, you can learn more about it by visiting them individually:
+Some WeDeploy services have pre-defined environment variables, you can learn more about it by visiting them individually:
 
 * [**Auth Environment Variables**](/docs/auth/environment-variables.html)
 * [**Email Environment Variables**](/docs/email/environment-variables.html)

@@ -1,6 +1,6 @@
 ---
 title: "Deploying Java"
-description: "Launch a Java 8 application in few seconds."
+description: "Launch a Java application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
 weight: 6
