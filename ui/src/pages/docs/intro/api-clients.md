@@ -12,9 +12,19 @@ weight: 5
 
 <article id="1">
 
-## JavaScript
+## Introduction
 
-For sending/receiving requests to/from WeDeploy on the Web or Node.js, check this API Client. You can use by adding a script element in a HTML file or to load the library using NPM:
+You can use our API Clients for sending/receiving requests to/from WeDeploy services like [Auth](/docs/auth/getting-started.html), [Email](/docs/email/getting-started.html), and [Hosting](/docs/hosting/getting-started.html). We built those libraries to make your life easier and adapt to your current workflow.
+
+Below you can find a list that contains all of them, including instructions on how to install and details for each specific platform.
+
+</article>
+
+<article id="2">
+
+## JavaScript (Web & Node.js)
+
+You can use this by adding a script element in your HTML file or to load the library using NPM.
 
 ##### Installation
 
@@ -32,34 +42,30 @@ npm install --save wedeploy
 
 ##### Nuances
 
-After installing WeDeploy using NPM, you can load the package like this:
+After installing WeDeploy using NPM, you can load this package like this:
 
 ```javascript
-const WeDeploy = require('wedeploy');
+var WeDeploy = require('wedeploy');
 
-// In React Native environment you might use 'import'
+// Or if you're using ES6
 import WeDeploy from 'wedeploy';
 ```
 
-WeDeploy is compatible with all major browsers (Chrome, Firefox, Safari, Edge, and IE10+) as well as [React Native](https://facebook.github.io/react-native/) and [React VR](https://facebook.github.io/react-vr/).
+This library is compatible with all major browsers (Chrome, Firefox, Safari, Edge, and IE10+) as well as [React Native](https://facebook.github.io/react-native/) and [React VR](https://facebook.github.io/react-vr/).
 
 The API calls are the same in all JavaScript environments.
 
 </article>
 
-<article id="2">
+<article id="3">
 
-## Swift
+## Swift (iOS)
 
-If you want to send/receive requests to/from WeDeploy on an iOS App, we also have a solution for that.
+In order to start using you have to add it as Cocoapod in your `Podfile`.
 
 ##### Installation
 
-In order to start using our Swift API Client you have to do add WeDeploy as Cocoapod.
-
 **Cocoapods**
-
-Add this to your Podfile:
 
 ```swift
 pod 'WeDeploy'
@@ -67,7 +73,7 @@ pod 'WeDeploy'
 
 ##### Nuances
 
-By default, all swift api requests returns a promise like below.
+By default, all requests returns a promise like below.
 
 ```swift
 WeDeploy
@@ -106,15 +112,15 @@ WeDeploy
 
 </article>
 
-<article id="3">
+<article id="4">
 
-## Android
+## Java (Android)
 
-For sending/receiving requests to/from WeDeploy from an Android App, you can use this API Client.
+You just need to add the following line to your `build.gradle` file.
 
 ##### Installation
 
-In order to start using it, you just need to add the following line to your `build.gradle` file:
+**Gradle**
 
 ```groovy
 compile 'com.wedeploy:com.wedeploy.android:beta-20170505'
@@ -122,7 +128,7 @@ compile 'com.wedeploy:com.wedeploy.android:beta-20170505'
 
 ##### Nuances
 
-Before calling any method from WeDeploy, you have to build it's instance:
+Before calling any method from WeDeploy, you have to build an instance first:
 
 ```text/x-java
 WeDeploy weDeploy = new WeDeploy.Builder().build();

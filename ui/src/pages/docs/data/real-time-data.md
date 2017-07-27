@@ -1,14 +1,20 @@
 ---
-title: "Real-time Feeds"
-description: "WeDeploy™ Data inverts the traditional database architecture, instead of polling for changes, the developer can tell WeDeploy Data to continuously push updated query results to applications in real-time."
+title: "Real-time Data"
+description: "Instead of polling for changes, a developer can tell WeDeploy Data to continuously fetch updated query results in real-time."
 headerTitle: "Data"
 layout: "guide"
-weight: 8
+weight: 5
 ---
 
 ### {$page.title}
 
 ###### {$page.description}
+
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
 
 <article id="1">
 
@@ -33,7 +39,7 @@ socket = WeDeploy
 	.data('https://<serviceID>-<projectID>.wedeploy.io')
 	.watch(resourcePath: "movies")
 
-socket.on([.changes, .error]) { data in 
+socket.on([.changes, .error]) { data in
 	switch(data.type) {
 	case .changes:
 		print("changes \(data.document)")
@@ -54,7 +60,7 @@ WeDeploy
 
 Now every time the storage detects changes that affect the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.
 
-</article>	
+</article>
 
 <article id="2">
 
@@ -83,7 +89,7 @@ socket = WeDeploy
 	.or(field: "category", op: "=", value: "cartoon")
 	.watch(resourcePath: "movies")
 
-socket.on([.changes, .error]) { data in 
+socket.on([.changes, .error]) { data in
 	switch(data.type) {
 	case .changes:
 		print("changes \(data.document)")
@@ -132,7 +138,7 @@ socket = WeDeploy
 	.orderBy(field: "id", order: .DESC)
 	.watch(resourcePath: "movies")
 
-socket.on([.changes, .error]) { data in 
+socket.on([.changes, .error]) { data in
 	switch(data.type) {
 	case .changes:
 		print("changes \(data.document)")
@@ -157,4 +163,4 @@ WeDeploy
 
 ## What's next?
 
-* Now we're ready to save and retrieve data in real-time.
+Now that you've learned how to use real-time, you can start [searching data](/docs/data/searching-data.html).

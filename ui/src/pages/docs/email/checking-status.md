@@ -1,6 +1,6 @@
 ---
 title: "Checking Status"
-description: "Sending an email is an asynchronous task. Use this API to know if an email was sent or not."
+description: "Sending an email is an asynchronous task. Use this to know if an email was sent or not."
 headerTitle: "Email"
 layout: "guide"
 weight: 3
@@ -9,6 +9,12 @@ weight: 3
 ### {$page.title}
 
 ###### {$page.description}
+
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
 
 <article id="1">
 
@@ -46,3 +52,7 @@ WeDeploy
 ```
 
 </article>
+
+## What's next?
+
+Learn more about using [environment variables on Email](/docs/email/environment-variables.html).

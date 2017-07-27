@@ -1,6 +1,6 @@
 ---
 title: "Manage Users"
-description: "Create, delete or update users by using WeDeploy™ Auth."
+description: "Create, delete or update users by using WeDeploy Auth."
 headerTitle: "Auth"
 layout: "guide"
 weight: 2
@@ -14,7 +14,7 @@ weight: 2
 
 ## Create user
 
-You create a new user in your WeDeploy project by calling the `createUser` method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.
+You create a new user in your WeDeploy project by calling the `createUser` method or by signing in an user for the first time using an identity provider such as Google or Facebook.
 
 ```javascript
 WeDeploy
@@ -122,8 +122,6 @@ WeDeploy
 
 ## Delete user
 
-You can delete a user account with the delete method. For example:
-
 ```javascript
 var currentUser = WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').currentUser;
 
@@ -159,8 +157,6 @@ WeDeploy
 <article id="5">
 
 ## Update user
-
-You can update a user's basic information. For example:
 
 ```javascript
 var currentUser = WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').currentUser;
@@ -207,8 +203,6 @@ WeDeploy
 <article id="6">
 
 ## Send a password reset email
-
-You can send a password reset email to a user with the sendPasswordResetEmail method. For example:
 
 ```javascript
 WeDeploy
@@ -278,4 +272,4 @@ WeDeploy
 
 ## What's next?
 
-* Now we're ready to start [authenticating accounts and growing our user base](/docs/auth/sign-in-with-facebook.html).
+Learn how to sign-in users using their [email and password](/docs/auth/sign-in-with-password.html).

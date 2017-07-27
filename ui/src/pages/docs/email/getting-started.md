@@ -61,4 +61,4 @@ The `id` for your services are uniquely determined by you.
 
 ## What's next?
 
-Now you can learn more about **[sending emails to our users](/docs/email/sending-email.html)**.
+Now you can learn more about [sending emails to our users](/docs/email/sending-email.html).

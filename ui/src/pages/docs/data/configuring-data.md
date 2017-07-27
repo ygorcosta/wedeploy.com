@@ -10,6 +10,12 @@ weight: 2
 
 ###### {$page.description}
 
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
+
 <article id="1">
 
 ## Understanding configuration files
@@ -221,4 +227,4 @@ $auth !== null && $auth.id === $params.id
 
 ## What's next?
 
-Now that you have *WeDeploy Data* API settled up, you can interact [saving data](/docs/data/saving-data.html).
+Now that you have configured, you can start [saving data](/docs/data/saving-data.html).

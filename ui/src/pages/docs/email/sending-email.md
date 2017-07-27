@@ -1,6 +1,6 @@
 ---
 title: "Sending Email"
-description: "Send an email asynchronously and its ID will be returned"
+description: "Send an email asynchronously and its ID will be returned."
 headerTitle: "Email"
 layout: "guide"
 weight: 2
@@ -10,13 +10,17 @@ weight: 2
 
 ###### {$page.description}
 
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
+
 <article id="1">
 
 ## Sending email
 
-We can use the [API Client](docs/intro/using-the-api-client.html) to facilitate the process of sending requests to WeDeploy.
-
-In order to send emails, we can simply make a request to the url of our project and include some required parameters like `from`, `to`, and `subject`.
+In order to send emails, we can simply make a request to the url of our service and include some required parameters like `from`, `to`, and `subject`.
 
 ```javascript
 WeDeploy
@@ -64,7 +68,7 @@ As a result, we'll receive an email ID. This doesn't indicate that the email has
 
 <article id="2">
 
-## Parameters
+## Reference
 
 Here is a list of all the email parameters you can pass.
 
@@ -87,4 +91,4 @@ to           | string  | Recipient email address. Multiple addresses should be d
 
 ## What's next?
 
-* Now that you sent an email, you can learn [how to check on it's status](/docs/email/checking-status.html).
+Now that you sent an email, you can learn [how to check on its status](/docs/email/checking-status.html).

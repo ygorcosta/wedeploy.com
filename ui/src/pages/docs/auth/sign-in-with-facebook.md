@@ -1,21 +1,26 @@
 ---
 title: "Sign-in With Facebook"
-description: "You can let your users authenticate using their Facebook Accounts by integrating Facebook Sign-In into your app."
+description: "Let your users authenticate using their Facebook accounts."
 headerTitle: "Auth"
 layout: "guide"
-weight: 3
+weight: 4
 ---
 
 ### {$page.title}
 
 ###### {$page.description}
 
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
+
 <article id="1">
 
-## Sign-in with Facebook
+## Authenticate
 
-To sign in by redirecting to the sign-in page, call `signInWithRedirect`:
-
+Your users can authenticate in a way that redirects them to Facebook's sign-in page, where they're going to type their credentials, and then redirect back to your application.
 
 ```javascript
 var auth = WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io');
@@ -81,12 +86,12 @@ Create a client id and client secret by [registering your application](https://d
 
 <aside>
 
-Please be sure to add the callback url `https://<authContainerID>-<projectID>.wedeploy.io/oauth/token` in your application.
+Please be sure to add the callback url `https://<authID>-<projectID>.wedeploy.io/oauth/token` in your application.
 For local development, use `wedeploy.me` instead. To use with custom domains you can change the sufix `<projectID>.wedeploy.io` for your domain.
 
 </aside>
 
-After retrieving the client id and client secret you can configure them as environment variables of the authentication `wedeploy.json`.
+After retrieving the client id and client secret you can configure them as environment variables on `wedeploy.json`.
 
 ```application/json
 {
@@ -100,12 +105,12 @@ After retrieving the client id and client secret you can configure them as envir
 }
 ```
 
-Or you can add those environment variables using the Console.
+Or you can add those environment variables [using the Console](/docs/intro/environment-variables.html#2).
 
-![Project Container Environment](/images/docs/auth/sign-in-with-facebook--project-container-environment.png)
+![Service Environment](/images/docs/auth/sign-in-with-facebook--project-container-environment.png)
 
 </article>
 
 ## What's next?
 
-* Now we're ready to start [enabling other login providers into your app](/docs/auth/sign-in-with-github.html).
+Now we're ready to start enabling other [login providers with Google](/docs/auth/sign-in-with-google.html).

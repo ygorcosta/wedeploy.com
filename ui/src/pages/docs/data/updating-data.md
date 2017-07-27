@@ -1,24 +1,24 @@
 ---
 title: "Updating Data"
-description: "The update() function updates an existing record in the database using the current attributes. It then returns the newly updated object in the Promise response."
+description: "Update an existing record in the database with certain attributes."
 headerTitle: "Data"
 layout: "guide"
-weight: 4
+weight: 7
 ---
 
 ### {$page.title}
 
 ###### {$page.description}
 
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
+
 <article id="1">
 
 ## Updating existing data
-
-<aside>
-
-By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see [configuring rules](/docs/data/configuring-data.html) section.
-
-</aside>
 
 Updating existing data is as simple as sending a JSON.
 
@@ -51,8 +51,6 @@ WeDeploy
 	.execute();
 ```
 
-As you can see, the data api uses Promises to help you to make async requests.
-
 This operation will return the updated document with the new rating:
 
 ```javascript
@@ -68,4 +66,4 @@ This operation will return the updated document with the new rating:
 
 ## What's next?
 
-Now that you have learned how to update data, you can interact [deleting data](/docs/data/deleting-data.html).
+Now that you've learned how to update, you can start [deleting data](/docs/data/deleting-data.html).

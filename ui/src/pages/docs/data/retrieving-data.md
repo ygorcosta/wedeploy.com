@@ -1,14 +1,20 @@
 ---
 title: "Retrieving Data"
-description: "The get() function retrieve an existing field, document or collection in the database."
+description: "Get an existing field, document or collection in the database."
 headerTitle: "Data"
 layout: "guide"
-weight: 6
+weight: 4
 ---
 
 ### {$page.title}
 
 ###### {$page.description}
+
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
 
 <article id="1">
 
@@ -76,9 +82,6 @@ WeDeploy
 ```
 
 The full path returns the raw content in the response body:
-
-Star Wars: Episode V - The Empire Strikes Back
-Requesting the entire movies collection using `curl -X "GET" "https://<serviceID>-<projectID>.wedeploy.io/movies"` results in the first 10 documents stored:
 
 ```javascript
 [
@@ -245,4 +248,4 @@ We support all basic SQL-like operators (=, !=, >, >=, <, <=, ~), as well as 'an
 
 ## What's next?
 
-Now that you have learned how to retrieve data, you can interact [searching data](/docs/data/searching-data.html).
+Now that you've learned how to retrieve, you can start [using real-time](/docs/data/real-time-data.html).

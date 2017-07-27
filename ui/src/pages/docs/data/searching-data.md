@@ -3,12 +3,18 @@ title: "Searching Data"
 description: "Advanced queries using search."
 headerTitle: "Data"
 layout: "guide"
-weight: 7
+weight: 6
 ---
 
 ### {$page.title}
 
 ###### {$page.description}
+
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
 
 <article id="1">
 
@@ -349,17 +355,15 @@ If we want to inform the server of the data type of a collection field before it
 
 ```javascript
 WeDeploy
-	.url('https://<serviceID>-<projectID>.wedeploy.io')
-	.post({
-		"places": {
-			"location": "geo_point"
-		}
+	.data('https://<serviceID>-<projectID>.wedeploy.io')
+	.create('movies', {
+		"location": "geo_point"
 	});
 ```
 ```swift
 WeDeploy
-	.url('https://<serviceID>-<projectID>.wedeploy.io')
-	.post(body: [
+	.data('https://<serviceID>-<projectID>.wedeploy.io')
+	.create(body: [
 		"places" : [
 			"location" : "geo_point"
 		]
@@ -375,7 +379,7 @@ JSONObject placesJsonObject = new JSONObject()
 WeDeploy
 	.data('https://data-datademo.wedeploy.io')
 	.create("", placesJsonObject);
-```	
+```
 
 We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: date, geo_point, and geo_shape. We will focus on geo_point for this next feature.
 
@@ -449,4 +453,4 @@ Now we can plug a map to our app, and let users see and filter places, with just
 
 ## What's next?
 
-Now that you have learned how to retrieve data, you can interact with [real-time feeds](/docs/data/real-time-feeds.html).
+Now that you've learned how to search, you can start [updating data](/docs/data/updating-data.html).

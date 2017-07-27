@@ -55,4 +55,4 @@ The `id` for your services are uniquely determined by you.
 
 ## What's next?
 
-Now you're ready to **[start managing your users](/docs/auth/manage-users.html)**.
+Now we're ready to [start managing users](/docs/auth/manage-users.html).

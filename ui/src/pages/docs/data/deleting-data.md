@@ -1,26 +1,26 @@
 ---
 title: "Deleting Data"
-description: "The delete() function destroys an existing field, document or collection in the database."
+description: "Destroy an existing field, document or collection in the database."
 headerTitle: "Data"
 layout: "guide"
-weight: 5
+weight: 8
 ---
 
 ### {$page.title}
 
 ###### {$page.description}
 
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
+
 <article id="1">
 
 ## Deleting existing data
 
-<aside>
-
-By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see [configuring data](/docs/data/configuring-data.html) section.
-
-</aside>
-
-To delete a field, document, or the entire collection, we use the DELETE method:
+To delete a field or an entire collection, we use the delete method:
 
 ```javascript
 var data = WeDeploy.data('https://<serviceID>-<projectID>.wedeploy.io');
@@ -51,7 +51,3 @@ data.delete("movies");
 ```
 
 </article>
-
-## What's next?
-
-Now that you have learned how to update data, you can interact [retrieving data](/docs/data/retrieving-data.html).

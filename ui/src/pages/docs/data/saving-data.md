@@ -1,6 +1,6 @@
 ---
 title: "Saving Data"
-description: "The create() function creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response."
+description: "Create a new record in the database with any attributes."
 headerTitle: "Data"
 layout: "guide"
 weight: 3
@@ -10,15 +10,15 @@ weight: 3
 
 ###### {$page.description}
 
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
+
 <article id="1">
 
 ## Inserting new data
-
-<aside>
-
-By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see configuring rules section.
-
-</aside>
 
 Writing new data is as simple as sending a JSON.
 
@@ -57,8 +57,6 @@ WeDeploy
 	.execute();
 ```
 
-As you can see, the data api uses Promises to help you to make async requests.
-
 This operation will return the newly created document, with the following generated ID:
 
 ```javascript
@@ -78,8 +76,7 @@ Generated ID is a string and it's structure may vary. It is also possible to def
 
 ## Inserting multiple data
 
-With the same method you're able to create multiple data instead using the method `.create` multiple times.
-You just need to use an array instead an object as the second param.
+With the same method you're able to create multiple data instead using the same method multiple times. You just need to use an array instead an object.
 
 ```javascript
 WeDeploy
@@ -240,4 +237,4 @@ https://<serviceID>-<projectID>.wedeploy.io/movies/115992383516607958/rating
 
 ## What's next?
 
-Now that you have learned how to create data, you can interact [updating data](/docs/data/updating-data.html).
+Now that you've learned how to save, you can start [retrieving data](/docs/data/retrieving-data.html).

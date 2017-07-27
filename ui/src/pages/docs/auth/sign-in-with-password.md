@@ -1,20 +1,26 @@
 ---
 title: "Sign-in With Password"
-description: "You can let your users authenticate with WeDeploy using their email addresses and passwords."
+description: "Let your users authenticate using their emails and passwords."
 headerTitle: "Auth"
 layout: "guide"
-weight: 6
+weight: 3
 ---
 
 ### {$page.title}
 
 ###### {$page.description}
 
+<aside>
+
+If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/api-clients.html) page first to learn how to install and configure it.
+
+</aside>
+
 <article id="1">
 
-## Sign-in with password
+## Authenticate
 
-To sign in by email and password, call `signInWithEmailAndPassword`:
+To sign in using email and password, call this method:
 
 ```javascript
 WeDeploy
@@ -49,4 +55,4 @@ WeDeploy
 
 ## What's next?
 
-* Now you can start building your apps with authentication.
+Now we're ready to start enabling other [login providers like Facebook](/docs/auth/sign-in-with-facebook.html).
