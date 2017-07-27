@@ -23,7 +23,7 @@ If you have any trouble, feel free to tap on the green button in the bottom corn
 
 We have made some fundamental changes to the way you setup your project source code and simplified the way you deploy your apps. Walk through these easy steps and your project will be ready for deployment.
 
-##### Step One: Configuration
+##### Step One: Configuration Files
 
 1. Delete `project.json`. We no longer support these files.
 2. Rename all `container.json` files to `wedeploy.json`.
@@ -37,21 +37,21 @@ Here is an example of what the new `wedeploy.json` will look like.
 	"image": "wedeploy/hosting:beta"
 }
 ```
+<aside>
 
-So what happened to the `project.json`? We wanted to simplify source configuration so you can deploy faster and easier. This meant moving all configuration to the `wedeploy.json` and our CLI for simplicity.
+###### <span class="icon-16-alert"></span> Attention
 
-For example, now when you deploy with our CLI, you can easily choose the project ID (which was something you previously had to do in the `project.json`), by simply add `--project projectID` to your command.
+We no longer support the Java, Node.js, and Ruby WeDeploy images. To deploy projects with those languages, you can simply remove the `image` variable completely from your `wedeploy.json` and we will automatically detect the type of build you need.
 
-```xml
-we deploy --project myapp
-```
+</aside>
 
-##### Step Two: API Client
+##### Step Three: API Client
 
-1. Change your CDN links to the API to `https` (yes, just simply add the 's').
-2. Each service now has its own domain instead of being a subdomain of your project. This means you must update your API endpoints (serviceID.projectID.wedeploy.io > serviceID-projectID.wedeploy.io).
-3. Remove hardcoded protocals (`http://`) on API urls.
-3. The Email API for JavaScript has changes. See [the documentation](/docs/email/sending-email.html) for updates.
+1. Update your CDN API links to `https` (yes, just simply add the 's').
+2. Each service now has its own domain instead of being a subdomain of your project. This means you must update your API endpoints (_serviceID-projectID.wedeploy.io_).
+3. Remove hardcoded protocals (`http://`) on API URL's.
+4. The Email API for JavaScript has changes. See [the documentation](/docs/email/sending-email.html).
+5. Update your Auth redirect URL's for your registered apps if you use OAuth providers like Google and Github. There is no way to migrate your previous users manually. To do so, reach out to us with the green circle button below and we can help you port your userbase.
 
 ---
 
