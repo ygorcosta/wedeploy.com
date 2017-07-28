@@ -48,6 +48,12 @@ If you don't have a project ready to deploy, you can download this [simple proje
 
 </aside>
 
+Notice that this command will create a random name for your project. If you want to specify a new name or choose an existing project, you just need to run:
+
+```
+we deploy -p myproject
+```
+
 </article>
 
 ## What's next?
