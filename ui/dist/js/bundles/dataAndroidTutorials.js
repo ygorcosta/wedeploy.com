@@ -36272,7 +36272,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dataAndroidTutorials,
 /* 506 */,
 /* 507 */,
 /* 508 */,
-/* 509 */
+/* 509 */,
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36351,4 +36352,4 @@ _metalSoy2.default.register(dataAndroidTutorials, _indexSoy2.default);
 exports.default = dataAndroidTutorials;
 
 /***/ })
-],[509]);
+],[510]);

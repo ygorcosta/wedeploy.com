@@ -36387,8 +36387,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rubyTutorials, templa
 /* 621 */,
 /* 622 */,
 /* 623 */,
-/* 624 */,
-/* 625 */
+/* 624 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36467,4 +36466,4 @@ _metalSoy2.default.register(rubyTutorials, _indexSoy2.default);
 exports.default = rubyTutorials;
 
 /***/ })
-],[625]);
+],[624]);

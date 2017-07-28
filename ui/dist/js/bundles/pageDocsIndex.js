@@ -35962,10 +35962,10 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
   opt_data = opt_data || {};
-  var param417 = function() {
+  var param636 = function() {
     $topics(opt_data, null, opt_ijData);
   };
-  $templateAlias1(soy.$$assignDefaults({content: param417}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param636}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -35994,8 +35994,8 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
         ie_open('p', null, null,
             'class', 'docs-home-top-description');
           itext('Start learning how to leverage the power of ');
-          var dyn30 = opt_data.site.title;
-          if (typeof dyn30 == 'function') dyn30(); else if (dyn30 != null) itext(dyn30);
+          var dyn41 = opt_data.site.title;
+          if (typeof dyn41 == 'function') dyn41(); else if (dyn41 != null) itext(dyn41);
           itext(' in your project.');
         ie_close('p');
       ie_close('div');
@@ -36044,25 +36044,25 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
             'class', 'col-md-12 col-md-offset-2 col-xs-16');
           ie_open('div', null, null,
               'class', 'row');
-            var childIdList438 = opt_data.page.childIds;
-            var childIdListLen438 = childIdList438.length;
-            for (var childIdIndex438 = 0; childIdIndex438 < childIdListLen438; childIdIndex438++) {
-              var childIdData438 = childIdList438[childIdIndex438];
-              if (! opt_data.page.children[childIdData438].hidden) {
+            var childIdList657 = opt_data.page.childIds;
+            var childIdListLen657 = childIdList657.length;
+            for (var childIdIndex657 = 0; childIdIndex657 < childIdListLen657; childIdIndex657++) {
+              var childIdData657 = childIdList657[childIdIndex657];
+              if (! opt_data.page.children[childIdData657].hidden) {
                 ie_open('div', null, null,
                     'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
                   ie_open('a', null, null,
                       'class', 'topic radial-out',
-                      'href', opt_data.page.children[childIdData438].url);
+                      'href', opt_data.page.children[childIdData657].url);
                     ie_open('div', null, null,
                         'class', 'topic-icon');
                       ie_void('span', null, null,
-                          'class', 'icon-16-' + opt_data.page.children[childIdData438].icon);
+                          'class', 'icon-16-' + opt_data.page.children[childIdData657].icon);
                     ie_close('div');
                     ie_open('h3', null, null,
                         'class', 'topic-title');
-                      var dyn31 = opt_data.page.children[childIdData438].title;
-                      if (typeof dyn31 == 'function') dyn31(); else if (dyn31 != null) itext(dyn31);
+                      var dyn42 = opt_data.page.children[childIdData657].title;
+                      if (typeof dyn42 == 'function') dyn42(); else if (dyn42 != null) itext(dyn42);
                     ie_close('h3');
                   ie_close('a');
                 ie_close('div');

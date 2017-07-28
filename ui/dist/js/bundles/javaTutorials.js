@@ -36354,7 +36354,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(javaTutorials, templa
 /* 588 */,
 /* 589 */,
 /* 590 */,
-/* 591 */
+/* 591 */,
+/* 592 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36433,4 +36434,4 @@ _metalSoy2.default.register(javaTutorials, _indexSoy2.default);
 exports.default = javaTutorials;
 
 /***/ })
-],[591]);
+],[592]);
