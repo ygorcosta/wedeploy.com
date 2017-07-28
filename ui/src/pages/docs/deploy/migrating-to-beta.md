@@ -98,11 +98,11 @@ This means you could deploy a folder with a _package.json_ and we will build it 
 
 1. Remove hardcoded protocals (_http://_) on API URL's.
 
-	![API URL](/images/docs/deploy/migration--api-url-http.png)
+	![API URL HTTP](/images/docs/deploy/migration--api-url-http.png)
 
 2. Each service now has its own domain instead of being a subdomain of your project. This means you must update your API endpoints (_serviceID-projectID.wedeploy.io_).
 
-	![API URL](/images/docs/deploy/migration--api-url-service.png)
+	![API URL Service](/images/docs/deploy/migration--api-url-service.png)
 
 </article>
 
@@ -154,7 +154,7 @@ We made some syntax updates on the Email API to make it even more intuitive. Thi
 1. Instead of including the _ID_ of the email in the URL, add it like this _.status('00000000')_
 2. You no longer need to use _.get_ because the _.status_ will make the request.
 
-![Send Email](/images/docs/deploy/migration--check-email-status.png)
+![Check Status](/images/docs/deploy/migration--check-email-status.png)
 
 </article>
 
@@ -166,7 +166,9 @@ Because of the new service domain changes, you can only add a custom domain on t
 
 We have also created [a new way to add Custom Domains](/docs/intro/custom-domains.html#2). Instead of using an alias, you can now configure your root domain with our regional server names or using a your service URL as a CNAME.
 
-![Send Email](/images/docs/deploy/migration--custom-domains.png)
+![Custom Domains](/images/docs/deploy/migration--custom-domains.png)
+
+We also do not support _Home Services_ anymore. If you want to beautify your service URL, you can add a _*.wedeploy.io_ domain as a custom domain on your service for free. For example, if you had _ui-myapp.wedeploy.io_ as your service URL, you could add _myapp.wedeploy.io_ as a custom domain on that service.
 
 </article>
 
