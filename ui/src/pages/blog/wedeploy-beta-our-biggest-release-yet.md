@@ -3,7 +3,7 @@ title: "WeDeploy Beta: Our Biggest Release Yet"
 description: "We have been working tirelessly the last months on some huge changes to WeDeploy, and today is the day we can finally tell you all about them."
 date: "July 31, 2017"
 author: "Eduardo Lundgren"
-image: "http://wedeploy.com/images/blog/post-12--0.png"
+image: "http://wedeploy.com/images/blog/post-12--0.jpg"
 layout: "blog"
 ---
 
@@ -11,7 +11,7 @@ layout: "blog"
 
 <a href="https://console.wedeploy.com" target="_blank">
 	<figure style="margin-top: -1.5rem">
-		<img src="../images/blog/post-12--0.png" alt="Introducing WeDeploy Beta">
+		<img src="/images/blog/post-12--0.jpg" alt="Introducing WeDeploy Beta">
 	</figure>
 </a>
 
@@ -49,15 +49,23 @@ Yes, now every project you deploy and every service you install will automatical
 
 We also make sure that those HTTPS certificates are valid by renewing them from time to time. That way you can always trust that your application will be secured.
 
+<figure>
+	<img src="/images/blog/post-12--https.jpg" alt="HTTPS">
+</figure>
+
 ##### 4. Zero Downtime Deployments
 
 During alpha, whenever a new deployment was triggered, your app would go offline for couple seconds until the new version was 100% ready. We knew that was not ideal, so we sat down to build a much better experience that minimizes downtime and user interruption.
 
 Now, you don't have to worry about your app being taken down during deployment of the new code. Push updates and restart your services with zero downtime.
 
+<figure>
+	<img src="/images/blog/post-12--zero-downtime.jpg" alt="Zero Downtime Deployments">
+</figure>
+
 ##### 5. Custom Docker Services
 
-The container ecosystem has evolved a lot in the past years and [Docker](https://www.docker.com/) is probably mainly responsible for such success.
+The container ecosystem has grown a lot in the past years and [Docker](https://www.docker.com/) is largely responsible for this success.
 
 Today we want to bring the benefits of this technology to you and facilitate the Docker-based development workflow. That's why we're introducing `Dockerfile` support.
 
@@ -65,11 +73,19 @@ Back on alpha you were limited by the services we provided, now your imagination
 
 *Read more on the [documentation](/docs/deploy/deploying-docker.html) or follow our [step-by-step tutorial](/tutorials/docker/get-started.html).*
 
+<figure>
+	<img src="/images/blog/post-12--docker.jpg" alt="Custom Docker Services">
+</figure>
+
 ##### 6. Volume Support
 
 With the addition of custom Docker services, new challenges arrive. For example, let's say you deploy an app with PHP and MySQL, then you start adding entries to your database. What happens when you restart that project without a proper setup? Well, you're going to lose all the data that was saved.
 
 In order to be able to persist and share data between services, we're introducing the concept of volumes. Quite simply, volumes are specially-designated directories that live outside of the file system where your code runs. This way, even if your application becomes unavailable due to a failure or other causes, your data still persists.
+
+<figure>
+	<img src="/images/blog/post-12--zero-downtime.jpg" alt="Zero Downtime Deployments">
+</figure>
 
 *Read more on the [documentation](/docs/deploy/how-it-works.html).*
 
@@ -95,11 +111,11 @@ That doesn't mean you don't need the `wedeploy.json` file anymore. That is still
 
 ##### 9. Liferay DXP
 
-We're very excited about [Liferay Digital Experience Platform](https://www.liferay.com/digital-experience-platform). There are so many cool features and we want to give WeDeploy users the opportunity to try them out in seconds.
+We're very excited about [Liferay Digital Experience Platform](https://www.liferay.com/digital-experience-platform). There are so many cool capabilities and we want to give WeDeploy users the opportunity to try them out in seconds.
 
 Today, we're introducing Liferay DXP with a 15-day trial license.
 
-Besides that, we're adding support for [hot deployment](https://dev.liferay.com/discover/portal/-/knowledge_base/7-0/installing-apps-manually). That means you can now create a `deploy` folder, then add themes, portlets, OSGi modules, or a license using WAR, JAR, and XML files.
+Besides that, we're adding support for [hot deployment](https://dev.liferay.com/discover/portal/-/knowledge_base/7-0/installing-apps-manually). That means you can now create a `deploy` folder, then add themes, portlets, OSGi modules, or a license by using WAR, JAR, and XML files.
 
 What about [Liferay Portal Community Edition](https://web.liferay.com/community/liferay-projects/liferay-portal/overview)? Since we have Docker support now, you can setup your own Dockerfile or grab an image from [Docker Hub](https://hub.docker.com/r/liferay/portal/) and deploy it here.
 
@@ -107,7 +123,7 @@ What about [Liferay Portal Community Edition](https://web.liferay.com/community/
 
 ##### 10. Global DNS
 
-We know how tedious could be the process of setting up your domains. That's why we're introducing a new reliable and scalable DNS solution.
+We know how tedious it is to setup your domains. That's why we're introducing a new reliable and scalable DNS solution.
 
 From now on, you can point your domains directly to our nameservers and we will automatically configure everything for you.
 
@@ -119,9 +135,9 @@ We provide our DNS service across 7 different countries, including Australia, Ge
 
 #### What's next?
 
-Because of the new URL format and other changes described here, we weren't able to migrate your projects for you. That would be a risky thing to do and we don't your users to have any problems.
+Because of the new URL format and other changes described here, we weren't able to migrate your projects for you. That would be a risky thing to do and we don't want your users to have any problems.
 
-All the projects you created on alpha still exist, however on August 31st they will be **unavailable**, along with the previous Dashboard. But don't worry, we already have a **[Migration Guide](/blog/how-to-migrate-your-project-to-beta.html)** ready so you can get started right away.
+All the projects you created on alpha still exist, however on August 31st they will be **unavailable**, along with the previous Dashboard. But don't worry, we already have a **[Migration Guide](/docs/deploy/migrating-to-beta.html)** ready so you can get started right away.
 
 We're very excited to be able to share this new release with you! Make sure to **[try it out for yourself](https://console.wedeploy.com)** and [join our community on Slack](https://chat.wedeploy.com) to ask questions or let us know what you are building!
 
