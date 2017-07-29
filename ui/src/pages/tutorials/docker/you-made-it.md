@@ -1,7 +1,7 @@
 ---
 title: "You Made It!"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Docker."
-tutorialTitle: "Getting started with WeDeploy Docker"
+description: "In this section, you'll learn how to deploy an application using Docker."
+tutorialTitle: "Getting started with Docker"
 parentId: "docker"
 layout: "tutorial"
 weight: 6
@@ -14,9 +14,6 @@ weight: 6
 	<p class="notfound-text">You made it!</p>
 	<p>Now discover what else you can do with WeDeploy.</p>
 	<ul class="checklist">
-		<li><a href="/tutorials/email-web/get-started.html">Email Tutorial</a></li>
-		<li><a href="/tutorials/data-web/get-started.html">Data Tutorial</a></li>
-		<li><a href="/tutorials/auth-web/get-started.html">Auth Tutorial</a></li>
 		<li><a href="/tutorials/ruby/get-started.html">Ruby Tutorial</a></li>
 		<li><a href="/tutorials/nodejs/get-started.html">Node.js Tutorial</a></li>
 		<li><a href="/tutorials/liferay/get-started.html">Liferay Tutorial</a></li>
