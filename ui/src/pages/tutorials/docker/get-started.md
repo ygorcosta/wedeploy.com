@@ -1,8 +1,8 @@
 ---
 title: "Get Started"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Docker."
+description: "In this section, you'll learn how to deploy an application using Docker."
 buttonTitle: "I'm ready to start!"
-tutorialTitle: "Getting started with WeDeploy Docker"
+tutorialTitle: "Getting started with Docker"
 parentId: "docker"
 layout: "tutorial"
 time: 20
@@ -11,21 +11,19 @@ weight: 1
 
 #### Get Started
 
-Docker a static website with WeDeploy is super easy. This tutorial will walk you through how to set up your project's file structure and how to deploy using Git.
+Deploying Docker containers with WeDeploy is super easy. This tutorial will walk you through how to deploy a Wordpress site connected to a MySQL database.
 
 ###### What you'll need
 
 <ul class="checklist">
-	<li><a href="https://console.wedeploy.com/signup" target="_blank">A WeDeploy account</a></li>
-	<li>A code editor</li>
+    <li>A code editor</li>
+    <li><a href="https://wedeploy.com/docs/intro/using-the-command-line.html" target="_blank">The WeDeploy CLI</a></li>
 </ul>
 
 ###### What you'll do
 
 <ul class="checklist">
-	<li>Clone a sample Git repository</li>
-	<li>Add configuration files</li>
-	<li>Push to deployment</li>
-	<li>Update some content</li>
+    <li>Download a sample project</li>
+    <li>Add configuration files</li>
+    <li>Deploy to production</li>
 </ul>
-
