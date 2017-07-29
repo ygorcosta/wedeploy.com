@@ -18,7 +18,7 @@ weDeploy = new WeDeploy.Builder()
 	.authorization(new TokenAuthorization("000-000-000"))
 	.build();
 
-weDeploy.email("email-<projectID>.wedeploy.sh")
+weDeploy.email("email-<projectID>.wedeploy.io")
 	.from(from)
 	.to(to)
 	.subject(subject)

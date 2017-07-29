@@ -15,7 +15,7 @@ Now we want to add a script that will send an email. To do this, go to `tutorial
 
 ```javascript
 WeDeploy
-	.email('email-<projectID>.wedeploy.sh')
+	.email('email-<projectID>.wedeploy.io')
 	.auth('yourMasterToken')
 	.from(form.from.value)
 	.to(form.to.value)

@@ -17,7 +17,7 @@ weight: 2
 In your terminal, run this command:
 
 ```
-curl https://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash
+curl https://cdn.wedeploy.com/cli/latest/wedeploy.io -sL | bash
 ```
 
 This will install our command-line interface which is a tool that will help you use the WeDeploy platform.

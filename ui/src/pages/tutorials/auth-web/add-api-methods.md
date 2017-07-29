@@ -18,7 +18,7 @@ First, let's add a script that will allow users to create an account.
 To do this, go to `tutorial-auth-web/hosting/main.js` and paste this code between the "create user method" comments:
 
 ```javascript
-var auth = WeDeploy.auth('auth-<projectID>.wedeploy.sh');
+var auth = WeDeploy.auth('auth-<projectID>.wedeploy.io');
 
 function submitForm() {
 	auth.createUser({

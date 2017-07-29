@@ -21,7 +21,7 @@ we deploy --project projectID
 
 **Note:** make sure to replace `projectID` with the id of your project.
 
-Now go to `hosting-<projectID>.wedeploy.sh` in your browser and see your live page!
+Now go to `hosting-<projectID>.wedeploy.io` in your browser and see your live page!
 
 <aside>
 

@@ -13,7 +13,7 @@ weight: 9
 
 Great work, your app is now live! Now let's send an email.
 
-1. Go to `hosting-<projectID>.wedeploy.sh` in your browser.
+1. Go to `hosting-<projectID>.wedeploy.io` in your browser.
 2. Fill in the form (make sure you put your email in the "to" field).
 3. Click submit and check your email inbox because you've got mail!
 

@@ -15,7 +15,7 @@ weight: 5
 
 Great work, your app is ready to be used!
 
-Go to `app-<projectID>.wedeploy.sh` in your browser.
+Go to `app-<projectID>.wedeploy.io` in your browser.
 
 <figure>
 	<img src="/images/tutorials/it-works.png">

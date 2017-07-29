@@ -18,7 +18,7 @@ First, let's add the code that will allow users to create an account.
 To do this, go to `tutorial-auth-ios/app/tutorial-auth-ios/SignUpViewController.swift` and paste this code in the "signUpButtonClick" function:
 
 ```swift
-WeDeploy.auth("auth-<projectID>.wedeploy.sh")
+WeDeploy.auth("auth-<projectID>.wedeploy.io")
 	.createUser(email: emailText, password: passwordText, name: nameText)
 	.toCallback { auth, error in
 		if let _ = auth {
@@ -39,7 +39,7 @@ Next, let's add the code that will allow users to sign-in.
 First of all, go to `tutorial-auth-ios/app/tutorial-auth-ios/LoginViewController.swift`, and paste this code in the "loginButtonClick" function:
 
 ```swift
-WeDeploy.auth("auth-<projectID>.wedeploy.sh")
+WeDeploy.auth("auth-<projectID>.wedeploy.io")
 	.signInWith(username: usernameText, password: passwordText)
 	.toCallback { auth, error in
 		self.handleLoginResult(auth: auth, error: error)
@@ -56,7 +56,7 @@ In the examples above we use the toCallback method to handle the response with a
 but we can also handle the result using a promise:
 
 ```swift
-WeDeploy.auth("auth-<projectID>.wedeploy.sh")
+WeDeploy.auth("auth-<projectID>.wedeploy.io")
 	.signInWith(username: usernameText, password: passwordText)
 	.then { auth in
 		self.handleLoginResult(auth: auth, error: nil)
@@ -69,7 +69,7 @@ WeDeploy.auth("auth-<projectID>.wedeploy.sh")
 or even a observable!
 
 ```swift
-WeDeploy.auth("auth-<projectID>.wedeploy.sh")
+WeDeploy.auth("auth-<projectID>.wedeploy.io")
 	.signInWith(username: usernameText, password: passwordText)
 	.toObservable()
 	.subscribe(onNext: { auth in

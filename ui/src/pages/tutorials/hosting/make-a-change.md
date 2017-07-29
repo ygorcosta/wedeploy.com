@@ -29,7 +29,7 @@ we deploy --project projectID
 
 ###### See it live
 
-Go to `hosting-<projectID>.wedeploy.sh` in your browser and see the changes you made!
+Go to `hosting-<projectID>.wedeploy.io` in your browser and see the changes you made!
 
 <aside>
 

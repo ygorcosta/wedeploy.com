@@ -35,7 +35,7 @@ If it is your first time pushing to WeDeploy's git, you will need to enter the e
 
 Once you have pushed, WeDeploy will immediately start deploying your project.
 
-Give it a few moments and then go to `liferay-<projectID>.wedeploy.sh` to see what you deployed! Pretty cool, right?
+Give it a few moments and then go to `liferay-<projectID>.wedeploy.io` to see what you deployed! Pretty cool, right?
 
 <figure>
 	<img src="/images/tutorials/liferay-live.png" alt="Liferay Live!">

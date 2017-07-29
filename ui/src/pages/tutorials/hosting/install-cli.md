@@ -16,7 +16,7 @@ weight: 3
 The WeDeploy CLI allows you to do many things with your projects like show logs, analyze metrics, manage domains, and most importantly, deploy.
 
 ```xml
-curl http://cdn.wedeploy.com/cli/beta/wedeploy.sh -sL | bash
+curl http://cdn.wedeploy.com/cli/beta/wedeploy.io -sL | bash
 ```
 
 ##### Login

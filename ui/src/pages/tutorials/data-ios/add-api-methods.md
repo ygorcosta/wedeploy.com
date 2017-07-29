@@ -18,7 +18,7 @@ Now we want to add some code that will save data to a collection.
 To do this, go to `tutorial-data-ios/app/tutorial-data-ios/ToDoListViewController.swift` and paste this code into the "loadToDos" function:
 
 ```swift
-WeDeploy.data("data-<projectID>.wedeploy.sh")
+WeDeploy.data("data-<projectID>.wedeploy.io")
 	.create(resource: "tasks", object: ["name" : todo])
 	.toCallback { objectCreated, error in
 		if let objectCreated = objectCreated {
@@ -40,7 +40,7 @@ Next, we want to add the code that will fetch data from the collection.
 To do this, go to `tutorial-data-ios/app/tutorial-data-ios/AddToDoViewController.swift` and paste this cod into the "addToDoClic" function:
 
 ```swift
-WeDeploy.data("data-<projectID>.wedeploy.sh")
+WeDeploy.data("data-<projectID>.wedeploy.io")
 	.orderBy(field: "id", order: .DESC)
 	.limit(5)
 	.get(resourcePath: "tasks")

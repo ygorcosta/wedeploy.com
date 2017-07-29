@@ -15,7 +15,7 @@ Now we want to add a script that will send an email. To do this, go to `tutorial
 
 ```swift
 let auth = TokenAuth(token: "000-000-000")
-WeDeploy.email("email-<projectID>.wedeploy.sh", authorization: auth)
+WeDeploy.email("email-<projectID>.wedeploy.io", authorization: auth)
 	.to(to)
 	.from(from)
 	.subject(subject)

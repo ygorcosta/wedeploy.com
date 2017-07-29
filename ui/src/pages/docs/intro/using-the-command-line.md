@@ -31,7 +31,7 @@ Docker version 1.12.0 or later is required. If you use macOS, install the Docker
 If you use a Unix-like system such as macOS or Linux open your Terminal and run:
 
 ```xml
-curl https://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash
+curl https://cdn.wedeploy.com/cli/latest/wedeploy.io -sL | bash
 ```
 
 If you use Windows, you probably want the [Windows amd64 installer](https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.msi). For other systems, check a list of [all builds available](https://dl.equinox.io/wedeploy/cli/stable).
