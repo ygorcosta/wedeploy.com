@@ -1,12 +1,12 @@
 ---
-title: "Add Config File"
+title: "Add wedeploy.json"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Node.js."
 buttonTitle: "I created the wedeploy.json"
 tutorialTitle: "Getting started with WeDeploy Node.js"
 parentId: "nodejs"
 layout: "tutorial"
 time: 40
-weight: 4
+weight: 3
 ---
 
 #### Add wedeploy.json
@@ -19,11 +19,7 @@ Since every service folder must have a `wedeploy.json` file that configures the 
 
 ```application/json
 {
-	"id": "nodejs",
-	"image": "wedeploy/nodejs",
-	"hooks": {
-		"build": "npm install"
-	}
+	"id": "app"
 }
 
 ```
@@ -32,6 +28,18 @@ Since every service folder must have a `wedeploy.json` file that configures the 
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-As you can see above, we added a `hook` in our `wedeploy.json` file. Whatever task you put as a `hook` will be completed during the build cycle prior to each deployment.
+One of the awesome things you can do in your `wedeploy.json` file is add environment variables. There are many ways to use these; one example is to provide credentials for a external database.
+
+```application/json
+{
+	"id": "app",
+	"env": {
+		"DB_USER": "us3rname",
+		"DB_PASSWORD": "passw0rd",
+	}
+}
+```
+
+See the full list of <a href="/docs/auth/environment-variables.html" target="_blank">Environment Variables for Auth</a>.
 
 </aside>

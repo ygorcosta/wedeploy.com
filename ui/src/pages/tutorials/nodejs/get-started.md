@@ -11,21 +11,20 @@ weight: 1
 
 #### Get Started
 
-Using Node.js with WeDeploy is super easy. This tutorial will walk you through how to set up your project's file structure and how to deploy using Git.
+Using Node.js with WeDeploy is super easy. This tutorial will walk you through how to set up your project and deploy with our CLI.
 
 ###### What you'll need
 
 <ul class="checklist">
-	<li><a href="https://console.wedeploy.com/signup" target="_blank">A WeDeploy account</a></li>
 	<li>A code editor</li>
+	<li><a href="https://wedeploy.com/docs/intro/using-the-command-line.html" target="_blank">The WeDeploy CLI</a></li>
 </ul>
 
 ###### What you'll do
 
 <ul class="checklist">
-	<li>Clone a sample Git repository</li>
-	<li>Add configuration files</li>
-	<li>Push to deployment</li>
-	<li>Update some content</li>
+	<li>Download a sample project</li>
+	<li>Add a configuration file</li>
+	<li>Deploy to production</li>
 </ul>
 

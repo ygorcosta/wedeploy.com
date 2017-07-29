@@ -6,7 +6,7 @@ tutorialTitle: "Getting started with WeDeploy Auth on the web"
 parentId: "auth-web"
 layout: "tutorial"
 time: 60
-weight: 5
+weight: 3
 ---
 
 #### Add Config Files
@@ -63,6 +63,5 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 ```
 
 See the full list of <a href="/docs/auth/environment-variables.html" target="_blank">Environment Variables for Auth</a>.
-
 
 </aside>

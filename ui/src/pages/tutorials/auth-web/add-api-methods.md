@@ -1,12 +1,12 @@
 ---
 title: "Add API Methods"
 description: "In this section, you'll learn how to authenticate users on the web using the WeDeploy API Client."
-buttonTitle: "I added the API methods"
+buttonTitle: "I added the methods"
 tutorialTitle: "Getting started with WeDeploy Auth on the web"
 parentId: "auth-web"
 layout: "tutorial"
 time: 90
-weight: 7
+weight: 6
 ---
 
 #### Add API Methods
@@ -67,6 +67,3 @@ In the same file as above, paste this code between the "current user" comments:
 ```javascript
 document.querySelector('.username').innerHTML = auth.currentUser.name;
 ```
-
-
-

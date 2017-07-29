@@ -6,7 +6,7 @@ tutorialTitle: "Getting started with WeDeploy Auth on the web"
 parentId: "auth-web"
 layout: "tutorial"
 time: 30
-weight: 4
+weight: 2
 ---
 
 #### Clone Sample Repo
@@ -18,22 +18,3 @@ Run this command in your terminal:
 ```
 git clone https://github.com/wedeploy/tutorial-auth-web.git
 ```
-
-<aside>
-
-###### <span class="icon-16-star"></span> Pro Tip
-
-Building an app with multiple services is very easy with WeDeploy. Every directory that contains a `wedeploy.json` will be treated as a separate service. If a specific image type is not detected, we will scan the conents of the directory and deploy the service that is most like your source code (`package.json` = Node.js, `Dockerfile` = Custom Docker Image, `index.html` = static hosting).
-
-```xml
-yourApp
-├── auth
-│	└── wedeploy.json
-├── db
-│	└── wedeploy.json
-└── Docker
- 	├── wedeploy.json
- 	└── Dockerfile
-```
-
-</aside>

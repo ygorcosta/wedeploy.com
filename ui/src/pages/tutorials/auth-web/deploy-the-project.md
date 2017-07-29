@@ -6,7 +6,7 @@ tutorialTitle: "Getting started with WeDeploy Auth on the web"
 parentId: "auth-web"
 layout: "tutorial"
 time: 60
-weight: 8
+weight: 5
 ---
 
 #### Deploy the Project

@@ -6,14 +6,24 @@ tutorialTitle: "Getting started with WeDeploy Auth on the web"
 parentId: "auth-web"
 layout: "tutorial"
 time: 30
-weight: 9
+weight: 7
 ---
 
 #### It Works
 
-Great work, your app is now live! Now let's start playing with user sign-in.
+##### Deploy
 
-1. Go to `hosting-<projectID>.wedeploy.sh` in your browser.
+Now that your API requests are ready, you can deploy your project again so that the changes are live.
+
+```xml
+we deploy -p projectID
+```
+
+##### See It Live
+
+Great work, your app is ready to be used! Now let's start playing with user sign-in.
+
+1. Go to `auth-<projectID>.wedeploy.sh` in your browser.
 2. Click "Create an account" and fill in the form.
 3. You are logged in! Now try signing out and signing back in.
 
