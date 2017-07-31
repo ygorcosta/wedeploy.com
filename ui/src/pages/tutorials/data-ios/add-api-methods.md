@@ -1,12 +1,12 @@
 ---
 title: "Add API Methods"
 description: "In this section, you'll learn how to save and get data on iOS using the WeDeploy Swift API Client."
-buttonTitle: "I added the API methods"
+buttonTitle: "I added the methods"
 tutorialTitle: "Getting started with WeDeploy Data on iOS"
 parentId: "data-ios"
 layout: "tutorial"
-time: 80
-weight: 8
+time: 90
+weight: 6
 ---
 
 #### Add API Methods
@@ -18,7 +18,7 @@ Now we want to add some code that will save data to a collection.
 To do this, go to `tutorial-data-ios/app/tutorial-data-ios/ToDoListViewController.swift` and paste this code into the "loadToDos" function:
 
 ```swift
-WeDeploy.data("data-<projectID>.wedeploy.io")
+WeDeploy.data("db-<projectID>.wedeploy.io")
 	.create(resource: "tasks", object: ["name" : todo])
 	.toCallback { objectCreated, error in
 		if let objectCreated = objectCreated {
@@ -40,7 +40,7 @@ Next, we want to add the code that will fetch data from the collection.
 To do this, go to `tutorial-data-ios/app/tutorial-data-ios/AddToDoViewController.swift` and paste this cod into the "addToDoClic" function:
 
 ```swift
-WeDeploy.data("data-<projectID>.wedeploy.io")
+WeDeploy.data("db-<projectID>.wedeploy.io")
 	.orderBy(field: "id", order: .DESC)
 	.limit(5)
 	.get(resourcePath: "tasks")

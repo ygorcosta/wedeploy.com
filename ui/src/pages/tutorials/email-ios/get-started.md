@@ -11,25 +11,25 @@ weight: 1
 
 #### Get Started
 
-Sending emails with WeDeploy is super easy. This tutorial will walk you through how to send an email in your app using the API Client and how to deploy your project with one terminal command.
+Sending emails with WeDeploy is super easy. This tutorial will walk you through how to deploy an app that can send emails.
 
 ###### What you'll need
 
 <ul class="checklist">
-	<li><a href="https://console.wedeploy.com/signup" target="_blank">A WeDeploy account</a></li>
+	<li><a href="https://wedeploy.com/docs/intro/using-the-command-line.html" target="_blank">The WeDeploy CLI</a></li>
 	<li><a href="https://developer.apple.com/xcode" target="_blank">Xcode</a></li>
 	<li><a href="https://cocoapods.org/" target="_blank">Cocoapods</a></li>
+	<li>A code editor</li>
 </ul>
 
 ###### What you'll do
 
 <ul class="checklist">
-	<li>Clone a sample Git repository</li>
-	<li>Add a configuration file</li>
-	<li>Link the API client</li>
-	<li>Deploy the project</li>
-	<li>Add the API method</li>
-	<li>Run the App</li>
+	<li>Download a sample project</li>
+	<li>Add configuration files</li>
+	<li>Include the API Client</li>
+	<li>Add the API methods</li>
+	<li>Deploy to production</li>
 	<li>Start sending emails</li>
 </ul>
 

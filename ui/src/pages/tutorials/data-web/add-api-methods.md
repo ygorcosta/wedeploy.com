@@ -5,8 +5,8 @@ buttonTitle: "I added the API methods"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
 parentId: "data-web"
 layout: "tutorial"
-time: 80
-weight: 7
+time: 90
+weight: 6
 ---
 
 #### Add API Methods
@@ -19,7 +19,7 @@ To do this, go to `tutorial-data-web/hosting/index.js` and paste this code:
 
 ```javascript
 WeDeploy
-	.data('data-<projectID>.wedeploy.io')
+	.data('db-<projectID>.wedeploy.io')
 	.create('tasks', {name: form.item.value })
 	.then(function(response) {
 		form.reset();
@@ -41,7 +41,7 @@ To do this, go to `list.js` inside of the same folder and paste this code:
 
 ```javascript
 WeDeploy
-	.data('data-<projectID>.wedeploy.io')
+	.data('db-<projectID>.wedeploy.io')
 	.orderBy('id', 'desc')
 	.limit(5)
 	.get('tasks')

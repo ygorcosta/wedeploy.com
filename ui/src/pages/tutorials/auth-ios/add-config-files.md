@@ -1,17 +1,17 @@
 ---
-title: "Add Config Files"
+title: "Add Config File"
 description: "In this section, you'll learn how to authenticate users on an iOS app using the WeDeploy Swift API Client."
-buttonTitle: "I added the config files"
+buttonTitle: "I added the config file"
 tutorialTitle: "Getting started with WeDeploy Auth on an iOS app"
 parentId: "auth-ios"
 layout: "tutorial"
 time: 60
-weight: 5
+weight: 3
 ---
 
 #### Add Config Files
 
-Since every service folder must have a `wedeploy.json` file that configures the service, let's add one to our Auth Service in the repo we just cloned.
+Every service folder must have a `wedeploy.json` file that configures it, so let's add a file inside the sample project you just downloaded.
 
 ##### Auth
 
@@ -21,7 +21,7 @@ Since every service folder must have a `wedeploy.json` file that configures the 
 
 ```application/json
 {
-	"id": "auth",
+	"id": "users",
 	"image": "wedeploy/auth:beta",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
@@ -38,7 +38,7 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 
 ```application/json
 {
-	"id": "auth",
+	"id": "users",
 	"image": "wedeploy/auth:beta",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",

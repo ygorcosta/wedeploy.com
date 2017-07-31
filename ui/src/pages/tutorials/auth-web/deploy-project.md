@@ -1,5 +1,5 @@
 ---
-title: "Deploy the Project"
+title: "Deploy Project"
 description: "In this section, you'll learn how to authenticate users on the web using the WeDeploy API Client."
 buttonTitle: "I deployed the project"
 tutorialTitle: "Getting started with WeDeploy Auth on the web"

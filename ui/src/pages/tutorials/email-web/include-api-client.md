@@ -6,7 +6,7 @@ tutorialTitle: "Getting started with WeDeploy Email on the web"
 parentId: "email-web"
 layout: "tutorial"
 time: 30
-weight: 6
+weight: 4
 ---
 
 #### Include API Client

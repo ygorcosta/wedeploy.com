@@ -6,7 +6,7 @@ tutorialTitle: "Getting started with WeDeploy Auth on an Android app"
 parentId: "auth-android"
 layout: "tutorial"
 time: 30
-weight: 6
+weight: 4
 ---
 
 #### Include API Client

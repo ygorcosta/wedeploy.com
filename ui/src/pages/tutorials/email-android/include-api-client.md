@@ -6,12 +6,12 @@ tutorialTitle: "Getting started with WeDeploy Email on Android"
 parentId: "email-android"
 layout: "tutorial"
 time: 30
-weight: 6
+weight: 4
 ---
 
 #### Include API Client
 
-Before we can make any requests to create or sign-in any users, we must connect the WeDeploy Android API Client.
+Before we can make any requests to send an email, we must connect the WeDeploy API Client.
 
 To do this, go to `tutorial-email-android/app/tutorial-email-android/app/build.gradle` and include this line inside the dependencies function of this file:
 

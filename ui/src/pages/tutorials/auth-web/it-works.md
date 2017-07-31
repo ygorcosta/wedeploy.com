@@ -1,7 +1,7 @@
 ---
 title: "It Works"
 description: "In this section, you'll learn how to authenticate users on the web using the WeDeploy API Client."
-buttonTitle: "I signed-in a user"
+buttonTitle: "It works"
 tutorialTitle: "Getting started with WeDeploy Auth on the web"
 parentId: "auth-web"
 layout: "tutorial"
@@ -23,7 +23,7 @@ we deploy -p projectID
 
 Great work, your app is ready to be used! Now let's start playing with user sign-in.
 
-1. Go to `users-<projectID>.wedeploy.io` in your browser.
+1. Go to `ui-<projectID>.wedeploy.io` in your browser.
 2. Click "Create an account" and fill in the form.
 3. You are logged in! Now try signing out and signing back in.
 

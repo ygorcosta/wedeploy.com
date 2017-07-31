@@ -5,15 +5,20 @@ buttonTitle: "I included the API Client"
 tutorialTitle: "Getting started with WeDeploy Data on the web"
 parentId: "data-web"
 layout: "tutorial"
-time: 40
-weight: 6
+time: 30
+weight: 4
 ---
 
 #### Include API Client
 
 Before we can make any requests to save or fetch data, we must connect the WeDeploy API Client.
 
-To do this, go to `tutorial-data-web/hosting/` and include this script link at the bottom of the `<body>` element of `index.html` and `list.html`:
+To do this, go back to the `hosting` folder and include this script link at the bottom of the `<body>` element of these files:
+
+<ul class="checklist">
+	<li><code>index.html</code></li>
+	<li><code>list.html</code></li>
+</ul>
 
 ```xml
 <script src="https://cdn.wedeploy.com/api/beta/wedeploy.js"></script>

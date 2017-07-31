@@ -6,7 +6,7 @@ tutorialTitle: "Getting started with WeDeploy Email on iOS"
 parentId: "email-ios"
 layout: "tutorial"
 time: 90
-weight: 8
+weight: 6
 ---
 
 #### Add API Method
@@ -15,7 +15,7 @@ Now we want to add a script that will send an email. To do this, go to `tutorial
 
 ```swift
 let auth = TokenAuth(token: "000-000-000")
-WeDeploy.email("email-<projectID>.wedeploy.io", authorization: auth)
+WeDeploy.email("msgs-<projectID>.wedeploy.io", authorization: auth)
 	.to(to)
 	.from(from)
 	.subject(subject)

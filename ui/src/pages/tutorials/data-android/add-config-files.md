@@ -6,14 +6,14 @@ tutorialTitle: "Getting started with WeDeploy Data on Android"
 parentId: "data-android"
 layout: "tutorial"
 time: 60
-weight: 5
+weight: 3
 ---
 
 #### Add Config Files
 
 ###### wedeploy.json
 
-Since every service folder must have a `wedeploy.json` file that configures the service, let's add one to our Data Service in the repo we just cloned.
+Every service folder must have a `wedeploy.json` file that configures it, so let's add a file inside the sample project you just downloaded.
 
 1. Open the `tutorial-data-android` folder in a code editor.
 2. Create a new file inside of the `data` folder and name it `wedeploy.json`.
@@ -21,14 +21,14 @@ Since every service folder must have a `wedeploy.json` file that configures the 
 
 ```application/json
 {
-	"id": "data",
+	"id": "db",
 	"image": "wedeploy/data:beta"
 }
 ```
 
 ###### api.json
 
-Along with the wedeploy.json, each Data service must have an `api.json` file to configure your database (eg. set path, allow certain methods, and require authentication).
+Along with the wedeploy.json, each Data service must have an `api.json` file to configure your database (eg. set paths, allow certain methods, require authentication).
 
 1. Go back to `tutorial-data-android` in your code editor.
 2. Create another file inside of the `data` folder and name it `api.json`.

@@ -5,13 +5,13 @@ buttonTitle: "I included the API Client"
 tutorialTitle: "Getting started with WeDeploy Data on Android"
 parentId: "data-android"
 layout: "tutorial"
-time: 40
-weight: 6
+time: 30
+weight: 4
 ---
 
 #### Include API Client
 
-Before we can make any requests to create or sign-in any users, we must connect the WeDeploy Android API Client.
+Before we can make any requests to save or fetch data, we must connect the WeDeploy API Client.
 
 To do this, go to `tutorial-data-android/app/tutorial-data-android/app/build.gradle` and include this line inside the dependencies function of this file:
 

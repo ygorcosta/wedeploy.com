@@ -6,7 +6,7 @@ tutorialTitle: "Getting started with WeDeploy Email on the web"
 parentId: "email-web"
 layout: "tutorial"
 time: 90
-weight: 7
+weight: 6
 ---
 
 #### Add API Method
@@ -15,7 +15,7 @@ Now we want to add a script that will send an email. To do this, go to `tutorial
 
 ```javascript
 WeDeploy
-	.email('email-<projectID>.wedeploy.io')
+	.email('msgs-<projectID>.wedeploy.io')
 	.auth('yourMasterToken')
 	.from(form.from.value)
 	.to(form.to.value)

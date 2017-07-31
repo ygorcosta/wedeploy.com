@@ -6,12 +6,12 @@ tutorialTitle: "Getting started with WeDeploy Email on iOS"
 parentId: "email-ios"
 layout: "tutorial"
 time: 30
-weight: 6
+weight: 4
 ---
 
 #### Include API Client
 
-Before we can make any requests to create or sign-in any users, we must connect the WeDeploy Swift API Client.
+Before we can make any requests to send an email, we must connect the WeDeploy API Client.
 
 To do this, go to `tutorial-data-ios/app/Podfile` and include this line inside the target function of this file:
 

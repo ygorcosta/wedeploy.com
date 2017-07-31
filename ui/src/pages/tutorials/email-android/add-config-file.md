@@ -1,17 +1,17 @@
 ---
 title: "Add Config File"
 description: "In this section, you'll learn how to send an email on Android using the WeDeploy API Client."
-buttonTitle: "I created the wedeploy.json"
+buttonTitle: "I added the config file"
 tutorialTitle: "Getting started with WeDeploy Email on Android"
 parentId: "email-android"
 layout: "tutorial"
-time: 45
-weight: 5
+time: 60
+weight: 3
 ---
 
 #### Add Config File
 
-Since every service folder must have a `wedeploy.json` file that configures the service, let's add one to our Email Service in the repo we just cloned.
+Every service folder must have a `wedeploy.json` file that configures it, so let's add a file inside the sample project you just downloaded.
 
 1. Open the `tutorial-email-android` folder in a code editor.
 2. Create a new file inside of the `email` folder and name it `wedeploy.json`.
@@ -19,7 +19,7 @@ Since every service folder must have a `wedeploy.json` file that configures the 
 
 ```application/json
 {
-	"id": "email",
+	"id": "msgs",
 	"image": "wedeploy/email:beta"
 }
 ```
@@ -32,7 +32,7 @@ Another thing you can do in your `wedeploy.json` file is add environment variabl
 
 ```application/json
 {
-	"id": "email",
+	"id": "msgs",
 	"image": "wedeploy/email:beta",
 	"env" {
 		"EMAIL_HOST": "host294.mailrave.com"

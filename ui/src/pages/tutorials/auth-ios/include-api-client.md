@@ -6,7 +6,7 @@ tutorialTitle: "Getting started with WeDeploy Auth on an iOS app"
 parentId: "auth-ios"
 layout: "tutorial"
 time: 30
-weight: 6
+weight: 4
 ---
 
 #### Include API Client

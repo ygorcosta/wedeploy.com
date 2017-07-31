@@ -6,7 +6,7 @@ tutorialTitle: "Getting started with WeDeploy Email on Android"
 parentId: "email-android"
 layout: "tutorial"
 time: 90
-weight: 8
+weight: 6
 ---
 
 #### Add API Method
@@ -18,7 +18,7 @@ weDeploy = new WeDeploy.Builder()
 	.authorization(new TokenAuthorization("000-000-000"))
 	.build();
 
-weDeploy.email("email-<projectID>.wedeploy.io")
+weDeploy.email("msgs-<projectID>.wedeploy.io")
 	.from(from)
 	.to(to)
 	.subject(subject)
