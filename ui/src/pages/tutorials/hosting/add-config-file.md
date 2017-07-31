@@ -27,7 +27,7 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-One of the awesome things you can do in your `wedeploy.json` file is add environment variables. There are many ways to use these; one example is to serve a specific build folder.
+One of the awesome things you can do in your `wedeploy.json` file is add environment variables. There are many ways to use these; one example is to serve a specific folder other than root.
 
 ```application/json
 {

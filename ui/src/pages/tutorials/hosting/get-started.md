@@ -11,7 +11,7 @@ weight: 1
 
 #### Get Started
 
-Hosting a static website with WeDeploy is super easy. This tutorial will walk you through how to deploy static files.
+Hosting a static website with WeDeploy is super easy. This tutorial will walk you through how to serve HTML, CSS, JavaScript, and other static files.
 
 ###### What you'll need
 
