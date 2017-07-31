@@ -1,8 +1,8 @@
 ---
 title: "You Made It!"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Liferay."
-tutorialTitle: "Getting started with WeDeploy Liferay"
-parentId: "liferay"
+description: "In this section, you'll learn how to deploy an application using Liferay DXP."
+tutorialTitle: "Getting started with Liferay DXP"
+parentId: "liferay-dxp"
 layout: "tutorial"
 weight: 6
 ---

@@ -16,8 +16,6 @@ weight: 5
 
 [Ruby](https://www.ruby-lang.org) is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
 
-We currently support Ruby 2.4.1.
-
 </article>
 
 <article id="2">

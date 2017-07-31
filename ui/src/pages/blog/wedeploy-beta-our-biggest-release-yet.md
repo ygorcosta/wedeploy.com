@@ -119,7 +119,7 @@ Besides that, we're adding support for [hot deployment](https://dev.liferay.com/
 
 What about [Liferay Portal Community Edition](https://web.liferay.com/community/liferay-projects/liferay-portal/overview)? Since we have Docker support now, you can setup your own Dockerfile or grab an image from [Docker Hub](https://hub.docker.com/r/liferay/portal/) and deploy it here.
 
-*Read more on the [documentation](/docs/deploy/deploying-liferay.html) or follow our [step-by-step tutorial](/tutorials/liferay/get-started.html).*
+*Read more on the [documentation](/docs/deploy/deploying-liferay-dxp.html) or follow our [step-by-step tutorial](/tutorials/liferay-dxp/get-started.html).*
 
 ##### 10. Global DNS
 

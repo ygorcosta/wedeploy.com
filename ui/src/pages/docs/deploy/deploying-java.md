@@ -16,8 +16,6 @@ weight: 6
 
 [Java](https://www.oracle.com/java/) is a concurrent, class-based, object-oriented language expressly designed for use in the distributed environment of the web. It is normally compiled to the binary format defined in the JVM Specification.
 
-We currently support Java 8.
-
 </article>
 
 <article id="2">

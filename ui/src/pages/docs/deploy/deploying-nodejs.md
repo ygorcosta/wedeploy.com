@@ -16,8 +16,6 @@ weight: 4
 
 [Node.js](https://nodejs.org) is an open-source, cross-platform runtime for developing server-side web applications using JavaScript. It has an event-driven architecture capable of asynchronous I/O.
 
-We currently support Node.js 8 which comes with npm 5.
-
 </article>
 
 <article id="2">

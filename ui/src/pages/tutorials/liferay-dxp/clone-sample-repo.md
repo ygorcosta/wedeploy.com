@@ -1,9 +1,9 @@
 ---
 title: "Clone Sample Repo"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Liferay."
+description: "In this section, you'll learn how to deploy an application using Liferay DXP."
 buttonTitle: "I cloned the repo"
-tutorialTitle: "Getting started with WeDeploy Liferay"
-parentId: "liferay"
+tutorialTitle: "Getting started with Liferay DXP"
+parentId: "liferay-dxp"
 layout: "tutorial"
 time: 20
 weight: 3
@@ -16,7 +16,7 @@ First, you'll clone a sample repo that contains the necessary files and director
 To do this, run the command below in your terminal:
 
 ```xml
-git clone https://github.com/wedeploy/tutorial-liferay.git
+git clone https://github.com/wedeploy/tutorial-liferay-dxp.git
 ```
 
 <aside>

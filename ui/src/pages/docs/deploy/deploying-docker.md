@@ -16,8 +16,6 @@ weight: 9
 
 [Docker](https://www.docker.com) is the world’s leading software container platform. Developers use Docker to eliminate “works on my machine” problems when collaborating on code with co-workers. Enterprises use Docker to build agile software and ship new features faster.
 
-We currently support Docker X.
-
 </article>
 
 <article id="2">

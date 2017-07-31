@@ -1,9 +1,9 @@
 ---
 title: "Deploy Your App"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Liferay."
+description: "In this section, you'll learn how to deploy an application using Liferay DXP."
 buttonTitle: "I deployed the app"
-tutorialTitle: "Getting started with WeDeploy Liferay"
-parentId: "liferay"
+tutorialTitle: "Getting started with Liferay DXP"
+parentId: "liferay-dxp"
 layout: "tutorial"
 time: 90
 weight: 5
@@ -15,7 +15,7 @@ Now the moment you have been waiting for - deployment!
 
 ###### Add a Git remote
 
-Open up your terminal and go to the `tutorial-liferay` folder. Then, add a git remote by running:
+Open up your terminal and go to the `tutorial-liferay-dxp` folder. Then, add a git remote by running:
 
 ```xml
 git remote add wedeploy http://git.wedeploy.com/<projectID>.git

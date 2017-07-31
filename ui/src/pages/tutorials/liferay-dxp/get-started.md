@@ -1,9 +1,9 @@
 ---
 title: "Get Started"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Liferay."
+description: "In this section, you'll learn how to deploy an application using Liferay DXP."
 buttonTitle: "I'm ready to start!"
-tutorialTitle: "Getting started with WeDeploy Liferay"
-parentId: "liferay"
+tutorialTitle: "Getting started with Liferay DXP"
+parentId: "liferay-dxp"
 layout: "tutorial"
 time: 20
 weight: 1
@@ -11,7 +11,7 @@ weight: 1
 
 #### Get Started
 
-Deploying a Liferay instance with WeDeploy is super easy. This tutorial will walk you through how to set up your project's file structure and how to deploy using Git.
+Deploying a Liferay DXP instance with WeDeploy is super easy. This tutorial will walk you through how to set up your project's file structure and how to deploy using Git.
 
 ###### What you'll need
 

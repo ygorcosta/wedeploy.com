@@ -1,9 +1,9 @@
 ---
 title: "Create New Project"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Liferay."
+description: "In this section, you'll learn how to deploy an application using Liferay DXP."
 buttonTitle: "I created a new project"
-tutorialTitle: "Getting started with WeDeploy Liferay"
-parentId: "liferay"
+tutorialTitle: "Getting started with Liferay DXP"
+parentId: "liferay-dxp"
 layout: "tutorial"
 time: 30
 weight: 2

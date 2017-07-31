@@ -26,7 +26,7 @@ Since then, we have been exploring new ways to take the WeDeploy learning experi
 - **<a target="_blank" href="/tutorials/java/get-started.html">Java</a>**: Deploy an app using Java and Spring Boot.
 - **<a target="_blank" href="/tutorials/ruby/get-started.html">Ruby</a>**: Deploy an app using Ruby and Sinatra.
 - **<a target="_blank" href="/tutorials/nodejs/get-started.html">Node.js</a>**: Deploy an app using Node.js and Express.
-- **<a target="_blank" href="/tutorials/liferay/get-started.html">Liferay</a>**: Deploy a Liferay Portal instance.
+- **<a target="_blank" href="/tutorials/liferay-dxp/get-started.html">Liferay DXP</a>**: Deploy a Liferay DXP instance.
 
 #### Why tutorials?
 

@@ -1,12 +1,12 @@
 ---
-title: "Deploying Liferay"
-description: "Launch a Liferay application in few seconds."
+title: "Deploying Liferay DXP"
+description: "Launch a Liferay DXP application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
 weight: 7
 ---
 
-### Liferay
+### Liferay DXP
 
 ###### {$page.description}
 
@@ -14,9 +14,7 @@ weight: 7
 
 ## Introduction
 
-[Liferay](https://www.liferay.com) is a portal, web content management and collaboration software package. It includes social collaboration features such as a doc library, off-line document sync, internal messaging, online presence, and more.
-
-We currently support Liferay X.
+[Liferay DXP](https://www.liferay.com/digital-experience-platform) provides an architecture for companies to digitize business operations, deliver connected customer experiences, and gather actionable customer insight, with the ultimate goal of providing better customer experiences for their clients.
 
 </article>
 
@@ -24,10 +22,10 @@ We currently support Liferay X.
 
 ## Try it yourself
 
-Want to see the process of deploying Liferay step by step?
+Want to see the process of deploying Liferay DXP step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/liferay" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/liferay-dxp" target="_blank" data-senna-off>
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
@@ -48,7 +46,7 @@ All WeDeploy projects use a consistant file structure and configuration files to
 
 </aside>
 
-Below is an example of a `wedeploy.json` for a Liferay container.
+Below is an example of a `wedeploy.json` for a Liferay DXP service.
 
 ```application/json
 {
@@ -63,4 +61,4 @@ The `id` for your services are uniquely determined by you.
 
 ## What's next?
 
-Now you can start building your liferay based application.
+Now you can start building your Liferay DXP application.
