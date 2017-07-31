@@ -33,7 +33,7 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 {
 	"id": "app",
 	"env": {
-		"WEDEPLOY_WEB_PATH": "/dist/"
+		"WEDEPLOY_WEB_PATH": "dist"
 	}
 }
 ```
