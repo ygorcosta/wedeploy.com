@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([17,215,216,217,218,219,220,221],[
+webpackJsonppageComponent([17,212,213,214,215,216,217,218],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36047,10 +36047,7 @@ exports.default = templates;
 /* 387 */,
 /* 388 */,
 /* 389 */,
-/* 390 */,
-/* 391 */,
-/* 392 */,
-/* 393 */
+/* 390 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36157,6 +36154,9 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nodejsTutorials, temp
 
 
 /***/ }),
+/* 391 */,
+/* 392 */,
+/* 393 */,
 /* 394 */,
 /* 395 */,
 /* 396 */,
@@ -36366,10 +36366,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(nodejsTutorials, temp
 /* 600 */,
 /* 601 */,
 /* 602 */,
-/* 603 */,
-/* 604 */,
-/* 605 */,
-/* 606 */
+/* 603 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36417,7 +36414,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(393);
+var _indexSoy = __webpack_require__(390);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36448,4 +36445,4 @@ _metalSoy2.default.register(nodejsTutorials, _indexSoy2.default);
 exports.default = nodejsTutorials;
 
 /***/ })
-],[606]);
+],[603]);

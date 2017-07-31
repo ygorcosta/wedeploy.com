@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([2,215,216,217,218,219,220,221],[
+webpackJsonppageComponent([2,212,213,214,215,216,217,218],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36062,10 +36062,7 @@ exports.default = templates;
 /* 402 */,
 /* 403 */,
 /* 404 */,
-/* 405 */,
-/* 406 */,
-/* 407 */,
-/* 408 */
+/* 405 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36172,6 +36169,9 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rubyTutorials, templa
 
 
 /***/ }),
+/* 406 */,
+/* 407 */,
+/* 408 */,
 /* 409 */,
 /* 410 */,
 /* 411 */,
@@ -36378,14 +36378,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rubyTutorials, templa
 /* 612 */,
 /* 613 */,
 /* 614 */,
-/* 615 */,
-/* 616 */,
-/* 617 */,
-/* 618 */,
-/* 619 */,
-/* 620 */,
-/* 621 */,
-/* 622 */
+/* 615 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36433,7 +36426,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(408);
+var _indexSoy = __webpack_require__(405);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36464,4 +36457,4 @@ _metalSoy2.default.register(rubyTutorials, _indexSoy2.default);
 exports.default = rubyTutorials;
 
 /***/ })
-],[622]);
+],[615]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([32,215,216,217,218,219,220,221],[
+webpackJsonppageComponent([31,212,213,214,215,216,217,218],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36033,9 +36033,7 @@ exports.default = templates;
 /* 373 */,
 /* 374 */,
 /* 375 */,
-/* 376 */,
-/* 377 */,
-/* 378 */
+/* 376 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36142,6 +36140,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(javaTutorials, templa
 
 
 /***/ }),
+/* 377 */,
+/* 378 */,
 /* 379 */,
 /* 380 */,
 /* 381 */,
@@ -36351,10 +36351,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(javaTutorials, templa
 /* 585 */,
 /* 586 */,
 /* 587 */,
-/* 588 */,
-/* 589 */,
-/* 590 */,
-/* 591 */
+/* 588 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36402,7 +36399,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(378);
+var _indexSoy = __webpack_require__(376);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36433,4 +36430,4 @@ _metalSoy2.default.register(javaTutorials, _indexSoy2.default);
 exports.default = javaTutorials;
 
 /***/ })
-],[591]);
+],[588]);

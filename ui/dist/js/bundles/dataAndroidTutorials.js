@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([114,215,216,217,218,219,220,221],[
+webpackJsonppageComponent([113,212,213,214,215,216,217,218],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35951,9 +35951,7 @@ exports.default = templates;
 /* 291 */,
 /* 292 */,
 /* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */
+/* 294 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36060,6 +36058,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dataAndroidTutorials,
 
 
 /***/ }),
+/* 295 */,
+/* 296 */,
 /* 297 */,
 /* 298 */,
 /* 299 */,
@@ -36268,12 +36268,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dataAndroidTutorials,
 /* 502 */,
 /* 503 */,
 /* 504 */,
-/* 505 */,
-/* 506 */,
-/* 507 */,
-/* 508 */,
-/* 509 */,
-/* 510 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36321,7 +36316,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(296);
+var _indexSoy = __webpack_require__(294);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36352,4 +36347,4 @@ _metalSoy2.default.register(dataAndroidTutorials, _indexSoy2.default);
 exports.default = dataAndroidTutorials;
 
 /***/ })
-],[510]);
+],[505]);

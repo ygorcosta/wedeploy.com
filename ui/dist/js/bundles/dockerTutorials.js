@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([84,215,216,217,218,219,220,221],[
+webpackJsonppageComponent([83,212,213,214,215,216,217,218],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35981,9 +35981,7 @@ exports.default = templates;
 /* 321 */,
 /* 322 */,
 /* 323 */,
-/* 324 */,
-/* 325 */,
-/* 326 */
+/* 324 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36090,6 +36088,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dockerTutorials, temp
 
 
 /***/ }),
+/* 325 */,
+/* 326 */,
 /* 327 */,
 /* 328 */,
 /* 329 */,
@@ -36300,9 +36300,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dockerTutorials, temp
 /* 534 */,
 /* 535 */,
 /* 536 */,
-/* 537 */,
-/* 538 */,
-/* 539 */
+/* 537 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36350,7 +36348,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(326);
+var _indexSoy = __webpack_require__(324);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36381,4 +36379,4 @@ _metalSoy2.default.register(dockerTutorials, _indexSoy2.default);
 exports.default = dockerTutorials;
 
 /***/ })
-],[539]);
+],[537]);

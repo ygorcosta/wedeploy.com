@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([24,215,216,217,218,219,220,221],[
+webpackJsonppageComponent([23,212,213,214,215,216,217,218],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36041,9 +36041,7 @@ exports.default = templates;
 /* 381 */,
 /* 382 */,
 /* 383 */,
-/* 384 */,
-/* 385 */,
-/* 386 */
+/* 384 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36150,6 +36148,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(liferayTutorials, tem
 
 
 /***/ }),
+/* 385 */,
+/* 386 */,
 /* 387 */,
 /* 388 */,
 /* 389 */,
@@ -36358,11 +36358,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(liferayTutorials, tem
 /* 592 */,
 /* 593 */,
 /* 594 */,
-/* 595 */,
-/* 596 */,
-/* 597 */,
-/* 598 */,
-/* 599 */
+/* 595 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36410,7 +36406,7 @@ __webpack_require__(93);
 
 __webpack_require__(94);
 
-var _indexSoy = __webpack_require__(386);
+var _indexSoy = __webpack_require__(384);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36441,4 +36437,4 @@ _metalSoy2.default.register(liferayTutorials, _indexSoy2.default);
 exports.default = liferayTutorials;
 
 /***/ })
-],[599]);
+],[595]);
