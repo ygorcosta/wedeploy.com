@@ -83,10 +83,6 @@ With the addition of custom Docker services, new challenges arrive. For example,
 
 In order to be able to persist and share data between services, we're introducing the concept of volumes. Quite simply, volumes are specially-designated directories that live outside of the file system where your code runs. This way, even if your application becomes unavailable due to a failure or other causes, your data still persists.
 
-<figure>
-	<img src="/images/blog/post-12--zero-downtime.jpg" alt="Zero Downtime Deployments">
-</figure>
-
 *Read more on the [documentation](/docs/deploy/how-it-works.html).*
 
 ##### 7. Instant Deployment
@@ -120,6 +116,10 @@ Besides that, we're adding support for [hot deployment](https://dev.liferay.com/
 What about [Liferay Portal Community Edition](https://web.liferay.com/community/liferay-projects/liferay-portal/overview)? Since we have Docker support now, you can setup your own Dockerfile or grab an image from [Docker Hub](https://hub.docker.com/r/liferay/portal/) and deploy it here.
 
 *Read more on the [documentation](/docs/deploy/deploying-liferay-dxp.html) or follow our [step-by-step tutorial](/tutorials/liferay-dxp/get-started.html).*
+
+<figure>
+	<img src="/images/blog/post-12--liferay-dxp.jpg" alt="Liferay DXP">
+</figure>
 
 ##### 10. Global DNS
 
