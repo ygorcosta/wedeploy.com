@@ -1,8 +1,8 @@
 ---
 title: "Download Sample"
 description: "In this section, you'll learn how to deploy an application using Node.js."
-buttonTitle: "I cloned the repo"
-tutorialTitle: "Getting started with WeDeploy Node.js"
+buttonTitle: "I downloaded the sample files"
+tutorialTitle: "Getting started with Node.js"
 parentId: "nodejs"
 layout: "tutorial"
 time: 20
@@ -11,7 +11,7 @@ weight: 2
 
 #### Download Sample
 
-First, you'll download a folder that contains the necessary files and directories for deploying a site. There are basically two ways you can do this.
+First, you'll download a folder that contains the necessary files and directories for a Node.js project. There are basically two ways you can do this.
 
 ###### A) Download a ZIP
 

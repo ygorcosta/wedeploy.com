@@ -23,7 +23,7 @@ we deploy -p projectID
 
 Great work, your app is ready to be used! Now let's start playing with user sign-in.
 
-1. Go to `auth-<projectID>.wedeploy.io` in your browser.
+1. Go to `users-<projectID>.wedeploy.io` in your browser.
 2. Click "Create an account" and fill in the form.
 3. You are logged in! Now try signing out and signing back in.
 

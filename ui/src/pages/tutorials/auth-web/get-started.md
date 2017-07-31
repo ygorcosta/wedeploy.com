@@ -11,13 +11,13 @@ weight: 1
 
 #### Get Started
 
-Authenticating users with WeDeploy is super easy. This tutorial will walk you through how to create, sign in, and sign out users in your app.
+Authenticating users with WeDeploy is super easy. This tutorial will walk you through how to deploy an app that can create, sign in, and sign out users.
 
 ###### What you'll need
 
 <ul class="checklist">
-	<li>A code editor</li>
 	<li><a href="https://wedeploy.com/docs/intro/using-the-command-line.html" target="_blank">The WeDeploy CLI</a></li>
+	<li>A code editor</li>
 </ul>
 
 ###### What you'll do

@@ -1,9 +1,9 @@
 ---
 title: "Deploy Project"
-description: "In this section, you'll learn how to deploy an application using Node.js."
+description: "In this section, you'll learn how to deploy an application using WeDeploy Ruby."
 buttonTitle: "I deployed the app"
-tutorialTitle: "Getting started with Node.js"
-parentId: "nodejs"
+tutorialTitle: "Getting started with Ruby"
+parentId: "ruby"
 layout: "tutorial"
 time: 30
 weight: 4
@@ -13,10 +13,11 @@ weight: 4
 
 Now the moment you have been waiting for!
 
-Go to `tutorial-nodejs` in your terminal and deploy your project [using the CLI](/docs/intro/using-the-command-line.html).
+Go to `tutorial-ruby` in your terminal and deploy your project [using the CLI](/docs/intro/using-the-command-line.html).
 
 ```xml
 we deploy -p projectID
 ```
 
 **Note:** make sure to replace `projectID` with the ID that you'd like for your project.
+

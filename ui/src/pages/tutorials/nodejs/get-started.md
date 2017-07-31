@@ -2,7 +2,7 @@
 title: "Get Started"
 description: "In this section, you'll learn how to deploy an application using Node.js."
 buttonTitle: "I'm ready to start!"
-tutorialTitle: "Getting started with WeDeploy Node.js"
+tutorialTitle: "Getting started with Node.js"
 parentId: "nodejs"
 layout: "tutorial"
 time: 20
@@ -16,8 +16,8 @@ Using Node.js with WeDeploy is super easy. This tutorial will walk you through h
 ###### What you'll need
 
 <ul class="checklist">
-	<li>A code editor</li>
 	<li><a href="https://wedeploy.com/docs/intro/using-the-command-line.html" target="_blank">The WeDeploy CLI</a></li>
+	<li>A code editor</li>
 </ul>
 
 ###### What you'll do

@@ -11,7 +11,7 @@ weight: 3
 
 #### Add Config Files
 
-Since every service folder must have a `wedeploy.json` file that configures the service, let's add one to our Auth and Hosting Services in the repo we just cloned.
+Every service folder must have a `wedeploy.json` file that configures it, so let's add two files inside the sample project you just downloaded.
 
 ##### Auth
 
@@ -21,7 +21,7 @@ Since every service folder must have a `wedeploy.json` file that configures the 
 
 ```application/json
 {
-	"id": "auth",
+	"id": "users",
 	"image": "wedeploy/auth:beta",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
@@ -37,7 +37,7 @@ Since every service folder must have a `wedeploy.json` file that configures the 
 
 ```application/json
 {
-	"id": "hosting",
+	"id": "ui",
 	"image": "wedeploy/hosting:beta"
 }
 ```
@@ -50,7 +50,7 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 
 ```application/json
 {
-	"id": "auth",
+	"id": "users",
 	"image": "wedeploy/auth:beta",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",

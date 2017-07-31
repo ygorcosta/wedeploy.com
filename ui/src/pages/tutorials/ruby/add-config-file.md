@@ -1,9 +1,9 @@
 ---
 title: "Add Config File"
-description: "In this section, you'll learn how to deploy an application using Node.js."
-buttonTitle: "I added the wedeploy.json"
-tutorialTitle: "Getting started with Node.js"
-parentId: "nodejs"
+description: "In this section, you'll learn how to deploy an application using WeDeploy Ruby."
+buttonTitle: "I created the wedeploy.json"
+tutorialTitle: "Getting started with Ruby"
+parentId: "ruby"
 layout: "tutorial"
 time: 40
 weight: 3
@@ -13,7 +13,7 @@ weight: 3
 
 Every service folder must have a `wedeploy.json` file that configures it, so let's add one file inside the sample project you just downloaded.
 
-1. Open the `tutorial-nodejs` folder in a code editor
+1. Open the `tutorial-ruby` folder in a code editor
 2. Create a new file named `wedeploy.json`.
 3. In that file, paste this code:
 

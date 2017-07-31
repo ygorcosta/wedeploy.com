@@ -1,7 +1,7 @@
 ---
 title: "You Made It!"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Java."
-tutorialTitle: "Getting started with WeDeploy Java"
+tutorialTitle: "Getting started with Java"
 parentId: "java"
 layout: "tutorial"
 weight: 7

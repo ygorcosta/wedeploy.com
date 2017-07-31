@@ -5,28 +5,20 @@ buttonTitle: "I deployed the project"
 tutorialTitle: "Getting started with WeDeploy Auth on the web"
 parentId: "auth-web"
 layout: "tutorial"
-time: 60
+time: 30
 weight: 5
 ---
 
-#### Deploy the Project
+#### Deploy Project
 
-Now the moment you have been waiting for - deployment!
+Now the moment you have been waiting for!
 
-Go to `tutorial-auth-web` in your terminal and deploy your project:
+Go to `tutorial-auth-web` in your terminal and deploy your project [using the CLI](/docs/intro/using-the-command-line.html).
 
 ```xml
-we deploy --project projectID
+we deploy -p projectID
 ```
 
-**Note:** make sure to replace `projectID` with the id of your project.
-
-<aside>
-
-###### <span class="icon-16-star"></span> Pro Tip
-
-You can always check the status of your builds/deploys by going to the _overview_ section of your project's <a href="https://console.wedeploy.com" target="_blank">Console</a>.
-
-</aside>
+**Note:** make sure to replace `projectID` with the ID that you'd like for your project.
 
 

@@ -1,9 +1,9 @@
 ---
 title: "It Works"
-description: "In this section, you'll learn how to deploy an application using Node.js."
+description: "In this section, you'll learn how to deploy an application using WeDeploy Ruby."
 buttonTitle: "It works"
-tutorialTitle: "Getting started with Node.js"
-parentId: "nodejs"
+tutorialTitle: "Getting started with Ruby"
+parentId: "ruby"
 layout: "tutorial"
 time: 30
 weight: 5
@@ -19,7 +19,7 @@ Go to `app-<projectID>.wedeploy.io` in your browser.
 	<img src="/images/tutorials/it-works.png">
 </figure>
 
-Awesome! You just deployed a Node.js app within a few minutes! We can't wait to see what else you create with WeDeploy!
+Awesome! You just deployed a Ruby app within a few minutes! We can't wait to see what else you create with WeDeploy!
 
 <aside>
 

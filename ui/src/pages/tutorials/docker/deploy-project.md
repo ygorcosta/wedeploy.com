@@ -5,7 +5,7 @@ buttonTitle: "I deployed the app"
 tutorialTitle: "Getting started with Docker"
 parentId: "docker"
 layout: "tutorial"
-time: 90
+time: 30
 weight: 4
 ---
 
@@ -19,4 +19,4 @@ Go to `tutorial-docker` in your terminal and deploy your project [using the CLI]
 we deploy -p projectID
 ```
 
-**Note:** make sure to replace `projectID` with the id of your project.
+**Note:** make sure to replace `projectID` with the ID that you'd like for your project.

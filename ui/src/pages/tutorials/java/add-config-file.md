@@ -2,28 +2,24 @@
 title: "Add Config File"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Java."
 buttonTitle: "I created the wedeploy.json"
-tutorialTitle: "Getting started with WeDeploy Java"
+tutorialTitle: "Getting started with Java"
 parentId: "java"
 layout: "tutorial"
 time: 40
-weight: 4
+weight: 3
 ---
 
-#### Add wedeploy.json
+#### Add Config File
 
-Since every service folder must have a `wedeploy.json` file that configures the service, let's add one to the repo we just cloned.
+Every service folder must have a `wedeploy.json` file that configures it, so let's add one file inside the sample project you just downloaded.
 
 1. Open the `tutorial-java` folder in a code editor
-2. Create a new file named `wedeploy.json` inside the `java` folder.
+2. Create a new file named `wedeploy.json`.
 3. In that file, paste this code:
 
 ```application/json
 {
-	"id": "java",
-	"image": "wedeploy/java",
-	"hooks": {
-		"build": "gradle -Dorg.gradle.native=false clean build -x test"
-	}
+	"id": "app"
 }
 ```
 
@@ -31,14 +27,14 @@ Since every service folder must have a `wedeploy.json` file that configures the 
 
 ###### <span class="icon-16-star"></span> Pro Tip
 
-As you can see above, we added a `hook` in our `wedeploy.json` file. Whatever task you put as a `hook` will be completed during the build cycle prior to each deployment. This mean deploying an app with Maven or Ant is as simple as adding a new build hook like this:
+One of the awesome things you can do in your `wedeploy.json` file is add environment variables. There are many ways to use these; one example is to provide credentials for a external database.
 
 ```application/json
 {
-	"id": "java",
-	"image": "wedeploy/java",
-	"hooks": {
-		"build": "mvn package"
+	"id": "app",
+	"env": {
+		"DB_USER": "us3rname",
+		"DB_PASSWORD": "passw0rd",
 	}
 }
 ```
