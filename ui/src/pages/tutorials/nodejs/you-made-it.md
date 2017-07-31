@@ -1,6 +1,6 @@
 ---
 title: "You Made It!"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Node.js."
+description: "In this section, you'll learn how to deploy an application using Node.js."
 tutorialTitle: "Getting started with WeDeploy Node.js"
 parentId: "nodejs"
 layout: "tutorial"

@@ -11,7 +11,7 @@ weight: 3
 
 #### Add Config Files
 
-Every service folder must have a `wedeploy.json` file that configures it, so let's add two files inside the sample project we just downloaded.
+Every service folder must have a `wedeploy.json` file that configures it, so let's add two files inside the sample project you just downloaded.
 
 ##### MySQL
 

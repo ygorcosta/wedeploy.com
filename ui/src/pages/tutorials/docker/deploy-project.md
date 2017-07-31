@@ -20,5 +20,3 @@ we deploy -p projectID
 ```
 
 **Note:** make sure to replace `projectID` with the id of your project.
-
-

@@ -1,6 +1,6 @@
 ---
 title: "It Works"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Node.js."
+description: "In this section, you'll learn how to deploy an application using Node.js."
 buttonTitle: "I see it live"
 tutorialTitle: "Getting started with WeDeploy Node.js"
 parentId: "nodejs"
@@ -11,9 +11,7 @@ weight: 5
 
 #### It Works
 
-##### See It Live
-
-Great work, your app is ready to be used!
+Great work, your project is ready to be used!
 
 Go to `app-<projectID>.wedeploy.io` in your browser.
 

@@ -1,6 +1,6 @@
 ---
 title: "Get Started"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Node.js."
+description: "In this section, you'll learn how to deploy an application using Node.js."
 buttonTitle: "I'm ready to start!"
 tutorialTitle: "Getting started with WeDeploy Node.js"
 parentId: "nodejs"
@@ -11,7 +11,7 @@ weight: 1
 
 #### Get Started
 
-Using Node.js with WeDeploy is super easy. This tutorial will walk you through how to set up your project and deploy with our CLI.
+Using Node.js with WeDeploy is super easy. This tutorial will walk you through how to deploy a Node.js app using [Express](https://expressjs.com/) as our web framework.
 
 ###### What you'll need
 
@@ -27,4 +27,3 @@ Using Node.js with WeDeploy is super easy. This tutorial will walk you through h
 	<li>Add a configuration file</li>
 	<li>Deploy to production</li>
 </ul>
-

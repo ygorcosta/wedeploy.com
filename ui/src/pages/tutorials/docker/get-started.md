@@ -16,14 +16,14 @@ Deploying Docker containers with WeDeploy is super easy. This tutorial will walk
 ###### What you'll need
 
 <ul class="checklist">
-    <li>A code editor</li>
-    <li><a href="https://wedeploy.com/docs/intro/using-the-command-line.html" target="_blank">The WeDeploy CLI</a></li>
+  <li>A code editor</li>
+  <li><a href="https://wedeploy.com/docs/intro/using-the-command-line.html" target="_blank">The WeDeploy CLI</a></li>
 </ul>
 
 ###### What you'll do
 
 <ul class="checklist">
-    <li>Download a sample project</li>
-    <li>Add configuration files</li>
-    <li>Deploy to production</li>
+  <li>Download a sample project</li>
+  <li>Add configuration files</li>
+  <li>Deploy to production</li>
 </ul>

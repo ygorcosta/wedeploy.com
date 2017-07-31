@@ -11,7 +11,9 @@ weight: 5
 
 #### It Works
 
-Now go to `wp-<projectID>.wedeploy.io` in your browser and see your live page!
+Great work, your project is ready to be used!
+
+Go to `wp-<projectID>.wedeploy.io` in your browser.
 
 <figure>
 	<img src="/images/tutorials/docker/it-works.jpg" alt="It works">
