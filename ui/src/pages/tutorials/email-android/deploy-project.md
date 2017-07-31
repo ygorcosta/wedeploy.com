@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Project"
 description: "In this section, you'll learn how to send an email on Android using the WeDeploy API Client."
-buttonTitle: "I deployed my project"
+buttonTitle: "I deployed the project"
 tutorialTitle: "Getting started with WeDeploy Email on Android"
 parentId: "email-android"
 layout: "tutorial"

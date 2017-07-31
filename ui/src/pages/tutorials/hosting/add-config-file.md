@@ -1,7 +1,7 @@
 ---
 title: "Add Config File"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
-buttonTitle: "I added the wedeploy.json"
+buttonTitle: "I added the config file"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 parentId: "hosting"
 layout: "tutorial"

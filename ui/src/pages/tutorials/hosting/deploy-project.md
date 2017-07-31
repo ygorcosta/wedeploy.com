@@ -1,7 +1,7 @@
 ---
 title: "Deploy Project"
 description: "In this section, you'll learn how to deploy an application using WeDeploy Hosting."
-buttonTitle: "I deployed the app"
+buttonTitle: "I deployed the project"
 tutorialTitle: "Getting started with WeDeploy Hosting"
 parentId: "hosting"
 layout: "tutorial"

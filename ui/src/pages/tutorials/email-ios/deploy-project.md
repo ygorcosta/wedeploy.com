@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Project"
 description: "In this section, you'll learn how to send an email on iOS using the WeDeploy API Client."
-buttonTitle: "I deployed my project"
+buttonTitle: "I deployed the project"
 tutorialTitle: "Getting started with WeDeploy Email on iOS"
 parentId: "email-ios"
 layout: "tutorial"
