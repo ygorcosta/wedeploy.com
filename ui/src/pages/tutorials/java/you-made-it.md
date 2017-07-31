@@ -4,7 +4,7 @@ description: "In this section, you'll learn how to deploy an application using W
 tutorialTitle: "Getting started with Java"
 parentId: "java"
 layout: "tutorial"
-weight: 7
+weight: 6
 ---
 
 <div class="notfound">
