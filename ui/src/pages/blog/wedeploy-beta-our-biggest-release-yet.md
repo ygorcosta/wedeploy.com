@@ -49,19 +49,11 @@ Yes, now every project you deploy and every service you install will automatical
 
 We also make sure that those HTTPS certificates are valid by renewing them from time to time. That way you can always trust that your application will be secured.
 
-<figure>
-	<img src="/images/blog/post-12--https.jpg" alt="HTTPS">
-</figure>
-
 ##### 4. Zero Downtime Deployments
 
 During alpha, whenever a new deployment was triggered, your app would go offline for couple seconds until the new version was 100% ready. We knew that was not ideal, so we sat down to build a much better experience that minimizes downtime and user interruption.
 
 Now, you don't have to worry about your app being taken down during deployment of the new code. Push updates and restart your services with zero downtime.
-
-<figure>
-	<img src="/images/blog/post-12--zero-downtime.jpg" alt="Zero Downtime Deployments">
-</figure>
 
 ##### 5. Custom Docker Services
 
@@ -72,10 +64,6 @@ Today we want to bring the benefits of this technology to you and facilitate the
 Back on alpha you were limited by the services we provided, now your imagination is the limit. This opens up the possibility to deploy pretty much anything and we look forward to see what you're going to create.
 
 *Read more on the [documentation](/docs/deploy/deploying-docker.html) or follow our [step-by-step tutorial](/tutorials/docker/get-started.html).*
-
-<figure>
-	<img src="/images/blog/post-12--docker.jpg" alt="Custom Docker Services">
-</figure>
 
 ##### 6. Volume Support
 
@@ -116,10 +104,6 @@ Besides that, we're adding support for [hot deployment](https://dev.liferay.com/
 What about [Liferay Portal Community Edition](https://web.liferay.com/community/liferay-projects/liferay-portal/overview)? Since we have Docker support now, you can setup your own Dockerfile or grab an image from [Docker Hub](https://hub.docker.com/r/liferay/portal/) and deploy it here.
 
 *Read more on the [documentation](/docs/deploy/deploying-liferay-dxp.html) or follow our [step-by-step tutorial](/tutorials/liferay-dxp/get-started.html).*
-
-<figure>
-	<img src="/images/blog/post-12--liferay-dxp.jpg" alt="Liferay DXP">
-</figure>
 
 ##### 10. Global DNS
 
