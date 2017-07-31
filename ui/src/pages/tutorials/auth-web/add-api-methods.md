@@ -15,7 +15,7 @@ weight: 6
 
 First, let's add a script that will allow users to create an account.
 
-To do this, go back to the `hosting` folder and paste this code between the "create user method" comments in the `main.js` file:
+To do this, go back to the `ui` folder and paste this code between the "create user method" comments in the `main.js` file:
 
 ```javascript
 var auth = WeDeploy.auth('users-<projectID>.wedeploy.io');

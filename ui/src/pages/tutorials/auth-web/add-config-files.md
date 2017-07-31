@@ -32,7 +32,7 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ##### Hosting
 
-1. Change to the `hosting` folder and create another `wedeploy.json` file
+1. Change to the `ui` folder and create another `wedeploy.json` file
 3. In that file, paste this code:
 
 ```application/json

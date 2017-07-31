@@ -13,7 +13,7 @@ weight: 4
 
 Before we can make any requests to create or sign-in any users, we must connect the WeDeploy API Client.
 
-To do this, go back to the `hosting` folder and include this script link at the bottom of the `<body>` element of these files:
+To do this, go back to the `ui` folder and include this script link at the bottom of the `<body>` element of these files:
 
 <ul class="checklist">
 	<li><code>index.html</code></li>

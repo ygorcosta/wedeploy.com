@@ -13,7 +13,7 @@ weight: 4
 
 Before we can make any requests to send an email, we must connect the WeDeploy API Client.
 
-To do this, go to `index.html` in that `hosting` directory and include this script link at the bottom of the `<body>` element:
+To do this, go to `index.html` in that `ui` directory and include this script link at the bottom of the `<body>` element:
 
 ```xml
 <script src="https://cdn.wedeploy.com/api/beta/wedeploy.js"></script>

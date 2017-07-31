@@ -26,7 +26,7 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 }
 ```
 
-1. Now create a new file inside of the `hosting` folder and name it `wedeploy.json`.
+1. Now create a new file inside of the `ui` folder and name it `wedeploy.json`.
 2. Inside of that file, paste this code.
 
 ```application/json
