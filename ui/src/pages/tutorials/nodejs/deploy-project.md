@@ -1,7 +1,7 @@
 ---
 title: "Deploy Project"
 description: "In this section, you'll learn how to deploy an application using Node.js."
-buttonTitle: "I deployed the app"
+buttonTitle: "I deployed the project"
 tutorialTitle: "Getting started with Node.js"
 parentId: "nodejs"
 layout: "tutorial"

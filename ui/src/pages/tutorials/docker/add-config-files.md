@@ -1,7 +1,7 @@
 ---
 title: "Add Config Files"
 description: "In this section, you'll learn how to deploy an application using Docker."
-buttonTitle: "I added the wedeploy.json"
+buttonTitle: "I added the config files"
 tutorialTitle: "Getting started with Docker"
 parentId: "docker"
 layout: "tutorial"
