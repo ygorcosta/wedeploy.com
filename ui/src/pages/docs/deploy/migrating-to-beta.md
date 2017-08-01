@@ -66,6 +66,16 @@ For example, if we find a `package.json`, we'll build that as a Node.js service.
 
 <article id="4">
 
+## Liferay
+
+We also no longer support the Liferay CE (Community Edition) WeDeploy image. In order to deploy Liferay CE, you must do it with a _Dockerfile_ using the [liferay/portal image](https://hub.docker.com/r/liferay/portal/).
+
+Or you can try [Liferay DXP](/docs/deploy/deploying-liferay-dxp.html) which is a new service we provide. We will give you a free 15 day trial period before you must apply a license.
+
+</article>
+
+<article id="5">
+
 ## API client
 
 **CDN Links**
@@ -88,7 +98,7 @@ For example, if we find a `package.json`, we'll build that as a Node.js service.
 
 </article>
 
-<article id="5">
+<article id="6">
 
 ## Data
 
@@ -98,7 +108,7 @@ If you want to migrate your data collections, you can do this manually by sendin
 
 </article>
 
-<article id="6">
+<article id="7">
 
 ## Auth
 
@@ -112,7 +122,7 @@ There is no way to manually migrate your previous users. To do so, <a href="java
 
 </article>
 
-<article id="7">
+<article id="8">
 
 ## Email
 
@@ -140,7 +150,7 @@ We made some syntax updates on the Email API to make it even more intuitive. Thi
 
 </article>
 
-<article id="8">
+<article id="9">
 
 ## Deployment
 
@@ -154,7 +164,7 @@ This means we no longer allow deployments with our Git server.
 
 </article>
 
-<article id="9">
+<article id="10">
 
 ## Custom domains
 
@@ -166,7 +176,7 @@ We have also created [a new way to add Custom Domains](/docs/intro/custom-domain
 
 </article>
 
-<article id="10">
+<article id="11">
 
 ## Local Development
 
