@@ -94,7 +94,7 @@ For example, if we find a `package.json`, we'll build that as a Node.js service.
 
 **Migrating Database**
 
-If you want to migrate your data collections, you can use cURL to send GET requests from Alpha and POST requests to Beta. If you are not familiar with cURL, feel free to <a href="javascript:Intercom('show');">reach out to us</a> and we can migrate them over for you.
+If you want to migrate your data collections, you can do this manually by sending GET requests from Alpha and POST requests to Beta. If you are not familiar with that process, feel free to <a href="javascript:Intercom('show');">reach out to us</a> and we can migrate them over for you.
 
 </article>
 
