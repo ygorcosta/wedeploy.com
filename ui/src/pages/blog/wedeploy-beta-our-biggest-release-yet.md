@@ -21,7 +21,7 @@ But first, a little backstory.
 
 #### Where we've come
 
-314 days ago, we launched the first app on WeDeploy. It was such an exhilarating time but we had our eyes set on the future.
+316 days ago, we launched the first app on WeDeploy. It was such an exhilarating time but we had our eyes set on the future.
 
 The thing is, WeDeploy didn't start as "WeDeploy". Almost two years ago, me and a few others spent our spare time working on this project called Launchpad. It was just a shadow of what WeDeploy is today, but it was a start. It was **our** start.
 
