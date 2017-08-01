@@ -1,7 +1,7 @@
 ---
 title: "WeDeploy Beta: Our Biggest Release Yet"
 description: "We have been working tirelessly the last months on some huge changes to WeDeploy, and today is the day we can finally tell you all about them."
-date: "July 31, 2017"
+date: "August 1, 2017"
 author: "Eduardo Lundgren"
 image: "http://wedeploy.com/images/blog/post-12--0.jpg"
 layout: "blog"
