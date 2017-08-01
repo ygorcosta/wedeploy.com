@@ -11675,7 +11675,7 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
               'class', 'arrow-up');
           ie_open('span', null, null,
               'class', 'alpha');
-            itext('alpha');
+            itext('beta');
           ie_close('span');
         ie_close('span');
       ie_close('span');
@@ -36261,8 +36261,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dockerTutorials, temp
 /* 495 */,
 /* 496 */,
 /* 497 */,
-/* 498 */,
-/* 499 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36341,4 +36340,4 @@ _metalSoy2.default.register(dockerTutorials, _indexSoy2.default);
 exports.default = dockerTutorials;
 
 /***/ })
-],[499]);
+],[498]);

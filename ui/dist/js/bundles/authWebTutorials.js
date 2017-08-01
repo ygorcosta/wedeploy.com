@@ -11675,7 +11675,7 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
               'class', 'arrow-up');
           ie_open('span', null, null,
               'class', 'alpha');
-            itext('alpha');
+            itext('beta');
           ie_close('span');
         ie_close('span');
       ie_close('span');
@@ -36222,7 +36222,11 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(authWebTutorials, tem
 /* 456 */,
 /* 457 */,
 /* 458 */,
-/* 459 */
+/* 459 */,
+/* 460 */,
+/* 461 */,
+/* 462 */,
+/* 463 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36301,4 +36305,4 @@ _metalSoy2.default.register(authWebTutorials, _indexSoy2.default);
 exports.default = authWebTutorials;
 
 /***/ })
-],[459]);
+],[463]);

@@ -11675,7 +11675,7 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
               'class', 'arrow-up');
           ie_open('span', null, null,
               'class', 'alpha');
-            itext('alpha');
+            itext('beta');
           ie_close('span');
         ie_close('span');
       ie_close('span');
@@ -36169,10 +36169,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsDataIndex, te
 /* 403 */,
 /* 404 */,
 /* 405 */,
-/* 406 */,
-/* 407 */,
-/* 408 */,
-/* 409 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36251,4 +36248,4 @@ _metalSoy2.default.register(pageDocsDataIndex, _indexSoy2.default);
 exports.default = pageDocsDataIndex;
 
 /***/ })
-],[409]);
+],[406]);
