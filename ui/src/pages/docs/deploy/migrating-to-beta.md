@@ -118,7 +118,7 @@ There is no way to manually migrate your previous users. To do so, <a href="java
 
 **JavaScript API**
 
-We made some syntax updates on the Email API to make it even more intuitive. This means that now all services follow the same syntax flow for JavaScript (`WeDeploy.serviceType('service-project.wedeploy.io').method()`).
+We made some syntax updates on the Email API to make it even more intuitive. This means that now all services follow the same syntax flow for JavaScript.
 
 1. Instead of declaring your email endpoint with _.url()_, you now use _.email()_.
 2. You now no longer need to add _/emails_ to the end of your URL.
