@@ -70,7 +70,7 @@ WeDeploy provides a DNS service across 7 different countries, including Australi
 
 WeDeploy gives you the power to easily scale your services up and down with the turn of a dial.
 
-Horizontal scaling is trivial in Docker Swarm, as long as your service supports it. You can change the number of service instances at any time. WeDeploy even lets you autoscale the number of instances based on session count, using the WeDeploy Load Balancer.
+You can change the number of service instances at any time. WeDeploy even lets you autoscale the number of instances based on session count, using the WeDeploy Load Balancer.
 
 </article>
 
