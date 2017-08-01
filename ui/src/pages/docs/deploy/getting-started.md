@@ -49,16 +49,16 @@ WeDeploy uses this JSON file to reference a service by ID in case it's already c
 
 <div class="table-container">
 
-| Field             | Default | Description                                    |
-| ----------------- | ------- | ---------------------------------------------- |
-| **id**            | random  | Unique service ID                              |
-| **image**         |         | Service image type                             |
-| **env**           |         | Variables exported into the service lifecycle  |
-| **port**          | 80      | Exposed service port                           |
-| **cpu**           | 1 cpu   | Number of processing units                     |
-| **memory**        | 512 mb  | Amount of computing memory                     |
-| **volume**        |         | Persistant database storage                    |
-| **customDomains** |         | Set custom domain names                        |
+| Field             | Type    | Default | Description                  |
+| ----------------- | ------- | ------- | ---------------------------- |
+| **id**            | String  | random  | Unique service ID            |
+| **image**         | String  |         | Service image type           |
+| **env**           | Object  |         | Exported variables           |
+| **port**          | Number  | 80      | Exposed service port         |
+| **cpu**           | Number  | 1       | Number of processing units   |
+| **memory**        | Number  | 512     | Amount of computing memory   |
+| **volume**        | String  |         | Persistant database storage  |
+| **customDomains** | Array   |         | Set custom domain names      |
 
 </div>
 
@@ -74,9 +74,9 @@ Here are all the configuration fields in action.
 		"DB_USER": "root",
 		"DB_PASSWORD": "pass123",
 	},
-	"port": "8080",
-	"cpu": "2",
-	"memory": "2048",
+	"port": 8080,
+	"cpu": 2,
+	"memory": 2048,
 	"volume": "/opt/storage",
 	"customDomains": ["myservice.com", "www.myservice.com"]
 }

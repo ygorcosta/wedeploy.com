@@ -20,7 +20,7 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 ```application/json
 {
 	"id": "app",
-	"memory": "2048"
+	"memory": 2048
 }
 ```
 

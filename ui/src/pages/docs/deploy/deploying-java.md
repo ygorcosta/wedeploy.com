@@ -51,7 +51,7 @@ Below is an examples of a `wedeploy.json` for the Java container. The `id` for y
 ```application/json
 {
 	"id": "myservice",
-	"memory": "2048"
+	"memory": 2048
 }
 ```
 
