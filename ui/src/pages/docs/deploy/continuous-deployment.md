@@ -46,4 +46,4 @@ If you don't have a project ready to deploy, you can fork this [GitHub repositor
 
 ## What's next?
 
-Now you're ready to connect to GitHub and deploy any kind of application. Let's start with [Deploying Node.js](/docs/deploy/continuous-deployment.html)?
+Now you're ready to connect to GitHub and deploy any kind of application. Let's start with [Deploying Node.js](/docs/deploy/deploying-nodejs.html)?
