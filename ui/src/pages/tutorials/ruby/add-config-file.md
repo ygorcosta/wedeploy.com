@@ -1,6 +1,6 @@
 ---
 title: "Add Config File"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Ruby."
+description: "In this section, you'll learn how to deploy an application using Ruby."
 buttonTitle: "I created the wedeploy.json"
 tutorialTitle: "Getting started with Ruby"
 parentId: "ruby"

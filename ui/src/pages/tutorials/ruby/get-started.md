@@ -1,6 +1,6 @@
 ---
 title: "Get Started"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Ruby."
+description: "In this section, you'll learn how to deploy an application using Ruby."
 buttonTitle: "I'm ready to start!"
 tutorialTitle: "Getting started with Ruby"
 parentId: "ruby"

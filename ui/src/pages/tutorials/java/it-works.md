@@ -1,6 +1,6 @@
 ---
 title: "It Works"
-description: "In this section, you'll learn how to deploy an application using WeDeploy Java."
+description: "In this section, you'll learn how to deploy an application using Java."
 buttonTitle: "It works"
 tutorialTitle: "Getting started with Java"
 parentId: "java"
