@@ -40,7 +40,7 @@ All Alpha projects, including the previous Dashboard, will be unavailable on **S
 
 2. Rename all _container.json_ files to _wedeploy.json_.
 
-3. In _wedeploy.json_, change _type_ to _image_ and add the _:beta_ tag.
+3. In _wedeploy.json_, change _type_ to _image_ and add the _0.0.1_ tag.
 
 ![wedeploy.json](/images/docs/deploy/migration--wedeploy-json.png)
 
@@ -72,7 +72,7 @@ For example, if we find a `package.json`, we'll build that as a Node.js service.
 
 1. Update your CDN API links to _https_ (yes, just simply add the 's').
 
-2. Update the version to _:beta_
+2. Update the version to _0.0.1_
 
 	![CDN HTTPS](/images/docs/deploy/migration--cdn-https.png)
 

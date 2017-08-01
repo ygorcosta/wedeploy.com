@@ -51,7 +51,7 @@ Below is an example of a `wedeploy.json` for a Hosting container.
 ```application/json
 {
 	"id": "ui",
-	"image": "wedeploy/hosting:beta"
+	"image": "wedeploy/hosting:@site.version.image.hosting@"
 }
 ```
 

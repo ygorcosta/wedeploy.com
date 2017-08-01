@@ -21,5 +21,5 @@ To do this, go back to the `ui` folder and include this script link at the botto
 </ul>
 
 ```xml
-<script src="https://cdn.wedeploy.com/api/beta/wedeploy.js"></script>
+<script src="https://cdn.wedeploy.com/api/@site.version.api.javascript@/wedeploy.js"></script>
 ```

@@ -22,7 +22,7 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 ```application/json
 {
 	"id": "db",
-	"image": "wedeploy/data:beta"
+	"image": "wedeploy/data:@site.version.image.data@"
 }
 ```
 
@@ -32,7 +32,7 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 ```application/json
 {
 	"id": "ui",
-	"image": "wedeploy/hosting:beta"
+	"image": "wedeploy/hosting:@site.version.image.hosting@"
 }
 ```
 

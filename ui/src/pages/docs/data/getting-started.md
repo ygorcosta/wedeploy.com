@@ -45,7 +45,7 @@ Below is an example of a `wedeploy.json` for a Data container.
 ```application/json
 {
 	"id": "database",
-	"image": "wedeploy/data:beta"
+	"image": "wedeploy/data:@site.version.image.data@"
 }
 ```
 

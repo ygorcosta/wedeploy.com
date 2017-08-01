@@ -45,7 +45,7 @@ Below is an example of a `wedeploy.json` for an Auth container.
 ```application/json
 {
 	"id": "users",
-	"image": "wedeploy/auth:beta"
+	"image": "wedeploy/auth:@site.version.image.auth@"
 }
 ```
 

@@ -51,7 +51,7 @@ Below is an example of a `wedeploy.json` for an Email container.
 ```application/json
 {
 	"id": "mail",
-	"image": "wedeploy/email:beta"
+	"image": "wedeploy/email:@site.version.image.email@"
 }
 ```
 

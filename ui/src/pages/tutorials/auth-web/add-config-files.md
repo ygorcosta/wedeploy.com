@@ -22,7 +22,7 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 ```application/json
 {
 	"id": "users",
-	"image": "wedeploy/auth:beta",
+	"image": "wedeploy/auth:@site.version.image.auth@",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
 		"WEDEPLOY_AUTH_PASSWORD": "true"
@@ -38,7 +38,7 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 ```application/json
 {
 	"id": "ui",
-	"image": "wedeploy/hosting:beta"
+	"image": "wedeploy/hosting:@site.version.image.hosting@"
 }
 ```
 
@@ -51,7 +51,7 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 ```application/json
 {
 	"id": "users",
-	"image": "wedeploy/auth:beta",
+	"image": "wedeploy/auth:@site.version.image.auth@",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
 		"WEDEPLOY_AUTH_PASSWORD": "true",

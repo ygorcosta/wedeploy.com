@@ -60,7 +60,7 @@ end
 ```build.gradle
 dependencies {
 	... rest of your dependencies ...
-    compile 'com.wedeploy:com.wedeploy.android:beta-20170505'
+    compile 'com.wedeploy:com.wedeploy.android:@site.version.api.android@'
 }
 ```
 

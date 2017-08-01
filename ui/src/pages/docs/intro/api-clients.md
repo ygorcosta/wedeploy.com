@@ -31,7 +31,7 @@ You can use this by adding a script element in your HTML file or to load the lib
 **CDN**
 
 ```xml
-<script src="https://cdn.wedeploy.com/api/latest/wedeploy.js"></script>
+<script src="https://cdn.wedeploy.com/api/@site.version.api.javascript@/wedeploy.js"></script>
 ```
 
 **NPM**
@@ -123,7 +123,7 @@ You just need to add the following line to your `build.gradle` file.
 **Gradle**
 
 ```groovy
-compile 'com.wedeploy:com.wedeploy.android:beta-20170505'
+compile 'com.wedeploy:com.wedeploy.android:@site.version.api.android@'
 ```
 
 ##### Nuances

@@ -16,7 +16,7 @@ Before we can make any requests to save or fetch data, we must connect the WeDep
 To do this, go to `tutorial-data-android/app/tutorial-data-android/app/build.gradle` and include this line inside the dependencies function of this file:
 
 ```text/x-groovy
-compile 'com.wedeploy:com.wedeploy.android:beta-20170505'
+compile 'com.wedeploy:com.wedeploy.android:@site.version.api.android@'
 ```
 
 After doing this, you have to sync the project, after a seconds you will see that the project is built correctly.
