@@ -191,4 +191,4 @@ we list --remote wedeploy
 
 ## What's next?
 
-* Learn more about using [the WeDeploy API Client](/docs/intro/using-the-api-client.html).
+* Learn more about using [the WeDeploy API Client](/docs/intro/api-clients.html).
