@@ -49,13 +49,7 @@ Yes, now every project you deploy and every service you install will automatical
 
 We also make sure that those HTTPS certificates are valid by renewing them from time to time. That way you can always trust that your application will be secured.
 
-##### 4. Zero Downtime Deployments
-
-During alpha, whenever a new deployment was triggered, your app would go offline for couple seconds until the new version was 100% ready. We knew that was not ideal, so we sat down to build a much better experience that minimizes downtime and user interruption.
-
-Now, you don't have to worry about your app being taken down during deployment of the new code. Push updates and restart your services with zero downtime.
-
-##### 5. Custom Docker Services
+##### 4. Custom Docker Services
 
 The container ecosystem has grown a lot in the past years and [Docker](https://www.docker.com/) is largely responsible for this success.
 
@@ -65,23 +59,21 @@ Back on alpha you were limited by the services we provided, now your imagination
 
 *Read more on the [documentation](/docs/deploy/deploying-docker.html) or follow our [step-by-step tutorial](/tutorials/docker/get-started.html).*
 
-##### 6. Volume Support
+##### 5. Volume Support
 
 With the addition of custom Docker services, new challenges arrive. For example, let's say you deploy an app with PHP and MySQL, then you start adding entries to your database. What happens when you restart that project without a proper setup? Well, you're going to lose all the data that was saved.
 
 In order to be able to persist and share data between services, we're introducing the concept of volumes. Quite simply, volumes are specially-designated directories that live outside of the file system where your code runs. This way, even if your application becomes unavailable due to a failure or other causes, your data still persists.
 
-*Read more on the [documentation](/docs/deploy/how-it-works.html).*
-
-##### 7. Instant Deployment
+##### 6. Instant Deployment
 
 Before you had two ways of deploying code, you could either connect with GitHub or create a remote pointing to our Git server. We noticed that people loved the convenience of integrating with GitHub so [we're keeping that](/docs/deploy/continuous-deployment.html), but when using our Git server the experience was not as fluid, specially the authentication step on every push.
 
 Because of that, we decided to rethink our CLI and introduce a new deploy command. Now you don't need to rely on Git for every deploy. All you need to do is type `we login` to authenticate only once and then run `we deploy` on your project folder.
 
-*Read more on the [documentation](/docs/deploy/instant-deployment.html) or install our [command-line](/docs/intro/using-the-command-line.html).*
+*Read more on the [documentation](/docs/deploy/instant-deployment.html).*
 
-##### 8. Automatic Code Detection
+##### 7. Automatic Code Detection
 
 If you used WeDeploy before, you probably remember this `container.json` file (now renamed to `wedeploy.json`). This file describes what is the name of the service, what are the environment variables needed, and most importantly what kind of project is this.
 
@@ -91,9 +83,7 @@ From now on, we'll try to determine what language your project uses, so you can 
 
 That doesn't mean you don't need the `wedeploy.json` file anymore. That is still valid and important for us to determine what directory to scan.
 
-*Read more on the [documentation](/docs/deploy/how-it-works.html).*
-
-##### 9. Liferay DXP
+##### 8. Liferay DXP
 
 We're very excited about [Liferay Digital Experience Platform](https://www.liferay.com/digital-experience-platform). There are so many cool capabilities and we want to give WeDeploy users the opportunity to try them out in seconds.
 
@@ -105,6 +95,12 @@ What about [Liferay Portal Community Edition](https://web.liferay.com/community/
 
 *Read more on the [documentation](/docs/deploy/deploying-liferay-dxp.html) or follow our [step-by-step tutorial](/tutorials/liferay-dxp/get-started.html).*
 
+##### 9. Zero Downtime Deployments
+
+During alpha, whenever a new deployment was triggered, your app would go offline for couple seconds until the new version was 100% ready. We knew that was not ideal, so we sat down to build a much better experience that minimizes downtime and user interruption.
+
+Now, you don't have to worry about your app being taken down during deployment of the new code. Push updates and restart your services with zero downtime.
+
 ##### 10. Global DNS
 
 We know how tedious it is to setup your domains. That's why we're introducing a new reliable and scalable DNS solution.
@@ -113,7 +109,7 @@ From now on, you can point your domains directly to our nameservers and we will 
 
 We provide our DNS service across 7 different countries, including Australia, Germany, France, Netherlands, Singapore, United Kingdom, United States. Our goal is to ensure that you always have high availability and low latency resulting in a great experience for your users and your business.
 
-*Read more on the [documentation](/docs/intro/custom-domains.html).*
+*Read more on the [documentation](/docs/intro/custom-domains.html#2).*
 
 ---
 
