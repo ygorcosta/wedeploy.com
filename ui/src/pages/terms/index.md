@@ -1,6 +1,6 @@
 ---
 title: "Terms of Service"
-description: "Liferay WeDeploy Alpha Services Agreement"
+description: "Liferay WeDeploy Beta Services Agreement"
 layout: "termsPage"
 hidden: true
 ---
@@ -9,9 +9,9 @@ hidden: true
 
 ### {$page.description}
 
-PLEASE READ THIS AGREEMENT CAREFULLY BEFORE PURCHASING AND/OR USING WEDEPLOY. BY USING WEDEPLOY, END USER SIGNIFIES ITS ASSENT TO AND ACCEPTANCE OF THIS AGREEMENT AND ACKNOWLEDGES IT HAS READ AND UNDERSTANDS THIS AGREEMENT. AN INDIVIDUAL ACTING ON BEHALF OF AN ENTITY REPRESENTS THAT HE OR SHE HAS THE AUTHORITY TO ENTER INTO THIS AGREEMENT ON BEHALF OF THAT ENTITY. IF END USER DOES NOT ACCEPT THE TERMS OF THIS AGREEMENT, THEN IT MUST NOT USE WEDEPLOY. 
+PLEASE READ THIS AGREEMENT CAREFULLY BEFORE PURCHASING AND/OR USING WEDEPLOY. BY USING WEDEPLOY, END USER SIGNIFIES ITS ASSENT TO AND ACCEPTANCE OF THIS AGREEMENT AND ACKNOWLEDGES IT HAS READ AND UNDERSTANDS THIS AGREEMENT. AN INDIVIDUAL ACTING ON BEHALF OF AN ENTITY REPRESENTS THAT HE OR SHE HAS THE AUTHORITY TO ENTER INTO THIS AGREEMENT ON BEHALF OF THAT ENTITY. IF END USER DOES NOT ACCEPT THE TERMS OF THIS AGREEMENT, THEN IT MUST NOT USE WEDEPLOY.
 
-This Liferay WeDeploy Alpha Services Agreement, including all referenced appendices and documents located at URLs (the **"Agreement"**), is between Liferay, Inc. (**"Liferay"**) with a principal place of business at 1400 Montefino Ave,  Diamond Bar, CA 91765 and the user of WeDeploy (**"WeDeploy"**) who accepts the terms of this Agreement (**"You"** or **"End User"**). The effective date of this Agreement is the earlier of the date that End User accepts this Agreement or the date that End User uses WeDeploy (**"Effective Date"**).
+This Liferay WeDeploy Beta Services Agreement, including all referenced appendices and documents located at URLs (the **"Agreement"**), is between Liferay, Inc. (**"Liferay"**) with a principal place of business at 1400 Montefino Ave, Diamond Bar, CA 91765 and the user of WeDeploy (**"WeDeploy"**) who accepts the terms of this Agreement (**"You"** or **"End User"**). The effective date of this Agreement is the earlier of the date that End User accepts this Agreement or the date that End User uses WeDeploy (**"Effective Date"**).
 
 ##### 1. Definitions
 
@@ -23,7 +23,7 @@ This Liferay WeDeploy Alpha Services Agreement, including all referenced appendi
 
 **"Application(s)"** means the web application(s) that an End User creates and makes available through the use of WeDeploy.
 
-**"Alpha Term"** means the period of time Liferay makes the "alpha" version of WeDeploy available to the general public.
+**"Beta Term"** means the period of time Liferay makes the "beta" version of WeDeploy available to the general public.
 
 **"Content"** means any content or data whether developed in connection with WeDeploy or otherwise, software code, documentation, materials, information, text files, images and/or trademarks associated with Your Account, Application or any other use of WeDeploy and not provided by Liferay.
 
@@ -41,7 +41,7 @@ An End User is required to create and maintain an Account to access and use Life
 
 ##### 3. Use
 
-Liferay grants End User a non-exclusive, non-assignable, worldwide right to access and use WeDeploy for the Alpha Term solely for the Customer's evaluation and testing of WeDeploy and subject to the terms herein. Each End User is responsible for determining the suitability of WeDeploy for each End User’s individual use, including with respect to any laws and/or regulations relating to data protection or privacy. After the Alpha Term, WeDeploy may be made available under a separate agreement for use other than solely for evaluation and subject to terms that vary from this Agreement. You understand that Lifeary is not obligated to provide You access to WeDeploy, your Application or your Content after expiration of the Alpha Term. You are responsible for backing up your Application, Content or other data. Liferay’s provision of the WeDeploy under this Agreement does not require Liferay to meet any service level agreements, promises, or uptimes. Liferay retains all right, title, and interest in WeDeploy.
+Liferay grants End User a non-exclusive, non-assignable, worldwide right to access and use WeDeploy for the Beta Term solely for the Customer's evaluation and testing of WeDeploy and subject to the terms herein. Each End User is responsible for determining the suitability of WeDeploy for each End User’s individual use, including with respect to any laws and/or regulations relating to data protection or privacy. After the Beta Term, WeDeploy may be made available under a separate agreement for use other than solely for evaluation and subject to terms that vary from this Agreement. You understand that Lifeary is not obligated to provide You access to WeDeploy, your Application or your Content after expiration of the Beta Term. You are responsible for backing up your Application, Content or other data. Liferay’s provision of the WeDeploy under this Agreement does not require Liferay to meet any service level agreements, promises, or uptimes. Liferay retains all right, title, and interest in WeDeploy.
 
 ##### 4. Content
 
@@ -49,7 +49,7 @@ Each End User is responsible for the Content made available through use of WeDep
 
 ##### 5. Third Party Software and Services
 
-Certain Third Party Software and/or Services may be made available for use through WeDeploy for an End User to create its own Application(s). Each End User is fully responsible for the choice of any Third Party Software and/or Services within an End User’s Application. The availability of such Third Party Software and/or Services does not constitute and endorsement by Liferay. The terms and/or conditions that apply to an End User’s use of any Third Party Software and/or Services within a End User’s Application are as solely agreed upon between a End User and the Third Party Software and/or Services provider. If an End User chooses to use Third Party Software and/or Services within an End User’s Application, Liferay may be required to grant the Third Party Software and/or Services provider access to a End User’s Content or Account to the extent necessary to provide the Third Party Software and/or Services or for interoperability with the Third Party Software and/or Services. Third Party Services may be removed from or no longer available through WeDeploy at any time, for example but not limited to if a take down is required by law or due to inconsistent interoperability. 
+Certain Third Party Software and/or Services may be made available for use through WeDeploy for an End User to create its own Application(s). Each End User is fully responsible for the choice of any Third Party Software and/or Services within an End User’s Application. The availability of such Third Party Software and/or Services does not constitute and endorsement by Liferay. The terms and/or conditions that apply to an End User’s use of any Third Party Software and/or Services within a End User’s Application are as solely agreed upon between a End User and the Third Party Software and/or Services provider. If an End User chooses to use Third Party Software and/or Services within an End User’s Application, Liferay may be required to grant the Third Party Software and/or Services provider access to a End User’s Content or Account to the extent necessary to provide the Third Party Software and/or Services or for interoperability with the Third Party Software and/or Services. Third Party Services may be removed from or no longer available through WeDeploy at any time, for example but not limited to if a take down is required by law or due to inconsistent interoperability.
 
 ##### 6. Provision of Services
 
@@ -57,11 +57,11 @@ You give Liferay, its Affiliates, subcontractors, and vendors a worldwide, royal
 
 ##### 7. Fees
 
-There are currently no fees associated with an End Users use of WeDeploy during the Alpha Term. Use of WeDeploy may be subject to fees under a separate agreement upon conclusion of the Alpha Term.
+There are currently no fees associated with an End Users use of WeDeploy during the Beta Term. Use of WeDeploy may be subject to fees under a separate agreement upon conclusion of the Beta Term.
 
 ##### 8. Term and Termination
 
-This Agreement will terminate upon expiration of the Alpha Term. Sections # will survive termination of this agreement.
+This Agreement will terminate upon expiration of the Beta Term. Sections # will survive termination of this agreement.
 
 ##### 9. Feedback
 
