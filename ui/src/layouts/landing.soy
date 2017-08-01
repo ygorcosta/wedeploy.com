@@ -10,7 +10,6 @@
 			{call .topbar data="all" /}
 			{$content}
 			{call .footer data="all" /}
-			{call .modal data="all" /}
 		</main>
 	</div>
 {/template}
@@ -86,49 +85,6 @@
 				<a class="ic-twitter" href="http://twitter.com/wedeploy" target="_blank">
 					<span class="icon-16-twitter"></span>
 				</a>
-			</div>
-		</div>
-	</div>
-{/template}
-
-/**
- *
- */
-{template .modal}
-	<div class="modal">
-		<div class="modal-container">
-			<a class="modal__close flex-center-center" href="javascript:void(0);"><span class="close__icon icon-16-cancel"></span></a>
-
-			<div id="modal__form-container">
-				<div class="form flex-center-top">
-					<div class="logo flex-center-center">
-						<span>We</span>
-					</div>
-					<h2>Request an Invite for WeDeploy™</h2>
-					<p>We can't wait to see what you're going to build.</p>
-					<form id="form-modal" class="flex-center-top column form-signup">
-						<div class="form-group">
-							<label>Email</label>
-							<input type="text" class="form-control" name="email" placeholder="Enter your email address">
-						</div>
-						<p id="form-modal__validation" class="form-validation"></p>
-						<button id="form-modal__submit" class="btn btn-accent"><span>Get Started – It’s FREE</span></button>
-						<div class="small-container flex-center-top">
-						<small>By entering your email you agree to receive information about WeDeploy™.</small>
-						</div>
-					</form>
-				</div>
-				<div class="copy">
-					<p>Copyright © 2017 Liferay, Inc.</p>
-				</div>
-			</div>
-
-			<div id="modal__response-container" class="flex-center-top">
-				<div class="logo flex-center-center">
-					<span>We</span>
-				</div>
-				<h2>Thanks for requesting an invite!</h2>
-				<p>We'll drop you an email when WeDeploy™ is ready. Stay tuned.</p>
 			</div>
 		</div>
 	</div>
