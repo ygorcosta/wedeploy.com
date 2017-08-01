@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([0,184,185,186,187,188,189,190],[
+webpackJsonppageComponent([1,184,185,186,187,188,189,190],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36336,8 +36336,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rubyTutorials, templa
 /* 559 */,
 /* 560 */,
 /* 561 */,
-/* 562 */,
-/* 563 */
+/* 562 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36416,4 +36415,4 @@ _metalSoy2.default.register(rubyTutorials, _indexSoy2.default);
 exports.default = rubyTutorials;
 
 /***/ })
-],[563]);
+],[562]);
