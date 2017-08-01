@@ -31,7 +31,7 @@ Want to see the process of deploying Liferay DXP step by step?
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="http://boilerplate-liferay.wedeploy.io" target="_blank" data-senna-off>live demo</a>.
+	or see a <a href="https://github.com/wedeploy/boilerplate-liferay-dxp" target="_blank" data-senna-off>source code demo</a>.
 </div>
 
 </article>
@@ -42,20 +42,30 @@ Want to see the process of deploying Liferay DXP step by step?
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/deploy/how-it-works.html">How It Works Page</a></strong>.
+All WeDeploy projects use similar configuration files to prepare your projects for deployment. Learn more on our page about <strong><a href="/docs/deploy/getting-started.html">Getting Started with Deploying</a></strong>.
 
 </aside>
 
-Below is an example of a `wedeploy.json` for a Liferay DXP service.
+Below is an example of a `wedeploy.json` for a Liferay DXP service. The `id` for your services are uniquely determined by you.
 
 ```application/json
 {
-	"id": "liferay",
-	"image": "wedeploy/liferay:beta"
+	"id": "myservice",
+	"image": "wedeploy/liferay:beta",
+	"volume": "/opt/liferay",
+	"memory": 4096,
+	"cpu": 3
 }
 ```
 
-The `id` for your services are uniquely determined by you.
+You need to place a `wedeploy.json` at the root of your service directory. If you were deploying a Liferay DXP instance, this is what your project could look like:
+
+```xml
+myservice
+├── deploy
+│   └── com.liferay.wedeploy.samples.portlet-1.0.0.jar
+└── wedeploy.json
+```
 
 </article>
 

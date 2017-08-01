@@ -31,7 +31,7 @@ Want to see the process of deploying Ruby step by step?
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="http://boilerplate-ruby.wedeploy.io" target="_blank" data-senna-off>live demo</a>.
+	or see a <a href="https://github.com/wedeploy/boilerplate-ruby" target="_blank" data-senna-off>source code demo</a>.
 </div>
 
 </article>
@@ -42,23 +42,25 @@ Want to see the process of deploying Ruby step by step?
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/deploy/how-it-works.html">How It Works Page</a></strong>.
+All WeDeploy projects use similar configuration files to prepare your projects for deployment. Learn more on our page about <strong><a href="/docs/deploy/getting-started.html">Getting Started with Deploying</a></strong>.
 
 </aside>
 
-Below is an example of a `wedeploy.json` for a Ruby container.
+Below is an example of a `wedeploy.json` for a Ruby container. The `id` for your services are uniquely determined by you.
 
 ```application/json
 {
-	"id": "ruby",
-	"image": "wedeploy/ruby:beta",
-	"hooks": {
-		"build": "bundle install"
-	}
+	"id": "myservice"
 }
 ```
 
-The `id` for your services are uniquely determined by you.
+You need to place a `wedeploy.json` wherever you have a `Gemfile`. If you were deploying a Ruby application, this is what your project could look like:
+
+```xml
+myservice
+├── Gemfile
+└── wedeploy.json
+```
 
 </article>
 

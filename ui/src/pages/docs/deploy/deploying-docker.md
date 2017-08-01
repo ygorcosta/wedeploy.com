@@ -31,7 +31,7 @@ Want to see the process of deploying Docker step by step?
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="http://boilerplate-docker.wedeploy.io" target="_blank" data-senna-off>live demo</a>.
+	or see a <a href="https://github.com/wedeploy/demo-wordpress" target="_blank" data-senna-off>source code demo</a>.
 </div>
 
 </article>
@@ -42,23 +42,29 @@ Want to see the process of deploying Docker step by step?
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/deploy/how-it-works.html">How It Works Page</a></strong>.
+All WeDeploy projects use similar configuration files to prepare your projects for deployment. Learn more on our page about <strong><a href="/docs/deploy/getting-started.html">Getting Started with Deploying</a></strong>.
 
 </aside>
 
-Below is an example of a `wedeploy.json` for a Docker container.
+Below is an example of a `wedeploy.json` for a Docker container. The `id` for your services are uniquely determined by you.
 
 ```application/json
 {
-	"id": "docker",
-	"image": "wedeploy/docker:beta",
-	"hooks": {
-		"build": "bundle install"
-	}
+	"id": "myservice"
 }
 ```
 
-The `id` for your services are uniquely determined by you.
+You need to place a `wedeploy.json` wherever you have a `Dockerfile`. If you were deploying a Wordpress site using Docker images for Wordpress and a MySQL database, this is what your project could look like:
+
+```xml
+myservice
+├── db
+│   ├── Dockerfile
+│   └── wedeploy.json
+└── wp
+    ├── Dockerfile
+    └── wedeploy.json
+```
 
 </article>
 

@@ -168,7 +168,15 @@ We have also created [a new way to add Custom Domains](/docs/intro/custom-domain
 
 ![Custom Domains](/images/docs/deploy/migration--custom-domains.png)
 
-We also do not support _Home Services_ anymore. If you want to beautify your service URL, you can add a _*.wedeploy.io_ domain as a custom domain on your service for free. For example, if you had _ui-myapp.wedeploy.io_ as your service URL, you could add _myapp.wedeploy.io_ as a custom domain on that service.
+We also do not support _Home Services_ anymore. If you want to beautify your service URL, you can add a _*.wedeploy.io_ domain as a custom domain on your service for free. For example, if you had _ui-myservice.wedeploy.io_ as your service URL, you could add _myservice.wedeploy.io_ as a custom domain on that service.
+
+</article>
+
+<article id="10">
+
+## LOCAL DEPLOYMENT
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem deleniti ad placeat facere ab quidem maxime architecto, quod eum ducimus vero dolorum veritatis. Maxime dolore ea, perferendis reprehenderit expedita dolorum.
 
 </article>
 

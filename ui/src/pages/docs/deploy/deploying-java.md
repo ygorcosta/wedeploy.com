@@ -31,7 +31,7 @@ Want to see the process of deploying Java step by step?
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="http://boilerplate-java.wedeploy.io" target="_blank" data-senna-off>live demo</a>.
+	or see a <a href="https://github.com/wedeploy/boilerplate-java" target="_blank" data-senna-off>source code demo</a>.
 </div>
 
 </article>
@@ -42,41 +42,26 @@ Want to see the process of deploying Java step by step?
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/deploy/how-it-works.html">How It Works Page</a></strong>.
+All WeDeploy projects use similar configuration files to prepare your projects for deployment. Learn more on our page about <strong><a href="/docs/deploy/getting-started.html">Getting Started with Deploying</a></strong>.
 
 </aside>
 
-Below is a few examples of a `wedeploy.json` for the Java container.
+Below is an examples of a `wedeploy.json` for the Java container. The `id` for your services are uniquely determined by you.
 
-```gradle
+```application/json
 {
-	"id": "java",
-	"image": "wedeploy/java:beta",
-	"hooks": {
-  	"build": "gradle -Dorg.gradle.native=false clean build -x test"
-  }
-}
-```
-```maven
-{
-	"id": "java",
-	"image": "wedeploy/java:beta",
-	"hooks": {
-  	"build": "mvn package"
-  }
-}
-```
-```ant
-{
-	"id": "java",
-	"image": "wedeploy/java:beta",
-	"hooks": {
-  	"build": "ant build"
-  }
+	"id": "myservice",
+	"memory": "2048"
 }
 ```
 
-The `id` for your services are uniquely determined by you.
+You need to place a `wedeploy.json` wherever you have a `build.gradle`. If you were deploying a to-do list application using java, this is what your project could look like:
+
+```xml
+myservice
+├── build.gradle
+└── wedeploy.json
+```
 
 </article>
 
