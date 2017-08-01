@@ -150,7 +150,7 @@ Before you had two ways of deploying code, you could either connect with GitHub 
 
 There are now two ways to deploy your project: _[Instant Deployment](/docs/deploy/instant-deployment.html)_ and _[Continuous Deployment](/docs/deploy/constant-deployment.html)_.
 
-This means we no longer allow deployments with Git.
+This means we no longer allow deployments with our Git server.
 
 </article>
 
