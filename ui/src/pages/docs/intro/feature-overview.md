@@ -12,29 +12,31 @@ weight: 2
 
 <article id="1">
 
-## Zero downtime upgrades
+## Automatic code detection
 
-WeDeploy provides automation for updating services and the systems with zero downtime.
+WeDeploy tries to determine what language your project uses based on the file structure. We scan your directory in order to install dependencies, compile the code and run the application.
 
-WeDeploy services can all be updated with rolling, blue-green, or canary deployment patterns. If the update fails, roll it back with a single click. These powerful tools are critical for minimizing downtime and user interruption.
+Our automatic code detection comes with a number of pre-configured recipes for projects that contains Docker, Node.js, Ruby, and Java files.
 
 </article>
 
 <article id="2">
 
-## Service discovery and load balancing
+## Zero downtime deployments
 
-WeDeploy includes several options for automating service discovery and load balancing.
+Whenever a new deployment is triggered, you don't want your application to go offline for seconds until the new version is 100% ready. What you want is to minimize user interruption.
 
-Distributed services create distributed problems, but you don’t have to solve them all yourself. WeDeploy includes automatic DNS endpoint generation, an API for service lookup, transport layer (L4) virtual IP proxying for high speed internal communication, and application layer (L7) load balancing for external-facing services.
+With WeDeploy you can push updates and restart your services with zero downtime.
 
 </article>
 
 <article id="3">
 
-## Service visibility
+## HTTPS certificates
 
-WeDeploy provides an option for you to specify whether your service is going to be public or private for public access.
+Every project you deploy and every service you install will automatically be given a HTTPS certificate. This means your application will safely communicate with your users without you having to configure anything.
+
+WeDeploy also makes sure that those HTTPS certificates are valid by renewing them from time to time. That way you can always trust that your application will be secured.
 
 </article>
 
@@ -52,6 +54,18 @@ To achieve self-healing, WeDeploy services are monitored and restarted when they
 
 <article id="5">
 
+## Global DNS
+
+We know how tedious it is to setup your domains. That's why we have a reliable and scalable DNS solution.
+
+You can point your domains directly to our nameservers and we will automatically configure everything for you.
+
+WeDeploy provides a DNS service across 7 different countries, including Australia, Germany, France, Netherlands, Singapore, United Kingdom, United States. Our goal is to ensure that you always have low-latency resulting in a great experience for your users and your business.
+
+</article>
+
+<article id="6">
+
 ## Elastic scalability
 
 WeDeploy gives you the power to easily scale your services up and down with the turn of a dial.
@@ -60,15 +74,15 @@ Horizontal scaling is trivial in Docker Swarm, as long as your service supports 
 
 </article>
 
-<article id="6">
+<article id="7">
 
-## User interfaces
+## Intuitive user interfaces
 
 WeDeploy offers two interfaces to make it easy to monitor and manage the projects and its services.
 
 The **[WeDeploy Console](/docs/intro/using-the-console.html)** lets you monitor resource allocation, running services health, and more with intuitive browser-based navigation, real-time graphs, and interactive debugging tools.
 
-The **[WeDeploy Command-line Interface (CLI)](/docs/intro/using-the-command-line.html)** provides you control from the comfort of a terminal. It’s powerful, yet easily scriptable, with handy plugins to interact with installed projects.
+The **[WeDeploy Command-line Interface (CLI)](/docs/intro/using-the-command-line.html)** provides you control from the comfort of a terminal. It’s powerful, yet easily scriptable, with handy commands to interact with your projects.
 
 </article>
 
