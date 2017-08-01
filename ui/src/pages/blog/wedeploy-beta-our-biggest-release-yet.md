@@ -33,13 +33,13 @@ After that first app was deployed, we got right back to work. Yes, we had achiev
 
 ##### 1. Completely New Infrastructure
 
-One of the biggest changes was moving the WeDeploy infrastructure from our servers in the Liferay Headquarters to AWS. We knew that in order to continue to grow and expand globally, we had to start preparing now.
+Probably the biggest change was moving the WeDeploy infrastructure from our servers in the Liferay Headquarters to AWS. We knew that in order to continue to grow and expand globally, we had to start preparing now.
 
 This move has greatly impacted the stability of WeDeploy and even though we don't support multi-region deployments yet, we are excited that this change will make that possible in the near future.
 
 ##### 2. Rewritten CLI, API, and Dashboard
 
-One of our goals the past nine months was not to just build on top of what we had, but to also rethink the way we built WeDeploy and be willing to rebuilt parts of it from the ground up if needed.
+One of our goals the past nine months was not to just build on top of what we had, but to also rethink the way we built WeDeploy and be willing to revamp parts of it from the ground up if needed.
 
 We've spent weeks refactoring the CLI, API, and Dashboard (which is now known as [Console](https://console.wedeploy.com)) and I can confidently say, it was worth it! By refactoring, we gave ourselves the opportunity to not only clean up the code, but to also improve performance, usability, and overall design.
 
@@ -75,13 +75,13 @@ Because of that, we decided to rethink our CLI and introduce a new deploy comman
 
 ##### 7. Automatic Code Detection
 
-If you used WeDeploy before, you probably remember this `container.json` file (now renamed to `wedeploy.json`). This file describes what is the name of the service, what are the environment variables needed, and most importantly what kind of project is this.
+If you used WeDeploy before, you probably remember this `container.json` file (now renamed to `wedeploy.json`). This file describes the name of the service, the environment variables needed, and most importantly, the kind of project you are deploying.
 
-WeDeploy needs to know if what you're deploying is a Ruby, Java, or Node.js project in order to download dependencies, compile, and build it in the right way.
+WeDeploy needs to know what kind of project your are deploying in order to download dependencies, compile, and build it in the right way.
 
-From now on, we'll try to determine what language your project uses, so you can deploy any folder containing static files, a Node.js app, or a Dockerfile and we will take it from there.
+From now on, we'll try to determine what language your project uses, so you can deploy any project using [Node.js](/docs/deploy/deploying-nodejs.html), [Java](/docs/deploy/deploying-java.html), [Ruby](/docs/deploy/deploying-ruby.html), or a [Dockerfile](/docs/deploy/deploying-docker.html) and we will take it from there.
 
-That doesn't mean you don't need the `wedeploy.json` file anymore. That is still valid and important for us to determine what directory to scan.
+This doesn't mean you don't need the `wedeploy.json` file anymore. It is still valid and important for us to determine what directory to scan.
 
 ##### 8. Liferay DXP
 
