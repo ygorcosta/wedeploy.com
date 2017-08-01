@@ -158,19 +158,17 @@ This means we no longer allow deployments with our Git server.
 
 ## Custom domains
 
-Because of the new service domain changes, you can only add a custom domain on the service level instead of the project level.
-
-We have also created [a new way to add Custom Domains](/docs/intro/custom-domains.html#2). Instead of using an alias, you can now configure your root domain with our regional server names or using a your service URL as a CNAME.
+Because we have removed the Home Service functionality, and consequently the project URL (_myapp.wedeploy.io_), you are now only able to set custom domains on the service level.
 
 ![Custom Domains](/images/docs/deploy/migration--custom-domains.png)
 
-We also do not support _Home Services_ anymore. If you want to beautify your service URL, you can add a _*.wedeploy.io_ domain as a custom domain on your service for free. For example, if you had _ui-myservice.wedeploy.io_ as your service URL, you could add _myservice.wedeploy.io_ as a custom domain on that service.
+We have also created [a new way to add Custom Domains](/docs/intro/custom-domains.html#2). Instead of using an alias, you can now configure your root domain with our regional server names or using a your service URL as a CNAME.
 
 </article>
 
 <article id="10">
 
-## Local Deployment
+## Local Development
 
 In order to focus our efforts towards a seamless cloud-based experience, we are currently not supporting local development in Beta.
 
