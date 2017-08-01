@@ -12,8 +12,6 @@ weight: 10
 
 ![beta migration](/images/docs/deploy/migration--beta-migration.png)
 
-<article id="1">
-
 ## Introduction
 
 On August 1st, we announced [our new Beta version of WeDeploy](/blog/wedeploy-beta-our-biggest-release-yet.html). With that release we launched the new infrastructure that can be accessed by our [Console](https://console.wedeploy.com).
@@ -30,9 +28,7 @@ All Alpha projects, including the previous Dashboard, will be unavailable on **S
 
 </aside>
 
-</article>
-
-<article id="2">
+<article id="1">
 
 ## Configuration files
 
@@ -46,7 +42,7 @@ All Alpha projects, including the previous Dashboard, will be unavailable on **S
 
 </article>
 
-<article id="3">
+<article id="2">
 
 ## Java, Node.js, and Ruby
 
@@ -64,11 +60,11 @@ For example, if we find a `package.json`, we'll build that as a Node.js service.
 
 </article>
 
-<article id="4">
+<article id="3">
 
 ## Liferay
 
-We also no longer support the Liferay CE (Community Edition) WeDeploy image. In order to deploy Liferay CE, you must do it with a _Dockerfile_ using the [liferay/portal image](https://hub.docker.com/r/liferay/portal/).
+We also no longer support the Liferay Portal CE (Community Edition) WeDeploy image. In order to deploy Liferay Portal CE, you must do it with a _Dockerfile_ using the [liferay/portal image](https://hub.docker.com/r/liferay/portal/).
 
 Or you can try [Liferay DXP](/docs/deploy/deploying-liferay-dxp.html) which is a new service we provide. We will give you a free 15 day trial period before you must apply a license.
 
@@ -86,7 +82,7 @@ Here is an example of the `wedeploy.json` that you could use to deploy a Liferay
 
 </article>
 
-<article id="5">
+<article id="4">
 
 ## API client
 
@@ -110,7 +106,7 @@ Here is an example of the `wedeploy.json` that you could use to deploy a Liferay
 
 </article>
 
-<article id="6">
+<article id="5">
 
 ## Data
 
@@ -120,7 +116,7 @@ If you want to migrate your data collections, you can do this manually by sendin
 
 </article>
 
-<article id="7">
+<article id="6">
 
 ## Auth
 
@@ -134,7 +130,7 @@ There is no way to manually migrate your previous users. To do so, <a href="java
 
 </article>
 
-<article id="8">
+<article id="7">
 
 ## Email
 
@@ -162,11 +158,9 @@ We made some syntax updates on the Email API to make it even more intuitive. Thi
 
 </article>
 
-<article id="9">
+<article id="8">
 
 ## Deployment
-
-**New Deployment Flows**
 
 Before you had two ways of deploying code, you could either connect with GitHub or create a remote pointing to our Git server. We noticed that people loved the convenience of integrating with GitHub so [we're keeping that](/docs/deploy/continuous-deployment.html), but when using our Git server the experience was not as fluid, specially the authentication step on every push.
 
@@ -176,7 +170,7 @@ This means we no longer allow deployments with our Git server.
 
 </article>
 
-<article id="10">
+<article id="9">
 
 ## Custom domains
 
@@ -184,11 +178,11 @@ Because we have removed the Home Service functionality, and consequently the pro
 
 ![Custom Domains](/images/docs/deploy/migration--custom-domains.png)
 
-We have also created [a new way to add Custom Domains](/docs/intro/custom-domains.html#2). Instead of using an alias, you can now configure your root domain with our regional server names or using a your service URL as a CNAME.
+We have also created [a new way to add Custom Domains](/docs/intro/custom-domains.html#2). You can now configure your root domain with our regional nameservers.
 
 </article>
 
-<article id="11">
+<article id="10">
 
 ## Local Development
 
