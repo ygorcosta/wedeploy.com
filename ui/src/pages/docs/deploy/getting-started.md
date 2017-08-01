@@ -90,7 +90,7 @@ Here are all the configuration fields in action.
 
 If you are deploying a project using **Node.js**, **Java**, **Ruby**, or a **Dockerfile**, we will scan your project and build it according to your project's unique attributes. For example, if we find a `package.json`, we'll build that as a Node.js service.
 
-In order to make sure we know where you want us to scan, we require that you place a `wedeploy.json` at the root of every service you want to deploy and simply declare an ID inside.
+In order to make sure we know where you want us to scan, we require that you place a `wedeploy.json` inside the folder of every service you want to deploy and simply declare an ID inside.
 
 ```application/json
 {

@@ -48,31 +48,13 @@ All Alpha projects, including the previous Dashboard, will be unavailable on **A
 
 <article id="3">
 
-## Java, Node.js, and Ruby services
+## Java, Node.js, and Ruby
 
-We no longer support the **Java**, **Node.js**, and **Ruby** WeDeploy images. In order to keep expanding the compatibilty of WeDeploy, we decided to rely on the ever-expanding ecosystem of Docker to provide images for whatever app you are creating.
+We no longer support the **Node.js**, **Java**, and **Ruby** WeDeploy images. Instead, we are releasing something called [Automatic Code Detection](/docs/deploy/gettings-started.html#3).
 
-Starting today, if you want to deploy an app with Java, Ruby, or really any other technology, you can deploy with a Dockerfile and WeDeploy will build it accordingly.
+Basically, we'll try to determine what language your project uses, so you can push any project using Node.js, Java, and Ruby, and we will build it from there.
 
-</article>
-
-<article id="4">
-
-## Deployment
-
-**New Deployment Flows**
-
-Before you had two ways of deploying code, you could either connect with GitHub or create a remote pointing to our Git server. We noticed that people loved the convenience of integrating with GitHub so [we're keeping that](/docs/deploy/continuous-deployment.html), but when using our Git server the experience was not as fluid, specially the authentication step on every push.
-
-There are now two ways to deploy your project: _[Instant Deployment](/docs/deploy/instant-deployment.html)_ and _[Continuous Deployment](/docs/deploy/constant-deployment.html)_.
-
-This means we no longer allow deployments with Git.
-
-**Automatic Code Detection**
-
-But we didn't stop there. We are also releasing something called _Automatic Code Detection_. Basically, we'll try to determine what language your project uses, so you can deploy any folder containing static files, a Node.js app, or a Dockerfile and we will take it from there.
-
-This means you could deploy a folder with a _package.json_ and we will build it as a Node.js service. That doesn't mean you don't need the `wedeploy.json` file anymore. That is still valid and important for us to determine what directory to scan and to assign an ID to that service.
+For example, if we find a `package.json`, we'll build that as a Node.js service. In order to make sure we know where you want us to scan, we require that you place a `wedeploy.json` inside the folder of every service you want to deploy and simply declare an ID inside.
 
 ```application/json
 {
@@ -82,7 +64,7 @@ This means you could deploy a folder with a _package.json_ and we will build it 
 
 </article>
 
-<article id="5">
+<article id="4">
 
 ## API client
 
@@ -106,7 +88,7 @@ This means you could deploy a folder with a _package.json_ and we will build it 
 
 </article>
 
-<article id="6">
+<article id="5">
 
 ## Data
 
@@ -116,7 +98,7 @@ If you want to migrate your data collections, you can use cURL to send GET reque
 
 </article>
 
-<article id="7">
+<article id="6">
 
 ## Auth
 
@@ -130,7 +112,7 @@ There is no way to manually migrate your previous users. To do so, reach out to 
 
 </article>
 
-<article id="8">
+<article id="7">
 
 ## Email
 
@@ -158,6 +140,20 @@ We made some syntax updates on the Email API to make it even more intuitive. Thi
 
 </article>
 
+<article id="8">
+
+## Deployment
+
+**New Deployment Flows**
+
+Before you had two ways of deploying code, you could either connect with GitHub or create a remote pointing to our Git server. We noticed that people loved the convenience of integrating with GitHub so [we're keeping that](/docs/deploy/continuous-deployment.html), but when using our Git server the experience was not as fluid, specially the authentication step on every push.
+
+There are now two ways to deploy your project: _[Instant Deployment](/docs/deploy/instant-deployment.html)_ and _[Continuous Deployment](/docs/deploy/constant-deployment.html)_.
+
+This means we no longer allow deployments with Git.
+
+</article>
+
 <article id="9">
 
 ## Custom domains
@@ -174,9 +170,9 @@ We also do not support _Home Services_ anymore. If you want to beautify your ser
 
 <article id="10">
 
-## LOCAL DEPLOYMENT
+## Local Deployment
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem deleniti ad placeat facere ab quidem maxime architecto, quod eum ducimus vero dolorum veritatis. Maxime dolore ea, perferendis reprehenderit expedita dolorum.
+In order to focus our efforts towards a seamless cloud-based experience, we are currently not supporting local development in Beta.
 
 </article>
 
