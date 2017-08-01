@@ -20,7 +20,7 @@ On August 1st, we announced [our new Beta version of WeDeploy](/blog/wedeploy-be
 
 Along with that big infrastructure change, we also introduced other things like custom Docker images and HTTPS, which lead to a big question that you might be asking yourself: "will the projects I built on Alpha work on Beta?" The answer is "yes", but there are a few easy changes that need to be made to your projects first. Below is a guide on how to seamlessly do that!
 
-If you have any trouble, feel free to tap on the green button in the bottom corner to talk to a WeDeploy human, **we'd love to help**.
+If you have any trouble, feel free to tap on the green button in the bottom corner to talk to a WeDeploy human, **<a href="javascript:Intercom('show');">we'd love to help</a>**.
 
 <aside>
 
