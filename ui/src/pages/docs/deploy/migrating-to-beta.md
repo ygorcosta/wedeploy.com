@@ -72,6 +72,18 @@ We also no longer support the Liferay CE (Community Edition) WeDeploy image. In 
 
 Or you can try [Liferay DXP](/docs/deploy/deploying-liferay-dxp.html) which is a new service we provide. We will give you a free 15 day trial period before you must apply a license.
 
+Here is an example of the `wedeploy.json` that you could use to deploy a Liferay DXP instance.
+
+```application/json
+{
+	"id": "myservice",
+	"image": "wedeploy/liferay:@site.version.image.liferay@",
+	"volume": "/opt/liferay",
+	"memory": 4096,
+	"cpu": 3
+}
+```
+
 </article>
 
 <article id="5">
