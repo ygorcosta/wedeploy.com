@@ -56,6 +56,7 @@ WeDeploy uses this JSON file to reference a service by ID in case it's already c
 | **env**           | Object  |         | Exported variables           |
 | **port**          | Number  | 80      | Exposed service port         |
 | **cpu**           | Number  | 1       | Number of processing units   |
+| **scale**         | Number  | 1       | Maximum number of instances  |
 | **memory**        | Number  | 512     | Amount of computing memory   |
 | **volume**        | String  |         | Persistant database storage  |
 | **customDomains** | Array   |         | Set custom domain names      |
@@ -76,6 +77,7 @@ Here are all the configuration fields in action.
 	},
 	"port": 8080,
 	"cpu": 2,
+	"scale": 2,
 	"memory": 2048,
 	"volume": "/opt/storage",
 	"customDomains": ["myservice.com", "www.myservice.com"]
