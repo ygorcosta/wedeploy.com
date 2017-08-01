@@ -94,7 +94,7 @@ For example, if we find a `package.json`, we'll build that as a Node.js service.
 
 **Migrating Database**
 
-If you want to migrate your data collections, you can use cURL to send GET requests from Alpha and POST requests to Beta. If you are not familiar with cURL, feel free to reach out to us and we can migrate them over for you.
+If you want to migrate your data collections, you can use cURL to send GET requests from Alpha and POST requests to Beta. If you are not familiar with cURL, feel free to <a href="javascript:Intercom('show');">reach out to us</a> and we can migrate them over for you.
 
 </article>
 
@@ -108,7 +108,7 @@ Since your new app will have a new URL, you must update your Auth redirect URL's
 
 **Migrating Userbase**
 
-There is no way to manually migrate your previous users. To do so, reach out to us with the green circle button below and we can help you port your userbase.
+There is no way to manually migrate your previous users. To do so, <a href="javascript:Intercom('show');">reach out to us</a> and we can help you migrate your userbase.
 
 </article>
 
