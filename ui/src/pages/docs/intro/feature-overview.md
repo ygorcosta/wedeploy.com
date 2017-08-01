@@ -14,9 +14,9 @@ weight: 2
 
 ## Automatic code detection
 
-WeDeploy tries to determine what language your project uses based on the file structure. We scan your directory in order to install dependencies, compile the code and run the application.
+WeDeploy tries to determine what language your project uses based on the file structure. We scan your directory in order to install dependencies, compile the code, and run the application.
 
-Our automatic code detection comes with a number of pre-configured recipes for projects that contains Docker, Node.js, Ruby, and Java files.
+Our automatic code detection comes with a number of pre-configured recipes for projects that contain Docker, Node.js, Ruby, or Java files.
 
 </article>
 
@@ -24,7 +24,7 @@ Our automatic code detection comes with a number of pre-configured recipes for p
 
 ## Zero downtime deployments
 
-Whenever a new deployment is triggered, you don't want your application to go offline for seconds until the new version is 100% ready. What you want is to minimize user interruption.
+Whenever a new deployment is triggered, you don't want your application to go offline until the new version is 100% ready. What you want is to minimize user interruption.
 
 With WeDeploy you can push updates and restart your services with zero downtime.
 
@@ -70,7 +70,7 @@ WeDeploy provides a DNS service across 7 different countries, including Australi
 
 WeDeploy gives you the power to easily scale your services up and down with the turn of a dial.
 
-You can change the number of service instances at any time. WeDeploy even lets you autoscale the number of instances based on session count, using the WeDeploy Load Balancer.
+You can change the number of service instances at any time and we will also autoscale the number of instances based on your site's traffic, using the WeDeploy Load Balancer.
 
 </article>
 
@@ -78,9 +78,9 @@ You can change the number of service instances at any time. WeDeploy even lets y
 
 ## Intuitive user interfaces
 
-WeDeploy offers two interfaces to make it easy to monitor and manage the projects and its services.
+WeDeploy offers two interfaces to make it easy to monitor and manage the projects and their services.
 
-The **[WeDeploy Console](/docs/intro/using-the-console.html)** lets you monitor resource allocation, running services health, and more with intuitive browser-based navigation, real-time graphs, and interactive debugging tools.
+The **[WeDeploy Console](/docs/intro/using-the-console.html)** lets you monitor resource allocation, run service health checks, and more with intuitive browser-based navigation, real-time graphs, and interactive debugging tools.
 
 The **[WeDeploy Command-line Interface (CLI)](/docs/intro/using-the-command-line.html)** provides you control from the comfort of a terminal. It’s powerful, yet easily scriptable, with handy commands to interact with your projects.
 
