@@ -65,3 +65,13 @@ $accent: #00d46a;
 		z-index: 1;
 	}
 }
+
+::-moz-selection {
+	background: $accent;
+	color: white;
+}
+
+::selection {
+	background: $accent;
+	color: white;
+}
