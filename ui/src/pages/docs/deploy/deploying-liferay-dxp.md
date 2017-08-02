@@ -58,7 +58,15 @@ Below is an example of a `wedeploy.json` for a Liferay DXP service. The `id` for
 }
 ```
 
-You need to place a `wedeploy.json` at the root of your service directory. If you were deploying a Liferay DXP instance, this is what your project could look like:
+</article>
+
+<article id="4">
+
+## Hot Deployment
+
+Liferay DXP's hot deploy mechanism allows you to install themes, portlets, OSGi modules, and even a license by simply including WAR, JAR, and XML files into a `deploy` folder.
+
+If you were deploying a Liferay DXP application with a custom JAR file for example, this is what your project could look like:
 
 ```xml
 myservice
