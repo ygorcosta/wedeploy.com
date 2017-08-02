@@ -1,6 +1,6 @@
 ---
 title: "Using the Command-line"
-description: "The WeDeploy Command-Line Interface is a tool for helping you to use the WeDeploy platform by providing support to things like deploying and managing applications."
+description: "The WeDeploy Command-Line Interface is a tool for helping you to use the WeDeploy platform by providing support for things like creating, managing, and scaling applications."
 headerTitle: "Intro"
 layout: "guide"
 weight: 4
@@ -14,7 +14,7 @@ weight: 4
 
 ## Install
 
-If you use a Unix-like system such as macOS or Linux open your terminal and run:
+If you use a Unix-like system such as macOS or Linux, open your terminal and run:
 
 ```xml
 curl https://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash
@@ -26,9 +26,9 @@ If you use Windows, check the [Windows amd64 installer](https://bin.equinox.io/c
 
 <article id="2">
 
-## Login into your account
+## Login to your account
 
-There are two ways you can authenticate, the first option will open up your browser and continue from there:
+There are two ways you can authenticate, the first option will open up your browser and authenticate you from there:
 
 ```xml
 we login
@@ -36,7 +36,7 @@ we login
 
 If you already have an account, it will redirect you to a success page. If you don't have an account yet, you must sign up and confirm your email.
 
-The second option only works with you already have an account and requires you to manually type your email and password:
+The second option only works if you already have an account and requires you to manually type your email and password:
 
 ```xml
 we login --no-browser
@@ -116,7 +116,7 @@ we log --url <serviceID>-<projectID>.wedeploy.io
 
 ## List projects or services
 
-See the full list of projects and services you own or participate as a collaborator:
+See the full list of projects and services you own or collaborator with:
 
 ```xml
 we list
@@ -188,7 +188,7 @@ In order to update the command-line to the latest version, run:
 we update
 ```
 
-If you're feeling adventurous, you can try the unstable version:
+If you're feeling adventurous, you can try the unstable version for breaking changes:
 
 ```xml
 we update --channel unstable
