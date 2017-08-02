@@ -134,22 +134,20 @@ There is no way to manually migrate your previous users. To do so, <a href="java
 
 ## Email
 
-**JavaScript API**
-
-We made some syntax updates on the Email API to make it even more intuitive. This means that now all services follow the same syntax flow for JavaScript.
+We made some syntax updates on the Email Javascript API to make it even more intuitive.
 
 1. Instead of declaring your email endpoint with _.url()_, you now use _.email()_.
 2. You now no longer need to add _/emails_ to the end of your URL.
 3. You must add an _.auth('masterToken or userCredentials')_ after the URL.
 
-###### Sending email
+**Sending email**
 
 1. Change syntax from _.form('from', 'to@mail.com')_ to _.from('to@mail.com')_ for all email variables.
 2. Change _.post()_ to _.send()_.
 
 ![Send Email](/images/docs/deploy/migration--send-email.png)
 
-###### Checking status
+**Checking status**
 
 1. Instead of including the _ID_ of the email in the URL, add it like this _.status('00000000')_
 2. You no longer need to use _.get_ because the _.status_ will make the request.
