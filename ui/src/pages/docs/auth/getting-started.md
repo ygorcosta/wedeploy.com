@@ -28,6 +28,8 @@ Want to see the process of deploying WeDeploy Auth step by step?
 	or see a <a href="https://github.com/wedeploy/boilerplate-auth" target="_blank" data-senna-off>source code demo</a>.
 </div>
 
+Check also the <a href="/tutorials/auth-android" target="_blank" data-senna-off>tutorial for Android</a> and the <a href="/tutorials/auth-ios" target="_blank" data-senna-off>tutorial for iOS</a>.
+
 </article>
 
 <article id="2">
