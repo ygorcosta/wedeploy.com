@@ -14,7 +14,7 @@ weight: 3
 
 ## Create a project
 
-1. Go to the [WeDeploy Console](https://console.wedeploy.xyz)
+1. Go to the [WeDeploy Console](https://console.wedeploy.com)
 2. Click on *"New Project"* in the top right corner of the screen
 3. Type a desired project name and then click *"Create Project"*
 
