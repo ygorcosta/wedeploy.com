@@ -32,11 +32,11 @@ All Alpha projects, including the previous Dashboard, will be unavailable on **S
 
 ## Configuration files
 
-1. Delete _project.json_. We no longer support this file.
+1. Delete you _project.json_. We no longer support this file.
 
 2. Rename all _container.json_ files to _wedeploy.json_.
 
-3. In _wedeploy.json_, change _type_ to _image_ and add the _0.0.1_ tag.
+3. In the _wedeploy.json_, change _type_ to _image_ and add the _0.0.1_ tag.
 
 ![wedeploy.json](/images/docs/deploy/migration--wedeploy-json.png)
 
