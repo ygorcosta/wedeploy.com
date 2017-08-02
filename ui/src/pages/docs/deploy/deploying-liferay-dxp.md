@@ -16,6 +16,8 @@ weight: 7
 
 [Liferay DXP](https://www.liferay.com/digital-experience-platform) provides an architecture for companies to digitize business operations, deliver connected customer experiences, and gather actionable customer insight, with the ultimate goal of providing better customer experiences for their clients.
 
+We will give you a free 15 day trial period before you must apply a license.
+
 </article>
 
 <article id="2">
