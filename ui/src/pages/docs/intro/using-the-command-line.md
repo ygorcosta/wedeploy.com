@@ -6,7 +6,7 @@ layout: "guide"
 weight: 4
 ---
 
-### {$page.title}
+### Using the CLI
 
 ###### {$page.description}
 
@@ -28,9 +28,15 @@ If you use Windows, check the [Windows amd64 installer](https://bin.equinox.io/c
 
 ## Login into your account
 
+There are two ways you can authenticate, the first option will open up your browser and continue from there:
+
 ```xml
 we login
 ```
+
+If you already have an account, it will redirect you to a success page. If you don't have an account yet, you must sign up and confirm your email.
+
+The second option only works with you already have an account and requires you to manually type your email and password:
 
 ```xml
 we login --no-browser
@@ -42,9 +48,13 @@ we login --no-browser
 
 ## Logout from your account
 
+In order to switch between different accounts, you can logout from an account by running:
+
 ```xml
 we logout
 ```
+
+Note: this will not logout on your browser, only on the terminal.
 
 </article>
 
@@ -52,8 +62,28 @@ we logout
 
 ## Deploy projects or services
 
+To deploy a folder using a random project ID, type:
+
 ```xml
 we deploy
+```
+
+Deploy a folder to a specific project:
+
+```xml
+we deploy --project <projectID>
+```
+
+Deploy to a specific service inside of a project:
+
+```xml
+we deploy --project <projectID> --service <serviceID>
+```
+
+Alternatively, you can deploy to a service by passing the full URL:
+
+```xml
+we deploy --url <serviceID>-<projectID>.wedeploy.io
 ```
 
 </article>
@@ -62,35 +92,85 @@ we deploy
 
 ## Show logs of the services
 
+You can check the logs of an entire project:
+
 ```xml
-we log
+we log --project <projectID>
+```
+
+Or you can see the logs of a specific service inside of a project:
+
+```xml
+we log --project <projectID> --service <serviceID>
+```
+
+Alternatively, you can see the logs of a service by passing the full URL:
+
+```xml
+we log --url <serviceID>-<projectID>.wedeploy.io
 ```
 
 </article>
 
 <article id="6">
 
-## Show list of projects and services
+## List projects or services
+
+See the full list of projects and services you own or participate as a collaborator:
 
 ```xml
 we list
+```
+
+List the services that are contained on a project:
+
+```xml
+we list --project <projectID>
+```
+
+Check a specific service inside of a project:
+
+```xml
+we list --project <projectID> --service <serviceID>
+```
+
+Alternatively, check a specific service by passing the full URL:
+
+```xml
+we list --url <serviceID>-<projectID>.wedeploy.io
 ```
 
 </article>
 
 <article id="7">
 
-## Delete project or services
+## Delete projects or services
+
+You can delete an entire project:
 
 ```xml
-we delete
+we delete --project <projectID>
+```
+
+Or you can delete a specific service inside of a project:
+
+```xml
+we delete --project <projectID> --service <serviceID>
+```
+
+Alternatively, you can delete a service by passing the full URL:
+
+```xml
+we delete --url <serviceID>-<projectID>.wedeploy.io
 ```
 
 </article>
 
 <article id="8">
 
-## Open the [console](https://console.wedeploy.com) on your browser
+## Open the console
+
+To quickly open the console in your browser, type:
 
 ```xml
 we console
@@ -98,22 +178,20 @@ we console
 
 </article>
 
-<article id="9">
-
-## Show CLI version
-
-```xml
-we version
-```
-
-</article>
-
 <article id="10">
 
-## Update CLI to the latest version
+## Update the CLI
+
+In order to update the command-line to the latest version, run:
 
 ```xml
 we update
+```
+
+If you're feeling adventurous, you can try the unstable version:
+
+```xml
+we update --channel unstable
 ```
 
 </article>
