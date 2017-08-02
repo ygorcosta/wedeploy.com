@@ -25,7 +25,7 @@ Want to see the process of deploying WeDeploy Auth step by step?
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="http://boilerplate-auth.wedeploy.io" target="_blank" data-senna-off>live demo</a>.
+	or see a <a href="https://github.com/wedeploy/boilerplate-auth" target="_blank" data-senna-off>source code demo</a>.
 </div>
 
 </article>
