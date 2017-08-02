@@ -14,7 +14,7 @@ weight: 10
 
 ## Introduction
 
-On August 1st, we announced [our new Beta version of WeDeploy](/blog/wedeploy-beta-our-biggest-release-yet.html). With that release we launched the new infrastructure that can be accessed by our [Console](https://console.wedeploy.com).
+On August 2nd, we announced [our new Beta version of WeDeploy](/blog/wedeploy-beta-our-biggest-release-yet.html). With that release we launched the new infrastructure that can be accessed by our [Console](https://console.wedeploy.com).
 
 Along with that big infrastructure change, we also introduced other things like custom Docker images and HTTPS, which lead to a big question that you might be asking yourself: "will the projects I built on Alpha work on Beta?" The answer is "yes", but there are a few easy changes that need to be made to your projects first. Below is a guide on how to seamlessly do that!
 
@@ -24,7 +24,7 @@ If you have any trouble, feel free to tap on the green button in the bottom corn
 
 ###### <span class="icon-16-alert"></span> Attention
 
-All Alpha projects, including the previous Dashboard, will be unavailable on **September 1st**. Make sure to migrate your projects to Beta before then.
+All Alpha projects, including the previous Dashboard, will be unavailable on **September 2nd**. Make sure to migrate your projects to Beta before then.
 
 </aside>
 
