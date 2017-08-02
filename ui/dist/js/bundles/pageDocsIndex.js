@@ -11245,7 +11245,6 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       var dyn17 = opt_data.content;
       if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
       $footer(opt_data, null, opt_ijData);
-      $modal(opt_data, null, opt_ijData);
     ie_close('main');
   ie_close('div');
 }
@@ -11422,105 +11421,6 @@ if (goog.DEBUG) {
   $footer.soyTemplateName = 'landing.footer';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $modal(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'modal');
-    ie_open('div', null, null,
-        'class', 'modal-container');
-      ie_open('a', null, null,
-          'class', 'modal__close flex-center-center',
-          'href', 'javascript:void(0);');
-        ie_void('span', null, null,
-            'class', 'close__icon icon-16-cancel');
-      ie_close('a');
-      ie_open('div', null, null,
-          'id', 'modal__form-container');
-        ie_open('div', null, null,
-            'class', 'form flex-center-top');
-          ie_open('div', null, null,
-              'class', 'logo flex-center-center');
-            ie_open('span');
-              itext('We');
-            ie_close('span');
-          ie_close('div');
-          ie_open('h2');
-            itext('Request an Invite for WeDeploy\u2122');
-          ie_close('h2');
-          ie_open('p');
-            itext('We can\'t wait to see what you\'re going to build.');
-          ie_close('p');
-          ie_open('form', null, null,
-              'id', 'form-modal',
-              'class', 'flex-center-top column form-signup');
-            ie_open('div', null, null,
-                'class', 'form-group');
-              ie_open('label');
-                itext('Email');
-              ie_close('label');
-              ie_open('input', null, null,
-                  'type', 'text',
-                  'class', 'form-control',
-                  'name', 'email',
-                  'placeholder', 'Enter your email address');
-              ie_close('input');
-            ie_close('div');
-            ie_void('p', null, null,
-                'id', 'form-modal__validation',
-                'class', 'form-validation');
-            ie_open('button', null, null,
-                'id', 'form-modal__submit',
-                'class', 'btn btn-accent');
-              ie_open('span');
-                itext('Get Started \u2013 It\u2019s FREE');
-              ie_close('span');
-            ie_close('button');
-            ie_open('div', null, null,
-                'class', 'small-container flex-center-top');
-              ie_open('small');
-                itext('By entering your email you agree to receive information about WeDeploy\u2122.');
-              ie_close('small');
-            ie_close('div');
-          ie_close('form');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'copy');
-          ie_open('p');
-            itext('Copyright \u00A9 2017 Liferay, Inc.');
-          ie_close('p');
-        ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null,
-          'id', 'modal__response-container',
-          'class', 'flex-center-top');
-        ie_open('div', null, null,
-            'class', 'logo flex-center-center');
-          ie_open('span');
-            itext('We');
-          ie_close('span');
-        ie_close('div');
-        ie_open('h2');
-          itext('Thanks for requesting an invite!');
-        ie_close('h2');
-        ie_open('p');
-          itext('We\'ll drop you an email when WeDeploy\u2122 is ready. Stay tuned.');
-        ie_close('p');
-      ie_close('div');
-    ie_close('div');
-  ie_close('div');
-}
-exports.modal = $modal;
-if (goog.DEBUG) {
-  $modal.soyTemplateName = 'landing.modal';
-}
-
 exports.render.params = ["content","elementClasses"];
 exports.render.types = {"content":"any","elementClasses":"any"};
 exports.topbar.params = [];
@@ -11531,8 +11431,6 @@ exports.topbarRightContent.params = ["site"];
 exports.topbarRightContent.types = {"site":"any"};
 exports.footer.params = [];
 exports.footer.types = {};
-exports.modal.params = [];
-exports.modal.types = {};
 templates = exports;
 return exports;
 
@@ -11792,7 +11690,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param249 = function() {
+  var param246 = function() {
     ie_open('div', null, null,
         'class', 'blog terms');
       ie_open('div', null, null,
@@ -11817,7 +11715,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_close('div');
     ie_close('div');
   };
-  $templateAlias1(soy.$$assignDefaults({elementClasses: 'blog', content: param249}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({elementClasses: 'blog', content: param246}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -11929,7 +11827,7 @@ if (goog.DEBUG) {
 function $tutorials(opt_data, opt_ignored, opt_ijData) {
   ie_open('div', null, null,
       'class', 'sidebar-offset');
-    var param272 = function() {
+    var param269 = function() {
       ie_open('div', null, null,
           'class', 'topbar-logo');
         ie_open('span', null, null,
@@ -11944,7 +11842,7 @@ function $tutorials(opt_data, opt_ignored, opt_ijData) {
         ie_close('span');
       ie_close('div');
     };
-    $templateAlias2({elementClasses: 'topbar-light', page: opt_data.page, logo: param272}, null, opt_ijData);
+    $templateAlias2({elementClasses: 'topbar-light', page: opt_data.page, logo: param269}, null, opt_ijData);
     ie_open('div', null, null,
         'class', 'container');
       ie_open('div', null, null,
@@ -11972,9 +11870,9 @@ if (goog.DEBUG) {
 function $footerButtons(opt_data, opt_ignored, opt_ijData) {
   ie_open('div', null, null,
       'class', 'tutorial-page-nav');
-    var tutorialObject__soy283 = opt_data.site.index.children['tutorials'].children[opt_data.page.parentId];
-    if (opt_data.page.weight < tutorialObject__soy283.childIds.length) {
-      var nextPageUrl__soy286 = tutorialObject__soy283.children[tutorialObject__soy283.childIds[opt_data.page.weight]].url;
+    var tutorialObject__soy280 = opt_data.site.index.children['tutorials'].children[opt_data.page.parentId];
+    if (opt_data.page.weight < tutorialObject__soy280.childIds.length) {
+      var nextPageUrl__soy283 = tutorialObject__soy280.children[tutorialObject__soy280.childIds[opt_data.page.weight]].url;
       if (opt_data.site.githubRepo) {
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/issues/new?title=Tutorial+Problem&body=%3E+URL%3A+' + opt_data.page.url,
@@ -11985,7 +11883,7 @@ function $footerButtons(opt_data, opt_ignored, opt_ijData) {
       }
       if (opt_data.page.buttonTitle) {
         ie_open('a', null, null,
-            'href', nextPageUrl__soy286,
+            'href', nextPageUrl__soy283,
             'class', 'btn btn-accent btn-sm');
           var dyn21 = opt_data.page.buttonTitle;
           if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
@@ -35973,10 +35871,10 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
   opt_data = opt_data || {};
-  var param376 = function() {
+  var param373 = function() {
     $topics(opt_data, null, opt_ijData);
   };
-  $templateAlias1(soy.$$assignDefaults({content: param376}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param373}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -36004,10 +35902,7 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
         ie_close('h1');
         ie_open('p', null, null,
             'class', 'docs-home-top-description');
-          itext('Start learning how to leverage the power of ');
-          var dyn30 = opt_data.site.title;
-          if (typeof dyn30 == 'function') dyn30(); else if (dyn30 != null) itext(dyn30);
-          itext(' in your project.');
+          itext('Start learning how to leverage the power of WeDeploy in your project.');
         ie_close('p');
       ie_close('div');
     ie_close('div');
@@ -36055,25 +35950,25 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
             'class', 'col-md-12 col-md-offset-2 col-xs-16');
           ie_open('div', null, null,
               'class', 'row');
-            var childIdList397 = opt_data.page.childIds;
-            var childIdListLen397 = childIdList397.length;
-            for (var childIdIndex397 = 0; childIdIndex397 < childIdListLen397; childIdIndex397++) {
-              var childIdData397 = childIdList397[childIdIndex397];
-              if (! opt_data.page.children[childIdData397].hidden) {
+            var childIdList392 = opt_data.page.childIds;
+            var childIdListLen392 = childIdList392.length;
+            for (var childIdIndex392 = 0; childIdIndex392 < childIdListLen392; childIdIndex392++) {
+              var childIdData392 = childIdList392[childIdIndex392];
+              if (! opt_data.page.children[childIdData392].hidden) {
                 ie_open('div', null, null,
                     'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
                   ie_open('a', null, null,
                       'class', 'topic radial-out',
-                      'href', opt_data.page.children[childIdData397].url);
+                      'href', opt_data.page.children[childIdData392].url);
                     ie_open('div', null, null,
                         'class', 'topic-icon');
                       ie_void('span', null, null,
-                          'class', 'icon-16-' + opt_data.page.children[childIdData397].icon);
+                          'class', 'icon-16-' + opt_data.page.children[childIdData392].icon);
                     ie_close('div');
                     ie_open('h3', null, null,
                         'class', 'topic-title');
-                      var dyn31 = opt_data.page.children[childIdData397].title;
-                      if (typeof dyn31 == 'function') dyn31(); else if (dyn31 != null) itext(dyn31);
+                      var dyn30 = opt_data.page.children[childIdData392].title;
+                      if (typeof dyn30 == 'function') dyn30(); else if (dyn30 != null) itext(dyn30);
                     ie_close('h3');
                   ie_close('a');
                 ie_close('div');
@@ -36092,8 +35987,8 @@ if (goog.DEBUG) {
 
 exports.render.params = [];
 exports.render.types = {};
-exports.topics.params = ["page","site"];
-exports.topics.types = {"page":"any","site":"any"};
+exports.topics.params = ["page"];
+exports.topics.types = {"page":"any"};
 templates = exports;
 return exports;
 

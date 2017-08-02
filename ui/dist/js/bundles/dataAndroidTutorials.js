@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([90,184,185,186,187,188,189,190],[
+webpackJsonppageComponent([91,184,185,186,187,188,189,190],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11245,7 +11245,6 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       var dyn17 = opt_data.content;
       if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
       $footer(opt_data, null, opt_ijData);
-      $modal(opt_data, null, opt_ijData);
     ie_close('main');
   ie_close('div');
 }
@@ -11422,105 +11421,6 @@ if (goog.DEBUG) {
   $footer.soyTemplateName = 'landing.footer';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $modal(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'modal');
-    ie_open('div', null, null,
-        'class', 'modal-container');
-      ie_open('a', null, null,
-          'class', 'modal__close flex-center-center',
-          'href', 'javascript:void(0);');
-        ie_void('span', null, null,
-            'class', 'close__icon icon-16-cancel');
-      ie_close('a');
-      ie_open('div', null, null,
-          'id', 'modal__form-container');
-        ie_open('div', null, null,
-            'class', 'form flex-center-top');
-          ie_open('div', null, null,
-              'class', 'logo flex-center-center');
-            ie_open('span');
-              itext('We');
-            ie_close('span');
-          ie_close('div');
-          ie_open('h2');
-            itext('Request an Invite for WeDeploy\u2122');
-          ie_close('h2');
-          ie_open('p');
-            itext('We can\'t wait to see what you\'re going to build.');
-          ie_close('p');
-          ie_open('form', null, null,
-              'id', 'form-modal',
-              'class', 'flex-center-top column form-signup');
-            ie_open('div', null, null,
-                'class', 'form-group');
-              ie_open('label');
-                itext('Email');
-              ie_close('label');
-              ie_open('input', null, null,
-                  'type', 'text',
-                  'class', 'form-control',
-                  'name', 'email',
-                  'placeholder', 'Enter your email address');
-              ie_close('input');
-            ie_close('div');
-            ie_void('p', null, null,
-                'id', 'form-modal__validation',
-                'class', 'form-validation');
-            ie_open('button', null, null,
-                'id', 'form-modal__submit',
-                'class', 'btn btn-accent');
-              ie_open('span');
-                itext('Get Started \u2013 It\u2019s FREE');
-              ie_close('span');
-            ie_close('button');
-            ie_open('div', null, null,
-                'class', 'small-container flex-center-top');
-              ie_open('small');
-                itext('By entering your email you agree to receive information about WeDeploy\u2122.');
-              ie_close('small');
-            ie_close('div');
-          ie_close('form');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'copy');
-          ie_open('p');
-            itext('Copyright \u00A9 2017 Liferay, Inc.');
-          ie_close('p');
-        ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null,
-          'id', 'modal__response-container',
-          'class', 'flex-center-top');
-        ie_open('div', null, null,
-            'class', 'logo flex-center-center');
-          ie_open('span');
-            itext('We');
-          ie_close('span');
-        ie_close('div');
-        ie_open('h2');
-          itext('Thanks for requesting an invite!');
-        ie_close('h2');
-        ie_open('p');
-          itext('We\'ll drop you an email when WeDeploy\u2122 is ready. Stay tuned.');
-        ie_close('p');
-      ie_close('div');
-    ie_close('div');
-  ie_close('div');
-}
-exports.modal = $modal;
-if (goog.DEBUG) {
-  $modal.soyTemplateName = 'landing.modal';
-}
-
 exports.render.params = ["content","elementClasses"];
 exports.render.types = {"content":"any","elementClasses":"any"};
 exports.topbar.params = [];
@@ -11531,8 +11431,6 @@ exports.topbarRightContent.params = ["site"];
 exports.topbarRightContent.types = {"site":"any"};
 exports.footer.params = [];
 exports.footer.types = {};
-exports.modal.params = [];
-exports.modal.types = {};
 templates = exports;
 return exports;
 
@@ -11792,7 +11690,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param249 = function() {
+  var param246 = function() {
     ie_open('div', null, null,
         'class', 'blog terms');
       ie_open('div', null, null,
@@ -11817,7 +11715,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_close('div');
     ie_close('div');
   };
-  $templateAlias1(soy.$$assignDefaults({elementClasses: 'blog', content: param249}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({elementClasses: 'blog', content: param246}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -11929,7 +11827,7 @@ if (goog.DEBUG) {
 function $tutorials(opt_data, opt_ignored, opt_ijData) {
   ie_open('div', null, null,
       'class', 'sidebar-offset');
-    var param272 = function() {
+    var param269 = function() {
       ie_open('div', null, null,
           'class', 'topbar-logo');
         ie_open('span', null, null,
@@ -11944,7 +11842,7 @@ function $tutorials(opt_data, opt_ignored, opt_ijData) {
         ie_close('span');
       ie_close('div');
     };
-    $templateAlias2({elementClasses: 'topbar-light', page: opt_data.page, logo: param272}, null, opt_ijData);
+    $templateAlias2({elementClasses: 'topbar-light', page: opt_data.page, logo: param269}, null, opt_ijData);
     ie_open('div', null, null,
         'class', 'container');
       ie_open('div', null, null,
@@ -11972,9 +11870,9 @@ if (goog.DEBUG) {
 function $footerButtons(opt_data, opt_ignored, opt_ijData) {
   ie_open('div', null, null,
       'class', 'tutorial-page-nav');
-    var tutorialObject__soy283 = opt_data.site.index.children['tutorials'].children[opt_data.page.parentId];
-    if (opt_data.page.weight < tutorialObject__soy283.childIds.length) {
-      var nextPageUrl__soy286 = tutorialObject__soy283.children[tutorialObject__soy283.childIds[opt_data.page.weight]].url;
+    var tutorialObject__soy280 = opt_data.site.index.children['tutorials'].children[opt_data.page.parentId];
+    if (opt_data.page.weight < tutorialObject__soy280.childIds.length) {
+      var nextPageUrl__soy283 = tutorialObject__soy280.children[tutorialObject__soy280.childIds[opt_data.page.weight]].url;
       if (opt_data.site.githubRepo) {
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/issues/new?title=Tutorial+Problem&body=%3E+URL%3A+' + opt_data.page.url,
@@ -11985,7 +11883,7 @@ function $footerButtons(opt_data, opt_ignored, opt_ijData) {
       }
       if (opt_data.page.buttonTitle) {
         ie_open('a', null, null,
-            'href', nextPageUrl__soy286,
+            'href', nextPageUrl__soy283,
             'class', 'btn btn-accent btn-sm');
           var dyn21 = opt_data.page.buttonTitle;
           if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
@@ -36246,8 +36144,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dataAndroidTutorials,
 /* 469 */,
 /* 470 */,
 /* 471 */,
-/* 472 */,
-/* 473 */
+/* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36326,4 +36223,4 @@ _metalSoy2.default.register(dataAndroidTutorials, _indexSoy2.default);
 exports.default = dataAndroidTutorials;
 
 /***/ })
-],[473]);
+],[472]);
