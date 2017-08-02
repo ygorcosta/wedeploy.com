@@ -88,7 +88,7 @@ Here is an example of the `wedeploy.json` that you could use to deploy a Liferay
 
 **CDN Links**
 
-1. Update your CDN API links to _https_ (yes, just simply add the 's').
+1. Update your CDN API links to _https_.
 
 2. Update the version to _0.0.1_
 
