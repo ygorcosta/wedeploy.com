@@ -86,11 +86,11 @@ Here is an example of the `wedeploy.json` that you could use to deploy a Liferay
 
 ## API client
 
-**CDN Links**
+**JavaScript CDN Links**
 
-1. Update your CDN API links to _https_.
+1. Update your JavaScript CDN API links to _https_.
 
-2. Update the version to _0.0.1_
+2. Update the version to _2.3.1_
 
 	![CDN HTTPS](/images/docs/deploy/migration--cdn-https.png)
 
