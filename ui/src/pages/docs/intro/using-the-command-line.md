@@ -140,6 +140,8 @@ Alternatively, you can run those same commands by passing the full URL:
 we domain --url <serviceID>-<projectID>.wedeploy.io
 ```
 
+</article>
+
 <article id="7">
 
 ## Manage environment variables
