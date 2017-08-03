@@ -102,6 +102,8 @@ Here is an example of the `wedeploy.json` that you could use to deploy a Liferay
 
 2. Each service now has its own domain instead of being a subdomain of your project. This means you must update your API endpoints (_serviceID-projectID.wedeploy.io_).
 
+3. Because of this domain change, we now no longer allow dashes in the project IDs.
+
 	![API URL Service](/images/docs/deploy/migration--api-url-service.png)
 
 </article>
