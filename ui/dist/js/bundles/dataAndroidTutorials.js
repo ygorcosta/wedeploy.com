@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([91,184,185,186,187,188,189,190],[
+webpackJsonppageComponent([90,184,185,186,187,188,189,190],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36144,7 +36144,8 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dataAndroidTutorials,
 /* 469 */,
 /* 470 */,
 /* 471 */,
-/* 472 */
+/* 472 */,
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36223,4 +36224,4 @@ _metalSoy2.default.register(dataAndroidTutorials, _indexSoy2.default);
 exports.default = dataAndroidTutorials;
 
 /***/ })
-],[472]);
+],[473]);

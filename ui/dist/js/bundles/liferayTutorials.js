@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([17,184,185,186,187,188,189,190],[
+webpackJsonppageComponent([20,184,185,186,187,188,189,190],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36215,10 +36215,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(liferayTutorials, tem
 /* 540 */,
 /* 541 */,
 /* 542 */,
-/* 543 */,
-/* 544 */,
-/* 545 */,
-/* 546 */
+/* 543 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36297,4 +36294,4 @@ _metalSoy2.default.register(liferayTutorials, _indexSoy2.default);
 exports.default = liferayTutorials;
 
 /***/ })
-],[546]);
+],[543]);
