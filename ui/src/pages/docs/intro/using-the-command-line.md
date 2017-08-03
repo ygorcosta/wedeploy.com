@@ -114,6 +114,64 @@ we log --url <serviceID>-<projectID>.wedeploy.io
 
 <article id="6">
 
+## Manage custom domains
+
+Get the list of custom domains for a particular service:
+
+```xml
+we domain --project <projectID> --service <serviceID>
+```
+
+Add a custom domain to a service:
+
+```xml
+we domain add example.com --project <projectID> --service <serviceID>
+```
+
+Remove custom domain from a service:
+
+```xml
+we domain rm example.com --project <projectID> --service <serviceID>
+```
+
+Alternatively, you can run those same commands by passing the full URL:
+
+```xml
+we domain --url <serviceID>-<projectID>.wedeploy.io
+```
+
+<article id="7">
+
+## Manage environment variables
+
+Get the list of environment variables for a particular service:
+
+```xml
+we env --project <projectID> --service <serviceID>
+```
+
+Add an environment variable to a service:
+
+```xml
+we env set SOME_KEY somevalue --project <projectID> --service <serviceID>
+```
+
+Remove environment variable from a service:
+
+```xml
+we env rm SOME_KEY --project <projectID> --service <serviceID>
+```
+
+Alternatively, you can run those same commands by passing the full URL:
+
+```xml
+we env --url <serviceID>-<projectID>.wedeploy.io
+```
+
+</article>
+
+<article id="8">
+
 ## List projects or services
 
 See the full list of projects and services you own or collaborator with:
@@ -142,7 +200,7 @@ we list --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="7">
+<article id="9">
 
 ## Delete projects or services
 
@@ -166,7 +224,7 @@ we delete --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="8">
+<article id="10">
 
 ## Open the console
 
@@ -178,7 +236,7 @@ we console
 
 </article>
 
-<article id="10">
+<article id="11">
 
 ## Update the CLI
 
