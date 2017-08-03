@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([56,184,185,186,187,188,189,190],[
+webpackJsonppageComponent([57,184,185,186,187,188,189,190],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10609,14 +10609,14 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
   opt_data = opt_data || {};
-  var param117 = function() {
+  var param189 = function() {
     ie_open('div', null, null,
         'class', 'blog');
       $mainPost(opt_data, null, opt_ijData);
       $olderPosts(opt_data, null, opt_ijData);
     ie_close('div');
   };
-  $templateAlias1(soy.$$assignDefaults({elementClasses: 'blog', content: param117, currentPage: 'blog'}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({elementClasses: 'blog', content: param189, currentPage: 'blog'}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -10637,24 +10637,24 @@ function $mainPost(opt_data, opt_ignored, opt_ijData) {
     ie_open('header');
       ie_open('small');
         itext('By ');
-        var dyn7 = opt_data.page.author;
-        if (typeof dyn7 == 'function') dyn7(); else if (dyn7 != null) itext(dyn7);
+        var dyn15 = opt_data.page.author;
+        if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
         itext(' ');
         ie_open('span');
           itext('| ');
-          var dyn8 = opt_data.page.date;
-          if (typeof dyn8 == 'function') dyn8(); else if (dyn8 != null) itext(dyn8);
+          var dyn16 = opt_data.page.date;
+          if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
         ie_close('span');
       ie_close('small');
       ie_open('h1');
-        var dyn9 = opt_data.page.title;
-        if (typeof dyn9 == 'function') dyn9(); else if (dyn9 != null) itext(dyn9);
+        var dyn17 = opt_data.page.title;
+        if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
       ie_close('h1');
     ie_close('header');
     ie_open('div', null, null,
         'class', 'content');
-      var dyn10 = opt_data.content;
-      if (typeof dyn10 == 'function') dyn10(); else if (dyn10 != null) itext(dyn10);
+      var dyn18 = opt_data.content;
+      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
       ie_open('div', null, null,
           'class', 'we-container');
         ie_open('span', null, null,
@@ -10686,32 +10686,32 @@ function $olderPosts(opt_data, opt_ignored, opt_ijData) {
       'class', 'posts-list');
     ie_open('div', null, null,
         'class', 'container');
-      var blogObject__soy136 = opt_data.site.index.children['blog'];
-      var childIdList148 = blogObject__soy136.childIds;
-      var childIdListLen148 = childIdList148.length;
-      for (var childIdIndex148 = 0; childIdIndex148 < childIdListLen148; childIdIndex148++) {
-        var childIdData148 = childIdList148[childIdIndex148];
-        if (opt_data.page.url != blogObject__soy136.children[childIdData148].url && childIdIndex148 < 4) {
+      var blogObject__soy208 = opt_data.site.index.children['blog'];
+      var childIdList220 = blogObject__soy208.childIds;
+      var childIdListLen220 = childIdList220.length;
+      for (var childIdIndex220 = 0; childIdIndex220 < childIdListLen220; childIdIndex220++) {
+        var childIdData220 = childIdList220[childIdIndex220];
+        if (opt_data.page.url != blogObject__soy208.children[childIdData220].url && childIdIndex220 < 4) {
           ie_open('div', null, null,
               'class', 'post-item container-blog');
             ie_open('a', null, null,
                 'class', 'post-item__link',
-                'href', blogObject__soy136.children[childIdData148].url);
+                'href', blogObject__soy208.children[childIdData220].url);
               ie_open('small');
                 itext('By ');
-                var dyn11 = blogObject__soy136.children[childIdData148].author;
-                if (typeof dyn11 == 'function') dyn11(); else if (dyn11 != null) itext(dyn11);
+                var dyn19 = blogObject__soy208.children[childIdData220].author;
+                if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
                 itext(' ');
                 ie_open('span');
                   itext('| ');
-                  var dyn12 = blogObject__soy136.children[childIdData148].date;
-                  if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+                  var dyn20 = blogObject__soy208.children[childIdData220].date;
+                  if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
                 ie_close('span');
               ie_close('small');
               ie_open('h4', null, null,
                   'class', 'post-item__title');
-                var dyn13 = blogObject__soy136.children[childIdData148].title;
-                if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
+                var dyn21 = blogObject__soy208.children[childIdData220].title;
+                if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
               ie_close('h4');
             ie_close('a');
           ie_close('div');
@@ -10815,8 +10815,8 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         $templateAlias1(opt_data, null, opt_ijData);
         ie_open('div', null, null,
             'class', 'sidebar-offset');
-          var dyn14 = opt_data.content;
-          if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+          var dyn22 = opt_data.content;
+          if (typeof dyn22 == 'function') dyn22(); else if (dyn22 != null) itext(dyn22);
           $templateAlias2(null, null, opt_ijData);
         ie_close('div');
       ie_close('div');
@@ -11035,8 +11035,8 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
         'class', 'container-hybrid');
       ie_open('h1', null, null,
           'class', 'title');
-        var dyn15 = opt_data.page.headerTitle;
-        if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+        var dyn23 = opt_data.page.headerTitle;
+        if (typeof dyn23 == 'function') dyn23(); else if (dyn23 != null) itext(dyn23);
         itext(' Guide');
       ie_close('h1');
     ie_close('div');
@@ -11049,8 +11049,8 @@ function $guide(opt_data, opt_ignored, opt_ijData) {
           'class', 'docs-content col-xs-16 col-md-10 col-lg-offset-1 col-lg-9');
         ie_open('div', null, null,
             'class', 'guide-content');
-          var dyn16 = opt_data.content;
-          if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+          var dyn24 = opt_data.content;
+          if (typeof dyn24 == 'function') dyn24(); else if (dyn24 != null) itext(dyn24);
         ie_close('div');
         $templateAlias2(opt_data, null, opt_ijData);
       ie_close('div');
@@ -11242,8 +11242,8 @@ function $render(opt_data, opt_ignored, opt_ijData) {
     ie_open('main', null, null,
         'class', 'content');
       $topbar(opt_data, null, opt_ijData);
-      var dyn17 = opt_data.content;
-      if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
+      var dyn25 = opt_data.content;
+      if (typeof dyn25 == 'function') dyn25(); else if (dyn25 != null) itext(dyn25);
       $footer(opt_data, null, opt_ijData);
     ie_close('main');
   ie_close('div');
@@ -11507,8 +11507,8 @@ function $render(opt_data, opt_ignored, opt_ijData) {
     ie_open('main', null, null,
         'class', 'content');
       $topbar(opt_data, null, opt_ijData);
-      var dyn18 = opt_data.content;
-      if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
+      var dyn26 = opt_data.content;
+      if (typeof dyn26 == 'function') dyn26(); else if (dyn26 != null) itext(dyn26);
     ie_close('main');
   ie_close('div');
 }
@@ -11690,15 +11690,15 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param246 = function() {
+  var param318 = function() {
     ie_open('div', null, null,
         'class', 'blog terms');
       ie_open('div', null, null,
           'class', 'container');
         ie_open('div', null, null,
             'class', 'content');
-          var dyn19 = opt_data.content;
-          if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
+          var dyn27 = opt_data.content;
+          if (typeof dyn27 == 'function') dyn27(); else if (dyn27 != null) itext(dyn27);
           ie_open('article');
             ie_open('div', null, null,
                 'class', 'we-container');
@@ -11715,7 +11715,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
       ie_close('div');
     ie_close('div');
   };
-  $templateAlias1(soy.$$assignDefaults({elementClasses: 'blog', content: param246}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({elementClasses: 'blog', content: param318}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -11827,7 +11827,7 @@ if (goog.DEBUG) {
 function $tutorials(opt_data, opt_ignored, opt_ijData) {
   ie_open('div', null, null,
       'class', 'sidebar-offset');
-    var param269 = function() {
+    var param341 = function() {
       ie_open('div', null, null,
           'class', 'topbar-logo');
         ie_open('span', null, null,
@@ -11842,13 +11842,13 @@ function $tutorials(opt_data, opt_ignored, opt_ijData) {
         ie_close('span');
       ie_close('div');
     };
-    $templateAlias2({elementClasses: 'topbar-light', page: opt_data.page, logo: param269}, null, opt_ijData);
+    $templateAlias2({elementClasses: 'topbar-light', page: opt_data.page, logo: param341}, null, opt_ijData);
     ie_open('div', null, null,
         'class', 'container');
       ie_open('div', null, null,
           'class', 'container-blog card');
-        var dyn20 = opt_data.content;
-        if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
+        var dyn28 = opt_data.content;
+        if (typeof dyn28 == 'function') dyn28(); else if (dyn28 != null) itext(dyn28);
         $footerButtons(opt_data, null, opt_ijData);
       ie_close('div');
     ie_close('div');
@@ -11870,9 +11870,9 @@ if (goog.DEBUG) {
 function $footerButtons(opt_data, opt_ignored, opt_ijData) {
   ie_open('div', null, null,
       'class', 'tutorial-page-nav');
-    var tutorialObject__soy280 = opt_data.site.index.children['tutorials'].children[opt_data.page.parentId];
-    if (opt_data.page.weight < tutorialObject__soy280.childIds.length) {
-      var nextPageUrl__soy283 = tutorialObject__soy280.children[tutorialObject__soy280.childIds[opt_data.page.weight]].url;
+    var tutorialObject__soy352 = opt_data.site.index.children['tutorials'].children[opt_data.page.parentId];
+    if (opt_data.page.weight < tutorialObject__soy352.childIds.length) {
+      var nextPageUrl__soy355 = tutorialObject__soy352.children[tutorialObject__soy352.childIds[opt_data.page.weight]].url;
       if (opt_data.site.githubRepo) {
         ie_open('a', null, null,
             'href', 'https://github.com/' + opt_data.site.githubRepo + '/issues/new?title=Tutorial+Problem&body=%3E+URL%3A+' + opt_data.page.url,
@@ -11883,10 +11883,10 @@ function $footerButtons(opt_data, opt_ignored, opt_ijData) {
       }
       if (opt_data.page.buttonTitle) {
         ie_open('a', null, null,
-            'href', nextPageUrl__soy283,
+            'href', nextPageUrl__soy355,
             'class', 'btn btn-accent btn-sm');
-          var dyn21 = opt_data.page.buttonTitle;
-          if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
+          var dyn29 = opt_data.page.buttonTitle;
+          if (typeof dyn29 == 'function') dyn29(); else if (dyn29 != null) itext(dyn29);
         ie_close('a');
       }
     }
@@ -36178,8 +36178,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(emailAndroidTutorials
 /* 503 */,
 /* 504 */,
 /* 505 */,
-/* 506 */,
-/* 507 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36258,4 +36257,4 @@ _metalSoy2.default.register(emailAndroidTutorials, _indexSoy2.default);
 exports.default = emailAndroidTutorials;
 
 /***/ })
-],[507]);
+],[506]);
