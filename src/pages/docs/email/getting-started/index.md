@@ -44,7 +44,7 @@ Check also the <a href="/tutorials/email-android" target="_blank" data-senna-off
 
 <aside>
 
-All WeDeploy projects use a consistant file structure and configuration files to deploy apps with the CLI or GitHub. Learn more on our <strong><a href="/docs/intro/how-it-works/">How It Works Page</a></strong>.
+All WeDeploy projects use similar configuration files to prepare your projects for deployment. Learn more on our page about <strong><a href="/docs/deploy/getting-started/">Getting Started with Deploying</a></strong>.
 
 </aside>
 
