@@ -25,7 +25,6 @@ But what were the rules? For this event, we simply asked each team to use WeDepl
 
 <figure>
     <img src="/images/blog/post-10--2.jpg" alt="Teamwork at the hack day">
-
 </figure>
 
 #### Let's do this!
@@ -38,7 +37,9 @@ The ideas were ready, the teams were made, and the countdown was started. Nine h
 
 For those who prefer to watch instead of read, here are the presentation videos.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLKb_gn-WO_Ko30pgNP-gxTKKrsaAC-jlk" frameborder="0" allowfullscreen></iframe>
+<div class="video-container">
+<iframe width="560" height="360" src="https://www.youtube.com/embed/videoseries?list=PLKb_gn-WO_Ko30pgNP-gxTKKrsaAC-jlk" frameborder="0" allowfullscreen></iframe>
+</div>
 
 #### [Emoji Chat](https://www.youtube.com/watch?v=7iMfTvhB-38&list=PLKb_gn-WO_Ko30pgNP-gxTKKrsaAC-jlk&index=1)
 
