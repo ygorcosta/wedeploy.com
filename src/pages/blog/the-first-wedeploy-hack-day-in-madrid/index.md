@@ -14,7 +14,7 @@ layout: "blog"
 Since we knew there were lots of great developers in Spain, we decided to jump on a plane and go to our Madrid office to host a WeDeploy hack day!
 
 <figure>
-    <img src="../images/blog/post-10--1.jpg" alt="Hack day Preparations">
+    <img src="/images/blog/post-10--1.jpg" alt="Hack day Preparations">
 </figure>
 
 We could feel the excitement in the office as the day drew near.
@@ -24,7 +24,7 @@ I mean honestly, who can pass up the opportunity of a free day to play around wi
 But what were the rules? For this event, we simply asked each team to use WeDeploy in their projects. Other than that, they could build whatever they wanted.
 
 <figure>
-    <img src="../images/blog/post-10--2.jpg" alt="Teamwork at the hack day">
+    <img src="/images/blog/post-10--2.jpg" alt="Teamwork at the hack day">
 
 </figure>
 
@@ -76,7 +76,7 @@ This team also won the grand prize for the hack day!
 **What they used:** [WeDeploy Hosting](/docs/hosting), [WeDeploy Data](/docs/data), [WeDeploy Auth](/docs/auth), [WeDeploy Java](/docs/other/java/)
 
 <figure>
-    <img src="../images/blog/post-10--3.jpg" alt="Liferay Madrid hack day">
+    <img src="/images/blog/post-10--3.jpg" alt="Liferay Madrid hack day">
 </figure>
 
 The day was a huge success, and we were impressed and inspired by what each team produced!

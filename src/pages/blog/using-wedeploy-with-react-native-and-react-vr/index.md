@@ -15,7 +15,7 @@ As a fundamental player in today's development around the world, JavaScript is a
 
 <figure>
 	<a href="https://github.com/wedeploy/boilerplate-data/tree/react-native" target="_blank">
-		<img src="../images/blog/post-9--0.png" alt="React Native">
+		<img src="/images/blog/post-9--0.png" alt="React Native">
 	</a>
 </figure>
 
@@ -60,8 +60,8 @@ Here is what the To-Do List application looks like:
 
 <figure>
   <video controls style="max-width: 300px;">
-    <source src="../images/blog/post-9--1.webm" type="video/webm">
-    <source src="../images/blog/post-9--1.mp4" type="video/mp4">
+    <source src="/images/blog/post-9--1.webm" type="video/webm">
+    <source src="/images/blog/post-9--1.mp4" type="video/mp4">
     Your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
   </video>
 </figure>

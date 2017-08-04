@@ -17,7 +17,7 @@ I'm currently studying *Research in Software Engineering and Computer Science* f
 In this class I've learned the basic concepts of [IoT](https://en.wikipedia.org/wiki/Internet_of_things), starting with the initial intent to simulate the real world with smart devices. I believe the IoT train is passing and if we don't get on, we will miss out. That's why I decided to explore more.
 
 <figure>
-	<img src="../images/blog/post-6--0.jpg" alt="IoT train is passing. Credits: Amos Bar-Zeev (https://unsplash.com/search/wait?photo=IjA4vTJ3PHY)">
+	<img src="/images/blog/post-6--0.jpg" alt="IoT train is passing. Credits: Amos Bar-Zeev (https://unsplash.com/search/wait?photo=IjA4vTJ3PHY)">
 </figure>
 
 I realized that in the short period of time I had to accomplish this, I would need to learn how to use and configure a complete new tool like [Kaa](https://www.kaaproject.org) or [Machina.io](https://macchina.io). But I just wanted a place to simulate an IoT platform super fast. Then a thought occured to me:

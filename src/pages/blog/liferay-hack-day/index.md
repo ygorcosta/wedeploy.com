@@ -16,7 +16,7 @@ layout: "blog"
 It's an exhilarating time together full of talks, catered meals, new friendships, and even spontaneous adventures to the Hollywood sign and the Santa Monica Pier.
 
 <figure>
-	<img src="../images/blog/post-5--0.png" alt="Engineering Retreat">
+	<img src="/images/blog/post-5--0.png" alt="Engineering Retreat">
 </figure>
 
 On the final day of the retreat, we put on a hack day (because how could we bring all the engineers to one location without having one?!).
@@ -37,7 +37,7 @@ Nobody wants to walk all the way down to the Game Room to find that the ping pon
 ###### What they used: [WeDeploy™ Hosting](/docs/hosting).
 
 <figure>
-		<img src="../images/blog/post-5--1.png" alt="Game Room Availability">
+		<img src="/images/blog/post-5--1.png" alt="Game Room Availability">
 </figure>
 
 #### [Liferay Home](https://youtu.be/Za3nUelYPsE)
@@ -47,7 +47,7 @@ Don't ever come home to a freezing cold house again. Liferay home will learn you
 ###### What they used: [WeDeploy™ Hosting](/docs/hosting), [WeDeploy™ Data](/docs/data).
 
 <figure>
-	<img src="../images/blog/post-5--2.png" alt="Liferay Home">
+	<img src="/images/blog/post-5--2.png" alt="Liferay Home">
 </figure>
 
 #### [Release Notes](https://youtu.be/LfcGDiQq0zI)
@@ -57,7 +57,7 @@ Annoyed by manually checking for fix pack releases for Portal 7.0? This team cre
 ###### What they used: [WeDeploy™ Hosting](/docs/hosting).
 
 <figure>
-	<img src="../images/blog/post-5--3.png" alt="Release Notes">
+	<img src="/images/blog/post-5--3.png" alt="Release Notes">
 </figure>
 
 #### [Chicken Fingers](https://youtu.be/cYvZuL_9W4M)
@@ -67,7 +67,7 @@ Don't let the name deceive you, this project was the real deal- and the grand pr
 ###### What they used: [WeDeploy™ Hosting](/docs/hosting), [WeDeploy™ Data](/docs/data).
 
 <figure>
-	<img src="../images/blog/post-5--4.png" alt="Chicken Fingers">
+	<img src="/images/blog/post-5--4.png" alt="Chicken Fingers">
 </figure>
 
 We were so impressed with what the teams came up with in less than nine hours! We hope that these projects have inspired you to keep creating, to keep dreaming, and of course, to keep deploying. 🚀

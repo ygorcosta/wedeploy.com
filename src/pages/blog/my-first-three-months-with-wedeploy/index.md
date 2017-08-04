@@ -12,7 +12,7 @@ layout: "blog"
 {$page.description}
 
 <figure>
-	<img src="../images/blog/post-4--0.png" alt="Jonni Lundy Working">
+	<img src="/images/blog/post-4--0.png" alt="Jonni Lundy Working">
 </figure>
 
 I have no coding background. Before my internship, I had never opened DevTools in my life and I thought that Java and JavaScript were the same thing.
@@ -28,7 +28,7 @@ It was one of the best feelings I've had during this internship.
 Knowing that I, the new guy who didn't know what an API was or how to run 'npm install', could deploy my own website faster than it takes me to run to Starbucks and get my triple ristretto hazelnut latte (with almond milk please).
 
 <figure>
-	<img src="../images/blog/post-4--1.png" alt="Jonni Lundy Collaborating">
+	<img src="/images/blog/post-4--1.png" alt="Jonni Lundy Collaborating">
 </figure>
 
 By far my favorite thing about being on the WeDeploy team is being able to get behind a product that is so powerful and yet incredibly intuitive to use.

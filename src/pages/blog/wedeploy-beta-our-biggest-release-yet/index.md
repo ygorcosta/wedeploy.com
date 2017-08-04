@@ -58,7 +58,7 @@ Today we want to bring the benefits of this technology to you and facilitate the
 Back on alpha you were limited by the services we provided, now your imagination is the limit. This opens up the possibility to deploy pretty much anything and we look forward to see what you're going to create.
 
 <figure>
-	<img src="../images/blog/post-12--docker.gif" alt="Docker">
+	<img src="/images/blog/post-12--docker.gif" alt="Docker">
 </figure>
 
 *Read more on the [documentation](/docs/deploy/deploying-docker/) or follow our [step-by-step tutorial](/tutorials/docker/get-started/).*
@@ -76,7 +76,7 @@ Before you had two ways of deploying code, you could either connect with GitHub 
 Because of that, we decided to rethink our CLI and introduce a new deploy command. Now you don't need to rely on Git for every deploy. All you need to do is type `we login` to authenticate only once and then run `we deploy` on your project folder.
 
 <figure>
-	<img src="../images/blog/post-12--instant-deployment.gif" alt="Instant Deployment">
+	<img src="/images/blog/post-12--instant-deployment.gif" alt="Instant Deployment">
 </figure>
 
 *Read more on the [documentation](/docs/deploy/instant-deployment/).*
@@ -98,7 +98,7 @@ Today, we're introducing Liferay DXP with a 15-day trial license.
 Besides that, we're adding support for [hot deployment](https://dev.liferay.com/discover/portal/-/knowledge_base/7-0/installing-apps-manually). That means you can now create a `deploy` folder, then add themes, portlets, OSGi modules, or a license by using WAR, JAR, and XML files.
 
 <figure>
-	<img src="../images/blog/post-12--liferay-dxp.gif" alt="Liferay DXP">
+	<img src="/images/blog/post-12--liferay-dxp.gif" alt="Liferay DXP">
 </figure>
 
 What about [Liferay Portal Community Edition](https://web.liferay.com/community/liferay-projects/liferay-portal/overview)? Since we have Docker support now, you can setup your own Dockerfile or grab an image from [Docker Hub](https://hub.docker.com/r/liferay/portal/) and deploy it here.
