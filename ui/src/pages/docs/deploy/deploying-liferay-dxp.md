@@ -68,7 +68,7 @@ Below is an example of a `wedeploy.json` for a Liferay DXP service. The `id` for
 
 Liferay DXP's hot deploy mechanism allows you to install themes, portlets, OSGi modules, and even a license by simply including WAR, JAR, and XML files into a `deploy` folder.
 
-If you were deploying a Liferay DXP application with a custom JAR file for example, this is what your project could look like:
+For example, if you wanted to deploy a custom JAR file, this is how your directory could look like:
 
 ```xml
 myservice
@@ -76,6 +76,8 @@ myservice
 │   └── com.liferay.wedeploy.samples.portlet-1.0.0.jar
 └── wedeploy.json
 ```
+
+Under the hood, those files will be copied into the `$LIFERAY_HOME/deploy` folder and automatically deployed on startup.
 
 </article>
 
