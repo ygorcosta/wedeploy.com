@@ -9,5 +9,6 @@ module.exports = {
 		outputStyle: 'compressed'
 	},
 	codeMirrorLanguages: ['xml', 'css', 'javascript', 'clike', 'swift', 'groovy'],
+	deployOptions: { branch: 'ui' },
 	vendorSrc: ['node_modules/marble/build/fonts/**']
 };
