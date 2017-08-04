@@ -35,11 +35,11 @@ After that first app was deployed, we got right back to work. Yes, we had achiev
 
 Probably the biggest change was moving the WeDeploy infrastructure from our servers in the Liferay Headquarters to AWS. We knew that in order to continue to grow and expand globally, we had to start preparing now.
 
-This move has greatly impacted the stability of WeDeploy and even though we don't support multi-region deployments yet, we are excited that this change will make that possible in the near future.
+This move has greatly impacted the stability of WeDeploy and even though we don't support multi-region deployments yet, we are excited for that possibility in the near future.
 
 ##### 2. Rewritten CLI, API, and Dashboard
 
-One of our goals the past nine months was not to just build on top of what we had, but to also rethink the way we built WeDeploy and be willing to revamp parts of it from the ground up if needed.
+One of our goals these past nine months was not to just build on top of what we had, but also to rethink the way we built WeDeploy. If improvement required a revamp of core pieces of code, then so be it!
 
 We've spent weeks refactoring the CLI, API, and Dashboard (which is now known as [Console](https://console.wedeploy.com)) and I can confidently say, it was worth it! By refactoring, we gave ourselves the opportunity to not only clean up the code, but to also improve performance, usability, and overall design.
 
@@ -65,7 +65,7 @@ Back on alpha you were limited by the services we provided, now your imagination
 
 ##### 5. Volume Support
 
-With the addition of custom Docker services, new challenges arrive. For example, let's say you deploy an app with PHP and MySQL, then you start adding entries to your database. What happens when you restart that project without a proper setup? Well, you're going to lose all the data that was saved.
+With the addition of custom Docker services, new challenges arrived. For example, let's say you deploy an app with PHP and MySQL, then you start adding entries to your database. What happens when you restart that project without a proper setup? Well, you're going to lose all the data that was saved.
 
 In order to be able to persist and share data between services, we're introducing the concept of volumes. Quite simply, volumes are specially-designated directories that live outside of the file system where your code runs. This way, even if your application becomes unavailable due to a failure or other causes, your data still persists.
 
@@ -87,9 +87,7 @@ If you used WeDeploy before, you probably remember this `container.json` file (n
 
 WeDeploy needs to know what kind of project your are deploying in order to download dependencies, compile, and build it in the right way.
 
-From now on, we'll try to determine what language your project uses, so you can deploy any project using [Node.js](/docs/deploy/deploying-nodejs.html), [Java](/docs/deploy/deploying-java.html), [Ruby](/docs/deploy/deploying-ruby.html), or a [Dockerfile](/docs/deploy/deploying-docker.html) and we will take it from there.
-
-This doesn't mean you don't need the `wedeploy.json` file anymore. It is still valid and important for us to determine what directory to scan.
+Together with your `wedeploy.json`, we'll try to determine what language your project uses. Deploy any project using [Node.js](/docs/deploy/deploying-nodejs.html), [Java](/docs/deploy/deploying-java.html), [Ruby](/docs/deploy/deploying-ruby.html), or a [Dockerfile](/docs/deploy/deploying-docker.html) and we'll take it from there.
 
 ##### 8. Liferay DXP
 
