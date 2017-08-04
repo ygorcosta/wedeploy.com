@@ -124,14 +124,36 @@ WeDeploy
 
 </article>
 
+<article id="get-all-users">
+
+## Get all users
+
+```javascript
+WeDeploy
+	.auth('https://<serviceID>.<projectID>.wedeploy.io')
+	.getAllUsers()
+	.then(function(res) {
+		// res contains an array of users.
+	})
+	.catch(function(err) {
+		// An error happened.
+	});
+```
+
+</article>
+
 <article id="4">
 
 ## Delete user
 
-```javascript
-var currentUser = WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').currentUser;
+There are two ways to delete a user. 
 
-currentUser
+**Delete currentUser**
+
+```javascript
+WeDeploy
+	.auth('https://<serviceID>.<projectID>.wedeploy.io')
+	.currentUser
 	.deleteUser()
 	.then(function() {
 		// Successfully deleted.
@@ -140,6 +162,21 @@ currentUser
 		// Not deleted.
 	});
 ```
+
+**Delete user by id**
+
+```javascript
+WeDeploy
+	.auth('https://<serviceID>.<projectID>.wedeploy.io')
+	.deleteUser("userId")
+	.then(function() {
+		// Successfully deleted.
+	})
+	.catch(function(err) {
+		// An error happened.
+	});
+```
+
 ```swift
 WeDeploy
 	.auth('https://<serviceID>-<projectID>.wedeploy.io')
@@ -209,6 +246,8 @@ WeDeploy
 <article id="6">
 
 ## Send a password reset email
+
+You can send a password reset email to a user with the `sendPasswordResetEmail` method. For example:
 
 ```javascript
 WeDeploy
