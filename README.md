@@ -13,16 +13,10 @@ node -v && npm -v
 2. Install our global dependencies:
 
 ```sh
-[sudo] npm i -g electric-cli@alpha
+[sudo] npm i -g electric-cli
 ```
 
-3. Go to `ui` folder:
-
-```sh
-cd ui
-```
-
-4. Install our local dependencies:
+3. Install our local dependencies:
 
 ```sh
 npm i
@@ -30,7 +24,13 @@ npm i
 
 ## Usage
 
-To run these commands above, make sure you are in `ui` folder.
+### run
+
+* Runs the `build`, `server`, and `watch` commands for quick development.
+
+```
+electric run
+```
 
 ### build
 
@@ -54,14 +54,6 @@ electric server
 
 ```
 electric watch
-```
-
-### run
-
-* Runs the `build`, `watch`, and `server` commands for quick development.
-
-```
-electric run
 ```
 
 ## License
