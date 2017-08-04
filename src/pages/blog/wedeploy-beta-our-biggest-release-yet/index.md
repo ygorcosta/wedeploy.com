@@ -1,7 +1,7 @@
 ---
 title: "WeDeploy Beta: Our Biggest Release Yet"
 description: "We have been working tirelessly the last months on some huge changes to WeDeploy, and today is the day we can finally tell you all about them."
-date: "August 2, 2017"
+date: "August 4, 2017"
 author: "Eduardo Lundgren"
 image: "http://wedeploy.com/images/blog/post-12--0.jpg"
 layout: "blog"
@@ -127,7 +127,7 @@ We provide our DNS service across 7 different countries, including Australia, Ge
 
 Because of the new URL format and other changes described here, we weren't able to migrate your projects for you. That would be a risky thing to do and we don't want your users to have any problems.
 
-All the projects you created on alpha still exist, however on September 2nd they will be **unavailable**, along with the previous Dashboard. But don't worry, we already have a **[Migration Guide](/docs/deploy/migrating-to-beta/)** ready so you can get started right away.
+All the projects you created on alpha still exist, however on September 4th they will be **unavailable**, along with the previous Dashboard. But don't worry, we already have a **[Migration Guide](/docs/deploy/migrating-to-beta/)** ready so you can get started right away.
 
 We're very excited to be able to share this new release with you! Make sure to **[try it out for yourself](https://console.wedeploy.com)** and [join our community on Slack](https://chat.wedeploy.com) to ask questions or let us know what you are building!
 

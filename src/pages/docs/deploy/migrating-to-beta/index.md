@@ -24,7 +24,7 @@ If you have any trouble, don't hesitate to <a href="javascript:Intercom('show');
 
 ###### <span class="icon-16-alert"></span> Attention
 
-All Alpha projects, including the previous Dashboard, will be unavailable on **September 2nd**. Make sure to migrate your projects to Beta before then.
+All Alpha projects, including the previous Dashboard, will be unavailable on **September 4th**. Make sure to migrate your projects to Beta before then.
 
 </aside>
 
