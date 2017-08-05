@@ -1,4 +1,5 @@
 {
 	"id": "ui",
-	"image": "wedeploy/hosting:0.0.1"
+	"image": "wedeploy/hosting:0.0.1",
+	"customDomains": ["wedeploy.com", "www.wedeploy.com"]
 }
