@@ -14,7 +14,7 @@ weight: 1
 
 ## What is WeDeploy?
 
-WeDeploy is *deployment platform* that gives you access to intuitive APIs that can help you create modern apps faster.
+WeDeploy is a *deployment platform* that gives you access to intuitive APIs that can help you create modern apps faster.
 
 From simple applications to full microservice architectures, launch your production-ready environments in a matter of minutes without having to change your stack.
 
