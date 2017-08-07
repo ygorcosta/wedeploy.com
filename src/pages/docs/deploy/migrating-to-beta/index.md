@@ -96,7 +96,7 @@ Here is an example of the `wedeploy.json` that you could use to deploy a Liferay
 
 **API Endpoints**
 
-1. Remove hardcoded protocals (_http://_) on API URL's.
+1. Remove hardcoded protocols (_http://_) on API URL's.
 
 	![API URL HTTP](/images/docs/deploy/migration--api-url-http.png)
 
