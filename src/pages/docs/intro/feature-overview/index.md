@@ -88,4 +88,4 @@ The **[WeDeploy Command-line Interface (CLI)](/docs/intro/using-the-command-line
 
 ## What's next?
 
-* Learn more about [how it works](/docs/intro/how-it-works/).
+* Learn more about using [the WeDeploy Console](/docs/intro/using-the-console/).
