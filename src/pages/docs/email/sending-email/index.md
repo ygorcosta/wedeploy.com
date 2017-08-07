@@ -29,6 +29,7 @@ WeDeploy
 	.from('from@domain.com')
 	.to('to@domain.com')
 	.subject('Hi there!')
+	.message('What are your plans on Thursday?')
 	.send()
 	.then(function(response) {
 		console.log('Email ID:', response);
