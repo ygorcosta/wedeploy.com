@@ -91,7 +91,7 @@ Used to describe the behavior of an endpoint.
 
 ##### auth
 
-You can unauthorized applications and users to access any endpoint by using the auth field. The example below verify if the application is authenticated in order to perform the request:
+You can prevent unauthorized applications and users from accessing certain endpoints by using the auth field. The example below verifies if the application is authenticated in order to perform the request:
 
 ```application/json
 [
