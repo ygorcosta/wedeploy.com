@@ -27,7 +27,7 @@ We give you a free 15 day trial period before you must apply a license.
 Want to see the process of deploying Liferay DXP step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/liferay-dxp" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/liferay-dxp/" target="_blank" data-senna-off>
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>

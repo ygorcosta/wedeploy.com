@@ -25,7 +25,7 @@ Our Email service enables you to send customized emails to your users and check 
 Want to see the process of deploying WeDeploy Email step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/email-web" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/email-web/" target="_blank" data-senna-off>
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
@@ -34,7 +34,7 @@ Want to see the process of deploying WeDeploy Email step by step?
 	or see a <a href="https://github.com/wedeploy/boilerplate-email" target="_blank" data-senna-off>source code demo</a>.
 </div>
 
-Check also the <a href="/tutorials/email-android" target="_blank" data-senna-off>tutorial for Android</a> and the <a href="/tutorials/email-ios" target="_blank" data-senna-off>tutorial for iOS</a>.
+Check also the <a href="/tutorials/email-android/" target="_blank" data-senna-off>tutorial for Android</a> and the <a href="/tutorials/email-ios/" target="_blank" data-senna-off>tutorial for iOS</a>.
 
 </article>
 

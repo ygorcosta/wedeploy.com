@@ -25,7 +25,7 @@ weight: 9
 Want to see the process of deploying Docker step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/docker" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/docker/" target="_blank" data-senna-off>
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
