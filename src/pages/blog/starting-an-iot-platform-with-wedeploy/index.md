@@ -101,7 +101,7 @@ Here it is the `container.json` file for this new data service:
 ```application/json
 {
     "id": "data",
-    "service": "wedeploy/data:0.0.1"
+    "image": "wedeploy/data:@site.version.image.data@"
 }
 ```
 
@@ -248,7 +248,7 @@ At that point I had built two services: a Java REST API developed with `Spring B
 ```application/json
 {
 	"id": "ui",
-	"service": "wedeploy/hosting"
+	"image": "wedeploy/hosting:@site.version.image.hosting@"
 }
 ```
 
