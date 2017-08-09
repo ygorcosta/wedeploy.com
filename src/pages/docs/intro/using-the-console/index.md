@@ -44,7 +44,7 @@ Once your project is created, it will show up on your Console main page. To see 
 
 By clicking on a project, you can start monitoring and configuring your project and its services.
 
-In each project, you can have up to five services installed. To install a new service, click on the _"Install Service"_ button in the top right corner of your project's Console screen.
+In each project, you can have up to three services installed. To install a new service, click on the _"Install Service"_ button in the top right corner of your project's Console screen.
 
 ![Install Container](/images/docs/intro/using-the-dashboard--install-container.png)
 
