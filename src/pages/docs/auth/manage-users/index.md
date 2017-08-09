@@ -20,7 +20,7 @@ If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/a
 
 ## Create user
 
-You create a new user in your WeDeploy project by calling the `createUser` method or by signing in an user for the first time using an identity provider such as Google or Facebook.
+You create a new user in your WeDeploy project by calling the `createUser` method or by signing in a user for the first time using an identity provider such as Google or Facebook.
 
 ```javascript
 WeDeploy
