@@ -48,21 +48,13 @@ Of course you can do this step with other technology you are more familiar with,
 
 ##### Implementing a service
 
-In order to implement a WeDeploy service, it's mandatory to create a `container.json` file in the root of your folder, where you specify the type of the service you would like to use and some other behaviors.
-
-In the case of the [WeDeploy Java](/docs/other/java/) service, you can set hooks to build the project once the service is created or updated.
+In order to implement a WeDeploy service, it's mandatory to create a `wedeploy.json` file in the root of your folder, where you specify the id of the service. As this project is a Gradle project, WeDeploy will infer its type with a Java recipe, that will wrap the project up into the official Gradle Docker image.
 
 ```application/json
 {
-    "id": "api",
-    "type": "wedeploy/java:latest",
-    "hooks": {
-        "build": "gradle -Dorg.gradle.native=false clean build -x test"
-    }
+    "id": "api"
 }
 ```
-
-In this case, because I used a [Spring Boot](https://projects.spring.io/spring-boot/) project, the build system is based on [Gradle](https://gradle.org/), so I added the commands to build the project, excluding tests.
 
 ##### Defining REST resources
 
@@ -109,7 +101,7 @@ Here it is the `container.json` file for this new data service:
 ```application/json
 {
     "id": "data",
-    "type": "wedeploy/data"
+    "service": "wedeploy/data:0.0.1"
 }
 ```
 
@@ -183,8 +175,8 @@ Ok, once I had the data service configured, how could I communicate with it from
 
 ```text/x-groovy
 dependencies {
-  compile("com.github.wedeploy.api-java:api:master-SNAPSHOT")
-  compile("com.github.wedeploy.api-java:api-client:master-SNAPSHOT")
+  compile("com.github.wedeploy.api-java:api:0.0.1")
+  compile("com.github.wedeploy.api-java:api-client:0.0.1")
   ...
 }
 ```
@@ -213,9 +205,15 @@ public class DataRepository {
 
         Response response = weDeploy.filter("sensorId", sensorId).get();
 
+		String body = response.body();
+
+		if (StringUtil.isBlank(body)) {
+			return Collections.EMPTY_LIST;
+		}
+
 		JoddJsonParser parser = new JoddJsonParser();
 
-		return parser.parseAsList(response.body(), SensorRow.class);
+		return parser.parseAsList(body, SensorRow.class);
 	}
 
 	/**
@@ -227,9 +225,15 @@ public class DataRepository {
 
 		Response response = weDeploy.get();
 
+		String body = response.body();
+
+		if (StringUtil.isBlank(body)) {
+			return Collections.EMPTY_LIST;
+		}
+
 		JoddJsonParser parser = new JoddJsonParser();
 
-		return parser.parseAsList(response.body(), SensorRow.class);
+		return parser.parseAsList(body, SensorRow.class);
 	}
 	...
 }
@@ -244,7 +248,7 @@ At that point I had built two services: a Java REST API developed with `Spring B
 ```application/json
 {
 	"id": "ui",
-	"type": "wedeploy/hosting"
+	"service": "wedeploy/hosting"
 }
 ```
 
@@ -294,7 +298,7 @@ With WeDeploy I could accomplish the task of creating a very basic stack to hand
 
 If you're curious about the end result, see:
 
-* [**ui**.mdelapenya-sensors.wedeploy.io](http://ui.mdelapenya-sensors.wedeploy.io)
-* [**api**.mdelapenya-sensors.wedeploy.io](http://api.mdelapenya-sensors.wedeploy.io/sensors)
+* [**sensorsui**-mdelapenya.wedeploy.io](https://sensorsui-mdelapenya.wedeploy.io)
+* [**sensorsapi**-mdelapenya.wedeploy.io](https://sensorsapi-mdelapenya.wedeploy.io/sensors)
 
 </article>
