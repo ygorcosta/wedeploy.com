@@ -21,7 +21,7 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-	"id": "users",
+	"id": "auth",
 	"image": "wedeploy/auth:@site.version.image.auth@",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
