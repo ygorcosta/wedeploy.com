@@ -65,5 +65,7 @@ Now, let's add a script that will show the current user's name.
 In the same file as above, paste this code between the "current user" comments:
 
 ```javascript
-document.querySelector('.username').innerHTML = auth.currentUser.name;
+if (auth.currentUser) {
+    document.querySelector('.username').innerHTML = auth.currentUser.name;
+}
 ```
