@@ -79,7 +79,7 @@ Because of that, we decided to rethink our CLI and introduce a new deploy comman
 	<img src="/images/blog/post-12--instant-deployment.gif" alt="Instant Deployment">
 </figure>
 
-*Read more on the [documentation](/docs/deploy/instant-deployment/).*
+*Read more on the [documentation](/docs/deploy/getting-started/).*
 
 ##### 7. Automatic Code Detection
 

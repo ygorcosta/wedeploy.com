@@ -3,7 +3,7 @@ title: "Deploying Node.js"
 description: "Launch a Node.js application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
-weight: 4
+weight: 3
 ---
 
 ### Node.js

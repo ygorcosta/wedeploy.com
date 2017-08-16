@@ -3,7 +3,7 @@ title: "Deploying Java"
 description: "Launch a Java application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
-weight: 6
+weight: 5
 ---
 
 ### Java

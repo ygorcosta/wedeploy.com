@@ -3,7 +3,7 @@ title: "Deploying Liferay DXP"
 description: "Launch a Liferay DXP application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
-weight: 7
+weight: 6
 ---
 
 ### Liferay DXP

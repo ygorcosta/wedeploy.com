@@ -3,7 +3,7 @@ title: "Migrating to Beta"
 description: "We have made some fundamental changes to the way you setup your project source code and simplified the way you deploy your apps. Walk through these easy steps and your project will be ready for deployment."
 headerTitle: "Deploying"
 layout: "guide"
-weight: 10
+weight: 8
 ---
 
 ### {$page.title}
@@ -164,7 +164,7 @@ We made some syntax updates on the Email Javascript API to make it even more int
 
 Before you had two ways of deploying code, you could either connect with GitHub or create a remote pointing to our Git server. We noticed that people loved the convenience of integrating with GitHub so [we're keeping that](/docs/deploy/continuous-deployment/), but when using our Git server the experience was not as fluid, specially the authentication step on every push.
 
-There are now two ways to deploy your project: _[Instant Deployment](/docs/deploy/instant-deployment/)_ and _[Continuous Deployment](/docs/deploy/constant-deployment/)_.
+There are now two ways to deploy your project: _[Instant Deployment](/docs/deploy/getting-started/)_ and _[Continuous Deployment](/docs/deploy/constant-deployment/)_.
 
 This means we no longer allow deployments with our Git server.
 
