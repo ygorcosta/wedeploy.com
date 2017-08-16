@@ -1,5 +1,5 @@
 ---
-title: "Using WeDeploy with React Native and React VR"
+title: "Using WeDeploy With React Native and React VR"
 description: "Throughout the development of WeDeploy, it has been our goal to support as many platforms and environments as possible."
 date: "April 25, 2017"
 author: "Iliyan Peychev"
