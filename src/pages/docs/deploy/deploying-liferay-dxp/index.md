@@ -54,7 +54,7 @@ Below is an example of a `wedeploy.json` for a Liferay DXP service. The `id` for
 {
 	"id": "myservice",
 	"image": "wedeploy/liferay:@site.version.image.liferay@",
-	"volume": "/opt/liferay",
+	"volume": "/wedeploy-container",
 	"memory": 4096,
 	"cpu": 3
 }
