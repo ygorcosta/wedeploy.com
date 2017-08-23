@@ -147,7 +147,7 @@ WeDeploy
 		// res contains an array of users.
 	}
 	.catch { error in
-	  // An error happened.
+		// An error happened.
 	}
 ```
 ```text/x-java
