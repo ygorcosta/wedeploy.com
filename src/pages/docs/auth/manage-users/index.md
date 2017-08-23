@@ -139,6 +139,23 @@ WeDeploy
 		// An error happened.
 	});
 ```
+```swift
+WeDeploy
+	.auth("https://<serviceID>.<projectID>.wedeploy.io")
+	.getAllUsers()
+	.then { res -> Void in
+		// res contains an array of users.
+	}
+	.catch { error in
+	  // An error happened.
+	}
+```
+```text/x-java
+WeDeploy
+	.auth("https://<serviceID>-<projectID>.wedeploy.io")
+	.getAllUsers()
+	.execute();
+```
 
 </article>
 
@@ -146,7 +163,7 @@ WeDeploy
 
 ## Delete user
 
-There are two ways to delete a user. 
+There are two ways to delete a user.
 
 **Delete currentUser**
 
@@ -163,6 +180,7 @@ WeDeploy
 	});
 ```
 
+
 **Delete user by id**
 
 ```javascript
@@ -176,21 +194,20 @@ WeDeploy
 		// An error happened.
 	});
 ```
-
 ```swift
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
+	.auth("https://<serviceID>.<projectID>.wedeploy.io")
 	.deleteUser(id: "userId")
 	.then { _ -> Void in
-		// Successfully deleted
+		// Successfully deleted.
 	}
-	.catch { err in
-		// Not deleted.
+	.catch { error in
+		// An error happened.
 	}
 ```
 ```text/x-java
 WeDeploy
-	.auth("<auth-url>")
+	.auth("https://<serviceID>-<projectID>.wedeploy.io")
 	.deleteUser("userId")
 	.execute();
 ```
