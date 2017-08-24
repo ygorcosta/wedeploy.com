@@ -89,6 +89,18 @@ This method is only available for domain providers that allow CNAME configuratio
 
 </article>
 
+<article id="5">
+
+## Custom WeDeploy domains
+
+Every time you install a service, we create a unique URL for that service (service-project.wedeploy.io), but what if you want to add a cleaner URL for that service? This is easy to accomplish by simply adding a `*.wedeploy.io` domain as a custom domain on your service.
+
+The most common use of this functionality would be to add a "home service" for your project. This is often when you have a primary UI service that you want to make more friendly by simplifying its URL to just `project.wedeploy.io`.
+
+![WeDeploy Custom Domains](/images/docs/intro/custom-domains--wedeploy-domains.png)
+
+</article>
+
 ## What's next?
 
 * Learn more about using [environment variables](/docs/intro/environment-variables/).
