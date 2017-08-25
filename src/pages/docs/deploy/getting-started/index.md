@@ -100,6 +100,10 @@ myservice
 
 WeDeploy uses this JSON file to reference a service by ID in case it's already created. If a service with a matching ID does not exist, it creates a new service for you.
 
+**Using .gitignore**
+
+WeDeploy does not deploy anything that is declared in your `.gitignore` file as long this config file is in the same folder as your `wedeploy.json`.
+
 </article>
 
 <article id="4">
