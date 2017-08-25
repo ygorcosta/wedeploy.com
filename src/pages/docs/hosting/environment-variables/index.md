@@ -46,4 +46,20 @@ Here are the environment variables in action within a `wedeploy.json`.
 }
 ```
 
+
+<aside>
+
+###### <span class="icon-16-alert"></span> Attention
+
+The folder specified in `WEDEPLOY_WEB_PATH` will be resolved relative to the folder where the `wedeploy.json` is located. In the example below, if `WEDEPLOY_WEB_PATH` is specified as `dist/`, then the `dist` folder must be next to `wedeploy.json`.
+
+```
+myapp
+  ├── wedeploy.json
+  ├── dist
+  └── src
+```
+
+</aside>
+
 </article>
