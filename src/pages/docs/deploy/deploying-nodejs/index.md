@@ -48,12 +48,9 @@ All WeDeploy projects use similar configuration files to prepare your projects f
 
 Below is an example of a `wedeploy.json` for a Node.js container. The `id` for your services are uniquely determined by you.
 
-By default, we watch port 80 for you Node.JS services. If you want to designate a different port, you must do that in the `wedeploy.json`.
-
 ```application/json
 {
-	"id": "myservice",
-	"port": 3000
+	"id": "myservice"
 }
 ```
 
@@ -64,6 +61,17 @@ myservice
 ├── index.js
 ├── package.json
 └── wedeploy.json
+```
+
+**Ports**
+
+By default, we watch port 80 for you Node.JS services. If you want to designate a different port (like `3000`), you must do that in the `wedeploy.json`.
+
+```application/json
+{
+	"id": "myservice",
+	"port": 3000
+}
 ```
 
 </article>
