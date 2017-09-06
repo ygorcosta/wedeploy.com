@@ -26,7 +26,7 @@ The easiest way to configure your custom domain, is to add one of our WeDeploy n
 
 1. Go to your domain provider and find where you can set a custom name server.
 2. Enter one of the regional WeDeploy name servers from below.
-3. Wait for comfirmation from your provider regarding the changed name servers. (You can also check on your CLI using `dig NS yourdomain`)
+3. Wait for confirmation from your provider regarding the changed name servers. (You can also check on your CLI using `dig NS yourdomain`)
 4. Go to the service of your project, click on _"Custom Domains"_, and add the new domain.
 
 ![Custom Domains](/images/docs/intro/custom-domains--settings.png)
