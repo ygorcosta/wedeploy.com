@@ -1,5 +1,6 @@
 ---
 title: "Get Started"
-url: "//console.wedeploy.com/signup"
-weight: 6
+url: "https://console.wedeploy.com/signup"
+type: "button"
+weight: 5
 ---
