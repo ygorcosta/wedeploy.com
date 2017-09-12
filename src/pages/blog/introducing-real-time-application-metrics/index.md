@@ -17,7 +17,7 @@ layout: "blog"
 		<img src="/images/blog/post-14--0.gif" alt="metrics">
 </figure>
 
-Through our metrics API, we check the usage of memory, CPU, and bandwidth I/O of your projects every 45 seconds and populate them into easy-to-read graphs right on your WeDeploy Console.
+Through our metrics API, we check the usage of memory, CPU, and bandwidth I/O of your projects every 15 seconds and populate them into easy-to-read graphs right on your WeDeploy Console.
 
 This gives you the power to see how your services are performing and to further develop your applications with useful, accessible data.
 
