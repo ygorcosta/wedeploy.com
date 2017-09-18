@@ -19,6 +19,7 @@
 /**
  * @param content
  * @param page
+ * @param siteUrl
  */
 {template .mainPost}
 	<article class="container">
@@ -30,13 +31,11 @@
 
 		<div class="content">
 			{$content}
-
-			<div class="we-container">
-				<span class="we-circle">
-					<span class="we">We</span>
-				</span>
-			</div>
 		</div>
+
+		{call SocialButtons.render data="all"}
+			{param siteUrl: $siteUrl /}
+		{/call}
 	</article>
 {/template}
 
