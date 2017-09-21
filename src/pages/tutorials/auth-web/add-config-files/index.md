@@ -50,7 +50,7 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 
 ```application/json
 {
-	"id": "users",
+	"id": "auth",
 	"image": "wedeploy/auth:@site.version.image.auth@",
 	"env": {
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
