@@ -33,7 +33,7 @@ WeDeploy
 		}
 	})
 	.catch(function(error) {
-		alert('Email error:' error);
+		alert('Email error:', error);
 	});
 ```
 
