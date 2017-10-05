@@ -29,41 +29,43 @@ export function generateSnippetAndroid(dataDemoInstance) {
 
   let value = `WeDeploy weDeploy = new WeDeploy.Builder().build();`;
 
-  value += `\n\nweDeploy.data('https://data-tv.wedeploy.io')`;
+  value += `\n\nweDeploy.data("https://data-tv.wedeploy.io")`;
+
+  let filters = [];
 
   if (series) {
-    value += `\n\t.prefix("name", "${series}")`;
+    filters.push(`Filter.prefix("name", "${series}")`);
   }
   if (genres) {
-    value += `\n\t.prefix("genres", "${genres}")`;
+    filters.push(`Filter.prefix("genres", "${genres}")`);
   }
   for (let genre of Object.keys(genresSelected)) {
-    value += `\n\t.any("genres", "${genre}")`;
+    filters.push(`Filter.any("genres", "${genre}")`);
   }
   for (let rating of Object.keys(ratingsSelected)) {
-    value += `\n\t.gte("rating", "${rating}")`;
+    filters.push(`Filter.gte("rating", "${rating}")`);
   }
 
-  let filter = ``;
   const years = Object.keys(yearsSelected);
   if (years.length) {
-    filter += `\tFilter\n\t\t\t.equal("year", ${years.pop()})`;
+    filters.push(`Filter.equal("year", ${years.pop()})`);
   }
   for (let year of years) {
-    filter += `\n\t\t\t.or("year", ${year})`;
+    filters.push(`Filter.or("year", ${year})`);
   }
-  if (filter) {
-    value += `\n\t.where(\n\t${filter}\n\t)`;
+  if (filters.length > 0) {
+    const combinedFilters = filters
+      .reduce((acc, filter, idx) => idx === 0 ? filter : acc + `\n\t\t.and(${filter})`, '');
+    value += `\n\t.where(\n\t${combinedFilters}\n\t)`;
   }
 
-  value += `\n\t.orderBy("rating", "desc")
+  value += `\n\t.orderBy("rating", SortOrder.DESCENDING)
 \t.aggregate("years", "year", "terms")
 \t.aggregate("genres", "genres", "terms")
 \t.highlight("name")
 \t.limit(${itemsPerPage})
 \t.offset(${itemsPerPage * currentPage})
-\t.get("shows")
-\t.execute();`;
+\t.search("shows");`;
 
   return value;
 }
