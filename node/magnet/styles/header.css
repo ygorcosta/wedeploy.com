@@ -35,6 +35,10 @@
   padding-block-start: 24px;
   transition: background-color 1s ease-in-out, color .75s ease-in-out;
   will-change: background-color, color;
+
+  @media (--s-header) {
+    flex-wrap: wrap;
+  }
 }
 
 .header--1 {

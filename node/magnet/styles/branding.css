@@ -4,7 +4,13 @@
 /* ========================================================================== */
 
 .branding {
-  margin-inline-end: auto;
+  @media (--s-header) {
+    flex-basis: 100%;
+  }
+
+  @media (--l-header) {
+    margin-inline-end: auto;
+  }
 }
 
 .branding h1 {
