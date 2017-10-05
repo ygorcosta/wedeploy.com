@@ -19,7 +19,7 @@ We never could've anticipated the type of warm welcome we received for _beta_. O
 
 This spike in usage has been a powerful validation for us. We wanted to be certain that our platform could handle anything that was thrown at it before we moved out of this beginning stage. The last seven weeks have proven to us that the WeDeploy platform can do just that and we are so excited for this next journey ahead.
 
-We are happy to announce **[WeDeploy Stable!](/)**
+We are happy to announce **<a data-senna-off href="/">WeDeploy Stable!</a>**
 
 <figure>
   <img src="/images/blog/post-15--0.gif" alt="Pricing plans">
@@ -27,7 +27,7 @@ We are happy to announce **[WeDeploy Stable!](/)**
 
 ##### New pricing model (with free-forever plan)
 
-With this release, we are also beginning to offer paid plans for users that want to get even more out of WeDeploy. All the tiers are based on the consumption and usage of your projects and services. See our new [home page](/) for details regarding these pricing plans.
+With this release, we are also beginning to offer paid plans for users that want to get even more out of WeDeploy. All the tiers are based on the consumption and usage of your projects and services. See our new <a data-senna-off href="/">home page</a> for details regarding these pricing plans.
 
 ##### New account-level usage
 
