@@ -1,0 +1,47 @@
+{namespace PlugNPlay}
+
+/**
+ * @param selected
+ * @param phrase
+ */
+{template .render}
+  <section class="view--plugnplay">
+    <div class="group--plugnplay">
+      <h2 class="heading--plugnplay">Plug &amp; Play Services</h2>
+      <p class="summary--plugnplay">
+        WeDeploy is different because it allows you to augment your existing services or web applications with one of our predefined services. Why waste time building a whole new back-end architecture when you could just integrate an API into your application? WeDeploy offers you a set of services like Auth, Data, and Email so you can focus on what matters - building great applications.
+      </p>
+      <ul class="actions--plugnplay">
+        <li><a href="https://console.wedeploy.com/signup">Get Started</a></li>
+        <li><a href="https://wedeploy.com/docs/">Learn more about Services</a></li>
+      </ul>
+    </div>
+    <div class="group--plugnplay-demo">
+      <h3 class="heading--plugnplay-demo"><span>Two ways to start.</span> <span>Unlimited ways to be productive.</span></h3>
+      <div class="view--plugnplay-demo">
+        <div class="group-menu--plugnplay-demo">
+          <ul class="menu--plugnplay-demo">
+            <li class="item--plugnplay-demo{$selected == 'console' ? ' is-active' : ''}"><button class="button--plugnplay-demo" data-onclick="showConsole">Console</button></li>
+            <li class="item--plugnplay-demo{$selected == 'source' ? ' is-active' : ''}"><button class="button--plugnplay-demo" data-onclick="showSource">Source Code</button></li>
+          </ul>
+          <p class="tip tip--plugnplay-demo">Take a look!</p>
+        </div>
+        <div class="results--plugnplay-demo">
+          <img class="result--plugnplay-demo result-console--plugnplay-demo{$selected == 'console' ? ' is-active' : ''}" src="static/images/result-console--plugnplay.svg">
+          <pre class="result--plugnplay-demo result-sourcecode--plugnplay-demo{$selected == 'source' ? ' is-active' : ''}">
+            <code class="hljs javascript">
+{lb}
+{literal}
+  "id": "mydata",
+  "image": "wedeploy/data:1.0.0",
+  "memory": 512
+{/literal}
+{rb}
+            </code>
+          </pre>
+        </div>
+      </div>
+      <p class="note--plugnplay-demo">{$phrase}</p>
+    </div>
+  </section>
+{/template}

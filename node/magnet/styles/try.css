@@ -1,0 +1,48 @@
+@import "./_inset";
+
+/* Try
+/* ========================================================================== */
+
+.view--try {
+  @extend %inset-styles;
+
+  padding-block: 96px 120px;
+}
+
+/* Try: Heading
+/* ========================================================================== */
+
+.heading--try {
+  @extend %c-unset-h-styles;
+
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 60px;
+}
+
+/* Try: Summary
+/* ========================================================================== */
+
+.summary--try {
+  @extend %c-unset-p-styles;
+
+  color: var(--black-60);
+  font-size: 18px;
+  line-height: 24px;
+  margin-block-start: 12px;
+}
+
+/* Try: Actions
+/* ========================================================================== */
+
+.actions--try {
+  @extend %actions-styles;
+
+  & li:nth-child(1) a::after {
+    content: url("../images/actions--start.svg");
+    display: inline-block;
+    margin-block-start: 2px;
+    margin-inline-start: 12px;
+    size: 14px 13px;
+  }
+}

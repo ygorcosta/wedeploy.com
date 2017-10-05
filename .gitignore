@@ -1,3 +1,7 @@
-node_modules
-.temp
-dist
+node/electric/node_modules
+node/electric/dist
+
+node/magnet/node_modules
+node/magnet/.magnet
+node/magnet/**/*.soy.js
+node/magnet/static/styles/**

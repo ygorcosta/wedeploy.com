@@ -1,0 +1,23 @@
+{
+  "extends": ["liferay"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "require-jsdoc": 0,
+    "react/jsx-uses-vars": 2,
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+  },
+  "globals": {
+    "window": true,
+    "Filter": true,
+  }
+}

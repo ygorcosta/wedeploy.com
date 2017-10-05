@@ -1,0 +1,95 @@
+@import "./_inset";
+
+/* Plug & Play
+/* ========================================================================== */
+
+.view--plugnplay {
+  @extend %inset-styles;
+
+  background-color: color(var(--black) alpha(2%) blend(var(--blue) 1%));
+  padding-block: 66px 96px;
+
+  @media (--ml-feature) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & > * {
+    @media (--ml-feature) {
+      flex-basis: calc(50% - 18px);
+    }
+  }
+}
+
+/* Plug & Play Summary
+/* ========================================================================== */
+
+.heading--plugnplay {
+  @extend %c-unset-h-styles;
+
+  color: var(--black);
+  font-size: 33px;
+  font-weight: 900;
+  line-height: 42px;
+
+  &::before {
+    @extend %heading-symbol-styles;
+
+    content: url("../images/heading--plugnplay.svg");
+  }
+}
+
+.summary--plugnplay {
+  @extend %c-unset-p-styles;
+
+  color: var(--black-80);
+  font-size: 16px;
+  line-height: 24px;
+  margin-block-start: 24px;
+}
+
+.actions--plugnplay {
+  @extend %actions-styles;
+
+  & li, & a {
+    @media (width < 960px) {
+      width: 100%;
+    }
+  }
+
+  & li:nth-last-child(n+2) {
+    @media (width < 960px) {
+      margin-inline-end: 0;
+    }
+  }
+
+  & a {
+    @media (width < 960px) {
+      justify-content: center;
+    }
+  }
+}
+
+/* Plug & Play Demo
+/* ========================================================================== */
+
+.heading--plugnplay-demo {
+  @extend %c-unset-h-styles;
+
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 30px;
+  margin-block-start: 24px;
+
+  & span {
+    display: block;
+  }
+}
+
+.note--plugnplay-demo {
+  @extend %c-unset-p-styles;
+
+  color: var(--black-90);
+  font-size: 14px;
+  line-height: 24px;
+}

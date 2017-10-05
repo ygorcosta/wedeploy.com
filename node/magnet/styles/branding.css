@@ -1,0 +1,28 @@
+@import "./_inset";
+
+/* Branding
+/* ========================================================================== */
+
+.branding {
+  margin-inline-end: auto;
+}
+
+.branding h1 {
+  @extend %c-unset-h-styles;
+
+  margin-inline-start: -6px;
+}
+
+.branding img {
+  display: block;
+  size: 137px 48px;
+}
+
+.branding--text {
+  fill: var(--black);
+  transition: fill 2s ease-in-out;
+
+  @nest .header--3 & {
+    fill: var(--white);
+  }
+}

@@ -1,0 +1,85 @@
+{namespace Pricing}
+
+/**
+ * @param plans
+ */
+{template .render}
+  <section class="view--pricing">
+    <h2 class="heading--pricing">Simple Pricing</h2>
+    <p class="summary--pricing">Know exactly what you’re paying for.</p>
+    <ul class="plans--pricing">
+      <li>
+        <h3 class="heading--pricing-free">Free</h3>
+        <p class="summary--pricing-basic">For developers who only wanna start a hobby project.</p>
+        <p class="price--pricing">{$plans.free.price}</p>
+        <ul class="specs--pricing">
+          <li><strong>{$plans.free.trafficPretty}</strong> Transfer</li>
+          <li><strong>{$plans.free.memoryPretty}</strong> Memory</li>
+          <li><strong>{$plans.free.cpu}</strong> CPU</li>
+          <li><strong>{$plans.free.storagePretty}</strong> Storage</li>
+          <li><strong>{$plans.free.instances}</strong> Service Instances</li>
+          <li><strong>{$plans.free.canScale ? 'Full' : 'No'}</strong> Scaling Instances Capability</li>
+          <li><strong>{$plans.free.customDomains}</strong> Custom Domains</li>
+          <li><strong>{$plans.free.collaborators}</strong> Collaborators</li>
+          <li><strong>{$plans.free.maximumProjects}</strong> Projects</li>
+          <li><strong>{$plans.free.support ? 'Yes' : 'No'}</strong> 24/7 Technical Support</li>
+        </ul>
+        <p class="action--pricing"><a href="https://console.wedeploy.com/account/billing">Get Started - <span>$0</span></a></p>
+      </li>
+      <li>
+        <h3 class="heading--pricing-basic">Basic</h3>
+        <p class="summary--pricing-basic">For professional developers with some active projects.</p>
+        <p class="price--pricing">{$plans.basic.price}</p>
+        <ul class="specs--pricing">
+          <li><strong>{$plans.basic.trafficPretty}</strong> Transfer</li>
+          <li><strong>{$plans.basic.memoryPretty}</strong> Memory</li>
+          <li><strong>{$plans.basic.cpu}</strong> CPU</li>
+          <li><strong>{$plans.basic.storagePretty}</strong> Storage</li>
+          <li><strong>{$plans.basic.instances}</strong> Service Instances</li>
+          <li><strong>{$plans.basic.canScale ? 'Full' : 'No'}</strong> Scaling Instances Capability</li>
+          <li><strong>{$plans.basic.customDomains}</strong> Custom Domains</li>
+          <li><strong>{$plans.basic.collaborators}</strong> Collaborators</li>
+          <li><strong>{$plans.basic.maximumProjects}</strong> Projects</li>
+          <li><strong>{$plans.basic.support ? 'Yes' : 'No'}</strong> 24/7 Technical Support</li>
+        </ul>
+        <p class="action--pricing"><a href="https://console.wedeploy.com/account/billing">Start 7-day <span>Free Trial</span></a></p>
+      </li>
+      <li class="item--pricing-standard">
+        <h3 class="heading--pricing-standard">Standard</h3>
+        <p class="summary--pricing-basic">For teams up to 10 people handling many projects.</p>
+        <p class="price--pricing">{$plans.standard.price}</p>
+        <ul class="specs--pricing">
+          <li><strong>{$plans.standard.trafficPretty}</strong> Transfer</li>
+          <li><strong>{$plans.standard.memoryPretty}</strong> Memory</li>
+          <li><strong>{$plans.standard.cpu}</strong> CPU</li>
+          <li><strong>{$plans.standard.storagePretty}</strong> Storage</li>
+          <li><strong>{$plans.standard.instances}</strong> Service Instances</li>
+          <li><strong>{$plans.standard.canScale ? 'Full' : 'No'}</strong> Scaling Instances Capability</li>
+          <li><strong>{$plans.standard.customDomains}</strong> Custom Domains</li>
+          <li><strong>{$plans.standard.collaborators}</strong> Collaborators</li>
+          <li><strong>{$plans.standard.maximumProjects}</strong> Projects</li>
+          <li><strong>{$plans.standard.support ? 'Yes' : 'No'}</strong> 24/7 Technical Support</li>
+        </ul>
+        <p class="action--pricing"><a href="https://console.wedeploy.com/account/billing">Start 7-day <span>Free Trial</span></a></p>
+      </li>
+      <li>
+        <h3 class="heading--pricing-premium">Premium</h3>
+        <p class="summary--pricing-basic">For companies with multiple teams and projects.</p>
+        <p class="price--pricing">{$plans.premium.price}</p>
+        <ul class="specs--pricing">
+          <li><strong>{$plans.premium.trafficPretty}</strong> Transfer</li>
+          <li><strong>{$plans.premium.memoryPretty}</strong> Memory</li>
+          <li><strong>{$plans.premium.cpu}</strong> CPU</li>
+          <li><strong>{$plans.premium.storagePretty}</strong> Storage</li>
+          <li><strong>{$plans.premium.instances}</strong> Service Instances</li>
+          <li><strong>{$plans.premium.canScale ? 'Full' : 'No'}</strong> Scaling Instances Capability</li>
+          <li><strong>{$plans.premium.customDomains}</strong> Custom Domains</li>
+          <li><strong>{$plans.premium.collaborators}</strong> Collaborators</li>
+          <li><strong>{$plans.premium.maximumProjects}</strong> Projects</li>
+          <li><strong>{$plans.premium.support ? 'Yes' : 'No'}</strong> 24/7 Technical Support</li>
+        </ul>
+        <p class="action--pricing"><a href="https://console.wedeploy.com/account/billing">Start 7-day <span>Free Trial</span></a></p>
+      </li>
+    </ul>
+  </section>
+{/template}

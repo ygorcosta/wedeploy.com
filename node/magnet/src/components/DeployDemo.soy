@@ -1,0 +1,26 @@
+{namespace DeployDemo}
+
+/**
+ */
+{template .render}
+  <div class="demo-deploy">
+    <div class="demo-deploy-laptop"></div>
+    <div class="demo-deploy-console">
+      <div class="demo-deploy-banner">
+        <div class="demo-deploy-controls"></div>
+      </div>
+      <div class="demo-deploy-content">
+<pre>{literal}<span>•</span>  /yoursite $ <strong>ls</strong>
+   <strong>index.html</strong>
+<span>•</span>  ~/yoursite $ <strong>we deploy</strong>
+>  <strong>yourapp</strong> in <strong>wedeploy</strong>
+   Initializing deployment process
+   Deploying [1/1]
+   Preparing package
+<strong>!</strong>  Deployment Successful in 3s
+<strong>!</strong>  Deployed <strong>hosting-yourapp.wedeploy.io</strong>
+<span>•</span>  /yoursite ${/literal}</pre>
+      </div>
+    </div>
+  </div>
+{/template}

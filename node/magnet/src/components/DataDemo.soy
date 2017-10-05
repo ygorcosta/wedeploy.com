@@ -1,0 +1,250 @@
+{namespace DataDemo}
+
+/**
+ * @param currentPage
+ * @param documents
+ * @param genres
+ * @param genresSelected
+ * @param highlights
+ * @param itemsPerPage
+ * @param queryTime
+ * @param total
+ * @param years
+ * @param yearsSelected
+ * @param ratingsSelected
+ * @param snippet
+ */
+{template .render}
+  <div class="view--datademo">
+    <div class="group-source group-source--datademo">
+      <ul class="menu-source menu-source--datademo">
+        <li><button class="is-web is-active" data-onclick="showSnippet" data-index="0"><span>Web</span></button></li>
+        <li><button class="is-ios" data-onclick="showSnippet" data-index="1"><span>iOS</span></button></li>
+        <li><button class="is-android" data-onclick="showSnippet" data-index="2"><span>Android</span></button></li>
+      </ul>
+      <div class="panels-source panels-source--datademo">
+        <div class="panel-source panel-source--datademo is-active">
+          <pre class="code-source code-source--datademo">
+            <code class="hljs javascript">
+              {$snippet}
+            </code>
+          </pre>
+          <ul class="menu-panel-source menu-panel-source--datademo">
+            <li><a href="https://wedeploy.com/tutorials/data-web/get-started/">Visit Step-by-step Tutorial</a></li>
+            <li><a href="https://wedeploy.com/docs/data/getting-started/">Go to Docs</a></li>
+          </ul>
+        </div>
+        <div class="panel-source panel-source--datademo">
+          <pre class="code-source code-source--datademo">
+            <code class="hljs swift">
+              {$snippet}
+            {literal}
+            {/literal}
+            </code>
+          </pre>
+          <ul class="menu-panel-source menu-panel-source--datademo">
+            <li><a href="https://wedeploy.com/tutorials/data-ios/get-started/">Visit Step-by-step Tutorial</a></li>
+            <li><a href="https://wedeploy.com/docs/data/getting-started/">Go to Docs</a></li>
+          </ul>
+        </div>
+        <div class="panel-source panel-source--datademo">
+          <pre class="code-source code-source--datademo">
+            <code class="hljs java">
+              {$snippet}
+            </code>
+          </pre>
+          <ul class="menu-panel-source menu-panel-source--datademo">
+            <li><a href="https://wedeploy.com/tutorials/data-android/get-started/">Visit Step-by-step Tutorial</a></li>
+            <li><a href="https://wedeploy.com/docs/data/getting-started/">Go to Docs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="group-example group-example--datademo">
+      <section class="demo-data">
+        <p class="tip tip--datademo">Try it out!</p>
+        <div class="view-1">
+          {call .header data="all" /}
+          {call .searchSeries data="all" /}
+        </div>
+        <div class="view-2">
+          {call .sidebar data="all" /}
+          {call .results data="all" /}
+        </div>
+      </section>
+    </div>
+  </div>
+{/template}
+
+
+/**
+  */
+{template .header}
+  <header class="demo-data-header">
+    <h2>Library</h2>
+    <h3>TV Shows</h3>
+  </header>
+{/template}
+
+/**
+  */
+{template .searchSeries}
+  <form class="demo-data-search" name="searchSeries" data-onsubmit="preventSubmission">
+    <label>
+      <input type="search" name="search" placeholder="Search series" data-oninput="searchSeries" autocomplete="off">
+      <span></span>
+    </label>
+  </form>
+{/template}
+
+/**
+ */
+{template .sidebar}
+  <div class="demo-data-sidebar">
+    {call .sidebarGenres data="all" /}
+    {call .sidebarYears data="all" /}
+    {call .sidebarRatings data="all" /}
+  </div>
+{/template}
+
+/**
+ * @param genres
+ * @param genresSelected
+ */
+{template .sidebarGenres}
+  <section class="demo-data-sidebar-genre">
+    <h4>genre</h4>
+    <form name="searchGenres" data-onsubmit="preventSubmission">
+      <label>
+        <input type="search" name="search" placeholder="Search genres" data-oninput="searchSeries" autocomplete="off">
+        <span></span>
+      </label>
+    </form>
+    <ul>
+      {foreach $genre in $genres}
+        <li>
+          <label>
+            <input type="checkbox" value="{$genre.value}" data-onchange="selectGenres" key="{randomInt(100)}"{if $genresSelected[$genre.value]} checked{/if}>
+            <span></span>
+            <span>{$genre.value}</span>
+            <span>{$genre.total}</span>
+          </label>
+        </li>
+      {/foreach}
+    </ul>
+  </section>
+{/template}
+
+/**
+ * @param years
+ * @param yearsSelected
+ */
+{template .sidebarYears}
+  <section class="demo-data-sidebar-year">
+    <h4>year</h4>
+    <ul>
+      {foreach $year in $years}
+        <li>
+          <label>
+            <input type="checkbox" value="{$year.value}" data-onchange="selectYears" key="{randomInt(100)}"{if $yearsSelected[$year.value]} checked{/if}>
+            <span></span>
+            <span>{$year.value}</span>
+            <span>{$year.total}</span>
+          </label>
+        </li>
+      {/foreach}
+    </ul>
+  </section>
+{/template}
+
+/**
+ * @param ratingsSelected
+ */
+{template .sidebarRatings}
+  <section class="demo-data-sidebar-ratings">
+    <h4>rating</h4>
+    <ul>
+      {for $value in range(4)}
+        {let $rating: 4 - $value /}
+        <li>
+          <label>
+            <input type="checkbox" value="{$rating}" aria-label="{$rating} star &amp; Up" data-onchange="selectRatings" key="{randomInt(100)}"{if $ratingsSelected[$rating]} checked{/if}>
+            <span></span>
+          </label>
+        </li>
+      {/for}
+    </ul>
+  </section>
+{/template}
+
+/**
+ * @param currentPage
+ * @param documents
+ * @param highlights
+ * @param itemsPerPage
+ * @param queryTime
+ * @param total
+ */
+{template .results}
+  <section class="demo-data-results {if $total == 0}demo-data-results--none{/if}">
+    {if $total > 0}
+      <p>{$total} results found in {$queryTime}ms</p>
+    {else}
+      <p>No series found. Clear all filters and try another term.</p>
+    {/if}
+
+    <ol class="demo-data-results-items" aria-live="assertive">
+      {foreach $document in $documents}
+        {let $name: $highlights[$document.id].name /}
+        <li>
+          <img src="{$document.image}" />
+          <span>
+            <span>{$name}</span>
+            {if isNonnull($document.rating)}
+              <span>{$document.rating}</span>
+            {/if}
+          </span>
+        </li>
+      {/foreach}
+    </ol>
+
+    {call .resultsPagination data="all" /}
+  </section>
+{/template}
+
+/**
+ * @param currentPage
+ * @param itemsPerPage
+ * @param total
+ */
+{template .resultsPagination}
+  {if $total > 0}
+    {let $pages: ceiling($total/$itemsPerPage) /}
+    <ol class="demo-data-results-pagination" role="navigation" aria-label="pagination">
+      <li>
+        <button class="first-pagination--datademo pagination-control--datademo" data-onclick="firstPage" aria-label="first"></button>
+      </li>
+      <li>
+        <button class="previous-pagination--datademo pagination-control--datademo" data-onclick="previousPage" aria-label="previous"></button>
+      </li>
+      {let $lastPage: ceiling($total / $itemsPerPage) + 1 /}
+      {let $startPage: 5 * floor($currentPage/5) + 1 /}
+      {let $endPage: min($startPage + 5, $lastPage) /}
+      {for $page in range($startPage, $endPage)}
+        <li>
+          {if ($currentPage + 1) == $page}
+            <button class="pagination-control--datademo" value="{$page}" data-onclick="pageFromEvent" disabled>{$page}</button>
+          {else}
+            <button class="pagination-control--datademo" value="{$page}" data-onclick="pageFromEvent">{$page}</button>
+          {/if}
+        </li>
+      {/for}
+      <li>
+        <button class="next-pagination--datademo pagination-control--datademo" data-onclick="nextPage" aria-label="next"></button>
+      </li>
+      <li>
+        <button class="last-pagination--datademo pagination-control--datademo" data-onclick="lastPage" aria-label="last"></button>
+      </li>
+    </ol>
+  {/if}
+{/template}

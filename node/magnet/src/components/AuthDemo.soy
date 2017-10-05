@@ -1,0 +1,127 @@
+{namespace AuthDemo}
+
+/**
+ */
+{template .render}
+  <div class="view--authdemo">
+    <div class="group-source group-source--authdemo">
+      <ul class="menu-source menu-source--authdemo">
+        <li><button class="is-web is-active" data-onclick="showSnippet"><span>Web</span></button></li>
+        <li><button class="is-ios" data-onclick="showSnippet"><span>iOS</span></button></li>
+        <li><button class="is-android" data-onclick="showSnippet"><span>Android</span></button></li>
+      </ul>
+      <div class="panels-source panels-source--authdemo">
+        {call .panels data="all" /}
+      </div>
+    </div>
+    <div class="group-example group-example--authdemo">
+      {call .demo data="all" /}
+    </div>
+  </div>
+{/template}
+
+/**
+  */
+{template .panels}
+  <div class="panel-source panel-source--authdemo is-active">
+    <pre class="code-source code-source--authdemo">
+      <code class="hljs javascript">
+      {literal}
+CODE
+      {/literal}
+      </code>
+    </pre>
+    <ul class="menu-panel-source menu-panel-source--authdemo">
+      <li><a href="https://wedeploy.com/tutorials/data-web/get-started/">Visit Step-by-step Tutorial</a></li>
+      <li><a href="https://wedeploy.com/docs/data/getting-started/">Go to Docs</a></li>
+    </ul>
+  </div>
+  <div class="panel-source panel-source--authdemo">
+    <pre class="code-source code-source--authdemo">
+      <code class="hljs swift">
+      {literal}
+SOME OTHER CODE
+      {/literal}
+      </code>
+    </pre>
+    <ul class="menu-panel-source menu-panel-source--authdemo">
+      <li><a href="https://wedeploy.com/tutorials/data-ios/get-started/">Visit Step-by-step Tutorial</a></li>
+      <li><a href="https://wedeploy.com/docs/data/getting-started/">Go to Docs</a></li>
+    </ul>
+  </div>
+  <div class="panel-source panel-source--authdemo">
+    <pre class="code-source code-source--authdemo">
+      <code class="hljs java">
+      {literal}
+AND THEN SOME OTHER, OTHER CODE
+      {/literal}
+      </code>
+    </pre>
+    <ul class="menu-panel-source menu-panel-source--authdemo">
+      <li><a href="https://wedeploy.com/tutorials/data-android/get-started/">Visit Step-by-step Tutorial</a></li>
+      <li><a href="https://wedeploy.com/docs/data/getting-started/">Go to Docs</a></li>
+    </ul>
+  </div>
+{/template}
+
+/**
+  */
+{template .demo}
+  <div class="demo--authdemo">
+    <section class="group--authdemo group-signin--authdemo">
+      <div class="heading-group--authdemo heading-group-signin--authdemo">
+        <h3 class="subheading--authdemo subheading-signin--authdemo">My Digital Bank</h3>
+        <h4 class="heading--authdemo heading-signin--authdemo">Login</h4>
+      </div>
+      <div class="login--authdemo">
+        <input class="text-control--authdemo login-username--authdemo" placeholder="yours@email.com">
+        <input class="text-control--authdemo login-password--authdemo" placeholder="your password">
+        <p class="forgot--authdemo forgot-signin--authdemo"><a href="">Forgotten password?</a></p>
+        <button class="login-submit--authdemo" type="submit">Login</button>
+      </div>
+      <div class="altlogin--authdemo">
+        <p class="altlogin-heading--authdemo">Or continue with</p>
+        <ul class="altlogin-list--authdemo">
+          <li><a href="" aria-label="google"></a></li>
+          <li><a href="" aria-label="facebook"></a></li>
+          <li><a href="" aria-label="github"></a></li>
+        </ul>
+      </div>
+      <p class="footer--authdemo footer-login--authdemo">
+        <span>Don’t you have an account?</span>
+        <a href="">Sign up</a>
+      </p>
+    </section>
+    <section class="group--authdemo group-signup--authdemo">
+      <button class="back--authdemo back-signup--authdemo" aria-label="go back"></button>
+      <h3 class="heading-signup--authdemo">Sign up</h3>
+      <form class="form-signup--authdemo">
+        <input class="text-control--authdemo name-control--authdemo" placeholder="Your full name">
+        <input class="text-control--authdemo email-control--authdemo" placeholder="yours@email.com">
+        <input class="text-control--authdemo password-control--authdemo" placeholder="your password">
+        <button class="submit--control-authdemo submit-signup--authdemo" type="submit">SIGN UP</button>
+      </form>
+      <div class="altlogin--authdemo">
+        <p class="altlogin-heading--authdemo">Or continue with</p>
+        <ul class="altlogin-list--authdemo">
+          <li><a href="" aria-label="google"></a></li>
+          <li><a href="" aria-label="facebook"></a></li>
+          <li><a href="" aria-label="github"></a></li>
+        </ul>
+      </div>
+      <p class="footer--authdemo footer-signup--authdemo">
+        <span>Already have an account?</span>
+        <a href="">Log in</a>
+      </p>
+    </section>
+    <section class="group--authdemo group-created--authdemo is-active">
+      <button class="back--authdemo back-created--authdemo" aria-label="go back"></button>
+      <h3 class="heading--authdemo heading-created--authdemo">Account Created</h3>
+      <p class="summary--authdemo summary-created--authdemo">One more step left. Confirm your account for having full access to My Digital Bank. All future notifications will be sent to the registered email.</p>
+      <p class="footer--authdemo footer-created--authdemo">
+        <span>Back to the previous screen?</span>
+        <a href="">Click here</a>
+      </p>
+    </section>
+  </div>
+{/template}

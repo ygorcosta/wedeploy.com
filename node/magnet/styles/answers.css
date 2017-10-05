@@ -1,0 +1,142 @@
+@import "./_inset";
+
+/* Answers (986px + 36px inset)
+/* ========================================================================== */
+
+@custom-media --s-answers (width <  1058px);
+@custom-media --l-answers (width >= 1058px);
+
+.view--answers {
+  @extend %inset-styles;
+
+  @media (--sm) {
+    padding-block: 48px 132px;
+  }
+
+  @media (--l) {
+    padding-block: 96px 120px;
+  }
+}
+
+.group--answers {
+  margin-block-start: 66px;
+
+  @media (--l) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  & > * {
+    @media (--l) {
+      flex-basis: calc(50% - 24px * 2);
+    }
+
+    &:nth-child(2n+1) {
+      @media (--l) {
+        margin-inline-end: 24px;
+      }
+    }
+
+    &:nth-child(2n+2) {
+      @media (--l) {
+        margin-inline-start: 24px;
+      }
+    }
+
+    &:nth-child(n+2) {
+      @media (--sm) {
+        margin-block-start: 66px;
+      }
+    }
+
+    &:nth-last-child(-n+3) {
+      @media (--l) {
+        margin-block-start: 66px;
+      }
+    }
+  }
+}
+
+/* Answers: Headings
+/* ========================================================================== */
+
+.main-heading--answers {
+  @extend %c-unset-h-styles;
+
+  font-size: 27px;
+  font-weight: 900;
+  line-height: 36px;
+}
+
+.heading--answers {
+  @extend %c-unset-p-styles;
+
+  font-size: 18px;
+  line-height: 24px;
+  padding-inline-start: calc(24px + 18px);
+  position: relative;
+
+  &::before {
+    content: url("../images/heading--answers.svg");
+    inset-inline-start: 0;
+    position: absolute;
+    size: 24px;
+  }
+}
+
+/* Answers: Summmaries
+/* ========================================================================== */
+
+.summary--answers {
+  @extend %c-unset-p-styles;
+
+  color: var(--black-90);
+  font-size: 16px;
+  line-height: 24px;
+  margin-block-start: 12px;
+  padding-inline-start: calc(24px + 18px);
+}
+
+/* Answers: More
+/* ========================================================================== */
+
+.section--answers-more {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 24px;
+  padding-inline-start: 42px;
+
+  @media (--s-answers) {
+    margin-block: 18px 24px;
+  }
+}
+
+.heading--answers-more {
+  @extend %c-unset-h-styles;
+
+  font-weight: 900;
+  margin-inline-end: .375em;
+}
+
+.summary--answers-more {
+  @extend %c-unset-p-styles;
+
+  & a {
+    @extend %c-unset-a-styles;
+
+    background-image: linear-gradient(currentColor 25%, transparent 50%);
+    background-repeat: no-repeat;
+    background-position: calc(200% - .5px) 100%;
+    background-size: 200% 2px;
+    color: var(--green);
+    display: inline-block;
+    padding-block-end: 6px;
+    transition: background-position 250ms;
+
+    &:hover {
+      background-position: 100% 100%;
+    }
+  }
+}

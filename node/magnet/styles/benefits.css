@@ -1,0 +1,116 @@
+@import "./_inset";
+
+/* Benefits (792px + 36px inset)
+/* ========================================================================== */
+
+@custom-media --s-benefits (width <  864px);
+@custom-media --l-benefits (width >= 864px);
+
+.view--benefits {
+  @extend %inset-styles;
+
+  background-color: color(var(--black) alpha(2%) blend(var(--blue) 1%));
+  padding-block: 96px 120px;
+}
+
+.group--benefits {
+  justify-content: center;
+  margin-block-start: 54px;
+
+  @media (--ml) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  & > * {
+    @media (--ml) {
+      flex-basis: calc(50% - 36px);
+    }
+
+    &:nth-child(n+2) {
+      @media (--s) {
+        margin-block-start: 36px;
+      }
+    }
+
+    &:nth-child(2n+1) {
+      @media (--ml) {
+        margin-inline-end: 36px;
+      }
+    }
+
+    &:nth-child(2n+2) {
+      @media (--ml) {
+        margin-inline-start: 36px;
+      }
+    }
+
+    &:nth-last-child(-n+2) {
+      @media (--ml) {
+        margin-block-start: 36px;
+      }
+    }
+  }
+}
+
+/* Main Heading and Summary
+/* ========================================================================== */
+
+.heading--benefits {
+  @extend %c-unset-h-styles;
+
+  font-size: 33px;
+  font-weight: 900;
+  line-height: 42px;
+}
+
+.summary--benefits {
+  @extend %c-unset-p-styles;
+
+  color: var(--black-80);
+  font-size: 16px;
+  line-height: 24px;
+  margin-block-start: 24px;
+}
+
+/* More Headings and Summaries
+/* ========================================================================== */
+
+.heading--benefits-tools, .heading--benefits-deployment, .heading--benefits-management, .heading--benefits-networking {
+  @extend %c-unset-h-styles;
+
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 30px;
+
+  &::before {
+    display: block;
+    margin-block-end: 18px;
+    size: 42px;
+  }
+}
+
+.heading--benefits-tools::before {
+  content: url("../images/heading--benefits-tools.svg");
+}
+
+.heading--benefits-deployment::before {
+  content: url("../images/heading--benefits-deployment.svg");
+}
+
+.heading--benefits-management::before {
+  content: url("../images/heading--benefits-management.svg");
+}
+
+.heading--benefits-networking::before {
+  content: url("../images/heading--benefits-networking.svg");
+}
+
+.summary--benefits-tools, .summary--benefits-deployment, .summary--benefits-management, .summary--benefits-networking {
+  @extend %c-unset-p-styles;
+
+  font-size: 16px;
+  color: var(--black-90);
+  margin-block-start: 18px;
+  line-height: 24px;
+}

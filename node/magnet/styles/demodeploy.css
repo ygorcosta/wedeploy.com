@@ -1,0 +1,196 @@
+@import "./base";
+
+/* Demo: Deploy: Console
+/* ========================================================================== */
+
+/* Demo */
+
+.group--start-demo {
+  flex-basis: 50%;
+  flex-grow: 1;
+  position: relative;
+
+  @media (--s-header) {
+    display: none;
+  }
+}
+
+/* Demo */
+
+.demo-deploy-laptop {
+  height: 624px;
+
+  &::before {
+    margin-top: -18px;
+    position: absolute;
+  }
+}
+
+.demo-deploy-laptop::before {
+  inset-start: 0;
+  transition: transform 1s;
+  will-change: opacity, transform;
+
+  @nest .slide-1--start & {
+    content: url("../images/laptop.svg");
+    transform: translate3d(132px, -36px, 0);
+    size: 1188px 733px;
+  }
+
+  @nest .slide-2--start & {
+    transform: translate3d(calc(25vw + 138px), calc(-93px + 18px), 0);
+    content: url("../images/phone.svg");
+    size: 490px 778px;
+
+    @media (width < 1300px) {
+      transform: translate3d(228px, calc(-93px + 18px), 0);
+    }
+
+    @media (width < 1000px) {
+      transform: translate3d(132px, calc(-93px + 18px), 0);
+    }
+  }
+
+  @nest .slide-3--start & {
+    content: url("../images/watch.svg");
+    size: 432px 704px;
+    transform: translate3d(calc(25vw + 156px), -54px, 0);
+
+    @media (width < 1300px) {
+      transform: translate3d(372px, -75px, 0);
+    }
+
+    @media (width < 1000px) {
+      transform: translate3d(300px, -75px, 0);
+    }
+
+    @media (width < 860px) {
+      transform: translate3d(200px, -75px, 0);
+    }
+  }
+
+  @nest .slide--start-preload & {
+    opacity: 0;
+  }
+}
+
+/* Demo
+/* ========================================================================== */
+
+.demo-deploy-console {
+  background-color: var(--black);
+  box-shadow: 12px 18px 48px 0 color(var(--black) alpha(60%));
+  border-radius: 6px;
+  inset-start: 0;
+  max-width: calc(100% - 36px);
+  position: absolute;
+  padding: 6px 12px 24px;
+  transition: transform 1s;
+  width: 396px;
+  will-change: opacity, transform;
+
+  @nest .slide-1--start & {
+    transform: translate3d(42px, 60px, 0);
+  }
+
+  @nest .slide-2--start & {
+    transform: translate3d(192px, 92px, 0);
+
+    @media (width < 1300px) {
+      transform: translate3d(36px, 92px, 0);
+    }
+  }
+
+  @nest .slide-3--start & {
+    transform: translate3d(150px, 84px, 0);
+
+    @media (width < 1400px) {
+      transform: translate3d(36px, 90px, 0);
+    }
+
+    @media (width < 1000px) {
+      transform: translate3d(36px, 132px, 0);
+    }
+  }
+
+  @nest .slide--start-preload & {
+    opacity: 0;
+  }
+}
+
+/* Demo: Deploy: Console: Controls */
+
+.demo-deploy-banner {
+  position: relative;
+
+  &::after {
+    color: color(var(--white) alpha(60%));
+    content: "bash";
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    inset-inline: 0;
+    text-align: center;
+  }
+}
+
+/* Demo: Deploy: Console: Controls */
+
+.demo-deploy-controls {
+  background-color: var(--yellow);
+  inset-block-start: 8px;
+  inset-inline-start: calc(6px + 8px);
+  position: absolute;
+
+  &, &::before, &::after {
+    border-radius: 50%;
+    display: inline-block;
+    size: 8px;
+  }
+
+  &::before, &::after {
+    content: "";
+    inset-block-start: 0;
+    position: absolute;
+  }
+
+  &::before {
+    background-color: var(--red);
+    inset-inline-start: calc((6px + 8px) * -1);
+  }
+
+  &::after {
+    background-color: var(--green);
+    inset-inline-start: calc(6px + 8px);
+  }
+}
+
+/* Demo: Deploy: Console: Content */
+
+.demo-deploy-content {
+  color: color(var(--white) alpha(45%));
+  font-family: "Roboto Mono", "ArialUnicodeMS", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  overflow: auto;
+  margin-block-start: 12px;
+
+  & pre {
+    @extend %c-unset-pre-styles;
+  }
+
+  & span, & strong {
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  & span {
+    font-family: "Lato", monospace;
+    font-weight: 900;
+  }
+
+  & strong {
+    font-weight: 700;
+  }
+}

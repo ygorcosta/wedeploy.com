@@ -1,0 +1,19 @@
+{namespace termsPage}
+
+/**
+ * @param content
+ */
+{template .render}
+	{call main.render data="all"}
+		{param elementClasses: 'blog' /}
+		{param content kind="html"}
+			<div class="blog terms">
+				<div class="container">
+					<div class="content">
+						{$content}
+					</div>
+				</div>
+			</div>
+		{/param}
+	{/call}
+{/template}
