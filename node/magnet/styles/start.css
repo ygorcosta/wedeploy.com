@@ -115,11 +115,11 @@
 
   & strong {
     display: inline-block;
-    min-height: 54px;
     padding-inline-end: .125em;
 
     @media (--s) {
       display: block;
+      min-height: 54px;
     }
 
     @nest .slide-1--start &, .slide-2--start & {
