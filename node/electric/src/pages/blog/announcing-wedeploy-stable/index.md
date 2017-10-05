@@ -21,21 +21,17 @@ This spike in usage has been a powerful validation for us. We wanted to be certa
 
 We are happy to announce **[WeDeploy Stable!](/)**
 
+<figure>
+  <img src="/images/blog/post-15--0.gif" alt="Pricing plans">
+</figure>
+
 ##### New pricing model (with free-forever plan)
 
 With this release, we are also beginning to offer paid plans for users that want to get even more out of WeDeploy. All the tiers are based on the consumption and usage of your projects and services. See our new [home page](/) for details regarding these pricing plans.
 
-<figure>
-  <img src="/images/blog/post-15--pricing.png" alt="Pricing plans">
-</figure>
-
 ##### New account-level usage
 
 A few weeks ago we released our real time application metrics feature. We have utilized that same metrics API to bring you the total resource consumption for your entire account. This will give you full awareness of your accounts usage so that you can find the best plan for your needs.
-
-<figure>
-  <img src="/images/blog/post-15--usage.png" alt="Account level usage">
-</figure>
 
 ##### Our future together
 
