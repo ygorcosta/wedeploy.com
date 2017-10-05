@@ -4,6 +4,14 @@
 /* ========================================================================== */
 
 .navigation {
+  @media (--s-header) {
+    flex-basis: 100%;
+  }
+
+  @media (width < 640px) {
+    margin-block-start: 12px;
+  }
+
   & ul {
     @extend %c-unset-l-styles;
 

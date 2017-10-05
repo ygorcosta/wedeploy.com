@@ -11,6 +11,10 @@
   transition: background-color 1s ease-in-out, color .75s ease-in-out;
   will-change: background-color, color;
 
+  @media (width < 640px) {
+    padding-block-start: 12px;
+  }
+
   &.slide-1--start {
     background-color: color(var(--black) alpha(10%) blend(var(--blue) 6%));
     background-color: color(var(--black) alpha(2%));
