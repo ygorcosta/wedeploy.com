@@ -18,6 +18,6 @@ export const controller = app => {
 
   app.get('/site.json', (req, res) => {
     const siteJson = fs.readFileSync(path.join(electricPath, 'site.json'));
-    res.json(siteJson);
+    res.json(siteJson.toString());
   });
 };
