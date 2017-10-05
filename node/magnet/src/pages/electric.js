@@ -1,3 +1,4 @@
+import fs from 'fs';
 import path from 'path';
 import express from 'express';
 
@@ -14,4 +15,9 @@ export const controller = app => {
   app.use('/tutorials', express.static(path.join(electricPath, 'tutorials')));
   app.use('/updates', express.static(path.join(electricPath, 'updates')));
   app.use('/vendor', express.static(path.join(electricPath, 'vendor')));
+
+  app.get('/site.json', (req, res) => {
+    const siteJson = fs.readFileSync(path.join(electricPath, 'site.json'));
+    res.json(siteJson);
+  });
 };
