@@ -13,7 +13,6 @@
   @extend %inset-styles;
 
   padding-block: 96px 120px;
-  padding-block-start: calc(96px + 72px);
 
   @media (--ml-feature) {
     align-items: flex-end;
