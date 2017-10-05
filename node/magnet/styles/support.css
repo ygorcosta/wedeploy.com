@@ -33,6 +33,11 @@
       inset-inline-start: 0;
     }
 
+    @media (--m) {
+      inset-block-start: -174px;
+      width: 462px;
+    }
+
     @media (--l) and (width < 1200px) {
       inset-inline-end: calc((100% - 1272px) / 2 - 66px + 6px * 37);
       width: 348px;

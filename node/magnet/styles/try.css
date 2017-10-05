@@ -45,4 +45,26 @@
     margin-inline-start: 12px;
     size: 14px 13px;
   }
+
+  @media (--ml) {
+    justify-content: center;
+  }
+
+  & li, & a {
+    @media (width < 960px) {
+      width: 100%;
+    }
+  }
+
+  & li:nth-last-child(n+2) {
+    @media (width < 960px) {
+      margin-inline-end: 0;
+    }
+  }
+
+  & a {
+    @media (width < 960px) {
+      justify-content: center;
+    }
+  }
 }
