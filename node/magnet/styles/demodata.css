@@ -110,6 +110,10 @@
     position: relative;
     width: 100%;
 
+    @media (--s) {
+      font-size: 16px;
+    }
+
     &:hover {
       & + span {
         background: color(var(--black) alpha(12%));
@@ -511,7 +515,8 @@
 .next-pagination--datademo,
 .last-pagination--datademo {
   &::before {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
@@ -524,7 +529,7 @@
 
 .first-pagination--datademo::before {
   content: url("../images/demo-data-results-pagination-first.svg");
-  size: 12px 10px;
+  size: 12px 11px;
 }
 
 .first-pagination--datademo:hover::before {
@@ -533,7 +538,7 @@
 
 .previous-pagination--datademo::before {
   content: url("../images/demo-data-results-pagination-previous.svg");
-  size: 6px 10px;
+  size: 6px 11px;
 }
 
 .previous-pagination--datademo:hover::before {
@@ -542,7 +547,7 @@
 
 .next-pagination--datademo::before {
   content: url("../images/demo-data-results-pagination-next.svg");
-  size: 6px 10px;
+  size: 6px 11px;
 }
 
 .next-pagination--datademo:hover::before {
@@ -551,7 +556,7 @@
 
 .last-pagination--datademo::before {
   content: url("../images/demo-data-results-pagination-last.svg");
-  size: 12px 10px;
+  size: 12px 11px;
 }
 
 .last-pagination--datademo:hover::before {
