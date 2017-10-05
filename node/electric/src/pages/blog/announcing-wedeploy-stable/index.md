@@ -3,11 +3,15 @@ title: "Announcing WeDeploy Stable"
 description: "Nearly two months ago, we announced the release of WeDeploy Beta. Our goal for beta was to pack our platform full of new features that helped developers all over the world build great applications faster than ever before."
 date: "October 4, 2017"
 author: "Eduardo Lundgren"
-image: "http://wedeploy.com/images/blog/post-15--pricing.png"
+image: "http://wedeploy.com/images/blog/post-15--0.png"
 layout: "blog"
 ---
 
 <article>
+
+<figure>
+  <img src="/images/blog/post-15--0.png" alt="Stable">
+</figure>
 
 {$page.description}
 
