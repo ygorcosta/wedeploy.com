@@ -60,8 +60,8 @@ export function generateSnippetAndroid(dataDemoInstance) {
   }
 
   value += `\n\t.orderBy("rating", SortOrder.DESCENDING)
-\t.aggregate("years", "year", "terms")
-\t.aggregate("genres", "genres", "terms")
+\t.aggregate(Aggregation.terms("years", "year"))
+\t.aggregate(Aggregation.terms("genres", "genres"))
 \t.highlight("name")
 \t.limit(${itemsPerPage})
 \t.offset(${itemsPerPage * currentPage})
@@ -101,10 +101,10 @@ export function generateSnippetSwift(dataDemoInstance) {
   let filter = ``;
   const years = Object.keys(yearsSelected);
   if (years.length) {
-    filter += `\tFilter\n\t\t\t.equal(field: "year", value: ${years.pop()})`;
+    filter += `\tFilter\n\t\t\t.equal("year", ${years.pop()})`;
   }
   for (let year of years) {
-    filter += `\n\t\t\t.or(Filter.equal(field: "year", value: ${year}))`;
+    filter += `\n\t\t\t.or(Filter.equal("year", ${year}))`;
   }
   if (filter) {
     value += `\n\t.where(filter: \n\t${filter}\n\t)`;
