@@ -93,7 +93,7 @@ Together with your `wedeploy.json`, we'll try to determine what language your pr
 
 We're very excited about [Liferay Digital Experience Platform (DXP)](https://www.liferay.com/digital-experience-platform). There are so many cool capabilities and we want to give WeDeploy users the opportunity to try them out in seconds.
 
-Today, we're introducing Liferay DXP with a 15-day trial license.
+Today, we're introducing Liferay DXP with a 30-day trial license.
 
 Besides that, we're adding support for [hot deployment](https://dev.liferay.com/discover/portal/-/knowledge_base/7-0/installing-apps-manually). That means you can now create a `deploy` folder, then add themes, portlets, OSGi modules or a license by using WAR, JAR and XML files.
 
