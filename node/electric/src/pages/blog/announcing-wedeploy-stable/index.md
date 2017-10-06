@@ -27,7 +27,7 @@ We are happy to announce **<a data-senna-off href="/">WeDeploy Stable!</a>**
 
 ##### New pricing model (with free-forever plan)
 
-With this release, we are also beginning to offer paid plans for users that want to get even more out of WeDeploy. All the tiers are based on the consumption and usage of your projects and services. See our new <a data-senna-off href="/">home page</a> for details regarding these pricing plans.
+With this release, we are also beginning to offer paid plans for users that want to get even more out of WeDeploy. All the tiers are based on the consumption and usage of your projects and services. See our new <a data-senna-off href="/#pricing">home page</a> for details regarding these pricing plans.
 
 ##### New account-level usage
 
