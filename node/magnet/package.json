@@ -57,5 +57,6 @@
     "last 2 firefox versions",
     "last 2 ios versions",
     "last 2 safari versions"
-  ]
+  ],
+  "private": true
 }
