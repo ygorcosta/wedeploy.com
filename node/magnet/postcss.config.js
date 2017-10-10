@@ -24,9 +24,16 @@ module.exports = (ctx) => ({
     require('postcss-size')(),
 
     // backward compatibility
+    require('postcss-svg')({
+      dirs: [ '../static/styles' ],
+      svgo: true
+    }),
+
+    // backward compatibility
     require('autoprefixer')(),
 
     // compression
+    require('postcss-discard-comments')(),
     require('cssnano')({
       preset: ['default', {
         discardComments: true,
