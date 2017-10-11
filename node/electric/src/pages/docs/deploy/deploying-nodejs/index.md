@@ -74,6 +74,26 @@ By default, we watch port 80 for you Node.JS services. If you want to designate 
 }
 ```
 
+## Specifying the Node.JS version
+
+By default, the Node.JS version will be determined by us. Normally this is the current stable version. If you want to designate a different version, you may specify it in [node](https://docs.npmjs.com/files/package.json#engines) property in `package.json`. You may add a fixed version or a range.
+
+Fixed version:
+
+```json
+"engines": {
+	"node": "8.6.0"
+}
+```
+
+Range:
+
+```json
+"engines": {
+	"node": ">=8.4 <8.6"
+}
+```
+
 </article>
 
 ## What's next?
