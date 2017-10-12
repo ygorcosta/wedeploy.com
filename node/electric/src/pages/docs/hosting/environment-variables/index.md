@@ -26,8 +26,8 @@ Here's a list of all the environment variables you can use with this service.
 
 | Key | Default Value | Description |
 | - | - | - |
-| WEDEPLOY_WEB_PATH | `/` | Path to serve static files |
-| WEDEPLOY_WEB_ERROR_PATH | `/_error` | Path to serve [error pages](/docs/hosting/custom-error-pages/) |
+| WEDEPLOY_WEB_PATH | `./` | Path to serve static files |
+| WEDEPLOY_WEB_ERROR_PATH | `./_error` | Path to serve [error pages](/docs/hosting/custom-error-pages/) |
 
 </div>
 
