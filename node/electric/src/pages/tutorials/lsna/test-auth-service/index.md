@@ -10,8 +10,10 @@ weight: 7
 
 #### {$page.title}
 
-Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+Great! Now you have added all the code you need to start creating new users and allowing them to login to your chat app. Lets try your app out locally so you can see the Auth service in action.
 
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+Go to Chrome (or your preferred web browser) and open the `index.html` file in your project folder.
 
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Donec sed odio dui.
+Try going to the _Create Account_ page and creating a new user. Then, once you enter the chat page, you can logout with the arrow button in the top left of the chat screen and then try signing in with that user again.
+
+Nice job, you're app is coming along nicely. We are still missing a major piece though. Lets add the message data so that we can start messaging our friends in real time.
