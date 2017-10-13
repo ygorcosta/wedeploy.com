@@ -1,0 +1,236 @@
+/* Feature
+/* ========================================================================== */
+
+@custom-media --s-feature  (width <  660px);
+@custom-media --sm-feature (width <  900px);
+@custom-media --m-feature  (--sm-feature) and (--ml-feature);
+@custom-media --ml-feature (width >= 660px);
+@custom-media --l-feature  (width >= 900px);
+
+.feature {
+  @extend %inset-styles;
+
+  padding-block: 96px 120px;
+
+  @media (--ml-feature) {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & > * {
+    @media (--ml-feature) {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+}
+
+.feature-more {
+  @media (--s-feature) {
+    margin-block-start: 54px;
+  }
+
+  & > :nth-child(n+2) {
+    margin-block-start: 36px;
+  }
+}
+
+/* Feature: Headings and Summaries
+/* ========================================================================== */
+
+.feature-heading {
+  @extend %unset-h;
+
+  font-size: 33px;
+  font-weight: 900;
+  line-height: 42px;
+}
+
+.feature-heading-more {
+  @extend %unset-h;
+
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 30px;
+}
+
+.feature-heading::before {
+  @extend %heading-symbol;
+}
+
+.feature-more-heading::before {
+  @extend %secondary-heading-symbol;
+}
+
+.feature-summary {
+  @extend %unset-p;
+
+  color: var(--black-80);
+  font-size: 16px;
+  line-height: 24px;
+  margin-block-start: 24px;
+}
+
+.feature-more-summary {
+  @extend %unset-p;
+
+  color: var(--black-80);
+  font-size: 16px;
+  line-height: 24px;
+  margin-block-start: 18px;
+
+  & a {
+    @extend %unset-a;
+    @extend %underline;
+
+    color: var(--green);
+  }
+}
+
+/* Feature: Features
+/* ========================================================================== */
+
+.feature-features {
+  @extend %features;
+
+  @media (--l-feature) {
+    column-count: 2;
+    column-gap: 24px;
+    max-width: 100%;
+    width: 480px;
+  }
+
+  & > :nth-child(n+2) {
+    @media (--sm-feature) {
+      margin-block-start: 24px;
+    }
+  }
+
+  & > :nth-child(3n+2), & > :nth-child(3n+3) {
+    @media (--l-feature) {
+      margin-block-start: 24px;
+    }
+  }
+}
+
+/* Feature: Actions
+/* ========================================================================== */
+
+.feature-actions {
+  @extend %actions;
+}
+
+/* Feature: Data
+/* ========================================================================== */
+
+.-data .feature-more {
+  @media (--ml-feature) {
+    margin-inline-start: 36px;
+  }
+}
+
+.-data .feature-heading::before {
+  content: url(../images/heading--data.svg);
+}
+
+.-data .feature-features > ::before {
+  content: url("../images/features.svg" param(--color var(--yellow)));
+}
+
+.feature-more-heading.-sync::before {
+  content: url(../images/heading--data-delight.svg);
+}
+
+.feature-more-heading.-build::before {
+  content: url(../images/heading--data-build.svg);
+}
+
+/* Feature: Email
+/* ========================================================================== */
+
+.feature.-email {
+  @media (--ml-feature) {
+    flex-direction: row-reverse;
+  }
+}
+
+.-email .feature-more {
+  @media (--ml-feature) {
+    margin-inline-end: 36px;
+  }
+}
+
+.-email .feature-heading::before {
+  content: url(../images/heading--email.svg);
+}
+
+.-email .feature-features > ::before {
+  content: url("../images/features.svg" param(--color var(--orange)));
+}
+
+.feature-more-heading.-send::before {
+  content: url(../images/heading--email-send.svg);
+}
+
+.feature-more-heading.-integrate::before {
+  content: url(../images/heading--email-integrate.svg);
+}
+
+/* Feature: Auth
+/* ========================================================================== */
+
+.-auth .feature-main {
+  @media (--ml-feature) {
+    margin-inline-end: 36px;
+  }
+}
+
+.-auth .feature-heading::before {
+  content: url(../images/heading--auth.svg);
+}
+
+.-auth .feature-features > ::before {
+  content: url("../images/features.svg" param(--color var(--violet)));
+}
+
+.feature-more-heading.-store::before {
+  content: url(../images/heading--auth-store.svg);
+}
+
+.feature-more-heading.-social::before {
+  content: url(../images/heading--auth-integrate.svg);
+}
+
+/* Feature: Hosting
+/* ========================================================================== */
+
+.feature.-hosting {
+  @media (--ml-feature) {
+    flex-direction: row-reverse;
+  }
+}
+
+.-hosting .feature-more {
+  @media (--ml-feature) {
+    margin-inline-end: 36px;
+  }
+}
+
+.-hosting .feature-heading::before {
+  content: url(../images/heading--hosting.svg);
+}
+
+.-hosting .feature-features > ::before {
+  content: url("../images/features.svg" param(--color var(--red)));
+}
+
+/* Feature: Deploy
+/* ========================================================================== */
+
+.feature-more-heading.-deploy::before {
+  content: url(../images/heading--hosting-deploy.svg);
+}
+
+.feature-more-heading.-control::before {
+  content: url(../images/heading--hosting-control.svg);
+}

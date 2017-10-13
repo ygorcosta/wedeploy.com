@@ -21,7 +21,7 @@
     "wicg-focus-ring": "^2.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.4",
+    "autoprefixer": "^7.1.5",
     "cssnano": "^3.10.0",
     "eslint": "^4.8.0",
     "eslint-config-liferay": "^1.0.2",
@@ -32,7 +32,7 @@
     "postcss-color-function": "^4.0.0",
     "postcss-color-hex-alpha": "^3.0.0",
     "postcss-custom-media": "^6.0.0",
-    "postcss-custom-properties": "^6.1.0",
+    "postcss-custom-properties": "^6.2.0",
     "postcss-custom-selectors": "^4.0.1",
     "postcss-dir-pseudo-class": "^2.1.0",
     "postcss-extend-rule": "^1.1.0",
@@ -46,6 +46,7 @@
     "postcss-selector-matches": "^3.0.1",
     "postcss-selector-not": "^3.0.1",
     "postcss-size": "^2.0.0",
+    "postcss-svg": "^2.2.0",
     "practical-styles": "github:jonathantneal/practical-styles",
     "prettier": "^1.7.4"
   },
@@ -57,5 +58,6 @@
     "last 2 firefox versions",
     "last 2 ios versions",
     "last 2 safari versions"
-  ]
+  ],
+  "private": true
 }

@@ -13,11 +13,11 @@ export default class Start extends Component {
 
   type() {
     const viewHeader = document.querySelector('.header');
-    const viewStart = document.querySelector('.view--start');
+    const viewStart = document.querySelector('.start');
 
-    const demoConsole = document.querySelector('.demo-deploy-console');
-    const demoLaptop = document.querySelector('.demo-deploy-laptop');
-    const target = viewStart.querySelector('.heading--start strong');
+    const demoConsole = document.querySelector('.start-demo-console');
+    const demoDevice = document.querySelector('.start-demo-device');
+    const target = viewStart.querySelector('.start-heading-phrase-text');
     const opts = {
       typeSpeed: 100,
       deleteSpeed: 40,
@@ -25,7 +25,7 @@ export default class Start extends Component {
     };
 
     const demoConsoleTransform = getComputedStyle(demoConsole).transform.replace(/^none$/, '');
-    const demoLaptopTransform = getComputedStyle(demoLaptop).transform.replace(/^none$/, '');
+    const demoDeviceTransform = getComputedStyle(demoDevice).transform.replace(/^none$/, '');
 
     demoConsole.animate([
       { opacity: 0, transform: `${ demoConsoleTransform } translateX(20px)` },
@@ -37,9 +37,9 @@ export default class Start extends Component {
       fill: 'backwards'
     });
 
-    demoLaptop.animate([
-      { opacity: 0, transform: `${ demoLaptopTransform } translateX(20px)` },
-      { opacity: 1, transform: `${ demoLaptopTransform } translateX(0)` }
+    demoDevice.animate([
+      { opacity: 0, transform: `${ demoDeviceTransform } translateX(20px)` },
+      { opacity: 1, transform: `${ demoDeviceTransform } translateX(0)` }
     ], {
       delay: 600,
       duration: 600,
@@ -50,30 +50,30 @@ export default class Start extends Component {
     viewStart.classList.remove('slide--start-preload');
 
     malarkey(target, opts).pause(10000).call(fadeOut).delete().call(function () {
-      viewHeader.classList.remove('header--1');
-      viewHeader.classList.add('header--2');
-      viewStart.classList.remove('slide-1--start');
-      viewStart.classList.add('slide-2--start');
+      viewHeader.classList.remove('start--1');
+      viewHeader.classList.add('start--2');
+      viewStart.classList.remove('start--1');
+      viewStart.classList.add('start--2');
 
       this();
     }).call(fadeIn).type('application.').pause(10000).call(fadeOut).delete().call(function () {
-      viewHeader.classList.remove('header--2');
-      viewHeader.classList.add('header--3');
-      viewStart.classList.remove('slide-2--start');
-      viewStart.classList.add('slide-3--start');
+      viewHeader.classList.remove('start--2');
+      viewHeader.classList.add('start--3');
+      viewStart.classList.remove('start--2');
+      viewStart.classList.add('start--3');
 
       this();
     }).call(fadeInWithDelay).type('API.').pause(10000).call(fadeOut).delete().call(function () {
-      viewHeader.classList.remove('header--3');
-      viewHeader.classList.add('header--1');
-      viewStart.classList.remove('slide-3--start');
-      viewStart.classList.add('slide-1--start');
+      viewHeader.classList.remove('start--3');
+      viewHeader.classList.add('start--1');
+      viewStart.classList.remove('start--3');
+      viewStart.classList.add('start--1');
 
       this();
     }).call(fadeIn).type('website.');
 
     function fadeIn() {
-      demoLaptop.animate([
+      demoDevice.animate([
         { opacity: 0 },
         { opacity: 1 }
       ], {
@@ -86,7 +86,7 @@ export default class Start extends Component {
     }
 
     function fadeInWithDelay() {
-      demoLaptop.animate([
+      demoDevice.animate([
         { opacity: 0 },
         { opacity: 1 }
       ], {
@@ -100,7 +100,7 @@ export default class Start extends Component {
     }
 
     function fadeOut() {
-      demoLaptop.animate([
+      demoDevice.animate([
         { opacity: 1 },
         { opacity: 0 }
       ], {

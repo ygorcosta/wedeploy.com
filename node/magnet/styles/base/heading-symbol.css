@@ -1,0 +1,14 @@
+/* Heading Symbol ::before Styles
+/* ========================================================================== */
+
+%heading-symbol {
+  display: block;
+  margin-block-end: 30px;
+  size: 66px;
+}
+
+%secondary-heading-symbol {
+  display: block;
+  margin-block-end: 18px;
+  size: 42px;
+}

@@ -1,0 +1,99 @@
+/* Enterprise (1440px + 36px inset)
+/* ========================================================================== */
+
+@custom-media --s-enterprise (width <  1512px);
+@custom-media --l-enterprise (width >= 1512px);
+
+.enterprise {
+  @extend %inset-styles;
+
+  align-items: center;
+  display: flex;
+
+  @media (--s-enterprise) {
+    padding-block: 60px;
+  }
+
+  @media (--l-enterprise) {
+    padding-block: 96px;
+  }
+
+  @media (width < 960px) {
+    flex-wrap: wrap;
+  }
+
+  /* Enterprise: Image
+  /* ======================================================================== */
+
+  &::before {
+    content: url(../images/heading--enterprise.svg);
+    display: block;
+    flex-shrink: 0;
+    size: 60px 96px;
+
+    @media (width < 960px) {
+      margin-inline-end: calc(100% - 60px);
+    }
+
+    @media (width >= 960px) {
+      margin-inline-end: 48px;
+    }
+  }
+}
+
+.enterprise-content {
+  flex-shrink: 1;
+
+  @media (width >= 960px) {
+    margin-inline-end: 48px;
+  }
+}
+
+/* Enterprise: Heading
+/* ========================================================================== */
+
+.enterprise-heading {
+  @extend %unset-h;
+
+  font-size: 27px;
+  font-weight: 900;
+  line-height: 36px;
+  position: relative;
+
+  @media (width < 960px) {
+    margin-block-start: 48px;
+  }
+}
+
+/* Enterprise: Summary
+/* ========================================================================== */
+
+.enterprise-summary {
+  @extend %unset-p;
+
+  color: var(--black-80);
+  font-size: 16px;
+  line-height: 24px;
+  margin-block-start: 24px;
+}
+
+/* Enterprise: Action
+/* ========================================================================== */
+
+.enterprise-action {
+  @extend %unset-p;
+
+  @media (width < 960px) {
+    flex-basis: 100%;
+    margin-block-start: 36px;
+  }
+
+  @media (width >= 960px) {
+    margin-inline-start: auto;
+  }
+
+  & a {
+    @extend %unset-a;
+    @extend %black-button;
+  }
+}

@@ -1,0 +1,60 @@
+/* Header
+/* ========================================================================== */
+
+.header {
+  @extend %header-padding-inline;
+
+  align-items: center;
+  display: flex;
+  inset-block-start: 0;
+  inset-inline: 0;
+  padding-block: 18px;
+  position: absolute;
+  transition: background-color .3s;
+  z-index: 0;
+
+  @media (--l-nav) {
+    margin-inline-start: -6px;
+  }
+
+  @nest [data-expanded="true"] & {
+    background-color: var(--white);
+  }
+}
+
+.header-brand {
+  @extend %unset-h;
+}
+
+.header-brand-image {
+  display: block;
+  size: 161px 42px;
+}
+
+.header-brand-text {
+  fill: var(--black);
+  transition: fill 2s ease-in-out;
+
+  @nest .start--3 & {
+    fill: var(--white);
+  }
+
+  @nest [data-expanded="true"] & {
+    fill: var(--black);
+    transition: fill .3s ease-in-out;
+  }
+}
+
+%header-padding-inline {
+  @media (--s-nav) {
+    padding-inline: 24px;
+  }
+
+  @media (--l-nav) and (width < 1686px) {
+    padding-inline: 36px;
+  }
+
+  @media (width >= 1686px) {
+    padding-inline: calc(50% - 807px);
+  }
+}
