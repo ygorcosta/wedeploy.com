@@ -10,7 +10,7 @@ import {userPlans} from '../utils/state.js';
 
 import '../components/AuthDemo.js';
 import '../components/DataDemo.js';
-import '../components/DeployDemo.soy.js';
+import '../components/Header.js'
 import '../components/Start.js';
 import '../components/Bubbles.js';
 import '../components/PlugNPlay.js';
@@ -60,7 +60,7 @@ export default class Index extends Component {
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/static/styles/main.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:500,700">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:900&text=%E2%80%A2">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:900&amp;text=%E2%80%A2">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/arta.min.css">
   <script src="https://rawgit.com/web-animations/web-animations-js/master/web-animations.min.js"></script>
   <body>

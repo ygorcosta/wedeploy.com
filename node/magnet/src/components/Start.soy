@@ -3,23 +3,58 @@
 /**
  */
 {template .render}
-  <section class="view--start slide-1--start slide--start-preload">
-    <div class="group--start">
-      <div class="group--start-heading">
-        <p class="alert--start"><a href="https://wedeploy.com/blog/announcing-wedeploy-stable/">Introducing our new pricing plans!<span></span></a></p>
-        <h2 class="heading--start"><span>Your <strong class="dynamic_text--start">website.</strong></span> <span>In the cloud.</span> <span>Within seconds.</span></h2>
-      </div>
-      <div class="group--start-summary">
-        <p class="summary--start">WeDeploy helps you build from simple to complex applications. We give you predefined services that can speed up your development process.</p>
-        <ul class="actions--start">
-          <li><a href="https://console.wedeploy.com/signup">Get Started, It’s Free</a></li>
-          <li><a href="javascript:Intercom('show');">Contact Sales</a></li>
-        </ul>
-        <p class="note--start">All paid plans also come with a free 7-day trial - Cancel at any time.</p>
-      </div>
+  <section class="start start--1">
+    <div class="start-group">
+      {call .content /}
     </div>
-    <div class="group--start-demo">
-      {call DeployDemo.render /}
-    </div>
+    <div class="start-demo">
+      {call .demo /}
   </section>
+{/template}
+
+/**
+ */
+{template .content}
+  <div class="start-group--heading">
+    <p class="start-alert">
+      <a class="start-alert-link" href="https://wedeploy.com/blog/announcing-wedeploy-stable/">Introducing our new pricing plans!<span class="start-alert-symbol"></span></a>
+    </p>
+    <h2 class="start-heading">
+      <span class="start-heading-line">Your <span class="start-heading-phrase"><span class="start-heading-phrase-text">website.</span><span class="start-heading-phrase-cursor"></span></span></span>
+      <span class="start-heading-line">In the cloud.</span>
+      <span class="start-heading-line">Within seconds.</span>
+    </h2>
+  </div>
+  <div class="start-group--summary">
+    <p class="start-summary">WeDeploy helps you build from simple to complex applications. We give you predefined services that can speed up your development process.</p>
+    <ul class="start-actions">
+      <li><a href="https://console.wedeploy.com/signup">Get Started, It’s Free</a></li>
+      <li><a href="javascript:Intercom('show');">Contact Sales</a></li>
+    </ul>
+    <p class="start-note">All paid plans also come with a free 7-day trial - Cancel at any time.</p>
+  </div>
+{/template}
+
+/**
+ */
+{template .demo}
+  <div class="start-demo-device"></div>
+  <div class="start-demo-console">
+    <div class="start-demo-banner">
+      <div class="start-demo-controls"></div>
+    </div>
+    <div class="start-demo-content">
+<pre>{literal}<span>•</span>  /yoursite $ <strong>ls</strong>
+   <strong>index.html</strong>
+<span>•</span>  ~/yoursite $ <strong>we deploy</strong>
+>  <strong>yourapp</strong> in <strong>wedeploy</strong>
+   Initializing deployment process
+   Deploying [1/1]
+   Preparing package
+<strong>!</strong>  Deployment Successful in 3s
+<strong>!</strong>  Deployed <strong>hosting-yourapp.wedeploy.io</strong>
+<span>•</span>  /yoursite${/literal}</pre>
+      </div>
+    </div>
+  </div>
 {/template}

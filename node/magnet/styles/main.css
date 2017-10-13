@@ -1,51 +1,34 @@
-@import "./_inset";
-
 /* WeDeploy.com
 /* ========================================================================== */
 
-@import "./fontface";
-@import "./feature";
+@import "./base/font-face"; /* import and font-face must come first */
 
-@import "./answers";
-@import "./auth";
-@import "./authdemo-created";
-@import "./authdemo-signup";
-@import "./auth-demo";
-@import "./benefits";
-@import "./data";
-@import "./datademo";
-@import "./demodata";
-@import "./demodeploy";
-@import "./email";
-@import "./enterprise";
-@import "./footer";
-@import "./header";
-@import "./highlights";
-@import "./hosting";
-@import "./plugnplay";
-@import "./plugnplay-demo";
-@import "./possibilities";
-@import "./pricing";
-@import "./start";
-@import "./support";
-@import "./try";
-
-/* Reset
-/* ========================================================================== */
-
-*, ::before, ::after {
-  box-sizing: border-box;
-}
-
-/* Body
-/* ========================================================================== */
-
-body {
-  @extend %c-unset-body-styles;
-
-  background-color: var(--white);
-  color: var(--black);
-  font: 15px/24px "Circular Std";
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
+@import "./base/actions";
+@import "./base/buttons";
+@import "./base/colors";
+@import "./base/custom-media";
+@import "./base/document";
+@import "./base/features";
+@import "./base/focus-ring";
+@import "./base/heading-symbol";
+@import "./base/inset";
+@import "./base/reset";
+@import "./base/underline";
+@import "./components/Header";
+@import "./components/HeaderNav";
+@import "./components/Start";
+@import "./components/StartDemo";
+@import "./components/Highlights";
+@import "./components/Possibilities";
+@import "./components/Plugnplay";
+@import "./components/PlugnplayDemo";
+@import "./components/Feature";
+@import "./components/DataDemo";
+@import "./components/Pricing";
+@import "./components/Enterprise";
+@import "./components/Benefits";
+@import "./components/Answers";
+@import "./components/Support";
+@import "./components/Try";
+@import "./components/Footer";
+@import "practical-styles";

@@ -1,0 +1,73 @@
+/* Plug & Play
+/* ========================================================================== */
+
+.plugnplay {
+  @extend %inset-styles;
+
+  background-color: color(var(--black) alpha(2%) blend(var(--blue) 1%));
+  padding-block: 66px 96px;
+
+  @media (--l-nav) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & > * {
+    @media (--l-nav) {
+      flex-basis: calc(50% - 18px);
+    }
+  }
+}
+
+.plugnplay-content {
+  @media (--ml-feature) {
+    padding-inline-end: calc(36px / 2);
+  }
+}
+
+.plugnplay-demo {
+  @media (--ml-feature) {
+    flex-grow: 1;
+    max-width: calc(50% - 18px);
+    padding-inline-start: calc(36px / 2);
+
+    @media (--l) {
+      align-self: flex-end;
+      margin-block-end: calc(-96px - 72px);
+    }
+  }
+}
+
+/* Plug & Play: Heading
+/* ========================================================================== */
+
+.plugnplay-heading {
+  @extend %unset-h;
+
+  color: var(--black);
+  font-size: 33px;
+  font-weight: 900;
+  line-height: 42px;
+
+  &::before {
+    @extend %heading-symbol;
+
+    content: url("../images/heading--plugnplay.svg");
+  }
+}
+
+/* Plug & Play: Summary
+/* ========================================================================== */
+
+.plugnplay-summary {
+  @extend %unset-p;
+
+  color: color(var(--black) alpha(80%));
+  font-size: 16px;
+  line-height: 24px;
+  margin-block-start: 24px;
+}
+
+.plugnplay-actions {
+  @extend %actions;
+}
