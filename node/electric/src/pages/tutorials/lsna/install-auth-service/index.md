@@ -10,8 +10,10 @@ weight: 5
 
 #### {$page.title}
 
-Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+There are many ways to use WeDeploy. You can either deploy your source code via our CLI tool or GitHub integration, or you can install services like Auth, Data and Email on our Console.
 
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+When you deployed your source code before, you probably noticed that WeDeploy created a Hosting service to serve those files. Now we want to install a WeDeploy Auth service so that we can start creating users and signing them into the chat app.
 
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Donec sed odio dui.
+To do this, go back to the <a href="https://console.wedeploy.com" target="_blank">WeDeploy Console</a> and select your project. Then, click on the _Install Service_ button and select the _WeDeploy Auth_ service. Name your Auth service `auth` and then click _Install Auth_.
+
+Now your auth service will initiate for a few seconds and then it will be ready for us to use.

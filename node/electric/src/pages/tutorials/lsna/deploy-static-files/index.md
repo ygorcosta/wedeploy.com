@@ -20,4 +20,4 @@ To deploy, open your terminal and enter the project that you downloaded in the p
 we deploy -p yourproject
 ```
 
-Now you can go to `ui-yourproject.wedeploy.io` (replacing `yourproject` with the project name you used above) and see your site live.
+Now you can go to `ui-yourproject.wedeploy.io` (replacing `yourproject` with the project name you used above) and see your site live. You can also login to the <a href="https://console.wedeploy.com" target="_blank">WeDeploy Console</a> and see the details of the hosting service you deployed.
