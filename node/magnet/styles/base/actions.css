@@ -1,0 +1,59 @@
+/* Actions
+/* ========================================================================== */
+
+%actions {
+  @extend %unset-l;
+
+  display: flex;
+  margin-block-start: 48px;
+
+  @media (--sm) {
+    flex-wrap: wrap;
+  }
+
+  & li, & a {
+    @media (--s-nav) {
+      width: 100%;
+    }
+  }
+
+  & li {
+    &:nth-child(1) {
+      @media (--sm) {
+        margin-block-end: 12px;
+      }
+
+      @media (--s-nav) {
+        margin-inline-end: 0;
+      }
+    }
+
+    &:nth-last-child(n+2) {
+      @media (--l-nav) {
+        margin-inline-end: 12px;
+      }
+    }
+
+    &:nth-child(odd) {
+      & a {
+        @extend %green-button;
+      }
+    }
+
+    &:nth-child(even) {
+      & a {
+        @extend %black-button;
+      }
+    }
+  }
+
+  & a {
+    @extend %unset-a;
+
+    display: inline-block;
+
+    @media (--s-nav) {
+      justify-content: center;
+    }
+  }
+}
