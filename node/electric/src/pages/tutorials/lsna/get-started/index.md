@@ -10,7 +10,7 @@ weight: 1
 
 #### Get Started
 
-Building simple to complex applications with WeDeploy is easy. This tutorial will help you to build a real time chat application that requires user login. You will be using WeDeploy Hosting to serve the HTML, CSS, and JavaScript files, WeDeploy Data to send messages in real time, and then WeDeploy Auth to validate user login.
+Building simple to complex applications with WeDeploy is easy. This workshop will help you to build a real time chat application that requires user login. You will be using WeDeploy Hosting to serve the HTML, CSS, and JavaScript files, WeDeploy Data to send messages in real time, and then WeDeploy Auth to validate user login.
 
 If you find yourself stuck or have a question during the workshop, don't hesitate to raise your hand and one of the WeDeploy team members will come help you.
 
@@ -26,10 +26,9 @@ If you find yourself stuck or have a question during the workshop, don't hesitat
 <ul class="checklist">
 	<li>Download a sample repo</li>
   <li>Deploy static files</li>
-	<li>Add configuration files</li>
 	<li>Include the API Client</li>
-	<li>Add the API methods</li>
+	<li>Connect Auth and Data services</li>
 	<li>Deploy to production</li>
-	<li>Start authenticating users</li>
+	<li>Start sending messages in real time</li>
 </ul>
 

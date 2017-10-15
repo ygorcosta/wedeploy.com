@@ -10,7 +10,7 @@ weight: 2
 
 #### {$page.title}
 
-First, you'll download a folder that contains the necessary to build your messaging app.
+First, you'll download a folder that contains the necessary files to build your messaging app.
 
 Open up a terminal and run this command:
 

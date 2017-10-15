@@ -10,7 +10,7 @@ weight: 6
 
 #### {$page.title}
 
-In order to use WeDeploy service, like Auth, we provide you with straightforward APIs so you can send requests to your services. Let's add some requests to our Auth service in our chat app source code.
+In order to use a WeDeploy service, like Auth, we provide you with straightforward APIs so you can send requests to your services. Let's add some requests to our Auth service in our chat app source code.
 
 Go back to your source code in the code editor and go to `assets/scripts/`.
 

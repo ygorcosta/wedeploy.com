@@ -1,7 +1,7 @@
 ---
 title: "Connect Data Service"
 description: "In this tutorial, you'll learn how to build and deploy a chat app with WeDeploy."
-buttonTitle: "I added the Auth code"
+buttonTitle: "I added the Data code"
 tutorialTitle: "Zero to Production: Developing with WeDeploy"
 parentId: "lsna"
 layout: "tutorial"
@@ -10,8 +10,83 @@ weight: 9
 
 #### {$page.title}
 
-Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+Again, just like Auth, we need to add the code into our project's source code that will make API requests to the data service we just installed.
 
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+Go back to your source code in the code editor and go to `assets/scripts/`.
 
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Donec sed odio dui.
+##### Data API Endpoint
+
+Go to the `chat.js` file and past this code under the _Auth Endpoints_ section:
+
+```javascript
+const data = WeDeploy.data('data-yourproject.wedeploy.io');
+const data_endpoint = 'data-yourproject.wedeploy.io';
+```
+
+**Note**: Replace `yourproject` with the project ID that you chose when you deployed in the previous step.
+
+Now we have the API endpoints to your Data service saved as variables that we can use throughout your code.
+
+##### Get Old Messages
+
+In the same file, paste this code under the _Get Old Messages_ section:
+
+```javascript
+WeDeploy
+  .data(data_endpoint)
+  .auth(currentUser)
+  .orderBy('id', 'asc')
+  .limit(100)
+  .get('messages')
+  .then(function(result) {
+
+    var messages = result;
+    for (var i = 0; i < messages.length; i++) {
+      appendMessage(messages[i]);
+    }
+  });
+```
+
+This snippet will pull the last 100 messages that have been sent when the page is loaded.
+
+##### Save New Messages
+
+In the same file, paste this code under the _Save New Message_ section:
+
+```javascript
+WeDeploy
+  .data(data_endpoint)
+  .auth(currentUser)
+  .create('messages', data)
+  .then(function(response) {
+    input.value = '';
+    conversation.scrollTop = conversation.scrollHeight;
+    appendMessage(data);
+  });
+```
+
+This snippet will save the messages of your users into the database.
+
+##### Watch New Messages
+
+In the same file, paste this code under the _Watch New Messages_ section:
+
+```javascript
+WeDeploy
+  .data(data_endpoint)
+  .auth(currentUser)
+  .orderBy('id', 'desc')
+  .limit(1)
+  .watch('messages')
+  .on('changes', function(result) {
+    var data = result.pop();
+    var element = document.getElementById(data.id);
+    if (element) {
+      animateMessage(element);
+    } else {
+      appendMessage(data);
+    }
+  });
+```
+
+This snippet will stream all new messages so your users can chat in real time.

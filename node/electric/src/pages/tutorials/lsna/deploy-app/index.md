@@ -10,8 +10,12 @@ weight: 11
 
 #### {$page.title}
 
-Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+Fantastic! Your local app is working able to create and sign in users and allows them to send messages to each other because of the WeDeploy APIs. Now let's deploy the app again so that your fully functioning app is live.
 
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+Make sure to replace `yourproject` with the name of your WeDeploy project.
 
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Donec sed odio dui.
+```xml
+we deploy -p yourproject
+```
+
+Now you can go to `ui-yourproject.wedeploy.io` (replacing `yourproject` with the project name you used above) and see your site live.
