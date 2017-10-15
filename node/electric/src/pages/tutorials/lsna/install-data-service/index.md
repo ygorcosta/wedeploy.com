@@ -10,8 +10,17 @@ weight: 8
 
 #### {$page.title}
 
-Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+Nice job, you're app is coming along nicely. We are still missing a major piece though. Let's add the message data so that we can start messaging our friends in real time.
 
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+Just like we did with the Auth service, let's go to the WeDeploy Console again and install a Data service.
 
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Donec sed odio dui.
+<ul class="checklist">
+  <li>Go to the WeDeploy Console</li>
+  <li>Select your app's project</li>
+  <li>Click on the <em>Install Service</em></li>
+  <li>Select the <em>WeDeploy Data</em> service</li>
+  <li>Name your Data service <code>db</code></li>
+  <li>Click <em>Install Data</em></li>
+</ul>
+
+Now your data service will initiate for a few seconds and then it will be ready for us to use.
