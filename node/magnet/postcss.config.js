@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = (ctx) => ({
   map: ctx.options.map,
   plugins: [
@@ -25,7 +27,7 @@ module.exports = (ctx) => ({
 
     // backward compatibility
     require('postcss-svg')({
-      dirs: [ '../static/styles', '../../static/styles' ],
+      dirs: [ path.join(process.cwd(), 'static/styles')  ],
       svgo: true
     }),
 
