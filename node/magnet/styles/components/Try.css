@@ -37,7 +37,7 @@
   @extend %actions;
 
   & .-dash::after {
-    content: url("../images/action-start.svg");
+    content: url("action-start.svg");
     display: inline-block;
     margin-block-start: 2px;
     margin-inline-start: 12px;
