@@ -338,7 +338,7 @@
 
 .demo-data-container {
   background-color: var(--white);
-  background-image: url("demo-data-container.jpg");
+  background-image: url("../images/demo-data-container.jpg");
   background-size: 100% 100%;
   border-radius: 4px;
   box-shadow: 2px 8px 15px 0 color(var(--black) alpha(12%)), 5px 15px 35px 0 color(var(--black) alpha(10%));
