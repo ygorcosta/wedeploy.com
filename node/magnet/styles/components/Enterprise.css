@@ -26,7 +26,7 @@
   /* ======================================================================== */
 
   &::before {
-    content: url(../images/heading--enterprise.svg);
+    content: url(../images/enterprise.svg);
     display: block;
     flex-shrink: 0;
     size: 60px 96px;

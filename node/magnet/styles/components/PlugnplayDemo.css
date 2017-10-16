@@ -106,7 +106,7 @@
   }
 
   &::before {
-    content: url("../images/tip--plugnplay.svg");
+    content: url("../images/tip-plugnplay.svg");
     inset-block-start: 18px;
     inset-inline-start: -30px;
     position: absolute;

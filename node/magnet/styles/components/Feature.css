@@ -23,6 +23,10 @@
       flex-basis: calc(50% - 20px);
     }
   }
+
+  &.-auth {
+    background-color: color(var(--white) blend(var(--black) 2%));
+  }
 }
 
 .feature-more {
@@ -56,6 +60,14 @@
 
 .feature-heading::before {
   @extend %heading-symbol;
+}
+
+.feature-more-heading {
+  @extend %unset-h;
+
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 30px;
 }
 
 .feature-more-heading::before {
@@ -130,7 +142,7 @@
 }
 
 .-data .feature-heading::before {
-  content: url(../images/heading--data.svg);
+  content: url(../images/heading-data.svg);
 }
 
 .-data .feature-features > ::before {
@@ -138,11 +150,11 @@
 }
 
 .feature-more-heading.-sync::before {
-  content: url(../images/heading--data-delight.svg);
+  content: url(../images/more-heading-sync.svg);
 }
 
 .feature-more-heading.-build::before {
-  content: url(../images/heading--data-build.svg);
+  content: url(../images/more-heading-build.svg);
 }
 
 /* Feature: Email
@@ -161,7 +173,7 @@
 }
 
 .-email .feature-heading::before {
-  content: url(../images/heading--email.svg);
+  content: url(../images/heading-email.svg);
 }
 
 .-email .feature-features > ::before {
@@ -169,11 +181,11 @@
 }
 
 .feature-more-heading.-send::before {
-  content: url(../images/heading--email-send.svg);
+  content: url(../images/more-heading-send.svg);
 }
 
 .feature-more-heading.-integrate::before {
-  content: url(../images/heading--email-integrate.svg);
+  content: url(../images/more-heading-integrate.svg);
 }
 
 /* Feature: Auth
@@ -186,7 +198,7 @@
 }
 
 .-auth .feature-heading::before {
-  content: url(../images/heading--auth.svg);
+  content: url(../images/heading-auth.svg);
 }
 
 .-auth .feature-features > ::before {
@@ -194,11 +206,11 @@
 }
 
 .feature-more-heading.-store::before {
-  content: url(../images/heading--auth-store.svg);
+  content: url(../images/more-heading-store.svg);
 }
 
 .feature-more-heading.-social::before {
-  content: url(../images/heading--auth-integrate.svg);
+  content: url(../images/more-heading-social.svg);
 }
 
 /* Feature: Hosting
@@ -217,7 +229,7 @@
 }
 
 .-hosting .feature-heading::before {
-  content: url(../images/heading--hosting.svg);
+  content: url(../images/heading-hosting.svg);
 }
 
 .-hosting .feature-features > ::before {
@@ -228,9 +240,9 @@
 /* ========================================================================== */
 
 .feature-more-heading.-deploy::before {
-  content: url(../images/heading--hosting-deploy.svg);
+  content: url(../images/more-heading-deploy.svg);
 }
 
 .feature-more-heading.-control::before {
-  content: url(../images/heading--hosting-control.svg);
+  content: url(../images/more-heading-control.svg);
 }

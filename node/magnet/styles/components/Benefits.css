@@ -88,19 +88,19 @@
   }
 
   &.-tools::before {
-    content: url("../images/heading--benefits-tools.svg");
+    content: url("../images/benefits-section-heading-tools.svg");
   }
 
   &.-deployment::before {
-    content: url("../images/heading--benefits-deployment.svg");
+    content: url("../images/benefits-section-heading-deployment.svg");
   }
 
   &.-management::before {
-    content: url("../images/heading--benefits-management.svg");
+    content: url("../images/benefits-section-heading-management.svg");
   }
 
   &.-networking::before {
-    content: url("../images/heading--benefits-networking.svg");
+    content: url("../images/benefits-section-heading-networking.svg");
   }
 }
 

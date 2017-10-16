@@ -201,7 +201,7 @@
 
   &::after {
     @media (--s-nav) {
-      content: url("../images/symbol-arrow--forward.svg" param(--color var(--green)));
+      content: url("../images/symbol-arrow.svg" param(--color var(--green)));
       display: inline-block;
       inset-block-start: -2px;
       margin-inline-start: 12px;

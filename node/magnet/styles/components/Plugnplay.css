@@ -52,7 +52,7 @@
   &::before {
     @extend %heading-symbol;
 
-    content: url("../images/heading--plugnplay.svg");
+    content: url("../images/heading-plugnplay.svg");
   }
 }
 
