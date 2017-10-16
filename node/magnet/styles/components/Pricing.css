@@ -89,7 +89,7 @@
 }
 
 .pricing-plan.-standard {
-  background-image: url("../images/item--pricing-standard.svg");
+  background-image: url("../images/pricing-plan-standard.svg");
   background-position: 100% 0;
   background-repeat: no-repeat;
   background-size: 80px auto;
@@ -119,19 +119,19 @@
 }
 
 .pricing-plan-heading.-free::before {
-  content: url("../images/heading--pricing-free.svg");
+  content: url("../images/pricing-plan-heading-free.svg");
 }
 
 .pricing-plan-heading.-basic::before {
-  content: url("../images/heading--pricing-basic.svg");
+  content: url("../images/pricing-plan-heading-basic.svg");
 }
 
 .pricing-plan-heading.-standard::before {
-  content: url("../images/heading--pricing-standard.svg");
+  content: url("../images/pricing-plan-heading-standard.svg");
 }
 
 .pricing-plan-heading.-premium::before {
-  content: url("../images/heading--pricing-premium.svg");
+  content: url("../images/pricing-plan-heading-premium.svg");
 }
 
 .pricing-plan-summary {

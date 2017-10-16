@@ -4,7 +4,7 @@
 html {
   @extend %normalize-html;
 
-  background-color: color(var(--white) blend(var(--black) 2%));
+  background-color: var(--white) blend(var(--black) 2%));
   color: var(--black);
   font: 15px/24px "Circular Std";
   -moz-osx-font-smoothing: grayscale;

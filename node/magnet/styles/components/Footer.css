@@ -150,13 +150,13 @@
 
 .footer-icon.-twitter {
   &::before {
-    content: url("../images/link--footer-social-twitter.svg");
+    content: url("../images/footer-icon-twitter.svg");
   }
 }
 
 .footer-icon.-github {
   &::before {
-    content: url("../images/link--footer-social-github.svg");
+    content: url("../images/footer-icon-github.svg");
   }
 }
 

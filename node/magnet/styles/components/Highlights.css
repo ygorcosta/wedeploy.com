@@ -50,15 +50,15 @@
 }
 
 .highlights-heading--build::before {
-  content: url(../images/heading--highlights-build.svg);
+  content: url(../images/heading-build.svg);
 }
 
 .highlights-heading--control::before {
-  content: url(../images/heading--highlights-control.svg);
+  content: url(../images/heading-control.svg);
 }
 
 .highlights-heading--scale::before {
-  content: url(../images/heading--highlights-scale.svg);
+  content: url(../images/heading-scale.svg);
 
 }
 

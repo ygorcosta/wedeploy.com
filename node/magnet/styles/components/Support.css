@@ -21,7 +21,7 @@
   /* ======================================================================== */
 
   &::after {
-    content: url("../images/view--support.svg");
+    content: url("../images/support.svg");
     inset-block-start: -162px;
     max-width: 100%;
     position: absolute;
@@ -141,19 +141,19 @@
   }
 
   &.-service::before {
-    content: url("../images/heading--support-service.svg");
+    content: url("../images/support-heading-service.svg");
   }
 
   &.-chat::before {
-    content: url("../images/heading--support-chat.svg");
+    content: url("../images/support-heading-chat.svg");
   }
 
   &.-help::before {
-    content: url("../images/heading--support-help.svg");
+    content: url("../images/support-heading-help.svg");
   }
 
   &.-status::before {
-    content: url("../images/heading--support-status.svg");
+    content: url("../images/support-heading-status.svg");
   }
 }
 
@@ -210,7 +210,7 @@
     }
 
     &::after {
-      content: url("../images/action--support.svg");
+      content: url("../images/symbol-arrow.svg" param(--color var(--green)));
       display: inline-block;
       margin-inline-start: 6px;
       size: 10px 8px;
@@ -244,7 +244,7 @@
   position: relative;
 
   &::before {
-    content: url("../images/heading--support-247.svg");
+    content: url("../images/support-heading-247.svg");
     inset-inline-end: calc(100% + 18px);
     position: absolute;
     size: 36px;

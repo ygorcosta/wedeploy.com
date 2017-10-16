@@ -125,15 +125,15 @@
   }
 
   & .is-web span::before {
-    content: url("../images/tab-web--authdemo.svg");
+    content: url("../images/menu-source-is-web.svg");
   }
 
   & .is-ios span::before {
-    content: url("../images/tab-ios--authdemo.svg");
+    content: url("../images/menu-source-is-ios.svg");
   }
 
   & .is-android span::before {
-    content: url("../images/tab-android--authdemo.svg");
+    content: url("../images/menu-source-is-android.svg");
   }
 }
 
@@ -238,7 +238,7 @@
     }
 
     &::after {
-      content: url("../images/actions--authdemo.svg");
+      content: url("../images/symbol-arrow.svg" param(--color var(--white)));
       display: inline-block;
       margin-inline-start: 12px;
       size: 10px 8px;
@@ -289,7 +289,7 @@
   }
 
   &::after {
-    content: url("../images/tip--datademo.svg");
+    content: url("../images/tip-data.svg");
     display: block;
     inset-inline-start: 36px;
     position: absolute;
@@ -317,7 +317,7 @@
   }
 
   &::after {
-    content: url("../images/tip--authdemo.svg");
+    content: url("../images/tip-auth.svg");
     display: block;
     position: absolute;
     size: 26px 39px;
@@ -338,7 +338,7 @@
 
 .demo-data-container {
   background-color: var(--white);
-  background-image: url(../images/data-demo.jpg);
+  background-image: url(../images/demo-data-container.jpg);
   background-size: 100% 100%;
   border-radius: 4px;
   box-shadow: 2px 8px 15px 0 color(var(--black) alpha(12%)), 5px 15px 35px 0 color(var(--black) alpha(10%));
@@ -670,41 +670,41 @@
 
   &:nth-child(1) input {
     & + span::after {
-      content: url(../images/ranking-4-up.svg);
+      content: url(../images/demo-data-ranking-4-up.svg);
     }
 
     &:matches(:hover, :checked) + span::after {
-      content: url(../images/ranking-4-up--focus.svg);
+      content: url(../images/demo-data-ranking-4-up--focus.svg);
     }
   }
 
   &:nth-child(2) input {
     & + span::after {
-      content: url(../images/ranking-3-up.svg);
+      content: url(../images/demo-data-ranking-3-up.svg);
     }
 
     &:matches(:hover, :checked) + span::after {
-      content: url(../images/ranking-3-up--focus.svg);
+      content: url(../images/demo-data-ranking-3-up--focus.svg);
     }
   }
 
   &:nth-child(3) input {
     & + span::after {
-      content: url(../images/ranking-2-up.svg);
+      content: url(../images/demo-data-ranking-2-up.svg);
     }
 
     &:matches(:hover, :checked) + span::after {
-      content: url(../images/ranking-2-up--focus.svg);
+      content: url(../images/demo-data-ranking-2-up--focus.svg);
     }
   }
 
   &:nth-child(4) input {
     & + span::after {
-      content: url(../images/ranking-1-up.svg);
+      content: url(../images/demo-data-ranking-1-up.svg);
     }
 
     &:matches(:hover, :checked) + span::after {
-      content: url(../images/ranking-1-up--focus.svg);
+      content: url(../images/demo-data-ranking-1-up--focus.svg);
     }
   }
 }

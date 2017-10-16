@@ -172,11 +172,11 @@
     }
 
     @nest .start--1 &, .start--2 & {
-      content: url("../images/symbol-arrow--forward.svg" param(--color color(var(--black) alpha(80%))));
+      content: url("../images/symbol-arrow.svg" param(--color color(var(--black) alpha(80%))));
     }
 
     @nest .start--3 & {
-      content: url("../images/symbol-arrow--forward.svg" param(--color color(var(--white) alpha(40%))));
+      content: url("../images/symbol-arrow.svg" param(--color color(var(--white) alpha(40%))));
     }
   }
 }
@@ -314,7 +314,7 @@
 
   & li:nth-child(1) a {
     &::after {
-      content: url("../images/actions--start.svg");
+      content: url("../images/action-start.svg" param(--color var(--white)));
       display: inline-block;
       margin-block-start: 2px;
       margin-inline-start: 12px;
