@@ -4,19 +4,47 @@ description: Check out what's new
 layout: "updates"
 updates:
  -
-  version: 3.0.2
-  date: Aug 10th, 2017
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum.
+  version: 4.0.1
+  date: Oct 12th, 2017
+  description: Fixed CORS issue with `watch` method which caused the request to be blocked by the browser.
  -
-  version: 3.0.1
-  date: Aug 9th, 2017
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum.
+  version: 4.0.0
+  date: Oct 11th, 2017
+  description: All XHR requests will be made with `withCredentials` set to false.
  -
-  version: 3.0.0
-  date: Aug 9th, 2017
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum.
+  version: 3.5.0
+  date: Oct 5th, 2017
+  description: The default value of the operator in Data `.aggregation` method was set to 'terms'.
+ -
+  version: 3.4.0
+  date: Oct 3rd, 2017
+  description: Updated the 3-Clause BSD License.
+ -
+  version: 3.3.0
+  date: Sep 29th, 2017
+  description: Added `phrase` filter to Data. Two more sugar methods added too - `createCollection` and `updateCollection`.
+ -
+  version: 3.2.0
+  date: Sep 14th, 2017
+  description: Auth `signOut` method will use POST instead GET. Added filter `exists` to Data.
+ -
+  version: 3.1.1
+  date: Sep 8th, 2017
+  description: Auth `signInWithEmailAndPassword` method will use POST instead GET.
+ -
+  version: 3.1.0
+  date: Sep 6th, 2017
+  description: When retrieving the current user, Auth will save only the returned payload to localStorage. Helper methods were created in Auth - `getData`, `hasData` and `setData`.
+ -
+  version: 3.0.3
+  date: Aug 31st, 2017
+  description: When retrieving the current user, Auth will save only the returned payload to localStorage. Helper methods were created in Auth - `getData`, `hasData` and `setData`.
  -
   version: 2.3.1
   date: Aug 1st, 2017
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla libero, eleifend in euismod eget, fringilla id diam. Proin quis interdum ipsum.
+  description: Fixed CORS issue with `watch` method which caused the request to be blocked by the browser.
+ -
+  version: 2.3.0
+  date: Jul 26th, 2017
+  description: Add `gt` and `gte` methods to data queries. Added two new methods to Auth - `deleteUser` and `getAllUsers`. Node updated to v8.1.4.
 ---
