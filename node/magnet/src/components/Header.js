@@ -21,4 +21,19 @@ document.addEventListener('click', (event) => {
       }
     }
   }
+
+  const $pricingTarget = event.target.closest('[href="#pricing"]');
+
+  if ($pricingTarget) {
+    const $list = document.querySelector('.nav-list');
+    const $toggle = document.querySelector('.nav-toggle');
+
+    document.documentElement.setAttribute('data-expanded', false);
+
+    $toggle.parentNode.setAttribute('aria-expanded', false);
+
+    $list.parentNode.setAttribute('aria-expanded', false);
+
+    $list.parentNode.removeAttribute('inert');
+  }
 });
