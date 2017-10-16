@@ -27,7 +27,7 @@ module.exports = (ctx) => ({
 
     // backward compatibility
     require('postcss-svg')({
-      dirs: [ path.join(process.cwd(), 'static/styles')  ],
+      dirs: [ path.join(process.cwd(), 'static/images')  ],
       svgo: true
     }),
 

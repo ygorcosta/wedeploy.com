@@ -142,19 +142,19 @@
 }
 
 .-data .feature-heading::before {
-  content: url(../images/heading-data.svg);
+  content: url("heading-data.svg");
 }
 
 .-data .feature-features > ::before {
-  content: url("../images/features.svg" param(--color var(--yellow)));
+  content: url("features.svg" param(--color var(--yellow)));
 }
 
 .feature-more-heading.-sync::before {
-  content: url(../images/more-heading-sync.svg);
+  content: url("more-heading-sync.svg");
 }
 
 .feature-more-heading.-build::before {
-  content: url(../images/more-heading-build.svg);
+  content: url("more-heading-build.svg");
 }
 
 /* Feature: Email
@@ -173,19 +173,19 @@
 }
 
 .-email .feature-heading::before {
-  content: url(../images/heading-email.svg);
+  content: url("heading-email.svg");
 }
 
 .-email .feature-features > ::before {
-  content: url("../images/features.svg" param(--color var(--orange)));
+  content: url("features.svg" param(--color var(--orange)));
 }
 
 .feature-more-heading.-send::before {
-  content: url(../images/more-heading-send.svg);
+  content: url("more-heading-send.svg");
 }
 
 .feature-more-heading.-integrate::before {
-  content: url(../images/more-heading-integrate.svg);
+  content: url("more-heading-integrate.svg");
 }
 
 /* Feature: Auth
@@ -198,19 +198,19 @@
 }
 
 .-auth .feature-heading::before {
-  content: url(../images/heading-auth.svg);
+  content: url("heading-auth.svg");
 }
 
 .-auth .feature-features > ::before {
-  content: url("../images/features.svg" param(--color var(--violet)));
+  content: url("features.svg" param(--color var(--violet)));
 }
 
 .feature-more-heading.-store::before {
-  content: url(../images/more-heading-store.svg);
+  content: url("more-heading-store.svg");
 }
 
 .feature-more-heading.-social::before {
-  content: url(../images/more-heading-social.svg);
+  content: url("more-heading-social.svg");
 }
 
 /* Feature: Hosting
@@ -229,20 +229,20 @@
 }
 
 .-hosting .feature-heading::before {
-  content: url(../images/heading-hosting.svg);
+  content: url("heading-hosting.svg");
 }
 
 .-hosting .feature-features > ::before {
-  content: url("../images/features.svg" param(--color var(--red)));
+  content: url("features.svg" param(--color var(--red)));
 }
 
 /* Feature: Deploy
 /* ========================================================================== */
 
 .feature-more-heading.-deploy::before {
-  content: url(../images/more-heading-deploy.svg);
+  content: url("more-heading-deploy.svg");
 }
 
 .feature-more-heading.-control::before {
-  content: url(../images/more-heading-control.svg);
+  content: url("more-heading-control.svg");
 }

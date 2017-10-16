@@ -51,7 +51,7 @@
   }
 
   &::after {
-    content: url("../images/nav-toggle.svg" param(--color var(--black)));
+    content: url("nav-toggle.svg" param(--color var(--black)));
     display: inline-block;
     line-height: 0;
     margin-inline-start: 6px;
@@ -63,18 +63,18 @@
   }
 
   @nest .start--3 &[aria-expanded="false"]::after {
-    content: url("../images/nav-toggle.svg" param(--color var(--white)));
+    content: url("nav-toggle.svg" param(--color var(--white)));
   }
 
   &:hover::after {
     @media (hover: hover) {
-      content: url("../images/nav-toggle.svg" param(--color color(var(--black) alpha(60%))));
+      content: url("nav-toggle.svg" param(--color color(var(--black) alpha(60%))));
     }
   }
 
   @nest .start--3 &[aria-expanded="false"]:hover::after {
     @media (hover: hover) {
-      content: url("../images/nav-toggle.svg" param(--color color(var(--white) alpha(60%))));
+      content: url("nav-toggle.svg" param(--color color(var(--white) alpha(60%))));
     }
   }
 
@@ -201,7 +201,7 @@
 
   &::after {
     @media (--s-nav) {
-      content: url("../images/symbol-arrow.svg" param(--color var(--green)));
+      content: url("symbol-arrow.svg" param(--color var(--green)));
       display: inline-block;
       inset-block-start: -2px;
       margin-inline-start: 12px;
