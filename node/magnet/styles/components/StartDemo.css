@@ -12,14 +12,14 @@
     will-change: opacity, transform;
 
     @nest .start--1 & {
-      content: url("../images/start-demo-laptop.svg");
+      content: url("start-demo-laptop.svg");
       transform: translate3d(132px, -36px, 0);
       size: 1188px 733px;
     }
 
     @nest .start--2 & {
       transform: translate3d(calc(25vw + 138px), calc(-93px + 18px), 0);
-      content: url("../images/start-demo-phone.svg");
+      content: url("start-demo-phone.svg");
       size: 490px 778px;
 
       @media (width < 1300px) {
@@ -32,7 +32,7 @@
     }
 
     @nest .start--3 & {
-      content: url("../images/start-demo-watch.svg");
+      content: url("start-demo-watch.svg");
       size: 432px 704px;
       transform: translate3d(calc(25vw + 156px), -54px, 0);
 

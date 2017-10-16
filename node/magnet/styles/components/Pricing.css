@@ -89,7 +89,7 @@
 }
 
 .pricing-plan.-standard {
-  background-image: url("../images/pricing-plan-standard.svg");
+  background-image: url("pricing-plan-standard.svg");
   background-position: 100% 0;
   background-repeat: no-repeat;
   background-size: 80px auto;
@@ -119,19 +119,19 @@
 }
 
 .pricing-plan-heading.-free::before {
-  content: url("../images/pricing-plan-heading-free.svg");
+  content: url("pricing-plan-heading-free.svg");
 }
 
 .pricing-plan-heading.-basic::before {
-  content: url("../images/pricing-plan-heading-basic.svg");
+  content: url("pricing-plan-heading-basic.svg");
 }
 
 .pricing-plan-heading.-standard::before {
-  content: url("../images/pricing-plan-heading-standard.svg");
+  content: url("pricing-plan-heading-standard.svg");
 }
 
 .pricing-plan-heading.-premium::before {
-  content: url("../images/pricing-plan-heading-premium.svg");
+  content: url("pricing-plan-heading-premium.svg");
 }
 
 .pricing-plan-summary {
@@ -281,7 +281,7 @@
 
   &::before {
     @media (--s-pricing) {
-      content: url("../images/nav-toggle.svg" param(--color color(var(--black) alpha(60%))));
+      content: url("nav-toggle.svg" param(--color color(var(--black) alpha(60%))));
       display: block;
       line-height: 0;
       margin-inline: auto;

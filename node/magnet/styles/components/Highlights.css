@@ -50,15 +50,15 @@
 }
 
 .highlights-heading--build::before {
-  content: url(../images/heading-build.svg);
+  content: url("heading-build.svg");
 }
 
 .highlights-heading--control::before {
-  content: url(../images/heading-control.svg);
+  content: url("heading-control.svg");
 }
 
 .highlights-heading--scale::before {
-  content: url(../images/heading-scale.svg);
+  content: url("heading-scale.svg");
 
 }
 
@@ -81,7 +81,7 @@
   @extend %features;
 
   & > ::before {
-    content: url("../images/features.svg" param(--color var(--green)));
+    content: url("features.svg" param(--color var(--green)));
   }
 
   & > :nth-child(n+2) {
