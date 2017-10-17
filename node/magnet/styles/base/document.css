@@ -1,0 +1,37 @@
+/* Document
+/* ========================================================================== */
+
+html {
+  @extend %normalize-html;
+
+  background-color: var(--white) blend(var(--black) 2%));
+  color: var(--black);
+  font: 15px/24px "Circular Std";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+
+  &::after {
+    @media (--s-nav) {
+      background-color: color(var(--black) alpha(80%));
+      content: "";
+      inset: 0;
+      opacity: 0;
+      position: fixed;
+      transition: opacity .6s;
+      z-index: -1;
+    }
+  }
+
+  &[data-expanded="true"] {
+    &::after {
+      @media (--s-nav) {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+body {
+  @extend %unset-body;
+}

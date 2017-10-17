@@ -1,0 +1,46 @@
+/* Try
+/* ========================================================================== */
+
+.try {
+  @extend %inset-styles;
+
+  padding-block: 96px 120px;
+}
+
+/* Try: Heading
+/* ========================================================================== */
+
+.try-heading {
+  @extend %unset-h;
+
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 60px;
+}
+
+/* Try: Summary
+/* ========================================================================== */
+
+.try-summary {
+  @extend %unset-p;
+
+  color: var(--black-60);
+  font-size: 18px;
+  line-height: 24px;
+  margin-block-start: 12px;
+}
+
+/* Try: Actions
+/* ========================================================================== */
+
+.try-actions {
+  @extend %actions;
+
+  & .-dash::after {
+    content: url("action-start.svg");
+    display: inline-block;
+    margin-block-start: 2px;
+    margin-inline-start: 12px;
+    size: 14px 13px;
+  }
+}

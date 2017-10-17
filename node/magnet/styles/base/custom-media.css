@@ -1,0 +1,10 @@
+/* Custom Media
+/* ========================================================================== */
+
+@custom-media --s  (width <  480px);
+@custom-media --sm (width <  960px);
+@custom-media --m  (width >= 480px) and (width < 960px);
+@custom-media --ml (width >= 480px);
+@custom-media --l  (width >= 960px);
+@custom-media --s-nav (width < 840px);
+@custom-media --l-nav (width >= 840px);

@@ -1,0 +1,219 @@
+/* Navigation
+/* ========================================================================== */
+
+.nav-menu {
+  margin-inline-start: auto;
+
+  @media (--s-nav) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (--l-nav) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.nav-toggle {
+  @extend %normalize-button;
+  @extend %unset-button;
+
+  color: var(--black);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  padding-block: 6px;
+  padding-inline: 24px;
+  -webkit-tap-highlight-color: transparent;
+  text-align: end;
+  width: 100%;
+  white-space: nowrap;
+
+  @nest .start--3 &[aria-expanded="false"] {
+    color: var(--white);
+  }
+
+  @media (--l-nav) {
+    display: none;
+  }
+
+  &:hover {
+    @media (hover: hover) {
+      color: color(var(--black) alpha(60%));
+    }
+  }
+
+  @nest .start--3 &[aria-expanded="false"]:hover {
+    @media (hover: hover) {
+      color: color(var(--white) alpha(60%));
+    }
+  }
+
+  &::after {
+    content: url("nav-toggle.svg" param(--color var(--black)));
+    display: inline-block;
+    line-height: 0;
+    margin-inline-start: 6px;
+    position: relative;
+    transform: scaleY(1) translate3d(0, -.5px, 0);
+    transition: transform .3s ease-in-out, top .3s ease-out;
+    size: 8px 7px;
+    will-change: top, transform;
+  }
+
+  @nest .start--3 &[aria-expanded="false"]::after {
+    content: url("nav-toggle.svg" param(--color var(--white)));
+  }
+
+  &:hover::after {
+    @media (hover: hover) {
+      content: url("nav-toggle.svg" param(--color color(var(--black) alpha(60%))));
+    }
+  }
+
+  @nest .start--3 &[aria-expanded="false"]:hover::after {
+    @media (hover: hover) {
+      content: url("nav-toggle.svg" param(--color color(var(--white) alpha(60%))));
+    }
+  }
+
+  &[aria-expanded="true"]::after {
+    transform: scaleY(-1) translate3d(0, calc(50% - 2.5px), 0);
+  }
+}
+
+.nav-list {
+  @extend %unset-l;
+
+  @media (--s-nav) {
+    inset-block-start: 78px;
+    inset-inline: 0;
+    overflow: hidden;
+    max-height: 100vh;
+    position: absolute;
+    transition: background-color .3s, max-height .05s, padding .3s;
+  }
+
+  @media (--l-nav) {
+    display: flex;
+  }
+
+  @nest .start--3 &[aria-expanded="false"] {
+    color: var(--white);
+  }
+
+  &:not([aria-expanded="true"]) {
+    @media (--s-nav) {
+      max-height: 0;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    @media (--s-nav) {
+      background-color: var(--white);
+      padding-block: 12px;
+    }
+  }
+}
+
+.nav-link {
+  @extend %unset-a;
+
+  display: block;
+
+  @media (--s-nav) {
+    padding-block: 9px;
+    padding-inline: 24px;
+  }
+
+  @media (--l-nav) {
+    padding-block: 9px;
+    padding-inline: 12px;
+  }
+
+  & span {
+    display: inline-block;
+  }
+}
+
+.nav-link--btn {
+  @media (--l-nav) {
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px color(var(--black) alpha(4%)), 0 2px 6px 0 color(var(--black) alpha(1%));
+    font-weight: 900;
+    margin-inline-start: 6px;
+  }
+
+  &:matches(:hover, :focus) {
+    @media (--l-nav) {
+      opacity: .8;
+    }
+  }
+
+  & span {
+    @media (--s-nav) {
+      @extend %underline;
+    }
+  }
+
+  &:matches(:hover, :focus) span {
+    @media (--s-nav) {
+      @extend %underline-hover;
+    }
+  }
+}
+
+.nav-link--text {
+  & span {
+    @extend %underline;
+  }
+
+  &:matches(:hover, :focus) span {
+    @extend %underline-hover;
+  }
+}
+
+.nav-link--login {
+  @media (--s-nav) {
+    color: var(--green);
+  }
+
+  @media (--l-nav) {
+    margin-inline-start: 24px;
+    position: relative;
+  }
+
+  &::before {
+    @media (--l-nav) {
+      color: color(var(--black) alpha(40%));
+      content: "or";
+      display: inline-block;
+      font-size: 12px;
+      inset-inline-end: 100%;
+      position: absolute;
+      text-align: center;
+      width: 12px;
+    }
+  }
+
+  &::after {
+    @media (--s-nav) {
+      content: url("symbol-arrow.svg" param(--color var(--green)));
+      display: inline-block;
+      inset-block-start: -2px;
+      margin-inline-start: 12px;
+      position: relative;
+      size: 10px 8px;
+      transition: transform .3s ease-in-out;
+    }
+  }
+
+  &:matches(:hover, :focus)::after {
+    @media (--s-nav) {
+      transform: translateX(4px);
+    }
+  }
+}
