@@ -31,7 +31,7 @@
   & .bubble {
     background-position: 0;
     background-size: 450px;
-    border-radius: 100%;
+    border-radius: 50%;
     box-shadow: 0 15px 35px 0 rgba(14, 20, 26, 0.13), 0 3px 10px 0 rgba(14, 20, 26, 0.1);
     height: 450px;
     position: absolute;
