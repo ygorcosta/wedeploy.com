@@ -8,7 +8,7 @@
   <div class="bubbles">
     {foreach $position in $positions}
       {let $image: $images[index($position)] /}
-      <div class="bubble" style="width: {$position.size}px; height: {$position.size}px; top: {$position.top}px; left: {$position.left}px; background-size: {$position.size}px; background-image: url(/static/images/bubbles/{$image}.png);"></div>
+      <div class="bubble" style="width: {$position.size}px; height: {$position.size}px; top: {$position.top}px; left: {$position.left}px; background-size: {$position.size}px; background-image: url(/static/images/bubbles/{$image}.svg);"></div>
     {/foreach}
   </div>
 {/template}
