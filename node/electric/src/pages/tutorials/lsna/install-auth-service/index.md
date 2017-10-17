@@ -14,8 +14,6 @@ There are many ways to use WeDeploy. You can either deploy your source code via 
 
 When you deployed your source code before, you may have noticed that WeDeploy created a Hosting service to serve those files. Now we want to install a WeDeploy Auth service so that we can start creating users and signing them into the app.
 
-To do this, go back to the <a href="https://console.wedeploy.com" target="_blank">WeDeploy Console</a> and select your project. Then, click on the _Install Service_ button and select the _WeDeploy Auth_ service. Name your Auth service `auth` and then click _Install Auth_.
-
 <ul class="checklist">
   <li>Go to the WeDeploy Console</li>
   <li>Select your app's project</li>

@@ -14,7 +14,7 @@ Great! Now you have added all the code you need to start creating new users and 
 
 #### Test locally
 
-Go to Chrome (or your preferred web browser) and open the `index.html` file in your project folder.
+Go to Chrome (or your preferred web browser) and open the `index.html` file of your project folder.
 
 Try going to the _Create Account_ page and creating a new user. Then, once you enter the chat page, you can logout with the arrow button in the top left of the chat screen and then try signing in with that user again.
 

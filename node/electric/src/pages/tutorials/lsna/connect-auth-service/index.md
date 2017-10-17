@@ -19,8 +19,7 @@ Go back to your source code in the code editor and go to `assets/scripts/`.
 Go to the `endpoints.js` file and past this code under the _Auth Endpoints_ section:
 
 ```javascript
-const auth = WeDeploy.auth('auth-yourproject.wedeploy.io');
-const currentUser = WeDeploy.auth('auth-yourproject.wedeploy.io').currentUser;
+"auth": "auth-yourproject.wedeploy.io",
 ```
 
 **Note**: Replace `yourproject` with the project ID that you chose when you deployed in the previous step.
@@ -33,7 +32,9 @@ Go the `sign-in.js` file and paste this code under the _Sign In_ section:
 
 ```javascript
 function signIn() {
-  auth.signInWithEmailAndPassword(login.email.value, login.password.value)
+  WeDeploy
+    .auth(address.auth)
+    .signInWithEmailAndPassword(login.email.value, login.password.value)
     .then(function() {
       login.submit.disabled = true;
       login.submit.innerText = 'Loading...';
@@ -55,30 +56,33 @@ Go the `create.js` file and paste this code under the _Sign In_ section:
 
 ```javascript
 function userCreate() {
-  auth.createUser({
-    name: create.name.value,
-    email: create.email.value,
-    password: create.password.value,
-    color: 'color-' + Math.floor(Math.random() * 19)
-  })
-  .then(function() {
-    create.submit.disabled = true;
-    create.submit.innerText = 'Loading...';
+  WeDeploy
+    .auth(address.auth)
+    .createUser({
+      name: create.name.value,
+      email: create.email.value,
+      password: create.password.value,
+      color: 'color-' + Math.floor(Math.random() * 19)
+    })
+    .then(function() {
+      create.submit.disabled = true;
+      create.submit.innerText = 'Loading...';
 
-    auth
-      .signInWithEmailAndPassword(create.email.value, create.password.value)
-      .then(function() {
-        document.location.href = './chat.html';
-      })
-      .catch(function() {
-        alert('Sign-in failed.');
-      });
-  })
-  .catch(function() {
-    create.submit.disabled = false;
-    create.submit.innerText = 'Create Account';
-    alert('Sign-up failed.');
-  })
+      WeDeploy
+        .auth(address.auth)
+        .signInWithEmailAndPassword(create.email.value, create.password.value)
+        .then(function() {
+          document.location.href = './chat.html';
+        })
+        .catch(function() {
+          alert('Sign-in failed.');
+        });
+    })
+    .catch(function() {
+      create.submit.disabled = false;
+      create.submit.innerText = 'Create Account';
+      alert('Sign-up failed.');
+    })
 };
 ```
 
@@ -89,7 +93,7 @@ This snippet will allow your users to create a new account.
 Go the `chat.js` file and paste this code under the _Redirect_ section:
 
 ```javascript
-if (currentUser == null) {document.location.href = './index.html';}
+if (WeDeploy.auth(address.auth).currentUser == null) {document.location.href = './index.html';}
 ```
 
 Now if an unauthorized user tries to access the `chat.index` page and chat with other users, they will be redirected back to the sign in page.
