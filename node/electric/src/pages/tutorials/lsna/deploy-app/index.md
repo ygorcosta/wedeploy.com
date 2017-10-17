@@ -10,7 +10,7 @@ weight: 11
 
 #### {$page.title}
 
-Fantastic! Your local app is working able to create and sign in users and allows them to send messages to each other because of the WeDeploy APIs. Now let's deploy the app again so that your fully functioning app is live.
+Fantastic! Your local app is working! It now enables you to create and sign in users and allows them to send messages to each other because of the WeDeploy APIs. Now let's deploy the app again so that your fully functioning app is live.
 
 Make sure to replace `yourproject` with the name of your WeDeploy project.
 

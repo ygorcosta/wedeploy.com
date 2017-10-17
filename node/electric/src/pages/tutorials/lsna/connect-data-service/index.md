@@ -16,11 +16,10 @@ Go back to your source code in the code editor and go to `assets/scripts/`.
 
 ##### Data API Endpoint
 
-Go to the `chat.js` file and past this code under the _Auth Endpoints_ section:
+Go to the `chat.js` file and past this code under the _Data Endpoints_ section:
 
 ```javascript
-const data = WeDeploy.data('data-yourproject.wedeploy.io');
-const data_endpoint = 'data-yourproject.wedeploy.io';
+"data": "db-yourproject.wedeploy.io"
 ```
 
 **Note**: Replace `yourproject` with the project ID that you chose when you deployed in the previous step.
@@ -33,8 +32,8 @@ In the same file, paste this code under the _Get Old Messages_ section:
 
 ```javascript
 WeDeploy
-  .data(data_endpoint)
-  .auth(currentUser)
+  .data(address.data)
+  .auth(WeDeploy.auth(address.auth).currentUser)
   .orderBy('id', 'asc')
   .limit(100)
   .get('messages')
@@ -55,8 +54,8 @@ In the same file, paste this code under the _Save New Message_ section:
 
 ```javascript
 WeDeploy
-  .data(data_endpoint)
-  .auth(currentUser)
+  .data(address.data)
+  .auth(WeDeploy.auth(address.auth).currentUser)
   .create('messages', data)
   .then(function(response) {
     input.value = '';
@@ -73,8 +72,8 @@ In the same file, paste this code under the _Watch New Messages_ section:
 
 ```javascript
 WeDeploy
-  .data(data_endpoint)
-  .auth(currentUser)
+  .data(address.data)
+  .auth(WeDeploy.auth(address.auth).currentUser)
   .orderBy('id', 'desc')
   .limit(1)
   .watch('messages')
