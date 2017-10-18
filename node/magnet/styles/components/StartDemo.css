@@ -157,14 +157,18 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 24px;
+  height: 220px;
   overflow: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
   margin-block-start: 12px;
 
   & pre {
     @extend %unset-pre;
+
+    white-space: pre;
   }
 
-  & span, & strong {
+  & b, & plaintext, & span {
     color: var(--white);
     font-weight: 700;
   }
@@ -174,7 +178,43 @@
     font-weight: 900;
   }
 
-  & strong {
-    font-weight: 700;
+  & plaintext:not(:focus):last-child {
+    &::after {
+      animation: animate-console 750ms infinite;
+      content: "";
+      display: inline-block;
+      size: 1px 14px;
+      vertical-align: text-bottom;
+    }
+  }
+
+  & plaintext {
+    @extend %unset-pre;
+
+    display: inline;
+    min-width: 2px;
+    outline: 0;
+    overflow: hidden;
+    vertical-align: top;
+    white-space: pre;
+
+    &:empty {
+      display: inline-block;
+      height: 18px;
+      vertical-align: top;
+    }
+
+    &:not(:focus):last-child {}
+  }
+}
+
+
+@keyframes animate-console {
+  0% {
+    box-shadow: inset -1px 0 0 0 color(var(--white) alpha(0%));
+  }
+
+  100% {
+    box-shadow: inset -1px 0 0 0 var(--white);
   }
 }
