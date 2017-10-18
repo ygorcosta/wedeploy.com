@@ -65,7 +65,7 @@ myservice
 
 **Ports**
 
-By default, we watch port 80 for you Node.JS services. If you want to designate a different port (like `3000`), you must do that in the `wedeploy.json`.
+By default, we watch port 80 for you Node.js services. If you want to designate a different port (like `3000`), you must do that in the `wedeploy.json`.
 
 ```application/json
 {
@@ -74,21 +74,25 @@ By default, we watch port 80 for you Node.JS services. If you want to designate 
 }
 ```
 
-## Specifying the Node.JS version
+</article>
 
-By default, the Node.JS version will be determined by us. Normally this is the current stable version. If you want to designate a different version, you may specify it in [node](https://docs.npmjs.com/files/package.json#engines) property in `package.json`. You may add a fixed version or a range.
+<article id="4">
 
-Fixed version:
+## Specifying the Node.js version
 
-```json
+By default, the Node.js version will be the current stable version. If you want to designate a different version, you can specify it on the [engines property](https://docs.npmjs.com/files/package.json#engines) inside `package.json`.
+
+You may add a fixed version:
+
+```application/json
 "engines": {
 	"node": "8.6.0"
 }
 ```
 
-Range:
+Or you can specify a range:
 
-```json
+```application/json
 "engines": {
 	"node": ">=8.4 <8.6"
 }
