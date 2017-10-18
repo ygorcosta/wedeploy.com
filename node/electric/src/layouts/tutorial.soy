@@ -67,7 +67,7 @@
 		{if $page.weight < length($tutorialObject.childIds)}
 			{let $nextPageUrl: $tutorialObject.children[$tutorialObject.childIds[$page.weight]].url /}
 			{if $site.githubRepo}
-				<a href="https://github.com/{$site.githubRepo}/issues/new?title=Tutorial+Problem&body=%3E+URL%3A+{$page.url}" target="_blank" class="btn btn-default btn-sm">
+				<a href="javascript:Intercom('showNewMessage', 'I\'m having a problem here: {$page.url}');" target="_blank" class="btn btn-default btn-sm">
 					Report a problem
 				</a>
 			{/if}
