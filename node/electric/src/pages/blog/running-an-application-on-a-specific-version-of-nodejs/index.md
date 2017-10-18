@@ -1,7 +1,7 @@
 ---
 title: "Running an application on a specific version of Node.js"
-description: "In case you a building a Node.js application and want to host it on WeDeploy, we have good news for you - you can now specify the designated version of Node.js."
-date: "October 16, 2017"
+description: "In case you are building a Node.js application and want to host it on WeDeploy, we have good news for you - now you can specify a designated version of Node.js."
+date: "October 18, 2017"
 author: "Iliyan Peychev"
 image: "/images/blog/post-16--0.gif"
 layout: "blog"
@@ -16,10 +16,10 @@ layout: "blog"
 </figure>
 
 This solves at least these two problems:
-1. You can use all the experimental features which Node.js has already, but they are not available in the default version of Node.js which runs on WeDeploy.
+1. You can use all the experimental features which Node.js has already, even if they are not available in the default version of Node.js which runs on WeDeploy.
 2. In case of a vulnerability, you can immediately update the Node.js version even before we update the default version.
 
-To specify the designated version, you may use the standard "node" property in `package.json`. We honour its full syntax, as [specified](https://docs.npmjs.com/files/package.json#engines) by NPM so the following will work just fine:
+To specify the designated version, you may use the standard [engines property](https://docs.npmjs.com/files/package.json#engines) in your `package.json`. We honour npm's full syntax so the following will work just fine.
 
 Specifying range:
 
@@ -43,6 +43,7 @@ Specifying a fixed version:
 
 #### Using ECMAScript 2015 modules
 The recent versions of Node.js contain most of the modern features added to JavaScript. We can use classes, arrow functions, async/await and so on, which makes the life of a developer much easier.
+
 However, till recently, we were still not able to use the [import](https://www.ecma-international.org/ecma-262/6.0/#sec-imports) and [export](https://www.ecma-international.org/ecma-262/6.0/#sec-exports) statements as specified by the language. Instead we either had to use `require` or to use transpilers, like Babel. Fortunately, an experimental [implementation](https://nodejs.org/api/esm.html) of ES2015 modules in Node was added recently. Let's see how can we use it.
 
 To enable ES2015 modules support, you have to specify at least v8.5 of Node.js and run the program with `--experimental-modules` flag:
@@ -58,9 +59,9 @@ To enable ES2015 modules support, you have to specify at least v8.5 of Node.js a
 }
 ```
 
-To show an example of their usage, we created a sample project. You may see it live [here](https://es2015modules.wedeploy.io/). The full [source code](https://github.com/ipeychev/test-es2015-modules) is available on Github.
+To show an example of their usage, we created a sample project. You may see it live [here](https://es2015modules.wedeploy.io/). The full [source code](https://github.com/wedeploy/demo-nodejs/tree/es2015-modules) is available on Github.
 
-The project shows how to import the three kind of modules: built-in Node modules, locally created modules and NPM modules:
+The project shows how to import the three kind of modules: built-in Node modules, locally created modules and npm modules:
 
 ```javascript
 import http from 'http';
@@ -68,7 +69,7 @@ import hackerQuotes from 'hacker-quotes';
 import {getRandomQuote} from './random-hacker-quotes.mjs';
 ```
 
-No transpilers are used and no any complex build systems - just plain JavaScript.
+No transpilers or complex build systems are used - just plain JavaScript.
 
 Happy hacking!
 
