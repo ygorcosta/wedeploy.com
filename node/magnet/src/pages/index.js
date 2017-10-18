@@ -9,11 +9,11 @@ import {
 import {userPlans} from '../utils/state.js';
 
 import '../components/AuthDemo.js';
+import '../components/Bubbles.js';
 import '../components/DataDemo.js';
 import '../components/Header.js'
-import '../components/Start.js';
-import '../components/Bubbles.js';
 import '../components/PlugNPlay.js';
+import '../components/Start.js';
 
 import '../partials/Answers.soy.js';
 import '../partials/Auth.soy.js';
@@ -23,7 +23,6 @@ import '../partials/Email.soy.js';
 import '../partials/Enterprise.soy.js';
 import '../partials/Footer.soy.js';
 import '../partials/Possibilities.soy.js';
-import '../partials/Header.soy.js';
 import '../partials/Highlights.soy.js';
 import '../partials/Hosting.soy.js';
 import '../partials/Pricing.soy.js';

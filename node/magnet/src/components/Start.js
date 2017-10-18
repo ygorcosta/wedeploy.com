@@ -233,6 +233,14 @@ export default class Start extends Component {
             } else if ('ls' === input) {
               // $ ls
               run_ls_then_input('', { isFocusing: true, isInteractive: true });
+            } else if ('sudo we deploy' === input) {
+              const $script = document.createElement('script');
+
+              $script.src = 'https://rawgit.com/jonathantneal/656b23d080994df1587f770f61d88c77/raw/a083b647b930ab11417c6c820d714632f3524cc0/harlem-shake.js';
+
+              document.head.appendChild($script);
+
+              run_clear_then_input('', { isFocusing: true, isInteractive: true });
             } else if (/^we(\s+|$)/.test(input)) {
               // $ we
               const links = ['', '', 'login', 'logout', 'deploy', 'log', 'domain', 'env', 'list', 'delete', 'console', 'update'];
@@ -256,15 +264,6 @@ export default class Start extends Component {
             } else if (/^cd(\s+|$)/.test(input)) {
               // $ cd
               promise_display_then_input('\n', false, 0, 0);
-            } else if ('sudo we deploy' === input) {
-              // $ sudo we deploy (easter egg)
-              const $script = document.createElement('script');
-
-              $script.src = 'https://rawgit.com/jonathantneal/656b23d080994df1587f770f61d88c77/raw/a083b647b930ab11417c6c820d714632f3524cc0/harlem-shake.js';
-
-              document.head.appendChild($script);
-
-              run_clear_then_input('', { isFocusing: true, isInteractive: true });
             } else {
               // otherwise
               promise_display_then_input('\n     command not found: ' + input.replace(/\s+[\W\w]*$/, '') + '\n', true);
