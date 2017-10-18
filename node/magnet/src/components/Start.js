@@ -115,18 +115,27 @@ export default class Start extends Component {
   }
 
   console() {
-    /* ...
-    /* ========================================================================== */
-
-    const returnKeyCode = 13;
-    const kKeyCode = 75;
-
+    const RETURN_KEY_CODE = 13;
+    const K_KEY_CODE = 75;
+    const CMD_MATCH = /^(?:(sudo)\s+)?([^\s]+)?(?:\s+([\W\w]*))?$/;
     const $console = document.querySelector('.start-demo-content pre');
 
-    $console.parentNode.parentNode.addEventListener('click', ondemoclick);
-
-    /* ...
+    /* Initialize Console demo
     /* ========================================================================== */
+
+    input('ls', { speed: 100, beforeMs: 1000, afterMs: 1000 })
+    .then(() => run_display('\n     <b>index.html</b>\n', { afterMs: 300 }))
+    .then(() => input('we deploy', { speed: 60, afterMs: 1500 }))
+    .then(() => run_display('\n  >  <b>yourapp</b> in <b>wedeploy</b>', { afterMs: 100 }))
+    .then(() => run_display('\n     Initializing deployment process\n     Preparing package', { afterMs: 1500 }))
+    .then(() => run_display('\n  <b>!</b>  Deployment Successful in 3s', { afterMs: 200 }))
+    .then(() => run_display('\n  <b>!</b>  Deployed <b>hosting-yourapp.wedeploy.io</b>\n', { afterMs: 100 }))
+    .then(() => input('', { isInteractive: true }));
+
+    /* Initialize Console clickability
+    /* ========================================================================== */
+
+    $console.parentNode.parentNode.addEventListener('click', ondemoclick);
 
     function ondemoclick(event) {
       const $contenteditable = $console.querySelector('[contenteditable]');
@@ -139,28 +148,26 @@ export default class Start extends Component {
       }
     }
 
-    /* ...
-    /* ========================================================================== */
+    /* Promise Display
+    /* ====================================================================== */
 
-    function promise_display(content, isEncoded, beforeMs, afterMs) {
-      return new Promise(resolve => setTimeout(resolve, beforeMs || 0))
-      .then(() => display(content, isEncoded))
-      .then(() => new Promise(resolve => setTimeout(resolve, afterMs || 0)));
+    function run_display(content, rawopts) {
+      const opts = Object(rawopts);
+
+      return new Promise(resolve => setTimeout(resolve, opts.beforeMs || 0))
+      .then(() => display(content))
+      .then(() => new Promise(resolve => setTimeout(resolve, opts.afterMs || 0)));
     }
 
-    function promise_display_then_input(content, isEncoded, beforeMs, afterMs) {
-      return promise_display(content, isEncoded, beforeMs, afterMs).then(() => input('', { isFocusing: true, isInteractive: true }));
+    function run_display_then_input(content, opts) {
+      return run_display(content, opts).then(() => input('', opts));
     }
 
-    function display(content, isEncoded) {
+    function display(content) {
       const $sandbox = document.createElement('x');
       const $fragment = document.createDocumentFragment();
 
-      if (isEncoded) {
-        $sandbox.innerHTML = document.createElement('x').appendChild(document.createTextNode(content)).parentNode.innerHTML;
-      } else {
-        $sandbox.innerHTML = content;
-      }
+      $sandbox.innerHTML = content;
 
       while ($sandbox.lastChild) {
         $fragment.appendChild($sandbox.firstChild);
@@ -171,7 +178,14 @@ export default class Start extends Component {
       $console.parentNode.scrollTop = $console.parentNode.scrollHeight;
     }
 
-    /* ...
+    /* Encode HTML (preventing element injections)
+    /* ====================================================================== */
+
+    function encodeHTML(content) {
+      return document.createElement('x').appendChild(document.createTextNode(content)).parentNode.innerHTML;
+    }
+
+    /* Input
     /* ========================================================================== */
 
     function input(content, rawopts) {
@@ -187,7 +201,7 @@ export default class Start extends Component {
         $console.appendChild($input);
 
         // if the plain text element is to be interactive
-        if (opts.isInteractive) {
+        if (opts.isInteractive || opts.isFocusInteractive) {
           // configure the plain text element as an input
           $input.setAttribute('contenteditable', true);
           $input.setAttribute('spellcheck', false);
@@ -195,7 +209,7 @@ export default class Start extends Component {
           $input.addEventListener('keydown', onkeydown);
           $input.addEventListener('input', oninput);
 
-          if (opts.isFocusing) {
+          if (opts.isFocusInteractive) {
             $input.focus();
           }
         } else {
@@ -203,17 +217,17 @@ export default class Start extends Component {
           malarkey($input).pause(opts.beforeMs || 0).type(content, opts.speed || 0).pause(opts.afterMs || 0).call(resolve);
         }
 
-        // disable elements from being added to the plain text element
+        // on input, disable elements from being added to the plain text element
         function oninput() {
           while ($input.lastElementChild) {
             $input.removeChild($input.lastElementChild);
           }
         }
 
-        //
+        // on keydown, manage commands
         function onkeydown(event) {
           // if the return key is pressed
-          if (returnKeyCode === event.keyCode) {
+          if (RETURN_KEY_CODE === event.keyCode) {
             // do not input the return character
             event.preventDefault();
 
@@ -221,56 +235,82 @@ export default class Start extends Component {
             $input.removeAttribute('contenteditable');
             $input.removeEventListener('keydown', onkeydown);
 
-            // input text
-            const input = $input.innerText;
+            const input = $input.innerText.replace(/^[\s;]+|[\s;]+$/g, '');
+            const sudo  = input.replace(CMD_MATCH, '$1');
+            const cmd   = input.replace(CMD_MATCH, '$2');
+            const args  = input.replace(CMD_MATCH, '$3');
 
-            if ('clear' === input) {
-              // $ clear
-              run_clear_then_input('', { isFocusing: true, isInteractive: true });
-            } else if ('pwd' === input) {
-              // $ pwd
-              promise_display_then_input('\n     <b>/yoursite</b>\n', false, 0, 200);
-            } else if ('ls' === input) {
-              // $ ls
-              run_ls_then_input('', { isFocusing: true, isInteractive: true });
-            } else if ('sudo we deploy' === input) {
+            if (sudo && 'we' === cmd && 'deploy' === args) {
+              // if "sudo we deploy" is run, harlemify the page
               const $script = document.createElement('script');
 
               $script.src = 'https://rawgit.com/jonathantneal/656b23d080994df1587f770f61d88c77/raw/a083b647b930ab11417c6c820d714632f3524cc0/harlem-shake.js';
 
               document.head.appendChild($script);
 
-              run_clear_then_input('', { isFocusing: true, isInteractive: true });
-            } else if (/^we(\s+|$)/.test(input)) {
-              // $ we
-              const links = ['', '', 'login', 'logout', 'deploy', 'log', 'domain', 'env', 'list', 'delete', 'console', 'update'];
-              const cmd = input.replace(/^we\s*/, '');
+              run_clear_then_input('', { isFocusInteractive: true });
+            } else if ('clear' === cmd) {
+              // if "clear" is run, clear the console
+              run_clear_then_input('', { isFocusInteractive: true });
+            } else if ('pwd' === cmd) {
+              // if "pwd" is run, show the working directory
+              run_display_then_input('\n     <b>/yoursite</b>\n', { afterMs: 200, isFocusInteractive: true });
+            } else if ('ls' === cmd) {
+              // if "ls" is run, show any files in the working directory
+              run_display_then_input('\n     <b>index.html</b>\n', { isFocusInteractive: true, afterMs: 200 });
+            } else if ('we' === cmd) {
+              // we command documentation by index
+              const cmdDocsByIndex = ['', '', 'login', 'logout', 'deploy', 'log', 'domain', 'env', 'list', 'delete', 'console', 'update'];
 
-              if (!cmd) {
-                run_we_then_input('', { isFocusing: true, isInteractive: true });
-              } else if (links.indexOf(cmd) !== -1) {
-                const url = `https://wedeploy.com/docs/intro/using-the-command-line/#${links.indexOf(cmd)}`;
+              if (args && cmdDocsByIndex.indexOf(args) !== -1) {
+                // if args are passed and a documented command is available, show that documentation in a new tab
+                const docURL = `https://wedeploy.com/docs/intro/using-the-command-line/#${cmdDocsByIndex.indexOf(args)}`;
 
-                window.open(url, '_blank');
+                window.open(docURL, '_blank');
 
-                promise_display_then_input('\n', false, 0, 0);
+                // then, continue the interactive prompt
+                run_display_then_input('\n', { isFocusInteractive: true });
+              } else {
+                // otherwise, show available "we" commands
+                run_we_then_input('', { isFocusInteractive: true });
               }
-            } else if (/^echo(\s+|$)/.test(input)) {
-              // $ echo
-              promise_display_then_input(input.replace(/^echo(?:\s+(")?([\W\w]+)\1)?$/, '\n     $2\n'), true);
-            } else if (/^man(\s+|$)/.test(input)) {
-              // $ man
-              location.href = 'https://wedeploy.com/docs/';
-            } else if (/^cd(\s+|$)/.test(input)) {
-              // $ cd
-              promise_display_then_input('\n', false, 0, 0);
+            } else if ('cat' === cmd) {
+              // if "cat" is run, show a picture of a cat, then, continue the interactive prompt
+              const catascii = [
+                '',
+                '      /\\_/\\',
+                '     ( o.o )',
+                '      > ^ <',
+                ''
+              ].join('\n');
+
+              run_display_then_input(catascii, { afterMs: 300, beforeMs: 200, isFocusInteractive: true });
+            } else if ('echo' === cmd) {
+              // if "echo" is run, show the args
+              const echoArgs = args.replace(/^(["'])?([\W\w]*)\1$/, '$2');
+              run_display_then_input(`\n${encodeHTML(echoArgs)}\n`, { isFocusInteractive: true });
+            } else if ('man' === cmd) {
+              // if "man" is run, open wedeploy documentation in a new tab
+              window.open('https://wedeploy.com/docs/', '_blank');
+
+              // then, continue the interactive prompt
+              run_display_then_input('\n', { isFocusInteractive: true });
+            } else if ('open' === cmd) {
+              // if "open" is run, open anything from the args
+              window.open(args, '_blank');
+
+              // then, continue the interactive prompt
+              run_display_then_input('\n', { isFocusInteractive: true });
+            } else if ('cd' === cmd || 'cp' === cmd || 'find' === cmd || 'grep' === cmd || 'mkdir' === cmd || 'mv' === cmd || 'rm' === cmd || 'touch' === cmd) {
+              // if various common commands are run, do nothing
+              run_display_then_input('\n', { isFocusInteractive: true });
             } else {
-              // otherwise
-              promise_display_then_input('\n     command not found: ' + input.replace(/\s+[\W\w]*$/, '') + '\n', true);
+              // otherwise, report that the command is not found
+              run_display_then_input(`\n     command not found: ${encodeHTML(cmd)}\n`, { isFocusInteractive: true });
             }
-          } else if (event.metaKey && kKeyCode === event.keyCode) {
-            // otherwise, CMD+K to clear the console
-            run_clear_then_input('', { isFocusing: true, isInteractive: true });
+          } else if (event.metaKey && K_KEY_CODE === event.keyCode) {
+            // otherwise, CMD+K will clear the console
+            run_clear_then_input('', { isFocusInteractive: true });
           }
         }
       })
@@ -292,16 +332,12 @@ export default class Start extends Component {
     /* ...
     /* ========================================================================== */
 
-    function run_ls_then_input(content, opts) {
-      return promise_display('\n     <b>index.html</b>\n', false, 0, 200).then(() => input(content, opts));
-    }
-
     function run_we_then_input(content, opts) {
-      return promise_display([
+      return run_display([
         '',
         '  <span>!</span>   Usage: we [command] [flag]'
-      ].join('\n'), false, 0, 300)
-      .then(() => promise_display([
+      ].join('\n'), { afterMs: 300 })
+      .then(() => run_display([
         '',
         '  Command          Description',
         '  <b>deploy</b>           Perform services deployment',
@@ -318,28 +354,15 @@ export default class Start extends Component {
         '  <b>version</b>          Show CLI version',
         '  <b>update</b>           Update CLI to the latest version',
         '  <b>uninstall</b>        Uninstall CLI'
-      ].join('\n'), false, 0, 100))
-      .then(() => promise_display([
+      ].join('\n'), { afterMs: 100 }))
+      .then(() => run_display_then_input([
         '',
         '  Flag             Description',
         '  <b>-h</b>, <b>--help</b>       Show help message',
         '  <b>-v</b>, <b>--verbose</b>    Show more information about an operation',
         ''
-      ].join('\n')))
-      .then(() => input(content, opts));
+      ].join('\n'), opts));
     }
-
-    function run_we_deploy_then_input(content, opts) {
-      return promise_display('\n  >  <b>yourapp</b> in <b>wedeploy</b>', false, 0, 100)
-      .then(() => promise_display('\n     Initializing deployment process\n     Preparing package', false, 0, 1000))
-      .then(() => promise_display('\n  <b>!</b>  Deployment Successful in 3s', false, 0, 100))
-      .then(() => promise_display('\n  <b>!</b>  Deployed <b>hosting-yourapp.wedeploy.io</b>\n'))
-      .then(() => input(content, opts))
-    }
-
-    input('ls', false, 100, 500, 0)
-    .then(() => run_ls_then_input('we deploy', { speed: 60, beforeMs: 1500, afterMs: 1500 }))
-    .then(() => run_we_deploy_then_input('', { isInteractive: true }));
   }
 }
 
