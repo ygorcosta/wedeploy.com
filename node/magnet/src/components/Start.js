@@ -48,7 +48,7 @@ export default class Start extends Component {
       fill: 'backwards'
     });
 
-    viewStart.classList.remove('slide--start-preload');
+    viewStart.classList.remove('start--nojs');
 
     malarkey(target, opts).pause(10000).call(fadeOut).delete().call(function () {
       viewHeader.classList.remove('start--1');
