@@ -25,10 +25,13 @@
 /* ========================================================================== */
 
 .plugnplay-demo-menu {
-  display: inline-block;
   margin-block-start: 30px;
-  position: relative;
-  vertical-align: top;
+
+  @media (--l-feature) {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+  }
 }
 
 .plugnplay-demo-menu-list {
@@ -150,6 +153,10 @@
   &.-source {
     background-color: var(--black);
   }
+}
+
+.plugnplay-demo-console {
+  display: block;
 }
 
 .plugnplay-demo-source {
