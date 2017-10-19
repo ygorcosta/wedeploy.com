@@ -13,67 +13,118 @@ export default class Start extends Component {
   }
 
   type() {
-    const viewHeader = document.querySelector('.header');
-    const viewStart = document.querySelector('.start');
+    /* Malarkey options
+    /* ====================================================================== */
 
-    const demoConsole = document.querySelector('.start-demo-console');
-    const demoDevice = document.querySelector('.start-demo-device');
-    const target = viewStart.querySelector('.start-heading-phrase-text');
-    const opts = {
+    const MALARKEY_OPTIONS = {
       typeSpeed: 100,
       deleteSpeed: 40,
       loop: true
     };
 
-    const demoConsoleTransform = getComputedStyle(demoConsole).transform.replace(/^none$/, '');
-    const demoDeviceTransform = getComputedStyle(demoDevice).transform.replace(/^none$/, '');
+    /* Initialize the document for the demo
+    /* ====================================================================== */
 
-    demoConsole.animate([
-      { opacity: 0, transform: `${ demoConsoleTransform } translateX(20px)` },
-      { opacity: 1, transform: `${ demoConsoleTransform } translateX(0)` }
-    ], {
-      delay: 300,
-      duration: 600,
-      easing: 'ease-in-out',
-      fill: 'backwards'
-    });
+    // views
+    const headerEl = document.querySelector('.header');
+    const startEl = document.querySelector('.start');
 
-    demoDevice.animate([
-      { opacity: 0, transform: `${ demoDeviceTransform } translateX(20px)` },
-      { opacity: 1, transform: `${ demoDeviceTransform } translateX(0)` }
-    ], {
-      delay: 600,
-      duration: 600,
-      easing: 'ease-in-out',
-      fill: 'backwards'
-    });
+    // self-typing phrase
+    const startPhraseEl = startEl.querySelector('.start-heading-phrase-text');
 
-    viewStart.classList.remove('start--nojs');
+    // demo console and device
+    const demoConsole = document.querySelector('.start-demo-console');
+    const demoDevice = document.querySelector('.start-demo-device');
 
-    malarkey(target, opts).pause(10000).call(fadeOut).delete().call(function () {
-      viewHeader.classList.remove('start--1');
-      viewHeader.classList.add('start--2');
-      viewStart.classList.remove('start--1');
-      viewStart.classList.add('start--2');
+    const demoConsoleTransform = window.getComputedStyle(demoConsole).transform.replace(/^none$/, '');
+    const demoDeviceTransform = window.getComputedStyle(demoDevice).transform.replace(/^none$/, '');
+
+    /* Timeline of animations
+    /* ====================================================================== */
+
+    runInitialAnimations();
+
+    malarkey(startPhraseEl, MALARKEY_OPTIONS)
+    .pause(10000)
+    .call(fadeOut)
+    .delete()
+    .call(transitionFrom1to2)
+    .call(fadeInDevice)
+    .type('application.')
+    .pause(10000)
+    .call(fadeOut)
+    .delete()
+    .call(transitionFrom2to3)
+    .call(fadeInDeviceWithDelay)
+    .type('API.')
+    .pause(10000)
+    .call(fadeOut)
+    .delete()
+    .call(transitionFrom3to1)
+    .call(fadeInDevice)
+    .type('website.');
+
+    /* Initial animations of the console and device
+    /* ====================================================================== */
+
+    function runInitialAnimations() {
+      demoConsole.animate([
+        { opacity: 0, transform: `${ demoConsoleTransform } translateX(20px)` },
+        { opacity: 1, transform: `${ demoConsoleTransform } translateX(0)` }
+      ], {
+        delay: 300,
+        duration: 600,
+        easing: 'ease-in-out',
+        fill: 'backwards'
+      });
+
+      demoDevice.animate([
+        { opacity: 0, transform: `${ demoDeviceTransform } translateX(20px)` },
+        { opacity: 1, transform: `${ demoDeviceTransform } translateX(0)` }
+      ], {
+        delay: 600,
+        duration: 600,
+        easing: 'ease-in-out',
+        fill: 'backwards'
+      });
+
+      startEl.classList.remove('start--nojs');
+    }
+
+    /* Transitions for the heading and starting demo
+    /* ====================================================================== */
+
+    function transitionFrom1to2() {
+      headerEl.classList.remove('start--1');
+      headerEl.classList.add('start--2');
+      startEl.classList.remove('start--1');
+      startEl.classList.add('start--2');
 
       this();
-    }).call(fadeIn).type('application.').pause(10000).call(fadeOut).delete().call(function () {
-      viewHeader.classList.remove('start--2');
-      viewHeader.classList.add('start--3');
-      viewStart.classList.remove('start--2');
-      viewStart.classList.add('start--3');
+    }
+
+    function transitionFrom2to3() {
+      headerEl.classList.remove('start--2');
+      headerEl.classList.add('start--3');
+      startEl.classList.remove('start--2');
+      startEl.classList.add('start--3');
 
       this();
-    }).call(fadeInWithDelay).type('API.').pause(10000).call(fadeOut).delete().call(function () {
-      viewHeader.classList.remove('start--3');
-      viewHeader.classList.add('start--1');
-      viewStart.classList.remove('start--3');
-      viewStart.classList.add('start--1');
+    }
+
+    function transitionFrom3to1() {
+      headerEl.classList.remove('start--3');
+      headerEl.classList.add('start--1');
+      startEl.classList.remove('start--3');
+      startEl.classList.add('start--1');
 
       this();
-    }).call(fadeIn).type('website.');
+    }
 
-    function fadeIn() {
+    /* Fade in the device
+    /* ====================================================================== */
+
+    function fadeInDevice() {
       demoDevice.animate([
         { opacity: 0 },
         { opacity: 1 }
@@ -86,7 +137,10 @@ export default class Start extends Component {
       this();
     }
 
-    function fadeInWithDelay() {
+    /* Fade in the device with almost a one second delay
+    /* ====================================================================== */
+
+    function fadeInDeviceWithDelay() {
       demoDevice.animate([
         { opacity: 0 },
         { opacity: 1 }
@@ -99,6 +153,9 @@ export default class Start extends Component {
 
       this();
     }
+
+    /* Fade out the device
+    /* ====================================================================== */
 
     function fadeOut() {
       demoDevice.animate([
@@ -115,229 +172,336 @@ export default class Start extends Component {
   }
 
   console() {
-    const RETURN_KEY_CODE = 13;
-    const K_KEY_CODE = 75;
-    const CMD_MATCH = /^(?:(sudo)\s+)?([^\s]+)?(?:\s+([\W\w]*))?$/;
-    const $console = document.querySelector('.start-demo-content pre');
-
-    /* Initialize Console demo
-    /* ========================================================================== */
-
-    input('ls', { speed: 100, beforeMs: 1000, afterMs: 1000 })
-    .then(() => run_display('\n     <b>index.html</b>\n', { afterMs: 300 }))
-    .then(() => input('we deploy', { speed: 60, afterMs: 1500 }))
-    .then(() => run_display('\n  >  <b>yourapp</b> in <b>wedeploy</b>', { afterMs: 100 }))
-    .then(() => run_display('\n     Initializing deployment process\n     Preparing package', { afterMs: 1500 }))
-    .then(() => run_display('\n  <b>!</b>  Deployment Successful in 3s', { afterMs: 200 }))
-    .then(() => run_display('\n  <b>!</b>  Deployed <b>hosting-yourapp.wedeploy.io</b>\n', { afterMs: 100 }))
-    .then(() => input('', { isInteractive: true }));
-
-    /* Initialize Console clickability
-    /* ========================================================================== */
-
-    $console.parentNode.parentNode.addEventListener('click', ondemoclick);
-
-    function ondemoclick(event) {
-      const $contenteditable = $console.querySelector('[contenteditable]');
-
-      if ($contenteditable) {
-        if (!$contenteditable.contains(event.target)) {
-
-          $contenteditable.focus();
-        }
-      }
-    }
-
-    /* Promise Display
+    /* Key codes
     /* ====================================================================== */
 
-    function run_display(content, rawopts) {
+    const RETURN_KEY_CODE = 13;
+    const K_KEY_CODE = 75;
+
+    /* Initialize the console
+    /* ====================================================================== */
+
+    const preEl = document.querySelector('.start-demo-content pre');
+
+    const consoleEl = preEl.parentElement.parentElement;
+
+    /* Activate content-editable areas on click
+    /* ====================================================================== */
+
+    consoleEl.addEventListener('click', (event) => {
+      // contenteditable element within the console
+      const contentEditableEl = preEl.querySelector('[contenteditable]');
+
+      // if the contenteditable element exists and is not already being clicked into
+      if (contentEditableEl && !contentEditableEl.contains(event.target)) {
+        // focus the contenteditable element
+        contentEditableEl.focus();
+      }
+    });
+
+    /* Simulate the console being used
+    /* ====================================================================== */
+
+    runInput('ls', { speed: 100, beforeMs: 1000, afterMs: 1000 })
+    .then(() => runHtml('\n     <b>index.html</b>\n', { afterMs: 300 }))
+    .then(() => runInput('we deploy', { speed: 60, afterMs: 1500 }))
+    .then(() => runHtml('\n  >  <b>yourapp</b> in <b>wedeploy</b>', { afterMs: 100 }))
+    .then(() => runHtml('\n     Initializing deployment process\n     Preparing package', { afterMs: 1500 }))
+    .then(() => runHtml('\n  <b>!</b>  Deployment Successful in 3s', { afterMs: 200 }))
+    .then(() => runHtml('\n  <b>!</b>  Deployed <b>hosting-yourapp.wedeploy.io</b>\n', { afterMs: 100 }))
+    .then(() => runInput('', { isInteractive: true }));
+
+    /* encodeHTML: return a string with encoded html entities
+    /* ====================================================================== */
+
+    function encodeHTML(string) {
+      return document.createElement('x').appendChild(document.createTextNode(string)).parentNode.innerHTML;
+    }
+
+    /* display: show html in <pre> (attached as fragments)
+    /* ====================================================================== */
+
+    function pushHtml(html) {
+      const sandboxEl = document.createElement('x');
+      const fragmentEl = document.createDocumentFragment();
+
+      sandboxEl.innerHTML = html;
+
+      while (sandboxEl.lastChild) {
+        fragmentEl.appendChild(sandboxEl.firstChild);
+      }
+
+      preEl.appendChild(fragmentEl);
+
+      preEl.parentNode.scrollTop = preEl.parentNode.scrollHeight;
+    }
+
+    /* runHtml: promise html is shown, with a delay before and after
+    /* ====================================================================== */
+
+    function runHtml(content, rawopts) {
       const opts = Object(rawopts);
 
       return new Promise(resolve => setTimeout(resolve, opts.beforeMs || 0))
-      .then(() => display(content))
+      .then(() => pushHtml(content))
       .then(() => new Promise(resolve => setTimeout(resolve, opts.afterMs || 0)));
     }
 
-    function run_display_then_input(content, opts) {
-      return run_display(content, opts).then(() => input('', opts));
-    }
-
-    function display(content) {
-      const $sandbox = document.createElement('x');
-      const $fragment = document.createDocumentFragment();
-
-      $sandbox.innerHTML = content;
-
-      while ($sandbox.lastChild) {
-        $fragment.appendChild($sandbox.firstChild);
-      }
-
-      $console.appendChild($fragment);
-
-      $console.parentNode.scrollTop = $console.parentNode.scrollHeight;
-    }
-
-    /* Encode HTML (preventing element injections)
+    /* runHtmlThenInput: promise html and a continuing interactive prompt
     /* ====================================================================== */
 
-    function encodeHTML(content) {
-      return document.createElement('x').appendChild(document.createTextNode(content)).parentNode.innerHTML;
+    function runHtmlThenInput(html) {
+      // promise html is shown, then, promise a continuing interactive prompt
+      return runHtml(html).then(() => runInput('', { isFocusInteractive: true }));
     }
 
-    /* Input
-    /* ========================================================================== */
+    /* Run Input: Real or simulated console interaction
+    /* ====================================================================== */
 
-    function input(content, rawopts) {
+    function runInput(content, rawopts) {
+      // get options
       const opts = Object(rawopts);
 
       return new Promise(resolve => {
         // display the current directory
-        display('  <span>•</span>  /yoursite $ ', false, 0, 0);
+        pushHtml('  <span>•</span>  /yoursite $ ');
 
         // create an input plaintext element
-        const $input = document.createElement('plaintext');
-
-        $console.appendChild($input);
+        const plaintextEl = preEl.appendChild(document.createElement('plaintext'));
 
         // if the plain text element is to be interactive
         if (opts.isInteractive || opts.isFocusInteractive) {
           // configure the plain text element as an input
-          $input.setAttribute('contenteditable', true);
-          $input.setAttribute('spellcheck', false);
+          plaintextEl.setAttribute('contenteditable', true);
+          plaintextEl.setAttribute('spellcheck', false);
 
-          $input.addEventListener('keydown', onkeydown);
-          $input.addEventListener('input', oninput);
+          plaintextEl.addEventListener('keydown', onkeydown);
+          plaintextEl.addEventListener('input', onInput);
 
+          // if the plain text element is to be focused
           if (opts.isFocusInteractive) {
-            $input.focus();
+            // focus the input
+            plaintextEl.focus();
           }
         } else {
-          // otherwise, simulate typed in text
-          malarkey($input).pause(opts.beforeMs || 0).type(content, opts.speed || 0).pause(opts.afterMs || 0).call(resolve);
+          // otherwise, simulate text being typed into the input
+          malarkey(plaintextEl).pause(opts.beforeMs || 0).type(content, opts.speed || 0).pause(opts.afterMs || 0).call(resolve);
         }
 
-        // on input, disable elements from being added to the plain text element
-        function oninput() {
-          while ($input.lastElementChild) {
-            $input.removeChild($input.lastElementChild);
+        // on an input event, disable elements from being appended
+        function onInput() {
+          while (plaintextEl.lastElementChild) {
+            plaintextEl.removeChild(plaintextEl.lastElementChild);
           }
         }
 
-        // on keydown, manage commands
+        // on a keydown event, manage various commands
         function onkeydown(event) {
-          // if the return key is pressed
-          if (RETURN_KEY_CODE === event.keyCode) {
-            // do not input the return character
+          if (event.metaKey && K_KEY_CODE === event.keyCode) {
+            // CMD+K will clear the console
+            runClearThenInput();
+          } else if (RETURN_KEY_CODE === event.keyCode) {
+            // otherwise, if the return key is pressed, cancel inputing return
             event.preventDefault();
 
             // disable the plain text element as an input
-            $input.removeAttribute('contenteditable');
-            $input.removeEventListener('keydown', onkeydown);
+            plaintextEl.removeAttribute('contenteditable');
+            plaintextEl.removeEventListener('keydown', onkeydown);
 
-            const input = $input.innerText.replace(/^[\s;]+|[\s;]+$/g, '');
-            const sudo  = input.replace(CMD_MATCH, '$1');
-            const cmd   = input.replace(CMD_MATCH, '$2');
-            const args  = input.replace(CMD_MATCH, '$3');
+            // command parts from input inner text
+            const cmd = getCommand(plaintextEl.innerText);
 
-            if (sudo && 'we' === cmd && 'deploy' === args) {
-              // if "sudo we deploy" is run, harlemify the page
-              const $script = document.createElement('script');
-
-              $script.src = 'https://rawgit.com/jonathantneal/656b23d080994df1587f770f61d88c77/raw/a083b647b930ab11417c6c820d714632f3524cc0/harlem-shake.js';
-
-              document.head.appendChild($script);
-
-              run_clear_then_input('', { isFocusInteractive: true });
-            } else if ('clear' === cmd) {
-              // if "clear" is run, clear the console
-              run_clear_then_input('', { isFocusInteractive: true });
-            } else if ('pwd' === cmd) {
-              // if "pwd" is run, show the working directory
-              run_display_then_input('\n     <b>/yoursite</b>\n', { afterMs: 200, isFocusInteractive: true });
-            } else if ('ls' === cmd) {
-              // if "ls" is run, show any files in the working directory
-              run_display_then_input('\n     <b>index.html</b>\n', { isFocusInteractive: true, afterMs: 200 });
-            } else if ('we' === cmd) {
-              // we command documentation by index
-              const cmdDocsByIndex = ['', '', 'login', 'logout', 'deploy', 'log', 'domain', 'env', 'list', 'delete', 'console', 'update'];
-
-              if (args && cmdDocsByIndex.indexOf(args) !== -1) {
-                // if args are passed and a documented command is available, show that documentation in a new tab
-                const docURL = `https://wedeploy.com/docs/intro/using-the-command-line/#${cmdDocsByIndex.indexOf(args)}`;
-
-                window.open(docURL, '_blank');
-
-                // then, continue the interactive prompt
-                run_display_then_input('\n', { isFocusInteractive: true });
-              } else {
-                // otherwise, show available "we" commands
-                run_we_then_input('', { isFocusInteractive: true });
-              }
-            } else if ('cat' === cmd) {
-              // if "cat" is run, show a picture of a cat, then, continue the interactive prompt
-              const catascii = [
-                '',
-                '      /\\_/\\',
-                '     ( o.o )',
-                '      > ^ <',
-                ''
-              ].join('\n');
-
-              run_display_then_input(catascii, { afterMs: 300, beforeMs: 200, isFocusInteractive: true });
-            } else if ('echo' === cmd) {
-              // if "echo" is run, show the args
-              const echoArgs = args.replace(/^(["'])?([\W\w]*)\1$/, '$2');
-              run_display_then_input(`\n${encodeHTML(echoArgs)}\n`, { isFocusInteractive: true });
-            } else if ('man' === cmd) {
-              // if "man" is run, open wedeploy documentation in a new tab
-              window.open('https://wedeploy.com/docs/', '_blank');
-
-              // then, continue the interactive prompt
-              run_display_then_input('\n', { isFocusInteractive: true });
-            } else if ('open' === cmd) {
-              // if "open" is run, open anything from the args
-              window.open(args, '_blank');
-
-              // then, continue the interactive prompt
-              run_display_then_input('\n', { isFocusInteractive: true });
-            } else if ('cd' === cmd || 'cp' === cmd || 'find' === cmd || 'grep' === cmd || 'mkdir' === cmd || 'mv' === cmd || 'rm' === cmd || 'touch' === cmd) {
-              // if various common commands are run, do nothing
-              run_display_then_input('\n', { isFocusInteractive: true });
-            } else {
-              // otherwise, report that the command is not found
-              run_display_then_input(`\n     command not found: ${encodeHTML(cmd)}\n`, { isFocusInteractive: true });
+            if (cmd.sudo) {
+              // otherwise, sudo will harlem shake the page
+              runSudoWeDeployThenInput();
+            } else switch (cmd.name) {
+              case 'clear':
+                runClearThenInput();
+                break;
+              case 'pwd':
+                runPwdThenInput();
+                break;
+              case 'ls':
+                runLsThenInput();
+                break;
+              case 'we':
+                runWeThenInput(cmd.args);
+                break;
+              case 'cat':
+                runCatThenInput();
+                break;
+              case 'echo':
+                runEchoThenInput(cmd.args);
+                break;
+              case 'man':
+                runOpenThenInput('/docs/');
+                break;
+              case 'open':
+                runOpenThenInput(cmd.args);
+                break;
+              case 'cd':
+              case 'cp':
+              case 'find':
+              case 'grep':
+              case 'mkdir':
+              case 'mv':
+              case 'rm':
+              case 'touch':
+                runHtmlThenInput('\n');
+                break;
+              default:
+                runHtmlThenInput(`\n     command not found: ${encodeHTML(cmd.name)}\n`);
             }
-          } else if (event.metaKey && K_KEY_CODE === event.keyCode) {
-            // otherwise, CMD+K will clear the console
-            run_clear_then_input('', { isFocusInteractive: true });
           }
         }
       })
     }
 
-    /* ...
-    /* ========================================================================== */
+    /* getCommand: get the parts of a command
+    /* ====================================================================== */
 
-    function run_clear_then_input(content, opts) {
+    function getCommand(string) {
+      // regular expressions to match the different parts of a command
+      const commandTrims = /^[\s;]+|[\s;]+$/g;
+      const commandParts = /^(?:(sudo)\s+)?([^\s]+)?(?:\s+([\W\w]*))?$/;
+
+      // input trimmed of spaces and semicolons
+      const input = string.replace(commandTrims, '');
+
+      // parts of a command
+      const sudo = input.replace(commandParts, '$1');
+      const name = input.replace(commandParts, '$2');
+      const args = input.replace(commandParts, '$3');
+
+      return { input, sudo, name, args };
+    }
+
+    /* runCatThenInput: show cat ascii
+    /* ====================================================================== */
+
+    function runCatThenInput() {
+      // cat ascii
+      const catAscii = [
+        '',
+        '      /\\_/\\',
+        '     ( o.o )',
+        '      > ^ <',
+        ''
+      ].join('\n');
+
+      // show the cat ascii, then, promise a continuing interactive prompt
+      return runHtmlThenInput(catAscii);
+    }
+
+    /* runClearThenInput: clear the <pre> of all children
+    /* ====================================================================== */
+
+    function runClearThenInput() {
+      // promise all children are removed from <pre>
       return new Promise(resolve => {
-        while ($console.lastChild) {
-          $console.removeChild($console.lastChild);
+        while (preEl.lastChild) {
+          preEl.removeChild(preEl.lastChild);
         }
 
         resolve();
-      }).then(() => input(content, opts));
+      })
+      // then, promise a continuing interactive prompt
+      .then(() => runInput('', { isFocusInteractive: true }));
     }
 
-    /* ...
-    /* ========================================================================== */
+    /* runEcho: show any text in the console
+    /* ====================================================================== */
 
-    function run_we_then_input(content, opts) {
-      return run_display([
+    function runEcho(args) {
+      // html that will display in the console
+      const echoHTML = `\n     ${encodeHTML(args.replace(/^(["'])?([\W\w]*)\1$/, '$2'))}\n`;
+
+      // echo the args, then, continue the interactive prompt
+      runHtmlThenInput(echoHTML);
+    }
+
+    /* runOpenThenInput: open anything in a new tab
+    /* ====================================================================== */
+
+    function runOpenThenInput(args) {
+      // if "open" is run, open anything from the args
+      window.open(args, '_blank');
+
+      // then, continue the interactive prompt
+      return runHtmlThenInput('\n');
+    }
+
+    /* runPwdThenInput: show the files in the working directory
+    /* ====================================================================== */
+
+    function runLsThenInput() {
+      return runHtmlThenInput('\n     <b>index.html</b>\n');
+    }
+
+    /* runPwdThenInput: show the working directory
+    /* ====================================================================== */
+
+    function runPwdThenInput() {
+      return runHtmlThenInput('\n     <b>/yoursite</b>\n');
+    }
+
+    /* runSudoWeDeployThenInput: harlem shake the page
+    /* ====================================================================== */
+
+    function runSudoWeDeployThenInput() {
+      const scriptEl = document.createElement('script');
+
+      scriptEl.src = '/static/scripts/harlem-shake.js';
+
+      document.head.appendChild(scriptEl);
+
+      return runClearThenInput({ isFocusInteractive: true });
+    }
+
+    /* runWeThenInput: visit various we command documentation
+    /* ====================================================================== */
+
+    function runWeThenInput(args) {
+      // we command documentation by index
+      const cmdDocsByIndex = [
+        null,
+        null,
+        'login',
+        'logout',
+        'deploy',
+        'log',
+        'domain',
+        'env',
+        'list',
+        'delete',
+        'console',
+        'update'
+      ];
+
+      const cmdDocsIndex = cmdDocsByIndex.indexOf(args);
+      const hasDocIndex  = args && cmdDocsIndex !== -1;
+
+      // if a corresponding documentation is availabl
+      if (hasDocIndex) {
+        // show the documentation in a new tab
+        window.open(`/docs/intro/using-the-command-line/#${cmdDocsIndex}`, '_blank');
+
+        // then, continue the interactive prompt
+        return runHtmlThenInput('\n');
+      } else {
+        // otherwise, show available "we" commands
+        return runWeHelpThenInput();
+      }
+    }
+
+    /* runWeHelpThenInput: show available we commands
+    /* ====================================================================== */
+
+    function runWeHelpThenInput() {
+      // list the available we deploy commands
+      return runHtmlThenInput([
         '',
-        '  <span>!</span>   Usage: we [command] [flag]'
-      ].join('\n'), { afterMs: 300 })
-      .then(() => run_display([
+        '  <span>!</span>   Usage: we [command] [flag]',
         '',
         '  Command          Description',
         '  <b>deploy</b>           Perform services deployment',
@@ -353,15 +517,13 @@ export default class Start extends Component {
         '  <b>diagnostics</b>      Run system diagnostics and show report',
         '  <b>version</b>          Show CLI version',
         '  <b>update</b>           Update CLI to the latest version',
-        '  <b>uninstall</b>        Uninstall CLI'
-      ].join('\n'), { afterMs: 100 }))
-      .then(() => run_display_then_input([
+        '  <b>uninstall</b>        Uninstall CLI',
         '',
         '  Flag             Description',
         '  <b>-h</b>, <b>--help</b>       Show help message',
         '  <b>-v</b>, <b>--verbose</b>    Show more information about an operation',
         ''
-      ].join('\n'), opts));
+      ].join('\n'));
     }
   }
 }
