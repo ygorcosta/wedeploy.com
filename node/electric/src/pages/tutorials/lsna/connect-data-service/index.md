@@ -16,7 +16,7 @@ Go back to your source code in the code editor and go to `assets/scripts/`.
 
 ##### Data API Endpoint
 
-Go to the `chat.js` file and past this code under the _Data Endpoints_ section:
+Go to the `endpoints.js` file and past this code under the _Data Endpoints_ section:
 
 ```javascript
 "data": "db-yourproject.wedeploy.io"
@@ -28,7 +28,7 @@ Now we have the API endpoints to your Data service saved as variables that we ca
 
 ##### Get Old Messages
 
-In the same file, paste this code under the _Get Old Messages_ section:
+Go to the `chat.js` file and past this code under the Get old Messages_ section:
 
 ```javascript
 WeDeploy
