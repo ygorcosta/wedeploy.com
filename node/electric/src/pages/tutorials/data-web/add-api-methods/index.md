@@ -61,6 +61,6 @@ WeDeploy
 
 In this tutorial we teach you how to use the `.get()` method which fetches the data from your collection everytime you refresh the page or make a new request. We also have a `.watch()` task which retrieves new data automatically when new data is created, giving you the power of real-time data!
 
-Want to learn more about <a href="/docs/data/real-time-feeds/" target="_blank">Real-Time Feeds</a>?
+Want to learn more about <a href="/docs/data/real-time-data/" target="_blank">Real-Time Feeds</a>?
 
 </aside>
