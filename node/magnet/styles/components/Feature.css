@@ -1,11 +1,11 @@
 /* Feature
 /* ========================================================================== */
 
-@custom-media --s-feature  (width <  660px);
-@custom-media --sm-feature (width <  900px);
-@custom-media --m-feature  (--sm-feature) and (--ml-feature);
-@custom-media --ml-feature (width >= 660px);
-@custom-media --l-feature  (width >= 900px);
+@custom-media $s-feature  (width <  660px);
+@custom-media $sm-feature (width <  900px);
+@custom-media $m-feature  ($sm-feature) and ($ml-feature);
+@custom-media $ml-feature (min-width: 660px);
+@custom-media $l-feature  (min-width: 900px);
 
 .feature {
   @extend %inset-styles;
@@ -13,25 +13,25 @@
   padding-bottom: 120px;
   padding-top: 96px;
 
-  @media (--ml-feature) {
+  @media ($ml-feature) {
     align-items: flex-end;
     display: flex;
     justify-content: space-between;
   }
 
   & > * {
-    @media (--ml-feature) {
+    @media ($ml-feature) {
       flex-basis: calc(50% - 20px);
     }
   }
 
   &.-auth {
-    background-color: color(var(--white) blend(var(--black) 2%));
+    background-color: color($white blend($black 2%));
   }
 }
 
 .feature-more {
-  @media (--s-feature) {
+  @media ($s-feature) {
     margin-top: 54px;
   }
 
@@ -78,7 +78,7 @@
 .feature-summary {
   @extend %unset-p;
 
-  color: var(--black-80);
+  color: $black-80;
   font-size: 16px;
   line-height: 24px;
   margin-top: 24px;
@@ -87,7 +87,7 @@
 .feature-more-summary {
   @extend %unset-p;
 
-  color: var(--black-80);
+  color: $black-80;
   font-size: 16px;
   line-height: 24px;
   margin-top: 18px;
@@ -96,7 +96,7 @@
     @extend %unset-a;
     @extend %underline;
 
-    color: var(--green);
+    color: $green;
   }
 }
 
@@ -106,7 +106,7 @@
 .feature-features {
   @extend %features;
 
-  @media (--l-feature) {
+  @media ($l-feature) {
     column-count: 2;
     column-gap: 24px;
     max-width: 100%;
@@ -114,13 +114,13 @@
   }
 
   & > :nth-child(n+2) {
-    @media (--sm-feature) {
+    @media ($sm-feature) {
       margin-top: 24px;
     }
   }
 
   & > :nth-child(3n+2), & > :nth-child(3n+3) {
-    @media (--l-feature) {
+    @media ($l-feature) {
       margin-top: 24px;
     }
   }
@@ -137,7 +137,7 @@
 /* ========================================================================== */
 
 .-data .feature-more {
-  @media (--ml-feature) {
+  @media ($ml-feature) {
     margin-left: 36px;
   }
 }
@@ -147,7 +147,7 @@
 }
 
 .-data .feature-features > ::before {
-  content: url("features.svg" param(--color var(--yellow)));
+  content: url("features.svg" param(--color $yellow));
 }
 
 .feature-more-heading.-sync::before {
@@ -162,13 +162,13 @@
 /* ========================================================================== */
 
 .feature.-email {
-  @media (--ml-feature) {
+  @media ($ml-feature) {
     flex-direction: row-reverse;
   }
 }
 
 .-email .feature-more {
-  @media (--ml-feature) {
+  @media ($ml-feature) {
     margin-right: 36px;
   }
 }
@@ -178,7 +178,7 @@
 }
 
 .-email .feature-features > ::before {
-  content: url("features.svg" param(--color var(--orange)));
+  content: url("features.svg" param(--color $orange));
 }
 
 .feature-more-heading.-send::before {
@@ -193,7 +193,7 @@
 /* ========================================================================== */
 
 .-auth .feature-main {
-  @media (--ml-feature) {
+  @media ($ml-feature) {
     margin-right: 36px;
   }
 }
@@ -203,7 +203,7 @@
 }
 
 .-auth .feature-features > ::before {
-  content: url("features.svg" param(--color var(--violet)));
+  content: url("features.svg" param(--color $violet));
 }
 
 .feature-more-heading.-store::before {
@@ -218,13 +218,13 @@
 /* ========================================================================== */
 
 .feature.-hosting {
-  @media (--ml-feature) {
+  @media ($ml-feature) {
     flex-direction: row-reverse;
   }
 }
 
 .-hosting .feature-more {
-  @media (--ml-feature) {
+  @media ($ml-feature) {
     margin-right: 36px;
   }
 }
@@ -234,7 +234,7 @@
 }
 
 .-hosting .feature-features > ::before {
-  content: url("features.svg" param(--color var(--red)));
+  content: url("features.svg" param(--color $red));
 }
 
 /* Feature: Deploy

@@ -7,29 +7,29 @@
   display: flex;
   margin-top: 48px;
 
-  @media (--sm) {
+  @media ($sm) {
     flex-wrap: wrap;
   }
 
   & li, & a {
-    @media (--s-nav) {
+    @media ($s-nav) {
       width: 100%;
     }
   }
 
   & li {
     &:nth-child(1) {
-      @media (--sm) {
+      @media ($sm) {
         margin-bottom: 12px;
       }
 
-      @media (--s-nav) {
+      @media ($s-nav) {
         margin-right: 0;
       }
     }
 
     &:nth-last-child(n+2) {
-      @media (--l-nav) {
+      @media ($l-nav) {
         margin-right: 12px;
       }
     }
@@ -52,7 +52,7 @@
 
     display: inline-block;
 
-    @media (--s-nav) {
+    @media ($s-nav) {
       justify-content: center;
     }
   }

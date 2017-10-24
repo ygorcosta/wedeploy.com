@@ -1,13 +1,13 @@
 /* Benefits (792px + 36px inset)
 /* ========================================================================== */
 
-@custom-media --s-benefits (width <  864px);
-@custom-media --l-benefits (width >= 864px);
+@custom-media $s-benefits (width <  864px);
+@custom-media $l-benefits (min-width: 864px);
 
 .benefits {
   @extend %inset-styles;
 
-  background-color: color(var(--black) alpha(2%) blend(var(--blue) 1%));
+  background-color: color($black alpha(2%) blend($blue 1%));
   padding-bottom: 96px 120px;
   padding-top: 96px 120px;
 }
@@ -16,36 +16,36 @@
   justify-content: center;
   margin-top: 54px;
 
-  @media (--ml) {
+  @media ($ml) {
     display: flex;
     flex-wrap: wrap;
   }
 
   & > * {
-    @media (--ml) {
+    @media ($ml) {
       flex-basis: calc(50% - 36px);
     }
 
     &:nth-child(n+2) {
-      @media (--s) {
+      @media ($s) {
         margin-top: 36px;
       }
     }
 
     &:nth-child(2n+1) {
-      @media (--ml) {
+      @media ($ml) {
         margin-right: 36px;
       }
     }
 
     &:nth-child(2n+2) {
-      @media (--ml) {
+      @media ($ml) {
         margin-left: 36px;
       }
     }
 
     &:nth-last-child(-n+2) {
-      @media (--ml) {
+      @media ($ml) {
         margin-top: 36px;
       }
     }
@@ -66,7 +66,7 @@
 .benefits-summary {
   @extend %unset-p;
 
-  color: var(--black-80);
+  color: $black-80;
   font-size: 16px;
   line-height: 24px;
   margin-top: 24px;
@@ -110,7 +110,7 @@
   @extend %unset-p;
 
   font-size: 16px;
-  color: var(--black-90);
+  color: $black-90;
   margin-top: 18px;
   line-height: 24px;
 }

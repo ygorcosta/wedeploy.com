@@ -1,18 +1,18 @@
 /* Answers (986px + 36px inset)
 /* ========================================================================== */
 
-@custom-media --s-answers (width <  1058px);
-@custom-media --l-answers (width >= 1058px);
+@custom-media $s-answers (width <  1058px);
+@custom-media $l-answers (min-width: 1058px);
 
 .answers {
   @extend %inset-styles;
 
-  @media (--sm) {
+  @media ($sm) {
     padding-bottom: 132px;
     padding-top: 48px;
   }
 
-  @media (--l) {
+  @media ($l) {
     padding-bottom: 120px;
     padding-top: 96px;
   }
@@ -21,36 +21,36 @@
 .answers-group {
   margin-top: 66px;
 
-  @media (--l) {
+  @media ($l) {
     display: flex;
     flex-wrap: wrap;
   }
 
   & > * {
-    @media (--l) {
+    @media ($l) {
       flex-basis: calc(50% - 24px * 2);
     }
 
     &:nth-child(2n+1) {
-      @media (--l) {
+      @media ($l) {
         margin-right: 24px;
       }
     }
 
     &:nth-child(2n+2) {
-      @media (--l) {
+      @media ($l) {
         margin-left: 24px;
       }
     }
 
     &:nth-child(n+2) {
-      @media (--sm) {
+      @media ($sm) {
         margin-top: 66px;
       }
     }
 
     &:nth-last-child(-n+3) {
-      @media (--l) {
+      @media ($l) {
         margin-top: 66px;
       }
     }
@@ -91,7 +91,7 @@
 .answers-group-summary {
   @extend %unset-p;
 
-  color: var(--black-90);
+  color: $black-90;
   font-size: 16px;
   line-height: 24px;
   margin-top: 12px;
@@ -109,7 +109,7 @@
   line-height: 24px;
   padding-left: 42px;
 
-  @media (--s-answers) {
+  @media ($s-answers) {
     margin-bottom: 18px 24px;
     margin-top: 18px 24px;
   }
@@ -132,7 +132,7 @@
     background-repeat: no-repeat;
     background-position: calc(200% - .5px) 100%;
     background-size: 200% 2px;
-    color: var(--green);
+    color: $green;
     display: inline-block;
     padding-bottom: 6px;
     transition: background-position 250ms;

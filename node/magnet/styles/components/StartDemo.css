@@ -63,8 +63,8 @@
 /* ========================================================================== */
 
 .start-demo-console {
-  background-color: var(--black);
-  box-shadow: 12px 18px 48px 0 color(var(--black) alpha(60%));
+  background-color: $black;
+  box-shadow: 12px 18px 48px 0 color($black alpha(60%));
   border-radius: 6px;
   top: 0;
   left: 0;
@@ -111,7 +111,7 @@
   position: relative;
 
   &::after {
-    color: color(var(--white) alpha(60%));
+    color: color($white alpha(60%));
     content: "bash";
     display: block;
     font-size: 12px;
@@ -126,7 +126,7 @@
 /* ========================================================================== */
 
 .start-demo-controls {
-  background-color: var(--yellow);
+  background-color: $yellow;
   top: 8px;
   left: calc(6px + 8px);
   position: absolute;
@@ -145,12 +145,12 @@
   }
 
   &::before {
-    background-color: var(--red);
+    background-color: $red;
     left: calc((6px + 8px) * -1);
   }
 
   &::after {
-    background-color: var(--green);
+    background-color: $green;
     left: calc(6px + 8px);
   }
 }
@@ -159,7 +159,7 @@
 /* ========================================================================== */
 
 .start-demo-content {
-  color: color(var(--white) alpha(45%));
+  color: color($white alpha(45%));
   font-family: "Roboto Mono", "ArialUnicodeMS", monospace;
   font-size: 12px;
   font-weight: 500;
@@ -176,7 +176,7 @@
   }
 
   & b, & plaintext, & span {
-    color: var(--white);
+    color: $white;
     font-weight: 700;
   }
 
@@ -219,10 +219,10 @@
 
 @keyframes animate-console {
   0% {
-    box-shadow: inset -1px 0 0 0 color(var(--white) alpha(0%));
+    box-shadow: inset -1px 0 0 0 color($white alpha(0%));
   }
 
   100% {
-    box-shadow: inset -1px 0 0 0 var(--white);
+    box-shadow: inset -1px 0 0 0 $white;
   }
 }

@@ -4,12 +4,12 @@
 .nav-menu {
   margin-left: auto;
 
-  @media (--s-nav) {
+  @media ($s-nav) {
     font-size: 18px;
     line-height: 24px;
   }
 
-  @media (--l-nav) {
+  @media ($l-nav) {
     font-size: 14px;
     line-height: 18px;
   }
@@ -19,7 +19,7 @@
   @extend %normalize-button;
   @extend %unset-button;
 
-  color: var(--black);
+  color: $black;
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
@@ -30,27 +30,27 @@
   white-space: nowrap;
 
   @nest .start--3 &[aria-expanded="false"] {
-    color: var(--white);
+    color: $white;
   }
 
-  @media (--l-nav) {
+  @media ($l-nav) {
     display: none;
   }
 
   &:hover {
     @media (hover: hover) {
-      color: color(var(--black) alpha(60%));
+      color: color($black alpha(60%));
     }
   }
 
   @nest .start--3 &[aria-expanded="false"]:hover {
     @media (hover: hover) {
-      color: color(var(--white) alpha(60%));
+      color: color($white alpha(60%));
     }
   }
 
   &::after {
-    content: url("nav-toggle.svg" param(--color var(--black)));
+    content: url("nav-toggle.svg" param(--color $black));
     display: inline-block;
     line-height: 0;
     margin-left: 6px;
@@ -63,18 +63,18 @@
   }
 
   @nest .start--3 &[aria-expanded="false"]::after {
-    content: url("nav-toggle.svg" param(--color var(--white)));
+    content: url("nav-toggle.svg" param(--color $white));
   }
 
   &:hover::after {
     @media (hover: hover) {
-      content: url("nav-toggle.svg" param(--color color(var(--black) alpha(60%))));
+      content: url("nav-toggle.svg" param(--color color($black alpha(60%))));
     }
   }
 
   @nest .start--3 &[aria-expanded="false"]:hover::after {
     @media (hover: hover) {
-      content: url("nav-toggle.svg" param(--color color(var(--white) alpha(60%))));
+      content: url("nav-toggle.svg" param(--color color($white alpha(60%))));
     }
   }
 
@@ -86,7 +86,7 @@
 .nav-list {
   @extend %unset-l;
 
-  @media (--s-nav) {
+  @media ($s-nav) {
     top: 78px;
     left: 0;
     right: 0;
@@ -96,23 +96,23 @@
     transition: background-color .3s, max-height .05s, padding .3s;
   }
 
-  @media (--l-nav) {
+  @media ($l-nav) {
     display: flex;
   }
 
   @nest .start--3 &[aria-expanded="false"] {
-    color: var(--white);
+    color: $white;
   }
 
   &:not([aria-expanded="true"]) {
-    @media (--s-nav) {
+    @media ($s-nav) {
       max-height: 0;
     }
   }
 
   &[aria-expanded="true"] {
-    @media (--s-nav) {
-      background-color: var(--white);
+    @media ($s-nav) {
+      background-color: $white;
       padding-bottom: 12px;
       padding-top: 12px;
     }
@@ -124,11 +124,11 @@
 
   display: block;
 
-  @media (--s-nav) {
+  @media ($s-nav) {
     padding: 9px 24px;
   }
 
-  @media (--l-nav) {
+  @media ($l-nav) {
     padding: 9px 12px;
   }
 
@@ -138,29 +138,29 @@
 }
 
 .nav-link--btn {
-  @media (--l-nav) {
-    background-color: var(--green);
-    color: var(--white);
+  @media ($l-nav) {
+    background-color: $green;
+    color: $white;
     border-radius: 4px;
-    box-shadow: inset 0 0 0 1px color(var(--black) alpha(4%)), 0 2px 6px 0 color(var(--black) alpha(1%));
+    box-shadow: inset 0 0 0 1px color($black alpha(4%)), 0 2px 6px 0 color($black alpha(1%));
     font-weight: 900;
     margin-left: 6px;
   }
 
   &:matches(:hover, :focus) {
-    @media (--l-nav) {
+    @media ($l-nav) {
       opacity: .8;
     }
   }
 
   & span {
-    @media (--s-nav) {
+    @media ($s-nav) {
       @extend %underline;
     }
   }
 
   &:matches(:hover, :focus) span {
-    @media (--s-nav) {
+    @media ($s-nav) {
       @extend %underline-hover;
     }
   }
@@ -177,18 +177,18 @@
 }
 
 .nav-link--login {
-  @media (--s-nav) {
-    color: var(--green);
+  @media ($s-nav) {
+    color: $green;
   }
 
-  @media (--l-nav) {
+  @media ($l-nav) {
     margin-left: 24px;
     position: relative;
   }
 
   &::before {
-    @media (--l-nav) {
-      color: color(var(--black) alpha(40%));
+    @media ($l-nav) {
+      color: color($black alpha(40%));
       content: "or";
       display: inline-block;
       font-size: 12px;
@@ -200,8 +200,8 @@
   }
 
   &::after {
-    @media (--s-nav) {
-      content: url("symbol-arrow.svg" param(--color var(--green)));
+    @media ($s-nav) {
+      content: url("symbol-arrow.svg" param(--color $green));
       display: inline-block;
       top: -2px;
       margin-left: 12px;
@@ -213,7 +213,7 @@
   }
 
   &:matches(:hover, :focus)::after {
-    @media (--s-nav) {
+    @media ($s-nav) {
       transform: translateX(4px);
     }
   }

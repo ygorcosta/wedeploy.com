@@ -2,37 +2,37 @@
 /* ========================================================================== */
 
 :root {
-  --data-demo-overflow-start: 90px;
-  --data-demo-overflow-end: 42px;
-  --auth-demo-overflow-start: 90px;
-  --auth-demo-overflow-end: 60px;
+  $data-demo-overflow-start: 90px;
+  $data-demo-overflow-end: 42px;
+  $auth-demo-overflow-start: 90px;
+  $auth-demo-overflow-end: 60px;
 }
 
 .data-demo {
-  padding-bottom: var(--data-demo-overflow-end);
-  padding-top: var(--data-demo-overflow-start);
+  padding-bottom: $data-demo-overflow-end;
+  padding-top: $data-demo-overflow-start;
 
-  @media (--l) {
+  @media ($l) {
     display: flex;
   }
 
   & > * {
-    @media (--sm) {
+    @media ($sm) {
       flex-basis: 100%;
     }
   }
 }
 
 .view--authdemo {
-  padding-bottom: var(--auth-demo-overflow-end);
-  padding-top: var(--auth-demo-overflow-start);
+  padding-bottom: $auth-demo-overflow-end;
+  padding-top: $auth-demo-overflow-start;
 
-  @media (--l) {
+  @media ($l) {
     display: flex;
   }
 
   & > * {
-    @media (--sm) {
+    @media ($sm) {
       flex-basis: 100%;
     }
   }
@@ -42,8 +42,8 @@
 /* ========================================================================== */
 
 .group-source {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: $black;
+  color: $white;
   min-height: 200px;
   position: relative;
 
@@ -53,14 +53,14 @@
 }
 
 .group-source--datademo {
-  @media (--sm) {
-    padding-bottom: calc(var(--data-demo-overflow-start) + 96px);
+  @media ($sm) {
+    padding-bottom: calc($data-demo-overflow-start + 96px);
   }
 }
 
 .group-source--authdemo {
-  @media (--sm) {
-    padding-bottom: calc(var(--auth-demo-overflow-start) + 96px);
+  @media ($sm) {
+    padding-bottom: calc($auth-demo-overflow-start + 96px);
   }
 }
 
@@ -73,21 +73,21 @@
   position: relative;
   white-space: nowrap;
 
-  @media (--sm) {
+  @media ($sm) {
     padding-left: 36px;
   }
 
-  @media (--l) {
+  @media ($l) {
     padding-left: 48px;
   }
 
   & > * {
     &:nth-child(n+2) {
-      @media (--s) {
+      @media ($s) {
         margin-left: 12px;
       }
 
-      @media (--ml) {
+      @media ($ml) {
         margin-left: 24px;
       }
     }
@@ -96,7 +96,7 @@
   & button {
     @extend %unset-button;
 
-    color: color(var(--black) alpha(80%));
+    color: color($black alpha(80%));
     cursor: pointer;
     font-size: 14px;
     line-height: 24px;
@@ -109,7 +109,7 @@
     padding-right: 6px;
 
     &::before {
-      background-color: color(var(--black) alpha(20%));
+      background-color: color($black alpha(20%));
       border-radius: 2px;
       display: inline-block;
       margin-right: 12px;
@@ -121,11 +121,11 @@
   }
 
   & :matches(:hover, :focus) span::before {
-    background-color: color(var(--black) alpha(90%));
+    background-color: color($black alpha(90%));
   }
 
   & .is-active span::before {
-    background-color: color(var(--black) alpha(90%));
+    background-color: color($black alpha(90%));
   }
 
   & .is-web span::before {
@@ -142,21 +142,21 @@
 }
 
 .menu-source--datademo .is-active span {
-  box-shadow: inset 0 -3px 0 0 var(--yellow);
+  box-shadow: inset 0 -3px 0 0 $yellow;
 }
 
 .menu-source--authdemo .is-active span {
-  box-shadow: inset 0 -3px 0 0 var(--violet);
+  box-shadow: inset 0 -3px 0 0 $violet;
 }
 
 .panel-source {
   overflow: auto;
 
-  @media (--sm) {
+  @media ($sm) {
     padding: 36px;
   }
 
-  @media (--l) {
+  @media ($l) {
     min-width: calc(320px + 48px * 2);
     padding: 48px 48px 96px;
   }
@@ -180,26 +180,26 @@
 
   & code {
     background-color: inherit;
-    color: color(var(--white) alpha(45%));
+    color: color($white alpha(45%));
     font-family: inherit;
     overflow-x: visible;
     padding: 0;
   }
 
   & :matches(.hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-template-variable, .hljs-attribute, .hljs-link) {
-    color: var(--blue);
+    color: $blue;
   }
 
   & :matches(.hljs-string, .hljs-symbol, .hljs-bullet, .hljs-regexp) {
-    color: var(--yellow);
+    color: $yellow;
   }
 
   & :matches(.hljs-number, .hljs-addition) {
-    color: var(--green);
+    color: $green;
   }
 
   & :matches(.hljs-keyword, .hljs-selector-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class) {
-    color: var(--violet);
+    color: $violet;
   }
 }
 
@@ -210,12 +210,12 @@
   bottom: 36px;
   position: absolute;
 
-  @media (--sm) {
+  @media ($sm) {
     bottom: calc(36px + 84px);
     left: 36px;
   }
 
-  @media (--l) {
+  @media ($l) {
     left: 48px;
   }
 
@@ -228,10 +228,10 @@
   & a {
     @extend %unset-a;
 
-    background: color(var(--white) alpha(16%));
-    box-shadow: inset 0 0 0 1px color(var(--black) alpha(4%)), 0 2px 4px 0 color(var(--black) alpha(6%));
+    background: color($white alpha(16%));
+    box-shadow: inset 0 0 0 1px color($black alpha(4%)), 0 2px 4px 0 color($black alpha(6%));
     border-radius: 4px;
-    color: var(--white);
+    color: $white;
     display: block;
     font-size: 13px;
     line-height: 24px;
@@ -242,7 +242,7 @@
     }
 
     &::after {
-      content: url("symbol-arrow.svg" param(--color var(--white)));
+      content: url("symbol-arrow.svg" param(--color $white));
       display: inline-block;
       margin-left: 12px;
       width: 10px;
@@ -256,7 +256,7 @@
 
 .group-example {
   justify-content: center;
-  background-color: color(var(--black) alpha(2%) blend(var(--blue) 1%));
+  background-color: color($black alpha(2%) blend($blue 1%));
   display: flex;
   flex-grow: 1;
   padding-left: 36px;
@@ -272,19 +272,19 @@
 }
 
 .group-example--datademo > * {
-  margin-bottom: calc(var(--data-demo-overflow-end) * -1);
-  margin-top: calc(var(--data-demo-overflow-start) * -1);
+  margin-bottom: calc($data-demo-overflow-end * -1);
+  margin-top: calc($data-demo-overflow-start * -1);
 }
 
 .group-example--authdemo > * {
-  margin-bottom: calc(var(--auth-demo-overflow-end) * -1);
-  margin-top: calc(var(--auth-demo-overflow-start) * -1);
+  margin-bottom: calc($auth-demo-overflow-end * -1);
+  margin-top: calc($auth-demo-overflow-start * -1);
 }
 
 .tip--datademo {
   @extend %unset-p;
 
-  color: color(var(--black) alpha(80%));
+  color: color($black alpha(80%));
   font-size: 12px;
   top: 0;
   left: calc(-54px - 36px);
@@ -292,7 +292,7 @@
   position: absolute;
 
   @nest .demo-data & {
-    @media (--sm) {
+    @media ($sm) {
       display: none;
     }
   }
@@ -310,18 +310,18 @@
 .tip--authdemo {
   @extend %unset-p;
 
-  color: color(var(--black) alpha(80%));
+  color: color($black alpha(80%));
   display: none;
   font-size: 12px;
   line-height: 18px;
   position: absolute;
 
-  @media (--l) and (width < 1200px) {
+  @media ($l) and (width < 1200px) {
     top: calc(-126px + 12px);
     left: calc(50% - 426px / 2 - 56px);
   }
 
-  @media (--l) and (width >= 1200px) {
+  @media ($l) and (min-width: 1200px) {
     top: -126px;
     left: calc(50% + 426px / 2 + 6px);
   }
@@ -333,12 +333,12 @@
     width: 26px;
     height: 39px;
 
-    @media (--l) and (width < 1200px) {
+    @media ($l) and (width < 1200px) {
       margin-left: 18px;
       transform: rotate(13deg) scaleX(-1);
     }
 
-    @media (--l) and (width >= 1200px) {
+    @media ($l) and (min-width: 1200px) {
       transform: rotate(-13deg);
     }
   }
@@ -348,11 +348,11 @@
 /* ========================================================================== */
 
 .demo-data-container {
-  background-color: var(--white);
+  background-color: $white;
   background-image: url("../images/demo-data-container.jpg");
   background-size: 100% 100%;
   border-radius: 4px;
-  box-shadow: 2px 8px 15px 0 color(var(--black) alpha(12%)), 5px 15px 35px 0 color(var(--black) alpha(10%));
+  box-shadow: 2px 8px 15px 0 color($black alpha(12%)), 5px 15px 35px 0 color($black alpha(10%));
   display: flex;
   flex-wrap: wrap;
   padding: 24px;
@@ -383,7 +383,7 @@
     display: none;
   }
 
-  @media (width >= 640px) {
+  @media (min-width: 640px) {
     width: 162px;
   }
 
@@ -392,7 +392,7 @@
   }
 
   & h2 {
-    color: color(var(--black) alpha(50%));
+    color: color($black alpha(50%));
     font-size: 11px;
     font-weight: 900;
     line-height: 18px;
@@ -400,7 +400,7 @@
   }
 
   & h3 {
-    color: var(--black);
+    color: $black;
     font-size: 33px;
     font-weight: 900;
     line-height: 48px;
@@ -416,7 +416,7 @@
   margin-bottom: 18px;
   order: 3;
 
-  @media (width >= 640px) {
+  @media (min-width: 640px) {
     height: 36px;
     justify-content: flex-end;
   }
@@ -432,7 +432,7 @@
       margin-bottom: 6px;
     }
 
-    @media (width >= 640px) {
+    @media (min-width: 640px) {
       max-width: 312px;
     }
   }
@@ -442,7 +442,7 @@
     @extend %normalize-input-type-search;
     @extend %unset-input;
 
-    color: var(--black);
+    color: $black;
     font-size: 13px;
     line-height: 18px;
     padding: 9px 12px;
@@ -450,13 +450,13 @@
     position: relative;
     width: 100%;
 
-    @media (--s) {
+    @media ($s) {
       font-size: 16px;
     }
 
     &:hover {
       & + span {
-        background: color(var(--black) alpha(12%));
+        background: color($black alpha(12%));
         border-radius: 6px;
       }
     }
@@ -465,19 +465,19 @@
       outline: 0;
 
       & + span {
-        background: var(--white);
-        box-shadow: 0 1px 2px 0 color(var(--black) alpha(10%)), 0 1px 6px 0 color(var(--black) alpha(10%));
+        background: $white;
+        box-shadow: 0 1px 2px 0 color($black alpha(10%)), 0 1px 6px 0 color($black alpha(10%));
         border-radius: 6px;
       }
     }
 
     &::placeholder {
-      color: color(var(--black) alpha(50%));
+      color: color($black alpha(50%));
     }
   }
 
   & span {
-    background: color(var(--black) alpha(8%));
+    background: color($black alpha(8%));
     border-radius: 6px;
     content: "";
     display: inline-block;
@@ -519,7 +519,7 @@
   & h4 {
     @extend %unset-h;
 
-    color: color(var(--black) alpha(50%));
+    color: color($black alpha(50%));
     font-size: 11px;
     font-weight: 900;
     line-height: 18px;
@@ -536,7 +536,7 @@
     position: relative;
 
     & span:nth-child(n+3):last-child {
-      color: color(var(--black) alpha(50%));
+      color: color($black alpha(50%));
       margin-left: auto;
     }
   }
@@ -567,7 +567,7 @@
     height: 100%;
 
     & + span {
-      background: color(var(--black) alpha(12%));
+      background: color($black alpha(12%));
       border-radius: 3px;
       display: inline-block;
       margin-right: 9px;
@@ -576,13 +576,13 @@
     }
 
     &:hover + span {
-      background-color: color(var(--black) alpha(20%));
+      background-color: color($black alpha(20%));
     }
 
     &:checked + span {
-      background-color: var(--white);
+      background-color: $white;
       border-radius: 3px;
-      box-shadow: 0 1px 2px 0 color(var(--black) alpha(10%)), 0 1px 6px 0 color(var(--black) alpha(10%));
+      box-shadow: 0 1px 2px 0 color($black alpha(10%)), 0 1px 6px 0 color($black alpha(10%));
       display: flex;
       justify-content: center;
 
@@ -597,7 +597,7 @@
 
 .demo-data-sidebar-genre, .demo-data-sidebar-year {
   & ul {
-    color: color(var(--black) alpha(70%));
+    color: color($black alpha(70%));
     font-size: 12px;
     line-height: 18px;
 
@@ -622,7 +622,7 @@
     @extend %normalize-input-type-search;
     @extend %unset-input;
 
-    color: var(--black);
+    color: $black;
     font-size: 12px;
     line-height: 18px;
     outline: 0;
@@ -632,7 +632,7 @@
     width: 100%;
 
     &::placeholder {
-      color: color(var(--black) alpha(50%));
+      color: color($black alpha(50%));
     }
   }
 
@@ -640,7 +640,7 @@
     outline: 0;
 
     & + span {
-      background: color(var(--black) alpha(8%));
+      background: color($black alpha(8%));
       border-radius: 6px;
       content: "";
       display: inline-block;
@@ -659,12 +659,12 @@
     }
 
     &:hover + span {
-      background: color(var(--black) alpha(12%));
+      background: color($black alpha(12%));
     }
 
     &:focus + span {
-      background-color: var(--white);
-      box-shadow: 0 1px 2px 0 color(var(--black) alpha(10%)), 0 1px 6px 0 color(var(--black) alpha(10%));
+      background-color: $white;
+      box-shadow: 0 1px 2px 0 color($black alpha(10%)), 0 1px 6px 0 color($black alpha(10%));
     }
   }
 }
@@ -677,8 +677,8 @@
   }
 
   & input:checked + span {
-    background-color: var(--white);
-    box-shadow: 0 1px 2px 0 color(var(--black) alpha(10%)), 0 1px 6px 0 color(var(--black) alpha(10%));
+    background-color: $white;
+    box-shadow: 0 1px 2px 0 color($black alpha(10%)), 0 1px 6px 0 color($black alpha(10%));
     margin-left: -6px;
     padding: 3px 6px;
   }
@@ -739,15 +739,15 @@
   margin-top: -12px;
   order: 3;
 
-  @media (--s) {
+  @media ($s) {
     min-height: 560px;
   }
 
-  @media (width >= 640px) {
+  @media (min-width: 640px) {
     width: calc(100% - 162px - 60px);
   }
 
-  @media (width >= 1200px) {
+  @media (min-width: 1200px) {
     min-height: 700px;
   }
 
@@ -755,7 +755,7 @@
     @extend %unset-p;
 
     font-size: 12px;
-    color: color(var(--black) alpha(50%));
+    color: color($black alpha(50%));
     line-height: 18px;
     margin-bottom: 12px;
   }
@@ -772,18 +772,18 @@
   margin-right: -9px;
 
   & li {
-    box-shadow: 0 2px 3px 0 color(var(--black) alpha(20%)), 0 2px 6px 0 color(var(--black) alpha(4%));
+    box-shadow: 0 2px 3px 0 color($black alpha(20%)), 0 2px 6px 0 color($black alpha(4%));
     margin-bottom: 18px;
     margin-left: 9px;
     margin-right: 9px;
     position: relative;
     transition: width 300ms;
 
-    @media (--s) {
+    @media ($s) {
       width: 73px;
     }
 
-    @media (--ml) and (width < 1500px) {
+    @media ($ml) and (width < 1500px) {
       width: 120px;
     }
 
@@ -802,7 +802,7 @@
 
 .demo-data-results-items {
   & li > span {
-    color: color(var(--white) alpha(90%));
+    color: color($white alpha(90%));
     font-size: 14px;
     font-weight: 900;
     inset: 0;
@@ -822,7 +822,7 @@
   }
 
   & li:hover > span {
-    background-color: color(var(--black) alpha(60%));
+    background-color: color($black alpha(60%));
     opacity: 1  g;
   }
 }
@@ -840,7 +840,7 @@
   & button {
     @extend %unset-button;
 
-    color: color(var(--black) alpha(30%));
+    color: color($black alpha(30%));
     cursor: pointer;
     display: block;
     font-size: 13px;
@@ -851,13 +851,13 @@
     padding-right: 6px;
 
     &:hover, &[disabled] {
-      color: color(var(--black) alpha(60%));
+      color: color($black alpha(60%));
     }
 
     &[disabled] {
-      background-color: var(--white);
+      background-color: $white;
       border-radius: 3px;
-      box-shadow: 0 1px 2px 0 color(var(--black) alpha(10%)), 0 1px 6px 0 color(var(--black) alpha(10%));
+      box-shadow: 0 1px 2px 0 color($black alpha(10%)), 0 1px 6px 0 color($black alpha(10%));
     }
   }
 }
@@ -877,7 +877,7 @@
 
 .first-pagination--datademo,
 .last-pagination--datademo {
-  @media (--s) {
+  @media ($s) {
     display: none;
   }
 }

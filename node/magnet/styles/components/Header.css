@@ -15,12 +15,12 @@
   transition: background-color .3s;
   z-index: 1;
 
-  @media (--l-nav) {
+  @media ($l-nav) {
     margin-left: -6px;
   }
 
   @nest [data-expanded="true"] & {
-    background-color: var(--white);
+    background-color: $white;
   }
 }
 
@@ -35,31 +35,31 @@
 }
 
 .header-brand-text {
-  fill: var(--black);
+  fill: $black;
   transition: fill 2s ease-in-out;
 
   @nest .start--3 & {
-    fill: var(--white);
+    fill: $white;
   }
 
   @nest [data-expanded="true"] & {
-    fill: var(--black);
+    fill: $black;
     transition: fill .3s ease-in-out;
   }
 }
 
 %header-padding-inline {
-  @media (--s-nav) {
+  @media ($s-nav) {
     padding-left: 24px;
     padding-right: 24px;
   }
 
-  @media (--l-nav) and (width < 1686px) {
+  @media ($l-nav) and (width < 1686px) {
     padding-left: 36px;
     padding-right: 36px;
   }
 
-  @media (width >= 1686px) {
+  @media (min-width: 1686px) {
     padding-left: calc(50% - 807px);
     padding-right: calc(50% - 807px);
   }

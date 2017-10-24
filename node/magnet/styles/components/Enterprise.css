@@ -1,8 +1,8 @@
 /* Enterprise (1440px + 36px inset)
 /* ========================================================================== */
 
-@custom-media --s-enterprise (width <  1512px);
-@custom-media --l-enterprise (width >= 1512px);
+@custom-media $s-enterprise (width <  1512px);
+@custom-media $l-enterprise (min-width: 1512px);
 
 .enterprise {
   @extend %inset-styles;
@@ -10,12 +10,12 @@
   align-items: center;
   display: flex;
 
-  @media (--s-enterprise) {
+  @media ($s-enterprise) {
     padding-bottom: 60px;
     padding-top: 60px;
   }
 
-  @media (--l-enterprise) {
+  @media ($l-enterprise) {
     padding-bottom: 96px;
     padding-top: 96px;
   }
@@ -38,7 +38,7 @@
       margin-right: calc(100% - 60px);
     }
 
-    @media (width >= 960px) {
+    @media (min-width: 960px) {
       margin-right: 48px;
     }
   }
@@ -47,7 +47,7 @@
 .enterprise-content {
   flex-shrink: 1;
 
-  @media (width >= 960px) {
+  @media (min-width: 960px) {
     margin-right: 48px;
   }
 }
@@ -74,7 +74,7 @@
 .enterprise-summary {
   @extend %unset-p;
 
-  color: var(--black-80);
+  color: $black-80;
   font-size: 16px;
   line-height: 24px;
   margin-top: 24px;
@@ -91,7 +91,7 @@
     margin-top: 36px;
   }
 
-  @media (width >= 960px) {
+  @media (min-width: 960px) {
     margin-left: auto;
   }
 
