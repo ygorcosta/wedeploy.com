@@ -11,7 +11,8 @@
   color: var(--white);
   display: flex;
   flex-wrap: wrap;
-  padding-block: 144px 24px;
+  padding-bottom: 24px;
+  padding-top: 144px;
 
   @media (--l-footer) {
     align-items: center;
@@ -20,7 +21,7 @@
   & ul {
     @extend %unset-l;
 
-    margin-block-start: 18px;
+    margin-top: 18px;
   }
 
   & a {
@@ -44,7 +45,7 @@
 
   @media (--s-footer) {
     flex-basis: 100%;
-    margin-block-end: 48px;
+    margin-bottom: 48px;
     text-align: center;
   }
 
@@ -80,7 +81,7 @@
   justify-content: center;
 
   @media (--s-footer) {
-    margin-inline-end: 12px;
+    margin-right: 12px;
   }
 }
 
@@ -88,14 +89,14 @@
   justify-content: center;
 
   @media (--s-footer) {
-    margin-inline-start: 12px;
+    margin-left: 12px;
   }
 }
 
 .footer-nav.-social {
   @media (--s-footer) {
     flex-basis: 100%;
-    margin-block-start: 48px;
+    margin-top: 48px;
   }
 
   @media (--l-footer) {
@@ -125,7 +126,7 @@
 
   & li {
     &:nth-last-child(n+2) {
-      margin-inline-end: 12px;
+      margin-right: 12px;
     }
   }
 }
@@ -140,7 +141,8 @@
 
   &::before {
     display: block;
-    size: 28px;
+    width: 28px;
+    height: 28px;
   }
 
   &:hover, &:focus {
@@ -168,6 +170,6 @@
 
   color: color(var(--white) alpha(60%));
   flex-basis: 100%;
-  padding-block-start: 102px;
+  padding-top: 102px;
   text-align: center;
 }

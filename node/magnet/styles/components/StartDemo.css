@@ -7,20 +7,23 @@
   &::before {
     margin-top: -18px;
     position: absolute;
-    inset-start: 0;
+    top: 0;
+    left: 0;
     transition: transform 1s;
     will-change: opacity, transform;
 
     @nest .start--1 & {
       content: url("start-demo-laptop.svg");
       transform: translate3d(132px, -36px, 0);
-      size: 1188px 733px;
+      width: 1188px 733px;
+      height: 1188px 733px;
     }
 
     @nest .start--2 & {
       transform: translate3d(calc(25vw + 138px), calc(-93px + 18px), 0);
       content: url("start-demo-phone.svg");
-      size: 490px 778px;
+      width: 490px 778px;
+      height: 490px 778px;
 
       @media (width < 1300px) {
         transform: translate3d(228px, calc(-93px + 18px), 0);
@@ -33,7 +36,8 @@
 
     @nest .start--3 & {
       content: url("start-demo-watch.svg");
-      size: 432px 704px;
+      width: 432px 704px;
+      height: 432px 704px;
       transform: translate3d(calc(25vw + 156px), -54px, 0);
 
       @media (width < 1300px) {
@@ -62,7 +66,8 @@
   background-color: var(--black);
   box-shadow: 12px 18px 48px 0 color(var(--black) alpha(60%));
   border-radius: 6px;
-  inset-start: 0;
+  top: 0;
+  left: 0;
   max-width: calc(100% - 36px);
   position: absolute;
   padding: 6px 12px 24px;
@@ -111,7 +116,8 @@
     display: block;
     font-size: 12px;
     line-height: 24px;
-    inset-inline: 0;
+    left: 0;
+    right: 0;
     text-align: center;
   }
 }
@@ -121,30 +127,31 @@
 
 .start-demo-controls {
   background-color: var(--yellow);
-  inset-block-start: 8px;
-  inset-inline-start: calc(6px + 8px);
+  top: 8px;
+  left: calc(6px + 8px);
   position: absolute;
 
   &, &::before, &::after {
     border-radius: 50%;
     display: inline-block;
-    size: 8px;
+    width: 8px;
+    height: 8px;
   }
 
   &::before, &::after {
     content: "";
-    inset-block-start: 0;
+    top: 0;
     position: absolute;
   }
 
   &::before {
     background-color: var(--red);
-    inset-inline-start: calc((6px + 8px) * -1);
+    left: calc((6px + 8px) * -1);
   }
 
   &::after {
     background-color: var(--green);
-    inset-inline-start: calc(6px + 8px);
+    left: calc(6px + 8px);
   }
 }
 
@@ -160,7 +167,7 @@
   height: 220px;
   overflow: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  margin-block-start: 12px;
+  margin-top: 12px;
 
   & pre {
     @extend %unset-pre;
@@ -183,7 +190,8 @@
       animation: animate-console 750ms infinite;
       content: "";
       display: inline-block;
-      size: 1px 14px;
+      width: 1px 14px;
+      height: 1px 14px;
       vertical-align: text-bottom;
     }
   }

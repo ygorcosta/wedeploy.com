@@ -10,7 +10,8 @@
 .feature {
   @extend %inset-styles;
 
-  padding-block: 96px 120px;
+  padding-bottom: 120px;
+  padding-top: 96px;
 
   @media (--ml-feature) {
     align-items: flex-end;
@@ -31,11 +32,11 @@
 
 .feature-more {
   @media (--s-feature) {
-    margin-block-start: 54px;
+    margin-top: 54px;
   }
 
   & > :nth-child(n+2) {
-    margin-block-start: 36px;
+    margin-top: 36px;
   }
 }
 
@@ -80,7 +81,7 @@
   color: var(--black-80);
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 24px;
+  margin-top: 24px;
 }
 
 .feature-more-summary {
@@ -89,7 +90,7 @@
   color: var(--black-80);
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 18px;
+  margin-top: 18px;
 
   & a {
     @extend %unset-a;
@@ -114,13 +115,13 @@
 
   & > :nth-child(n+2) {
     @media (--sm-feature) {
-      margin-block-start: 24px;
+      margin-top: 24px;
     }
   }
 
   & > :nth-child(3n+2), & > :nth-child(3n+3) {
     @media (--l-feature) {
-      margin-block-start: 24px;
+      margin-top: 24px;
     }
   }
 }
@@ -137,7 +138,7 @@
 
 .-data .feature-more {
   @media (--ml-feature) {
-    margin-inline-start: 36px;
+    margin-left: 36px;
   }
 }
 
@@ -168,7 +169,7 @@
 
 .-email .feature-more {
   @media (--ml-feature) {
-    margin-inline-end: 36px;
+    margin-right: 36px;
   }
 }
 
@@ -193,7 +194,7 @@
 
 .-auth .feature-main {
   @media (--ml-feature) {
-    margin-inline-end: 36px;
+    margin-right: 36px;
   }
 }
 
@@ -224,7 +225,7 @@
 
 .-hosting .feature-more {
   @media (--ml-feature) {
-    margin-inline-end: 36px;
+    margin-right: 36px;
   }
 }
 

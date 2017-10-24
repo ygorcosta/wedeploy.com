@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .nav-menu {
-  margin-inline-start: auto;
+  margin-left: auto;
 
   @media (--s-nav) {
     font-size: 18px;
@@ -23,10 +23,9 @@
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
-  padding-block: 6px;
-  padding-inline: 24px;
+  padding: 6px 24px;
   -webkit-tap-highlight-color: transparent;
-  text-align: end;
+  text-align: right;
   width: 100%;
   white-space: nowrap;
 
@@ -54,11 +53,12 @@
     content: url("nav-toggle.svg" param(--color var(--black)));
     display: inline-block;
     line-height: 0;
-    margin-inline-start: 6px;
+    margin-left: 6px;
     position: relative;
     transform: scaleY(1) translate3d(0, -.5px, 0);
     transition: transform .3s ease-in-out, top .3s ease-out;
-    size: 8px 7px;
+    width: 8px 7px;
+    height: 8px 7px;
     will-change: top, transform;
   }
 
@@ -87,8 +87,9 @@
   @extend %unset-l;
 
   @media (--s-nav) {
-    inset-block-start: 78px;
-    inset-inline: 0;
+    top: 78px;
+    left: 0;
+    right: 0;
     overflow: hidden;
     max-height: 100vh;
     position: absolute;
@@ -112,7 +113,8 @@
   &[aria-expanded="true"] {
     @media (--s-nav) {
       background-color: var(--white);
-      padding-block: 12px;
+      padding-bottom: 12px;
+      padding-top: 12px;
     }
   }
 }
@@ -123,13 +125,11 @@
   display: block;
 
   @media (--s-nav) {
-    padding-block: 9px;
-    padding-inline: 24px;
+    padding: 9px 24px;
   }
 
   @media (--l-nav) {
-    padding-block: 9px;
-    padding-inline: 12px;
+    padding: 9px 12px;
   }
 
   & span {
@@ -144,7 +144,7 @@
     border-radius: 4px;
     box-shadow: inset 0 0 0 1px color(var(--black) alpha(4%)), 0 2px 6px 0 color(var(--black) alpha(1%));
     font-weight: 900;
-    margin-inline-start: 6px;
+    margin-left: 6px;
   }
 
   &:matches(:hover, :focus) {
@@ -182,7 +182,7 @@
   }
 
   @media (--l-nav) {
-    margin-inline-start: 24px;
+    margin-left: 24px;
     position: relative;
   }
 
@@ -192,7 +192,7 @@
       content: "or";
       display: inline-block;
       font-size: 12px;
-      inset-inline-end: 100%;
+      right: 100%;
       position: absolute;
       text-align: center;
       width: 12px;
@@ -203,10 +203,11 @@
     @media (--s-nav) {
       content: url("symbol-arrow.svg" param(--color var(--green)));
       display: inline-block;
-      inset-block-start: -2px;
-      margin-inline-start: 12px;
+      top: -2px;
+      margin-left: 12px;
       position: relative;
-      size: 10px 8px;
+      width: 10px 8px;
+      height: 10px 8px;
       transition: transform .3s ease-in-out;
     }
   }

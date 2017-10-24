@@ -8,12 +8,13 @@
   @extend %inset-styles;
 
   background-color: color(var(--black) alpha(2%) blend(var(--blue) 1%));
-  padding-block: 96px 120px;
+  padding-bottom: 96px 120px;
+  padding-top: 96px 120px;
 }
 
 .benefits-group {
   justify-content: center;
-  margin-block-start: 54px;
+  margin-top: 54px;
 
   @media (--ml) {
     display: flex;
@@ -27,25 +28,25 @@
 
     &:nth-child(n+2) {
       @media (--s) {
-        margin-block-start: 36px;
+        margin-top: 36px;
       }
     }
 
     &:nth-child(2n+1) {
       @media (--ml) {
-        margin-inline-end: 36px;
+        margin-right: 36px;
       }
     }
 
     &:nth-child(2n+2) {
       @media (--ml) {
-        margin-inline-start: 36px;
+        margin-left: 36px;
       }
     }
 
     &:nth-last-child(-n+2) {
       @media (--ml) {
-        margin-block-start: 36px;
+        margin-top: 36px;
       }
     }
   }
@@ -68,7 +69,7 @@
   color: var(--black-80);
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 24px;
+  margin-top: 24px;
 }
 
 /* More Headings and Summaries
@@ -83,8 +84,9 @@
 
   &::before {
     display: block;
-    margin-block-end: 18px;
-    size: 42px;
+    margin-bottom: 18px;
+    width: 42px;
+    height: 42px;
   }
 
   &.-tools::before {
@@ -109,6 +111,6 @@
 
   font-size: 16px;
   color: var(--black-90);
-  margin-block-start: 18px;
+  margin-top: 18px;
   line-height: 24px;
 }

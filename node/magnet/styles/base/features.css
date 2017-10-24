@@ -7,12 +7,13 @@
   color: color(var(--black) alpha(80%));
   font-size: 14px;
   line-height: 18px;
-  margin-block-start: 36px;
+  margin-top: 36px;
 
   & > ::before {
     display: inline-block;
-    margin-inline-end: 6px;
-    size: 18px;
+    margin-right: 6px;
+    width: 18px;
+    height: 18px;
     vertical-align: top;
   }
 }

@@ -6,7 +6,7 @@
 
 .start {
   overflow: hidden;
-  padding-block-end: 72px;
+  padding-bottom: 72px;
   transition: background-color 1s ease-in-out, color .75s ease-in-out;
 
   @media (width >= 480px) {
@@ -14,20 +14,23 @@
   }
 
   @media (--s-nav) {
-    padding-block-start: 78px;
-    padding-inline: 24px;
+    padding-top: 78px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   @media (--l-nav) {
-    padding-block-start: calc(78px + 108px);
+    padding-top: calc(78px + 108px);
   }
 
   @media (--l-nav) and (width < 1686px) {
-    padding-inline: 36px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 
   @media (width >= 1686px) {
-    padding-inline: calc(50% - 807px);
+    padding-left: calc(50% - 807px);
+    padding-right: calc(50% - 807px);
   }
 
   &.start--1 {
@@ -48,7 +51,8 @@
 
   @media (width < 480px) {
     & > * {
-      margin-inline: auto;
+      margin-left: auto;
+      margin-right: auto;
       max-width: 520px;
     }
   }
@@ -96,7 +100,8 @@
   @media (--s-start) {
     background-color: color(var(--black) alpha(2%));
     box-shadow: inset 0 0 0 1px color(var(--black) alpha(4%));
-    margin-inline: -24px;
+    margin-left: -24px;
+    margin-right: -24px;
     padding: 12px 24px;
   }
 
@@ -140,35 +145,37 @@
     font-size: 12px;
     font-weight: 900;
     line-height: 18px;
-    padding-inline: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
 
     @media (--s-start) {
-      margin-inline-end: 18px;
+      margin-right: 18px;
     }
 
     @media (--l-start) {
-      margin-inline-end: 6px;
+      margin-right: 6px;
     }
   }
 }
 
 .start-alert-symbol {
   @media (--s-start) {
-    margin-inline-start: auto;
+    margin-left: auto;
   }
 
   &::before {
     display: inline-block;
-    size: 10px 8px;
+    width: 10px 8px;
+    height: 10px 8px;
 
     @media (--s-start) {
       flex-basis: 10px;
       flex-shrink: 0;
-      margin-inline-start: 18px;
+      margin-left: 18px;
     }
 
     @media (--l-start) {
-      margin-inline-start: 6px;
+      margin-left: 6px;
     }
 
     @nest .start--1 &, .start--2 & {
@@ -188,7 +195,7 @@
   @extend %unset-h;
 
   font-weight: 900;
-  margin-block-start: 42px;
+  margin-top: 42px;
   text-shadow: 0 1px 6px color(var(--black) alpha(5%));
   transition: color 1s ease-in-out;
   will-change: color;
@@ -248,7 +255,7 @@
 }
 
 .start-heading-phrase-cursor {
-  margin-inline-start: .125em;
+  margin-left: .125em;
   width: 1px;
 
   @media (--s-nav) {
@@ -277,7 +284,7 @@
 
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 24px;
+  margin-top: 24px;
   transition: color 1s ease-in-out;
   will-change: color;
 
@@ -294,7 +301,7 @@
 
   font-size: 12px;
   line-height: 18px;
-  margin-block-start: 24px;
+  margin-top: 24px;
   transition: color 1s ease-in-out;
 
   @nest .start--1 &, .start--2 & {
@@ -316,9 +323,10 @@
     &::after {
       content: url("action-start.svg" param(--color var(--white)));
       display: inline-block;
-      margin-block-start: 2px;
-      margin-inline-start: 12px;
-      size: 14px 13px;
+      margin-top: 2px;
+      margin-left: 12px;
+      width: 14px 13px;
+      height: 14px 13px;
     }
   }
 }

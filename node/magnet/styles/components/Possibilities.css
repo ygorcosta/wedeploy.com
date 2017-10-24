@@ -6,8 +6,9 @@
 
   background-image: linear-gradient(0deg, rgba(0,164,255,0.00) 0%, rgba(0,164,255,0.04) 100%), linear-gradient(0deg, rgba(14,20,26,0.00) 0%, rgba(14,20,26,0.02) 100%);
   background-size: contain;
-  padding-block-end: 96px;
-  padding-inline: 0px;
+  padding-bottom: 96px;
+  padding-left: 0;
+  padding-right: 0;
 
   @media (--ml) {
     text-align: center;
@@ -44,7 +45,8 @@
 /* ========================================================================== */
 
 .possibilities-content {
-  padding-inline: 36px;
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
 /* Possibilities: Heading
@@ -66,8 +68,9 @@
   color: color(var(--black) alpha(90%));
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 24px;
-  margin-inline: auto;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 640px;
 }
 

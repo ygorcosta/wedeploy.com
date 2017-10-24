@@ -11,7 +11,8 @@
   @extend %inset-styles;
 
   background-color: color(var(--black) alpha(2%) blend(var(--blue) 1%));
-  padding-block: 96px 120px;
+  padding-bottom: 120px;
+  padding-top: 96px;
   text-align: center;
 }
 
@@ -29,7 +30,7 @@
   color: color(var(--black) alpha(60%));
   font-size: 18px;
   line-height: 24px;
-  margin-block-start: 12px;
+  margin-top: 12px;
 }
 
 /* Pricing: Plans
@@ -38,7 +39,7 @@
 .pricing-plans {
   @extend %unset-l;
 
-  margin-block-start: 54px;
+  margin-top: 54px;
 
   @media (--m-pricing) {
     flex-wrap: wrap;
@@ -67,23 +68,23 @@
 
   &:nth-child(n+2) {
     @media (--s-pricing) {
-      margin-block-start: 36px;
+      margin-top: 36px;
     }
 
     @media (--l-pricing) {
-      margin-inline-start: 24px;
+      margin-left: 24px;
     }
   }
 
   &:nth-child(n+3) {
     @media (--m-pricing) {
-      margin-block-start: 36px;
+      margin-top: 36px;
     }
   }
 
   &:nth-child(2n) {
     @media (--m-pricing) {
-      margin-inline-start: 24px;
+      margin-left: 24px;
     }
   }
 }
@@ -107,13 +108,16 @@
 
   &::before {
     display: block;
-    margin-block-end: 18px;
-    margin-inline: auto;
-    size: 60px;
+    margin-bottom: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
 
     @media (--s-pricing) {
-      margin-block-end: 6px;
-      size: 42px;
+      margin-bottom: 6px;
+      width: 42px;
+      height: 42px;
     }
   }
 }
@@ -140,7 +144,7 @@
   color: var(--black-80);
   font-size: 14px;
   line-height: 18px;
-  margin-block-start: 12px;
+  margin-top: 12px;
 }
 
 /* Pricing: Plans: Price
@@ -151,7 +155,8 @@
   font-size: 69px;
   font-weight: 900;
   line-height: 78px;
-  margin-block: 24px 30px;
+  margin-bottom: 30px;
+  margin-top: 24px;
   position: relative;
 
   &::before {
@@ -159,8 +164,8 @@
     content: "$";
     display: inline-block;
     font-size: 17px;
-    inset-block-start: -.875em;
-    inset-inline-start: -.75em;
+    top: -.875em;
+    left: -.75em;
     line-height: 78px;
     position: absolute;
     vertical-align: top;
@@ -171,8 +176,8 @@
     content: "/mo";
     display: inline-block;
     font-size: 14px;
-    inset-block-end: -1.125em;
-    inset-inline-start: 100%;
+    bottom: -1.125em;
+    left: 100%;
     line-height: 72px;
     position: absolute;
     vertical-align: top;
@@ -195,7 +200,7 @@
     }
 
     &:nth-child(n+2) {
-      margin-block-start: 6px;
+      margin-top: 6px;
     }
   }
 
@@ -217,8 +222,8 @@
 
     display: block;
     outline-offset: -3px;
-    padding-inline-end: 12px;
-    padding-inline-start: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
     white-space: normal;
   }
 
@@ -231,7 +236,7 @@
 /* ========================================================================== */
 
 .pricing-plan-details {
-  padding-block-end: 48px;
+  padding-bottom: 48px;
 
   @media (--s-pricing) {
     overflow: hidden;
@@ -256,8 +261,9 @@
       background-image: linear-gradient(180deg, color(var(--white) alpha(0%)), var(--white) 50%);
       content: "";
       height: 60px;
-      inset-block-end: 0;
-      inset-inline: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       position: absolute;
     }
   }
@@ -270,10 +276,12 @@
   @extend %normalize-button;
   @extend %unset-button;
 
-  inset-block-end: 12px;
-  inset-inline: 12px;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
   position: absolute;
-  size: calc(100% - 24px) calc(60px - 24px);
+  width: calc(100% - 24px) calc(60px - 24px);
+  height: calc(100% - 24px) calc(60px - 24px);
 
   @media (--ml-pricing) {
     display: none;
@@ -284,8 +292,10 @@
       content: url("nav-toggle.svg" param(--color color(var(--black) alpha(60%))));
       display: block;
       line-height: 0;
-      margin-inline: auto;
-      size: 12px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 12px;
+      height: 12px;
       transition: opacity .5s, transform .5s;
     }
   }

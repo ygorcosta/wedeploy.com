@@ -5,7 +5,8 @@
   @extend %inset-styles;
 
   background-color: color(var(--black) alpha(2%) blend(var(--blue) 1%));
-  padding-block: 66px 96px;
+  padding-bottom: 96px;
+  padding-top: 66px;
 
   @media (--l-nav) {
     display: flex;
@@ -21,7 +22,7 @@
 
 .plugnplay-content {
   @media (--ml-feature) {
-    padding-inline-end: calc(36px / 2);
+    padding-right: calc(36px / 2);
   }
 }
 
@@ -29,11 +30,11 @@
   @media (--l-feature) {
     flex-grow: 1;
     max-width: calc(50% - 18px);
-    padding-inline-start: calc(36px / 2);
+    padding-left: calc(36px / 2);
 
     @media (--l) {
       align-self: flex-end;
-      margin-block-end: calc(-96px - 72px);
+      margin-bottom: calc(-96px - 72px);
     }
   }
 }
@@ -65,7 +66,7 @@
   color: color(var(--black) alpha(80%));
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 24px;
+  margin-top: 24px;
 }
 
 .plugnplay-actions {

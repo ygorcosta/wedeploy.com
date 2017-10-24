@@ -6,8 +6,8 @@
   background-repeat: no-repeat;
   background-position: calc(200% - 2px) 100%;
   background-size: 200% 2px;
-  margin-block-end: -3px;
-  padding-block-end: 3px;
+  margin-bottom: -3px;
+  padding-bottom: 3px;
   transition: background-position 250ms;
 }
 

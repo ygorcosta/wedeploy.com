@@ -9,11 +9,11 @@
   line-height: 30px;
 
   @media (--s-feature) {
-    margin-block-start: 36px;
+    margin-top: 36px;
   }
 
   @media (--ml-feature) {
-    margin-block-start: 24px;
+    margin-top: 24px;
   }
 }
 
@@ -25,7 +25,7 @@
 /* ========================================================================== */
 
 .plugnplay-demo-menu {
-  margin-block-start: 30px;
+  margin-top: 30px;
 
   @media (--l-feature) {
     display: inline-block;
@@ -97,10 +97,11 @@
 
   color: color(var(--black) alpha(80%));
   font-size: 12px;
-  inset-start: 0 100%;
+  top: 0;
+  left: 100%;
   line-height: 18px;
-  margin-block-start: -12px;
-  margin-inline-start: 36px;
+  margin-top: -12px;
+  margin-left: 36px;
   position: absolute;
   white-space: nowrap;
 
@@ -110,10 +111,11 @@
 
   &::before {
     content: url("tip-plugnplay.svg");
-    inset-block-start: 18px;
-    inset-inline-start: -30px;
+    top: 18px;
+    left: -30px;
     position: absolute;
-    size: 41px 17px;
+    width: 41px 17px;
+    height: 41px 17px;
   }
 }
 
@@ -136,7 +138,8 @@
   box-shadow: 2px 8px 15px 0 color(var(--black) alpha(12%)), 5px 15px 35px 0 color(var(--black) alpha(10%));
   border-radius: 4px;
   display: inline-block;
-  margin-block: 18px;
+  margin-bottom: 18px;
+  margin-top: 18px;
   overflow: auto;
   vertical-align: top;
   max-width: 100%;
@@ -144,7 +147,8 @@
 
 .plugnplay-demo-panel {
   display: block;
-  size: 504px 336px;
+  width: 504px 336px;
+  height: 504px 336px;
 
   &:not(.is-active) {
     display: none;

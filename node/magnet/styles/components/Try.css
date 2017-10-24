@@ -4,7 +4,8 @@
 .try {
   @extend %inset-styles;
 
-  padding-block: 96px 120px;
+  padding-bottom: 120px;
+  padding-top: 96px;
 }
 
 /* Try: Heading
@@ -27,7 +28,7 @@
   color: var(--black-60);
   font-size: 18px;
   line-height: 24px;
-  margin-block-start: 12px;
+  margin-top: 12px;
 }
 
 /* Try: Actions
@@ -39,8 +40,9 @@
   & .-dash::after {
     content: url("action-start.svg");
     display: inline-block;
-    margin-block-start: 2px;
-    margin-inline-start: 12px;
-    size: 14px 13px;
+    margin-top: 2px;
+    margin-left: 12px;
+    width: 14px 13px;
+    height: 14px 13px;
   }
 }

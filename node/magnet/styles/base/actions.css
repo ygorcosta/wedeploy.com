@@ -5,7 +5,7 @@
   @extend %unset-l;
 
   display: flex;
-  margin-block-start: 48px;
+  margin-top: 48px;
 
   @media (--sm) {
     flex-wrap: wrap;
@@ -20,17 +20,17 @@
   & li {
     &:nth-child(1) {
       @media (--sm) {
-        margin-block-end: 12px;
+        margin-bottom: 12px;
       }
 
       @media (--s-nav) {
-        margin-inline-end: 0;
+        margin-right: 0;
       }
     }
 
     &:nth-last-child(n+2) {
       @media (--l-nav) {
-        margin-inline-end: 12px;
+        margin-right: 12px;
       }
     }
 
