@@ -1,9 +1,6 @@
 /* Enterprise (1440px + 36px inset)
 /* ========================================================================== */
 
-@custom-media $s-enterprise (width <  1512px);
-@custom-media $l-enterprise (min-width: 1512px);
-
 .enterprise {
   @extend %inset-styles;
 
@@ -20,7 +17,7 @@
     padding-top: 96px;
   }
 
-  @media (width < 960px) {
+  @media (max-width: 959px) {
     flex-wrap: wrap;
   }
 
@@ -31,10 +28,10 @@
     content: url("enterprise.svg");
     display: block;
     flex-shrink: 0;
-    width: 60px 96px;
-    height: 60px 96px;
+    width: 60px;
+    height: 96px;
 
-    @media (width < 960px) {
+    @media (max-width: 959px) {
       margin-right: calc(100% - 60px);
     }
 
@@ -63,7 +60,7 @@
   line-height: 36px;
   position: relative;
 
-  @media (width < 960px) {
+  @media (max-width: 959px) {
     margin-top: 48px;
   }
 }
@@ -74,7 +71,7 @@
 .enterprise-summary {
   @extend %unset-p;
 
-  color: $black-80;
+  color: rgba($black, .8);
   font-size: 16px;
   line-height: 24px;
   margin-top: 24px;
@@ -86,7 +83,7 @@
 .enterprise-action {
   @extend %unset-p;
 
-  @media (width < 960px) {
+  @media (max-width: 959px) {
     flex-basis: 100%;
     margin-top: 36px;
   }

@@ -3,10 +3,11 @@
 
 @import "./base/font-face"; /* import and font-face must come first */
 
+@import "./base/colors"; /* color variables must come first */
+@import "./base/custom-media"; /* custom-media variables must come first */
+
 @import "./base/actions";
 @import "./base/buttons";
-@import "./base/colors";
-@import "./base/custom-media";
 @import "./base/document";
 @import "./base/features";
 @import "./base/focus-ring";
@@ -14,6 +15,7 @@
 @import "./base/inset";
 @import "./base/reset";
 @import "./base/underline";
+
 @import "./components/Header";
 @import "./components/HeaderNav";
 @import "./components/Start";

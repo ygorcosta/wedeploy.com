@@ -30,8 +30,8 @@
 
 .header-brand-image {
   display: block;
-  width: 161px 42px;
-  height: 161px 42px;
+  width: 161px;
+  height: 42px;
 }
 
 .header-brand-text {
@@ -54,7 +54,7 @@
     padding-right: 24px;
   }
 
-  @media ($l-nav) and (width < 1686px) {
+  @media ($l-nav) and (max-width: 1685px) {
     padding-left: 36px;
     padding-right: 36px;
   }

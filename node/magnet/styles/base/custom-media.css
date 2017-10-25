@@ -1,10 +1,52 @@
 /* Custom Media
 /* ========================================================================== */
 
-@custom-media $s  (max-width:  479px);
-@custom-media $sm (max-width: 959px);
-@custom-media $m  (min-width: 480px) and (max-width: 959px);
-@custom-media $ml (min-width: 480px);
-@custom-media $l  (min-width: 960px);
-@custom-media $s-nav (max-width: 839px);
-@custom-media $l-nav (min-width: 840px);
+$s: "max-width:  479px";
+$sm: "max-width: 959px";
+$m: "min-width: 480px) and (max-width: 959px";
+$ml: "min-width: 480px";
+$l: "min-width: 960px";
+$s-nav: "max-width: 839px";
+$l-nav: "min-width: 840px";
+
+/* Custom Media: Answers (986px + 36px inset)
+/* ========================================================================== */
+
+$s-answers: "max-width: 1057px";
+$l-answers: "min-width: 1058px";
+
+/* Custom Media: Benefits (792px + 36px inset)
+/* ========================================================================== */
+
+$s-benefits: "max-width: 863px";
+$l-benefits: "min-width: 864px";
+
+/* Enterprise (1440px + 36px inset)
+/* ========================================================================== */
+
+$s-enterprise: "max-width: 1511px";
+$l-enterprise: "min-width: 1512px";
+
+/* Custom Media: Feature
+/* ========================================================================== */
+
+$s-feature: "max-width: 659px";
+$sm-feature: "max-width: 899px";
+$ml-feature: "min-width: 660px";
+$l-feature: "min-width: 900px";
+$m-feature: $sm-feature + ") and (" + $ml-feature;
+
+/* Custom Media: Pricing
+/* ========================================================================== */
+
+$s-pricing: "max-width: 599px";
+$ml-pricing: "min-width: 600px";
+$sm-pricing: "max-width: 1079px";
+$l-pricing: "min-width: 1080px";
+$m-pricing: $ml-pricing + ") and (" + $sm-pricing;
+
+/* Custom Media: Start
+/* ========================================================================== */
+
+$s-start: "max-width: 719px";
+$l-start: "min-width: 720px";

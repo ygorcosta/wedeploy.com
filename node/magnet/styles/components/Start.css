@@ -1,9 +1,6 @@
 /* Start
 /* ========================================================================== */
 
-@custom-media $s-start (width < 720px);
-@custom-media $l-start (min-width: 720px);
-
 .start {
   overflow: hidden;
   padding-bottom: 72px;
@@ -23,7 +20,7 @@
     padding-top: calc(78px + 108px);
   }
 
-  @media ($l-nav) and (width < 1686px) {
+  @media ($l-nav) and (max-width: 1685px) {
     padding-left: 36px;
     padding-right: 36px;
   }
@@ -34,22 +31,22 @@
   }
 
   &.start--1 {
-    background-color: color($black alpha(10%) blend($blue 6%));
-    background-color: color($black alpha(2%));
-    color: $black-80;
+    background-color: mix(rgba($black, .1), $blue, 94%);
+    background-color: rgba($black, .02);
+    color: rgba($black, .8);
   }
 
   &.start--2 {
-    background-color: color($black alpha(4%) blend($blue 6%));
-    color: $black-80;
+    background-color: mix(rgba($black, .04), $blue, 94%);
+    color: rgba($black, .8);
   }
 
   &.start--3 {
-    background-color: color($black alpha(92%));
+    background-color: rgba($black, .92);
     color: $white;
   }
 
-  @media (width < 480px) {
+  @media (max-width: 479px) {
     & > * {
       margin-left: auto;
       margin-right: auto;
@@ -98,8 +95,8 @@
   will-change: color;
 
   @media ($s-start) {
-    background-color: color($black alpha(2%));
-    box-shadow: inset 0 0 0 1px color($black alpha(4%));
+    background-color: rgba($black, .02);
+    box-shadow: inset 0 0 0 1px rgba($black, .04);
     margin-left: -24px;
     margin-right: -24px;
     padding: 12px 24px;
@@ -110,11 +107,11 @@
   }
 
   @nest .start--1 &, .start--2 & {
-    color: color($black alpha(80%));
+    color: rgba($black, .8);
   }
 
   @nest .start--3 & {
-    color: color($white alpha(40%));
+    color: rgba($white, .4);
   }
 
   &:hover, &:focus {
@@ -136,8 +133,8 @@
 
   &::before {
     background-color: $green;
-    border: 1px solid color($black alpha(4%));
-    box-shadow: 0 2px 6px 0 color($black alpha(4%));
+    border: 1px solid rgba($black, .04);
+    box-shadow: 0 2px 6px 0 rgba($black, .04);
     border-radius: 3px;
     color: $white;
     content: "New";
@@ -165,8 +162,8 @@
 
   &::before {
     display: inline-block;
-    width: 10px 8px;
-    height: 10px 8px;
+    width: 10px;
+    height: 8px;
 
     @media ($s-start) {
       flex-basis: 10px;
@@ -179,11 +176,11 @@
     }
 
     @nest .start--1 &, .start--2 & {
-      content: url("symbol-arrow.svg" param(--color color($black alpha(80%))));
+      content: url("symbol-arrow.svg" param(--color rgba($black, .8)));
     }
 
     @nest .start--3 & {
-      content: url("symbol-arrow.svg" param(--color color($white alpha(40%))));
+      content: url("symbol-arrow.svg" param(--color rgba($white, .4)));
     }
   }
 }
@@ -196,7 +193,7 @@
 
   font-weight: 900;
   margin-top: 42px;
-  text-shadow: 0 1px 6px color($black alpha(5%));
+  text-shadow: 0 1px 6px rgba($black, .05);
   transition: color 1s ease-in-out;
   will-change: color;
 
@@ -236,15 +233,15 @@
   }
 
   @nest .start--1 & {
-    color: color($black alpha(40%));
+    color: rgba($black, .4);
   }
 
   @nest .start--2 & {
-    color: color($black alpha(60%));
+    color: rgba($black, .6);
   }
 
   @nest .start--3 & {
-    color: color($white alpha(40%));
+    color: rgba($white, .4);
   }
 }
 
@@ -272,7 +269,7 @@
 
   @nest .start--3 & {
     animation: animate-heading-span-alt 750ms infinite;
-    color: color($white alpha(40%));
+    color: rgba($white, .4);
   }
 }
 
@@ -289,7 +286,7 @@
   will-change: color;
 
   @nest .start--3 & {
-    color: color($white alpha(40%))
+    color: rgba($white, .4)
   }
 }
 
@@ -305,11 +302,11 @@
   transition: color 1s ease-in-out;
 
   @nest .start--1 &, .start--2 & {
-    color: color($black alpha(80%));
+    color: rgba($black, .8);
   }
 
   @nest .start--3 & {
-    color: color($white alpha(40%));
+    color: rgba($white, .4);
   }
 }
 
@@ -325,8 +322,8 @@
       display: inline-block;
       margin-top: 2px;
       margin-left: 12px;
-      width: 14px 13px;
-      height: 14px 13px;
+      width: 14px;
+      height: 13px;
     }
   }
 }
@@ -336,7 +333,7 @@
 
 @keyframes animate-heading-span {
   0% {
-    box-shadow: inset -1px 0 0 0 color($black alpha(0%));
+    box-shadow: inset -1px 0 0 0 rgba($black, 0);
   }
 
   100% {
@@ -346,7 +343,7 @@
 
 @keyframes animate-heading-span-alt {
   0% {
-    box-shadow: inset -1px 0 0 0 color($white alpha(0%));
+    box-shadow: inset -1px 0 0 0 rgba($white, 0);
   }
 
   100% {

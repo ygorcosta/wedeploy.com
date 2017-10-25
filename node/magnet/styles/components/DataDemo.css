@@ -1,12 +1,10 @@
 /* Data Demo
 /* ========================================================================== */
 
-:root {
-  $data-demo-overflow-start: 90px;
-  $data-demo-overflow-end: 42px;
-  $auth-demo-overflow-start: 90px;
-  $auth-demo-overflow-end: 60px;
-}
+$data-demo-overflow-start: 90px;
+$data-demo-overflow-end: 42px;
+$auth-demo-overflow-start: 90px;
+$auth-demo-overflow-end: 60px;
 
 .data-demo {
   padding-bottom: $data-demo-overflow-end;
@@ -47,20 +45,20 @@
   min-height: 200px;
   position: relative;
 
-  @media (width > 1200px) {
+  @media (min-width: 1200px) {
     min-width: 600px;
   }
 }
 
 .group-source--datademo {
   @media ($sm) {
-    padding-bottom: calc($data-demo-overflow-start + 96px);
+    padding-bottom: calc(#{$data-demo-overflow-start} + 96px);
   }
 }
 
 .group-source--authdemo {
   @media ($sm) {
-    padding-bottom: calc($auth-demo-overflow-start + 96px);
+    padding-bottom: calc(#{$auth-demo-overflow-start} + 96px);
   }
 }
 
@@ -96,7 +94,7 @@
   & button {
     @extend %unset-button;
 
-    color: color($black alpha(80%));
+    color: rgba($black, .8);
     cursor: pointer;
     font-size: 14px;
     line-height: 24px;
@@ -109,7 +107,7 @@
     padding-right: 6px;
 
     &::before {
-      background-color: color($black alpha(20%));
+      background-color: rgba($black, .2);
       border-radius: 2px;
       display: inline-block;
       margin-right: 12px;
@@ -121,11 +119,11 @@
   }
 
   & :matches(:hover, :focus) span::before {
-    background-color: color($black alpha(90%));
+    background-color: rgba($black, .9);
   }
 
   & .is-active span::before {
-    background-color: color($black alpha(90%));
+    background-color: rgba($black, .9);
   }
 
   & .is-web span::before {
@@ -180,7 +178,7 @@
 
   & code {
     background-color: inherit;
-    color: color($white alpha(45%));
+    color: rgba($white, .45);
     font-family: inherit;
     overflow-x: visible;
     padding: 0;
@@ -228,8 +226,8 @@
   & a {
     @extend %unset-a;
 
-    background: color($white alpha(16%));
-    box-shadow: inset 0 0 0 1px color($black alpha(4%)), 0 2px 4px 0 color($black alpha(6%));
+    background: rgba($white, .16);
+    box-shadow: inset 0 0 0 1px rgba($black, .04), 0 2px 4px 0 rgba($black, .06);
     border-radius: 4px;
     color: $white;
     display: block;
@@ -256,7 +254,7 @@
 
 .group-example {
   justify-content: center;
-  background-color: color($black alpha(2%) blend($blue 1%));
+  background-color: mix(rgba($black, .02), $blue, 99%);
   display: flex;
   flex-grow: 1;
   padding-left: 36px;
@@ -265,26 +263,26 @@
 }
 
 .group-example--datademo {
-  @media (width > 1200px) {
+  @media (min-width: 1200px) {
     padding-left: 78px;
     padding-right: 78px;
   }
 }
 
 .group-example--datademo > * {
-  margin-bottom: calc($data-demo-overflow-end * -1);
-  margin-top: calc($data-demo-overflow-start * -1);
+  margin-bottom: calc(#{$data-demo-overflow-end} * -1);
+  margin-top: calc(#{$data-demo-overflow-start} * -1);
 }
 
 .group-example--authdemo > * {
-  margin-bottom: calc($auth-demo-overflow-end * -1);
-  margin-top: calc($auth-demo-overflow-start * -1);
+  margin-bottom: calc(#{$auth-demo-overflow-end} * -1);
+  margin-top: calc(#{$auth-demo-overflow-start} * -1);
 }
 
 .tip--datademo {
   @extend %unset-p;
 
-  color: color($black alpha(80%));
+  color: rgba($black, .8);
   font-size: 12px;
   top: 0;
   left: calc(-54px - 36px);
@@ -310,13 +308,13 @@
 .tip--authdemo {
   @extend %unset-p;
 
-  color: color($black alpha(80%));
+  color: rgba($black, .8);
   display: none;
   font-size: 12px;
   line-height: 18px;
   position: absolute;
 
-  @media ($l) and (width < 1200px) {
+  @media ($l) and (max-width: 1199px) {
     top: calc(-126px + 12px);
     left: calc(50% - 426px / 2 - 56px);
   }
@@ -333,7 +331,7 @@
     width: 26px;
     height: 39px;
 
-    @media ($l) and (width < 1200px) {
+    @media ($l) and (max-width: 1199px) {
       margin-left: 18px;
       transform: rotate(13deg) scaleX(-1);
     }
@@ -352,7 +350,7 @@
   background-image: url("../images/demo-data-container.jpg");
   background-size: 100% 100%;
   border-radius: 4px;
-  box-shadow: 2px 8px 15px 0 color($black alpha(12%)), 5px 15px 35px 0 color($black alpha(10%));
+  box-shadow: 2px 8px 15px 0 rgba($black, .12), 5px 15px 35px 0 rgba($black, .1);
   display: flex;
   flex-wrap: wrap;
   padding: 24px;
@@ -363,7 +361,7 @@
     display: flex;
     width: 100%;
 
-    @media (width < 640px) {
+    @media (max-width: 639px) {
       flex-wrap: wrap;
     }
   }
@@ -379,7 +377,7 @@
   order: 1;
   user-select: none;
 
-  @media (width < 640px) {
+  @media (max-width: 639px) {
     display: none;
   }
 
@@ -392,7 +390,7 @@
   }
 
   & h2 {
-    color: color($black alpha(50%));
+    color: rgba($black, .5);
     font-size: 11px;
     font-weight: 900;
     line-height: 18px;
@@ -428,7 +426,7 @@
     width: 100%;
     z-index: 0;
 
-    @media (width < 640px) {
+    @media (max-width: 639px) {
       margin-bottom: 6px;
     }
 
@@ -456,7 +454,7 @@
 
     &:hover {
       & + span {
-        background: color($black alpha(12%));
+        background: rgba($black, .12);
         border-radius: 6px;
       }
     }
@@ -466,18 +464,18 @@
 
       & + span {
         background: $white;
-        box-shadow: 0 1px 2px 0 color($black alpha(10%)), 0 1px 6px 0 color($black alpha(10%));
+        box-shadow: 0 1px 2px 0 rgba($black, .1), 0 1px 6px 0 rgba($black, .1);
         border-radius: 6px;
       }
     }
 
     &::placeholder {
-      color: color($black alpha(50%));
+      color: rgba($black, .5);
     }
   }
 
   & span {
-    background: color($black alpha(8%));
+    background: rgba($black, .08);
     border-radius: 6px;
     content: "";
     display: inline-block;
@@ -506,7 +504,7 @@
   order: 2;
   user-select: none;
 
-  @media (width < 640px) {
+  @media (max-width: 639px) {
     display: none;
   }
 
@@ -519,7 +517,7 @@
   & h4 {
     @extend %unset-h;
 
-    color: color($black alpha(50%));
+    color: rgba($black, .5);
     font-size: 11px;
     font-weight: 900;
     line-height: 18px;
@@ -536,7 +534,7 @@
     position: relative;
 
     & span:nth-child(n+3):last-child {
-      color: color($black alpha(50%));
+      color: rgba($black, .5);
       margin-left: auto;
     }
   }
@@ -567,7 +565,7 @@
     height: 100%;
 
     & + span {
-      background: color($black alpha(12%));
+      background: rgba($black, .12);
       border-radius: 3px;
       display: inline-block;
       margin-right: 9px;
@@ -576,13 +574,13 @@
     }
 
     &:hover + span {
-      background-color: color($black alpha(20%));
+      background-color: rgba($black, .2);
     }
 
     &:checked + span {
       background-color: $white;
       border-radius: 3px;
-      box-shadow: 0 1px 2px 0 color($black alpha(10%)), 0 1px 6px 0 color($black alpha(10%));
+      box-shadow: 0 1px 2px 0 rgba($black, .1), 0 1px 6px 0 rgba($black, .1);
       display: flex;
       justify-content: center;
 
@@ -597,7 +595,7 @@
 
 .demo-data-sidebar-genre, .demo-data-sidebar-year {
   & ul {
-    color: color($black alpha(70%));
+    color: rgba($black, .7);
     font-size: 12px;
     line-height: 18px;
 
@@ -632,7 +630,7 @@
     width: 100%;
 
     &::placeholder {
-      color: color($black alpha(50%));
+      color: rgba($black, .5);
     }
   }
 
@@ -640,7 +638,7 @@
     outline: 0;
 
     & + span {
-      background: color($black alpha(8%));
+      background: rgba($black, .08);
       border-radius: 6px;
       content: "";
       display: inline-block;
@@ -659,12 +657,12 @@
     }
 
     &:hover + span {
-      background: color($black alpha(12%));
+      background: rgba($black, .12);
     }
 
     &:focus + span {
       background-color: $white;
-      box-shadow: 0 1px 2px 0 color($black alpha(10%)), 0 1px 6px 0 color($black alpha(10%));
+      box-shadow: 0 1px 2px 0 rgba($black, .1), 0 1px 6px 0 rgba($black, .1);
     }
   }
 }
@@ -678,7 +676,7 @@
 
   & input:checked + span {
     background-color: $white;
-    box-shadow: 0 1px 2px 0 color($black alpha(10%)), 0 1px 6px 0 color($black alpha(10%));
+    box-shadow: 0 1px 2px 0 rgba($black, .1), 0 1px 6px 0 rgba($black, .1);
     margin-left: -6px;
     padding: 3px 6px;
   }
@@ -755,7 +753,7 @@
     @extend %unset-p;
 
     font-size: 12px;
-    color: color($black alpha(50%));
+    color: rgba($black, .5);
     line-height: 18px;
     margin-bottom: 12px;
   }
@@ -772,7 +770,7 @@
   margin-right: -9px;
 
   & li {
-    box-shadow: 0 2px 3px 0 color($black alpha(20%)), 0 2px 6px 0 color($black alpha(4%));
+    box-shadow: 0 2px 3px 0 rgba($black, .2), 0 2px 6px 0 rgba($black, .04);
     margin-bottom: 18px;
     margin-left: 9px;
     margin-right: 9px;
@@ -783,11 +781,11 @@
       width: 73px;
     }
 
-    @media ($ml) and (width < 1500px) {
+    @media ($ml) and (max-width: 1499px) {
       width: 120px;
     }
 
-    @media (width > 1500px) {
+    @media (min-width: 1500px) {
       width: 205px;
     }
   }
@@ -802,7 +800,7 @@
 
 .demo-data-results-items {
   & li > span {
-    color: color($white alpha(90%));
+    color: rgba($white, .9);
     font-size: 14px;
     font-weight: 900;
     inset: 0;
@@ -822,7 +820,7 @@
   }
 
   & li:hover > span {
-    background-color: color($black alpha(60%));
+    background-color: rgba($black, .6);
     opacity: 1  g;
   }
 }
@@ -840,7 +838,7 @@
   & button {
     @extend %unset-button;
 
-    color: color($black alpha(30%));
+    color: rgba($black, .3);
     cursor: pointer;
     display: block;
     font-size: 13px;
@@ -851,13 +849,13 @@
     padding-right: 6px;
 
     &:hover, &[disabled] {
-      color: color($black alpha(60%));
+      color: rgba($black, .6);
     }
 
     &[disabled] {
       background-color: $white;
       border-radius: 3px;
-      box-shadow: 0 1px 2px 0 color($black alpha(10%)), 0 1px 6px 0 color($black alpha(10%));
+      box-shadow: 0 1px 2px 0 rgba($black, .1), 0 1px 6px 0 rgba($black, .1);
     }
   }
 }

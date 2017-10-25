@@ -1,15 +1,12 @@
 /* Benefits (792px + 36px inset)
 /* ========================================================================== */
 
-@custom-media $s-benefits (width <  864px);
-@custom-media $l-benefits (min-width: 864px);
-
 .benefits {
   @extend %inset-styles;
 
-  background-color: color($black alpha(2%) blend($blue 1%));
-  padding-bottom: 96px 120px;
-  padding-top: 96px 120px;
+  background-color: mix(rgba($black, .02), $blue, 99%);
+  padding-bottom: 120px;
+  padding-top: 96px;
 }
 
 .benefits-group {
@@ -66,7 +63,7 @@
 .benefits-summary {
   @extend %unset-p;
 
-  color: $black-80;
+  color: rgba($black, .8);
   font-size: 16px;
   line-height: 24px;
   margin-top: 24px;
@@ -110,7 +107,7 @@
   @extend %unset-p;
 
   font-size: 16px;
-  color: $black-90;
+  color: rgba($black, .9);
   margin-top: 18px;
   line-height: 24px;
 }

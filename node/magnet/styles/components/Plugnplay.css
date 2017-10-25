@@ -4,7 +4,7 @@
 .plugnplay {
   @extend %inset-styles;
 
-  background-color: color($black alpha(2%) blend($blue 1%));
+  background-color: mix(rgba($black, .02), $blue, 99%);
   padding-bottom: 96px;
   padding-top: 66px;
 
@@ -63,7 +63,7 @@
 .plugnplay-summary {
   @extend %unset-p;
 
-  color: color($black alpha(80%));
+  color: rgba($black, .8);
   font-size: 16px;
   line-height: 24px;
   margin-top: 24px;

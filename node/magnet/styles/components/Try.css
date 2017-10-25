@@ -25,7 +25,7 @@
 .try-summary {
   @extend %unset-p;
 
-  color: $black-60;
+  color: rgba($black, .6);
   font-size: 18px;
   line-height: 24px;
   margin-top: 12px;
@@ -42,7 +42,7 @@
     display: inline-block;
     margin-top: 2px;
     margin-left: 12px;
-    width: 14px 13px;
-    height: 14px 13px;
+    width: 14px;
+    height: 13px;
   }
 }

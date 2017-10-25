@@ -4,7 +4,7 @@
 %features {
   @extend %unset-l;
 
-  color: color($black alpha(80%));
+  color: rgba($black, .8);
   font-size: 14px;
   line-height: 18px;
   margin-top: 36px;

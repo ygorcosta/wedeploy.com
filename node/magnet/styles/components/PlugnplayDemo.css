@@ -66,25 +66,25 @@
   }
 
   @nest :not(.is-active) > & {
-    background-color: color($black alpha(1%));
-    color: color($black alpha(90%));
+    background-color: rgba($black, .01);
+    color: rgba($black, .9);
 
     &:hover {
-      background-color: color($black alpha(10%));
+      background-color: rgba($black, .1);
     }
   }
 
   @nest :nth-child(1):not(.is-active) > & {
-    box-shadow: inset 0 1px 0 0 color($black alpha(12%)), inset 0 -1px 0 0 color($black alpha(12%)), inset 1px 0 0 0 color($black alpha(12%));
+    box-shadow: inset 0 1px 0 0 rgba($black, .12), inset 0 -1px 0 0 rgba($black, .12), inset 1px 0 0 0 rgba($black, .12);
   }
 
   @nest :nth-child(2):not(.is-active) > & {
-    box-shadow: inset 0 1px 0 0 color($black alpha(12%)), inset 0 -1px 0 0 color($black alpha(12%)), inset -1px 0 0 0 color($black alpha(12%));
+    box-shadow: inset 0 1px 0 0 rgba($black, .12), inset 0 -1px 0 0 rgba($black, .12), inset -1px 0 0 0 rgba($black, .12);
   }
 
   @nest .is-active > & {
     background-color: $green;
-    box-shadow: inset 0 0 0 1px color($black alpha(8%));
+    box-shadow: inset 0 0 0 1px rgba($black, .08);
     color: $white;
   }
 }
@@ -95,7 +95,7 @@
 .plugnplay-demo-tip {
   @extend %unset-p;
 
-  color: color($black alpha(80%));
+  color: rgba($black, .8);
   font-size: 12px;
   top: 0;
   left: 100%;
@@ -114,8 +114,8 @@
     top: 18px;
     left: -30px;
     position: absolute;
-    width: 41px 17px;
-    height: 41px 17px;
+    width: 41px;
+    height: 17px;
   }
 }
 
@@ -125,7 +125,7 @@
 .plugnplay-demo-note {
   @extend %unset-p;
 
-  color: color($black alpha(90%));
+  color: rgba($black, .9);
   font-size: 14px;
   line-height: 24px;
 }
@@ -135,7 +135,7 @@
 
 .plugnplay-demo-panels {
   background-color: $white;
-  box-shadow: 2px 8px 15px 0 color($black alpha(12%)), 5px 15px 35px 0 color($black alpha(10%));
+  box-shadow: 2px 8px 15px 0 rgba($black, .12), 5px 15px 35px 0 rgba($black, .1);
   border-radius: 4px;
   display: inline-block;
   margin-bottom: 18px;
@@ -147,8 +147,8 @@
 
 .plugnplay-demo-panel {
   display: block;
-  width: 504px 336px;
-  height: 504px 336px;
+  width: 504px;
+  height: 336px;
 
   &:not(.is-active) {
     display: none;
@@ -170,25 +170,25 @@
 
   & code {
     background-color: inherit;
-    color: color($white alpha(45%));
+    color: rgba($white, .45);
     font-family: inherit;
     overflow-x: visible;
     padding: 18px;
   }
-}
 
-& :matches(.hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-template-variable, .hljs-attribute, .hljs-link) {
-  color: $blue;
-}
+  & :matches(.hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-template-variable, .hljs-attribute, .hljs-link) {
+    color: $blue;
+  }
 
-& :matches(.hljs-string, .hljs-symbol, .hljs-bullet, .hljs-regexp) {
-  color: $yellow;
-}
+  & :matches(.hljs-string, .hljs-symbol, .hljs-bullet, .hljs-regexp) {
+    color: $yellow;
+  }
 
-& :matches(.hljs-number, .hljs-addition) {
-  color: $green;
-}
+  & :matches(.hljs-number, .hljs-addition) {
+    color: $green;
+  }
 
-& :matches(.hljs-keyword, .hljs-selector-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class) {
-  color: $violet;
+  & :matches(.hljs-keyword, .hljs-selector-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class) {
+    color: $violet;
+  }
 }

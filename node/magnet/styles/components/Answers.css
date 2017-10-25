@@ -1,9 +1,6 @@
 /* Answers (986px + 36px inset)
 /* ========================================================================== */
 
-@custom-media $s-answers (width <  1058px);
-@custom-media $l-answers (min-width: 1058px);
-
 .answers {
   @extend %inset-styles;
 
@@ -91,7 +88,7 @@
 .answers-group-summary {
   @extend %unset-p;
 
-  color: $black-90;
+  color: rgba($black, .9);
   font-size: 16px;
   line-height: 24px;
   margin-top: 12px;
@@ -110,8 +107,8 @@
   padding-left: 42px;
 
   @media ($s-answers) {
-    margin-bottom: 18px 24px;
-    margin-top: 18px 24px;
+    margin-bottom: 24px;
+    margin-top: 18px;
   }
 }
 
