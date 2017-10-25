@@ -14,7 +14,7 @@ weight: 5
 
 ## Introduction
 
-You can use our API Clients for sending/receiving requests to/from WeDeploy services like [Auth](/docs/auth/getting-started/), [Email](/docs/email/getting-started/), and [Hosting](/docs/hosting/getting-started/). We built those libraries to make your life easier and adapt to your current workflow.
+You can use our SDKs for sending/receiving requests to/from WeDeploy services like [Auth](/docs/auth/getting-started/), [Email](/docs/email/getting-started/), and [Hosting](/docs/hosting/getting-started/). We built those libraries to make your life easier and adapt to your current workflow.
 
 Below you can find a list that contains all of them, including instructions on how to install and details for each specific platform.
 
@@ -54,6 +54,10 @@ import WeDeploy from 'wedeploy';
 This library is compatible with all major browsers (Chrome, Firefox, Safari, Edge, and IE10+) as well as [React Native](https://facebook.github.io/react-native/) and [React VR](https://facebook.github.io/react-vr/).
 
 The API calls are the same in all JavaScript environments.
+
+##### Source Code
+
+All our SDKs are available as open source projects. You can check the source code of this [library on GitHub](https://github.com/wedeploy/wedeploy-sdk-js).
 
 </article>
 
@@ -109,6 +113,10 @@ WeDeploy
 		}
 	)
 ```
+
+##### Source Code
+
+All our SDKs are available as open source projects. You can check the source code of this [library on GitHub](https://github.com/wedeploy/wedeploy-sdk-swift).
 
 </article>
 
@@ -177,6 +185,10 @@ weDeploy
 
 		});
 ```
+
+##### Source Code
+
+All our SDKs are available as open source projects. You can check the source code of this [library on GitHub](https://github.com/wedeploy/wedeploy-sdk-android).
 
 </article>
 
