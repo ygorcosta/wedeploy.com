@@ -12,14 +12,14 @@
     transition: transform 1s;
     will-change: opacity, transform;
 
-    @nest .start--1 & {
+    .start--1 & {
       content: url("start-demo-laptop.svg");
       transform: translate3d(132px, -36px, 0);
       width: 1188px;
       height: 733px;
     }
 
-    @nest .start--2 & {
+    .start--2 & {
       transform: translate3d(calc(25vw + 138px), calc(-93px + 18px), 0);
       content: url("start-demo-phone.svg");
       width: 490px;
@@ -34,7 +34,7 @@
       }
     }
 
-    @nest .start--3 & {
+    .start--3 & {
       content: url("start-demo-watch.svg");
       width: 432px;
       height: 704px;
@@ -53,7 +53,7 @@
       }
     }
 
-    @nest .start--nojs & {
+    .start--nojs & {
       opacity: 0;
     }
   }
@@ -75,11 +75,11 @@
   width: 396px;
   will-change: opacity, transform;
 
-  @nest .start--1 & {
+  .start--1 & {
     transform: translate3d(42px, 60px, 0);
   }
 
-  @nest .start--2 & {
+  .start--2 & {
     transform: translate3d(192px, 92px, 0);
 
     @media (max-width: 1299px) {
@@ -87,7 +87,7 @@
     }
   }
 
-  @nest .start--3 & {
+  .start--3 & {
     transform: translate3d(150px, 84px, 0);
 
     @media (max-width: 1399px) {
@@ -99,7 +99,7 @@
     }
   }
 
-  @nest .start--nojs & {
+  .start--nojs & {
     opacity: 0;
   }
 }

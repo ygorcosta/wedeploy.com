@@ -106,11 +106,11 @@
     white-space: nowrap;
   }
 
-  @nest .start--1 &, .start--2 & {
+  .start--1 &, .start--2 & {
     color: rgba($black, .8);
   }
 
-  @nest .start--3 & {
+  .start--3 & {
     color: rgba($white, .4);
   }
 
@@ -175,11 +175,11 @@
       margin-left: 6px;
     }
 
-    @nest .start--1 &, .start--2 & {
+    .start--1 &, .start--2 & {
       content: url("symbol-arrow.svg" param(--color rgba($black, .8)));
     }
 
-    @nest .start--3 & {
+    .start--3 & {
       content: url("symbol-arrow.svg" param(--color rgba($white, .4)));
     }
   }
@@ -207,11 +207,11 @@
     line-height: 66px;
   }
 
-  @nest .start--1 &, .start--2 & {
+  .start--1 &, .start--2 & {
     color: $black;
   }
 
-  @nest .start--3 & {
+  .start--3 & {
     color: $white;
   }
 }
@@ -232,15 +232,15 @@
     display: block;
   }
 
-  @nest .start--1 & {
+  .start--1 & {
     color: rgba($black, .4);
   }
 
-  @nest .start--2 & {
+  .start--2 & {
     color: rgba($black, .6);
   }
 
-  @nest .start--3 & {
+  .start--3 & {
     color: rgba($white, .4);
   }
 }
@@ -263,11 +263,11 @@
     height: 66px;
   }
 
-  @nest .start--1 &, .start--2 & {
+  .start--1 &, .start--2 & {
     animation: animate-heading-span 750ms infinite;
   }
 
-  @nest .start--3 & {
+  .start--3 & {
     animation: animate-heading-span-alt 750ms infinite;
     color: rgba($white, .4);
   }
@@ -285,7 +285,7 @@
   transition: color 1s ease-in-out;
   will-change: color;
 
-  @nest .start--3 & {
+  .start--3 & {
     color: rgba($white, .4)
   }
 }
@@ -301,11 +301,11 @@
   margin-top: 24px;
   transition: color 1s ease-in-out;
 
-  @nest .start--1 &, .start--2 & {
+  .start--1 &, .start--2 & {
     color: rgba($black, .8);
   }
 
-  @nest .start--3 & {
+  .start--3 & {
     color: rgba($white, .4);
   }
 }

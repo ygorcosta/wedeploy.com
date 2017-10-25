@@ -19,7 +19,7 @@
     margin-left: -6px;
   }
 
-  @nest [data-expanded="true"] & {
+  [data-expanded="true"] & {
     background-color: $white;
   }
 }
@@ -38,11 +38,11 @@
   fill: $black;
   transition: fill 2s ease-in-out;
 
-  @nest .start--3 & {
+  .start--3 & {
     fill: $white;
   }
 
-  @nest [data-expanded="true"] & {
+  [data-expanded="true"] & {
     fill: $black;
     transition: fill .3s ease-in-out;
   }

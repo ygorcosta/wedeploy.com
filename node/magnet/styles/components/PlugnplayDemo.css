@@ -57,15 +57,15 @@
     padding: 6px 42px;
   }
 
-  @nest :nth-child(1) > & {
+  :nth-child(1) > & {
     border-radius: 4px 0 0 4px;
   }
 
-  @nest :nth-child(2) > & {
+  :nth-child(2) > & {
     border-radius: 0 4px 4px 0;
   }
 
-  @nest :not(.is-active) > & {
+  :not(.is-active) > & {
     background-color: rgba($black, .01);
     color: rgba($black, .9);
 
@@ -74,15 +74,15 @@
     }
   }
 
-  @nest :nth-child(1):not(.is-active) > & {
+  :nth-child(1):not(.is-active) > & {
     box-shadow: inset 0 1px 0 0 rgba($black, .12), inset 0 -1px 0 0 rgba($black, .12), inset 1px 0 0 0 rgba($black, .12);
   }
 
-  @nest :nth-child(2):not(.is-active) > & {
+  :nth-child(2):not(.is-active) > & {
     box-shadow: inset 0 1px 0 0 rgba($black, .12), inset 0 -1px 0 0 rgba($black, .12), inset -1px 0 0 0 rgba($black, .12);
   }
 
-  @nest .is-active > & {
+  .is-active > & {
     background-color: $green;
     box-shadow: inset 0 0 0 1px rgba($black, .08);
     color: $white;

@@ -289,7 +289,7 @@ $auth-demo-overflow-end: 60px;
   line-height: 18px;
   position: absolute;
 
-  @nest .demo-data & {
+  .demo-data & {
     @media ($sm) {
       display: none;
     }
