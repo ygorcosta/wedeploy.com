@@ -4,7 +4,7 @@ description: "In this section, you'll learn how to authenticate users on an Andr
 layout: "tutorial"
 tutorialTitle: "Getting started with WeDeploy Auth on an Android app"
 parentId: "auth-android"
-weight: 10
+weight: 8
 ---
 
 <div class="notfound">

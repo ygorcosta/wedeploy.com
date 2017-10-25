@@ -4,7 +4,7 @@ description: "In this section, you'll learn how to send an email on iOS using th
 tutorialTitle: "Getting started with WeDeploy Email on iOS"
 parentId: "email-ios"
 layout: "tutorial"
-weight: 10
+weight: 8
 ---
 
 <div class="notfound">
