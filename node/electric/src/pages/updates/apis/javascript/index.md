@@ -4,6 +4,10 @@ description: Check out what's new
 layout: "updates"
 updates:
  -
+  version: 4.0.2
+  date: Oct 26th, 2017
+  description: Added support for ReactNative 16.
+ -
   version: 4.0.1
   date: Oct 12th, 2017
   description: Fixed CORS issue with `watch` method which caused the request to be blocked by the browser.
