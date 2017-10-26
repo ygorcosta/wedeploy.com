@@ -1,29 +1,18 @@
+// tooling
 const path = require('path');
+const sass = require('node-sass');
 
+// postcss configuration
 module.exports = (ctx) => ({
   map: ctx.options.map,
   plugins: [
-    // css imports
-    require('postcss-import')(),
+    // sass compatibility
+    postcssSass(),
 
     // future compatibility
-    require('postcss-custom-properties')(),
-    require('postcss-selector-matches')(),
-    require('postcss-logical')(),
-    require('postcss-nesting')(),
-    require('postcss-extend-rule')(),
-    require('postcss-media-fn')(),
-    require('postcss-custom-media')(),
-    require('postcss-media-minmax')(),
-    require('postcss-custom-selectors')(),
-    require('postcss-color-hex-alpha')(),
-    require('postcss-color-function')(),
     require('postcss-selector-matches')(),
     require('postcss-selector-not')(),
-    require('postcss-pseudo-class-any-link')(),
-    require('postcss-dir-pseudo-class')(),
     require('postcss-replace-overflow-wrap')(),
-    require('postcss-size')(),
 
     // backward compatibility
     require('postcss-svg')({
@@ -79,3 +68,35 @@ const compress = postcss.plugin('postcss-discard-tested-duplicate-declarations',
     })
   });
 });
+
+// sass
+const postcssSass = postcss.plugin(
+  'postcss-sass',
+  () => (css) => {
+    const cssSourceInputFile = css.source && css.source.input && css.source.input.file ? css.source.input.file : 'index.css';
+
+    return new Promise(
+      // promise any sass error or result from the stringified css ast
+      (resolve, reject) => sass.render(
+        {
+          file: cssSourceInputFile,
+          indentType: 'tab',
+          outFile: cssSourceInputFile,
+          outputStyle: 'expanded',
+          data: css.toString(),
+          sourceMapContents: true,
+          sourceMap: true
+        },
+        (error, result) => error ? reject(error) : resolve(result)
+      )
+    ).then(
+      // promise the sass-transpiled css as a new ast
+      result => postcss.parse(
+        result.css.toString()
+      )
+    ).then(
+      // replace the old ast with the new ast
+      newcss => css.removeAll().append(...newcss.nodes)
+    );
+  }
+);

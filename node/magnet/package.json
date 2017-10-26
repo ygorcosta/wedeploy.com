@@ -4,8 +4,8 @@
     "build": "magnet build -C .",
     "start": "npm run start:css && npm run start:js",
     "start:js": "magnet start -C .",
-    "start:css": "postcss styles/main.css --config config --map true --output static/styles/main.css",
-    "start:css:watch": "postcss styles/main.css --config config --map true --output static/styles/main.css --watch",
+    "start:css": "postcss styles/main.css --map true --output static/styles/main.css",
+    "start:css:watch": "postcss styles/main.css --map true --output static/styles/main.css --watch",
     "format": "prettier --single-quote --no-bracket-spacing --trailing-comma es5 --write \"{src/**/*.js,*.js}\" && eslint --fix \"{src/**/*.js,*.js}\""
   },
   "dependencies": {
@@ -27,6 +27,7 @@
     "eslint-config-liferay": "^1.0.2",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-react": "^7.4.0",
+    "node-sass": "^4.5.3",
     "postcss-calc": "^6.0.0",
     "postcss-cli": "^4.1.1",
     "postcss-color-function": "^4.0.0",
