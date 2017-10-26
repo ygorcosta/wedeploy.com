@@ -5,6 +5,8 @@
 
 @import "./base/colors"; /* color variables must come first */
 @import "./base/custom-media"; /* custom-media variables must come first */
+@import "./base/normalize"; /* normalize mixins must come first */
+@import "./base/unset"; /* unset mixins must come first */
 
 @import "./base/actions";
 @import "./base/buttons";
@@ -33,4 +35,3 @@
 @import "./components/Support";
 @import "./components/Try";
 @import "./components/Footer";
-@import "practical-styles";

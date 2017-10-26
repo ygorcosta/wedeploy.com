@@ -47,7 +47,6 @@
     "postcss-selector-not": "^3.0.1",
     "postcss-size": "^2.0.0",
     "postcss-svg": "^2.2.0",
-    "practical-styles": "github:jonathantneal/practical-styles",
     "prettier": "^1.7.4"
   },
   "browserslist": [
