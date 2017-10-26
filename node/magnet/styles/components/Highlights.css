@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .highlights {
-  @extend %inset-styles;
+  @extend %inset;
 
   padding-bottom: 96px;
   padding-top: 96px;

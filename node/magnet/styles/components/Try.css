@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .try {
-  @extend %inset-styles;
+  @extend %inset;
 
   padding-bottom: 120px;
   padding-top: 96px;

@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .footer {
-  @extend %inset-styles;
+  @extend %inset;
 
   background-color: $black;
   color: $white;

@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .answers {
-  @extend %inset-styles;
+  @extend %inset;
 
   @media ($sm) {
     padding-bottom: 132px;

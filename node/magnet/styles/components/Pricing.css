@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .pricing {
-  @extend %inset-styles;
+  @extend %inset;
 
   background-color: mix(rgba($black, .02), $blue, 99%);
   padding-bottom: 120px;
