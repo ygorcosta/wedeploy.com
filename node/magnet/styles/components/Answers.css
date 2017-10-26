@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .answers {
-  @extend %inset;
+  @include inset;
 
   @media ($sm) {
     padding-bottom: 132px;
@@ -58,7 +58,7 @@
 /* ========================================================================== */
 
 .answers-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 27px;
   font-weight: 900;
@@ -66,7 +66,7 @@
 }
 
 .answers-group-heading {
-  @extend %unset-p;
+  @include unset-p;
 
   font-size: 18px;
   line-height: 24px;
@@ -86,7 +86,7 @@
 /* ========================================================================== */
 
 .answers-group-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .9);
   font-size: 16px;
@@ -113,17 +113,17 @@
 }
 
 .answers-more-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-weight: 900;
   margin-right: .375em;
 }
 
 .answers-more-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   & a {
-    @extend %unset-a;
+    @include unset-a;
 
     background-image: linear-gradient(currentColor 25%, transparent 50%);
     background-repeat: no-repeat;

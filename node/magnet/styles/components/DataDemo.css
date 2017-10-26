@@ -63,7 +63,7 @@ $auth-demo-overflow-end: 60px;
 }
 
 .menu-source {
-  @extend %unset-l;
+  @include unset-l;
 
   display: flex;
   top: -42px;
@@ -92,7 +92,7 @@ $auth-demo-overflow-end: 60px;
   }
 
   & button {
-    @extend %unset-button;
+    @include unset-button;
 
     color: rgba($black, .8);
     cursor: pointer;
@@ -164,7 +164,7 @@ $auth-demo-overflow-end: 60px;
   }
 
   & pre {
-    @extend %unset-pre;
+    @include unset-pre;
 
     font-family: "Roboto Mono", "ArialUnicodeMS", monospace;
     font-size: 12px;
@@ -202,7 +202,7 @@ $auth-demo-overflow-end: 60px;
 }
 
 .menu-panel-source {
-  @extend %unset-l;
+  @include unset-l;
 
   display: flex;
   bottom: 36px;
@@ -224,7 +224,7 @@ $auth-demo-overflow-end: 60px;
   }
 
   & a {
-    @extend %unset-a;
+    @include unset-a;
 
     background: rgba($white, .16);
     box-shadow: inset 0 0 0 1px rgba($black, .04), 0 2px 4px 0 rgba($black, .06);
@@ -280,7 +280,7 @@ $auth-demo-overflow-end: 60px;
 }
 
 .tip--datademo {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .8);
   font-size: 12px;
@@ -306,7 +306,7 @@ $auth-demo-overflow-end: 60px;
 }
 
 .tip--authdemo {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .8);
   display: none;
@@ -386,7 +386,7 @@ $auth-demo-overflow-end: 60px;
   }
 
   & h2, & h3 {
-    @extend %unset-h;
+    @include unset-h;
   }
 
   & h2 {
@@ -436,9 +436,9 @@ $auth-demo-overflow-end: 60px;
   }
 
   & input {
-    @extend %normalize-input;
-    @extend %normalize-input-type-search;
-    @extend %unset-input;
+    @include normalize-input;
+    @include normalize-input-type-search;
+    @include unset-input;
 
     color: $black;
     font-size: 13px;
@@ -515,7 +515,7 @@ $auth-demo-overflow-end: 60px;
   }
 
   & h4 {
-    @extend %unset-h;
+    @include unset-h;
 
     color: rgba($black, .5);
     font-size: 11px;
@@ -526,7 +526,7 @@ $auth-demo-overflow-end: 60px;
   }
 
   & ul {
-    @extend %unset-l;
+    @include unset-l;
   }
 
   & label {
@@ -542,7 +542,7 @@ $auth-demo-overflow-end: 60px;
 
 .demo-data-sidebar-genre, .demo-data-sidebar-year, .demo-data-sidebar-ratings {
   & [type="checkbox"] {
-    @extend %unset-input;
+    @include unset-input;
 
     cursor: pointer;
     inset: 0;
@@ -555,7 +555,7 @@ $auth-demo-overflow-end: 60px;
 
 .demo-data-sidebar-genre, .demo-data-sidebar-year {
   & [type="checkbox"] {
-    @extend %unset-input;
+    @include unset-input;
 
     cursor: pointer;
     inset: 0;
@@ -616,9 +616,9 @@ $auth-demo-overflow-end: 60px;
   }
 
   & form input {
-    @extend %normalize-input;
-    @extend %normalize-input-type-search;
-    @extend %unset-input;
+    @include normalize-input;
+    @include normalize-input-type-search;
+    @include unset-input;
 
     color: $black;
     font-size: 12px;
@@ -750,7 +750,7 @@ $auth-demo-overflow-end: 60px;
   }
 
   & p {
-    @extend %unset-p;
+    @include unset-p;
 
     font-size: 12px;
     color: rgba($black, .5);
@@ -760,7 +760,7 @@ $auth-demo-overflow-end: 60px;
 }
 
 .demo-data-results-items {
-  @extend %unset-l;
+  @include unset-l;
 
   border-radius: 2px;
   display: flex;
@@ -829,14 +829,14 @@ $auth-demo-overflow-end: 60px;
 /* ========================================================================== */
 
 .demo-data-results-pagination {
-  @extend %unset-l;
+  @include unset-l;
 
   display: flex;
   margin-top: auto;
   justify-content: center;
 
   & button {
-    @extend %unset-button;
+    @include unset-button;
 
     color: rgba($black, .3);
     cursor: pointer;

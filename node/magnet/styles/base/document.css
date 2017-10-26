@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 html {
-  @extend %normalize-html;
+  @include normalize-html;
 
   background-color: mix($white, $black, 98%);
   color: $black;
@@ -34,5 +34,5 @@ html {
 }
 
 body {
-  @extend %unset-body;
+  @include unset-body;
 }

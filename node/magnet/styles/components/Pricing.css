@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .pricing {
-  @extend %inset;
+  @include inset;
 
   background-color: mix(rgba($black, .02), $blue, 99%);
   padding-bottom: 120px;
@@ -11,7 +11,7 @@
 }
 
 .pricing-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 46px;
   font-weight: 900;
@@ -19,7 +19,7 @@
 }
 
 .pricing-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .6);
   font-size: 18px;
@@ -31,7 +31,7 @@
 /* ========================================================================== */
 
 .pricing-plans {
-  @extend %unset-l;
+  @include unset-l;
 
   margin-top: 54px;
 
@@ -94,7 +94,7 @@
 /* ========================================================================== */
 
 .pricing-plan-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 27px;
   font-weight: 900;
@@ -133,7 +133,7 @@
 }
 
 .pricing-plan-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .8);
   font-size: 14px;
@@ -182,7 +182,7 @@
 /* ========================================================================== */
 
 .pricing-plan-specs {
-  @extend %unset-l;
+  @include unset-l;
 
   color: rgba($black, .6);
   font-size: 14px;
@@ -208,11 +208,11 @@
 /* ========================================================================== */
 
 .pricing-plan-action {
-  @extend %unset-p;
+  @include unset-p;
 
   & a {
-    @extend %unset-a;
-    @extend %green-button;
+    @include unset-a;
+    @include green-button;
 
     display: block;
     outline-offset: -3px;
@@ -267,8 +267,8 @@
 /* ========================================================================== */
 
 .pricing-plan-details-toggle {
-  @extend %normalize-button;
-  @extend %unset-button;
+  @include normalize-button;
+  @include unset-button;
 
   bottom: 12px;
   left: 12px;

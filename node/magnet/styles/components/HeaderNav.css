@@ -16,8 +16,8 @@
 }
 
 .nav-toggle {
-  @extend %normalize-button;
-  @extend %unset-button;
+  @include normalize-button;
+  @include unset-button;
 
   color: $black;
   cursor: pointer;
@@ -84,7 +84,7 @@
 }
 
 .nav-list {
-  @extend %unset-l;
+  @include unset-l;
 
   @media ($s-nav) {
     top: 78px;
@@ -120,7 +120,7 @@
 }
 
 .nav-link {
-  @extend %unset-a;
+  @include unset-a;
 
   display: block;
 
@@ -155,24 +155,24 @@
 
   & span {
     @media ($s-nav) {
-      @extend %underline;
+      @include underline;
     }
   }
 
   &:matches(:hover, :focus) span {
     @media ($s-nav) {
-      @extend %underline-hover;
+      @include underline-hover;
     }
   }
 }
 
 .nav-link--text {
   & span {
-    @extend %underline;
+    @include underline;
   }
 
   &:matches(:hover, :focus) span {
-    @extend %underline-hover;
+    @include underline-hover;
   }
 }
 

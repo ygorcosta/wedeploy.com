@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .highlights {
-  @extend %inset;
+  @include inset;
 
   padding-bottom: 96px;
   padding-top: 96px;
@@ -38,14 +38,14 @@
 /* ========================================================================== */
 
 .highlights-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 27px;
   font-weight: 900;
   line-height: 42px;
 
   &::before {
-    @extend %heading-symbol;
+    @include heading-symbol;
 
     margin-bottom: 18px;
   }
@@ -68,7 +68,7 @@
 /* ========================================================================== */
 
 .highlights-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .9);
   font-size: 16px;
@@ -80,7 +80,7 @@
 /* ========================================================================== */
 
 .highlights-features {
-  @extend %features;
+  @include features;
 
   & > ::before {
     content: url("features.svg" param(--color $green));

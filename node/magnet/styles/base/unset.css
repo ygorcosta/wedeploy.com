@@ -1,13 +1,13 @@
-%unset-a {
+@mixin unset-a {
   color: inherit;
   text-decoration: none;
 }
 
-%unset-body {
+@mixin unset-body {
   margin: 0;
 }
 
-%unset-button {
+@mixin unset-button {
   appearance: none;
   background-color: transparent;
   border-width: 0;
@@ -18,13 +18,14 @@
   padding: 0;
 }
 
-%unset-h {
+@mixin unset-h {
   font-size: inherit;
   font-weight: inherit;
-  margin-block: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-%unset-input {
+@mixin unset-input {
   background-color: transparent;
   border-width: 0;
   color: inherit;
@@ -33,17 +34,21 @@
   padding: 0;
 }
 
-%unset-l {
+@mixin unset-l {
   list-style-type: none;
-  margin-block: 0;
-  padding-inline: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-%unset-p {
-  margin-block: 0;
+@mixin unset-p {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-%unset-pre {
+@mixin unset-pre {
   font-family: inherit;
-  margin-block: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }

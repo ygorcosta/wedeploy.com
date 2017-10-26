@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .try {
-  @extend %inset;
+  @include inset;
 
   padding-bottom: 120px;
   padding-top: 96px;
@@ -12,7 +12,7 @@
 /* ========================================================================== */
 
 .try-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 46px;
   font-weight: 900;
@@ -23,7 +23,7 @@
 /* ========================================================================== */
 
 .try-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .6);
   font-size: 18px;
@@ -35,7 +35,7 @@
 /* ========================================================================== */
 
 .try-actions {
-  @extend %actions;
+  @include actions;
 
   & .-dash::after {
     content: url("action-start.svg");

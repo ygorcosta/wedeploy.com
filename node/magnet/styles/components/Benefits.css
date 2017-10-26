@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .benefits {
-  @extend %inset;
+  @include inset;
 
   background-color: mix(rgba($black, .02), $blue, 99%);
   padding-bottom: 120px;
@@ -53,7 +53,7 @@
 /* ========================================================================== */
 
 .benefits-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 33px;
   font-weight: 900;
@@ -61,7 +61,7 @@
 }
 
 .benefits-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .8);
   font-size: 16px;
@@ -73,7 +73,7 @@
 /* ========================================================================== */
 
 .benefits-section-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
@@ -104,7 +104,7 @@
 }
 
 .benefits-section-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   font-size: 16px;
   color: rgba($black, .9);

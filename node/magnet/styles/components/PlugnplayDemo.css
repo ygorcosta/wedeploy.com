@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .plugnplay-demo-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
@@ -35,14 +35,14 @@
 }
 
 .plugnplay-demo-menu-list {
-  @extend %unset-l;
+  @include unset-l;
 
   display: flex;
 }
 
 .plugnplay-demo-menu-button {
-  @extend %normalize-button;
-  @extend %unset-button;
+  @include normalize-button;
+  @include unset-button;
 
   cursor: pointer;
   font-size: 14px;
@@ -93,7 +93,7 @@
 /* ========================================================================== */
 
 .plugnplay-demo-tip {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .8);
   font-size: 12px;
@@ -123,7 +123,7 @@
 /* ========================================================================== */
 
 .plugnplay-demo-note {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .9);
   font-size: 14px;
@@ -164,7 +164,7 @@
 }
 
 .plugnplay-demo-source {
-  @extend %unset-pre;
+  @include unset-pre;
 
   font-family: "Roboto Mono", "ArialUnicodeMS", monospace;
 

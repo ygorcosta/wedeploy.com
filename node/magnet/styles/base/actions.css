@@ -1,8 +1,8 @@
 /* Actions
 /* ========================================================================== */
 
-%actions {
-  @extend %unset-l;
+@mixin actions {
+  @include unset-l;
 
   display: flex;
   margin-top: 48px;
@@ -36,19 +36,19 @@
 
     &:nth-child(odd) {
       & a {
-        @extend %green-button;
+        @include green-button;
       }
     }
 
     &:nth-child(even) {
       & a {
-        @extend %black-button;
+        @include black-button;
       }
     }
   }
 
   & a {
-    @extend %unset-a;
+    @include unset-a;
 
     display: inline-block;
 

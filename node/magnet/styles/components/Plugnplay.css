@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .plugnplay {
-  @extend %inset;
+  @include inset;
 
   background-color: mix(rgba($black, .02), $blue, 99%);
   padding-bottom: 96px;
@@ -43,7 +43,7 @@
 /* ========================================================================== */
 
 .plugnplay-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   color: $black;
   font-size: 33px;
@@ -51,7 +51,7 @@
   line-height: 42px;
 
   &::before {
-    @extend %heading-symbol;
+    @include heading-symbol;
 
     content: url("heading-plugnplay.svg");
   }
@@ -61,7 +61,7 @@
 /* ========================================================================== */
 
 .plugnplay-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .8);
   font-size: 16px;
@@ -70,5 +70,5 @@
 }
 
 .plugnplay-actions {
-  @extend %actions;
+  @include actions;
 }

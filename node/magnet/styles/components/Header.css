@@ -1,8 +1,25 @@
 /* Header
 /* ========================================================================== */
 
+@mixin header-padding-inline {
+  @media ($s-nav) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media ($l-nav) and (max-width: 1685px) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  @media (min-width: 1686px) {
+    padding-left: calc(50% - 807px);
+    padding-right: calc(50% - 807px);
+  }
+}
+
 .header {
-  @extend %header-padding-inline;
+  @include header-padding-inline;
 
   align-items: center;
   display: flex;
@@ -25,7 +42,7 @@
 }
 
 .header-brand {
-  @extend %unset-h;
+  @include unset-h;
 }
 
 .header-brand-image {
@@ -45,22 +62,5 @@
   [data-expanded="true"] & {
     fill: $black;
     transition: fill .3s ease-in-out;
-  }
-}
-
-%header-padding-inline {
-  @media ($s-nav) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  @media ($l-nav) and (max-width: 1685px) {
-    padding-left: 36px;
-    padding-right: 36px;
-  }
-
-  @media (min-width: 1686px) {
-    padding-left: calc(50% - 807px);
-    padding-right: calc(50% - 807px);
   }
 }

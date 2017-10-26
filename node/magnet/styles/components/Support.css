@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .support {
-  @extend %inset;
+  @include inset;
 
   background-color: mix(rgba($black, .02), $blue, 99%);
   display: flex;
@@ -120,7 +120,7 @@
 /* ========================================================================== */
 
 .support-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 27px;
   font-weight: 900;
@@ -128,7 +128,7 @@
 }
 
 .support-section-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
@@ -164,7 +164,7 @@
 /* ========================================================================== */
 
 .support-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .8);
   font-size: 16px;
@@ -178,7 +178,7 @@
 }
 
 .support-section-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .9);
   font-size: 16px;
@@ -190,14 +190,14 @@
 /* ========================================================================== */
 
 .support-section-action, .support-247-action {
-  @extend %unset-p;
+  @include unset-p;
 
   color: $green;
   font-size: 16px;
   line-height: 24px;
 
   & a {
-    @extend %unset-a;
+    @include unset-a;
 
     background-image: linear-gradient(currentColor 25%, transparent 50%);
     background-repeat: no-repeat;
@@ -228,7 +228,7 @@
 /* ========================================================================== */
 
 .support-247 {
-  @extend %unset-p;
+  @include unset-p;
 
   background-color: $white;
   box-shadow: inset 0 0 0 1px rgba($black, .01), 0 1px 3px 0 rgba($black, .04), 0 3px 6px 0 rgba($black, .08);
@@ -241,7 +241,7 @@
 }
 
 .support-247-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
@@ -259,7 +259,7 @@
 }
 
 .support-247-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   font-size: 16px;
   margin-top: 12px;

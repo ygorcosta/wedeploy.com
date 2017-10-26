@@ -1,9 +1,9 @@
-%normalize-a {
+@mixin normalize-a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
-%normalize-button {
+@mixin normalize-button {
   &::-moz-focus-inner {
     border-style: none;
     outline: 1px dotted ButtonText;
@@ -20,18 +20,18 @@
   text-transform: none;
 }
 
-%normalize-html {
+@mixin normalize-html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-%normalize-input {
+@mixin normalize-input {
   margin: 0;
   overflow: visible;
 }
 
-%normalize-input-type-search {
+@mixin normalize-input-type-search {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 

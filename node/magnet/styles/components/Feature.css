@@ -2,7 +2,7 @@
 /* ========================================================================== */
 
 .feature {
-  @extend %inset;
+  @include inset;
 
   padding-bottom: 120px;
   padding-top: 96px;
@@ -38,7 +38,7 @@
 /* ========================================================================== */
 
 .feature-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 33px;
   font-weight: 900;
@@ -46,7 +46,7 @@
 }
 
 .feature-heading-more {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
@@ -54,11 +54,11 @@
 }
 
 .feature-heading::before {
-  @extend %heading-symbol;
+  @include heading-symbol;
 }
 
 .feature-more-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
@@ -66,11 +66,11 @@
 }
 
 .feature-more-heading::before {
-  @extend %secondary-heading-symbol;
+  @include secondary-heading-symbol;
 }
 
 .feature-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .8);
   font-size: 16px;
@@ -79,7 +79,7 @@
 }
 
 .feature-more-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   color: rgba($black, .8);
   font-size: 16px;
@@ -87,8 +87,8 @@
   margin-top: 18px;
 
   & a {
-    @extend %unset-a;
-    @extend %underline;
+    @include unset-a;
+    @include underline;
 
     color: $green;
   }
@@ -98,7 +98,7 @@
 /* ========================================================================== */
 
 .feature-features {
-  @extend %features;
+  @include features;
 
   @media ($l-feature) {
     column-count: 2;
@@ -124,7 +124,7 @@
 /* ========================================================================== */
 
 .feature-actions {
-  @extend %actions;
+  @include actions;
 }
 
 /* Feature: Data

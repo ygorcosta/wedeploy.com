@@ -1,7 +1,7 @@
 /* Inset (1104px + 36px * 2)
 /* ========================================================================== */
 
-%inset {
+@mixin inset {
   @media ($s-nav) {
     padding-left: 24px;
     padding-right: 24px;

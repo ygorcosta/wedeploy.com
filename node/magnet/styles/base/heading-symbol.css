@@ -1,14 +1,14 @@
 /* Heading Symbol ::before Styles
 /* ========================================================================== */
 
-%heading-symbol {
+@mixin heading-symbol {
   display: block;
   margin-bottom: 30px;
   width: 66px;
   height: 66px;
 }
 
-%secondary-heading-symbol {
+@mixin secondary-heading-symbol {
   display: block;
   margin-bottom: 18px;
   width: 42px;

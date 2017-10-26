@@ -170,7 +170,7 @@
   margin-top: 12px;
 
   & pre {
-    @extend %unset-pre;
+    @include unset-pre;
 
     white-space: pre;
   }
@@ -197,7 +197,7 @@
   }
 
   & plaintext {
-    @extend %unset-pre;
+    @include unset-pre;
 
     display: inline;
     min-width: 2px;

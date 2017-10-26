@@ -1,8 +1,8 @@
 /* Features
 /* ========================================================================== */
 
-%features {
-  @extend %unset-l;
+@mixin features {
+  @include unset-l;
 
   color: rgba($black, .8);
   font-size: 14px;
