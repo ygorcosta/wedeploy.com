@@ -70,33 +70,24 @@ const compress = postcss.plugin('postcss-discard-tested-duplicate-declarations',
 });
 
 // sass
-const postcssSass = postcss.plugin(
-  'postcss-sass',
-  () => (css) => {
-    const cssSourceInputFile = css.source && css.source.input && css.source.input.file ? css.source.input.file : 'index.css';
+const postcssSass = postcss.plugin('postcss-node-sass', () => (css, result) => {
+  // result options with a forced inline sourcemap
+  const resultOpts = Object.assign({}, result.opts, { map: { inline: true } });
 
-    return new Promise(
-      // promise any sass error or result from the stringified css ast
-      (resolve, reject) => sass.render(
-        {
-          file: cssSourceInputFile,
-          indentType: 'tab',
-          outFile: cssSourceInputFile,
-          outputStyle: 'expanded',
-          data: css.toString(),
-          sourceMapContents: true,
-          sourceMap: true
-        },
-        (error, result) => error ? reject(error) : resolve(result)
-      )
-    ).then(
-      // promise the sass-transpiled css as a new ast
-      result => postcss.parse(
-        result.css.toString()
-      )
-    ).then(
-      // replace the old ast with the new ast
-      newcss => css.removeAll().append(...newcss.nodes)
-    );
-  }
-);
+  // result-css
+  const resultCSS = css.toResult(resultOpts).css;
+
+  // sass options
+  const sassOpts = { file: resultOpts.from, outFile: resultOpts.from, data: resultCSS, sourceMap: true, sourceMapContents: true };
+
+  // css to sass-object promise
+  const sassPromise = new Promise((resolve, reject) => sass.render(sassOpts, (error, result) => error ? reject(error) : resolve(result)));
+
+  // sass-object to postcss-ast promise
+  const postcssPromise = sassPromise.then(({ css, map }) => postcss.parse(css.toString(), Object.assign(resultOpts, { map: { prev: map.toString() } })));
+
+  // updated postcss ast promise
+  const updatePromise = postcssPromise.then(newcss => result.root.removeAll().append(...newcss.nodes));
+
+  return updatePromise;
+});
