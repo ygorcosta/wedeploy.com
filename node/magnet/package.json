@@ -4,8 +4,8 @@
     "build": "magnet build -C .",
     "start": "npm run start:css && npm run start:js",
     "start:js": "magnet start -C .",
-    "start:css": "postcss styles/main.css --map true --output static/styles/main.css",
-    "start:css:watch": "postcss styles/main.css --map true --output static/styles/main.css --watch",
+    "start:css": "postcss styles/main.scss --map true --output static/styles/main.css",
+    "start:css:watch": "postcss styles/main.scss --map true --output static/styles/main.css --watch",
     "format": "prettier --single-quote --no-bracket-spacing --trailing-comma es5 --write \"{src/**/*.js,*.js}\" && eslint --fix \"{src/**/*.js,*.js}\""
   },
   "dependencies": {
