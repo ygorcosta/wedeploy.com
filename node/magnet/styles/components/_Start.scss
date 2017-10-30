@@ -1,0 +1,352 @@
+/* Start
+/* ========================================================================== */
+
+.start {
+  overflow: hidden;
+  padding-bottom: 72px;
+  transition: background-color 1s ease-in-out, color .75s ease-in-out;
+
+  @media (min-width: 480px) {
+    display: flex;
+  }
+
+  @media ($s-nav) {
+    padding-top: 78px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media ($l-nav) {
+    padding-top: calc(78px + 108px);
+  }
+
+  @media ($l-nav) and (max-width: 1685px) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  @media (min-width: 1686px) {
+    padding-left: calc(50% - 807px);
+    padding-right: calc(50% - 807px);
+  }
+
+  &.start--1 {
+    background-color: mix(rgba($black, .1), $blue, 94%);
+    background-color: rgba($black, .02);
+    color: rgba($black, .8);
+  }
+
+  &.start--2 {
+    background-color: mix(rgba($black, .04), $blue, 94%);
+    color: rgba($black, .8);
+  }
+
+  &.start--3 {
+    background-color: rgba($black, .92);
+    color: $white;
+  }
+
+  @media (max-width: 479px) {
+    & > * {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 520px;
+    }
+  }
+
+  & > :nth-child(1) {
+    @media ($l-start) {
+      flex-basis: calc(100% / 1440 * 600);
+    }
+  }
+
+  & > :nth-child(2) {
+    @media ($l-start) {
+      flex-basis: calc(100% / 1440 * 840);
+    }
+  }
+}
+
+.start-group {
+  @media ($l-start) {
+    max-width: 504px;
+  }
+}
+
+.start-demo {
+  flex-basis: 50%;
+  flex-grow: 1;
+  position: relative;
+
+  @media ($s-start) {
+    display: none;
+  }
+}
+
+/* Start: Alert
+/* ========================================================================== */
+
+.start-alert {
+  @include unset-p;
+
+  font-size: 13px;
+  line-height: 18px;
+  transition: color 1s ease-in-out;
+  will-change: color;
+
+  @media ($s-start) {
+    background-color: rgba($black, .02);
+    box-shadow: inset 0 0 0 1px rgba($black, .04);
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 12px 24px;
+  }
+
+  @media ($l-start) {
+    white-space: nowrap;
+  }
+
+  .start--1 &, .start--2 & {
+    color: rgba($black, .8);
+  }
+
+  .start--3 & {
+    color: rgba($white, .4);
+  }
+
+  &:hover, &:focus {
+    opacity: .8;
+  }
+}
+
+.start-alert-link {
+  @include unset-a;
+
+  @media ($s-start) {
+    align-items: center;
+    display: flex;
+  }
+
+  @media ($l-start) {
+    display: inline-block;
+  }
+
+  &::before {
+    background-color: $green;
+    border: 1px solid rgba($black, .04);
+    box-shadow: 0 2px 6px 0 rgba($black, .04);
+    border-radius: 3px;
+    color: $white;
+    content: "New";
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 18px;
+    padding-left: 6px;
+    padding-right: 6px;
+
+    @media ($s-start) {
+      margin-right: 18px;
+    }
+
+    @media ($l-start) {
+      margin-right: 6px;
+    }
+  }
+}
+
+.start-alert-symbol {
+  @media ($s-start) {
+    margin-left: auto;
+  }
+
+  &::before {
+    display: inline-block;
+    width: 10px;
+    height: 8px;
+
+    @media ($s-start) {
+      flex-basis: 10px;
+      flex-shrink: 0;
+      margin-left: 18px;
+    }
+
+    @media ($l-start) {
+      margin-left: 6px;
+    }
+
+    .start--1 &, .start--2 & {
+      content: url("symbol-arrow.svg" param(--color rgba($black, .8)));
+    }
+
+    .start--3 & {
+      content: url("symbol-arrow.svg" param(--color rgba($white, .4)));
+    }
+  }
+}
+
+/* Start: Heading
+/* ========================================================================== */
+
+.start-heading {
+  @include unset-h;
+
+  font-weight: 900;
+  margin-top: 42px;
+  text-shadow: 0 1px 6px rgba($black, .05);
+  transition: color 1s ease-in-out;
+  will-change: color;
+
+  @media ($s-nav) {
+    font-size: 44px;
+    line-height: 54px;
+  }
+
+  @media ($l-nav) {
+    font-size: 56px;
+    line-height: 66px;
+  }
+
+  .start--1 &, .start--2 & {
+    color: $black;
+  }
+
+  .start--3 & {
+    color: $white;
+  }
+}
+
+.start-heading-line {
+  display: block;
+
+  @media ($l-nav) {
+    white-space: nowrap;
+  }
+}
+
+.start-heading-phrase {
+  display: inline-block;
+  font-style: normal;
+
+  @media ($s-nav) {
+    display: block;
+  }
+
+  .start--1 & {
+    color: rgba($black, .4);
+  }
+
+  .start--2 & {
+    color: rgba($black, .6);
+  }
+
+  .start--3 & {
+    color: rgba($white, .4);
+  }
+}
+
+.start-heading-phrase-text,
+.start-heading-phrase-cursor {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.start-heading-phrase-cursor {
+  margin-left: .125em;
+  width: 1px;
+
+  @media ($s-nav) {
+    height: 54px;
+  }
+
+  @media ($l-nav) {
+    height: 66px;
+  }
+
+  .start--1 &, .start--2 & {
+    animation: animate-heading-span 750ms infinite;
+  }
+
+  .start--3 & {
+    animation: animate-heading-span-alt 750ms infinite;
+    color: rgba($white, .4);
+  }
+}
+
+/* Start: Summary
+/* ========================================================================== */
+
+.start-summary {
+  @include unset-p;
+
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 24px;
+  transition: color 1s ease-in-out;
+  will-change: color;
+
+  .start--3 & {
+    color: rgba($white, .4)
+  }
+}
+
+/* Start: Note
+/* ========================================================================== */
+
+.start-note {
+  @include unset-p;
+
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 24px;
+  transition: color 1s ease-in-out;
+
+  .start--1 &, .start--2 & {
+    color: rgba($black, .8);
+  }
+
+  .start--3 & {
+    color: rgba($white, .4);
+  }
+}
+
+/* Start: Heading
+/* ========================================================================== */
+
+.start-actions {
+  @include actions;
+
+  & li:nth-child(1) a {
+    &::after {
+      content: url("action-start.svg" param(--color $white));
+      display: inline-block;
+      margin-top: 2px;
+      margin-left: 12px;
+      width: 14px;
+      height: 13px;
+    }
+  }
+}
+
+/* Start: Animations
+/* ========================================================================== */
+
+@keyframes animate-heading-span {
+  0% {
+    box-shadow: inset -1px 0 0 0 rgba($black, 0);
+  }
+
+  100% {
+    box-shadow: inset -1px 0 0 0 $black;
+  }
+}
+
+@keyframes animate-heading-span-alt {
+  0% {
+    box-shadow: inset -1px 0 0 0 rgba($white, 0);
+  }
+
+  100% {
+    box-shadow: inset -1px 0 0 0 $white;
+  }
+}

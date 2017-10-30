@@ -1,0 +1,43 @@
+/* Buttons
+/* ========================================================================== */
+
+@mixin button {
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba($black, .04), 0 2px 6px 0 rgba($black, .1);
+  color: $white;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 18px;
+  text-align: center;
+  transition: background-color 300ms;
+  white-space: nowrap;
+
+  @media ($sm) {
+    padding: 15px 24px;
+  }
+
+  @media ($l) {
+    padding: 15px 36px;
+  }
+}
+
+@mixin black-button {
+  @include button;
+
+  background-color: $black;
+
+  &:hover, &:focus {
+    background-color: rgba($black, .8);
+  }
+}
+
+@mixin green-button {
+  @include button;
+
+  background-color: $green;
+
+  &:hover, &:focus {
+    background-color: rgba($green, .8);
+  }
+}

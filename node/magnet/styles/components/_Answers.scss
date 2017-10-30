@@ -1,55 +1,54 @@
 /* Answers (986px + 36px inset)
 /* ========================================================================== */
 
-@custom-media --s-answers (width <  1058px);
-@custom-media --l-answers (width >= 1058px);
-
 .answers {
-  @extend %inset-styles;
+  @include inset;
 
-  @media (--sm) {
-    padding-block: 48px 132px;
+  @media ($sm) {
+    padding-bottom: 132px;
+    padding-top: 48px;
   }
 
-  @media (--l) {
-    padding-block: 96px 120px;
+  @media ($l) {
+    padding-bottom: 120px;
+    padding-top: 96px;
   }
 }
 
 .answers-group {
-  margin-block-start: 66px;
+  margin-top: 66px;
 
-  @media (--l) {
+  @media ($l) {
     display: flex;
     flex-wrap: wrap;
   }
 
   & > * {
-    @media (--l) {
+    @media ($l) {
       flex-basis: calc(50% - 24px * 2);
     }
 
     &:nth-child(2n+1) {
-      @media (--l) {
-        margin-inline-end: 24px;
+      @media ($l) {
+        margin-right: 24px;
       }
     }
 
     &:nth-child(2n+2) {
-      @media (--l) {
-        margin-inline-start: 24px;
+      @media ($l) {
+        margin-left: 24px;
       }
     }
 
     &:nth-child(n+2) {
-      @media (--sm) {
-        margin-block-start: 66px;
+      @media ($sm) {
+        margin-top: 66px;
       }
     }
 
     &:nth-last-child(-n+3) {
-      @media (--l) {
-        margin-block-start: 66px;
+      @media ($l) {
+        margin-top: 66px;
       }
     }
   }
@@ -59,7 +58,7 @@
 /* ========================================================================== */
 
 .answers-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 27px;
   font-weight: 900;
@@ -67,18 +66,19 @@
 }
 
 .answers-group-heading {
-  @extend %unset-p;
+  @include unset-p;
 
   font-size: 18px;
   line-height: 24px;
-  padding-inline-start: calc(24px + 18px);
+  padding-left: calc(24px + 18px);
   position: relative;
 
   &::before {
     content: url("answers-group-heading.svg");
-    inset-inline-start: 0;
+    left: 0;
     position: absolute;
-    size: 24px;
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -86,13 +86,13 @@
 /* ========================================================================== */
 
 .answers-group-summary {
-  @extend %unset-p;
+  @include unset-p;
 
-  color: var(--black-90);
+  color: rgba($black, .9);
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 12px;
-  padding-inline-start: calc(24px + 18px);
+  margin-top: 12px;
+  padding-left: calc(24px + 18px);
 }
 
 /* Answers: More
@@ -104,33 +104,34 @@
   flex-wrap: wrap;
   font-size: 16px;
   line-height: 24px;
-  padding-inline-start: 42px;
+  padding-left: 42px;
 
-  @media (--s-answers) {
-    margin-block: 18px 24px;
+  @media ($s-answers) {
+    margin-bottom: 24px;
+    margin-top: 18px;
   }
 }
 
 .answers-more-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-weight: 900;
-  margin-inline-end: .375em;
+  margin-right: .375em;
 }
 
 .answers-more-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   & a {
-    @extend %unset-a;
+    @include unset-a;
 
     background-image: linear-gradient(currentColor 25%, transparent 50%);
     background-repeat: no-repeat;
     background-position: calc(200% - .5px) 100%;
     background-size: 200% 2px;
-    color: var(--green);
+    color: $green;
     display: inline-block;
-    padding-block-end: 6px;
+    padding-bottom: 6px;
     transition: background-position 250ms;
 
     &:hover {

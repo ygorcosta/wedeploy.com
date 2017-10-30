@@ -1,29 +1,18 @@
+// tooling
 const path = require('path');
+const sass = require('node-sass');
 
+// postcss configuration
 module.exports = (ctx) => ({
   map: ctx.options.map,
   plugins: [
-    // css imports
-    require('postcss-import')(),
+    // sass compatibility
+    postcssSass(),
 
     // future compatibility
-    require('postcss-custom-properties')(),
-    require('postcss-selector-matches')(),
-    require('postcss-logical')(),
-    require('postcss-nesting')(),
-    require('postcss-extend-rule')(),
-    require('postcss-media-fn')(),
-    require('postcss-custom-media')(),
-    require('postcss-media-minmax')(),
-    require('postcss-custom-selectors')(),
-    require('postcss-color-hex-alpha')(),
-    require('postcss-color-function')(),
     require('postcss-selector-matches')(),
     require('postcss-selector-not')(),
-    require('postcss-pseudo-class-any-link')(),
-    require('postcss-dir-pseudo-class')(),
     require('postcss-replace-overflow-wrap')(),
-    require('postcss-size')(),
 
     // backward compatibility
     require('postcss-svg')({
@@ -78,4 +67,27 @@ const compress = postcss.plugin('postcss-discard-tested-duplicate-declarations',
       }
     })
   });
+});
+
+// sass
+const postcssSass = postcss.plugin('postcss-node-sass', () => (css, result) => {
+  // result options with a forced inline sourcemap
+  const resultOpts = Object.assign({}, result.opts, { map: { inline: true } });
+
+  // result-css
+  const resultCSS = css.toResult(resultOpts).css;
+
+  // sass options
+  const sassOpts = { file: resultOpts.from, outFile: resultOpts.from, data: resultCSS, sourceMap: true, sourceMapContents: true };
+
+  // css to sass-object promise
+  const sassPromise = new Promise((resolve, reject) => sass.render(sassOpts, (error, result) => error ? reject(error) : resolve(result)));
+
+  // sass-object to postcss-ast promise
+  const postcssPromise = sassPromise.then(({ css, map }) => postcss.parse(css.toString(), Object.assign(resultOpts, { map: { prev: map.toString() } })));
+
+  // updated postcss ast promise
+  const updatePromise = postcssPromise.then(newcss => result.root.removeAll().append(...newcss.nodes));
+
+  return updatePromise;
 });

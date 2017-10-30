@@ -2,31 +2,33 @@
 /* ========================================================================== */
 
 .highlights {
-  @extend %inset-styles;
+  @include inset;
 
-  padding-block: 96px;
+  padding-bottom: 96px;
+  padding-top: 96px;
 
-  @media (--l) {
+  @media ($l) {
     display: flex;
   }
 
   & > * {
-    @media (--m) {
-      margin-inline: auto;
+    @media ($m) {
+      margin-left: auto;
+      margin-right: auto;
       max-width: 640px;
     }
 
-    @media (--l) {
+    @media ($l) {
       flex-basis: calc((100% / 3) - 24px / 3 * 2);
     }
 
     &:nth-child(n+2) {
-      @media (--sm) {
-        margin-block-start: 54px;
+      @media ($sm) {
+        margin-top: 54px;
       }
 
-      @media (--l) {
-        margin-inline-start: calc(24px * 2);
+      @media ($l) {
+        margin-left: calc(24px * 2);
       }
     }
   }
@@ -36,16 +38,16 @@
 /* ========================================================================== */
 
 .highlights-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 27px;
   font-weight: 900;
   line-height: 42px;
 
   &::before {
-    @extend %heading-symbol;
+    @include heading-symbol;
 
-    margin-block-end: 18px;
+    margin-bottom: 18px;
   }
 }
 
@@ -66,25 +68,25 @@
 /* ========================================================================== */
 
 .highlights-summary {
-  @extend %unset-p;
+  @include unset-p;
 
-  color: color(var(--black) alpha(90%));
+  color: rgba($black, .9);
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 18px;
+  margin-top: 18px;
 }
 
 /* Highlights: Features
 /* ========================================================================== */
 
 .highlights-features {
-  @extend %features;
+  @include features;
 
   & > ::before {
-    content: url("features.svg" param(--color var(--green)));
+    content: url("features.svg" param(--color $green));
   }
 
   & > :nth-child(n+2) {
-    margin-block-start: 24px;
+    margin-top: 24px;
   }
 }

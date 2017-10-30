@@ -1,0 +1,16 @@
+/* Heading Symbol ::before Styles
+/* ========================================================================== */
+
+@mixin heading-symbol {
+  display: block;
+  margin-bottom: 30px;
+  width: 66px;
+  height: 66px;
+}
+
+@mixin secondary-heading-symbol {
+  display: block;
+  margin-bottom: 18px;
+  width: 42px;
+  height: 42px;
+}

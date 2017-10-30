@@ -1,41 +1,36 @@
 /* Feature
 /* ========================================================================== */
 
-@custom-media --s-feature  (width <  660px);
-@custom-media --sm-feature (width <  900px);
-@custom-media --m-feature  (--sm-feature) and (--ml-feature);
-@custom-media --ml-feature (width >= 660px);
-@custom-media --l-feature  (width >= 900px);
-
 .feature {
-  @extend %inset-styles;
+  @include inset;
 
-  padding-block: 96px 120px;
+  padding-bottom: 120px;
+  padding-top: 96px;
 
-  @media (--ml-feature) {
+  @media ($ml-feature) {
     align-items: flex-end;
     display: flex;
     justify-content: space-between;
   }
 
   & > * {
-    @media (--ml-feature) {
+    @media ($ml-feature) {
       flex-basis: calc(50% - 20px);
     }
   }
 
   &.-auth {
-    background-color: color(var(--white) blend(var(--black) 2%));
+    background-color: mix($white, $black, 98%);
   }
 }
 
 .feature-more {
-  @media (--s-feature) {
-    margin-block-start: 54px;
+  @media ($s-feature) {
+    margin-top: 54px;
   }
 
   & > :nth-child(n+2) {
-    margin-block-start: 36px;
+    margin-top: 36px;
   }
 }
 
@@ -43,7 +38,7 @@
 /* ========================================================================== */
 
 .feature-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 33px;
   font-weight: 900;
@@ -51,7 +46,7 @@
 }
 
 .feature-heading-more {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
@@ -59,11 +54,11 @@
 }
 
 .feature-heading::before {
-  @extend %heading-symbol;
+  @include heading-symbol;
 }
 
 .feature-more-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
@@ -71,31 +66,31 @@
 }
 
 .feature-more-heading::before {
-  @extend %secondary-heading-symbol;
+  @include secondary-heading-symbol;
 }
 
 .feature-summary {
-  @extend %unset-p;
+  @include unset-p;
 
-  color: var(--black-80);
+  color: rgba($black, .8);
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 24px;
+  margin-top: 24px;
 }
 
 .feature-more-summary {
-  @extend %unset-p;
+  @include unset-p;
 
-  color: var(--black-80);
+  color: rgba($black, .8);
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 18px;
+  margin-top: 18px;
 
   & a {
-    @extend %unset-a;
-    @extend %underline;
+    @include unset-a;
+    @include underline;
 
-    color: var(--green);
+    color: $green;
   }
 }
 
@@ -103,9 +98,9 @@
 /* ========================================================================== */
 
 .feature-features {
-  @extend %features;
+  @include features;
 
-  @media (--l-feature) {
+  @media ($l-feature) {
     column-count: 2;
     column-gap: 24px;
     max-width: 100%;
@@ -113,14 +108,14 @@
   }
 
   & > :nth-child(n+2) {
-    @media (--sm-feature) {
-      margin-block-start: 24px;
+    @media ($sm-feature) {
+      margin-top: 24px;
     }
   }
 
   & > :nth-child(3n+2), & > :nth-child(3n+3) {
-    @media (--l-feature) {
-      margin-block-start: 24px;
+    @media ($l-feature) {
+      margin-top: 24px;
     }
   }
 }
@@ -129,15 +124,15 @@
 /* ========================================================================== */
 
 .feature-actions {
-  @extend %actions;
+  @include actions;
 }
 
 /* Feature: Data
 /* ========================================================================== */
 
 .-data .feature-more {
-  @media (--ml-feature) {
-    margin-inline-start: 36px;
+  @media ($ml-feature) {
+    margin-left: 36px;
   }
 }
 
@@ -146,7 +141,7 @@
 }
 
 .-data .feature-features > ::before {
-  content: url("features.svg" param(--color var(--yellow)));
+  content: url("features.svg" param(--color $yellow));
 }
 
 .feature-more-heading.-sync::before {
@@ -161,14 +156,14 @@
 /* ========================================================================== */
 
 .feature.-email {
-  @media (--ml-feature) {
+  @media ($ml-feature) {
     flex-direction: row-reverse;
   }
 }
 
 .-email .feature-more {
-  @media (--ml-feature) {
-    margin-inline-end: 36px;
+  @media ($ml-feature) {
+    margin-right: 36px;
   }
 }
 
@@ -177,7 +172,7 @@
 }
 
 .-email .feature-features > ::before {
-  content: url("features.svg" param(--color var(--orange)));
+  content: url("features.svg" param(--color $orange));
 }
 
 .feature-more-heading.-send::before {
@@ -192,8 +187,8 @@
 /* ========================================================================== */
 
 .-auth .feature-main {
-  @media (--ml-feature) {
-    margin-inline-end: 36px;
+  @media ($ml-feature) {
+    margin-right: 36px;
   }
 }
 
@@ -202,7 +197,7 @@
 }
 
 .-auth .feature-features > ::before {
-  content: url("features.svg" param(--color var(--violet)));
+  content: url("features.svg" param(--color $violet));
 }
 
 .feature-more-heading.-store::before {
@@ -217,14 +212,14 @@
 /* ========================================================================== */
 
 .feature.-hosting {
-  @media (--ml-feature) {
+  @media ($ml-feature) {
     flex-direction: row-reverse;
   }
 }
 
 .-hosting .feature-more {
-  @media (--ml-feature) {
-    margin-inline-end: 36px;
+  @media ($ml-feature) {
+    margin-right: 36px;
   }
 }
 
@@ -233,7 +228,7 @@
 }
 
 .-hosting .feature-features > ::before {
-  content: url("features.svg" param(--color var(--red)));
+  content: url("features.svg" param(--color $red));
 }
 
 /* Feature: Deploy

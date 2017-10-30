@@ -2,38 +2,39 @@
 /* ========================================================================== */
 
 .plugnplay {
-  @extend %inset-styles;
+  @include inset;
 
-  background-color: color(var(--black) alpha(2%) blend(var(--blue) 1%));
-  padding-block: 66px 96px;
+  background-color: mix(rgba($black, .02), $blue, 99%);
+  padding-bottom: 96px;
+  padding-top: 66px;
 
-  @media (--l-nav) {
+  @media ($l-nav) {
     display: flex;
     justify-content: space-between;
   }
 
   & > * {
-    @media (--l-nav) {
+    @media ($l-nav) {
       flex-basis: calc(50% - 18px);
     }
   }
 }
 
 .plugnplay-content {
-  @media (--ml-feature) {
-    padding-inline-end: calc(36px / 2);
+  @media ($ml-feature) {
+    padding-right: calc(36px / 2);
   }
 }
 
 .plugnplay-demo {
-  @media (--l-feature) {
+  @media ($l-feature) {
     flex-grow: 1;
     max-width: calc(50% - 18px);
-    padding-inline-start: calc(36px / 2);
+    padding-left: calc(36px / 2);
 
-    @media (--l) {
+    @media ($l) {
       align-self: flex-end;
-      margin-block-end: calc(-96px - 72px);
+      margin-bottom: calc(-96px - 72px);
     }
   }
 }
@@ -42,15 +43,15 @@
 /* ========================================================================== */
 
 .plugnplay-heading {
-  @extend %unset-h;
+  @include unset-h;
 
-  color: var(--black);
+  color: $black;
   font-size: 33px;
   font-weight: 900;
   line-height: 42px;
 
   &::before {
-    @extend %heading-symbol;
+    @include heading-symbol;
 
     content: url("heading-plugnplay.svg");
   }
@@ -60,14 +61,14 @@
 /* ========================================================================== */
 
 .plugnplay-summary {
-  @extend %unset-p;
+  @include unset-p;
 
-  color: color(var(--black) alpha(80%));
+  color: rgba($black, .8);
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 24px;
+  margin-top: 24px;
 }
 
 .plugnplay-actions {
-  @extend %actions;
+  @include actions;
 }

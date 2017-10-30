@@ -7,49 +7,53 @@
   &::before {
     margin-top: -18px;
     position: absolute;
-    inset-start: 0;
+    top: 0;
+    left: 0;
     transition: transform 1s;
     will-change: opacity, transform;
 
-    @nest .start--1 & {
+    .start--1 & {
       content: url("start-demo-laptop.svg");
       transform: translate3d(132px, -36px, 0);
-      size: 1188px 733px;
+      width: 1188px;
+      height: 733px;
     }
 
-    @nest .start--2 & {
+    .start--2 & {
       transform: translate3d(calc(25vw + 138px), calc(-93px + 18px), 0);
       content: url("start-demo-phone.svg");
-      size: 490px 778px;
+      width: 490px;
+      height: 778px;
 
-      @media (width < 1300px) {
+      @media (max-width: 1299px) {
         transform: translate3d(228px, calc(-93px + 18px), 0);
       }
 
-      @media (width < 1000px) {
+      @media (max-width: 999px) {
         transform: translate3d(132px, calc(-93px + 18px), 0);
       }
     }
 
-    @nest .start--3 & {
+    .start--3 & {
       content: url("start-demo-watch.svg");
-      size: 432px 704px;
+      width: 432px;
+      height: 704px;
       transform: translate3d(calc(25vw + 156px), -54px, 0);
 
-      @media (width < 1300px) {
+      @media (max-width: 1299px) {
         transform: translate3d(372px, -75px, 0);
       }
 
-      @media (width < 1000px) {
+      @media (max-width: 999px) {
         transform: translate3d(300px, -75px, 0);
       }
 
-      @media (width < 860px) {
+      @media (max-width: 859px) {
         transform: translate3d(200px, -75px, 0);
       }
     }
 
-    @nest .start--nojs & {
+    .start--nojs & {
       opacity: 0;
     }
   }
@@ -59,10 +63,11 @@
 /* ========================================================================== */
 
 .start-demo-console {
-  background-color: var(--black);
-  box-shadow: 12px 18px 48px 0 color(var(--black) alpha(60%));
+  background-color: $black;
+  box-shadow: 12px 18px 48px 0 rgba($black, .6);
   border-radius: 6px;
-  inset-start: 0;
+  top: 0;
+  left: 0;
   max-width: calc(100% - 36px);
   position: absolute;
   padding: 6px 12px 24px;
@@ -70,31 +75,31 @@
   width: 396px;
   will-change: opacity, transform;
 
-  @nest .start--1 & {
+  .start--1 & {
     transform: translate3d(42px, 60px, 0);
   }
 
-  @nest .start--2 & {
+  .start--2 & {
     transform: translate3d(192px, 92px, 0);
 
-    @media (width < 1300px) {
+    @media (max-width: 1299px) {
       transform: translate3d(36px, 92px, 0);
     }
   }
 
-  @nest .start--3 & {
+  .start--3 & {
     transform: translate3d(150px, 84px, 0);
 
-    @media (width < 1400px) {
+    @media (max-width: 1399px) {
       transform: translate3d(36px, 90px, 0);
     }
 
-    @media (width < 1000px) {
+    @media (max-width: 999px) {
       transform: translate3d(36px, 132px, 0);
     }
   }
 
-  @nest .start--nojs & {
+  .start--nojs & {
     opacity: 0;
   }
 }
@@ -106,12 +111,13 @@
   position: relative;
 
   &::after {
-    color: color(var(--white) alpha(60%));
+    color: rgba($white, .6);
     content: "bash";
     display: block;
     font-size: 12px;
     line-height: 24px;
-    inset-inline: 0;
+    left: 0;
+    right: 0;
     text-align: center;
   }
 }
@@ -120,31 +126,32 @@
 /* ========================================================================== */
 
 .start-demo-controls {
-  background-color: var(--yellow);
-  inset-block-start: 8px;
-  inset-inline-start: calc(6px + 8px);
+  background-color: $yellow;
+  top: 8px;
+  left: calc(6px + 8px);
   position: absolute;
 
   &, &::before, &::after {
     border-radius: 50%;
     display: inline-block;
-    size: 8px;
+    width: 8px;
+    height: 8px;
   }
 
   &::before, &::after {
     content: "";
-    inset-block-start: 0;
+    top: 0;
     position: absolute;
   }
 
   &::before {
-    background-color: var(--red);
-    inset-inline-start: calc((6px + 8px) * -1);
+    background-color: $red;
+    left: calc((6px + 8px) * -1);
   }
 
   &::after {
-    background-color: var(--green);
-    inset-inline-start: calc(6px + 8px);
+    background-color: $green;
+    left: calc(6px + 8px);
   }
 }
 
@@ -152,7 +159,7 @@
 /* ========================================================================== */
 
 .start-demo-content {
-  color: color(var(--white) alpha(45%));
+  color: rgba($white, .45);
   font-family: "Roboto Mono", "ArialUnicodeMS", monospace;
   font-size: 12px;
   font-weight: 500;
@@ -160,16 +167,16 @@
   height: 220px;
   overflow: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  margin-block-start: 12px;
+  margin-top: 12px;
 
   & pre {
-    @extend %unset-pre;
+    @include unset-pre;
 
     white-space: pre;
   }
 
   & b, & plaintext, & span {
-    color: var(--white);
+    color: $white;
     font-weight: 700;
   }
 
@@ -183,13 +190,14 @@
       animation: animate-console 750ms infinite;
       content: "";
       display: inline-block;
-      size: 1px 14px;
+      width: 1px;
+      height: 14px;
       vertical-align: text-bottom;
     }
   }
 
   & plaintext {
-    @extend %unset-pre;
+    @include unset-pre;
 
     display: inline;
     min-width: 2px;
@@ -211,10 +219,10 @@
 
 @keyframes animate-console {
   0% {
-    box-shadow: inset -1px 0 0 0 color(var(--white) alpha(0%));
+    box-shadow: inset -1px 0 0 0 rgba($white, 0);
   }
 
   100% {
-    box-shadow: inset -1px 0 0 0 var(--white);
+    box-shadow: inset -1px 0 0 0 $white;
   }
 }

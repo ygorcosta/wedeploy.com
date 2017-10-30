@@ -1,0 +1,46 @@
+@mixin normalize-a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+@mixin normalize-button {
+  &::-moz-focus-inner {
+    border-style: none;
+    outline: 1px dotted ButtonText;
+    padding: 0;
+  }
+
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  -webkit-appearance: button;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+}
+
+@mixin normalize-html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@mixin normalize-input {
+  margin: 0;
+  overflow: visible;
+}
+
+@mixin normalize-input-type-search {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+}

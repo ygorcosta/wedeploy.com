@@ -2,16 +2,17 @@
 /* ========================================================================== */
 
 .try {
-  @extend %inset-styles;
+  @include inset;
 
-  padding-block: 96px 120px;
+  padding-bottom: 120px;
+  padding-top: 96px;
 }
 
 /* Try: Heading
 /* ========================================================================== */
 
 .try-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 46px;
   font-weight: 900;
@@ -22,25 +23,26 @@
 /* ========================================================================== */
 
 .try-summary {
-  @extend %unset-p;
+  @include unset-p;
 
-  color: var(--black-60);
+  color: rgba($black, .6);
   font-size: 18px;
   line-height: 24px;
-  margin-block-start: 12px;
+  margin-top: 12px;
 }
 
 /* Try: Actions
 /* ========================================================================== */
 
 .try-actions {
-  @extend %actions;
+  @include actions;
 
   & .-dash::after {
     content: url("action-start.svg");
     display: inline-block;
-    margin-block-start: 2px;
-    margin-inline-start: 12px;
-    size: 14px 13px;
+    margin-top: 2px;
+    margin-left: 12px;
+    width: 14px;
+    height: 13px;
   }
 }

@@ -1,58 +1,58 @@
 /* Actions
 /* ========================================================================== */
 
-%actions {
-  @extend %unset-l;
+@mixin actions {
+  @include unset-l;
 
   display: flex;
-  margin-block-start: 48px;
+  margin-top: 48px;
 
-  @media (--sm) {
+  @media ($sm) {
     flex-wrap: wrap;
   }
 
   & li, & a {
-    @media (--s-nav) {
+    @media ($s-nav) {
       width: 100%;
     }
   }
 
   & li {
     &:nth-child(1) {
-      @media (--sm) {
-        margin-block-end: 12px;
+      @media ($sm) {
+        margin-bottom: 12px;
       }
 
-      @media (--s-nav) {
-        margin-inline-end: 0;
+      @media ($s-nav) {
+        margin-right: 0;
       }
     }
 
     &:nth-last-child(n+2) {
-      @media (--l-nav) {
-        margin-inline-end: 12px;
+      @media ($l-nav) {
+        margin-right: 12px;
       }
     }
 
     &:nth-child(odd) {
       & a {
-        @extend %green-button;
+        @include green-button;
       }
     }
 
     &:nth-child(even) {
       & a {
-        @extend %black-button;
+        @include black-button;
       }
     }
   }
 
   & a {
-    @extend %unset-a;
+    @include unset-a;
 
     display: inline-block;
 
-    @media (--s-nav) {
+    @media ($s-nav) {
       justify-content: center;
     }
   }

@@ -2,19 +2,21 @@
 /* ========================================================================== */
 
 .support {
-  @extend %inset-styles;
+  @include inset;
 
-  background-color: color(var(--black) alpha(2%) blend(var(--blue) 1%));
+  background-color: mix(rgba($black, .02), $blue, 99%);
   display: flex;
   flex-wrap: wrap;
   position: relative;
 
-  @media (--sm) {
-    padding-block: calc(24px + 378px - 84px - 24px * 2) 48px;
+  @media ($sm) {
+    padding-bottom: 48px;
+    padding-top: calc(24px + 378px - 84px - 24px * 2);
   }
 
-  @media (--l) {
-    padding-block: 96px 120px;
+  @media ($l) {
+    padding-bottom: 120px;
+    padding-top: 96px;
   }
 
   /* Support: Image (9 units from right)
@@ -22,27 +24,27 @@
 
   &::after {
     content: url("support.svg");
-    inset-block-start: -162px;
+    top: -162px;
     max-width: 100%;
     position: absolute;
     width: calc(402px + 48px * 2);
 
-    @media (--sm) {
-      inset-inline-start: 0;
+    @media ($sm) {
+      left: 0;
     }
 
-    @media (--m) {
-      inset-block-start: -174px;
+    @media ($m) {
+      top: -174px;
       width: 462px;
     }
 
-    @media (--l) and (width < 1200px) {
-      inset-inline-end: calc((100% - 1272px) / 2 - 66px + 6px * 37);
+    @media ($l) and (max-width: 1199px) {
+      right: calc((100% - 1272px) / 2 - 66px + 6px * 37);
       width: 348px;
     }
 
-    @media (--l) and (width >= 1200px) {
-      inset-inline-end: calc(50% - 636px - 36px + 6px * 15);
+    @media (min-width: 1200px) {
+      right: calc(50% - 636px - 36px + 6px * 15);
     }
   }
 }
@@ -57,60 +59,60 @@
   max-width: 100%;
   overflow-wrap: break-word;
 
-  @media (--sm) {
+  @media ($sm) {
     flex-basis: 100%;
   }
 
-  @media (--l) {
+  @media ($l) {
     flex-basis: calc(100% * 660 / 1104);
-    padding-block-start: 12px;
+    padding-top: 12px;
   }
 
   & > :nth-child(n+2) {
-    @media (--sm) {
-      margin-block-start: 48px;
+    @media ($sm) {
+      margin-top: 48px;
     }
   }
 
   & > :nth-last-child(n+3) {
-    @media (--l) {
-      margin-block-end: 48px;
+    @media ($l) {
+      margin-bottom: 48px;
     }
   }
 
   & > :nth-child(2n+2) {
-    @media (--l) {
-      margin-inline-start: 24px;
+    @media ($l) {
+      margin-left: 24px;
     }
   }
 }
 
 .support-section {
-  padding-inline-start: 54px;
+  padding-left: 54px;
 
-  @media (--sm) {
+  @media ($sm) {
     flex-basis: 100%;
   }
 
-  @media (--l) {
+  @media ($l) {
     flex-basis: calc(50% - 24px / 2);
   }
 }
 
 .support-aside {
-  @media (--s) {
+  @media ($s) {
     display: flex;
     flex-basis: 100%;
-    margin-block-start: 48px;
+    margin-top: 48px;
   }
 
-  @media (--ml) {
-    margin-block-start: 48px;
+  @media ($ml) {
+    margin-top: 48px;
   }
 
-  @media (--l) {
+  @media ($l) {
     flex-basis: calc(366 / 1104 * 100%);
-    margin-inline-start: auto;
+    margin-left: auto;
   }
 }
 
@@ -118,7 +120,7 @@
 /* ========================================================================== */
 
 .support-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 27px;
   font-weight: 900;
@@ -126,7 +128,7 @@
 }
 
 .support-section-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
@@ -135,9 +137,10 @@
 
   &::before {
     display: block;
-    inset-inline-end: calc(100% + 18px);
+    right: calc(100% + 18px);
     position: absolute;
-    size: 36px;
+    width: 36px;
+    height: 36px;
   }
 
   &.-service::before {
@@ -161,48 +164,50 @@
 /* ========================================================================== */
 
 .support-summary {
-  @extend %unset-p;
+  @include unset-p;
 
-  color: var(--black-80);
+  color: rgba($black, .8);
   font-size: 16px;
   line-height: 24px;
-  margin-block: 24px 54px;
+  margin-bottom: 54px;
+  margin-top: 24px;
 
-  @media (--l) {
+  @media ($l) {
     max-width: 660px;
   }
 }
 
 .support-section-summary {
-  @extend %unset-p;
+  @include unset-p;
 
-  color: var(--black-90);
+  color: rgba($black, .9);
   font-size: 16px;
   line-height: 24px;
-  margin-block-start: 12px;
+  margin-top: 12px;
 }
 
 /* Support: Section: Action
 /* ========================================================================== */
 
 .support-section-action, .support-247-action {
-  @extend %unset-p;
+  @include unset-p;
 
-  color: var(--green);
+  color: $green;
   font-size: 16px;
   line-height: 24px;
 
   & a {
-    @extend %unset-a;
+    @include unset-a;
 
     background-image: linear-gradient(currentColor 25%, transparent 50%);
     background-repeat: no-repeat;
     background-position: calc(200% - 1px) 100%;
     background-size: 200% 3px;
-    color: var(--green);
+    color: $green;
     display: inline-block;
-    margin-block: 12px -6px;
-    padding-block-end: 6px;
+    margin-bottom: -6px;
+    margin-top: 12px;
+    padding-bottom: 6px;
     transition: background-position 250ms;
 
     &:hover {
@@ -210,10 +215,11 @@
     }
 
     &::after {
-      content: url("symbol-arrow.svg" param(--color var(--green)));
+      content: url("symbol-arrow.svg" param(--color $green));
       display: inline-block;
-      margin-inline-start: 6px;
-      size: 10px 8px;
+      margin-left: 6px;
+      width: 10px;
+      height: 8px;
     }
   }
 }
@@ -222,43 +228,44 @@
 /* ========================================================================== */
 
 .support-247 {
-  @extend %unset-p;
+  @include unset-p;
 
-  background-color: var(--white);
-  box-shadow: inset 0 0 0 1px color(var(--black) alpha(1%)), 0 1px 3px 0 color(var(--black) alpha(4%)), 0 3px 6px 0 color(var(--black) alpha(8%));
+  background-color: $white;
+  box-shadow: inset 0 0 0 1px rgba($black, .01), 0 1px 3px 0 rgba($black, .04), 0 3px 6px 0 rgba($black, .08);
   border-radius: 6px;
   padding: 24px;
 
-  @media (--l) {
+  @media ($l) {
     max-width: 366px;
   }
 }
 
 .support-247-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
   line-height: 30px;
-  margin-inline-start: calc(18px + 36px);
+  margin-left: calc(18px + 36px);
   position: relative;
 
   &::before {
     content: url("support-heading-247.svg");
-    inset-inline-end: calc(100% + 18px);
+    right: calc(100% + 18px);
     position: absolute;
-    size: 36px;
+    width: 36px;
+    height: 36px;
   }
 }
 
 .support-247-summary {
-  @extend %unset-p;
+  @include unset-p;
 
   font-size: 16px;
-  margin-block-start: 12px;
-  margin-inline-start: calc(18px + 36px);
+  margin-top: 12px;
+  margin-left: calc(18px + 36px);
 }
 
 .support-247-action {
-  margin-inline-start: calc(18px + 36px);
+  margin-left: calc(18px + 36px);
 }

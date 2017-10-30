@@ -1,0 +1,220 @@
+/* Navigation
+/* ========================================================================== */
+
+.nav-menu {
+  margin-left: auto;
+
+  @media ($s-nav) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media ($l-nav) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.nav-toggle {
+  @include normalize-button;
+  @include unset-button;
+
+  color: $black;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 6px 24px;
+  -webkit-tap-highlight-color: transparent;
+  text-align: right;
+  width: 100%;
+  white-space: nowrap;
+
+  .start--3 &[aria-expanded="false"] {
+    color: $white;
+  }
+
+  @media ($l-nav) {
+    display: none;
+  }
+
+  &:hover {
+    @media (hover: hover) {
+      color: rgba($black, .6);
+    }
+  }
+
+  .start--3 &[aria-expanded="false"]:hover {
+    @media (hover: hover) {
+      color: rgba($white, .6);
+    }
+  }
+
+  &::after {
+    content: url("nav-toggle.svg" param(--color $black));
+    display: inline-block;
+    line-height: 0;
+    margin-left: 6px;
+    position: relative;
+    transform: scaleY(1) translate3d(0, -.5px, 0);
+    transition: transform .3s ease-in-out, top .3s ease-out;
+    width: 8px;
+    height: 7px;
+    will-change: top, transform;
+  }
+
+  .start--3 &[aria-expanded="false"]::after {
+    content: url("nav-toggle.svg" param(--color $white));
+  }
+
+  &:hover::after {
+    @media (hover: hover) {
+      content: url("nav-toggle.svg" param(--color rgba($black, .6)));
+    }
+  }
+
+  .start--3 &[aria-expanded="false"]:hover::after {
+    @media (hover: hover) {
+      content: url("nav-toggle.svg" param(--color rgba($white, .6)));
+    }
+  }
+
+  &[aria-expanded="true"]::after {
+    transform: scaleY(-1) translate3d(0, calc(50% - 2.5px), 0);
+  }
+}
+
+.nav-list {
+  @include unset-l;
+
+  @media ($s-nav) {
+    top: 78px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    max-height: 100vh;
+    position: absolute;
+    transition: background-color .3s, max-height .05s, padding .3s;
+  }
+
+  @media ($l-nav) {
+    display: flex;
+  }
+
+  .start--3 &[aria-expanded="false"] {
+    color: $white;
+  }
+
+  &:not([aria-expanded="true"]) {
+    @media ($s-nav) {
+      max-height: 0;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    @media ($s-nav) {
+      background-color: $white;
+      padding-bottom: 12px;
+      padding-top: 12px;
+    }
+  }
+}
+
+.nav-link {
+  @include unset-a;
+
+  display: block;
+
+  @media ($s-nav) {
+    padding: 9px 24px;
+  }
+
+  @media ($l-nav) {
+    padding: 9px 12px;
+  }
+
+  & span {
+    display: inline-block;
+  }
+}
+
+.nav-link--btn {
+  @media ($l-nav) {
+    background-color: $green;
+    color: $white;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px rgba($black, .04), 0 2px 6px 0 rgba($black, .01);
+    font-weight: 900;
+    margin-left: 6px;
+  }
+
+  &:matches(:hover, :focus) {
+    @media ($l-nav) {
+      opacity: .8;
+    }
+  }
+
+  & span {
+    @media ($s-nav) {
+      @include underline;
+    }
+  }
+
+  &:matches(:hover, :focus) span {
+    @media ($s-nav) {
+      @include underline-hover;
+    }
+  }
+}
+
+.nav-link--text {
+  & span {
+    @include underline;
+  }
+
+  &:matches(:hover, :focus) span {
+    @include underline-hover;
+  }
+}
+
+.nav-link--login {
+  @media ($s-nav) {
+    color: $green;
+  }
+
+  @media ($l-nav) {
+    margin-left: 24px;
+    position: relative;
+  }
+
+  &::before {
+    @media ($l-nav) {
+      color: rgba($black, .4);
+      content: "or";
+      display: inline-block;
+      font-size: 12px;
+      right: 100%;
+      position: absolute;
+      text-align: center;
+      width: 12px;
+    }
+  }
+
+  &::after {
+    @media ($s-nav) {
+      content: url("symbol-arrow.svg" param(--color $green));
+      display: inline-block;
+      top: -2px;
+      margin-left: 12px;
+      position: relative;
+      width: 10px;
+      height: 8px;
+      transition: transform .3s ease-in-out;
+    }
+  }
+
+  &:matches(:hover, :focus)::after {
+    @media ($s-nav) {
+      transform: translateX(4px);
+    }
+  }
+}

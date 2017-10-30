@@ -1,0 +1,66 @@
+/* Header
+/* ========================================================================== */
+
+@mixin header-padding-inline {
+  @media ($s-nav) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media ($l-nav) and (max-width: 1685px) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  @media (min-width: 1686px) {
+    padding-left: calc(50% - 807px);
+    padding-right: calc(50% - 807px);
+  }
+}
+
+.header {
+  @include header-padding-inline;
+
+  align-items: center;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 18px;
+  padding-top: 18px;
+  position: absolute;
+  transition: background-color .3s;
+  z-index: 1;
+
+  @media ($l-nav) {
+    margin-left: -6px;
+  }
+
+  [data-expanded="true"] & {
+    background-color: $white;
+  }
+}
+
+.header-brand {
+  @include unset-h;
+}
+
+.header-brand-image {
+  display: block;
+  width: 161px;
+  height: 42px;
+}
+
+.header-brand-text {
+  fill: $black;
+  transition: fill 2s ease-in-out;
+
+  .start--3 & {
+    fill: $white;
+  }
+
+  [data-expanded="true"] & {
+    fill: $black;
+    transition: fill .3s ease-in-out;
+  }
+}

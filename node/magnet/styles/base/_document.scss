@@ -2,20 +2,23 @@
 /* ========================================================================== */
 
 html {
-  @extend %normalize-html;
+  @include normalize-html;
 
-  background-color: var(--white) blend(var(--black) 2%));
-  color: var(--black);
+  background-color: mix($white, $black, 98%);
+  color: $black;
   font: 15px/24px "Circular Std";
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   position: relative;
 
   &::after {
-    @media (--s-nav) {
-      background-color: color(var(--black) alpha(80%));
+    @media ($s-nav) {
+      background-color: rgba($black, .8);
       content: "";
-      inset: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
       opacity: 0;
       position: fixed;
       transition: opacity .6s;
@@ -25,7 +28,7 @@ html {
 
   &[data-expanded="true"] {
     &::after {
-      @media (--s-nav) {
+      @media ($s-nav) {
         opacity: 1;
         z-index: 0;
       }
@@ -34,5 +37,5 @@ html {
 }
 
 body {
-  @extend %unset-body;
+  @include unset-body;
 }

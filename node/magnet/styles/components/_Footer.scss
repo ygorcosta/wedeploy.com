@@ -1,32 +1,30 @@
 /* Footer
 /* ========================================================================== */
 
-@custom-media --s-footer (width <  960px);
-@custom-media --l-footer (width >= 960px);
-
 .footer {
-  @extend %inset-styles;
+  @include inset;
 
-  background-color: var(--black);
-  color: var(--white);
+  background-color: $black;
+  color: $white;
   display: flex;
   flex-wrap: wrap;
-  padding-block: 144px 24px;
+  padding-bottom: 24px;
+  padding-top: 144px;
 
-  @media (--l-footer) {
+  @media ($l) {
     align-items: center;
   }
 
   & ul {
-    @extend %unset-l;
+    @include unset-l;
 
-    margin-block-start: 18px;
+    margin-top: 18px;
   }
 
   & a {
-    @extend %unset-a;
+    @include unset-a;
 
-    color: color(var(--white) alpha(60%));
+    color: rgba($white, .6);
     font-size: 16px;
     line-height: 36px;
   }
@@ -36,25 +34,25 @@
 /* ========================================================================== */
 
 .footer-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 22px;
   font-weight: 900;
   line-height: 30px;
 
-  @media (--s-footer) {
+  @media ($sm) {
     flex-basis: 100%;
-    margin-block-end: 48px;
+    margin-bottom: 48px;
     text-align: center;
   }
 
-  @media (--l-footer) {
+  @media ($l) {
     flex-basis: calc(100% / 2 / 3);
   }
 }
 
 .footer-nav-heading {
-  @extend %unset-h;
+  @include unset-h;
 
   font-size: 18px;
   font-weight: 900;
@@ -67,11 +65,11 @@
 .footer-nav:matches(.-learn, .-resources) {
   display: flex;
 
-  @media (--s-footer) {
+  @media ($sm) {
     flex-basis: calc((100% / 2) - 12px * 2);
   }
 
-  @media (--l-footer) {
+  @media ($l) {
     flex-basis: calc(100% / 2 / 3);
   }
 }
@@ -79,26 +77,26 @@
 .footer-nav.-learn {
   justify-content: center;
 
-  @media (--s-footer) {
-    margin-inline-end: 12px;
+  @media ($sm) {
+    margin-right: 12px;
   }
 }
 
 .footer-nav.-resources {
   justify-content: center;
 
-  @media (--s-footer) {
-    margin-inline-start: 12px;
+  @media ($sm) {
+    margin-left: 12px;
   }
 }
 
 .footer-nav.-social {
-  @media (--s-footer) {
+  @media ($sm) {
     flex-basis: 100%;
-    margin-block-start: 48px;
+    margin-top: 48px;
   }
 
-  @media (--l-footer) {
+  @media ($l) {
     flex-basis: calc(100% / 2);
   }
 }
@@ -107,44 +105,45 @@
 /* ========================================================================== */
 
 .footer-nav.-social {
-  @media (--l-footer) {
+  @media ($l) {
     flex-basis: calc(100% / 2);
   }
 
   & ul {
     display: flex;
 
-    @media (--s-footer) {
+    @media ($sm) {
       justify-content: center;
     }
 
-    @media (--l-footer) {
+    @media ($l) {
       justify-content: flex-end;
     }
   }
 
   & li {
     &:nth-last-child(n+2) {
-      margin-inline-end: 12px;
+      margin-right: 12px;
     }
   }
 }
 
 .footer-icon {
-  background-color: color(var(--black) alpha(60%));
+  background-color: rgba($black, .6);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 7px color(var(--white) alpha(30%));
+  box-shadow: inset 0 0 0 7px rgba($white, .3);
   display: block;
   padding: 7px;
   transition: box-shadow 400ms;
 
   &::before {
     display: block;
-    size: 28px;
+    width: 28px;
+    height: 28px;
   }
 
   &:hover, &:focus {
-    box-shadow: inset 0 0 0 7px var(--white);
+    box-shadow: inset 0 0 0 7px $white;
   }
 }
 
@@ -164,10 +163,10 @@
 /* ========================================================================== */
 
 .footer-copyright {
-  @extend %unset-p;
+  @include unset-p;
 
-  color: color(var(--white) alpha(60%));
+  color: rgba($white, .6);
   flex-basis: 100%;
-  padding-block-start: 102px;
+  padding-top: 102px;
   text-align: center;
 }

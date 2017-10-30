@@ -1,0 +1,19 @@
+/* Inset (1104px + 36px * 2)
+/* ========================================================================== */
+
+@mixin inset {
+  @media ($s-nav) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media ($l-nav) and (max-width: 1343px) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  @media (min-width: 1344px) {
+    padding-left: calc(50% - 636px);
+    padding-right: calc(50% - 636px);
+  }
+}
