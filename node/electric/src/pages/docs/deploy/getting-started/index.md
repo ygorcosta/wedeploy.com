@@ -162,7 +162,7 @@ We have created a whole array of tutorials to teach you how to start using WeDep
 * **<a data-senna-off target="_blank" href="/tutorials/java/">Java</a>**: Deploy an app using Java and Spring Boot.
 * **<a data-senna-off target="_blank" href="/tutorials/ruby/">Ruby</a>**: Deploy an app using Ruby and Sinatra.
 * **<a data-senna-off target="_blank" href="/tutorials/nodejs/">Node.js</a>**: Deploy an app using Node.js and Express.
-* **<a data-senna-off target="_blank" href="/tutorials/liferay-dxp/">Liferay DXP</a>**: Deploy a Liferay DXP instance.
+* **<a data-senna-off target="_blank" href="/tutorials/liferay-dxp/">Liferay DXP Trial</a>**: Deploy a Liferay DXP instance.
 * **<a data-senna-off target="_blank" href="/tutorials/docker/">Docker</a>**: Deploy a Docker container.
 
 </article>
