@@ -1,12 +1,12 @@
 ---
-title: "Deploying Liferay DXP Trial"
-description: "Launch a Liferay DXP application in few seconds."
+title: "Deploying Liferay DXP"
+description: "Launch a Liferay DXP Trial application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
 weight: 6
 ---
 
-### Liferay DXP
+### Liferay DXP Trial
 
 ###### {$page.description}
 
