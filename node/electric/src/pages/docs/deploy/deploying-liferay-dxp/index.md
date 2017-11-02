@@ -1,12 +1,12 @@
 ---
 title: "Deploying Liferay DXP"
-description: "Launch a Liferay DXP application in few seconds."
+description: "Launch a Liferay DXP Trial application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
 weight: 6
 ---
 
-### Liferay DXP
+### Liferay DXP Trial
 
 ###### {$page.description}
 
@@ -16,7 +16,7 @@ weight: 6
 
 [Liferay DXP](https://www.liferay.com/digital-experience-platform) provides an architecture for companies to digitize business operations, deliver connected customer experiences, and gather actionable customer insight, with the ultimate goal of providing better customer experiences for their clients.
 
-We give you a free 30 day trial period before you must apply a license.
+We give you a free 15 day trial period to test and develop your DXP instance.
 
 </article>
 
@@ -24,7 +24,7 @@ We give you a free 30 day trial period before you must apply a license.
 
 ## Try it yourself
 
-Want to see the process of deploying Liferay DXP step by step?
+Want to see the process of deploying Liferay DXP Trial step by step?
 
 <div class="guide-btn-cta">
 	<a class="btn btn-accent btn-sm" href="/tutorials/liferay-dxp/" target="_blank" data-senna-off>
@@ -135,4 +135,4 @@ Otherwise, Liferay DXP won't calculate the URLs properly under our load balancer
 
 ## What's next?
 
-Now you can start building your Liferay DXP application.
+Now you can start building your Liferay DXP Trial application.
