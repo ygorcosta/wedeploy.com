@@ -45,7 +45,7 @@ Focus on creating amazing user experiences and WeDeploy will take care of the re
 
 From a solo project to a full project team application, WeDeploy will provide the tools to manage the visibility, scale, and DNS for your application. WeDeploy provides an infrastructure to deploy microservices in a managed cloud infrastructure.
 
-Whether you use Node.js, PHP, Java, Wordpress, or even just HTML, CSS, and JavaScript, we provide an unopinionated deployment flow so you can use the stack you are already comfortable with. To do this, we utlilize the diversity of Docker
+Whether you use Node.js, PHP, Java, Wordpress, or even just HTML, CSS, and JavaScript, we provide an unopinionated deployment flow so you can use the stack you are already comfortable with. To do this, we utlilize the diversity of Docker.
 
 </article>
 
