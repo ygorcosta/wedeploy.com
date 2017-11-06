@@ -62,7 +62,7 @@
   color: rgba($primary, 0.6);
   font-size: $font-p;
   font-family: $font-secondary;
-  font-weight: 600;
+  font-weight: 400;
   line-height: calc(1rem * #{$lineHeight});
   text-align: center;
 
@@ -80,6 +80,7 @@
     margin-bottom: 0;
   }
 }
+
 
 /* ==========================================================================
    Content
@@ -99,4 +100,17 @@
 
 .guide-btn-cta .btn span[class*="icon-16-external"] {
 	top: 7px;
+}
+
+.docs-home-middle-description {
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+.docs .form-control,
+.docs .search .form-control {
+  font-weight: 400;
 }

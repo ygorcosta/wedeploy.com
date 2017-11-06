@@ -1,3 +1,6 @@
+$font-primary: "Circular Std", sans-serif;
+$font-secondary: "Circular Std", sans-serif;
+
 // Marble
 @import "marble";
 @import "templates/root";
@@ -9,6 +12,7 @@
 @import "templates/tutorial";
 
 // Custom
+@import "fonts";
 @import "docs";
 @import "terms";
 @import "topbar";
