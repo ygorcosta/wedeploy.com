@@ -37,7 +37,7 @@ Now you can do that with WeDeploy! Simply declare the dependencies in your `wede
 
 Have you ever accessed your service URL right after a new deployment but got an error because the service was still completing some build tasks? That is because our default health check only looked to see if your service is running, rather than verifying if it was finished.
 
-We realized that some services needed more unique health checks, so we have released a new, simple way for you to create custom health checks for each service. You can either add a specific URL to ping until a `200` response is received, or you can create a unique command to run as a test for your service.
+We realized that some services needed more unique health checks, so we have released a new, simple way for you to create custom health checks for each service. You can either add a specific URL to ping until a valid response is received, or you can create a unique command to run as a test for your service.
 
 ```application/json
 {
