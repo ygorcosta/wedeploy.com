@@ -3,7 +3,7 @@ title: "Deploying Docker"
 description: "Launch a Docker application in few seconds."
 headerTitle: "Deploy"
 layout: "guide"
-weight: 7
+weight: 8
 ---
 
 ### Docker
