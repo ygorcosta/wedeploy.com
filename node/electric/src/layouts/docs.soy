@@ -3,12 +3,19 @@
 /**
  * @param content
  * @param page
+ * @param site
  */
 {template .render}
   <div class="main">
     <main class="content guide">
       <div class="docs">
-        {call .topbar data="all" /}
+        {call Topbar.render data="all"}
+          {param items: $site.topbar /}
+          {param style: 'topbar-light topbar-docs' /}
+          {param logo: [
+            'image': '/images/logo.svg'
+          ] /}
+        {/call}
 
         {call Sidebar.render}
           {param page: $page /}
@@ -21,37 +28,4 @@
       </div>
     </main>
   </div>
-{/template}
-
-/**
- */
-{template .topbar}
-  <nav class="topbar topbar-docs topbar-light topbar-large">
-    {call .logo data="all" /}
-    {call .menu data="all" /}
-  </nav>
-{/template}
-
-/**
- *
- */
-{template .logo}
-  <div class="topbar-logo">
-    <a class="topbar-logo-link" href="/" data-senna-off>
-      <span class="wedeploy-logo">
-        <span class="we-circle"><span class="we">We</span></span>
-        <span class="deploy">Deploy™</span>
-        <span class="liferay">by Liferay</span>
-      </span>
-    </a>
-  </div>
-{/template}
-
-/**
- * @param site
- */
-{template .menu}
-  {call Topbar.render}
-    {param section: $site.index /}
-  {/call}
 {/template}

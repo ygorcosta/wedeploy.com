@@ -1,6 +1,6 @@
 ---
 title: "Help Center"
 url: "https://help.wedeploy.com/"
-type: "external"
+target: "_blank"
 weight: 4
 ---
