@@ -36,6 +36,9 @@ pipeline {
   }
   post {
     always {
+      junit(allowEmptyResults: true, testResults: 'console-functional-tests/test-results/TEST-*.xml')
+      archiveArtifacts artifacts: 'console-functional-tests/html-report/*.html'
+
       sh "./.jenkins/setup.sh --shutdown"
     }
   }
