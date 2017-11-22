@@ -3,7 +3,7 @@ title: "Deploy App"
 description: "In this tutorial, you'll learn how to build and deploy a chat app with WeDeploy."
 buttonTitle: "My app is live and working well"
 tutorialTitle: "Zero to Production: Developing with WeDeploy"
-parentId: "lsna"
+parentId: "workshop"
 layout: "tutorial"
 weight: 11
 ---

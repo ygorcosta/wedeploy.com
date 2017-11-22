@@ -3,7 +3,7 @@ title: "Install Auth Service"
 description: "In this tutorial, you'll learn how to build and deploy a chat app with WeDeploy."
 buttonTitle: "I installed an Auth service"
 tutorialTitle: "Zero to Production: Developing with WeDeploy"
-parentId: "lsna"
+parentId: "workshop"
 layout: "tutorial"
 weight: 5
 ---

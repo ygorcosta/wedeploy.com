@@ -3,7 +3,7 @@ title: "Download Sample"
 description: "In this tutorial, you'll learn how to build and deploy a chat app with WeDeploy."
 buttonTitle: "I downloaded the sample files"
 tutorialTitle: "Zero to Production: Developing with WeDeploy"
-parentId: "lsna"
+parentId: "workshop"
 layout: "tutorial"
 weight: 2
 ---
@@ -15,5 +15,5 @@ First, you'll download a folder that contains the necessary files to build your 
 Open up a terminal and run this command:
 
 ```xml
-git clone https://github.com/wedeploy/tutorial-lsna.git
+git clone https://github.com/wedeploy/tutorial-workshop.git
 ````
