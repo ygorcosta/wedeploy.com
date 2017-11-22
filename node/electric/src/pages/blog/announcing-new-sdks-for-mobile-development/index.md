@@ -23,7 +23,7 @@ That's why WeDeploy was born with more than web development in mind. We understo
 
 We didn't want to just use raw HTTP requests, so we built API Clients that could be called easily and safely. You already know about our [JavaScript client](/docs/intro/api-clients/#1), but starting today, there are two new kids on the block.
 
-**Introducing the new WeDeploy <a data-senna-off target="_blank" href="/docs/intro/api-clients/#2">iOS (Swift)</a> and <a data-senna-off target="_blank" href="/docs/intro/api-clients/#3">Android (Java)</a> SDKs.**
+**Introducing the new WeDeploy <a target="_blank" href="/docs/intro/api-clients/#2">iOS (Swift)</a> and <a target="_blank" href="/docs/intro/api-clients/#3">Android (Java)</a> SDKs.**
 
 With them, you will be able to build apps for the following platforms:
 
@@ -39,9 +39,9 @@ With them, you will be able to build apps for the following platforms:
 
 Mainly, the clients provides you access to:
 
-- **Data service**: Search inside your schema-less database or communicate in realtime with other apps, not matter the platform, using WebSockets under the hood. <br><em>↳ See <a data-senna-off target="_blank" href="/tutorials/data-ios/">iOS (Swift)</a> and <a data-senna-off target="_blank" href="/tutorials/data-android/">Android (Java)</a> tutorials.</em><br><br>
-- **Auth service**: Create or authenticate users, reset passwords or sign-in using Google, Facebook or Github's OAuth2. <br><em>↳ See <a data-senna-off target="_blank" href="/tutorials/auth-ios/">iOS (Swift)</a> and <a data-senna-off target="_blank" href="/tutorials/auth-android/">Android (Java)</a> tutorials.</em><br><br>
-- **Email service**: Send emails directly from your app and check their delivery status. <br><em>↳ See <a data-senna-off target="_blank" href="/tutorials/email-ios/">iOS (Swift)</a> and <a data-senna-off target="_blank" href="/tutorials/email-android/">Android (Java)</a> tutorials.</em><br><br>
+- **Data service**: Search inside your schema-less database or communicate in realtime with other apps, not matter the platform, using WebSockets under the hood. <br><em>↳ See <a target="_blank" href="/tutorials/data-ios/">iOS (Swift)</a> and <a target="_blank" href="/tutorials/data-android/">Android (Java)</a> tutorials.</em><br><br>
+- **Auth service**: Create or authenticate users, reset passwords or sign-in using Google, Facebook or Github's OAuth2. <br><em>↳ See <a target="_blank" href="/tutorials/auth-ios/">iOS (Swift)</a> and <a target="_blank" href="/tutorials/auth-android/">Android (Java)</a> tutorials.</em><br><br>
+- **Email service**: Send emails directly from your app and check their delivery status. <br><em>↳ See <a target="_blank" href="/tutorials/email-ios/">iOS (Swift)</a> and <a target="_blank" href="/tutorials/email-android/">Android (Java)</a> tutorials.</em><br><br>
 - **Raw HTTP Requests**: and if you would like to build your own HTTP requests, you can using our fluent API.
 
 

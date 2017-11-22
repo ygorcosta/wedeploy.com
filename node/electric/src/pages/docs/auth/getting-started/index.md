@@ -31,16 +31,16 @@ Check for new releases to our Auth Image on our [Updates page](/updates/services
 Want to see the process of deploying WeDeploy Auth step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/auth-web/" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/auth-web/" target="_blank">
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="https://github.com/wedeploy/boilerplate-auth" target="_blank" data-senna-off>source code demo</a>.
+	or see a <a href="https://github.com/wedeploy/boilerplate-auth" target="_blank">source code demo</a>.
 </div>
 
-Check also the <a href="/tutorials/auth-android/" target="_blank" data-senna-off>tutorial for Android</a> and the <a href="/tutorials/auth-ios/" target="_blank" data-senna-off>tutorial for iOS</a>.
+Check also the <a href="/tutorials/auth-android/" target="_blank">tutorial for Android</a> and the <a href="/tutorials/auth-ios/" target="_blank">tutorial for iOS</a>.
 
 </article>
 

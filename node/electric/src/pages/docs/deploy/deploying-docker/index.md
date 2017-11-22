@@ -25,13 +25,13 @@ weight: 8
 Want to see the process of deploying Docker step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/docker/" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/docker/" target="_blank">
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="https://github.com/wedeploy/demo-wordpress" target="_blank" data-senna-off>source code demo</a>.
+	or see a <a href="https://github.com/wedeploy/demo-wordpress" target="_blank">source code demo</a>.
 </div>
 
 </article>

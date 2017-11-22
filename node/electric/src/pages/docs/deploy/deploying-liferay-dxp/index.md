@@ -27,13 +27,13 @@ We give you a free 15 day trial period to test and develop your DXP instance.
 Want to see the process of deploying Liferay DXP Trial step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/liferay-dxp/" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/liferay-dxp/" target="_blank">
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="https://github.com/wedeploy/boilerplate-liferay-dxp" target="_blank" data-senna-off>source code demo</a>.
+	or see a <a href="https://github.com/wedeploy/boilerplate-liferay-dxp" target="_blank">source code demo</a>.
 </div>
 
 </article>

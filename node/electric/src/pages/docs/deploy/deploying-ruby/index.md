@@ -25,13 +25,13 @@ weight: 5
 Want to see the process of deploying Ruby step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/ruby/" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/ruby/" target="_blank">
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="https://github.com/wedeploy/boilerplate-ruby" target="_blank" data-senna-off>source code demo</a>.
+	or see a <a href="https://github.com/wedeploy/boilerplate-ruby" target="_blank">source code demo</a>.
 </div>
 
 </article>

@@ -31,16 +31,16 @@ Check for new releases to our Email Image on our [Updates page](/updates/service
 Want to see the process of deploying WeDeploy Email step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/email-web/" target="_blank" data-senna-off>
+	<a class="btn btn-accent btn-sm" href="/tutorials/email-web/" target="_blank">
 		<span class="icon-16-external"></span>Try the tutorial
 	</a>
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="https://github.com/wedeploy/boilerplate-email" target="_blank" data-senna-off>source code demo</a>.
+	or see a <a href="https://github.com/wedeploy/boilerplate-email" target="_blank">source code demo</a>.
 </div>
 
-Check also the <a href="/tutorials/email-android/" target="_blank" data-senna-off>tutorial for Android</a> and the <a href="/tutorials/email-ios/" target="_blank" data-senna-off>tutorial for iOS</a>.
+Check also the <a href="/tutorials/email-android/" target="_blank">tutorial for Android</a> and the <a href="/tutorials/email-ios/" target="_blank">tutorial for iOS</a>.
 
 </article>
 
