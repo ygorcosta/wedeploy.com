@@ -8,7 +8,8 @@ import Toast from 'metal-toast';
 	 ========================================================================== */
 
 window.addEventListener('load', function() {
-	var app = senna.dataAttributeHandler.getApp();
+  var app = senna.dataAttributeHandler.getApp();
+  app.linkSelector = 'a:not([target="_blank"]):not([href="/"])';
 	app.on('endNavigate', endNavigate);
 });
 
