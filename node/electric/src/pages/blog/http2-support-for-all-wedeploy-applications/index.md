@@ -17,6 +17,8 @@ If you are not aware of HTTP/2, this is the latest version of HTTP and is now [a
 
 In contrary to HTTP 1.1, HTTP/2 is a binary protocol, fully multiplexed, uses one connection for parallelism, uses header compression to reduce overhead and allows servers to "push" resources like CSS and images proactively into client caches. If you need more information please [read here](https://http2.github.io/) or [watch this](https://www.youtube.com/watch?v=qyexqwG6fGI).
 
+With fewer connections because of HTTP/2, your site will make fewer requests to the server. This will save on your application costs and allow you to handle more demanding traffic loads with fewer resources.
+
 #### A real example
 
 Let's see how [wedeploy.com](https://wedeploy.com), our main site behaves after adding support for HTTP/2 on WeDeploy. To check that, we will use the excellent [WebPagetest](https://www.webpagetest.org/) service. You may see the full results when HTTP/2 is disabled [here](http://www.webpagetest.org/result/171122_PQ_698aee2613000d25275de656217c2df9/) and when it is enabled [here](http://www.webpagetest.org/result/171122_AP_f1c8769f86cf310ed8dfed45a5ce88af/).
