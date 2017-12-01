@@ -66,6 +66,10 @@ myservice
 
 The default port exposed for Ruby services is `80` ([learn more about using ports](/docs/deploy/configuring-deployments/#port)).
 
+**Version**
+
+We use the `ruby:2.3-slim` version when deploying your Ruby service.
+
 </article>
 
 ## What's next?
