@@ -52,7 +52,7 @@ To learn more about an individual configuration, click on a key in the table bel
 | **[id](#id)**                       | String  | random  | Unique service ID                   |
 | **[image](#image)**                 | String  |         | Service image type                  |
 | **[env](#env)**                     | Object  |         | Exported variables                  |
-| **[port](#scale)**                  | Number  | 80      | Exposed service port                |
+| **[port](#scale)**                  | Number  |         | Exposed service port                |
 | **[cpu](#scale)**                   | Number  | 1       | Number of processing units          |
 | **[scale](#scale)**                 | Number  | 1       | Maximum number of instances         |
 | **[memory](#memory)**               | Number  | 512     | Amount of computing memory          |
@@ -156,7 +156,7 @@ Environment variables are a set of dynamic placeholders that can affect the way 
 
 **Automatic Detection**
 
-By default, we expose port `80` for all services. If we find a port exposed in your `Dockerfile`, then we will choose the lowest value port. In the example below, we would expose port `3000`.
+By default, we find any ports exposed in your Docker Hub image or custom `Dockerfile` and choose the lowest value port. In the example below, we would expose port `3000`.
 
 ```
 FROM ubuntu
@@ -164,9 +164,11 @@ EXPOSE 3000
 EXPOSE 4000
 ```
 
+**Note:** If you are using automatic code detection deployments and need to know what port is exposed, check the documentation: [Java](/docs/deploy/deploying-java/#3), [Node.JS](/docs/deploy/deploying-nodejs/#3), [Ruby](/docs/deploy/deploying-ruby/#3).
+
 **Manual Configuration**
 
-To manually set your port, you can use the `port` key in your `wedeploy.json`.
+Manually choose what port to expose by using the `port` key in your `wedeploy.json`.
 
 ```application/json
 {
@@ -177,7 +179,7 @@ To manually set your port, you can use the `port` key in your `wedeploy.json`.
 
 **Blocking Port**
 
-If you want to completely block outside access to a service, you can declare any port that is not exposed.
+If you want to completely block outside access to a service, you can expose any port that is not declared by your service.
 
 ```application/json
 {

@@ -63,6 +63,10 @@ myservice
 └── wedeploy.json
 ```
 
+**Port**
+
+The default port exposed for Java services is `8080` ([learn more about using ports](/docs/deploy/configuring-deployments/#port)).
+
 </article>
 
 ## What's next?
