@@ -52,10 +52,10 @@ To learn more about an individual configuration, click on a key in the table bel
 | **[id](#id)**                       | String  | random  | Unique service ID                   |
 | **[image](#image)**                 | String  |         | Service image type                  |
 | **[env](#env)**                     | Object  |         | Exported variables                  |
-| **[port](#scale)**                  | Number  |         | Exposed service port                |
+| **[port](#port)**                   | Number  |         | Exposed service port                |
 | **[cpu](#scale)**                   | Number  | 1       | Number of processing units          |
 | **[scale](#scale)**                 | Number  | 1       | Maximum number of instances         |
-| **[memory](#memory)**               | Number  | 512     | Amount of computing memory          |
+| **[memory](#scale)**                | Number  | 512     | Amount of computing memory          |
 | **[volume](#volume)**               | String  |         | Persistent database storage         |
 | **[customDomains](#customDomains)** | Array   |         | Set custom domain names             |
 | **[healthCheck](#healthCheck)**     | Object  |         | How the services' health is checked |
