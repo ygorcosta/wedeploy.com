@@ -92,7 +92,7 @@ Notice that the score of the star_wars_vii document is bigger than the other mat
 
 <aside>
 
-For more examples of filters you can use with `search`, see our [Filtering Data page](/docs/data/filtering-data/)
+For more examples of useful filters and result sorting you can use, see our **[Filtering Data page](/docs/data/filtering-data/)**.
 
 </aside>
 

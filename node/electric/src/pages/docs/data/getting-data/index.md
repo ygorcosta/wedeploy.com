@@ -1,5 +1,5 @@
 ---
-title: "Retrieving Data"
+title: "Getting Data"
 description: "Get an existing field, document or collection in the database."
 headerTitle: "Data"
 layout: "guide"
@@ -18,14 +18,14 @@ If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/a
 
 <article id="1">
 
-## Get data
+## Get collection
 
-Reading data from our storage takes only 3 lines of code.
+It is simple and easy to start getting documents from your saved data collections. You simply use the `get` method in your WeDeploy API call and then pass the name of the collection you want to retrieve.
 
 ```javascript
 WeDeploy
 	.data('https://<serviceID>-<projectID>.wedeploy.io')
-	.get('movies/star_wars_v')
+	.get('movies')
 	.then(function(movie) {
 		console.log(movie);
 	});
@@ -33,7 +33,7 @@ WeDeploy
 ```swift
 WeDeploy
 	.data('https://<serviceID>-<projectID>.wedeploy.io')
-	.get(resourcePath: "movies/star_wars_v")
+	.get(resourcePath: "movies")
 	.then { movie in
 		print(movie)
 	}
@@ -41,22 +41,31 @@ WeDeploy
 ```text/x-java
 WeDeploy
 	.data('https://data-datademo.wedeploy.io')
-	.get("movies/star_wars_v")
+	.get("movies")
 	.execute();
 ```
 
-The response body is the stored JSON document:
+The response will give you all the documents inside that collection.
 
 ```javascript
-{
-	"id": "star_wars_v",
-	"title": "Star Wars: Episode V - The Empire Strikes Back",
-	"year": 1980,
-	"rating": 8.8
-}
+[
+  {"id":"star_wars_i", "title":"Star Wars: Episode I - The Phantom Menace", "year":1999, "rating":6.5},
+  {"id":"star_wars_ii", "title":"Star Wars: Episode II - Attack of the Clones", "year":2002, "rating":6.7},
+  {"id":"star_wars_iii", "title":"Star Wars: Episode III - Revenge of the Sith", "year":2005, "rating":7.7},
+  {"id":"star_wars_iv", "title":"Star Wars: Episode IV - A New Hope", "year":1977, "rating":8.7},
+  {"id":"star_wars_v", "title":"Star Wars: Episode V - The Empire Strikes Back", "year":1980, "rating":8.8},
+  {"id":"star_wars_vi", "title":"Star Wars: Episode VI - Return of the Jedi", "year":1983, "rating":8.4},
+  {"id":"star_wars_vii", "title":"Star Wars: Episode VII - The Force Awakens", "year":2015}
+]
 ```
 
-We can also get any field value using the full path:
+</article>
+
+<article id="2">
+
+## Get with data path
+
+We can also get any document field value using the full data path (`collection/documentId/documentField`):
 
 ```javascript
 WeDeploy
@@ -81,27 +90,17 @@ WeDeploy
 	.execute();
 ```
 
-The full path returns the raw content in the response body:
-
-```javascript
-[
-	{"id":"star_wars_i", "title":"Star Wars: Episode I - The Phantom Menace", "year":1999, "rating":6.5},
-	{"id":"star_wars_ii", "title":"Star Wars: Episode II - Attack of the Clones", "year":2002, "rating":6.7},
-	{"id":"star_wars_iii", "title":"Star Wars: Episode III - Revenge of the Sith", "year":2005, "rating":7.7},
-	{"id":"star_wars_iv", "title":"Star Wars: Episode IV - A New Hope", "year":1977, "rating":8.7},
-	{"id":"star_wars_v", "title":"Star Wars: Episode V - The Empire Strikes Back", "year":1980, "rating":8.8},
-	{"id":"star_wars_vi", "title":"Star Wars: Episode VI - Return of the Jedi", "year":1983, "rating":8.4},
-	{"id":"star_wars_vii", "title":"Star Wars: Episode VII - The Force Awakens", "year":2015}
-]
-```
-
 </article>
 
-<article id="2">
+<article id="3">
 
-## Sorting data
+## Sorting and Filtering
 
-The result is ordered by document id, as we can see in the list above. We can select the order of the results by passing a sort parameter, using the following code:
+When you request to get a collection, all the documents inside that collection will be sent to you ordered by their ID. So what if you want to filter or sort your results?
+
+**Sorting**
+
+Below you can see an example of sorting the results from your request in descending order based on the rating field.
 
 ```javascript
 WeDeploy
@@ -129,7 +128,7 @@ WeDeploy
 	.execute();
 ```
 
-As expected, the result would be the following list:
+The result would be the following list if documents sorted by rating.
 
 ```javascript
 [
@@ -143,15 +142,9 @@ As expected, the result would be the following list:
 ]
 ```
 
-Notice that because Episode VII has no rating (as it was not released yet), it's sorted as the last document.
+**Filtering**
 
-</article>
-
-<article id="3">
-
-## Applying filters
-
-In addition to sorting the results, we can also apply filters using the following code:
+You can also provide filters so that only documents that match your query will be returned in the result.
 
 ```javascript
 WeDeploy
@@ -181,7 +174,7 @@ WeDeploy
 	.execute();
 ```
 
-The following entries are the result of the above filters:
+The result will be any documents from that collection that match these filter parameters.
 
 ```javascript
 [
@@ -190,59 +183,11 @@ The following entries are the result of the above filters:
 ]
 ```
 
-</article>
+<aside>
 
-<article id="4">
+For more examples of useful filters and result sorting you can use, see our **[Filtering Data page](/docs/data/filtering-data/)**.
 
-## Pagination
-
-We can also paginate the result using the 'limit' and 'offset' properties. Combining all the tools we've learned so far, we can run a detailed query on our data:
-
-```javascript
-WeDeploy
-	.data('https://<serviceID>-<projectID>.wedeploy.io')
-	.where('year', '>', 2000)
-	.orderBy('rating')
-	.limit(2)
-	.offset(1)
-	.get('movies')
-	.then(function(movies) {
-		console.log(movies);
-	});
-```
-```swift
-WeDeploy
-	.data('https://<serviceID>-<projectID>.wedeploy.io')
-	.where(field: "year", op: "<", value: 2000)
-	.orderBy(field: "rating", order: .ASC)
-	.limit(2)
-	.offset(1)
-	.get(resourcePath: "movies")
-	.then { movies in
-		print(movies)
-	}
-```
-```text/x-java
-WeDeploy
-	.data('https://data-datademo.wedeploy.io')
-	.where(gt("year", 2000))
-	.orderBy("rating")
-	.limit(2)
-	.offset(1)
-	.get("movies")
-	.execute();
-```
-
-Notice that filtering by year only returns episodes I, II, III, and VII. Applying the 'rating' sort will give us this same order. We also limited the result to show only two documents and skip the first one. The final result is the following entries:
-
-```javascript
-[
-	{"id":"star_wars_ii","title":"Star Wars: Episode II - Attack of the Clones","year":2002,"rating":6.7},
-	{"id":"star_wars_iii","title":"Star Wars: Episode III - Revenge of the Sith","year":2005,"rating":7.7}
-]
-```
-
-We support all basic SQL-like operators (=, !=, >, >=, <, <=, ~), as well as 'any' and 'none' to filter elements in a list. We also give support for search operators, which we will see in more detail in the section Search Data.
+</aside>
 
 </article>
 
