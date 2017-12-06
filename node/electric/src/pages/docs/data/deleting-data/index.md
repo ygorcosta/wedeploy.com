@@ -18,36 +18,59 @@ If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/a
 
 <article id="1">
 
-## Deleting existing data
+## Deleting data
 
-To delete a field or an entire collection, we use the delete method:
+To delete a field or an entire collection, we use the delete method and pass the collection name or data path that we want to delete.
 
 ```javascript
-var data = WeDeploy.data('https://<serviceID>-<projectID>.wedeploy.io');
+// Deleting a collection
+WeDeploy
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .delete('movies')
 
-data.delete('movies/star_wars_v/title');
+// Deleting a document
+WeDeploy
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .delete('movies/star_wars_v')
 
-data.delete('movies/star_wars_v');
-
-data.delete('movies');
+// Deleting a document field
+WeDeploy
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .delete('movies/star_wars_v/rating')
 ```
 ```swift
-let data = WeDeploy.data('https://<serviceID>-<projectID>.wedeploy.io')
+// Deleting a collection
+WeDeploy
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .delete(collectionOrResourcePath: "movies")
 
-data.delete(collectionOrResourcePath: "movies/star_wars_v/title")
+// Deleting a document
+WeDeploy
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .delete(collectionOrResourcePath: "movies/star_wars_v")
 
-data.delete(collectionOrResourcePath: "movies/star_wars_v")
-
-data.delete(collectionOrResourcePath: "movies")
+// Deleting a document field
+WeDeploy
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .delete(collectionOrResourcePath: "movies/star_wars_v/title")
 ```
 ```text/x-java
-WeDeployData data = WeDeploy.data('https://data-datademo.wedeploy.io');
+// Deleting a collection
+WeDeploy
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .delete('movies')
 
-data.delete("movies/star_wars_v/title");
+// Deleting a document
+WeDeploy
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .delete('movies/star_wars_v')
 
-data.delete("movies/star_wars_v");
-
-data.delete("movies");
+// Deleting a document field
+WeDeploy
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .delete('movies/star_wars_v/rating')
 ```
+
+**Warning**: The `delete` function is irreversible. Any deleted document or collection is completely erased and cannot be retrieved.
 
 </article>
