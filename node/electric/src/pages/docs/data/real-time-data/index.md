@@ -71,7 +71,7 @@ socket.on([.changes, .error]) { data in
 ```
 ```text/x-java
 WeDeploy
-  .data('https://data-datademo.wedeploy.io')
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
   .watch("movies")
   .on("changes", data -> System.out.println(data))
   .on("fail", error -> System.out.println(error));
@@ -113,7 +113,7 @@ socket.on([.changes, .error]) { data in
 ```
 ```text/x-java
 WeDeploy
-  .data('https://data-datademo.wedeploy.io')
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
   .limit(1)
   .orderBy("id", SortOrder.DESCENDING)
   .watch("movies")
@@ -161,7 +161,7 @@ socket.on([.create, .error]) { data in
 ```
 ```text/x-java
 WeDeploy
-  .data('https://data-datademo.wedeploy.io')
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
   .watch("movies")
   .on("create", data -> System.out.println(data))
   .on("fail", error -> System.out.println(error));
@@ -205,7 +205,7 @@ socket.on([.delete, .error]) { data in
 ```
 ```text/x-java
 WeDeploy
-  .data('https://data-datademo.wedeploy.io')
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
   .watch("movies")
   .on("delete", data -> System.out.println(data))
   .on("fail", error -> System.out.println(error));
@@ -249,7 +249,7 @@ socket.on([.update, .error]) { data in
 ```
 ```text/x-java
 WeDeploy
-  .data('https://data-datademo.wedeploy.io')
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
   .watch("movies")
   .on("update", data -> System.out.println(data))
   .on("fail", error -> System.out.println(error));
@@ -297,7 +297,7 @@ socket.on([.update, .error]) { data in
 ```
 ```text/x-java
 WeDeploy
-  .data('https://data-datademo.wedeploy.io')
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
   .where(equal("category", "cinema").or("category", "cartoon"))
   .watch("movies")
   .on("update", data -> System.out.println(data))
