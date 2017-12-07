@@ -8,17 +8,17 @@ main() {
 }
 
 setup_tests() {
-  GIT_REPO_TESTS="https://github.com/wedeploy/console-functional-tests.git"
-  rm -rf "${CURRENT_DIR}/console-functional-tests"
+  GIT_REPO_TESTS="https://github.com/wedeploy/wedeploy-functional-tests.git"
+  rm -rf "${CURRENT_DIR}/wedeploy-functional-tests"
   echo "Updating images repository"
   git clone $GIT_REPO_TESTS || true
-  cd ${CURRENT_DIR}/console-functional-tests
+  cd ${CURRENT_DIR}/wedeploy-functional-tests
   git reset --hard
   git pull origin master
 }
 
 run_tests() {
-  cd ${CURRENT_DIR}/console-functional-tests
+  cd ${CURRENT_DIR}/wedeploy-functional-tests
   echo "Running tests"
   export LANDING_PAGE_URL=http://localhost:3001
   export DISPLAY=:99.0
