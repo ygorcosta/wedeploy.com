@@ -30,7 +30,7 @@ The api JSON files are located at the same path of the `./wedeploy.json` and are
 
 <article id="2">
 
-## JSON attributes
+## JSON Attributes
 
 We have a list of supported attributes to help you configure your database.
 
@@ -161,7 +161,7 @@ Available parameter types include:
 
 <article id="3">
 
-## Allowing usage of all the collections
+## Allowing Usage of All the Collections
 
 In order to freely use any collection with any kind of operation, you just need to add the following content in your `api.json`.
 
@@ -180,7 +180,7 @@ This path tells the data service to allow any request to the base path of the da
 
 <article id="4">
 
-## Validating resources
+## Validating Resources
 
 The Validator script will be executed in an environment where several requests and server data will be available. In this environment, there are several global variables available to you that can be used to validate the request parameter, body, or values.
 

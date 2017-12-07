@@ -18,7 +18,7 @@ If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/a
 
 <article id="1">
 
-## Save a data document
+## Save a Data Document
 
 You can save new data to your collection by posting a JSON object.
 
@@ -74,7 +74,7 @@ Every document must have an ID, so if you do not declare an `id` string in your 
 
 <article id="2">
 
-## Save multiple documents
+## Save Multiple Documents
 
 With the same method you're able to save multiple data documents by passing an array of objects.
 

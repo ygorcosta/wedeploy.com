@@ -18,7 +18,7 @@ If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/a
 
 <article id="1">
 
-## Deleting data
+## Deleting Data
 
 To delete a field or an entire collection, we use the delete method and pass the collection name or data path that we want to delete.
 

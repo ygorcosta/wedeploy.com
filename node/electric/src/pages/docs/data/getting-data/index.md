@@ -18,7 +18,7 @@ If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/a
 
 <article id="1">
 
-## Get collection
+## Get Collection
 
 It is simple and easy to start getting documents from your saved data collections. You simply use the `get` method in your WeDeploy API call and then pass the name of the collection you want to retrieve.
 
@@ -63,9 +63,9 @@ The response will give you all the documents inside that collection.
 
 <article id="2">
 
-## Get with data path
+## Get with Data Path
 
-We can also get any document field value using the full data path (`collection/documentId/documentField`):
+We can also get any document body or document field value using the full data path (`collection/documentId/documentField`):
 
 ```javascript
 WeDeploy

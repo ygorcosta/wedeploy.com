@@ -18,7 +18,7 @@ If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/a
 
 <article id="1">
 
-## Updating data
+## Updating Data
 
 Updating existing data is as simple as posting new data to the fields that already exist in a document.
 
@@ -55,7 +55,7 @@ WeDeploy
 
 <article id="2">
 
-## Replacing data
+## Replacing Data
 
 You can also replace all the data in an existing document with the new data that you pass to it.
 

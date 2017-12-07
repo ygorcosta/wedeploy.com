@@ -18,7 +18,7 @@ If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/a
 
 <article id="1">
 
-## Search data
+## Search Data
 
 Using the `.search` method is very similar to the `.get` method, but it has one key difference. It will retrieve not just the results of your request, but also give you metadata about the relevancy of your results. This information will help you give your users an exceptional search experience.
 

@@ -37,7 +37,7 @@ Just like `get`, you also must pass the collection, or data path, that you want 
 
 <article id="2">
 
-## Watching for changed
+## Watching for Changed
 
 When watching the `changes` event, the data service uses a default query limit of `500` which means on every change it will fetch the 500 most recently updated or created documents.
 
@@ -127,7 +127,7 @@ Now every time the database detects changes that affect the query you're watchin
 
 <article id="3">
 
-## Watching for created
+## Watching for Created
 
 When watching the `create` event, every time a new document is created within your collection, you will receive the contents of the created document within the response of your watch task.
 
@@ -171,7 +171,7 @@ WeDeploy
 
 <article id="4">
 
-## Watching for deleted
+## Watching for Deleted
 
 When watching the `delete` event, every time a new document is deleted within your collection, you will receive the `id` of the deleted document within the response of your watch task.
 
@@ -215,7 +215,7 @@ WeDeploy
 
 <article id="5">
 
-## Watching for updated
+## Watching for Updated
 
 When watching the `update` event, every time a new document is updated within your collection, you will receive the body of the updated document within the response of your watch task.
 
@@ -257,9 +257,9 @@ WeDeploy
 
 </article>
 
-<article id="4">
+<article id="6">
 
-## Watching with advanced filters
+## Watching with Advanced Filters
 
 To watch for data with an advanced query, you can apply any filter to one of the available watch events.
 
