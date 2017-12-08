@@ -203,6 +203,17 @@ There are three ways to scale your application.
 
 The available resources for these variables are dependent upon the usage limits of your WeDeploy plan. To learn more about upgrading your plan, see our [Pricing Page](https://wedeploy.com/#pricing).
 
+<h4 id="volume">volume</h4>
+
+For many applications, it is necessary to be able to write and access a file system. We make this possible with `volumes`. Each service, allows you to mount an independent volume file system (e.g. `var/lib/app`). Because these file systems are unique to each service, you do not have to worry about your services overwriting changes or files made by other services in your project, even if you declare the same volume path for multiple services.
+
+```application/json
+{
+  "id": "app",
+  "volume": "/opt/app/data"
+}
+```
+
 <h4 id="customDomains">customDomains</h4>
 
 Each service is deployed with a unique URL (service-project.wedeploy.io), but as your application moves towards production, you will most likely want to add custom domains. This is how you can do that with your `wedeploy.json`.
