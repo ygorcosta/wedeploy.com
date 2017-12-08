@@ -65,7 +65,7 @@ myservice
 
 **Ports**
 
-By default, we watch port 80 for you Node.js services. If you want to designate a different port (like `3000`), you must do that in the `wedeploy.json`.
+By default, we watch port 80 for Node.js services. If you want to designate a different port to expose (like `3000`), you must do that in the `wedeploy.json`.
 
 ```application/json
 {

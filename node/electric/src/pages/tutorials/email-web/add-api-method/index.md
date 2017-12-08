@@ -15,26 +15,22 @@ Now we want to add a script that will send an email. To do this, go to `tutorial
 
 ```javascript
 WeDeploy
-	.email('msgs-<projectID>.wedeploy.io')
-	.auth('yourMasterToken')
-	.from(form.from.value)
-	.to(form.to.value)
-	.subject(form.subject.value)
-	.message(form.message.value)
-	.send()
-	.then(function(response) {
-		if (response.succeeded()) {
-			form.reset();
-			alert('Email sent! Wait a little bit until it arrives :)');
-			console.info('Email ID:', response);
-		}
-		else {
-			alert('Email was not sent');
-		}
-	})
-	.catch(function(error) {
-		alert('Email error:', error);
-	});
+  .email('msgs-<projectID>.wedeploy.io')
+  .auth('yourMasterToken')
+  .from(form.from.value)
+  .to(form.to.value)
+  .subject(form.subject.value)
+  .message(form.message.value)
+  .send()
+  .then(function(response) {
+    form.reset();
+    console.log(response);
+    alert('Your email was sent successfully!');
+  })
+  .catch(function(error) {
+    console.log(error);
+    alert('Oops, something with wrong.');
+  });
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.

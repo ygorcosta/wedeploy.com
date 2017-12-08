@@ -41,7 +41,8 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 		"WORDPRESS_DB_HOST": "db",
 		"WORDPRESS_DB_USER": "root",
 		"WORDPRESS_DB_PASSWORD": "passw0rd"
-	}
+	},
+  "dependencies": ["db"]
 }
 ```
 
