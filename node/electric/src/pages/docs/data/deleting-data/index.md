@@ -41,17 +41,17 @@ WeDeploy
 ```swift
 // Deleting a collection
 WeDeploy
-  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
   .delete(collectionOrResourcePath: "movies")
 
 // Deleting a document
 WeDeploy
-  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
   .delete(collectionOrResourcePath: "movies/star_wars_v")
 
 // Deleting a document field
 WeDeploy
-  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
   .delete(collectionOrResourcePath: "movies/star_wars_v/title")
 ```
 ```text/x-java

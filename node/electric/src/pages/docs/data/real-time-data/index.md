@@ -55,7 +55,7 @@ WeDeploy
 ```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
-  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
   .watch(resourcePath: "movies")
 
 socket.on([.changes, .error]) { data in
@@ -95,7 +95,7 @@ WeDeploy
 ```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
-  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
   .limit(1)
   .orderBy(field: "id", order: .DESC)
   .watch(resourcePath: "movies")
@@ -145,7 +145,7 @@ WeDeploy
 ```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
-  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
   .watch(resourcePath: "movies")
 
 socket.on([.create, .error]) { data in
@@ -189,7 +189,7 @@ WeDeploy
 ```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
-  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
   .watch(resourcePath: "movies")
 
 socket.on([.delete, .error]) { data in
@@ -233,7 +233,7 @@ WeDeploy
 ```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
-  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
   .watch(resourcePath: "movies")
 
 socket.on([.update, .error]) { data in
@@ -279,7 +279,7 @@ WeDeploy
 ```swift
 // You have to hold a strong reference to the socket or it will be released
 socket = WeDeploy
-  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
   .where(field: "category", op: "=", value: "cinema")
   .or(field: "category", op: "=", value: "cartoon")
   .watch(resourcePath: "movies")

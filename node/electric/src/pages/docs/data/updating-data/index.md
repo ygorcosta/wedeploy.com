@@ -33,7 +33,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-	.data('https://<serviceID>-<projectID>.wedeploy.io')
+	.data("https://<serviceID>-<projectID>.wedeploy.io")
 	.update(resourcePath: "movies/115992383516607958", updatedAttributes: [
 		"rating": 9.1
 	])
@@ -71,7 +71,7 @@ WeDeploy
 ```
 ```swift
 WeDeploy
-  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
   .replace(resourcePath: "movies/115992383516607958", replacedAttributes: [
     "rating": 9.1,
     "title": "Avengers"
