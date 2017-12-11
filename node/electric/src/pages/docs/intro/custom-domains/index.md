@@ -29,6 +29,12 @@ The easiest way to configure your custom domain, is to add two or more of our We
 3. Wait for confirmation from your provider regarding the changed name servers. (You can also check on your CLI using `dig NS yourdomain`). The change usually takes about one hour, but it might be longer.
 4. Go to the service of your project, click on _"Custom Domains"_, and add the new domain.
 
+<aside>
+
+**Note:** When changing name servers, it can take a few hours to complete and you will be unable to complete the custom domain configuration on WeDeploy until this setup is complete. If you receive an error when trying to add a custom domain after recently updating the name servers, please try again later.
+  
+</aside>
+
 ![Custom Domains](/images/docs/intro/custom-domains--settings.png)
 
 <div class="table-container">
