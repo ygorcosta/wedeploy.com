@@ -510,13 +510,13 @@ Once you have mapped the field as a `geo_point`, you can start using the capabil
 There are three supported formats for geolocation entries:
 
 ```javascript
-// Object in the format
+// Object format
 location: { 'lat': 20, 'lon': 40 }
 
-// String in the format
+// String format
 location: "20, 40"
 
-// Array in the format
+// Array format
 location: [20, 40]
 ```
 ```swift
@@ -790,7 +790,7 @@ You can sort the results by alphabetical or numerical order.
 WeDeploy
   .data('https://<serviceID>-<projectID>.wedeploy.io')
   .where('ratings', '>', 8.5)
-  .sort('title', 'desc')
+  .orderBy('title', 'desc')
   .get('movies')
 ```
 ```swift

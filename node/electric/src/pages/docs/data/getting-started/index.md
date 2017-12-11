@@ -73,7 +73,7 @@ The `id` for your services are uniquely determined by you.
 
 For your Data service, we build paths to all your collections and documents. This gives you the option to perform actions on these specific items like DELETE or GET.
 
-This is the anatomy of a WeDeploy data document.
+This is the anatomy of a WeDeploy data document path.
 
 ```text
 /collectionName/documentId/documentProperty/documentInnerProperty
