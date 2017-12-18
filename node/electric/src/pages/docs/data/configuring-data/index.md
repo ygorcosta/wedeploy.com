@@ -36,14 +36,14 @@ After understanding how the api configuration files work, it's time to learn wha
 
 <div class="table-container">
 
-| Field | Description |
-| - | - |
-| path | The path that represents the collection used to handle the request data. |
-| data | Tells the service if the request to a collection should be stored or not. |
-| description | Used to describe the behavior of an endpoint. |
-| auth | Used to define authentication rules for the endpoint. |
-| method | HTTP method allowed for the request. |
-| parameters | Parameters and validation rules for the collection. |
+| Field | Type | Description |
+| - | - | - |
+| path | string | The path that represents the collection used to handle the request data. |
+| data | boolean | Tells the service if the request to a collection should be stored or not. |
+| description | string | Used to describe the behavior of an endpoint. |
+| auth | object | Used to define authentication rules for the endpoint. |
+| method | array | HTTP method allowed for the request. |
+| parameters | object | Parameters and validation rules for the collection. |
 
 </div>
 
