@@ -7,7 +7,6 @@ pipeline {
       label 'console'
     }
   }
-  triggers { cron("H 12 * * 1-7") }
   stages {
     stage('Remove images and containers') {
       steps {
