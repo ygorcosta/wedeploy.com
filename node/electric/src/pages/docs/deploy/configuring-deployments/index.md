@@ -197,11 +197,20 @@ Remember that even if you block a service's port, your service can still be secu
 
 There are three ways to scale your application.
 
-**CPU** is the number of processors designated to your service.
+**CPU** is the number of processors designated to your service (can be less than one).
 
-**Memory** is the amount of RAM designated to your service.
+**Memory** is the amount of RAM designated to your service (in megabytes).
 
 **Scale** is the number of instances designated to your service.
+
+```application/json
+{
+  "id": "api",
+  "cpu": 0.4,
+  "memory": 512,
+  "scale": 2
+}
+```
 
 The available resources for these variables are dependent upon the usage limits of your WeDeploy plan. To learn more about upgrading your plan, see our [Pricing Page](https://wedeploy.com/#pricing).
 
