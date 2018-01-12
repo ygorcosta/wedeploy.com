@@ -67,6 +67,26 @@ The `id` for your services are uniquely determined by you.
 
 </article>
 
+<article id="4">
+
+## Data Path Construction
+
+For your Data service, we build paths to all your collections and documents. This gives you the option to perform actions on these specific items like DELETE or GET.
+
+This is the anatomy of a WeDeploy data document path.
+
+```text
+/collectionName/documentId/documentProperty/documentInnerProperty
+```
+
+For example, if we had a collection of movies and wanted to reference the rating of Star Wars Episode IV:
+
+```text
+https://<serviceID>-<projectID>.wedeploy.io/movies/episode_iv/rating
+```
+
+</article>
+
 ## What's next?
 
 Now you can learn more about [configuring your data service](/docs/data/configuring-data/).

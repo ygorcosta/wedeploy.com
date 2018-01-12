@@ -1,6 +1,6 @@
 ---
 title: "Configuring Data"
-description: "The api.json and api-*.json files allow us to configure the accessible paths for each data service."
+description: "Configure your database and to secure paths to certain documents or to validate request data types."
 headerTitle: "Data"
 layout: "guide"
 weight: 2
@@ -18,11 +18,11 @@ If you are unfamiliar with our API, please visit the [API Clients](/docs/intro/a
 
 <article id="1">
 
-## Understanding configuration files
+## Introduction
 
 By default WeDeploy Data service is going to use all the JSON files starting with `api-*` and also the file `api.json`.
 
-These files are used to help you manage features such as path validation, authentication, and params validation.
+These files are used to help you manage features such as path validation, authentication, and data type validation.
 
 The api JSON files are located at the same path of the `./wedeploy.json` and are used following the ordering filesystem.
 
@@ -30,9 +30,9 @@ The api JSON files are located at the same path of the `./wedeploy.json` and are
 
 <article id="2">
 
-## JSON attributes
+## JSON Attributes
 
-After understanding how the api configuration files work, it's time to learn what are the supported attributes:
+We have a list of supported attributes to help you configure your database.
 
 <div class="table-container">
 
@@ -64,7 +64,7 @@ A path represents the resource used to store your project data.
 
 ##### data
 
-You can create endpoints just for validation, in this case, data is used to finish the request in case you just need a validation or want to store the request in the collection.
+You can create endpoints just for validation or to actually store the request in the collection. If set to `true` it will store the request.
 
 ```application/json
 [
@@ -77,7 +77,7 @@ You can create endpoints just for validation, in this case, data is used to fini
 
 ##### description
 
-Used to describe the behavior of an endpoint.
+The `description` is a simple way to keep your endpoints organized by describing their behavior and role.
 
 ```application/json
 [
@@ -91,7 +91,7 @@ Used to describe the behavior of an endpoint.
 
 ##### auth
 
-You can prevent unauthorized applications and users from accessing certain endpoints by using the auth field. The example below verifies if the application is authenticated in order to perform the request:
+You can prevent unauthorized applications and users from accessing certain endpoints by using the `auth` field. A common use is to verify if the application requesting the endpoint is authenticated before it completes the request.
 
 ```application/json
 [
@@ -106,7 +106,7 @@ You can prevent unauthorized applications and users from accessing certain endpo
 
 ##### method
 
-Specifies the HTTP method used for the request. In the example bellow, it allows a GET request and if you try to do a PUT or DELETE the route will not be recognized and will fail.
+The `method` specifies the HTTP method used for the request. In the example bellow, it allows a GET request and if you try to do a PUT or DELETE the route will not be recognized and will fail. This is very useful for adding different types of validation for different request methods.
 
 ```application/json
 [
@@ -117,6 +117,14 @@ Specifies the HTTP method used for the request. In the example bellow, it allows
 	}
 ]
 ```
+
+Available methods include:
+
+- `GET`
+- `POST`
+- `PATCH`
+- `PUT`
+- `DELETE`
 
 ##### parameters
 
@@ -139,11 +147,21 @@ You generally would use `parameters` to force validation in order to make sure t
 ]
 ```
 
+Available parameter types include:
+
+- Boolean
+- Double
+- Float
+- Integer
+- Long
+- NestedDocument
+- String
+
 </article>
 
 <article id="3">
 
-## Allowing usage of all the collections
+## Allowing Usage of All the Collections
 
 In order to freely use any collection with any kind of operation, you just need to add the following content in your `api.json`.
 
@@ -156,17 +174,17 @@ In order to freely use any collection with any kind of operation, you just need 
 ]
 ```
 
-The path `/\*` tells the data service to allow any request to the base path of the data service.
+This path tells the data service to allow any request to the base path of the data service.
 
 </article>
 
 <article id="4">
 
-## Validating resources
+## Validating Resources
 
-The Validator script will be executed in an environment where several request and server data will be available. In this environment, there are several global variables available to you that can be used to validate the request parameter, body, or even to authorize the request.
+The Validator script will be executed in an environment where several requests and server data will be available. In this environment, there are several global variables available to you that can be used to validate the request parameter, body, or values.
 
-The validator can be used as an integration with the Auth service:
+The validator can be used as an integration with the [Auth service](/docs/auth/):
 
 ```application/json
 {
