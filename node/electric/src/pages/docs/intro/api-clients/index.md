@@ -14,7 +14,7 @@ weight: 5
 
 ## Introduction
 
-You can use our SDKs for sending/receiving requests to/from WeDeploy services like [Auth](/docs/auth/getting-started/), [Email](/docs/email/getting-started/), and [Hosting](/docs/hosting/getting-started/). We built those libraries to make your life easier and adapt to your current workflow.
+You can use our SDKs for sending/receiving requests to/from WeDeploy services like [Auth](/docs/auth/getting-started/), [Email](/docs/email/getting-started/), and [Data](/docs/data/getting-started/). We built those libraries to make your life easier and adapt to your current workflow.
 
 Below you can find a list that contains all of them, including instructions on how to install and details for each specific platform.
 

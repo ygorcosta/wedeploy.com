@@ -5,8 +5,8 @@
 	"googleAnalytics": "UA-37033501-3",
 	"version": {
 		"api": {
-			"android": "0.1.0",
-			"javascript": "4.1.1"
+			"android": "1.0.0",
+			"javascript": "4.2.0"
 		},
 		"image": {
 			"auth": "2.0.0",
