@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "scripts": {
     "build": "electric build",
-    "start": "electric"
+    "dev": "electric run"
   },
   "dependencies": {
     "marble-topbar": "^1.4.0",

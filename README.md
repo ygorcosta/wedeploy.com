@@ -62,7 +62,7 @@ To work on suplementary pages, including the blog and docs;
 3. Start the local server and watch for file changes:
 
    ```sh
-   npm start run
+   npm run dev
    ```
 
 The local server will be available at
