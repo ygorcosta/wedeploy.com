@@ -3,11 +3,11 @@ title: "Liferay DXP Service"
 description: "Check out the latest releases of the WeDeploy"
 layout: "updates"
 updates:
--
+ -
   version: dxp-sp6-20180115
   date: Jan 15th, 2018
   description: Improve checks for adding a trial activation key when needed.
--
+ -
   version: dxp-sp6-20171127
   date: Nov 11th, 2017
   description: Upgrades from Liferay DXP sp5 to Liferay DXP sp6.
