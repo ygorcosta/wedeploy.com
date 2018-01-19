@@ -96,7 +96,7 @@ WeDeploy
 
 ## Sorting and Filtering
 
-When you request to get a collection, all the documents inside that collection will be sent to you ordered by their ID. So what if you want to filter or sort your results?
+When you request to get a collection, all the documents inside that collection will be sent to you ordered by the date they were created (`createdAt`). So what if you want to filter or sort your results?
 
 **Sorting**
 
