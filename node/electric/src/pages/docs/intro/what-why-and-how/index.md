@@ -14,18 +14,7 @@ weight: 1
 
 ## What is WeDeploy?
 
-WeDeploy is a *development platform* that helps you deploy your simple to complex apps quickly. It also gives you access to intuitive APIs for backend microservices that can enable you to create modern apps faster.
-
-From simple applications to full microservice architectures, launch your production-ready environments in a matter of minutes without having to change your stack.
-
-We also know it's not just about getting your app live quickly, but also about effectively meeting user demands with minimal development overhead. This is why we provide many features that allow you to quickly and efficiently respond to the needs of your users.
-
-* Deploy and configure your cloud app from your command line
-* Automatically distribute incoming traffic across multiple instances.
-* Authenticate users with only a few lines of code.
-* Store data securely and consume information in real-time.
-* Release applications with zero downtime.
-* Build and deploy custom microservices.
+**Explain more here**
 
 </article>
 
