@@ -4,6 +4,10 @@ description: "Check out the latest releases of the WeDeploy"
 layout: "updates"
 updates:
  -
+  version: dxp-sp6-20180123
+  date: Jan 23rd, 2018
+  description: New licenses batch
+ -
   version: dxp-sp6-20180115
   date: Jan 15th, 2018
   description: Improve checks for adding a trial activation key when needed.
