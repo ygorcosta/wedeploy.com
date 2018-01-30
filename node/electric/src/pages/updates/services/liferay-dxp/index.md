@@ -4,6 +4,10 @@ description: "Check out the latest releases of the WeDeploy"
 layout: "updates"
 updates:
  -
+  version: dxp-sp6-20180130
+  date: Jan 30th, 2018
+  description: Minor improvements in the release process
+ -
   version: dxp-sp6-20180123
   date: Jan 23rd, 2018
   description: New licenses batch
