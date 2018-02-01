@@ -79,6 +79,14 @@ myservice
 
 Under the hood, those files will be copied into the `$LIFERAY_HOME/deploy` folder and automatically deployed on startup.
 
+<aside>
+
+###### <span class="icon-16-star"></span> Pro Tip
+
+You can provide your own activation key to your Liferay DXP instance on WeDeploy. Simply put your license or activation key inside the deploy folder with the name `license.xml`. If this file exists, we will use your license instead of starting a 30-day DXP trial.
+
+</aside>
+
 </article>
 
 <article id="5">
