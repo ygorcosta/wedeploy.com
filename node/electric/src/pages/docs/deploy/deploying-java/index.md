@@ -63,6 +63,24 @@ myservice
 └── wedeploy.json
 ```
 
+**Port**
+
+The default port exposed for Java services is `8080` ([learn more about using ports](/docs/deploy/configuring-deployments/#port)).
+
+**Versions**
+
+When deploying Java services, we use these versions to automatically build your services.
+
+**Maven**
+
+- Maven version `3.5.2`
+- JDK version `8`
+
+**Gradle**
+
+- Gradle version `4.5`
+- JDK version `8`
+
 </article>
 
 ## What's next?

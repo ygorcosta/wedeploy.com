@@ -62,6 +62,14 @@ myservice
 └── wedeploy.json
 ```
 
+**Port**
+
+The default port exposed for Ruby services is `80` ([learn more about using ports](/docs/deploy/configuring-deployments/#port)).
+
+**Version**
+
+We use Ruby version `2.3` when auto-detecting your Ruby deployment.
+
 </article>
 
 ## What's next?
