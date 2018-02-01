@@ -67,12 +67,19 @@ myservice
 
 The default port exposed for Java services is `8080` ([learn more about using ports](/docs/deploy/configuring-deployments/#port)).
 
-**Version**
+**Versions**
 
-We use these versions when deploying your Java services.
+When deploying Java services, we use these versions to automatically build your services.
 
-- Gradle: `jdk-alpine`
-- Maven: `maven:3-jdk-8-alpine`
+**Maven**
+
+- Maven version `3.5.2`
+- JDK version `8`
+
+**Gradle**
+
+- Gradle version `4.5`
+- JDK version `8`
 
 </article>
 
