@@ -15,7 +15,7 @@ module.exports = {
         includePaths: ['node_modules', marble.src],
         outputStyle: 'compressed'
     },
-    codeMirrorLanguages: ['xml', 'css', 'javascript', 'clike', 'swift', 'groovy'],
+    codeMirrorLanguages: ['xml', 'css', 'javascript', 'clike', 'swift', 'groovy', 'shell'],
     deployOptions: { branch: 'ui' },
     vendorSrc: ['node_modules/marble/build/fonts/**']
 };
