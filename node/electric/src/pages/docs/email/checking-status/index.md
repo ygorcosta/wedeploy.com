@@ -50,6 +50,10 @@ WeDeploy
   .checkEmailStatus("<emailID>")
   .execute();
 ```
+```text/x-sh
+curl -X "GET" "https://<serviceID>-<projectID>.wedeploy.io/emails/<emailID>" \
+     -H 'Authorization: Bearer <your-project-master-token>'
+```
 
 </article>
 

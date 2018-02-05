@@ -62,6 +62,17 @@ WeDeploy
   .send()
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/emails" \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -H 'Content-Type: application/json' \
+     -d $'{
+        "from": "from@domain.com",
+        "to": "to@domain.com",
+        "subject": "Hi there!",
+        "message": "What are your plans on Thursday?"
+      }'
+```
 
 As a result, we'll receive an email ID. This doesn't indicate that the email has already sent, it actually just means that it was added to the email queue. See ["checking the email status"](/docs/email/checking-status/) to learn more about email status.
 
