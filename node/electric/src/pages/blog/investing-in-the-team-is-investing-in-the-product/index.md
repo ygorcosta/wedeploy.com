@@ -15,13 +15,13 @@ layout: "blog"
 
 As 2017 was coming to a close, we had lots of momentum in our product. Many features were in the pipeline and development was moving quickly.
 
-In parallel, we knew it had been almost a year since the team synced up together in the same space, and as a globally distributed team, this was a major concern of ours. We debated if it was worth pausing production and paying for the whole team to come to Los Angeles, but at the end of the day, we felt it was important for one primary reason: team comes first.
+In parallel, we knew it had been almost a year since the team synced up together in the same space, and as a globally distributed team, this was a major concern of ours. We debated if it was worth pausing production and flying the whole team to Los Angeles, but at the end of the day, we felt it was important for one primary reason: people come first.
 
 <figure>
   <img src="/images/blog/post-20--0.jpg" alt="Prioritizing team">
 </figure>
 
-> A team is more than just a collection of employees, it is a unified power equipped for accomplishing goals.
+> A team is more than just a collection of employees, it is a unified power designed to accomplish goals.
 
 This means it is not just a piece of equipment; it is a living organism composed of human beings that needs to be nurtured and maintained. We decided it would not just be worth it, but even critical, for us to set aside this time to build up the team and set our eyes on the goals of this year **together**.
 
@@ -29,12 +29,12 @@ This means it is not just a piece of equipment; it is a living organism composed
 
 All the details were prepared, the agenda was set, and the team began to arrive. This is what we had planned.
 
-- **Pre-Retreat:** Two days at a beach house set aside for the team to get to know each in a relaxed environment.
+- **Pre-Retreat:** Two days at a beach house in Oceanside set aside for the team to get to know each in a relaxed environment.
 - **Talks/Workshops:** Two days of skill sharing and presentations to enlighten fellow team members about what we have been working on.
-- **Mini Sprint:** One day to collaborate in the same room, smash bugs, and blitz-develop a few new features.
-- **Brainstorming:** Two days to put our minds together, share ideas, and focus on how our team can achieve more together in 2018.
+- **Mini Sprint:** Two days to collaborate in the same room, smash bugs, and blitz-develop a few new features.
+- **Brainstorming:** One day to put our minds together, share ideas, and focus on how our team can achieve more together in 2018.
 
-Between all of that, we had many walks to the local coffee shops, tasty meals together, and recreational activities in sunny LA. 
+Between all of that, we had many walks to the local coffee shops, tasty meals together, and recreational activities in sunny LA.
 
 <figure>
   <img src="/images/blog/post-20--1.jpg" alt="Working together">
@@ -64,8 +64,6 @@ In a very tangible way, after the retreat we noticed that team members were:
 - More empowered to contribute to other projects after learning about how they worked
 - More happy on the team because they had connected with the other team members in a real way
 - More excited about the product itself after hearing the vision from the leadership
-
-We also did a survey after the gathering to hear what the team thought about the experience. 80% of the team thought it was helpful and relevant to their day-to-day job and their biggest takeaway from the event that it gave them a greater relationship with other team members.
 
 Once the team is united by common goals and empowered by equality, the desire to work harder and take ownership of the success of the product is directly impacted.
 
