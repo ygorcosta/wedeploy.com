@@ -76,6 +76,32 @@ Note: this will not logout on your browser, only on the terminal.
 
 <article id="4">
 
+## Create projects or services
+
+To create a new project or service on your account:
+
+```xml
+we new
+```
+
+You can follow the prompts to choose whether you want to create a service or project, or simply add a flag:
+
+**Create new service**
+
+```xml
+we new service
+```
+
+**Create new project**
+
+```xml
+we new project
+```
+
+</article>
+
+<article id="5">
+
 ## Deploy projects or services
 
 To deploy a folder using a random project ID, type:
@@ -104,7 +130,7 @@ we deploy --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="5">
+<article id="6">
 
 ## Show logs of the services
 
@@ -128,7 +154,7 @@ we log --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="6">
+<article id="7">
 
 ## Manage custom domains
 
@@ -158,7 +184,7 @@ we domain --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="7">
+<article id="8">
 
 ## Manage environment variables
 
@@ -188,7 +214,7 @@ we env --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="8">
+<article id="9">
 
 ## List projects or services
 
@@ -218,7 +244,7 @@ we list --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="9">
+<article id="10">
 
 ## Delete projects or services
 
@@ -242,7 +268,7 @@ we delete --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="10">
+<article id="11">
 
 ## Open the console
 
@@ -254,7 +280,7 @@ we console
 
 </article>
 
-<article id="11">
+<article id="12">
 
 ## Update the CLI
 
