@@ -42,40 +42,6 @@ For deploying services you must have [Git](https://git-scm.com/) installed on yo
 
 <article id="2">
 
-## Login to your account
-
-There are two ways you can authenticate, the first option will open up your browser and authenticate you from there:
-
-```xml
-we login
-```
-
-If you already have an account, it will redirect you to a success page. If you don't have an account yet, you must sign up and confirm your email.
-
-The second option only works if you already have an account and requires you to manually type your email and password:
-
-```xml
-we login --no-browser
-```
-
-</article>
-
-<article id="3">
-
-## Logout from your account
-
-In order to switch between different accounts, you can logout from an account by running:
-
-```xml
-we logout
-```
-
-Note: this will not logout on your browser, only on the terminal.
-
-</article>
-
-<article id="4">
-
 ## Create projects or services
 
 To create a new project or service on your account:
@@ -100,7 +66,7 @@ we new project
 
 </article>
 
-<article id="5">
+<article id="3">
 
 ## Deploy projects or services
 
@@ -130,7 +96,7 @@ we deploy --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="6">
+<article id="4">
 
 ## Show logs of the services
 
@@ -154,7 +120,7 @@ we log --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="7">
+<article id="5">
 
 ## Manage custom domains
 
@@ -184,7 +150,7 @@ we domain --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="8">
+<article id="6">
 
 ## Manage environment variables
 
@@ -214,7 +180,7 @@ we env --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="9">
+<article id="7">
 
 ## List projects or services
 
@@ -244,7 +210,7 @@ we list --url <serviceID>-<projectID>.wedeploy.io
 
 </article>
 
-<article id="10">
+<article id="8">
 
 ## Delete projects or services
 
@@ -264,36 +230,6 @@ Alternatively, you can delete a service by passing the full URL:
 
 ```xml
 we delete --url <serviceID>-<projectID>.wedeploy.io
-```
-
-</article>
-
-<article id="11">
-
-## Open the console
-
-To quickly open the console in your browser, type:
-
-```xml
-we console
-```
-
-</article>
-
-<article id="12">
-
-## Update the CLI
-
-In order to update the command-line to the latest version, run:
-
-```xml
-we update
-```
-
-If you're feeling adventurous, you can try the unstable version for breaking changes:
-
-```xml
-we update --channel unstable
 ```
 
 </article>
