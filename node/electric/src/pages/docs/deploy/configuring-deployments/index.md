@@ -59,7 +59,7 @@ To learn more about an individual configuration, click on a key in the table bel
 | **[volume](#volume)**               | String  |         | Persistent database storage         |
 | **[customDomains](#customDomains)** | Array   |         | Set custom domain names             |
 | **[healthCheck](#healthCheck)**     | Object  |         | How the services' health is checked |
-| **[dependencies](#dependencies)**   | String  |         | Deployment dependency order         |
+| **[dependencies](#dependencies)**   | Array   |         | Deployment dependency order         |
 | **[zeroDowntime](#zeroDowntime)**   | Boolean | true    | Interruption during deployment      |
 
 </div>
