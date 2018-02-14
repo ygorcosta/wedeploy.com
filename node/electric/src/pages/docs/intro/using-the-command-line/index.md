@@ -23,7 +23,7 @@ Check for new releases to our CLI on our [Updates page](/updates/cli/).
 If you use a Unix-like system such as macOS or Linux, open your terminal and run:
 
 ```xml
-curl https://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash
+curl https://cdn.wedeploy.com/cli/latest/wedeploy.sh -fsSL | bash
 ```
 
 Then try running `we`. You should be able to see the help.
@@ -31,7 +31,7 @@ Then try running `we`. You should be able to see the help.
 In case of error, try to install it using `sudo`:
 
 ```text
-curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | sudo bash
+curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -fsSL | sudo bash
 ```
 
 If you use Windows, check the [Windows amd64 installer](https://bin.equinox.io/c/8WGbGy94JXa/we-stable-windows-amd64.msi). For other systems, see a list of [all builds available](https://dl.equinox.io/wedeploy/we/stable).
