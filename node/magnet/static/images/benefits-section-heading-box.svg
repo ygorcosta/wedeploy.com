@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="384px" height="426px" viewBox="0 0 384 426" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>box</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="0%" cy="1.58854167%" fx="0%" fy="1.58854167%" r="98.920438%" gradientTransform="translate(0.000000,0.015885),scale(1.000000,0.581818),rotate(66.574306),translate(-0.000000,-0.015885)" id="radialGradient-1">
+            <stop stop-color="#1F7AFF" stop-opacity="0.498641304" offset="0%"></stop>
+            <stop stop-color="#1F7AFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polygon id="path-2" points="192 96 384 192 384 426 192 330"></polygon>
+        <radialGradient cx="0%" cy="0%" fx="0%" fy="0%" r="141.421356%" gradientTransform="translate(0.000000,0.000000),scale(1.000000,0.581818),rotate(59.808377),translate(-0.000000,-0.000000)" id="radialGradient-3">
+            <stop stop-color="#1F7AFF" stop-opacity="0.597684556" offset="0%"></stop>
+            <stop stop-color="#1F7AFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <polygon id="path-4" points="0 96 192 192 192 426 0 330"></polygon>
+        <radialGradient cx="100%" cy="50%" fx="100%" fy="50%" r="50%" gradientTransform="translate(1.000000,0.500000),scale(1.000000,0.904110),rotate(90.000000),translate(-1.000000,-0.500000)" id="radialGradient-5">
+            <stop stop-color="#FFFFFF" stop-opacity="0.399003623" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.196161685" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#00FF80" offset="0%"></stop>
+            <stop stop-color="#00D46A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#00A4FF" stop-opacity="0.402173913" offset="0%"></stop>
+            <stop stop-color="#00A4FF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-8" points="192 0 384 96 192 192 0 96"></polygon>
+        <radialGradient cx="100%" cy="8.79455404%" fx="100%" fy="8.79455404%" r="132.367017%" gradientTransform="translate(1.000000,0.087946),scale(1.000000,0.200000),rotate(102.986338),translate(-1.000000,-0.087946)" id="radialGradient-10">
+            <stop stop-color="#FFFFFF" stop-opacity="0.803442029" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.3" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="85.8766019%" cy="9.32144702%" fx="85.8766019%" fy="9.32144702%" r="107.072057%" gradientTransform="translate(0.858766,0.093214),scale(1.000000,0.726299),rotate(114.515023),translate(-0.858766,-0.093214)" id="radialGradient-11">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.498131793" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="01_landing_page_(home)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-126.000000, -8514.000000)">
+        <g id="view_15_(div_1)" transform="translate(0.000000, 8472.000000)">
+            <g id="box" transform="translate(126.000000, 42.000000)">
+                <path d="M384,96 L384,330 L192,426 L0,330 L0,96 L192,-1.42108547e-14 L384,96 Z" id="container"></path>
+                <g id="right" transform="translate(288.000000, 261.000000) scale(-1, 1) translate(-288.000000, -261.000000) ">
+                    <use fill="#00D46A" xlink:href="#path-2"></use>
+                    <use fill="url(#radialGradient-1)" xlink:href="#path-2"></use>
+                </g>
+                <g id="left">
+                    <use fill="#00D46A" xlink:href="#path-4"></use>
+                    <use fill="url(#radialGradient-3)" xlink:href="#path-4"></use>
+                    <use fill-opacity="0.239999995" fill="#0E141A" xlink:href="#path-4"></use>
+                </g>
+                <path d="M91,141 L91,181 L61,166 L61,126 L91,141 Z M94,142.5 L127,159 L127,199 L94,182.5 L94,142.5 Z" id="stripe_side" fill="url(#radialGradient-5)"></path>
+                <g id="top">
+                    <mask id="mask-9" fill="white">
+                        <use xlink:href="#path-8"></use>
+                    </mask>
+                    <g id="container">
+                        <use fill="url(#linearGradient-6)" xlink:href="#path-8"></use>
+                        <use fill="url(#linearGradient-7)" xlink:href="#path-8"></use>
+                    </g>
+                    <path d="M196.658868,241 L196.658868,-58.5512635 L193.658868,-58.5512635 L193.658868,241 L166,241 L166,-59 L226,-59 L226,241 L196.658868,241 Z" id="stripe" fill="url(#radialGradient-10)" mask="url(#mask-9)" transform="translate(196.000000, 91.000000) rotate(63.500000) translate(-196.000000, -91.000000) "></path>
+                </g>
+                <path d="M287.062083,195.543368 C257.932756,209.524643 237.020634,251.541046 240.34816,289.40046 C243.673612,327.255728 269.979311,346.615373 299.108637,332.634099 C328.233125,318.655589 349.148703,276.632274 345.82256,238.777006 C342.495034,200.9169 316.18657,181.564858 287.062083,195.543368 M294.018505,272.460771 L297.167696,240.164973 L305.261172,236.281017 L299.665068,286.93834 L291.522515,290.846489 L281.300777,263.953946 L276.391053,298.109121 L268.100579,302.088466 L254.415837,260.684483 L262.80792,256.656753 L271.240784,283.326724 L275.991529,250.328648 L284.081549,246.446075 L294.018505,272.460771 M322.403389,277.03871 C315.561018,280.322689 308.905967,276.883877 307.953468,266.04419 C307.040368,255.657251 312.404223,246.182029 318.848453,243.088827 C326.541022,239.396338 331.826078,243.289971 332.739178,253.67691 C332.858759,255.037919 332.891937,256.580028 332.855994,256.801909 L315.575533,265.095147 C316.042797,268.657687 318.819421,270.029756 321.766085,268.615523 C324.515752,267.296678 325.914087,264.867737 326.391028,262.000563 L332.93894,261.29552 C332.231132,267.450129 328.696241,274.018777 322.403389,277.03871 M319.631603,250.833238 C316.4361,252.367052 315.104122,256.187416 315.163567,258.659213 L325.103288,253.888423 C324.788092,251.468468 323.228012,249.106574 319.631603,250.833238" id="we" fill="url(#radialGradient-11)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
