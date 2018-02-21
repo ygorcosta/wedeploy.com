@@ -259,8 +259,6 @@ By putting `localhost` as the health check URL, we will ping the IP of your serv
 
 <aside>
 
-###### <span class="icon-16-alert"></span> Attention
-
 If you want your custom health check to access a specific port in your application, you can add it to the url of your `healthCheck` property.
 
 ```application/json
