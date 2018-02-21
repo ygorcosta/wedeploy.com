@@ -257,6 +257,24 @@ The default health check simply looks to see if the service is running, but cert
 
 By putting `localhost` as the health check URL, we will ping the IP of your service, waiting for a `200` response. You could also specify a specific page or path to test like `localhost/blog/`.
 
+<aside>
+
+###### <span class="icon-16-alert"></span> Attention
+
+If you want your custom health check to access a specific port in your application, you can add it to the url of your `healthCheck` property.
+
+```application/json
+{
+  "id": "ui",
+  "port": 3000,
+  "healthCheck": {
+    "url": "localhost:3000"
+  }
+}
+```
+
+</aside>
+
 For more complex health checks, you can add commands to check the uptime of your service.
 
 ```application/json
