@@ -1,21 +1,29 @@
 'use strict';
 
+import {isServerSide} from 'metal';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import {addClasses,hasClass} from 'metal-dom';
 import {dispatchGlobalState} from './utils';
 import moment from 'moment';
 
-import templates from './TutorialSidebar.soy';
+import templates from './TutorialSidebar.soy.js';
 
 class TutorialSidebar extends Component {
+	attached() {
+		if (isServerSide()) {
+			return;
+		}
 
-	syncPage(val) {
-		this.navigationToggler = page.navigationToggler;
+		this.calculateTimeRemaining();
 	}
 
-	attached() {
-		this.calculateTimeRemaining();
+	syncPage(val) {
+		if (isServerSide()) {
+			return;
+		}
+
+		this.navigationToggler = electric.page.navigationToggler;
 	}
 
 	calculateTimeRemaining() {
@@ -45,12 +53,12 @@ class TutorialSidebar extends Component {
 
 		let milliseconds = (totalTime - timeRead);
 		let eventDuration = moment.duration(milliseconds, 'seconds');
-		page.timeRemaining = this.humanizeDuration(eventDuration);
+		electric.page.timeRemaining = this.humanizeDuration(eventDuration);
 		dispatchGlobalState();
 	}
 
 	closeNavigationMenu(e) {
-		page.navigationToggler = false;
+		electric.page.navigationToggler = false;
 		dispatchGlobalState();
 	}
 

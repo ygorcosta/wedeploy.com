@@ -3,14 +3,14 @@
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 
-import templates from './TutorialTopbar.soy';
+import templates from './TutorialTopbar.soy.js';
 import {dispatchGlobalState} from './utils';
 
 class TutorialTopbar extends Component {
 	openNavigationMenu(e) {
 		e.preventDefault();
 
-		page.navigationToggler = true;
+		electric.page.navigationToggler = true;
 		dispatchGlobalState();
 	}
 };

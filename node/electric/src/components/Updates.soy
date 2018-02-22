@@ -1,9 +1,10 @@
 {namespace Updates}
 
 /**
- * @param updates
  */
 {template .render}
+  {@param updates: ?}
+
 	<div class="updates">
 		<div class="container">
 			{call .updates data="all" /}
@@ -12,9 +13,10 @@
 {/template}
 
 /**
- * @param updates
  */
 {template .updates}
+  {@param updates: ?}
+
 	<div class="row">
 		<div class="col-lg-10 col-lg-offset-3 col-md-16 col-md-offset-0">
 			{if $updates}
@@ -39,9 +41,10 @@
 {/template}
 
 /**
- * @param update
  */
 {template .features}
+  {@param update: ?}
+
 	<div class="row">
 		<div class="col-xs-16 col-sm-16 update-feature">
 			<div class="feature-topper">

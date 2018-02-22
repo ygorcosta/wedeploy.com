@@ -1,9 +1,10 @@
 {namespace guide}
 
 /**
- * @param site
  */
 {template .render}
+  {@param site: ?}
+
   <div class="main guide">
     <main class="content">
       <div class="docs">
@@ -28,10 +29,11 @@
 {/template}
 
 /**
- * @param page
- * @param content
  */
 {template .guide}
+  {@param page: ?}
+  {@param content: ?}
+
   <header>
     <div class="container-hybrid">
       <h1 class="title">{$page.headerTitle} Guide</h1>

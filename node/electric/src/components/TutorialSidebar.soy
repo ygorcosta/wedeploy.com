@@ -1,10 +1,11 @@
 {namespace TutorialSidebar}
 
 /**
- * @param page
- * @param? navigationToggler
  */
 {template .render}
+  {@param page: ?}
+  {@param? navigationToggler: ?}
+
 	<div class="sidebar-navigation{$navigationToggler ? ' open' : ''}">
 		<div class="sidebar-navigation-fade" data-onclick="closeNavigationMenu"></div>
 		<nav class="sidebar">
@@ -19,9 +20,10 @@
 {/template}
 
 /**
- * @param page
  */
 {deltemplate ElectricNavigation.anchor variant="'tutorial'"}
+  {@param page: ?}
+
 	<a class="sidebar-link{$page.active ? ' sidebar-link-selected' : ''}" href="{$page.url}" data-time="{$page.time}">
 		<span class="before"></span>
 		<span class="tutorial-step">{$page.weight}</span>

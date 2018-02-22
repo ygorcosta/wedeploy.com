@@ -1,9 +1,10 @@
 {namespace termsPage}
 
 /**
- * @param content
  */
 {template .render}
+  {@param content: ?}
+
 	{call main.render data="all"}
 		{param elementClasses: 'blog' /}
 		{param content kind="html"}
