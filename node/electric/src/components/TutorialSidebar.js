@@ -1,5 +1,6 @@
 'use strict';
 
+import {isServerSide} from 'metal';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import {addClasses,hasClass} from 'metal-dom';
@@ -9,13 +10,16 @@ import moment from 'moment';
 import templates from './TutorialSidebar.soy.js';
 
 class TutorialSidebar extends Component {
+	attached() {
+		if (isServerSide()) {
+			return;
+		}
+
+		this.calculateTimeRemaining();
+	}
 
 	syncPage(val) {
 		this.navigationToggler = page.navigationToggler;
-	}
-
-	attached() {
-		this.calculateTimeRemaining();
 	}
 
 	calculateTimeRemaining() {

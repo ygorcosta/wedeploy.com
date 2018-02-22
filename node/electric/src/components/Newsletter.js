@@ -7,7 +7,6 @@ import Toast from 'metal-toast';
 import templates from './Newsletter.soy.js';
 
 class Newsletter extends Component {
-
 	subscribeToNewsletter(event) {
 		event.preventDefault();
 
@@ -45,7 +44,6 @@ class Newsletter extends Component {
 			visible: true
 		});
 	}
-
 };
 
 Soy.register(Newsletter, templates);

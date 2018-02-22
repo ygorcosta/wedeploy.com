@@ -7,7 +7,6 @@ import Toast from 'metal-toast';
 import templates from './Feedback.soy.js';
 
 class Feedback extends Component {
-
 	sendFeedback(event) {
 		this.sendFeedbackToWeDeploy(event.target.dataset.feedback == 'true')
 			.then((result) => {
