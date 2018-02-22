@@ -4,6 +4,10 @@ description: "Check out the latest releases of the WeDeploy"
 layout: "updates"
 updates:
  -
+  version: dxp-sp6-20180220
+  date: Feb 20th, 2018
+  description: Allow adding shared libraries to Tomcat's bundle, under `lib/ext` directory.
+ -
   version: dxp-sp6-20180130
   date: Jan 30th, 2018
   description: Minor improvements in the release process
