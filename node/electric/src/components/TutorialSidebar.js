@@ -20,6 +20,9 @@ class TutorialSidebar extends Component {
 
 	syncPage(val) {
 		this.navigationToggler = page.navigationToggler;
+		if (isServerSide()) {
+			return;
+		}
 	}
 
 	calculateTimeRemaining() {
