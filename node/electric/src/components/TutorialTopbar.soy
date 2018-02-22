@@ -1,11 +1,12 @@
 {namespace TutorialTopbar}
 
 /**
- * @param? elementClasses
- * @param? logo
- * @param page
  */
 {template .render}
+  {@param page: ?}
+  {@param? elementClasses: ?}
+  {@param? logo: ?}
+
 	<nav class="topbar{$elementClasses ? ' ' + $elementClasses : ''}">
 		<button class="btn btn-transparent btn-icon" type="button" data-onclick="openNavigationMenu">
 			<span class="icon-16-menu"></span>

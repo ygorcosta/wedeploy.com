@@ -8,9 +8,10 @@ weight: 1
 {namespace pageBlogIndex}
 
 /**
- * @param site
  */
 {template .render}
+  {@param site: ?}
+
   {call main.render data="all"}
     {param content kind="html"}
       <div class="blog">
@@ -21,9 +22,10 @@ weight: 1
 {/template}
 
 /**
- * @param site
  */
 {template .allPosts}
+  {@param site: ?}
+
   <div class="posts-list posts-list-all">
     <div class="container">
       {foreach $childId in $site.index.children['blog'].childIds}
