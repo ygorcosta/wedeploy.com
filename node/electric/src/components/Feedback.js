@@ -4,7 +4,7 @@ import Component from 'metal-component';
 import Soy from 'metal-soy';
 import Toast from 'metal-toast';
 
-import templates from './Feedback.soy';
+import templates from './Feedback.soy.js';
 
 class Feedback extends Component {
 

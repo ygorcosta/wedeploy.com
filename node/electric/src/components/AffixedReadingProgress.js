@@ -6,7 +6,7 @@ import ElectricReadingProgress from 'electric-base-components';
 import position from 'metal-position';
 import Soy from 'metal-soy';
 
-import templates from './AffixedReadingProgress.soy';
+import templates from './AffixedReadingProgress.soy.js';
 
 class AffixedReadingProgress extends ElectricReadingProgress {
 

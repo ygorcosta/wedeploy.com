@@ -6,7 +6,7 @@ import {addClasses,hasClass} from 'metal-dom';
 import {dispatchGlobalState} from './utils';
 import moment from 'moment';
 
-import templates from './TutorialSidebar.soy';
+import templates from './TutorialSidebar.soy.js';
 
 class TutorialSidebar extends Component {
 
