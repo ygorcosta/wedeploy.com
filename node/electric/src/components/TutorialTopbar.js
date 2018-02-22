@@ -10,7 +10,7 @@ class TutorialTopbar extends Component {
 	openNavigationMenu(e) {
 		e.preventDefault();
 
-		page.navigationToggler = true;
+		electric.page.navigationToggler = true;
 		dispatchGlobalState();
 	}
 };

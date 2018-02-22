@@ -9,8 +9,8 @@ export function dispatchGlobalState() {
 		try {
 			window.electricPageComponent.setState({
 				element: '#pageComponent',
-				page: page,
-				site: data.site
+				page: electric.page,
+				site: electric.data.site
 			});
 		} catch(error){}
 	}

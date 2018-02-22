@@ -19,10 +19,11 @@ class TutorialSidebar extends Component {
 	}
 
 	syncPage(val) {
-		this.navigationToggler = page.navigationToggler;
 		if (isServerSide()) {
 			return;
 		}
+
+		this.navigationToggler = electric.page.navigationToggler;
 	}
 
 	calculateTimeRemaining() {
@@ -52,12 +53,12 @@ class TutorialSidebar extends Component {
 
 		let milliseconds = (totalTime - timeRead);
 		let eventDuration = moment.duration(milliseconds, 'seconds');
-		page.timeRemaining = this.humanizeDuration(eventDuration);
+		electric.page.timeRemaining = this.humanizeDuration(eventDuration);
 		dispatchGlobalState();
 	}
 
 	closeNavigationMenu(e) {
-		page.navigationToggler = false;
+		electric.page.navigationToggler = false;
 		dispatchGlobalState();
 	}
 
