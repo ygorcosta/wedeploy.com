@@ -4,25 +4,20 @@ description: "In this tutorial, you'll learn how to build and deploy a chat app 
 tutorialTitle: "Zero to Production: Developing with WeDeploy"
 url: "/tutorials/workshop/get-started/"
 hidden: true
+layout: false
 ---
 
 {namespace workshopTutorials}
 
 /**
- *
  */
 {template .render}
-{/template}
+  {@param page: ?}
 
-/**
- * @param page
- */
-{template .soyweb}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; URL='{$page.url}'">
-</head>
-</html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; URL='{$page.url}'">
+  </head>
+  </html>
 {/template}

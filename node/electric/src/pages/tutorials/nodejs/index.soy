@@ -4,25 +4,20 @@ description: "In this section, you'll learn how to deploy an application using N
 tutorialTitle: "Getting started with Node.js"
 url: "/tutorials/nodejs/get-started/"
 hidden: true
+layout: false
 ---
 
 {namespace nodejsTutorials}
 
 /**
- *
  */
 {template .render}
-{/template}
+  {@param page: ?}
 
-/**
- * @param page
- */
-{template .soyweb}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; URL='{$page.url}'">
-</head>
-</html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; URL='{$page.url}'">
+  </head>
+  </html>
 {/template}

@@ -4,25 +4,20 @@ description: "In this section, you'll learn how search for locations based on th
 tutorialTitle: "Getting started with WeDeploy geolocation search"
 url: "/tutorials/geolocation-search/get-started/"
 hidden: true
+layout: false
 ---
 
 {namespace geolocationSearchTutorials}
 
 /**
- *
  */
 {template .render}
-{/template}
+  {@param page: ?}
 
-/**
- * @param page
- */
-{template .soyweb}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; URL='{$page.url}'">
-</head>
-</html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; URL='{$page.url}'">
+  </head>
+  </html>
 {/template}

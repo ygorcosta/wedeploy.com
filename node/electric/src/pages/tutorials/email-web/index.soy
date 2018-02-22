@@ -4,25 +4,21 @@ description: "In this section, you'll learn how to send an email on the web usin
 tutorialTitle: "Getting started with WeDeploy Email on the web"
 url: "/tutorials/email-web/get-started/"
 hidden: true
+layout: false
+
 ---
 
 {namespace emailWebTutorials}
 
 /**
- *
  */
 {template .render}
-{/template}
+  {@param page: ?}
 
-/**
- * @param page
- */
-{template .soyweb}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; URL='{$page.url}'">
-</head>
-</html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; URL='{$page.url}'">
+  </head>
+  </html>
 {/template}

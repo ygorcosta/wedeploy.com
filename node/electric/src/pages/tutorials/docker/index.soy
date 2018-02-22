@@ -4,25 +4,20 @@ description: "In this section, you'll learn how to deploy an application using D
 tutorialTitle: "Getting started with Docker"
 url: "/tutorials/docker/get-started/"
 hidden: true
+layout: false
 ---
 
 {namespace dockerTutorials}
 
 /**
- *
  */
 {template .render}
-{/template}
+  {@param page: ?}
 
-/**
- * @param page
- */
-{template .soyweb}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; URL='{$page.url}'">
-</head>
-</html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; URL='{$page.url}'">
+  </head>
+  </html>
 {/template}
