@@ -124,8 +124,6 @@ myservice
 
 Under the hood, that file will be copied into the `$LIFERAY_HOME` folder and automatically applied on startup.
 
-</article>
-
 <aside>
 
 ###### <span class="icon-16-star"></span> Pro Tip
@@ -140,6 +138,8 @@ redirect.url.security.mode=domain
 Otherwise, Liferay DXP won't calculate the URLs properly under our load balancer with HTTPS protocol enabled.
 
 </aside>
+
+</article>
 
 ## What's next?
 
