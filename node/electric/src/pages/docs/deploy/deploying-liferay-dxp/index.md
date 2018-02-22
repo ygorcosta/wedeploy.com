@@ -141,6 +141,25 @@ Otherwise, Liferay DXP won't calculate the URLs properly under our load balancer
 
 </article>
 
+<article id="7">
+
+## Shared libraries
+
+Sometimes you want to make visible several Java libraries to both Tomcat internal classes and to all web applications. This is the case for JDBC drivers, and portlet or servelt API's, as example. For this reason Liferay DXP adds the `lib/ext` directory to Tomcat's **Common** classloader, and puts there several libraries for common use. WeDeploy allows you to upload your shared libraries to your Liferay DXP service simply including them into a `shared-libs` directory present next to the wedeploy.json file.
+
+For example, if you wanted to add an Oracle JDBC driver to your Liferay DXP instance, this is how your directory could look like:
+
+```xml
+myservice
+├── shared-libs
+│   └── ojdbc6.jar
+└── wedeploy.json
+```
+
+Under the hood, those files will be copied into the `$CATALINA_HOME/lib/ext` folder and automatically loaded on startup.
+
+</article>
+
 ## What's next?
 
 Now you can start building your Liferay DXP Trial application.
