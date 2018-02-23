@@ -46,6 +46,7 @@ export default class Index extends Component {
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<meta name="google-site-verification" content="-IGQZ8MP0xKLi1s43kLfzb-QRKs_jlbk0hrTusIZaK0">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="og:description" content="Forget about infrastructure. Dedicate your time to what really matters: building great apps.">
 	<meta property="og:image" content="https://wedeploy.com/images/open_graph.png">
