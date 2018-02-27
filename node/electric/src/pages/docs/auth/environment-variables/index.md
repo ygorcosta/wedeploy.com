@@ -43,4 +43,30 @@ Here's a list of all the environment variables you can use with this service.
 
 </div>
 
+<aside>
+
+###### <span id="securityFields" class="icon-16-alert"></span> Attention
+
+When using `WEDEPLOY_AUTH_SECURE_FIELDS`, we will hide these fields in any request that does not contain your master token. We recommend adding these secure fields:
+
+- `password`
+- `providers`
+- `resetKey`
+- `supportedScopes`
+
+Please remember that supportedScopes works differently than the rest. To learn more, see our [Data Validation docs](/docs/data/configuring-data/#5).
+
+```application/json
+{
+	"id": "auth",
+	"image": "wedeploy/auth:2.0.0",
+	"env": {
+		"WEDEPLOY_AUTH_SECURE_FIELDS": "providers,password,resetKey,supportedScopes",
+		"WEDEPLOY_AUTH_PASSWORD": "true"
+	}
+}
+```
+</aside>
+
+
 </article>

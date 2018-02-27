@@ -243,6 +243,38 @@ $auth !== null && $auth.id === $params.id
 
 </article>
 
+<article id="5">
+
+## Limiting Access by Scope
+
+Controlling who gets to see, update, create or delete data is a very important part of your application. For this, we provide you with `supportedScopes` so you can set what scopes an authenticated user must have in order to make requests to your data collections. All you have to do is add the scopes to your path authentication.
+
+```application/json
+"auth":{
+	"scopes": ["scope"],
+	"validator": "$auth !== null"
+}
+```
+
+This is what it will look like in your `api.json`.
+
+```application/json
+[
+	{
+		"path": "/movies/*",
+		"method": "POST",
+		"auth":{
+			"scopes": ["scope"],
+			"validator": "$auth !== null"
+		}
+	}
+]
+```
+
+Learn more about how to [add user scopes](/docs/auth/manage-users/#9).
+
+</article>
+
 ## What's next?
 
 Now that you have configured, you can start [saving data](/docs/data/saving-data/).

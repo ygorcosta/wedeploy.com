@@ -124,7 +124,7 @@ WeDeploy
 
 </article>
 
-<article id="get-all-users">
+<article id="4">
 
 ## Get all users
 
@@ -159,7 +159,7 @@ WeDeploy
 
 </article>
 
-<article id="4">
+<article id="5">
 
 ## Delete user
 
@@ -214,9 +214,13 @@ WeDeploy
 
 </article>
 
-<article id="5">
+<article id="6">
 
-## Update currentUser
+## Update user
+
+There are two ways to update a user.
+
+**Update currentUser**
 
 ```javascript
 var currentUser = WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').currentUser;
@@ -236,11 +240,7 @@ currentUser
 	});
 ```
 
-</article>
-
-<article id="update-user">
-
-## Update user
+**Update user by id**
 
 ```javascript
 WeDeploy
@@ -283,7 +283,7 @@ WeDeploy
 
 </article>
 
-<article id="6">
+<article id="7">
 
 ## Send a password reset email
 
@@ -320,7 +320,7 @@ WeDeploy
 
 </article>
 
-<article id="7">
+<article id="8">
 
 ## Sign-out
 
@@ -354,6 +354,61 @@ WeDeploy
 ```
 
 </article>
+
+<article id="9">
+	
+## Set User Scopes
+
+User scopes allow you to choose what kind of role or access you provide to each user. This could include things like grouping team users or providing admin access to your app. In order to setup user scopes, you must declare a `supportScope` when creating or updating a user.
+
+**Creating user with user roles**
+
+```javascript
+WeDeploy
+	.auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .auth('your-master-token')
+	.createUser({
+		email: 'user@domain.com',
+		password: 'abc',
+		supportedScopes: ["someScope"]
+	})
+	.then(function(user) {
+		// Successfully created.
+	})
+	.catch(function(err) {
+		// Not created.
+	});
+```
+
+**Updating user with user roles**
+
+```javascript
+WeDeploy
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .auth('your-master-token')
+  .updateUser(userId, {
+    password: "password",
+    email: "eleven@hawkinslabs.com",
+    name: "Eleven",
+    supporteScopes: ["friends", "dont", "lie"]
+  })
+  .then(function() {
+    // Successfully updated.
+  })
+  .catch(function(err) {
+    // Not updated.
+  });
+```
+
+</article>
+
+<aside>
+
+###### <span class="icon-16-alert"></span> Attention
+
+When setting more than one value to the list of `supportedScopes`, it works as an `AND` logical operator.
+
+</aside>
 
 ## What's next?
 
