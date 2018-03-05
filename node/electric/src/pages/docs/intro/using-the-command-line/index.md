@@ -14,12 +14,6 @@ weight: 4
 
 ## Install
 
-<aside>
-
-Check for new releases to our CLI on our [Updates page](/updates/cli/).
-
-</aside>
-
 If you use a Unix-like system such as macOS or Linux, open your terminal and run:
 
 ```xml
@@ -37,6 +31,12 @@ curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -fsSL | sudo bash
 If you use Windows, check the [Windows amd64 installer](https://bin.equinox.io/c/8WGbGy94JXa/we-stable-windows-amd64.msi). For other systems, see a list of [all builds available](https://dl.equinox.io/wedeploy/we/stable).
 
 For deploying services you must have [Git](https://git-scm.com/) installed on your system ([download](https://git-scm.com/download/)).
+
+<aside>
+
+Check for new releases to our CLI on our [Updates page](/updates/cli/).
+
+</aside>
 
 </article>
 

@@ -16,12 +16,6 @@ weight: 1
 
 Our Data service enables you to store data securely to a cloud database, make complex queries instantly, and consume information in real-time.
 
-<aside>
-
-Check for new releases to our Data Image on our [Updates page](/updates/services/data).
-
-</aside>
-
 </article>
 
 <article id="2">
@@ -84,6 +78,14 @@ For example, if we had a collection of movies and wanted to reference the rating
 ```text
 https://<serviceID>-<projectID>.wedeploy.io/movies/episode_iv/rating
 ```
+
+</article>
+
+<article id="5">
+
+## Updates
+
+Check for new releases to our Data Service on our [Updates page](/updates/services/data).
 
 </article>
 

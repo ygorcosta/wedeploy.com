@@ -16,12 +16,6 @@ weight: 1
 
 Our Auth service allows you to avoid the headache of operating your own user management system. Features like creating accounts, resetting passwords, and updating profiles are easily accomplished with a few lines of code.
 
-<aside>
-
-Check for new releases to our Auth Image on our [Updates page](/updates/services/auth).
-
-</aside>
-
 </article>
 
 <article id="2">
@@ -64,6 +58,14 @@ Below is an example of a `wedeploy.json` for an Auth container.
 ```
 
 The `id` for your services are uniquely determined by you.
+
+</article>
+
+<article id="4">
+
+## Updates
+
+Check for new releases to our Auth Service on our [Updates page](/updates/services/auth).
 
 </article>
 

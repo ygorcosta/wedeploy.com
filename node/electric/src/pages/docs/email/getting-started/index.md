@@ -16,12 +16,6 @@ weight: 1
 
 Our Email service enables you to send customized emails to your users and check on their status with just a few lines of code.
 
-<aside>
-
-Check for new releases to our Email Image on our [Updates page](/updates/services/email).
-
-</aside>
-
 </article>
 
 <article id="2">
@@ -64,6 +58,14 @@ Below is an example of a `wedeploy.json` for an Email container.
 ```
 
 The `id` for your services are uniquely determined by you.
+
+</article>
+
+<article id="4">
+
+## Updates
+
+Check for new releases to our Email Service on our [Updates page](/updates/services/email).
 
 </article>
 

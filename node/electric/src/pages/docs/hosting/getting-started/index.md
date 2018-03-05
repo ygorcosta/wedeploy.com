@@ -16,12 +16,6 @@ weight: 1
 
 Our Hosting service allows you to deliver HTML, CSS, JavaScript, or any other static files using powerful static hosting. It's very fast and will save you a lot of time.
 
-<aside>
-
-Check for new releases to our Hosting Image on our [Updates page](/updates/services/hosting).
-
-</aside>
-
 </article>
 
 <article id="2">
@@ -62,6 +56,14 @@ Below is an example of a `wedeploy.json` for a Hosting container.
 ```
 
 The `id` for your services are uniquely determined by you.
+
+</article>
+
+<article id="5">
+
+## Updates
+
+Check for new releases to our Hosting Service on our [Updates page](/updates/services/hosting).
 
 </article>
 
