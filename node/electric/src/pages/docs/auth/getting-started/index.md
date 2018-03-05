@@ -37,7 +37,7 @@ Want to see the process of deploying WeDeploy Auth step by step?
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="https://github.com/wedeploy/boilerplate-auth" target="_blank">source code demo</a>.
+	or see a <a href="https://github.com/wedeploy-examples/auth-web-example" target="_blank">source code example</a>.
 </div>
 
 Check also the <a href="/tutorials/auth-android/" target="_blank">tutorial for Android</a> and the <a href="/tutorials/auth-ios/" target="_blank">tutorial for iOS</a>.

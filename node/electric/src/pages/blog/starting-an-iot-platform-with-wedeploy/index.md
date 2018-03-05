@@ -42,7 +42,7 @@ In order to accept metrics from remote applications, I decided to create a REST 
 
 Then, I chose the framework to create the API. As I'm a Java developer, I chose [Spring Boot](https://projects.spring.io/spring-boot/) to build it, which lets you create tiny applications and define REST resources in an extremely easy manner.
 
-So I created a project on the WeDeploy dashboard, and added a [WeDeploy Java](/docs/other/java/) service named "api". I locally cloned [the boilerplate-java project from Github](https://github.com/wedeploy/boilerplate-java), and started coding my REST API's there.
+So I created a project on the WeDeploy dashboard, and added a [WeDeploy Java](/docs/other/java/) service named "api". I locally cloned [the java example project on Github](https://github.com/wedeploy-examples/java-example), and started coding my REST API's there.
 
 Of course you can do this step with other technology you are more familiar with, and WeDeploy offers several server-side technologies to accomplish this including [NodeJS](/docs/other/nodejs/) and [Ruby](/docs/other/ruby/).
 
@@ -94,7 +94,7 @@ public class SensorsRestController {
 
 ##### Defining the save service
 
-Our API service needs to store the metrics in the [WeDeploy Data](/docs/data) service so I added a new service to the project on the WeDeploy dashboard, naming it `data`. Again, I cloned the [boilerplate-data Github repository](https://github.com/wedeploy/boilerplate-data) at the same level of my API service, and voilà! I have two services under my WeDeploy project.
+Our API service needs to store the metrics in the [WeDeploy Data](/docs/data) service so I added a new service to the project on the WeDeploy dashboard, naming it `data`. Again, I cloned the [WeDeploy Data example on Github](https://github.com/wedeploy-examples/data-example) at the same level of my API service, and voilà! I have two services under my WeDeploy project.
 
 Here it is the `container.json` file for this new data service:
 

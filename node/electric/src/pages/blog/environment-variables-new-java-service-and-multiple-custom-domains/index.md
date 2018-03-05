@@ -21,7 +21,7 @@ An important piece of any kind of deployment is setting up environment variables
 
 #### New Java Service
 
-As part of our mission to create a very broad platform for all developers, we're introducing a new Java service. If you're interested, check the boilerplate examples we created using [Gradle](https://github.com/wedeploy/boilerplate-java), [Maven](https://github.com/wedeploy/boilerplate-java/tree/maven), and [Ant](https://github.com/wedeploy/boilerplate-java/tree/ant).
+As part of our mission to create a very broad platform for all developers, we're introducing a new Java service. If you're interested, check the examples we created using [Gradle](https://github.com/wedeploy-examples/java-example) and [Maven](https://github.com/wedeploy-examples/java-maven-example).
 
 <figure>
 	<img class="original-size" src="/images/blog/post-2--1.png" srcset="/images/blog/post-2--1.png 1x, /images/blog/post-2--1-2x.png 2x" alt="New Java Service">

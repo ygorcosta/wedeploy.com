@@ -27,7 +27,7 @@ Even though this is an alpha version and problems are somewhat expected, we reco
 
 #### Ruby Service
 
-Our mission is to create a platform for all kinds of developers. With that in mind, we're introducing a new Ruby service. You can get more information by [reading the docs](/docs/other/ruby/) or checking this [boilerplate](https://github.com/wedeploy/boilerplate-ruby). Go to [Console](https://console.wedeploy.com) to start using Ruby Service.
+Our mission is to create a platform for all kinds of developers. With that in mind, we're introducing a new Ruby service. You can get more information by [reading the docs](/docs/other/ruby/) or checking this [example](https://github.com/wedeploy-examples/ruby-example). Go to [Console](https://console.wedeploy.com) to start using Ruby Service.
 
 <figure>
 	<img class="original-size" src="/images/blog/post-1--1.png" srcset="/images/blog/post-1--1.png 1x, /images/blog/post-1--1-2x.png 2x" alt="Ruby Service">

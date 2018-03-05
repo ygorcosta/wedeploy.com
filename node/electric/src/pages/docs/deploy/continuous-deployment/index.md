@@ -38,7 +38,7 @@ This will immediately start building and deploying your application. In the end,
 
 <aside>
 
-If you don't have a project ready to deploy, you can fork this [GitHub repository](https://github.com/wedeploy/boilerplate-hosting) and connect to it.
+If you don't have a project ready to deploy, you can fork this [GitHub repository](https://github.com/wedeploy-examples/hosting-example) and connect to it.
 
 </aside>
 

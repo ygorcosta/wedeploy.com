@@ -31,7 +31,7 @@ Want to see the process of deploying Java step by step?
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="https://github.com/wedeploy/boilerplate-java" target="_blank">source code demo</a>.
+	or see a <a href="https://github.com/wedeploy-examples/java-example" target="_blank">source code example</a>.
 </div>
 
 </article>

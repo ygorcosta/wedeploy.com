@@ -59,7 +59,7 @@ To enable ES2015 modules support, you have to specify at least v8.5 of Node.js a
 }
 ```
 
-To show an example of their usage, we created a sample project. You may see it live [here](https://es2015modules.wedeploy.io/). The full [source code](https://github.com/wedeploy/demo-nodejs/tree/es2015-modules) is available on Github.
+To show an example of their usage, we created a sample project. You may see it live [here](https://es2015modules.wedeploy.io/). The full [source code](https://github.com/wedeploy-examples/nodejs-example/tree/es2015-modules) is available on Github.
 
 The project shows how to import the three kind of modules: built-in Node modules, locally created modules and npm modules:
 

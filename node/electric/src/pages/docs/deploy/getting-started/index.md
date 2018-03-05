@@ -46,7 +46,7 @@ This will immediately start uploading your files. Once that's finished, WeDeploy
 
 <aside>
 
-If you don't have a project ready to deploy, you can download this [simple project](https://github.com/wedeploy/boilerplate-hosting/archive/master.zip) and run the `we deploy` command inside that folder.
+If you don't have a project ready to deploy, you can download this [simple project](https://github.com/wedeploy-examples/hosting-example/master.zip) and run the `we deploy` command inside that folder.
 
 </aside>
 

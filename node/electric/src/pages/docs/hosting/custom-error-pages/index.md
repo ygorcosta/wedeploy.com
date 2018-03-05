@@ -46,7 +46,7 @@ one can tell `wedeploy/hosting` to look for error files at `custom-error-pages` 
 
 <aside>
 
-**Check the [boilerplate-hosting](https://github.com/wedeploy/boilerplate-hosting/tree/master/_error) for a practical example.**
+**Check the [hosting example](https://github.com/wedeploy-examples/hosting-example/tree/master/_error) for a practical example.**
 
 </aside>
 

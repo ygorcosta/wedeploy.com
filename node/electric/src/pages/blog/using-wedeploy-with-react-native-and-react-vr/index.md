@@ -14,7 +14,7 @@ layout: "blog"
 As a fundamental player in today's development around the world, JavaScript is a key member of that WeDeploy family, but until recently, our API Client only supported Web and Node.js applications. That's why we are excited to announce that **[React Native](https://facebook.github.io/react-native/) and [React VR](https://facebook.github.io/react-vr/) are joining the list too**!
 
 <figure>
-	<a href="https://github.com/wedeploy/boilerplate-data/tree/react-native" target="_blank">
+	<a href="https://github.com/wedeploy-examples/data-react-native-example" target="_blank">
 		<img src="/images/blog/post-9--0.png" alt="React Native">
 	</a>
 </figure>
@@ -27,7 +27,7 @@ Also, [React VR](https://facebook.github.io/react-vr) allows you to step into th
 
 There is no difference between the usage of the JavaScript API for Web and React Native or React VR. The same API calls for [Data](/docs/data/saving-data/), [Auth](/docs/auth/manage-users/), and [Email](/docs/email/sending-email/) are available when your app is running in React Native or React VR environment too. There are no API nuances - the same code you would write for a Web application, will run successfully on React Native and React VR too.
 
-Here is [an example taken from the boilerplate application](https://github.com/wedeploy/boilerplate-data/blob/43e5d19b49ac3d5b59f7ec646f36aadd1cecc616/TodoApp/pages/list-items.js#L24-L36):
+Here is [an snippet taken from this example](https://github.com/wedeploy-examples/data-react-native-example/blob/master/TodoApp/pages/list-items.js#L24-L36):
 
 ```text/javascript
 WeDeploy
@@ -49,7 +49,7 @@ The above code establishes a connection with the Data Service and retrieves the 
 
 #### Building an application
 
-To help you start building applications, we created an example To-Do List application. You may check the code [here](https://github.com/wedeploy/boilerplate-data/tree/react-native). The application is short but powerful enough to showcase a few fundamental things:
+To help you start building applications, we created an example To-Do List application. You may check the code [here](https://github.com/wedeploy-examples/data-react-native-example). The application is short but powerful enough to showcase a few fundamental things:
 
 1. Instantiating WeDeploy
 2. Working with the data service

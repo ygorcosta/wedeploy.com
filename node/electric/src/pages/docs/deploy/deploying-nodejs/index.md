@@ -31,7 +31,7 @@ Want to see the process of deploying Node.js step by step?
 </div>
 
 <div class="guide-aux-cta">
-	or see a <a href="https://github.com/wedeploy/boilerplate-nodejs" target="_blank">source code demo</a>.
+	or see a <a href="https://github.com/wedeploy-examples/nodejs-example" target="_blank">source code example</a>.
 </div>
 
 </article>
