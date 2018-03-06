@@ -25,9 +25,9 @@ weight: 4
 Want to see the process of deploying Node.js step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/nodejs/" target="_blank">
-		<span class="icon-16-external"></span>Try the tutorial
-	</a>
+  <a class="btn btn-accent btn-sm" href="/tutorials/nodejs/" target="_blank">
+    <span class="icon-16-external"></span>Try the tutorial
+  </a>
 </div>
 
 <div class="guide-aux-cta">
@@ -50,7 +50,7 @@ Below is an example of a `wedeploy.json` for a Node.js container. The `id` for y
 
 ```application/json
 {
-	"id": "myservice"
+  "id": "myservice"
 }
 ```
 
@@ -69,8 +69,8 @@ By default, we expose port `80` on Node.js services. If you want to designate a 
 
 ```application/json
 {
-	"id": "myservice",
-	"port": 3000
+  "id": "myservice",
+  "port": 3000
 }
 ```
 
@@ -86,7 +86,7 @@ You may add a fixed version:
 
 ```application/json
 "engines": {
-	"node": "8.6.0"
+  "node": "8.6.0"
 }
 ```
 
@@ -94,7 +94,7 @@ Or you can specify a range:
 
 ```application/json
 "engines": {
-	"node": ">=8.4 <8.6"
+  "node": ">=8.4 <8.6"
 }
 ```
 

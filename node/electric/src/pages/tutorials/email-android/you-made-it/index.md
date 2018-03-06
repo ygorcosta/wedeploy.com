@@ -8,13 +8,13 @@ weight: 8
 ---
 
 <div class="notfound">
-	<div class="notfound-icon">
-		<span class="icon-16-thumb-up"></span>
-	</div>
-	<p class="notfound-text">You made it!</p>
-	<p>Now discover what else you can do with WeDeploy.</p>
-	<ul class="checklist">
-		<li><a href="/tutorials/auth-android/get-started/">Auth on Android Tutorial</a></li>
-		<li><a href="/tutorials/data-android/get-started/">Data on Android Tutorial</a></li>
-	</ul>
+  <div class="notfound-icon">
+    <span class="icon-16-thumb-up"></span>
+  </div>
+  <p class="notfound-text">You made it!</p>
+  <p>Now discover what else you can do with WeDeploy.</p>
+  <ul class="checklist">
+    <li><a href="/tutorials/auth-android/get-started/">Auth on Android Tutorial</a></li>
+    <li><a href="/tutorials/data-android/get-started/">Data on Android Tutorial</a></li>
+  </ul>
 </div>

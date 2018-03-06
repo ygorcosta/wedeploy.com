@@ -7,13 +7,13 @@ import Soy from 'metal-soy';
 import templates from './SocialButtons.soy.js';
 
 class SocialButtons extends Component {
-	rendered() {
-		if (isServerSide()) {
-			return;
-		}
+  rendered() {
+    if (isServerSide()) {
+      return;
+    }
 
-		this.siteUrl = window.location.origin;
-	}
+    this.siteUrl = window.location.origin;
+  }
 };
 
 Soy.register(SocialButtons, templates);

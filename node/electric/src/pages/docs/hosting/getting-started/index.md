@@ -25,9 +25,9 @@ Our Hosting service allows you to deliver HTML, CSS, JavaScript, or any other st
 Want to see the process of deploying WeDeploy Hosting step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/hosting/" target="_blank">
-		<span class="icon-16-external"></span>Try the tutorial
-	</a>
+  <a class="btn btn-accent btn-sm" href="/tutorials/hosting/" target="_blank">
+    <span class="icon-16-external"></span>Try the tutorial
+  </a>
 </div>
 
 <div class="guide-aux-cta">
@@ -50,8 +50,8 @@ Below is an example of a `wedeploy.json` for a Hosting container.
 
 ```application/json
 {
-	"id": "ui",
-	"image": "wedeploy/hosting:@site.version.image.hosting@"
+  "id": "ui",
+  "image": "wedeploy/hosting:@site.version.image.hosting@"
 }
 ```
 

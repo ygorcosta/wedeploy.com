@@ -32,7 +32,7 @@ The easiest way to configure your custom domain, is to add two or more of our We
 <aside>
 
 **Note:** When changing name servers, it can take a few hours to complete and you will be unable to complete the custom domain configuration on WeDeploy until this setup is complete. If you receive an error when trying to add a custom domain after recently updating the name servers, please try again later.
-  
+
 </aside>
 
 ![Custom Domains](/images/docs/intro/custom-domains--settings.png)

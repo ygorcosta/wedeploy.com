@@ -85,11 +85,11 @@ By default, all requests returns a promise like below.
 
 ```swift
 WeDeploy
-	.data("https://<serviceID>-<projectID>.wedeploy.io")
-	.get(resourcePath: "movies")
-	.then { movie -> Void in
-		print(movie)
-	}
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
+  .get(resourcePath: "movies")
+  .then { movie -> Void in
+    print(movie)
+  }
 ```
 
 You are also able to return a callback or observable. These two methods are available:
@@ -97,25 +97,25 @@ You are also able to return a callback or observable. These two methods are avai
 ```swift
 // toCallback converts a promise into a callback
 WeDeploy
-	.data("https://<serviceID>-<projectID>.wedeploy.io")
-	.get(resourcePath: "movies")
-	.toCallback { movies, error in
-		// here you can check the error or the response
-	}
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
+  .get(resourcePath: "movies")
+  .toCallback { movies, error in
+    // here you can check the error or the response
+  }
 
 // toObservable converts a promise into an observable
 WeDeploy
-	.data("https://<serviceID>-<projectID>.wedeploy.io")
-	.get(resourcePath: "movies")
-	.toObservable()
-	.subscribe(
-		onNext: { movies in
-			// here you receive the movies
-		},
-		onError: { error in
-			// oops something went wrong
-		}
-	)
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
+  .get(resourcePath: "movies")
+  .toObservable()
+  .subscribe(
+    onNext: { movies in
+      // here you receive the movies
+    },
+    onError: { error in
+      // oops something went wrong
+    }
+  )
 ```
 
 ##### Source Code
@@ -154,44 +154,44 @@ Then, you are able to synchronously fire requests to WeDeploy by calling `execut
 
 ```text/x-java
 weDeploy
-	.data("https://data-datademo.wedeploy.io")
-	.get("movies")
-	.execute();
+  .data("https://data-datademo.wedeploy.io")
+  .get("movies")
+  .execute();
 ```
 
 You can also fire asynchronous requests by specifying a Callback to the `execute()` method:
 
 ```text/x-java
 weDeploy
-	.data("https://data-datademo.wedeploy.io")
-	.get("movies")
-	.execute(new Callback() {
-		public void onSuccess(Response response) {
-			// here you receive the movies
-		}
+  .data("https://data-datademo.wedeploy.io")
+  .get("movies")
+  .execute(new Callback() {
+    public void onSuccess(Response response) {
+      // here you receive the movies
+    }
 
-		public void onFailure(Exception e) {
-			// oops something went wrong
-		}
-	});
+    public void onFailure(Exception e) {
+      // oops something went wrong
+    }
+  });
 ```
 
 The WeDeploy Android API is RxJava 2 compatible. This means that you can convert the request into a Single RxJava object, which emits either a success or an error event. You must add a dependency to RxAndroid in your project `build.gradle` in order to use it.
 
 ```text/x-java
 weDeploy
-	.data("https://data-datademo.wedeploy.io")
-	.get("movies")
-	.asSingle()
-	.subscribeOn(Schedulers.io())
-	.observeOn(AndroidSchedulers.mainThread())
-	.subscribe(
-		response -> {
+  .data("https://data-datademo.wedeploy.io")
+  .get("movies")
+  .asSingle()
+  .subscribeOn(Schedulers.io())
+  .observeOn(AndroidSchedulers.mainThread())
+  .subscribe(
+    response -> {
 
-		},
-		throwable -> {
+    },
+    throwable -> {
 
-		});
+    });
 ```
 
 ##### Source Code

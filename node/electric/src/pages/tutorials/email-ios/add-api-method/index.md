@@ -16,21 +16,21 @@ Now we want to add a script that will send an email. To do this, go to `tutorial
 ```swift
 let auth = TokenAuth(token: "000-000-000")
 WeDeploy.email("msgs-<projectID>.wedeploy.io", authorization: auth)
-	.to(to)
-	.from(from)
-	.subject(subject)
-	.message(subject)
-	.send()
-	.toCallback { emailId, error in
-		if let emailId = emailId {
-			self.showAlert(with: "Success", message: "Email sent! Wait a little bit until it arrives :)")
-			print("Email id: \(emailId)")
-		}
-		else {
-			self.showAlert(with: "Error", message: "Error sending the email")
-			print(String(describing: error))
-		}
-	}
+  .to(to)
+  .from(from)
+  .subject(subject)
+  .message(subject)
+  .send()
+  .toCallback { emailId, error in
+    if let emailId = emailId {
+      self.showAlert(with: "Success", message: "Email sent! Wait a little bit until it arrives :)")
+      print("Email id: \(emailId)")
+    }
+    else {
+      self.showAlert(with: "Error", message: "Error sending the email")
+      print(String(describing: error))
+    }
+  }
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.

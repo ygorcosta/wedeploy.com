@@ -31,7 +31,7 @@ provider.setProviderScope("email");
 auth.signInWithRedirect(provider);
 
 auth.onSignIn(function(user) {
-	// Fires when user is signed in after redirect.
+  // Fires when user is signed in after redirect.
 });
 ```
 ```swift
@@ -40,7 +40,7 @@ let provider = AuthProvider(provider: .facebook, redirectUri: "my-app://")
 provider.providerScope = "email"
 
 auth.signInWithRedirect(provider: provider) { (user, error) in
-	// Fires when user is signed in after redirect.
+  // Fires when user is signed in after redirect.
 }
 
 //Add WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').handle(url: url) in AppDelegate's open url method
@@ -49,21 +49,21 @@ auth.signInWithRedirect(provider: provider) { (user, error) in
 // In AndroidManifest.xml, declare an intent filter for the Activity you want to receive the token.
 // Don't forget to replace [mypackagename] with you application package name.
 <intent-filter>
-	<action android:name="android.intent.action.VIEW" />
-	<category android:name="android.intent.category.DEFAULT" />
-	<category android:name="android.intent.category.BROWSABLE" />
-	<data android:scheme="oauth-wedeploy" android:host="[mypackagename]" />
+  <action android:name="android.intent.action.VIEW" />
+  <category android:name="android.intent.category.DEFAULT" />
+  <category android:name="android.intent.category.BROWSABLE" />
+  <data android:scheme="oauth-wedeploy" android:host="[mypackagename]" />
 </intent-filter>
 
 // On your Activity:
 AuthProvider provider = new AuthProvider.Builder()
-	.redirectUri("oauth-wedeploy://[mypackagename]")
-	.provider(Provider.FACEBOOK)
-	.providerScope("email")
-	.build();
+  .redirectUri("oauth-wedeploy://[mypackagename]")
+  .provider(Provider.FACEBOOK)
+  .providerScope("email")
+  .build();
 
 WeDeploy.auth(authUrl)
-	.signIn(this, provider);
+  .signIn(this, provider);
 
 // Use Auth auth = TokenAuth.getAuthFromIntent(intent); to get the token from the Intent
 ```
@@ -95,13 +95,13 @@ After retrieving the client id and client secret you can configure them as envir
 
 ```application/json
 {
-	"id": "auth",
-	"image": "wedeploy/auth",
-	"env": {
-		"WEDEPLOY_AUTH_FACEBOOK": "true",
-		"WEDEPLOY_AUTH_FACEBOOK_CLIENT_ID": "<your-facebook-app-id>",
-		"WEDEPLOY_AUTH_FACEBOOK_CLIENT_SECRET": "<your-facebook-app-secret>"
-	}
+  "id": "auth",
+  "image": "wedeploy/auth",
+  "env": {
+    "WEDEPLOY_AUTH_FACEBOOK": "true",
+    "WEDEPLOY_AUTH_FACEBOOK_CLIENT_ID": "<your-facebook-app-id>",
+    "WEDEPLOY_AUTH_FACEBOOK_CLIENT_SECRET": "<your-facebook-app-secret>"
+  }
 }
 ```
 

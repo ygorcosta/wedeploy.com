@@ -12,7 +12,7 @@ layout: "blog"
 {$page.description}
 
 <figure>
-	<img src="/images/blog/post-11--0.png" alt="New SDK's for mobile development">
+  <img src="/images/blog/post-11--0.png" alt="New SDK's for mobile development">
 </figure>
 
 Nowadays, we live in a world full of devices. From watching movies on your Apple TV, Receiving notifications on your smart watch, or reading books on your Kindle, we rarely go anywhere without our devices. It doesn't seem to be slowing down either; more and more devices are being built and more and more services are being created for them.
@@ -31,7 +31,7 @@ With them, you will be able to build apps for the following platforms:
 * **Google**: Android phones and tablets, Android Wear, Android TV, Android Auto and any platform that supports Java!
 
 <figure>
-	<img src="/images/blog/post-11--1.gif" alt="Realtime communication across devices">
+  <img src="/images/blog/post-11--1.gif" alt="Realtime communication across devices">
 </figure>
 
 
@@ -59,7 +59,7 @@ end
 ```
 ```build.gradle
 dependencies {
-	... rest of your dependencies ...
+  ... rest of your dependencies ...
     compile 'com.wedeploy:com.wedeploy.android:@site.version.api.android@'
 }
 ```

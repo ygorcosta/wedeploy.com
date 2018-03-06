@@ -25,9 +25,9 @@ Our Email service enables you to send customized emails to your users and check 
 Want to see the process of deploying WeDeploy Email step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/email-web/" target="_blank">
-		<span class="icon-16-external"></span>Try the tutorial
-	</a>
+  <a class="btn btn-accent btn-sm" href="/tutorials/email-web/" target="_blank">
+    <span class="icon-16-external"></span>Try the tutorial
+  </a>
 </div>
 
 <div class="guide-aux-cta">
@@ -52,8 +52,8 @@ Below is an example of a `wedeploy.json` for an Email container.
 
 ```application/json
 {
-	"id": "mail",
-	"image": "wedeploy/email:@site.version.image.email@"
+  "id": "mail",
+  "image": "wedeploy/email:@site.version.image.email@"
 }
 ```
 

@@ -15,26 +15,26 @@ Now we want to add a script that will send an email. To do this, go to `MainActi
 
 ```text/x-java
 weDeploy = new WeDeploy.Builder()
-	.authorization(new TokenAuthorization("000-000-000"))
-	.build();
+  .authorization(new TokenAuthorization("000-000-000"))
+  .build();
 
 weDeploy.email("msgs-<projectID>.wedeploy.io")
-	.from(from)
-	.to(to)
-	.subject(subject)
-	.message(subject)
-	.send()
-	.execute(new Callback() {
-		@Override
-		public void onSuccess(Response response) {
-			showAlert("Success", "Email sent! Wait a little bit until it arrives :)");
-		}
+  .from(from)
+  .to(to)
+  .subject(subject)
+  .message(subject)
+  .send()
+  .execute(new Callback() {
+    @Override
+    public void onSuccess(Response response) {
+      showAlert("Success", "Email sent! Wait a little bit until it arrives :)");
+    }
 
-		@Override
-		public void onFailure(Exception e) {
-			showAlert("Error", "Email sending the email");
-		}
-	});
+    @Override
+    public void onFailure(Exception e) {
+      showAlert("Error", "Email sending the email");
+    }
+  });
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.

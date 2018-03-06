@@ -24,34 +24,34 @@ You create a new user in your WeDeploy project by calling the `createUser` metho
 
 ```javascript
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.createUser({
-		email: 'user@domain.com',
-		password: 'abc'
-	})
-	.then(function(user) {
-		// Successfully created.
-	})
-	.catch(function(err) {
-		// Not created.
-	});
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .createUser({
+    email: 'user@domain.com',
+    password: 'abc'
+  })
+  .then(function(user) {
+    // Successfully created.
+  })
+  .catch(function(err) {
+    // Not created.
+  });
 ```
 ```swift
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.createUser(email: "user@domain.com", password: "abc", name: "somename")
-	.then { user -> Void in
-		// Successfully created.
-	}
-	.catch { err in
-		// Not created.
-	}
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .createUser(email: "user@domain.com", password: "abc", name: "somename")
+  .then { user -> Void in
+    // Successfully created.
+  }
+  .catch { err in
+    // Not created.
+  }
 ```
 ```text/x-java
 WeDeploy
-	.auth("<auth-url>")
-	.createUser("user@domain.com", "password", "somename")
-	.execute();
+  .auth("<auth-url>")
+  .createUser("user@domain.com", "password", "somename")
+  .execute();
 ```
 
 </article>
@@ -64,27 +64,27 @@ WeDeploy
 var currentUser = WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').currentUser;
 
 if (currentUser) {
-	// User is signed in.
+  // User is signed in.
 } else {
-	// No user is signed in.
+  // No user is signed in.
 }
 ```
 ```swift
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.getCurrentUser()
-	.then { user -> Void in
-		// User found.
-	}
-	.catch { error in
-		// User does not exist.
-	}
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .getCurrentUser()
+  .then { user -> Void in
+    // User found.
+  }
+  .catch { error in
+    // User does not exist.
+  }
 ```
 ```text/x-java
 WeDeploy
-	.auth("<auth-url>")
-	.getCurrentUser()
-	.execute();
+  .auth("<auth-url>")
+  .getCurrentUser()
+  .execute();
 ```
 
 </article>
@@ -95,31 +95,31 @@ WeDeploy
 
 ```javascript
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.getUser(userId)
-	.then(function(user) {
-		// User found.
-	})
-	.catch(function(err) {
-		// User does not exist.
-	});
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .getUser(userId)
+  .then(function(user) {
+    // User found.
+  })
+  .catch(function(err) {
+    // User does not exist.
+  });
 ```
 ```swift
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.getUser(id: "userId")
-	.then { user -> Void in
-		// User found.
-	}
-	.catch { error in
-		// User does not exist.
-	}
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .getUser(id: "userId")
+  .then { user -> Void in
+    // User found.
+  }
+  .catch { error in
+    // User does not exist.
+  }
 ```
 ```text/x-java
 WeDeploy
-	.auth("<auth-url>")
-	.getUser("userId")
-	.execute();
+  .auth("<auth-url>")
+  .getUser("userId")
+  .execute();
 ```
 
 </article>
@@ -130,31 +130,31 @@ WeDeploy
 
 ```javascript
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.getAllUsers()
-	.then(function(res) {
-		// res contains an array of users.
-	})
-	.catch(function(err) {
-		// An error happened.
-	});
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .getAllUsers()
+  .then(function(res) {
+    // res contains an array of users.
+  })
+  .catch(function(err) {
+    // An error happened.
+  });
 ```
 ```swift
 WeDeploy
-	.auth("https://<serviceID>-<projectID>.wedeploy.io")
-	.getAllUsers()
-	.then { res -> Void in
-		// res contains an array of users.
-	}
-	.catch { error in
-		// An error happened.
-	}
+  .auth("https://<serviceID>-<projectID>.wedeploy.io")
+  .getAllUsers()
+  .then { res -> Void in
+    // res contains an array of users.
+  }
+  .catch { error in
+    // An error happened.
+  }
 ```
 ```text/x-java
 WeDeploy
-	.auth("https://<serviceID>-<projectID>.wedeploy.io")
-	.getAllUsers()
-	.execute();
+  .auth("https://<serviceID>-<projectID>.wedeploy.io")
+  .getAllUsers()
+  .execute();
 ```
 
 </article>
@@ -169,15 +169,15 @@ There are two ways to delete a user.
 
 ```javascript
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.currentUser
-	.deleteUser()
-	.then(function() {
-		// Successfully deleted.
-	})
-	.catch(function(err) {
-		// Not deleted.
-	});
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .currentUser
+  .deleteUser()
+  .then(function() {
+    // Successfully deleted.
+  })
+  .catch(function(err) {
+    // Not deleted.
+  });
 ```
 
 
@@ -185,31 +185,31 @@ WeDeploy
 
 ```javascript
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.deleteUser("userId")
-	.then(function() {
-		// Successfully deleted.
-	})
-	.catch(function(err) {
-		// An error happened.
-	});
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .deleteUser("userId")
+  .then(function() {
+    // Successfully deleted.
+  })
+  .catch(function(err) {
+    // An error happened.
+  });
 ```
 ```swift
 WeDeploy
-	.auth("https://<serviceID>-<projectID>.wedeploy.io")
-	.deleteUser(id: "userId")
-	.then { _ -> Void in
-		// Successfully deleted.
-	}
-	.catch { error in
-		// An error happened.
-	}
+  .auth("https://<serviceID>-<projectID>.wedeploy.io")
+  .deleteUser(id: "userId")
+  .then { _ -> Void in
+    // Successfully deleted.
+  }
+  .catch { error in
+    // An error happened.
+  }
 ```
 ```text/x-java
 WeDeploy
-	.auth("https://<serviceID>-<projectID>.wedeploy.io")
-	.deleteUser("userId")
-	.execute();
+  .auth("https://<serviceID>-<projectID>.wedeploy.io")
+  .deleteUser("userId")
+  .execute();
 ```
 
 </article>
@@ -226,18 +226,18 @@ There are two ways to update a user.
 var currentUser = WeDeploy.auth('https://<serviceID>-<projectID>.wedeploy.io').currentUser;
 
 currentUser
-	.updateUser({
-		password: "password",
-		email: "eleven@hawkinslabs.com",
-		name: "Eleven",
-		photoUrl: "https://hawkinslabs.com/011/profile.jpg"
-	})
-	.then(function() {
-		// Successfully updated.
-	})
-	.catch(function(err) {
-		// Not updated.
-	});
+  .updateUser({
+    password: "password",
+    email: "eleven@hawkinslabs.com",
+    name: "Eleven",
+    photoUrl: "https://hawkinslabs.com/011/profile.jpg"
+  })
+  .then(function() {
+    // Successfully updated.
+  })
+  .catch(function(err) {
+    // Not updated.
+  });
 ```
 
 **Update user by id**
@@ -291,31 +291,31 @@ You can send a password reset email to a user with the `sendPasswordResetEmail` 
 
 ```javascript
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.sendPasswordResetEmail("user@domain.com")
-	.then(function() {
-		// Email sent.
-	})
-	.catch(function(err) {
-		// An error happened.
-	});
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .sendPasswordResetEmail("user@domain.com")
+  .then(function() {
+    // Email sent.
+  })
+  .catch(function(err) {
+    // An error happened.
+  });
 ```
 ```swift
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.sendPasswordReset(email: "user@domain.com")
-	.then { _ -> Void in
-		// Successfully signed out.
-	}
-	.catch { err in
-		// Not signed out.
-	}
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .sendPasswordReset(email: "user@domain.com")
+  .then { _ -> Void in
+    // Successfully signed out.
+  }
+  .catch { err in
+    // Not signed out.
+  }
 ```
 ```text/x-java
 WeDeploy
-	.auth("<auth-url>")
-	.sendPasswordResetEmail("user@domain.com")
-	.execute();
+  .auth("<auth-url>")
+  .sendPasswordResetEmail("user@domain.com")
+  .execute();
 ```
 
 </article>
@@ -326,37 +326,37 @@ WeDeploy
 
 ```javascript
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.signOut()
-	.then(function() {
-		// User is signed out.
-	})
-	.catch(function(err) {
-		// User was signed out.
-	});
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .signOut()
+  .then(function() {
+    // User is signed out.
+  })
+  .catch(function(err) {
+    // User was signed out.
+  });
 ```
 ```swift
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.signOut()
-	.then { _ -> Void in
-		// Successfully signed out.
-	}
-	.catch { err in
-		// Not signed out.
-	}
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .signOut()
+  .then { _ -> Void in
+    // Successfully signed out.
+  }
+  .catch { err in
+    // Not signed out.
+  }
 ```
 ```text/x-java
 WeDeploy
-	.auth("<auth-url>")
-	.signOut()
-	.execute();
+  .auth("<auth-url>")
+  .signOut()
+  .execute();
 ```
 
 </article>
 
 <article id="9">
-	
+
 ## Set User Scopes
 
 User scopes allow you to choose what kind of role or access you provide to each user. This could include things like grouping team users or providing admin access to your app. In order to setup user scopes, you must declare a `supportScope` when creating or updating a user.
@@ -365,19 +365,19 @@ User scopes allow you to choose what kind of role or access you provide to each 
 
 ```javascript
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
   .auth('your-master-token')
-	.createUser({
-		email: 'user@domain.com',
-		password: 'abc',
-		supportedScopes: ["someScope"]
-	})
-	.then(function(user) {
-		// Successfully created.
-	})
-	.catch(function(err) {
-		// Not created.
-	});
+  .createUser({
+    email: 'user@domain.com',
+    password: 'abc',
+    supportedScopes: ["someScope"]
+  })
+  .then(function(user) {
+    // Successfully created.
+  })
+  .catch(function(err) {
+    // Not created.
+  });
 ```
 
 **Updating user with user roles**

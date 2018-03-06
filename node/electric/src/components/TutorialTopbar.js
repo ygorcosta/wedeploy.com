@@ -7,12 +7,12 @@ import templates from './TutorialTopbar.soy.js';
 import {dispatchGlobalState} from './utils';
 
 class TutorialTopbar extends Component {
-	openNavigationMenu(e) {
-		e.preventDefault();
+  openNavigationMenu(e) {
+    e.preventDefault();
 
-		electric.page.navigationToggler = true;
-		dispatchGlobalState();
-	}
+    electric.page.navigationToggler = true;
+    dispatchGlobalState();
+  }
 };
 
 Soy.register(TutorialTopbar, templates);

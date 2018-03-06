@@ -53,12 +53,12 @@ A path represents the resource used to store your project data.
 
 ```application/json
 [
-	{
-		"path": "/movies/:movieId"
-	},
-	{
-		"path": "/fruits/*"
-	}
+  {
+    "path": "/movies/:movieId"
+  },
+  {
+    "path": "/fruits/*"
+  }
 ]
 ```
 
@@ -68,10 +68,10 @@ You can create endpoints just for validation or to actually store the request in
 
 ```application/json
 [
-	{
-		"path": "/fruits/*",
-		"data": true
-	}
+  {
+    "path": "/fruits/*",
+    "data": true
+  }
 ]
 ```
 
@@ -81,11 +81,11 @@ The `description` is a simple way to keep your endpoints organized by describing
 
 ```application/json
 [
-	{
-		"description": "Returns actors of a movie",
-		"path": "/movies/:movieId/actors",
-		"method": "GET"
-	}
+  {
+    "description": "Returns actors of a movie",
+    "path": "/movies/:movieId/actors",
+    "method": "GET"
+  }
 ]
 ```
 
@@ -95,12 +95,12 @@ You can prevent unauthorized applications and users from accessing certain endpo
 
 ```application/json
 [
-	{
-		"path": "/movies/*",
-		"auth": {
-			"validator": "$auth != null"
-		}
-	}
+  {
+    "path": "/movies/*",
+    "auth": {
+      "validator": "$auth != null"
+    }
+  }
 ]
 ```
 
@@ -110,11 +110,11 @@ The `method` specifies the HTTP method used for the request. In the example bell
 
 ```application/json
 [
-	{
-		"path": "/movies/:movieId",
-		"data": true,
-		"method": "GET"
-	}
+  {
+    "path": "/movies/:movieId",
+    "data": true,
+    "method": "GET"
+  }
 ]
 ```
 
@@ -132,18 +132,18 @@ You generally would use `parameters` to force validation in order to make sure t
 
 ```application/json
 [
-	{
-		"description": "Creates a new movie",
-		"path": "/movies",
-		"method": "POST",
-		"parameters": {
-			"title": {
-				"type": "string",
-				"required": true
-			}
-		},
-		"data": true
-	}
+  {
+    "description": "Creates a new movie",
+    "path": "/movies",
+    "method": "POST",
+    "parameters": {
+      "title": {
+        "type": "string",
+        "required": true
+      }
+    },
+    "data": true
+  }
 ]
 ```
 
@@ -167,10 +167,10 @@ In order to freely use any collection with any kind of operation, you just need 
 
 ```application/json
 [
-	{
-		"path": "/*",
-		"data": true
-	}
+  {
+    "path": "/*",
+    "data": true
+  }
 ]
 ```
 
@@ -188,10 +188,10 @@ The validator can be used as an integration with the [Auth service](/docs/auth/)
 
 ```application/json
 {
-	"path": "/movies/*",
-	"auth": {
-		"validator": "$auth != null"
-	}
+  "path": "/movies/*",
+  "auth": {
+    "validator": "$auth != null"
+  }
 }
 ```
 
@@ -251,8 +251,8 @@ Controlling who gets to see, update, create or delete data is a very important p
 
 ```application/json
 "auth":{
-	"scopes": ["scope"],
-	"validator": "$auth !== null"
+  "scopes": ["scope"],
+  "validator": "$auth !== null"
 }
 ```
 
@@ -260,14 +260,14 @@ This is what it will look like in your `api.json`.
 
 ```application/json
 [
-	{
-		"path": "/movies/*",
-		"method": "POST",
-		"auth":{
-			"scopes": ["scope"],
-			"validator": "$auth !== null"
-		}
-	}
+  {
+    "path": "/movies/*",
+    "method": "POST",
+    "auth":{
+      "scopes": ["scope"],
+      "validator": "$auth !== null"
+    }
+  }
 ]
 ```
 

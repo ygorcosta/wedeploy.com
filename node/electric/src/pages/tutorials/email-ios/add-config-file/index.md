@@ -19,8 +19,8 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-	"id": "msgs",
-	"image": "wedeploy/email:@site.version.image.email@"
+  "id": "msgs",
+  "image": "wedeploy/email:@site.version.image.email@"
 }
 ```
 
@@ -32,11 +32,11 @@ Another thing you can do in your `wedeploy.json` file is add environment variabl
 
 ```application/json
 {
-	"id": "msgs",
-	"image": "wedeploy/email:@site.version.image.email@",
-	"env" {
-		"EMAIL_HOST": "host294.mailrave.com"
-	}
+  "id": "msgs",
+  "image": "wedeploy/email:@site.version.image.email@",
+  "env" {
+    "EMAIL_HOST": "host294.mailrave.com"
+  }
 }
 ```
 

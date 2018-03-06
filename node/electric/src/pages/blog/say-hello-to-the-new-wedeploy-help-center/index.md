@@ -16,9 +16,9 @@ Last month was a very special moment for us. We had a 157% user growth and this 
 That's why, we're introducing a new **[WeDeploy Help Center](https://help.wedeploy.com/)**.
 
 <a href="https://help.wedeploy.com" target="_blank">
-	<figure>
-		<img src="/images/blog/post-13--help-center.gif" alt="WeDeploy Help Center">
-	</figure>
+  <figure>
+    <img src="/images/blog/post-13--help-center.gif" alt="WeDeploy Help Center">
+  </figure>
 </a>
 
 This will be a home for some of the most commonly asked questions we receive as well as special use case answers.

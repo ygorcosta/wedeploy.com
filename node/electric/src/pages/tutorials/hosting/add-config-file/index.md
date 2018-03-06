@@ -19,7 +19,7 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-	"id": "app"
+  "id": "app"
 }
 ```
 
@@ -31,10 +31,10 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 
 ```application/json
 {
-	"id": "app",
-	"env": {
-		"WEDEPLOY_WEB_PATH": "dist"
-	}
+  "id": "app",
+  "env": {
+    "WEDEPLOY_WEB_PATH": "dist"
+  }
 }
 ```
 

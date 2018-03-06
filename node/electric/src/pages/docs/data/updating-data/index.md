@@ -24,31 +24,31 @@ Updating existing data is as simple as posting new data to the fields that alrea
 
 ```javascript
 WeDeploy
-	.data('https://<serviceID>-<projectID>.wedeploy.io')
-	.update('movies/115992383516607958', {
-		"rating": 9.1
-	}).then(function(movie) {
-		console.log(movie);
-	});
+  .data('https://<serviceID>-<projectID>.wedeploy.io')
+  .update('movies/115992383516607958', {
+    "rating": 9.1
+  }).then(function(movie) {
+    console.log(movie);
+  });
 ```
 ```swift
 WeDeploy
-	.data("https://<serviceID>-<projectID>.wedeploy.io")
-	.update(resourcePath: "movies/115992383516607958", updatedAttributes: [
-		"rating": 9.1
-	])
-	.then { movie in
-		print(movie)
-	}
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
+  .update(resourcePath: "movies/115992383516607958", updatedAttributes: [
+    "rating": 9.1
+  ])
+  .then { movie in
+    print(movie)
+  }
 ```
 ```text/x-java
 JSONObject movieJsonObject = new JSONObject()
-	.put("rating", 9.1);
+  .put("rating", 9.1);
 
 WeDeploy
-	.data("https://<serviceID>-<projectID>.wedeploy.io")
-	.update("movies/115992383516607958", movieJsonObject)
-	.execute();
+  .data("https://<serviceID>-<projectID>.wedeploy.io")
+  .update("movies/115992383516607958", movieJsonObject)
+  .execute();
 ```
 
 </article>

@@ -24,31 +24,31 @@ In order to check if an email was sent or not, we can use the email ID, e.g. `12
 
 ```javascript
 WeDeploy
-	.email('<serviceID>-<projectID>.wedeploy.io')
-	.auth('<your-project-master-token>')
-	.status('<email-id>')
-	.then(function(response) {
-		console.log('Email status:', response);
-	})
-	.catch(function(error) {
-		// Some error has happened
-	});
+  .email('<serviceID>-<projectID>.wedeploy.io')
+  .auth('<your-project-master-token>')
+  .status('<email-id>')
+  .then(function(response) {
+    console.log('Email status:', response);
+  })
+  .catch(function(error) {
+    // Some error has happened
+  });
 ```
 ```swift
 WeDeploy.email('<serviceID>-<projectID>.wedeploy.io')
-	.checkEmailStatus(id: "202605176596079530")
-	.then { status in
-		print("Email status: \(status)")
-	}
-	.catch { error in
-		// Some error has happened
-	}
+  .checkEmailStatus(id: "202605176596079530")
+  .then { status in
+    print("Email status: \(status)")
+  }
+  .catch { error in
+    // Some error has happened
+  }
 ```
 ```text/x-java
 WeDeploy
-	.email('<serviceID>-<projectID>.wedeploy.io')
-	.checkEmailStatus("<emailID>")
-	.execute();
+  .email('<serviceID>-<projectID>.wedeploy.io')
+  .checkEmailStatus("<emailID>")
+  .execute();
 ```
 
 </article>

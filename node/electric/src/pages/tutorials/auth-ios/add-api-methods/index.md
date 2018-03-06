@@ -19,15 +19,15 @@ To do this, go to `tutorial-auth-ios/app/tutorial-auth-ios/SignUpViewController.
 
 ```swift
 WeDeploy.auth("users-<projectID>.wedeploy.io")
-	.createUser(email: emailText, password: passwordText, name: nameText)
-	.toCallback { auth, error in
-		if let _ = auth {
-			self.showAlert(with: "Success", message: "Sign-up successfully")
-		}
-		else {
-			self.showAlert(with: "Error", message: "Sign-up failed.")
-		}
-	}
+  .createUser(email: emailText, password: passwordText, name: nameText)
+  .toCallback { auth, error in
+    if let _ = auth {
+      self.showAlert(with: "Success", message: "Sign-up successfully")
+    }
+    else {
+      self.showAlert(with: "Error", message: "Sign-up failed.")
+    }
+  }
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.
@@ -40,10 +40,10 @@ First of all, go to `tutorial-auth-ios/app/tutorial-auth-ios/LoginViewController
 
 ```swift
 WeDeploy.auth("users-<projectID>.wedeploy.io")
-	.signInWith(username: usernameText, password: passwordText)
-	.toCallback { auth, error in
-		self.handleLoginResult(auth: auth, error: error)
-	}
+  .signInWith(username: usernameText, password: passwordText)
+  .toCallback { auth, error in
+    self.handleLoginResult(auth: auth, error: error)
+  }
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.
@@ -57,25 +57,25 @@ but we can also handle the result using a promise:
 
 ```swift
 WeDeploy.auth("users-<projectID>.wedeploy.io")
-	.signInWith(username: usernameText, password: passwordText)
-	.then { auth in
-		self.handleLoginResult(auth: auth, error: nil)
-	}
-	.catch { error in
-		self.handleLoginResult(auth: nil, error: error)
-	}
+  .signInWith(username: usernameText, password: passwordText)
+  .then { auth in
+    self.handleLoginResult(auth: auth, error: nil)
+  }
+  .catch { error in
+    self.handleLoginResult(auth: nil, error: error)
+  }
 ```
 
 or even a observable!
 
 ```swift
 WeDeploy.auth("users-<projectID>.wedeploy.io")
-	.signInWith(username: usernameText, password: passwordText)
-	.toObservable()
-	.subscribe(onNext: { auth in
-		self.handleLoginResult(auth: auth, error: nil)
-	}, onError: { error in
-		self.handleLoginResult(auth: nil, error: error)
-	})
+  .signInWith(username: usernameText, password: passwordText)
+  .toObservable()
+  .subscribe(onNext: { auth in
+    self.handleLoginResult(auth: auth, error: nil)
+  }, onError: { error in
+    self.handleLoginResult(auth: nil, error: error)
+  })
 ```
 </aside>

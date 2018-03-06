@@ -14,7 +14,7 @@ layout: "blog"
 Since then, we have been exploring new ways to take the WeDeploy learning experience to the next level, which is why we are excited to announce a brand new sibling in the documentation family: **Tutorials**.
 
 <figure>
-	<img src="/images/blog/post-8--0.png" alt="Tutorial preview">
+  <img src="/images/blog/post-8--0.png" alt="Tutorial preview">
 </figure>
 
 #### Which topics are covered?
@@ -38,7 +38,7 @@ We felt like the first group was being well taken care of by our [extensive docu
 
 
 <figure>
-	<img src="/images/blog/post-8--1.png" alt="See the code">
+  <img src="/images/blog/post-8--1.png" alt="See the code">
 </figure>
 
 #### What were our goals?

@@ -24,31 +24,31 @@ To sign in using email and password, call this method:
 
 ```javascript
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.signInWithEmailAndPassword("user@domain.com", "password")
-	.then(function(user) {
-		// User is signed in.
-	})
-	.catch(function(err) {
-		// User is not signed in.
-	});
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .signInWithEmailAndPassword("user@domain.com", "password")
+  .then(function(user) {
+    // User is signed in.
+  })
+  .catch(function(err) {
+    // User is not signed in.
+  });
 ```
 ```swift
 WeDeploy
-	.auth('https://<serviceID>-<projectID>.wedeploy.io')
-	.signInWith(username: "user@domain.com", password: "password")
-	.then { auth -> Void in
-		// User is signed in.
-	}
-	.catch { err in
-		// User is not signed in.
-	}
+  .auth('https://<serviceID>-<projectID>.wedeploy.io')
+  .signInWith(username: "user@domain.com", password: "password")
+  .then { auth -> Void in
+    // User is signed in.
+  }
+  .catch { err in
+    // User is not signed in.
+  }
 ```
 ```text/x-java
 WeDeploy
-	.auth("<auth-url>")
-	.signIn("user@domain.com", "password")
-	.execute();
+  .auth("<auth-url>")
+  .signIn("user@domain.com", "password")
+  .execute();
 ```
 
 </article>

@@ -25,9 +25,9 @@ Our Data service enables you to store data securely to a cloud database, make co
 Want to see the process of deploying WeDeploy Data step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/data-web/" target="_blank">
-		<span class="icon-16-external"></span>Try the tutorial
-	</a>
+  <a class="btn btn-accent btn-sm" href="/tutorials/data-web/" target="_blank">
+    <span class="icon-16-external"></span>Try the tutorial
+  </a>
 </div>
 
 <div class="guide-aux-cta">
@@ -52,8 +52,8 @@ Below is an example of a `wedeploy.json` for a Data container.
 
 ```application/json
 {
-	"id": "database",
-	"image": "wedeploy/data:@site.version.image.data@"
+  "id": "database",
+  "image": "wedeploy/data:@site.version.image.data@"
 }
 ```
 

@@ -8,22 +8,22 @@
   {@param site: ?}
   {@param? elementClasses: ?}
 
-	<div class="{$elementClasses ?: 'main'}">
-		<main class="content">
-			<div class="tutorial">
-				{if $page}
-					{call TutorialSidebar.render}
-						{param page: $site.index.children['tutorials'].children[$page.parentId] /}
-					{/call}
-					{call .tutorials data="all"}
-						{param content: $content /}
-						{param page: $page /}
-						{param site: $site /}
-					{/call}
-				{/if}
-			</div>
-		</main>
-	</div>
+  <div class="{$elementClasses ?: 'main'}">
+    <main class="content">
+      <div class="tutorial">
+        {if $page}
+          {call TutorialSidebar.render}
+            {param page: $site.index.children['tutorials'].children[$page.parentId] /}
+          {/call}
+          {call .tutorials data="all"}
+            {param content: $content /}
+            {param page: $page /}
+            {param site: $site /}
+          {/call}
+        {/if}
+      </div>
+    </main>
+  </div>
 {/template}
 
 /**
@@ -33,30 +33,30 @@
   {@param page: ?}
   {@param site: ?}
 
-	<div class="sidebar-offset">
-		{call TutorialTopbar.render}
-			{param elementClasses: 'topbar-light' /}
-			{param page: $page /}
-			{param logo kind="html"}
-				<div class="topbar-logo">
-					<span class="wedeploy-logo dashboard-logo">
-						<span class="we-circle">
-							<span class="we">We</span>
-						</span>
-					</span>
-				</div>
-			{/param}
-		{/call}
-		<div class="container">
-			<div class="container-blog card">
-				{$content}
-				{call .footerButtons }
-					{param page: $page /}
-					{param site: $site /}
-				{/call}
-			</div>
-		</div>
-	</div>
+  <div class="sidebar-offset">
+    {call TutorialTopbar.render}
+      {param elementClasses: 'topbar-light' /}
+      {param page: $page /}
+      {param logo kind="html"}
+        <div class="topbar-logo">
+          <span class="wedeploy-logo dashboard-logo">
+            <span class="we-circle">
+              <span class="we">We</span>
+            </span>
+          </span>
+        </div>
+      {/param}
+    {/call}
+    <div class="container">
+      <div class="container-blog card">
+        {$content}
+        {call .footerButtons }
+          {param page: $page /}
+          {param site: $site /}
+        {/call}
+      </div>
+    </div>
+  </div>
 {/template}
 
 /**
@@ -65,20 +65,20 @@
   {@param page: ?}
   {@param site: ?}
 
-	<div class="tutorial-page-nav">
-		{let $tutorialObject: $site.index.children['tutorials'].children[$page.parentId] /}
-		{if $page.weight < length($tutorialObject.childIds)}
-			{let $nextPageUrl: $tutorialObject.children[$tutorialObject.childIds[$page.weight]].url /}
-			{if $site.githubRepo}
-				<a href="javascript:Intercom('showNewMessage', 'I\'m having a problem here: {$page.url}');" target="_blank" class="btn btn-default btn-sm">
-					Report a problem
-				</a>
-			{/if}
-			{if $page.buttonTitle}
-				<a href="{$nextPageUrl}" class="btn btn-accent btn-sm">
-					{$page.buttonTitle}
-				</a>
-			{/if}
-		{/if}
-	</div>
+  <div class="tutorial-page-nav">
+    {let $tutorialObject: $site.index.children['tutorials'].children[$page.parentId] /}
+    {if $page.weight < length($tutorialObject.childIds)}
+      {let $nextPageUrl: $tutorialObject.children[$tutorialObject.childIds[$page.weight]].url /}
+      {if $site.githubRepo}
+        <a href="javascript:Intercom('showNewMessage', 'I\'m having a problem here: {$page.url}');" target="_blank" class="btn btn-default btn-sm">
+          Report a problem
+        </a>
+      {/if}
+      {if $page.buttonTitle}
+        <a href="{$nextPageUrl}" class="btn btn-accent btn-sm">
+          {$page.buttonTitle}
+        </a>
+      {/if}
+    {/if}
+  </div>
 {/template}

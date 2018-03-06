@@ -10,87 +10,87 @@ import moment from 'moment';
 import templates from './TutorialSidebar.soy.js';
 
 class TutorialSidebar extends Component {
-	attached() {
-		if (isServerSide()) {
-			return;
-		}
+  attached() {
+    if (isServerSide()) {
+      return;
+    }
 
-		this.calculateTimeRemaining();
-	}
+    this.calculateTimeRemaining();
+  }
 
-	syncPage(val) {
-		if (isServerSide()) {
-			return;
-		}
+  syncPage(val) {
+    if (isServerSide()) {
+      return;
+    }
 
-		this.navigationToggler = electric.page.navigationToggler;
-	}
+    this.navigationToggler = electric.page.navigationToggler;
+  }
 
-	calculateTimeRemaining() {
-		let timeRead = 0;
-		let totalTime = 0;
-		let indexSelected = -1;
+  calculateTimeRemaining() {
+    let timeRead = 0;
+    let totalTime = 0;
+    let indexSelected = -1;
 
-		let sidebar = document.querySelector('.sidebar');
-		let sidebarLinks = Array.prototype.slice.call(sidebar.querySelectorAll('.sidebar-link'));
+    let sidebar = document.querySelector('.sidebar');
+    let sidebarLinks = Array.prototype.slice.call(sidebar.querySelectorAll('.sidebar-link'));
 
-		sidebarLinks.forEach((item, i) => {
-			let time = parseInt(item.dataset.time || 0);
+    sidebarLinks.forEach((item, i) => {
+      let time = parseInt(item.dataset.time || 0);
 
-			totalTime += time;
+      totalTime += time;
 
-			if (hasClass(item, 'sidebar-link-selected')) {
-				indexSelected = i;
-			}
+      if (hasClass(item, 'sidebar-link-selected')) {
+        indexSelected = i;
+      }
 
-			if (indexSelected === -1) {
-				addClasses(item, 'sidebar-link-read');
-				timeRead += time;
+      if (indexSelected === -1) {
+        addClasses(item, 'sidebar-link-read');
+        timeRead += time;
 
-				return;
-			}
-		});
+        return;
+      }
+    });
 
-		let milliseconds = (totalTime - timeRead);
-		let eventDuration = moment.duration(milliseconds, 'seconds');
-		electric.page.timeRemaining = this.humanizeDuration(eventDuration);
-		dispatchGlobalState();
-	}
+    let milliseconds = (totalTime - timeRead);
+    let eventDuration = moment.duration(milliseconds, 'seconds');
+    electric.page.timeRemaining = this.humanizeDuration(eventDuration);
+    dispatchGlobalState();
+  }
 
-	closeNavigationMenu(e) {
-		electric.page.navigationToggler = false;
-		dispatchGlobalState();
-	}
+  closeNavigationMenu(e) {
+    electric.page.navigationToggler = false;
+    dispatchGlobalState();
+  }
 
-	humanizeDuration(eventDuration) {
-		var eventDurationString = '';
+  humanizeDuration(eventDuration) {
+    var eventDurationString = '';
 
-		if (eventDuration.days() > 0) {
-			eventDurationString += ' ' + moment.duration(eventDuration.days(), 'days').asDays() + 'd';
-		}
+    if (eventDuration.days() > 0) {
+      eventDurationString += ' ' + moment.duration(eventDuration.days(), 'days').asDays() + 'd';
+    }
 
-		if (eventDuration.hours() > 0) {
-			eventDurationString += ' ' + moment.duration(eventDuration.hours(), 'hours').asHours() + ' h';
-		}
+    if (eventDuration.hours() > 0) {
+      eventDurationString += ' ' + moment.duration(eventDuration.hours(), 'hours').asHours() + ' h';
+    }
 
-		if (eventDuration.minutes() > 0) {
-			eventDurationString += ' ' + moment.duration(eventDuration.minutes(), 'minutes').asMinutes() + ' min';
-		}
+    if (eventDuration.minutes() > 0) {
+      eventDurationString += ' ' + moment.duration(eventDuration.minutes(), 'minutes').asMinutes() + ' min';
+    }
 
-		if (eventDuration.seconds() > 0) {
-			eventDurationString += ' ' + moment.duration(eventDuration.seconds(), 'seconds').asSeconds() + ' sec';
-		}
+    if (eventDuration.seconds() > 0) {
+      eventDurationString += ' ' + moment.duration(eventDuration.seconds(), 'seconds').asSeconds() + ' sec';
+    }
 
-		return eventDurationString.trim();
-	}
+    return eventDurationString.trim();
+  }
 
 };
 
 TutorialSidebar.STATE = {
-	navigationToggler: {
-		internal: true,
-		value: false
-	}
+  navigationToggler: {
+    internal: true,
+    value: false
+  }
 }
 
 Soy.register(TutorialSidebar, templates);

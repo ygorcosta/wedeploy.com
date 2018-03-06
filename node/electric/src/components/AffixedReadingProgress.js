@@ -9,16 +9,16 @@ import Soy from 'metal-soy';
 import templates from './AffixedReadingProgress.soy.js';
 
 class AffixedReadingProgress extends ElectricReadingProgress {
-	rendered() {
-		if (isServerSide()) {
-			return;
-		}
+  rendered() {
+    if (isServerSide()) {
+      return;
+    }
 
-		var docsNav = document.querySelector('.docs-nav');
-		var docsNavContainer = docsNav.parentNode;
-		var parentWidth = position.getWidth(docsNavContainer);
-		docsNav.style.width = parentWidth + 'px';
-	}
+    var docsNav = document.querySelector('.docs-nav');
+    var docsNavContainer = docsNav.parentNode;
+    var parentWidth = position.getWidth(docsNavContainer);
+    docsNav.style.width = parentWidth + 'px';
+  }
 };
 
 Soy.register(AffixedReadingProgress, templates);

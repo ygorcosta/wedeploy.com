@@ -24,43 +24,43 @@ In order to send emails, we can simply make a request to the url of our service 
 
 ```javascript
 WeDeploy
-	.email('<serviceID>-<projectID>.wedeploy.io')
-	.auth('<your-project-master-token>')
-	.from('from@domain.com')
-	.to('to@domain.com')
-	.subject('Hi there!')
-	.message('What are your plans on Thursday?')
-	.send()
-	.then(function(response) {
-		console.log('Email ID:', response);
-	})
-	.catch(function(error) {
-		// Some error has happened
-	});
+  .email('<serviceID>-<projectID>.wedeploy.io')
+  .auth('<your-project-master-token>')
+  .from('from@domain.com')
+  .to('to@domain.com')
+  .subject('Hi there!')
+  .message('What are your plans on Thursday?')
+  .send()
+  .then(function(response) {
+    console.log('Email ID:', response);
+  })
+  .catch(function(error) {
+    // Some error has happened
+  });
 ```
 ```swift
 WeDeploy
-	.email('<serviceID>-<projectID>.wedeploy.io')
-	.from(self.username)
-	.to(self.username)
-	.subject("subject")
-	.message("body")
-	.send()
-	.then { id in
-		print("Email ID: \(id)")
-	}
-	.catch { error in
-		// Some error has happened
-	}
+  .email('<serviceID>-<projectID>.wedeploy.io')
+  .from(self.username)
+  .to(self.username)
+  .subject("subject")
+  .message("body")
+  .send()
+  .then { id in
+    print("Email ID: \(id)")
+  }
+  .catch { error in
+    // Some error has happened
+  }
 ```
 ```text/x-java
 WeDeploy
-	.email("<serviceID>-<projectID>.wedeploy.io/emails")
-	.from("from@domain.com")
-	.to("to@domain.com")
-	.subject("Hi there!")
-	.send()
-	.execute();
+  .email("<serviceID>-<projectID>.wedeploy.io/emails")
+  .from("from@domain.com")
+  .to("to@domain.com")
+  .subject("Hi there!")
+  .send()
+  .execute();
 ```
 
 As a result, we'll receive an email ID. This doesn't indicate that the email has already sent, it actually just means that it was added to the email queue. See ["checking the email status"](/docs/email/checking-status/) to learn more about email status.

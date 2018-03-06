@@ -17,7 +17,7 @@ I'm currently studying *Research in Software Engineering and Computer Science* f
 In this class I've learned the basic concepts of [IoT](https://en.wikipedia.org/wiki/Internet_of_things), starting with the initial intent to simulate the real world with smart devices. I believe the IoT train is passing and if we don't get on, we will miss out. That's why I decided to explore more.
 
 <figure>
-	<img src="/images/blog/post-6--0.jpg" alt="IoT train is passing. Credits: Amos Bar-Zeev (https://unsplash.com/search/wait?photo=IjA4vTJ3PHY)">
+  <img src="/images/blog/post-6--0.jpg" alt="IoT train is passing. Credits: Amos Bar-Zeev (https://unsplash.com/search/wait?photo=IjA4vTJ3PHY)">
 </figure>
 
 I realized that in the short period of time I had to accomplish this, I would need to learn how to use and configure a complete new tool like [Kaa](https://www.kaaproject.org) or [Machina.io](https://macchina.io). But I just wanted a place to simulate an IoT platform super fast. Then a thought occured to me:
@@ -69,26 +69,26 @@ The following block of code demonstrates how to handle HTTP `GET` and `POST` req
 @RequestMapping("/sensors")
 public class SensorsRestController {
 
-	/*
-	* Defines the resource for an specific sensor, identified by its sensorId,
-	* which is passed as input parameter to the method, using the annotation @PathVariable.
-	* It allows CORS requests from any domain.
-	* @return A collection of model domain objects
-	*/
-	@CrossOrigin(origins = "*")
-	@RequestMapping(method = RequestMethod.GET, value = "/{sensorId}")
-	public Collection<SensorRow> getMetrics(@PathVariable String sensorId) {...}
-	...
-	/*
-	* Define the resource for POST verb operations over this controller's path.
-	* The annotation @RequestBody indicates the type of the object that will be
-	* processed in the request.
-	* It allows CORS requests from any domain.
-	*/
-	@CrossOrigin(origins = "*")
-	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<?> addMetric(@RequestBody Metric metric) {...}
-	...
+  /*
+  * Defines the resource for an specific sensor, identified by its sensorId,
+  * which is passed as input parameter to the method, using the annotation @PathVariable.
+  * It allows CORS requests from any domain.
+  * @return A collection of model domain objects
+  */
+  @CrossOrigin(origins = "*")
+  @RequestMapping(method = RequestMethod.GET, value = "/{sensorId}")
+  public Collection<SensorRow> getMetrics(@PathVariable String sensorId) {...}
+  ...
+  /*
+  * Define the resource for POST verb operations over this controller's path.
+  * The annotation @RequestBody indicates the type of the object that will be
+  * processed in the request.
+  * It allows CORS requests from any domain.
+  */
+  @CrossOrigin(origins = "*")
+  @RequestMapping(method = RequestMethod.POST)
+  public ResponseEntity<?> addMetric(@RequestBody Metric metric) {...}
+  ...
 }
 ```
 
@@ -120,50 +120,50 @@ You can configure this in WeDeploy data service with the `api.json` [descriptor]
 
 ```application/json
 [
-	{
-		"description": "Returns all sensors that sent metrics to the platform",
-		"path": "/sensors/*",
-		"method": "GET",
-		"data": true
-	},
-	{
-		"description": "Returns one sensor identified by its unique sensorId",
-		"path": "/sensors/:sensorId",
-		"method": "GET",
-		"data": true
-	},
-	{
-		"description": "Stores one sensor's metrics",
-		"path": "/sensors",
-		"method": "POST",
-		"data": true,
-		"parameters": {
-			"applicationId": {
-				"type": "string"
-			},
-			"sensorId": {
-				"type": "string"
-			},
-			"latitude": {
-				"type": "string"
-			},
-			"longitude": {
-				"type": "string"
-			},
-			"metric": {
-				"type": "string"
-			},
-			"metricName": {
-				"type": "string"
-			},
-			"metricUnits": {
-				"type": "string"
-			},
-			"timestamp": {
-				"type": "string"
-			}
-		}
-	}
+  {
+    "description": "Returns all sensors that sent metrics to the platform",
+    "path": "/sensors/*",
+    "method": "GET",
+    "data": true
+  },
+  {
+    "description": "Returns one sensor identified by its unique sensorId",
+    "path": "/sensors/:sensorId",
+    "method": "GET",
+    "data": true
+  },
+  {
+    "description": "Stores one sensor's metrics",
+    "path": "/sensors",
+    "method": "POST",
+    "data": true,
+    "parameters": {
+      "applicationId": {
+        "type": "string"
+      },
+      "sensorId": {
+        "type": "string"
+      },
+      "latitude": {
+        "type": "string"
+      },
+      "longitude": {
+        "type": "string"
+      },
+      "metric": {
+        "type": "string"
+      },
+      "metricName": {
+        "type": "string"
+      },
+      "metricUnits": {
+        "type": "string"
+      },
+      "timestamp": {
+        "type": "string"
+      }
+    }
+  }
 ]
 ```
 
@@ -205,37 +205,37 @@ public class DataRepository {
 
         Response response = weDeploy.filter("sensorId", sensorId).get();
 
-		String body = response.body();
+    String body = response.body();
 
-		if (StringUtil.isBlank(body)) {
-			return Collections.EMPTY_LIST;
-		}
+    if (StringUtil.isBlank(body)) {
+      return Collections.EMPTY_LIST;
+    }
 
-		JoddJsonParser parser = new JoddJsonParser();
+    JoddJsonParser parser = new JoddJsonParser();
 
-		return parser.parseAsList(body, SensorRow.class);
-	}
+    return parser.parseAsList(body, SensorRow.class);
+  }
 
-	/**
-	* We retrieve the whole collection, without pagination. Then, we parse the JSON object
-	* that represents the body of the response into a collection of model entities.
-	*/
-	public Collection<SensorRow> findAllSensors() {
-		WeDeploy weDeploy = new WeDeploy(DATA_SERVICE_PATH + SENSORS_DATA_PATH);
+  /**
+  * We retrieve the whole collection, without pagination. Then, we parse the JSON object
+  * that represents the body of the response into a collection of model entities.
+  */
+  public Collection<SensorRow> findAllSensors() {
+    WeDeploy weDeploy = new WeDeploy(DATA_SERVICE_PATH + SENSORS_DATA_PATH);
 
-		Response response = weDeploy.get();
+    Response response = weDeploy.get();
 
-		String body = response.body();
+    String body = response.body();
 
-		if (StringUtil.isBlank(body)) {
-			return Collections.EMPTY_LIST;
-		}
+    if (StringUtil.isBlank(body)) {
+      return Collections.EMPTY_LIST;
+    }
 
-		JoddJsonParser parser = new JoddJsonParser();
+    JoddJsonParser parser = new JoddJsonParser();
 
-		return parser.parseAsList(body, SensorRow.class);
-	}
-	...
+    return parser.parseAsList(body, SensorRow.class);
+  }
+  ...
 }
 ```
 
@@ -247,8 +247,8 @@ At that point I had built two services: a Java REST API developed with `Spring B
 
 ```application/json
 {
-	"id": "ui",
-	"image": "wedeploy/hosting:@site.version.image.hosting@"
+  "id": "ui",
+  "image": "wedeploy/hosting:@site.version.image.hosting@"
 }
 ```
 
@@ -256,31 +256,31 @@ I know that this is not related to WeDeploy, but I wanted to display the metrics
 
 ```text/javascript
 function getSensors(mode) {
-	return fetch(myUrl)
-		.then(function(response) {
-			if(response.ok) {
-				return response.json();
-			}
-			else if (response.status !== 200) {
-				return [];
-			}
-		})
-		.then(function(sensors) {
-			if (!sensors || sensors.length === 0) {
-				noResults(); // shows a not found message
+  return fetch(myUrl)
+    .then(function(response) {
+      if(response.ok) {
+        return response.json();
+      }
+      else if (response.status !== 200) {
+        return [];
+      }
+    })
+    .then(function(sensors) {
+      if (!sensors || sensors.length === 0) {
+        noResults(); // shows a not found message
 
-				return;
-			}
+        return;
+      }
 
-			if (mode == 'grid') {
-				plotSensors(sensors); // draws a grid
-			}
-			else {
-				mapSensors(sensors); // draws a google map
-			}
+      if (mode == 'grid') {
+        plotSensors(sensors); // draws a grid
+      }
+      else {
+        mapSensors(sensors); // draws a google map
+      }
 
-			return this;
-		});
+      return this;
+    });
 }
 ```
 

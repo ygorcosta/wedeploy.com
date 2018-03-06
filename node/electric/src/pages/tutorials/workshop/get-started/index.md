@@ -18,18 +18,18 @@ If you find yourself stuck or have a question during the workshop, don't hesitat
 
 <ul class="checklist">
   <li><a href="https://console.wedeploy.com/" target="_blank">A WeDeploy Account</a></li>
-	<li><a href="https://wedeploy.com/docs/intro/using-the-command-line/" target="_blank">The WeDeploy CLI</a></li>
-	<li>A code editor</li>
+  <li><a href="https://wedeploy.com/docs/intro/using-the-command-line/" target="_blank">The WeDeploy CLI</a></li>
+  <li>A code editor</li>
 </ul>
 
 ###### What you'll do
 
 <ul class="checklist">
-	<li>Download a sample repo</li>
+  <li>Download a sample repo</li>
   <li>Deploy static files</li>
-	<li>Include the API Client</li>
-	<li>Connect Auth and Data services</li>
-	<li>Deploy to production</li>
-	<li>Start sending messages in real time</li>
+  <li>Include the API Client</li>
+  <li>Connect Auth and Data services</li>
+  <li>Deploy to production</li>
+  <li>Start sending messages in real time</li>
 </ul>
 

@@ -6,20 +6,20 @@
   {@param page: ?}
   {@param site: ?}
 
-	{call main.render data="all"}
-		{param content kind="html"}
-			<div>
-				<header class="header">
-					<div class="container">
-						<h1 class="header-title">{$page.title} Updates</h1>
-						<h2 class="header-subtitle">{$page.description} {$page.title}</h2>
-					</div>
-				</header>
+  {call main.render data="all"}
+    {param content kind="html"}
+      <div>
+        <header class="header">
+          <div class="container">
+            <h1 class="header-title">{$page.title} Updates</h1>
+            <h2 class="header-subtitle">{$page.description} {$page.title}</h2>
+          </div>
+        </header>
 
-				{call Updates.render}
-					{param updates: $page.updates /}
-				{/call}
-			</div>
-		{/param}
-	{/call}
+        {call Updates.render}
+          {param updates: $page.updates /}
+        {/call}
+      </div>
+    {/param}
+  {/call}
 {/template}

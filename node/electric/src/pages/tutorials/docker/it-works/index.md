@@ -16,7 +16,7 @@ Great work, your project is ready to be used!
 Go to `wp-<projectID>.wedeploy.io` in your browser.
 
 <figure>
-	<img src="/images/tutorials/docker/it-works.jpg" alt="It works">
+  <img src="/images/tutorials/docker/it-works.jpg" alt="It works">
 </figure>
 
 Awesome! You just deployed a Wordpress site connected to a MySQL database within a few minutes! We can't wait to see what else you create with WeDeploy!

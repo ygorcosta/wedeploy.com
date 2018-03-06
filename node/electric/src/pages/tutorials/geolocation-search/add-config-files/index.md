@@ -21,8 +21,8 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-	"id": "db",
-	"image": "wedeploy/data:@site.version.image.data@"
+  "id": "db",
+  "image": "wedeploy/data:@site.version.image.data@"
 }
 ```
 
@@ -33,8 +33,8 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-	"id": "ui",
-	"image": "wedeploy/hosting:@site.version.image.hosting@"
+  "id": "ui",
+  "image": "wedeploy/hosting:@site.version.image.hosting@"
 }
 ```
 
@@ -46,11 +46,11 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 
 ```application/json
 {
-	"id": "ui",
-	"image": "wedeploy/hosting:@site.version.image.hosting@",
-	"healthCheck": {
-		"url": "localhost"
-	}
+  "id": "ui",
+  "image": "wedeploy/hosting:@site.version.image.hosting@",
+  "healthCheck": {
+    "url": "localhost"
+  }
 }
 ```
 

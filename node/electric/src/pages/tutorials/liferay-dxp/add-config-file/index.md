@@ -19,11 +19,11 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-	"id": "app",
-	"image": "wedeploy/liferay:@site.version.image.liferay@",
-	"volume": "/opt/liferay/data",
-	"memory": 4096,
-	"cpu": 3
+  "id": "app",
+  "image": "wedeploy/liferay:@site.version.image.liferay@",
+  "volume": "/opt/liferay/data",
+  "memory": 4096,
+  "cpu": 3
 }
 ```
 
@@ -35,13 +35,13 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 
 ```application/json
 {
-	"id": "app",
-	"env": {
-		"LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME": "com.mysql.jdbc.Driver",
-		"LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL": "jdbc:mysql://database/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&useFastDateParsing=false&useUnicode=true",
-		"LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD": "passwor0d",
-		"LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME": "liferay"
-	}
+  "id": "app",
+  "env": {
+    "LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME": "com.mysql.jdbc.Driver",
+    "LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL": "jdbc:mysql://database/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&useFastDateParsing=false&useUnicode=true",
+    "LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD": "passwor0d",
+    "LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME": "liferay"
+  }
 }
 ```
 

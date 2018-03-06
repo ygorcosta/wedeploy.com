@@ -21,12 +21,12 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-	"id": "users",
-	"image": "wedeploy/auth:@site.version.image.auth@",
-	"env": {
-		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
-		"WEDEPLOY_AUTH_PASSWORD": "true"
-	}
+  "id": "users",
+  "image": "wedeploy/auth:@site.version.image.auth@",
+  "env": {
+    "WEDEPLOY_AUTH_SECURE_FIELDS": "password",
+    "WEDEPLOY_AUTH_PASSWORD": "true"
+  }
 }
 ```
 
@@ -38,15 +38,15 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 
 ```application/json
 {
-	"id": "users",
-	"image": "wedeploy/auth:@site.version.image.auth@",
-	"env": {
-		"WEDEPLOY_AUTH_SECURE_FIELDS": "password",
-		"WEDEPLOY_AUTH_PASSWORD": "true",
-		"WEDEPLOY_AUTH_GOOGLE": "true",
-		"WEDEPLOY_AUTH_GOOGLE_CLIENT_ID": "<your-google-app-id>",
-		"WEDEPLOY_AUTH_GOOGLE_CLIENT_SECRET": "<your-google-app-secret>"
-	}
+  "id": "users",
+  "image": "wedeploy/auth:@site.version.image.auth@",
+  "env": {
+    "WEDEPLOY_AUTH_SECURE_FIELDS": "password",
+    "WEDEPLOY_AUTH_PASSWORD": "true",
+    "WEDEPLOY_AUTH_GOOGLE": "true",
+    "WEDEPLOY_AUTH_GOOGLE_CLIENT_ID": "<your-google-app-id>",
+    "WEDEPLOY_AUTH_GOOGLE_CLIENT_SECRET": "<your-google-app-secret>"
+  }
 }
 ```
 

@@ -21,20 +21,20 @@ To do this, go back to the `ui` folder and paste this code between the "create u
 var auth = WeDeploy.auth('auth-<projectID>.wedeploy.io');
 
 function submitForm() {
-	auth.createUser({
-		email: user.email.value,
-		name: user.name.value,
-		password: user.password.value
-	})
-	.then(function() {
-		alert('Account successfully created!');
-		signIn();
-		user.reset();
-	})
-	.catch(function() {
-		alert('Sign-up failed. Try another email.');
-		user.reset();
-	});
+  auth.createUser({
+    email: user.email.value,
+    name: user.name.value,
+    password: user.password.value
+  })
+  .then(function() {
+    alert('Account successfully created!');
+    signIn();
+    user.reset();
+  })
+  .catch(function() {
+    alert('Sign-up failed. Try another email.');
+    user.reset();
+  });
 }
 ```
 
@@ -48,13 +48,13 @@ In the same file as above, paste this code between the "sign-in method" comments
 
 ```javascript
 function signIn() {
-	auth.signInWithEmailAndPassword(user.email.value, user.password.value)
-	.then(function() {
-		document.location.href = '/welcome.html';
-	})
-	.catch(function() {
-		alert('Sign-in failed. Try another email/password.');
-	});
+  auth.signInWithEmailAndPassword(user.email.value, user.password.value)
+  .then(function() {
+    document.location.href = '/welcome.html';
+  })
+  .catch(function() {
+    alert('Sign-in failed. Try another email/password.');
+  });
 }
 ```
 

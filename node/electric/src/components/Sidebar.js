@@ -8,24 +8,24 @@ import Toggler from 'metal-toggler';
 import templates from './Sidebar.soy.js';
 
 class Sidebar extends Component {
-	attached() {
-		if (isServerSide()) {
-			return;
-		}
+  attached() {
+    if (isServerSide()) {
+      return;
+    }
 
-		this._toggler = new Toggler({
-			content: '.sidebar-toggler-content',
-			header: '.sidebar-header'
-		});
-	}
+    this._toggler = new Toggler({
+      content: '.sidebar-toggler-content',
+      header: '.sidebar-header'
+    });
+  }
 
-	disposed() {
-		if (isServerSide()) {
-		  return;
-		}
+  disposed() {
+    if (isServerSide()) {
+      return;
+    }
 
-		this._toggler.dispose();
-	}
+    this._toggler.dispose();
+  }
 };
 
 Soy.register(Sidebar, templates);

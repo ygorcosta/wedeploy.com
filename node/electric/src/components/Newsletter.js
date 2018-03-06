@@ -7,43 +7,43 @@ import Toast from 'metal-toast';
 import templates from './Newsletter.soy.js';
 
 class Newsletter extends Component {
-	subscribeToNewsletter(event) {
-		event.preventDefault();
+  subscribeToNewsletter(event) {
+    event.preventDefault();
 
-		this.sendSubscriptionToWeDeploy(event.target.email.value)
-			.then((result) => {
-				event.target.email.value = "";
-				this.showToast('Thanks for subscribing!', 'alert-success');
-			})
-			.catch((error) => {
-				this.showToast('Something wrong happened! Please come back later.', 'alert-danger');
-			});
-	}
+    this.sendSubscriptionToWeDeploy(event.target.email.value)
+      .then((result) => {
+        event.target.email.value = "";
+        this.showToast('Thanks for subscribing!', 'alert-success');
+      })
+      .catch((error) => {
+        this.showToast('Something wrong happened! Please come back later.', 'alert-danger');
+      });
+  }
 
-	sendSubscriptionToWeDeploy(userEmail) {
-		return WeDeploy.data('db.wedeploy.com')
-			.create('newsletter', {
-				email: userEmail,
-				timestamp: new Date().toISOString()
-			})
-	}
+  sendSubscriptionToWeDeploy(userEmail) {
+    return WeDeploy.data('db.wedeploy.com')
+      .create('newsletter', {
+        email: userEmail,
+        timestamp: new Date().toISOString()
+      })
+  }
 
-	showToast(bodyText, toastClass) {
-		if (this.toast) {
-			this.toast.dispose();
-			this.toast = null;
-		}
+  showToast(bodyText, toastClass) {
+    if (this.toast) {
+      this.toast.dispose();
+      this.toast = null;
+    }
 
-		this.toast = new Toast({
-			body: bodyText,
-			dismissible: true,
-			elementClasses: toastClass,
-			hideDelay: 5000,
-			spinner: true,
-			spinnerDone: true,
-			visible: true
-		});
-	}
+    this.toast = new Toast({
+      body: bodyText,
+      dismissible: true,
+      elementClasses: toastClass,
+      hideDelay: 5000,
+      spinner: true,
+      spinnerDone: true,
+      visible: true
+    });
+  }
 };
 
 Soy.register(Newsletter, templates);

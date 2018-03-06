@@ -58,12 +58,12 @@ Please remember that supportedScopes works differently than the rest. To learn m
 
 ```application/json
 {
-	"id": "auth",
-	"image": "wedeploy/auth:2.0.0",
-	"env": {
-		"WEDEPLOY_AUTH_SECURE_FIELDS": "providers,password,resetKey,supportedScopes",
-		"WEDEPLOY_AUTH_PASSWORD": "true"
-	}
+  "id": "auth",
+  "image": "wedeploy/auth:2.0.0",
+  "env": {
+    "WEDEPLOY_AUTH_SECURE_FIELDS": "providers,password,resetKey,supportedScopes",
+    "WEDEPLOY_AUTH_PASSWORD": "true"
+  }
 }
 ```
 </aside>

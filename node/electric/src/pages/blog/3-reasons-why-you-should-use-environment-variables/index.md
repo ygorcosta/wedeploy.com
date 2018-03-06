@@ -14,7 +14,7 @@ There are some really big things coming down the pipe with our Beta release righ
 Environments have been around for a while, mainly hiding in the deep code forests, so we wanted to highlight them and share that we wrote some fresh documentation so you can start using them right away!
 
 <figure>
-	<img src="/images/blog/post-7--0.gif" alt="Adding environment variables">
+  <img src="/images/blog/post-7--0.gif" alt="Adding environment variables">
 </figure>
 
 _Here are a couple easy ways they can improve your app!_

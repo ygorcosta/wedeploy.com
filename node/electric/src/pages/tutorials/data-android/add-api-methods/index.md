@@ -19,19 +19,19 @@ To do this, go to `AddToDoActivity.java` and paste this code into the "addToDo" 
 
 ```text/x-java
 weDeploy.data("db-<projectID>.wedeploy.io")
-	.create("tasks", jsonObject)
-	.execute(new Callback() {
-		@Override
-		public void onSuccess(Response response) {
-			Toast.makeText(AddToDoActivity.this, "To do added", Toast.LENGTH_SHORT).show();
-		}
+  .create("tasks", jsonObject)
+  .execute(new Callback() {
+    @Override
+    public void onSuccess(Response response) {
+      Toast.makeText(AddToDoActivity.this, "To do added", Toast.LENGTH_SHORT).show();
+    }
 
-		@Override
-		public void onFailure(Exception e) {
-			Toast.makeText(AddToDoActivity.this, "Error adding to do", Toast.LENGTH_SHORT)
-				.show();
-		}
-	});
+    @Override
+    public void onFailure(Exception e) {
+      Toast.makeText(AddToDoActivity.this, "Error adding to do", Toast.LENGTH_SHORT)
+        .show();
+    }
+  });
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.
@@ -44,25 +44,25 @@ To do this, go to `ToDoListActivity.java` and paste this code into the "populate
 
 ```text/x-java
 weDeploy.data("db-<projectID>.wedeploy.io")
-	.limit(5)
-	.orderBy("id", SortOrder.DESCENDING)
-	.get("tasks")
-	.execute(new Callback() {
-		@Override
-		public void onSuccess(Response response) {
-			try {
-				JSONArray array = new JSONArray(response.getBody());
-				parseAndAddTodos(array);
-			} catch (JSONException e) {
-				onFailure(e);
-			}
-		}
+  .limit(5)
+  .orderBy("id", SortOrder.DESCENDING)
+  .get("tasks")
+  .execute(new Callback() {
+    @Override
+    public void onSuccess(Response response) {
+      try {
+        JSONArray array = new JSONArray(response.getBody());
+        parseAndAddTodos(array);
+      } catch (JSONException e) {
+        onFailure(e);
+      }
+    }
 
-		@Override
-		public void onFailure(Exception e) {
-			Toast.makeText(ToDoListActivity.this, "Error loading todos", Toast.LENGTH_SHORT).show();
-		}
-	});
+    @Override
+    public void onFailure(Exception e) {
+      Toast.makeText(ToDoListActivity.this, "Error loading todos", Toast.LENGTH_SHORT).show();
+    }
+  });
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.

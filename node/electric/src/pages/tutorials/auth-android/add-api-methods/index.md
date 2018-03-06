@@ -19,19 +19,19 @@ To do this, go to `SignUpActivity.java` and paste this code in the "doSignUp" me
 
 ```text/x-java
 weDeploy.auth("users-<projectID>.wedeploy.io")
-	.createUser(email, password, name)
-	.execute(new Callback() {
-		@Override
-		public void onSuccess(Response response) {
-			showAlert("Success", "Signed up successfully");
-		}
+  .createUser(email, password, name)
+  .execute(new Callback() {
+    @Override
+    public void onSuccess(Response response) {
+      showAlert("Success", "Signed up successfully");
+    }
 
-		@Override
-		public void onFailure(Exception e) {
-			Log.e("Error", "Sign up error", e);
-			showAlert("Error", "Sign up error");
-		}
-	});
+    @Override
+    public void onFailure(Exception e) {
+      Log.e("Error", "Sign up error", e);
+      showAlert("Error", "Sign up error");
+    }
+  });
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.
@@ -44,17 +44,17 @@ First of all, go to `LoginActivity.java`, and paste this code in the "doLogin" m
 
 ```text/x-java
 weDeploy.auth("users-<projectID>.wedeploy.io")
-	.signIn(email, password).execute(new Callback() {
-		@Override
-		public void onSuccess(Response response) {
-			showAlert("Success", "Signed in");
-		}
+  .signIn(email, password).execute(new Callback() {
+    @Override
+    public void onSuccess(Response response) {
+      showAlert("Success", "Signed in");
+    }
 
-		@Override
-		public void onFailure(Exception e) {
-			showAlert("Error", "Login error");
-		}
-	});
+    @Override
+    public void onFailure(Exception e) {
+      showAlert("Error", "Login error");
+    }
+  });
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.
@@ -67,18 +67,18 @@ In the examples above we use the execute(callback) method to handle the response
 
 ```text/x-java
 weDeploy.auth("users-<projectID>.wedeploy.io")
-	.signIn(email, password)
-	.asSingle()
-	.subscribe(new DisposableSingleObserver<Response>() {
-		@Override
-		public void onSuccess(Response response) {
-			showAlert("Success", "Signed in");
-		}
+  .signIn(email, password)
+  .asSingle()
+  .subscribe(new DisposableSingleObserver<Response>() {
+    @Override
+    public void onSuccess(Response response) {
+      showAlert("Success", "Signed in");
+    }
 
-		@Override
-		public void onError(Throwable e) {
-			showAlert("Error", "Login error");
-		}
-	});
+    @Override
+    public void onError(Throwable e) {
+      showAlert("Error", "Login error");
+    }
+  });
 ```
 </aside>

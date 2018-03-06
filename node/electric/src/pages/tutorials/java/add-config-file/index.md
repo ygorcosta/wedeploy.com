@@ -19,8 +19,8 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-	"id": "app",
-	"memory": 2048
+  "id": "app",
+  "memory": 2048
 }
 ```
 
@@ -32,11 +32,11 @@ One of the awesome things you can do in your `wedeploy.json` file is add environ
 
 ```application/json
 {
-	"id": "app",
-	"env": {
-		"DB_USER": "us3rname",
-		"DB_PASSWORD": "passw0rd",
-	}
+  "id": "app",
+  "env": {
+    "DB_USER": "us3rname",
+    "DB_PASSWORD": "passw0rd",
+  }
 }
 ```
 

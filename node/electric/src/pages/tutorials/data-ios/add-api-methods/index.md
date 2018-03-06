@@ -19,16 +19,16 @@ To do this, go to `tutorial-data-ios/app/tutorial-data-ios/ToDoListViewControlle
 
 ```swift
 WeDeploy.data("db-<projectID>.wedeploy.io")
-	.create(resource: "tasks", object: ["name" : todo])
-	.toCallback { objectCreated, error in
-		if let objectCreated = objectCreated {
-			print("To do added: \(objectCreated)")
-			self.toDoTextField.text = ""
-		}
-		else {
-			print("Error: \(error!)")
-		}
-	}
+  .create(resource: "tasks", object: ["name" : todo])
+  .toCallback { objectCreated, error in
+    if let objectCreated = objectCreated {
+      print("To do added: \(objectCreated)")
+      self.toDoTextField.text = ""
+    }
+    else {
+      print("Error: \(error!)")
+    }
+  }
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.
@@ -41,18 +41,18 @@ To do this, go to `tutorial-data-ios/app/tutorial-data-ios/AddToDoViewController
 
 ```swift
 WeDeploy.data("db-<projectID>.wedeploy.io")
-	.orderBy(field: "id", order: .DESC)
-	.limit(5)
-	.get(resourcePath: "tasks")
-	.toCallback { tasks, error in
-		if let tasks = tasks {
-			self.todos = tasks.map({ $0["name"] as! String})
-			self.tableView.reloadData()
-		}
-		else {
-			print("Error: \(error!)")
-		}
-	}
+  .orderBy(field: "id", order: .DESC)
+  .limit(5)
+  .get(resourcePath: "tasks")
+  .toCallback { tasks, error in
+    if let tasks = tasks {
+      self.todos = tasks.map({ $0["name"] as! String})
+      self.tableView.reloadData()
+    }
+    else {
+      print("Error: \(error!)")
+    }
+  }
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.

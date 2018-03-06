@@ -72,7 +72,7 @@ In order to make sure we know where you want us to scan, we require that you pla
 
 ```application/json
 {
-	"id": "myservice"
+  "id": "myservice"
 }
 ```
 

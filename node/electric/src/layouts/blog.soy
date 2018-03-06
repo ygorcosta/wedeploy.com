@@ -3,16 +3,16 @@
 /**
  */
 {template .render}
-	{call main.render data="all"}
-		{param elementClasses: 'blog' /}
-		{param content kind="html"}
-			<div class="blog">
-				{call .mainPost data="all" /}
-				{call .olderPosts data="all" /}
-			</div>
-		{/param}
-		{param currentPage: 'blog' /}
-	{/call}
+  {call main.render data="all"}
+    {param elementClasses: 'blog' /}
+    {param content kind="html"}
+      <div class="blog">
+        {call .mainPost data="all" /}
+        {call .olderPosts data="all" /}
+      </div>
+    {/param}
+    {param currentPage: 'blog' /}
+  {/call}
 {/template}
 
 /**
@@ -22,21 +22,21 @@
   {@param page: ?}
   {@param siteUrl: ?}
 
-	<article class="container">
-		<header>
-			<small>By {$page.author} <span>| {$page.date}</span></small>
+  <article class="container">
+    <header>
+      <small>By {$page.author} <span>| {$page.date}</span></small>
 
-			<h1>{$page.title}</h1>
-		</header>
+      <h1>{$page.title}</h1>
+    </header>
 
-		<div class="content">
-			{$content}
-		</div>
+    <div class="content">
+      {$content}
+    </div>
 
-		{call SocialButtons.render data="all"}
-			{param siteUrl: $siteUrl /}
-		{/call}
-	</article>
+    {call SocialButtons.render data="all"}
+      {param siteUrl: $siteUrl /}
+    {/call}
+  </article>
 {/template}
 
 /**
@@ -45,19 +45,19 @@
   {@param page: ?}
   {@param site: ?}
 
-	<div class="posts-list">
-		<div class="container">
-			{let $blogObject: $site.index.children['blog'] /}
-			{foreach $childId in $blogObject.childIds}
-				{if $page.url != $blogObject.children[$childId].url and index($childId) < 4}
-					<div class="post-item container-blog">
-						<a class="post-item__link" href="{$blogObject.children[$childId].url}">
-							<small>By {$blogObject.children[$childId].author} <span>| {$blogObject.children[$childId].date}</span></small>
-							<h4 class="post-item__title">{$blogObject.children[$childId].title}</h4>
-						</a>
-					</div>
-				{/if}
-			{/foreach}
-		</div>
-	</div>
+  <div class="posts-list">
+    <div class="container">
+      {let $blogObject: $site.index.children['blog'] /}
+      {foreach $childId in $blogObject.childIds}
+        {if $page.url != $blogObject.children[$childId].url and index($childId) < 4}
+          <div class="post-item container-blog">
+            <a class="post-item__link" href="{$blogObject.children[$childId].url}">
+              <small>By {$blogObject.children[$childId].author} <span>| {$blogObject.children[$childId].date}</span></small>
+              <h4 class="post-item__title">{$blogObject.children[$childId].title}</h4>
+            </a>
+          </div>
+        {/if}
+      {/foreach}
+    </div>
+  </div>
 {/template}

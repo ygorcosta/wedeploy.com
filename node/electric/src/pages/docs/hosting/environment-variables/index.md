@@ -37,12 +37,12 @@ Here are the environment variables in action within a `wedeploy.json`.
 
 ```application/json
 {
-	"id": "myservice",
-	"image": "wedeploy/hosting:@site.version.image.hosting@",
-	"env": {
-		"WEDEPLOY_WEB_PATH": "./dist",
-		"WEDEPLOY_WEB_ERROR_PATH": "./myerrors",
-	}
+  "id": "myservice",
+  "image": "wedeploy/hosting:@site.version.image.hosting@",
+  "env": {
+    "WEDEPLOY_WEB_PATH": "./dist",
+    "WEDEPLOY_WEB_ERROR_PATH": "./myerrors",
+  }
 }
 ```
 

@@ -16,20 +16,20 @@ Sending emails with WeDeploy is super easy. This tutorial will walk you through 
 ###### What you'll need
 
 <ul class="checklist">
-	<li><a href="https://wedeploy.com/docs/intro/using-the-command-line/" target="_blank">The WeDeploy CLI</a></li>
-	<li><a href="https://developer.apple.com/xcode" target="_blank">Xcode</a></li>
-	<li><a href="https://cocoapods.org/" target="_blank">Cocoapods</a></li>
-	<li>A code editor</li>
+  <li><a href="https://wedeploy.com/docs/intro/using-the-command-line/" target="_blank">The WeDeploy CLI</a></li>
+  <li><a href="https://developer.apple.com/xcode" target="_blank">Xcode</a></li>
+  <li><a href="https://cocoapods.org/" target="_blank">Cocoapods</a></li>
+  <li>A code editor</li>
 </ul>
 
 ###### What you'll do
 
 <ul class="checklist">
-	<li>Download a sample project</li>
-	<li>Add configuration files</li>
-	<li>Include the API Client</li>
-	<li>Add the API methods</li>
-	<li>Deploy to production</li>
-	<li>Start sending emails</li>
+  <li>Download a sample project</li>
+  <li>Add configuration files</li>
+  <li>Include the API Client</li>
+  <li>Add the API methods</li>
+  <li>Deploy to production</li>
+  <li>Start sending emails</li>
 </ul>
 

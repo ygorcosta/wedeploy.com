@@ -14,7 +14,7 @@ layout: "blog"
 **We're glad to announce a brand new metrics API and a real-time metrics view for your applications.**
 
 <figure>
-		<img src="/images/blog/post-14--0.gif" alt="metrics">
+    <img src="/images/blog/post-14--0.gif" alt="metrics">
 </figure>
 
 Through our metrics API, we check the usage of memory, CPU, and bandwidth I/O of your projects every 15 seconds and populate them into easy-to-read graphs right on your WeDeploy Console.

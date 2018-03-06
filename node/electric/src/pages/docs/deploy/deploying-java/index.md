@@ -25,9 +25,9 @@ weight: 6
 Want to see the process of deploying Java step by step?
 
 <div class="guide-btn-cta">
-	<a class="btn btn-accent btn-sm" href="/tutorials/java/" target="_blank">
-		<span class="icon-16-external"></span>Try the tutorial
-	</a>
+  <a class="btn btn-accent btn-sm" href="/tutorials/java/" target="_blank">
+    <span class="icon-16-external"></span>Try the tutorial
+  </a>
 </div>
 
 <div class="guide-aux-cta">
@@ -50,8 +50,8 @@ Below is an examples of a `wedeploy.json` for the Java container. The `id` for y
 
 ```application/json
 {
-	"id": "myservice",
-	"memory": 2048
+  "id": "myservice",
+  "memory": 2048
 }
 ```
 

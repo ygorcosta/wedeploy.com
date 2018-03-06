@@ -53,11 +53,11 @@ You can also define environment variables directly on your code repository by us
 
 ```application/json
 {
-	"id": "myservice",
-	"env": {
-		"DATABASE_USER": "root",
-		"DATABASE_PASSWORD": "test"
-	}
+  "id": "myservice",
+  "env": {
+    "DATABASE_USER": "root",
+    "DATABASE_PASSWORD": "test"
+  }
 }
 ```
 

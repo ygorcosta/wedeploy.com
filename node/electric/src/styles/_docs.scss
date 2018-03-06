@@ -99,19 +99,19 @@
    ========================================================================== */
 
 .docs .guide-content h1 {
-	@include h3;
+  @include h3;
 }
 
 .docs .guide-content h2 {
-	@include h4;
+  @include h4;
 }
 
 .docs-nav.affix.topbar-is-fixed {
-	top: 20px;
+  top: 20px;
 }
 
 .guide-btn-cta .btn span[class*="icon-16-external"] {
-	top: 7px;
+  top: 7px;
 }
 
 .docs-home-middle-description {

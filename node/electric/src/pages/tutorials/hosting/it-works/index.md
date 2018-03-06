@@ -16,7 +16,7 @@ Great work, your project is ready to be used!
 Go to `app-<projectID>.wedeploy.io` in your browser.
 
 <figure>
-	<img src="/images/tutorials/it-works.png" alt="It works">
+  <img src="/images/tutorials/it-works.png" alt="It works">
 </figure>
 
 Awesome! You just deployed a static site within a few minutes! We can't wait to see what else you create with WeDeploy!

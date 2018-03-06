@@ -1,19 +1,19 @@
 {
-	"title": "WeDeploy™",
-	"url": "https://wedeploy.com",
-	"githubRepo": "wedeploy/wedeploy.com",
-	"googleAnalytics": "UA-37033501-3",
-	"version": {
-		"api": {
-			"android": "1.0.0",
-			"javascript": "4.2.0"
-		},
-		"image": {
-			"auth": "2.0.0",
-			"data": "2.0.0",
-			"email": "2.0.0",
-			"hosting": "2.0.0",
-			"liferay": "dxp-sp6-20180220"
-		}
-	}
+  "title": "WeDeploy™",
+  "url": "https://wedeploy.com",
+  "githubRepo": "wedeploy/wedeploy.com",
+  "googleAnalytics": "UA-37033501-3",
+  "version": {
+    "api": {
+      "android": "1.0.0",
+      "javascript": "4.2.0"
+    },
+    "image": {
+      "auth": "2.0.0",
+      "data": "2.0.0",
+      "email": "2.0.0",
+      "hosting": "2.0.0",
+      "liferay": "dxp-sp6-20180220"
+    }
+  }
 }

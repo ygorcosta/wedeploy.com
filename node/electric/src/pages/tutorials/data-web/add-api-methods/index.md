@@ -19,16 +19,16 @@ To do this, go to `tutorial-data-web/ui/index.js` and paste this code:
 
 ```javascript
 WeDeploy
-	.data('db-<projectID>.wedeploy.io')
-	.create('tasks', {name: form.item.value })
-	.then(function(response) {
-		form.reset();
-		form.item.focus();
-		console.info('Saved:', response);
-	})
-	.catch(function(error) {
-		console.error(error);
-	});
+  .data('db-<projectID>.wedeploy.io')
+  .create('tasks', {name: form.item.value })
+  .then(function(response) {
+    form.reset();
+    form.item.focus();
+    console.info('Saved:', response);
+  })
+  .catch(function(error) {
+    console.error(error);
+  });
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.
@@ -41,16 +41,16 @@ To do this, go to `list.js` inside of the same folder and paste this code:
 
 ```javascript
 WeDeploy
-	.data('db-<projectID>.wedeploy.io')
-	.orderBy('id', 'desc')
-	.limit(5)
-	.get('tasks')
-	.then(function(response) {
-		appendTasks(response);
-	})
-	.catch(function(error) {
-		console.error(error);
-	});
+  .data('db-<projectID>.wedeploy.io')
+  .orderBy('id', 'desc')
+  .limit(5)
+  .get('tasks')
+  .then(function(response) {
+    appendTasks(response);
+  })
+  .catch(function(error) {
+    console.error(error);
+  });
 ```
 
 **Note:** make sure to replace `<projectID>` with the id of your project.

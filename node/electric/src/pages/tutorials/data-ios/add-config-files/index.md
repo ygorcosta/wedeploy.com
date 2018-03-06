@@ -21,8 +21,8 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-	"id": "db",
-	"image": "wedeploy/data:@site.version.image.data@"
+  "id": "db",
+  "image": "wedeploy/data:@site.version.image.data@"
 }
 ```
 
@@ -36,10 +36,10 @@ Along with the wedeploy.json, each Data service must have an `api.json` file to 
 
 ```application/json
 [
-	{
-		"path": "/tasks/*",
-		"data": true
-	}
+  {
+    "path": "/tasks/*",
+    "data": true
+  }
 ]
 ```
 
@@ -51,16 +51,16 @@ Another thing you can do with your `api.json` file is add other parameters for t
 
 ```application/json
 [
-	{
-		"path": "/movies/*",
-		"data": true,
-		"method": ["GET", "PATCH", "PUT", "DELETE"]
-	},
-	{
-		"path": "/shows/*",
-		"data": true,
-		"method": "POST"
-	}
+  {
+    "path": "/movies/*",
+    "data": true,
+    "method": ["GET", "PATCH", "PUT", "DELETE"]
+  },
+  {
+    "path": "/shows/*",
+    "data": true,
+    "method": "POST"
+  }
 ]
 ```
 
