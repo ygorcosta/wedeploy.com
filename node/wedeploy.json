@@ -1,3 +1,6 @@
 {
-  "id": "node"
+  "id": "node",
+  "healthCheck": {
+    "url": "localhost:3001"
+  }
 }
