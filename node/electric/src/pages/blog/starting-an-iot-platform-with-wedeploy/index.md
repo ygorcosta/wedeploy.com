@@ -96,7 +96,7 @@ public class SensorsRestController {
 
 Our API service needs to store the metrics in the [WeDeploy Data](/docs/data) service so I added a new service to the project on the WeDeploy dashboard, naming it `data`. Again, I cloned the [WeDeploy Data example on Github](https://github.com/wedeploy-examples/data-example) at the same level of my API service, and voilà! I have two services under my WeDeploy project.
 
-Here it is the `container.json` file for this new data service:
+Here it is the `wedeploy.json` file for this new data service:
 
 ```application/json
 {
@@ -243,7 +243,7 @@ Here the `WeDeploy` object hides the magic of communicating with other WeDeploy 
 
 ##### Displaying data
 
-At that point I had built two services: a Java REST API developed with `Spring Boot`, and a [WeDeploy Data service](/docs/data) for persistence. Then I wanted to display the metrics in a web interface. So, I created a third WeDeploy service, [Hosting](/docs/hosting), which allows uploading static files, such as HTML, CSS and JavaScript, and gave it the name `ui`. Bellow is the `container.json` file that I made to impliment the [Hosting Service](/docs/hosting).
+At that point I had built two services: a Java REST API developed with `Spring Boot`, and a [WeDeploy Data service](/docs/data) for persistence. Then I wanted to display the metrics in a web interface. So, I created a third WeDeploy service, [Hosting](/docs/hosting), which allows uploading static files, such as HTML, CSS and JavaScript, and gave it the name `ui`. Below is the `wedeploy.json` file that I made to impliment the [Hosting Service](/docs/hosting).
 
 ```application/json
 {
