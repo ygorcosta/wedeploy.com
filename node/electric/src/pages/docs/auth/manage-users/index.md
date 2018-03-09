@@ -53,6 +53,15 @@ WeDeploy
   .createUser("user@domain.com", "password", "somename")
   .execute();
 ```
+```text/x-sh
+curl -X POST https://<serviceID>-<projectID>.wedeploy.io/users \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "email": "user@domain.com",
+    "password": "abc"
+  }'
+
+```
 
 </article>
 
@@ -85,6 +94,10 @@ WeDeploy
   .auth("<auth-url>")
   .getCurrentUser()
   .execute();
+```
+```text/x-sh
+curl https://<serviceID>-<projectID>.wedeploy.io/user \
+  -H 'Authorization: Bearer <user-token>'
 ```
 
 </article>
@@ -121,6 +134,10 @@ WeDeploy
   .getUser("userId")
   .execute();
 ```
+```text/x-sh
+curl https://<serviceID>-<projectID>.wedeploy.io/users/<userID> \
+  -H 'Authorization: Bearer <your-project-master-token>'
+```
 
 </article>
 
@@ -155,6 +172,10 @@ WeDeploy
   .auth("https://<serviceID>-<projectID>.wedeploy.io")
   .getAllUsers()
   .execute();
+```
+```text/x-sh
+curl https://<serviceID>-<projectID>.wedeploy.io/users \
+  -H 'Authorization: Bearer <your-project-master-token>'
 ```
 
 </article>
@@ -210,6 +231,10 @@ WeDeploy
   .auth("https://<serviceID>-<projectID>.wedeploy.io")
   .deleteUser("userId")
   .execute();
+```
+```text/x-sh
+curl -X DELETE https://<serviceID>-<projectID>.wedeploy.io/users/<userID> \
+  -H 'Authorization: Bearer <your-project-master-token>'
 ```
 
 </article>
@@ -280,6 +305,17 @@ WeDeploy
   .updateUser("userId", fields)
   .execute();
 ```
+```text/x-sh
+curl -X PATCH https://<serviceID>-<projectID>.wedeploy.io/users/<userID \
+  -H 'Authorization: Bearer <your-project-master-token>' \
+  -H 'Content-Type: application/json'
+  -d $'{
+    "password": "password",
+    "email": "eleven@hawkinslab.com",
+    "name": "Eleven",
+    "photoUrl": "https://hawkinslabs.com/011/profile.jpg"
+  }'
+```
 
 </article>
 
@@ -317,6 +353,13 @@ WeDeploy
   .sendPasswordResetEmail("user@domain.com")
   .execute();
 ```
+```text/x-sh
+curl -X POST https://<serviceID>-<projectID>.wedeploy.io/user/recover \
+  -H 'Content-Type: application/json' \
+  -d $'{
+    "email": "user@domain.com"
+  }'
+```
 
 </article>
 
@@ -352,6 +395,13 @@ WeDeploy
   .signOut()
   .execute();
 ```
+```text/x-sh
+curl -X POST https://<serviceID>-<projectID>.wedeploy.io/oauth/revoke \
+  -H 'Content-Type: application/json' \
+  -d $'{
+    "token": "<user-token>"
+  }'
+```
 
 </article>
 
@@ -379,6 +429,16 @@ WeDeploy
     // Not created.
   });
 ```
+```text/x-sh
+curl -X POST https://<serviceID>-<projectID>.wedeploy.io/users \
+  -H 'Authorization: Bearer <your-project-master-token>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "email": "user@domain.com",
+    "password": "abc",
+    "supportedScopes: ["someScope"]
+  }'
+```
 
 **Updating user with user roles**
 
@@ -398,6 +458,18 @@ WeDeploy
   .catch(function(err) {
     // Not updated.
   });
+```
+```text/x-sh
+curl -X PATCH https://<serviceID>-<projectID>.wedeploy.io/users/<userID> \
+  -H 'Authorization: Bearer <your-project-master-token>' \
+  -H 'Content-Type: application/json' \
+  -d $'{
+    "password": "password",
+    "email": "eleven@hawkinslab.com",
+    "name": "Eleven",
+    "photoUrl": "https://hawkinslabs.com/011/profile.jpg",
+    "suportedScopes": ["friends", "dont", "lie"]
+  }'
 ```
 
 </article>
