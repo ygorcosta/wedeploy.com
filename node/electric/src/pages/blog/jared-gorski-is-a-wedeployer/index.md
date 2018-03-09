@@ -1,6 +1,6 @@
 ---
 title: "Jared Gorski is a WeDeployer"
-description: "We are starting the new year out right by bringing on a new team member as part of our developer advocate internship program."
+description: "We are starting the new year out right by bringing on a new team member as part of our Developer Relations internship program."
 date: "March 9, 2018"
 author: "Jonni Lundy"
 image: "/images/blog/post-21--0.jpg"
@@ -27,7 +27,9 @@ I want to be a Developer Advocate because I love the fusion of creativity, relat
 
 **What do you love about WeDeploy?**
 
-WeDeploy is a tool people can use to do amazing things. Having worked with the team for nearly three weeks now, I've caught the excitement of building something high-quality that helps others to reach greater heights. The WeDeploy team approaches this work every day with a drive to consistently excel in both the form and the function of WeDeploy. This drive can only come from true passion, which inspires me to always be learning and bringing the best I have to offer. 
+WeDeploy is a tool people can use to do amazing things. Having worked with the team for nearly three weeks now, I've caught the excitement of building something high-quality that helps others to reach greater heights.
+
+The WeDeploy team approaches this work every day with a drive to consistently excel in both the form and the function of WeDeploy. This drive can only come from true passion, which inspires me to always be learning and bringing the best I have to offer.
 
 The product itself has great potential, especially as it supports and empowers the amazing creativity of the WeDeploy community. It's fun to be a part of something awesome.
 
