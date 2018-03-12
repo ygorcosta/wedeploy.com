@@ -51,13 +51,13 @@ WeDeploy
   .execute();
 ```
 ```text/x-sh
-curl -X POST https://<serviceID>-<projectID>.wedeploy.io/oauth/token \
-  -H 'Content-Type: application/json' \
-  -d $'{
-    "grant_type": "password",
-    "username": "user@domain.com",
-    "password": "password"
-  }'
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/oauth/token" \
+     -H 'Content-Type: application/json' \
+     -d $'{
+        "grant_type": "password",
+        "username": "user@domain.com",
+        "password": "password"
+      }'
 ```
 
 </article>
