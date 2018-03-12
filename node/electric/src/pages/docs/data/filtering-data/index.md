@@ -95,7 +95,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -138,7 +137,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -191,7 +189,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -253,7 +250,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -305,7 +301,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -350,7 +345,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -392,7 +386,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-      -H 'accept: application/json' \
       -H 'Content-Type: application/json' \
       -H 'Authorization: Bearer <your-project-master-token>' \
       -d $'{
@@ -435,7 +428,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -477,7 +469,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -520,7 +511,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -571,7 +561,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-      -H 'accept: application/json' \
       -H 'Content-Type: application/json' \
       -H 'Authorization: Bearer <your-project-master-token>' \
       -d $'{
@@ -616,7 +605,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -658,7 +646,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -700,7 +687,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -742,7 +728,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -837,7 +822,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -882,7 +866,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -949,7 +932,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -995,7 +977,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -1041,7 +1022,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -1093,7 +1073,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
@@ -1168,7 +1147,6 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-      -H 'accept: application/json' \
       -H 'Content-Type: application/json' \
       -H 'Authorization: Bearer <your-project-master-token>' \
       -d $'{
@@ -1213,7 +1191,6 @@ WeDeploy
   .execute();
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-     -H 'accept: application/json' \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <your-project-master-token>' \
      -d $'{
