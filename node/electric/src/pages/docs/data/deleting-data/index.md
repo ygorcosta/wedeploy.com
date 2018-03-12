@@ -81,13 +81,13 @@ curl -X "DELETE" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
 
 # Deleting a document
 curl -X "DELETE" "https://<serviceID>-<projectID>.wedeploy.io/movies/star_wars_v" \
-      -H 'Content-Type: application/json' \
-      -H 'Authorization: Bearer <your-project-master-token>'
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>'
 
 # Deleting a document field
 curl -X "DELETE" "https://<serviceID>-<projectID>.wedeploy.io/movies/star_wars_v/rating" \
-      -H 'Content-Type: application/json' \
-      -H 'Authorization: Bearer <your-project-master-token>'
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>'
 ```
 
 **Warning**: The `delete` function is irreversible. Any deleted document or collection is completely erased and cannot be retrieved.
