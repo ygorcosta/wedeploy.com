@@ -386,9 +386,9 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-      -H 'Content-Type: application/json' \
-      -H 'Authorization: Bearer <your-project-master-token>' \
-      -d $'{
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
         "filter": [
           {
             "theaters": {
@@ -543,7 +543,7 @@ You can filter for content that matches any part of your query. This would allow
 ```javascript
 WeDeploy
   .data('https://<serviceID>-<projectID>.wedeploy.io')
-  .match('title', "Sith's revenge")
+  .match('title', "Sith\'s revenge")
   .get('movies')
 ```
 ```swift
@@ -561,9 +561,9 @@ WeDeploy
 ```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
-      -H 'Content-Type: application/json' \
-      -H 'Authorization: Bearer <your-project-master-token>' \
-      -d $'{
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
         "filter": [
           {
             "title": {
@@ -1189,6 +1189,7 @@ WeDeploy
   .orderBy("title", SortOrder.DESCENDING)
   .get("movies")
   .execute();
+```
 ```text/x-sh
 curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
      -H 'Content-Type: application/json' \
