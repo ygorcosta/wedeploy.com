@@ -944,7 +944,7 @@ curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
           }
         ],
         "limit": 2
-      }
+      }'
 ```
 
 Above we are getting a maximum of 2 documents in the movies collection where the title contains "Revenge".
@@ -989,7 +989,7 @@ curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
           }
         ],
         "offset": 5
-      }
+      }'
 ```
 
 Above we are getting documents in the movies collection where the title contains "Revenge" but skipping the first 5 results.
