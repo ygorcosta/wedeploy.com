@@ -56,6 +56,17 @@ WeDeploy
   .create("movies", movieJsonObject)
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+          "title": "Star Wars IV",
+          "year": 1977,
+          "rating": 8.7
+      }'
+```
 
 This operation will return the newly created document.
 
@@ -134,6 +145,24 @@ WeDeploy
   .data("https://<serviceID>-<projectID>.wedeploy.io")
   .create("movies", moviesJsonArray)
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'[
+        {
+          "title": "Star Wars III",
+          "year": 2005,
+          "rating": 8.0
+        },
+        {
+          "title": "Star Wars II",
+          "year": 2002,
+          "rating": 8.6
+        }
+      ]'
 ```
 
 </article>

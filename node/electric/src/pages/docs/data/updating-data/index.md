@@ -50,6 +50,16 @@ WeDeploy
   .update("movies/115992383516607958", movieJsonObject)
   .execute();
 ```
+```text/x-sh
+curl -X "PATCH" "https://<serviceID>-<projectID>.wedeploy.io/movies/115992383516607958" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "rating":9.1
+      }'
+```
+
 
 </article>
 
@@ -82,13 +92,23 @@ WeDeploy
 ```
 ```text/x-java
 JSONObject movieJsonObject = new JSONObject()
-  .put("rating", 9.1);
+  .put("rating", 9.1)
   .put("title", "Avengers");
 
 WeDeploy
   .data("https://<serviceID>-<projectID>.wedeploy.io")
   .replace("movies/115992383516607958", movieJsonObject)
   .execute();
+```
+```text/x-sh
+curl -X "PUT" "https://<serviceID>-<projectID>.wedeploy.io/movies/115992383516607958" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "rating":9.1,
+        "title":"Avengers"
+      }'
 ```
 
 **Warning**: By using `replace`, all old data in the replaced document will be gone and only the data you pass will remain.

@@ -93,6 +93,22 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "ratings": {
+              "value": 8.3,
+              "operator": ">"
+            }
+          }
+        ]
+      }'
+```
 
 Above we are getting all documents in the movies collection where the ratings field is greater than 8.3.
 
@@ -119,6 +135,28 @@ WeDeploy
   .where(Filter.field("theater", "=", "Regal"))
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "ratings": {
+              "value": 8.3,
+              "operator": ">"
+            }
+          },
+          {
+            "theater": {
+              "value": "Regal",
+              "operator": "="
+            }
+          }
+        ]
+      }'
 ```
 
 Above we are getting all documents in the movies collection where the ratings field is greater than 8.3 and the theater is Regal.
@@ -150,6 +188,32 @@ WeDeploy
   .or(Filter.field("theater", "=", "CMA")))
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "or": [
+              {
+                "theater": {
+                  "value": "Regal",
+                  "operator": "="
+                }
+              },
+              {
+                "theater": {
+                  "value": "CMA",
+                  "operator": "="
+                }
+              }
+            ]
+          }
+        ]
+      }'
 ```
 
 Above we are getting all documents in the movies collection where the theater is Regal or CMA.
@@ -187,6 +251,32 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "and": [
+              {
+                "ratings": {
+                  "value": 7,
+                  "operator": ">"
+                }
+              },
+              {
+                "ratings": {
+                  "value": 9.5,
+                  "operator": "<="
+                }
+              }
+            ]
+          }
+        ]
+    }'
+```
 
 Above we are getting all documents in the movies collection where the ratings are greater than 7 and less than or equal to 9.5.
 
@@ -212,6 +302,25 @@ WeDeploy
   .where(Filter.range("ratings", 4, 8))
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "ratings": {
+              "value": {
+                "from": 4,
+                "to": 8
+              },
+              "operator": "range"
+            }
+          }
+        ]
+      }'
 ```
 
 Above we are getting all documents in the movies collection where the ratings are between 4 and 8.
@@ -239,6 +348,24 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "theaters": {
+              "value": [
+                "Regal"
+              ],
+              "operator": "none"
+            }
+          }
+        ]
+      }'
+```
 
 Above we are getting all documents in the movies collection where the theater is not Regal.
 
@@ -262,6 +389,25 @@ WeDeploy
   .where(Filter.none("theaters", "Regal", "AMC"))
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+      -H 'accept: application/json' \
+      -H 'Content-Type: application/json' \
+      -H 'Authorization: Bearer <your-project-master-token>' \
+      -d $'{
+        "filter": [
+          {
+            "theaters": {
+              "value": [
+                "Regal",
+                "AMC"
+              ],
+              "operator": "none"
+            }
+          }
+        ]
+      }'
 ```
 
 <h5 id="any">any</h5>
@@ -287,6 +433,24 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "theaters": {
+              "value": [
+                "CMA"
+              ],
+              "operator": "any"
+            }
+          }
+        ]
+      }'
+```
 
 Above we are getting all documents in the movies collection where the theater is CMA.
 
@@ -311,6 +475,25 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "theaters": {
+              "value": [
+                "Regal",
+                "AMC"
+              ],
+              "operator": "any"
+            }
+          }
+        ]
+      }'
+```
 
 <h5 id="exists">exists</h5>
 
@@ -334,6 +517,21 @@ WeDeploy
   .where(Filter.exists("theaters"))
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "theaters": {
+              "operator": "exists"
+            }
+          }
+        ]
+      }'
 ```
 
 Above we are getting all documents in the movies collection where there is any value for theater.
@@ -371,6 +569,22 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+      -H 'accept: application/json' \
+      -H 'Content-Type: application/json' \
+      -H 'Authorization: Bearer <your-project-master-token>' \
+      -d $'{
+        "filter": [
+          {
+            "title": {
+              "value": "Sith's revenge",
+              "operator": "match"
+            }
+          }
+        ]
+      }'
+```
 
 Above we are getting all documents in the movies collection where the title contains "sith's" or "revenge".
 
@@ -400,6 +614,22 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "title": {
+              "value": "sith +Revenge -jedi",
+              "operator": "match"
+            }
+          }
+        ]
+      }'
+```
 
 Above we are getting all documents in the movies collection where the title has to contain "revenge", does not contain "jedi", and might contain "sith".
 
@@ -425,6 +655,22 @@ WeDeploy
   .where(Filter.phrase("title", "revenge of the"))
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "title": {
+              "value": "revenge of the",
+              "operator": "phrase"
+            }
+          }
+        ]
+      }'
 ```
 
 Above we are getting all documents in the movies collection where the title contains "revenge of the".
@@ -452,6 +698,22 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "title": {
+              "value": "reven",
+              "operator": "prefix"
+            }
+          }
+        ]
+      }'
+```
 
 Above we are getting all documents in the movies collection where a word in the title begins with "reven".
 
@@ -478,6 +740,24 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "title": {
+              "value": {
+                "query": "sth"
+              },
+              "operator": "similar"
+            }
+          }
+        ]
+      }'
+```
 
 Above we are getting all documents in the movies collection where the title contains similar content to "sth".
 
@@ -491,7 +771,7 @@ Above we are getting all documents in the movies collection where the title cont
 
 To begin utilizing the geolocation filtering, you must prepare the mapping of your collection field first so that the database knows to only accept valid geolcation entries. To do this, run this cURL command (replace the service ID, Project ID, collection ID, and field name).
 
-```
+```text/x-sh
 curl -X POST \
   --url https://{service}-{project}.wedeploy.io/ \
   --header 'content-type: application/json' \
@@ -555,6 +835,25 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "location": {
+              "value": [
+                "20,0",
+                "0,20"
+              ],
+              "operator": "gp"
+            }
+          }
+        ]
+      }
+```
 
 Above we are getting all documents in the theaters collection where the location is within a geo box with the top left coordinates of 20,0 and the bottom right coordinates of 0,20.
 
@@ -580,6 +879,25 @@ WeDeploy
   .where(Filter.distance("location", "20.0,0", "40mi"))
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "location": {
+              "value": {
+                "max": "40mi",
+                "location": "20.0,0"
+              },
+              "operator": "gd"
+            }
+          }
+        ]
+      }
 ```
 
 Above we are getting all documents in the theaters collection where the location is within 40 miles of 20,0.
@@ -629,6 +947,23 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "title": {
+              "value": "Revenge",
+              "operator": "match"
+            }
+          }
+        ],
+        "limit": 2
+      }
+```
 
 Above we are getting a maximum of 2 documents in the movies collection where the title contains "Revenge".
 
@@ -658,6 +993,23 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "title": {
+              "value": "Revenge",
+              "operator": "match"
+            }
+          }
+        ],
+        "offset": 5
+      }
+```
 
 Above we are getting documents in the movies collection where the title contains "Revenge" but skipping the first 5 results.
 
@@ -686,6 +1038,25 @@ WeDeploy
   .highlight("title")
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "title": {
+              "value": "Revenge",
+              "operator": "match"
+            }
+          }
+        ],
+        "highlight": [
+          "title"
+        ]
+      }'
 ```
 
 Above we are getting documents in the movies collection where the title contains "Revenge" and wrapping all "revenge" words in `<em>`. This would be the result.
@@ -719,6 +1090,22 @@ WeDeploy
   .aggregate(Aggregation.of("my_averages", "ratings", "avg"))
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "aggregation": [
+          {
+            "ratings": {
+              "name": "my_averages",
+              "operator": "avg"
+            }
+          }
+        ]
+      }'
 ```
 
 Above we are finding the average of all the movie ratings in our collection. This is the syntax of the aggregation parameters.
@@ -779,6 +1166,23 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+      -H 'accept: application/json' \
+      -H 'Content-Type: application/json' \
+      -H 'Authorization: Bearer <your-project-master-token>' \
+      -d $'{
+        "filter": [
+          {
+            "ratings": {
+              "value": 8.5,
+              "operator": ">"
+            }
+          }
+        ],
+        "type":"count"
+      }'
+```
 
 Above we are finding the number of movies that have ratings above 8.5.
 
@@ -807,6 +1211,26 @@ WeDeploy
   .orderBy("title", SortOrder.DESCENDING)
   .get("movies")
   .execute();
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "ratings": {
+              "value": 8.5,
+              "operator": ">"
+            }
+          }
+        ],
+        "sort": [
+          {
+            "title": "desc"
+          }
+        ]
+      }'
 ```
 
 Above we are finding all the movies that have ratings above 8.5 and sorting them by their title in descending order.

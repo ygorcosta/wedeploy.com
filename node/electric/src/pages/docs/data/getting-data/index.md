@@ -44,6 +44,11 @@ WeDeploy
   .get("movies")
   .execute();
 ```
+```text/x-sh
+curl -X "GET" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+```
 
 The response will give you all the documents inside that collection.
 
@@ -89,6 +94,11 @@ WeDeploy
   .get("movies/star_wars_v/title")
   .execute();
 ```
+```text/x-sh
+curl -X "GET" "https://<serviceID>-<projectID>.wedeploy.io/movies/star_wars_v/title" \
+     -H 'accept: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+```
 
 </article>
 
@@ -126,6 +136,19 @@ WeDeploy
   .orderBy("rating", SortOrder.DESCENDING)
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        sort: [
+          {
+            "rating": "desc"
+          }
+        ]
+      }'
 ```
 
 The result would be the following list if documents sorted by rating.
@@ -172,6 +195,32 @@ WeDeploy
   .where(lt("year", 2000).or(gt("rating", 8.5)))
   .get("movies")
   .execute();
+```
+```text/x-sh
+curl -X "POST" "https://<serviceID>-<projectID>.wedeploy.io/movies" \
+     -H 'accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: Bearer <your-project-master-token>' \
+     -d $'{
+        "filter": [
+          {
+            "or": [
+              {
+                "year": {
+                  "value": 2000,
+                  "operator": "<"
+                }
+              },
+              {
+                "rating": {
+                  "value": 8.5,
+                  "operator": ">"
+                }
+              }
+            ]
+          }
+        ]
+      }'
 ```
 
 The result will be any documents from that collection that match these filter parameters.
