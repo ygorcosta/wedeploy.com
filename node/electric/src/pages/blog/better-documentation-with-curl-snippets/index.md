@@ -1,5 +1,5 @@
 ---
-title: "Better documentation with cURL snippets"
+title: "Better Documentation With cURL Snippets"
 description: "We're always looking for ways to be more accessible to any developer using any kind of programming language. Today we're taking another step in that direction by adding cURL snippets to our documentation."
 date: "March 13, 2018"
 author: "Zeno Rocha"
