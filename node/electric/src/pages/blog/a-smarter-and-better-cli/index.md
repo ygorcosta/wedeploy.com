@@ -14,13 +14,13 @@ layout: "blog"
 
 In the past, we have required many flags like `--project` or `--service` to make actions on our CLI. Now we are introducing a smarter, more interactive way of performing tasks from your terminal.
 
-Before, in order do things like `scale` you would need to pass this whole command:
+Before, in order do things like `deploy` you would need to pass this whole command:
 
 ```
-we scale --project notebook --service notes 4
+we deploy --project notebook
 ```
 
-Now, you can simply enter `we scale 4` and an interactive process will begin where you can declare your project and service.
+Now, you can simply enter `we deploy` and an interactive process will begin where you can declare your project and service.
 
 <figure>
   <img src="/images/blog/post-24--1.gif" alt="Interactive CLI">
