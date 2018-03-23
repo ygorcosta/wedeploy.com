@@ -16,7 +16,7 @@ export async function userPlans(req, res) {
     const plan = plans[planId];
     plan.memoryPretty = pretty(plan.memory * 1024 * 1024);
     plan.trafficPretty = pretty(plan.traffic * 1024 * 1024);
-    plan.storagePretty = pretty(plan.storage * 1024 * 1024 * 1024);
+    plan.storagePretty = pretty(plan.storage * 1024 * 1024);
   }
   return plans;
 }
