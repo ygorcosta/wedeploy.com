@@ -1,6 +1,12 @@
-<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-  <g fill="#00D46A" fill-rule="evenodd">
-    <rect fill-opacity=".2" width="60" height="60" rx="30"/>
-    <path d="M42 42c0 2.2-1.8 4-4 4H22c-2.2 0-4-1.8-4-4 0-5.533 4.467-10 10-10h4c5.533 0 10 4.467 10 10zM30 30a7.98 7.98 0 0 1-8-8c0-4.433 3.567-8 8-8s8 3.567 8 8-3.567 8-8 8z" fill-opacity=".9"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_pricing_free</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon_pricing_free" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="container" fill-opacity="0.2" fill="#00AE55" x="0" y="0" width="60" height="60" rx="30"></rect>
+        <path d="M42.0000844,42.0000985 C42.0000844,44.2001062 40.2000781,46.0001125 38.0000703,46.0001125 L22.0000141,46.0001125 C19.8000063,46.0001125 18,44.2001062 18,42.0000985 C18,36.4667457 22.4666824,32.0000633 28.0000352,32.0000633 L32.0000492,32.0000633 C37.533402,32.0000633 42.0000844,36.4667457 42.0000844,42.0000985 Z" id="body" fill-opacity="0.9" fill="#00AE55"></path>
+        <path d="M30.0000422,30.0000563 C25.5666933,30.0000563 22.0000141,26.4333771 22.0000141,22.0000281 C22.0000141,17.5666792 25.5666933,14 30.0000422,14 C34.4333911,14 38.0000703,17.5666792 38.0000703,22.0000281 C38.0000703,26.4333771 34.4333911,30.0000563 30.0000422,30.0000563 Z" id="head" fill-opacity="0.9" fill="#00AE55"></path>
+    </g>
 </svg>

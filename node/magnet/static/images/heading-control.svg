@@ -1,14 +1,17 @@
-<svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-  <g fill="none" fill-rule="evenodd">
-    <circle fill-opacity=".2" fill="#00D46A" cx="33" cy="33" r="33"/>
-    <g transform="translate(15 15)">
-      <rect fill-opacity=".3" fill="#00D46A" width="36" height="36" rx="8"/>
-      <rect fill="#FFF" x="8" y="24" width="20" height="4" rx="2"/>
-      <path d="M10 24h10v4H10a2 2 0 1 1 0-4z" fill="#00D46A"/>
-      <path d="M20 22c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z" fill="#00D46A"/>
-      <rect fill="#FFF" x="8" y="10" width="20" height="4" rx="2"/>
-      <path d="M10 10h6v4h-6a2 2 0 1 1 0-4z" fill="#00D46A"/>
-      <path d="M16 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z" fill="#00D46A"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_feature_(manage)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon_feature_(manage)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="container" fill-opacity="0.200000003" fill="#00AE55" cx="33" cy="33" r="33"></circle>
+        <rect id="box" fill-opacity="0.299999982" fill="#00AE55" x="15" y="15" width="36" height="36" rx="8"></rect>
+        <rect id="line_2" fill="#FFFFFF" x="23" y="39" width="20" height="4" rx="2"></rect>
+        <path d="M25,39 L35,39 L35,43 L25,43 C23.8954305,43 23,42.1045695 23,41 L23,41 C23,39.8954305 23.8954305,39 25,39 Z" id="line_filled_2" fill="#00AE55"></path>
+        <path d="M35,37 C32.8,37 31,38.8 31,41 C31,43.2 32.8,45 35,45 C37.2,45 39,43.2 39,41 C39,38.8 37.2,37 35,37 Z" id="dot_2" fill="#00AE55"></path>
+        <rect id="line_1" fill="#FFFFFF" x="23" y="25" width="20" height="4" rx="2"></rect>
+        <path d="M25,25 L31,25 L31,29 L25,29 C23.8954305,29 23,28.1045695 23,27 L23,27 C23,25.8954305 23.8954305,25 25,25 Z" id="line_filled_1" fill="#00AE55"></path>
+        <path d="M31,23 C28.8,23 27,24.8 27,27 C27,29.2 28.8,31 31,31 C33.2,31 35,29.2 35,27 C35,24.8 33.2,23 31,23 Z" id="dot_1" fill="#00AE55"></path>
     </g>
-  </g>
 </svg>

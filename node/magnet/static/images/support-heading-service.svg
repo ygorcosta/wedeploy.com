@@ -1,15 +1,21 @@
-<svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <circle id="a" cx="18" cy="18" r="18"/>
-  </defs>
-  <g fill="none" fill-rule="evenodd">
-    <mask id="b" fill="#fff">
-      <use xlink:href="#a"/>
-    </mask>
-    <use fill="#00D46A" xlink:href="#a"/>
-    <g mask="url(#b)">
-      <path d="M18 10c4.417 0 8 3.583 8 8s-3.583 8-8 8-8-3.583-8-8 3.583-8 8-8z" fill-opacity=".6" fill="#0E141A"/>
-      <path d="M17 20h3c.55 0 1-.45 1-1s-.45-1-1-1h-2v-3c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .55.45 1 1 1z" fill="#FFF"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_support_feature_(clock)</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="18" cy="18" r="18"></circle>
+    </defs>
+    <g id="icon_support_feature_(clock)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="container" fill="#00AE55" xlink:href="#path-1"></use>
+        <g id="clock" mask="url(#mask-2)">
+            <g transform="translate(10.000000, 10.000000)">
+                <path d="M8.00002813,0 C12.4167103,0 16.0000563,3.58334593 16.0000563,8.00002813 C16.0000563,12.4167103 12.4167103,16.0000563 8.00002813,16.0000563 C3.58334593,16.0000563 0,12.4167103 0,8.00002813 C0,3.58334593 3.58334593,0 8.00002813,0 Z" id="outline" fill-opacity="0.6" fill="#0E141A"></path>
+                <path d="M7.00002462,10.0000352 L10.0000352,10.0000352 C10.5500371,10.0000352 11.0000387,9.55003358 11.0000387,9.00003165 C11.0000387,8.45002972 10.5500371,8.00002813 10.0000352,8.00002813 L8.00002813,8.00002813 L8.00002813,5.00001758 C8.00002813,4.45001565 7.55002655,4.00001407 7.00002462,4.00001407 C6.45002268,4.00001407 6.0000211,4.45001565 6.0000211,5.00001758 L6.0000211,9.00003165 C6.0000211,9.55003358 6.45002268,10.0000352 7.00002462,10.0000352 Z" id="pointers" fill="#FFFFFF"></path>
+            </g>
+        </g>
     </g>
-  </g>
 </svg>
