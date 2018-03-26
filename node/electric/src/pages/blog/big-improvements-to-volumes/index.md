@@ -12,7 +12,7 @@ layout: "blog"
 
 #### What Are Volumes?
 
-Before talking about the new features, it is important to remember how WeDeploy Volumes function. When you deploy your service, we host all your application files inside of your container and keep these files in a dynamic state so if you redeploy or restart your container, all those files will be replaced with new ones. 
+Before talking about the new features, it is important to remember how WeDeploy Volumes function. When you deploy your service, we host all your application files inside of your container and keep these files in a dynamic state so if you redeploy or restart your container, all those files will be replaced with new ones.
 
 When you declare a volume path, you are telling us that you want all the application files inside that path to remain persistent (unchanging during a restart or redeploy).
 
@@ -41,7 +41,7 @@ Here is an example of the new multiple volume syntax.
 }
 ```
 
-As you can see, it is now necessary to add an `id` along with the path variable. 
+As you can see, it is now necessary to add an `id` along with the path variable.
 
 #### Shared Volumes
 
@@ -89,14 +89,14 @@ Now they are 5x faster than before! Take a look below to see the difference in s
 
 #### Backwards Compatibility
 
-As of today, the new volumes are ready to be used in your `wedeploy.json` but both the old (`volume`) and new (`volumes`) properties will be accepted. 
+As of today, the new volumes are ready to be used in your `wedeploy.json` but both the old (`volume`) and new (`volumes`) properties will be accepted.
 
 We strongly encourage you to begin using the new `volumes` property because in a few months we will discontinue support for the previous version.
 
 ---
 
-We are excited about these new volume features and how they can help you develop amazing applications even faster than before. 
+We are excited about these new volume features and how they can help you develop amazing applications even faster than before.
 
-**If you have any questions, check our [volume documentation](https://wedeploy.com/docs/deploy/configuring-deployments/#volumes) or join our [Slack Community](https://chat.wedeploy.com).**
+**If you have any questions, check our [volume documentation](/docs/deploy/configuring-deployments/#volumes) or join our [Slack Community](https://chat.wedeploy.com).**
 
 </article>

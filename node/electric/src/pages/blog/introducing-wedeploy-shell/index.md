@@ -40,7 +40,7 @@ Here are a few easy ways to start using it today. Try entering a Linux-based con
 
 **Autocomplete**
 
-Maybe you are switching between directories or looking inside a file, use the same autocomplete capabilities that you love from your local terminal. 
+Maybe you are switching between directories or looking inside a file, use the same autocomplete capabilities that you love from your local terminal.
 
 This may seem like a minor feature, but it's a powerful tool to help you stay productive while maneuvering through your container source code.
 

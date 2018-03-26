@@ -57,7 +57,7 @@ Now WeDeploy Shell provides you with secure, command-line access to your service
 
 #### Improved Performance
 
-Performance is something very dear to our hearts. This is why we are happy to share that now we are exclusively using all Solid-State Drive (SSD) storage. This gives you access to the speed and durability of SSD along with the scalability of the cloud. 
+Performance is something very dear to our hearts. This is why we are happy to share that now we are exclusively using all Solid-State Drive (SSD) storage. This gives you access to the speed and durability of SSD along with the scalability of the cloud.
 
 We know new features are awesome, but at the end of the day we all want to see the numbers. These are the results of our performance comparison between the old and new infrastructure.
 
@@ -77,7 +77,7 @@ To accomplish this, we moved all the boilerplates and demos to a new GitHub Repo
 
 We also moved all branches to their own repo. This improved the exposure to the examples with non-web environments like Android, iOS, and React Native.
 
-**Explore our new [Organization](https://github.com/wedeploy-examples) or see our [growing list of examples](https://github.com/wedeploy/wedeploy-examples).**
+**Explore our new [Organization](https://github.com/wedeploy-examples) or see our growing list of examples.**
 
 #### cURL Documentation
 
@@ -89,7 +89,7 @@ As you may know, we currently have three official SDKs for [JavaScript](/docs/in
   <img src="/images/blog/post-22--1.gif" alt="Shell docs" />
 </figure>
 
-If you are using languages like PHP, Python, Ruby, Go or C++, this will be a valuable addition to our docs. 
+If you are using languages like PHP, Python, Ruby, Go or C++, this will be a valuable addition to our docs.
 
 **Check out our new [cURL docs](/docs/).**
 
