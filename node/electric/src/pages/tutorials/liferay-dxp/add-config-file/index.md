@@ -19,11 +19,13 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-  "id": "app",
-  "image": "wedeploy/liferay:@site.version.image.liferay@",
-  "volume": "/opt/liferay/data",
-  "memory": 4096,
-  "cpu": 3
+	"id": "app",
+	"image": "wedeploy/liferay:@site.version.image.liferay@",
+	"volumes": {
+		"data": "/opt/liferay/data"
+	},
+	"memory": 4096,
+	"cpu": 3
 }
 ```
 

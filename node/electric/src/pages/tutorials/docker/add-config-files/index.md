@@ -21,11 +21,13 @@ Every service folder must have a `wedeploy.json` file that configures it, so let
 
 ```application/json
 {
-  "id": "db",
-  "volume": "/var/lib/mysql",
-  "env": {
-    "MYSQL_ROOT_PASSWORD": "passw0rd"
-  }
+	"id": "db",
+	"volumes": {
+		"mysql": "/var/lib/mysql"	
+	},
+	"env": {
+		"MYSQL_ROOT_PASSWORD": "passw0rd"
+	}
 }
 ```
 
