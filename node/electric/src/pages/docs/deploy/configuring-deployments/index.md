@@ -277,7 +277,11 @@ If you want to know more about custom domains, check our [Custom Domain Document
 
 Health checks are the way we test the status of your service. We also use them know if a new deployment of your service was successful.
 
-The default health check simply looks to see if the service is running, but certain types of services need a more unique testing system. To do this, you can add a custom health check.
+The default health check simply looks to see if the service (or more specifically your container) is running, but certain types of services need unique status checks. To do this, you can add a custom health check as a `url` or a `command`. 
+
+If you provide a `url`, we will ping that address until we get a `200` response. For the command, you have more control over what kind of action we take when checking your service health.
+
+Here is an example of the `url` approach:
 
 ```application/json
 {
@@ -288,23 +292,7 @@ The default health check simply looks to see if the service is running, but cert
 }
 ```
 
-By putting `localhost` as the health check URL, we will ping the IP of your service, waiting for a `200` response. You could also specify a specific page or path to test like `localhost/blog/`.
-
-<aside>
-
-If you want your custom health check to access a specific port in your application, you can add it to the url of your `healthCheck` property.
-
-```application/json
-{
-  "id": "ui",
-  "port": 3000,
-  "healthCheck": {
-    "url": "localhost:3000"
-  }
-}
-```
-
-</aside>
+By putting `localhost` as the health check URL, we will ping the IP of your service. You could also specify a specific path like `localhost/blog/` or a certain port like `localhost:4000`.
 
 For more complex health checks, you can add commands to check the uptime of your service.
 
@@ -313,6 +301,28 @@ For more complex health checks, you can add commands to check the uptime of your
   "id": "db",
   "healthCheck": {
     "command": "curl -X GET --silent --fail 'localhost/blog/'"
+  }
+}
+```
+
+With both of these approaches, we provide you with other customizable configurations.
+
+- `interval`: How many seconds should pass between health check tries
+- `timeout`: How many seconds the health check will try to test
+- `startPeriod`: How many seconds the healthCheck should wait after the service is up before testing
+- `retries`: How many times the healthCheck will retry before declaring your service as `unhealthy`
+
+When you declare a healthCheck, these are the default configurations that you can change at any time in your `wedeploy.json`:
+
+```application/json
+{
+  "id": "db",
+  "healthCheck": {
+    "command": "curl -X GET --silent --fail 'localhost/blog/'",
+    "interval": 5,
+    "timeout": 5,
+    "startPeriod": 1,
+    "retries": 10
   }
 }
 ```
